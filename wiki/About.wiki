@@ -1,0 +1,12 @@
+#summary About the open source BIMserver.org software.
+#labels about
+
+= Introduction =
+
+he Building Information Modelserver (short: BIMserver) enables you to centralize the information of a construction (or other building related) project. The core is based on the open standard IFC and therefore knows how to handle IFC data. The BIMserver is nót a fileserver, but uses the Model-driven architecture approach. This means that IFC data are interpreted by a core-object and stored in an underlying database. The main advantage of this approach is the possibility to query, merge and filter the BIM-model and generate IFC files on the fly.
+
+Due to the multi-user support multiple people can work on their own part of the model, while the complete model is updated on the fly. Other people can get update notifications when the model (or a part of it) is updated. Furthermore the BIMserver will warn you when another users has changed something on the model in the time you were editing.
+
+The core of the BIMserver is published with the GNU GPLv3 licence.  This means that it is free to use.
+
+Bimserver.org is Non-Profit! 
