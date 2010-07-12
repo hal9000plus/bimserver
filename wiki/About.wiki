@@ -7,6 +7,7 @@ he Building Information Modelserver (short: BIMserver) enables you to centralize
 
 Due to the multi-user support multiple people can work on their own part of the model, while the complete model is updated on the fly. Other people can get update notifications when the model (or a part of it) is updated. Furthermore the BIMserver will warn you when another users has changed something on the model in the time you were editing.
 
-The core of the BIMserver is published with the GNU GPLv3 licence.  This means that it is free to use.
-
+The core of the BIMserver is published with the GNU GPLv3 licence. 
 Bimserver.org is Non-Profit! 
+
+Have a look at the [features]
