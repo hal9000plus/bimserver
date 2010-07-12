@@ -1,0 +1,55 @@
+#summary Featurelist of the BIMserver.org software.
+#labels features
+
+= Introduction =
+
+This featurelist is 'work in progress'.
+
+
+= Base Features =
+
+Import/export IFC - The base of the BIMserver is native IFC.<br/>
+IFC Versioning – Go back in time.  See who made which changes and when. Versioning is on IFC objectlevel.<br/>
+Change notifications – use the RSS feeds to get warning of changes you are interested in.<br/>
+Geolocate models – place your model on a location to create a GIS link (have a look at the export formats).<br/>
+Multi-user – get as much users as you like!<br/>
+Smart Authentication – only change your own part of the model but be able to read/see the other parts.<br/>
+Webbased viewer – Making use of O3D to view the model inside the browser (no download or special software needed).<br/>
+
+= Model Features: =
+
+Merging – Merge submodels into a base model.<br/>
+Revision management – Get revisions by sub-projects and main project.<br/>
+Change finder – Let the software find changes that were made to the model.<br/>
+Filter & Query –  Simple queries like “get only the windows from a model” , or “get one specific wall”.<br/>
+Rules and advanced Query – Using Java code to make advanced queries or rules.<br/>
+Checkout & update warnings – Get a big warning when model inconsistencies seem to appear.<br/>
+
+= Interfaces: =
+
+Webservice interface – feel free to connect to the SOAP interface.<br/>
+Webuserinterface – the only thing you need is a webbrowser to connect to the webinterface.<br/>
+REST - every IFC object in the modelserver has its own URL. Use these REST links to connect or get detailled information about a specific object.<br/>
+
+= Export formats: =
+
+ifcXML - Valide ifcXML output.<br/>
+CityGML - Export your IFC model tot CityGML, including the GeoBIM extension.<br/>
+Collada - Get collada models (easy to import in Sketchup).<br/>
+KML -  view your BIM model in Google Earth.<br/>
+Google Earth network link – get a URL to directly connect from Google Earth.<br/>
+
+= Extra: =
+
+IFD support – Fill the properties from the IFD library.<br/>
+Clash detection – get a list of IFC objects that clash (geometry analysis).<br/>
+
+= Working on (coming as soon as possible): =
+
+Rendering pictures –  Automatically rendering JPG/PNG pictures from every revision of the model.<br/>
+gbXML export – needs funding.<br/>
+Excel export – needs additional funding.<br/>
+OAuth Authentication – needs additional funding.<br/>
+COBIE compatibility – needs funding.<br/>
+CityGML import - needs funding.<br/>
+ifcXML import – needs funding.<br/>
