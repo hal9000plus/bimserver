@@ -1,0 +1,360 @@
+/**
+ * (c) Copyright bimserver.org 2009
+ * Licensed under GNU GPLv3
+ * http://www.gnu.org/licenses/gpl-3.0.txt
+ * For more information mail to license@bimserver.org
+ * 
+ * Bimserver.org is free software: you can redistribute it and/or modify 
+ * it under the terms of the GNU General Public License as published by 
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * Bimserver.org is distributed in the hope that it will be useful, but 
+ * WITHOUT ANY WARRANTY; without even the implied warranty of 
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU 
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License a 
+ * long with Bimserver.org . If not, see <http://www.gnu.org/licenses/>.
+ * 
+ *
+ * $Id$
+ */
+package org.bimserver.ifc.emf.Ifc2x3.impl;
+
+import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcDateTimeSelect;
+import org.bimserver.ifc.emf.Ifc2x3.IfcIdentifier;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
+import org.bimserver.ifc.emf.Ifc2x3.IfcPerson;
+import org.bimserver.ifc.emf.Ifc2x3.IfcTimeMeasure;
+import org.bimserver.ifc.emf.Ifc2x3.IfcWorkControl;
+import org.bimserver.ifc.emf.Ifc2x3.IfcWorkControlTypeEnum;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Ifc Work Control</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * <ul>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcWorkControlImpl#getIdentifier <em>Identifier</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcWorkControlImpl#getCreationDate <em>Creation Date</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcWorkControlImpl#getCreators <em>Creators</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcWorkControlImpl#getPurpose <em>Purpose</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcWorkControlImpl#getDuration <em>Duration</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcWorkControlImpl#getTotalFloat <em>Total Float</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcWorkControlImpl#getStartTime <em>Start Time</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcWorkControlImpl#getFinishTime <em>Finish Time</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcWorkControlImpl#getWorkControlType <em>Work Control Type</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcWorkControlImpl#getUserDefinedControlType <em>User Defined Control Type</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @generated
+ */
+public class IfcWorkControlImpl extends IfcControlImpl implements IfcWorkControl {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected IfcWorkControlImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return Ifc2x3Package.eINSTANCE.getIfcWorkControl();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IfcIdentifier getIdentifier() {
+		return (IfcIdentifier) eGet(Ifc2x3Package.eINSTANCE.getIfcWorkControl_Identifier(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIdentifier(IfcIdentifier newIdentifier) {
+		eSet(Ifc2x3Package.eINSTANCE.getIfcWorkControl_Identifier(), newIdentifier);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IfcDateTimeSelect getCreationDate() {
+		return (IfcDateTimeSelect) eGet(Ifc2x3Package.eINSTANCE.getIfcWorkControl_CreationDate(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCreationDate(IfcDateTimeSelect newCreationDate) {
+		eSet(Ifc2x3Package.eINSTANCE.getIfcWorkControl_CreationDate(), newCreationDate);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<IfcPerson> getCreators() {
+		return (EList<IfcPerson>) eGet(Ifc2x3Package.eINSTANCE.getIfcWorkControl_Creators(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetCreators() {
+		eUnset(Ifc2x3Package.eINSTANCE.getIfcWorkControl_Creators());
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetCreators() {
+		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcWorkControl_Creators());
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IfcLabel getPurpose() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcWorkControl_Purpose(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPurpose(IfcLabel newPurpose) {
+		eSet(Ifc2x3Package.eINSTANCE.getIfcWorkControl_Purpose(), newPurpose);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetPurpose() {
+		eUnset(Ifc2x3Package.eINSTANCE.getIfcWorkControl_Purpose());
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetPurpose() {
+		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcWorkControl_Purpose());
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IfcTimeMeasure getDuration() {
+		return (IfcTimeMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcWorkControl_Duration(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDuration(IfcTimeMeasure newDuration) {
+		eSet(Ifc2x3Package.eINSTANCE.getIfcWorkControl_Duration(), newDuration);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetDuration() {
+		eUnset(Ifc2x3Package.eINSTANCE.getIfcWorkControl_Duration());
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetDuration() {
+		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcWorkControl_Duration());
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IfcTimeMeasure getTotalFloat() {
+		return (IfcTimeMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcWorkControl_TotalFloat(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTotalFloat(IfcTimeMeasure newTotalFloat) {
+		eSet(Ifc2x3Package.eINSTANCE.getIfcWorkControl_TotalFloat(), newTotalFloat);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetTotalFloat() {
+		eUnset(Ifc2x3Package.eINSTANCE.getIfcWorkControl_TotalFloat());
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetTotalFloat() {
+		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcWorkControl_TotalFloat());
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IfcDateTimeSelect getStartTime() {
+		return (IfcDateTimeSelect) eGet(Ifc2x3Package.eINSTANCE.getIfcWorkControl_StartTime(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setStartTime(IfcDateTimeSelect newStartTime) {
+		eSet(Ifc2x3Package.eINSTANCE.getIfcWorkControl_StartTime(), newStartTime);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IfcDateTimeSelect getFinishTime() {
+		return (IfcDateTimeSelect) eGet(Ifc2x3Package.eINSTANCE.getIfcWorkControl_FinishTime(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFinishTime(IfcDateTimeSelect newFinishTime) {
+		eSet(Ifc2x3Package.eINSTANCE.getIfcWorkControl_FinishTime(), newFinishTime);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetFinishTime() {
+		eUnset(Ifc2x3Package.eINSTANCE.getIfcWorkControl_FinishTime());
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetFinishTime() {
+		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcWorkControl_FinishTime());
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IfcWorkControlTypeEnum getWorkControlType() {
+		return (IfcWorkControlTypeEnum) eGet(Ifc2x3Package.eINSTANCE.getIfcWorkControl_WorkControlType(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setWorkControlType(IfcWorkControlTypeEnum newWorkControlType) {
+		eSet(Ifc2x3Package.eINSTANCE.getIfcWorkControl_WorkControlType(), newWorkControlType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IfcLabel getUserDefinedControlType() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcWorkControl_UserDefinedControlType(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUserDefinedControlType(IfcLabel newUserDefinedControlType) {
+		eSet(Ifc2x3Package.eINSTANCE.getIfcWorkControl_UserDefinedControlType(), newUserDefinedControlType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetUserDefinedControlType() {
+		eUnset(Ifc2x3Package.eINSTANCE.getIfcWorkControl_UserDefinedControlType());
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetUserDefinedControlType() {
+		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcWorkControl_UserDefinedControlType());
+	}
+
+} //IfcWorkControlImpl

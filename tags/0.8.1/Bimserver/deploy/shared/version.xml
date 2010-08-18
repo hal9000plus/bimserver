@@ -1,0 +1,7 @@
+<!-- Edited by bimserver.org -->
+<version>
+	<latest>@VERSION@</latest>
+	<download>http://download.bimserver.org/@VERSION@/</download>
+	<support>http://support.bimserver.org/@VERSION@/</support>
+	<info>support@bimserver.org</info>
+</version>

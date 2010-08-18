@@ -1,0 +1,11 @@
+<project name="BIMserver">
+	<property name="version" value="0.8" />
+	<target name="war">
+		<property name="deploydir" value="deploy/war" />
+		<ant antfile="common.build.xml" target="buildwar"></ant>
+	</target>
+	<target name="jar">
+		<property name="deploydir" value="deploy/jar" />
+		<ant antfile="common.build.xml" target="buildjar"></ant>
+	</target>
+</project>

@@ -1,0 +1,143 @@
+/* Sweetcron CSS - 11/04/2008 
+
+	Table of Contents:
+	Reset
+	Typography
+	Positioning
+	IE Fixes
+			
+*/
+
+/* Reset
+---------------------------------------------------------------------------------------- */
+
+@import "reset.css";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* now I'm working with a clean slate! */
+
+
+/* Typography
+---------------------------------------------------------------------------------------- */
+
+body {
+	font-family: "Lucida Grande", Arial, Helvetica, sans serif;
+	font-size: 14px;
+	color: #999;
+	line-height: 1.4em;
+}
+
+p#demo {
+    font-size: 10px;   
+}
+
+input#mailing_list_input {
+    font-size: 12px;   
+}
+
+ul#feature_list h2, form#notify h2 {
+    font-size: 18px;   
+}
+
+ul#feature_list h2, form#notify h2 {
+    color: black;   
+}
+
+p#demo {
+    color: #666600;
+}
+
+ul#feature_list strong {
+    color: #696969;   
+}
+
+p#demo, ul#feature_list strong {
+    font-weight: bold;
+}   
+
+
+/* Positioning
+---------------------------------------------------------------------------------------- */    
+
+body, html {
+    height: 100%;   
+}
+
+body {
+	background: white;	
+}
+
+div#home_container {
+    width: 500px;
+    border: 15px solid #cc0000;
+    border-style: none none none solid;
+    margin: 0 auto;
+    height: 100%;
+}
+
+div#home_container_inner {
+    padding: 80px 0 80px 30px;   
+}
+
+div#home_title h1 a {
+    display: block;
+    height: 121px;
+    width: 348px;
+    background: transparent url(../images/logo.gif);
+}   
+
+div#home_title h1 a span, div#home_title p {
+    display: none;   
+}
+
+p#tno_logo {
+	position: absolute;
+	bottom: 5px;
+	right: 6px;	
+}
+
+ul#feature_list li, form#notify {
+    padding: 0 0 30px 58px;   
+}
+
+ul#feature_list li.import {
+    background: transparent url(../images/61.png) 0 3px no-repeat;
+}
+
+ul#feature_list li.customise {
+    background: transparent url(../images/72.png) 0 0 no-repeat;
+}
+
+ul#feature_list li.host {
+    background: transparent url(../images/14.png) 0 0 no-repeat;
+}
+
+ul#feature_list li.free {
+    background: transparent url(../images/26.png) 0 -2px no-repeat;
+}
+
+ul#feature_list li.notify {
+    background: transparent url(../images/94.png) 0 -2px no-repeat;
+}
+
+
+p#demo {
+    background: #FFFFCC;
+    padding: 3px 5px;
+    display: inline;
+}   
+
+
+/* IE Fixes
+---------------------------------------------------------------------------------------- */
+
+
+/* damn you, IE.  damn you */
+
+
+/* 3rd Party
+---------------------------------------------------------------------------------------- */
