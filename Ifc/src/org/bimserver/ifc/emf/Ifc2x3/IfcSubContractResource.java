@@ -94,54 +94,54 @@ public interface IfcSubContractResource extends IfcConstructionResource {
 	boolean isSetSubContractor();
 
 	/**
-	 * Returns the value of the '<em><b>Job Description</b></em>' attribute.
+	 * Returns the value of the '<em><b>Job Description</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Job Description</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Job Description</em>' attribute.
+	 * @return the value of the '<em>Job Description</em>' reference.
 	 * @see #isSetJobDescription()
 	 * @see #unsetJobDescription()
-	 * @see #setJobDescription(String)
+	 * @see #setJobDescription(IfcText)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSubContractResource_JobDescription()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getJobDescription();
+	IfcText getJobDescription();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSubContractResource#getJobDescription <em>Job Description</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSubContractResource#getJobDescription <em>Job Description</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Job Description</em>' attribute.
+	 * @param value the new value of the '<em>Job Description</em>' reference.
 	 * @see #isSetJobDescription()
 	 * @see #unsetJobDescription()
 	 * @see #getJobDescription()
 	 * @generated
 	 */
-	void setJobDescription(String value);
+	void setJobDescription(IfcText value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSubContractResource#getJobDescription <em>Job Description</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSubContractResource#getJobDescription <em>Job Description</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetJobDescription()
 	 * @see #getJobDescription()
-	 * @see #setJobDescription(String)
+	 * @see #setJobDescription(IfcText)
 	 * @generated
 	 */
 	void unsetJobDescription();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSubContractResource#getJobDescription <em>Job Description</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSubContractResource#getJobDescription <em>Job Description</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Job Description</em>' attribute is set.
+	 * @return whether the value of the '<em>Job Description</em>' reference is set.
 	 * @see #unsetJobDescription()
 	 * @see #getJobDescription()
-	 * @see #setJobDescription(String)
+	 * @see #setJobDescription(IfcText)
 	 * @generated
 	 */
 	boolean isSetJobDescription();

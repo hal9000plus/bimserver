@@ -22,11 +22,17 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
-import org.bimserver.emf.IdEObjectImpl;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcCoordinatedUniversalTimeOffset;
+import org.bimserver.ifc.emf.Ifc2x3.IfcDaylightSavingHour;
+import org.bimserver.ifc.emf.Ifc2x3.IfcHourInDay;
 import org.bimserver.ifc.emf.Ifc2x3.IfcLocalTime;
+import org.bimserver.ifc.emf.Ifc2x3.IfcMinuteInHour;
+import org.bimserver.ifc.emf.Ifc2x3.IfcSecondInMinute;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,7 +44,6 @@ import org.eclipse.emf.ecore.EClass;
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcLocalTimeImpl#getHourComponent <em>Hour Component</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcLocalTimeImpl#getMinuteComponent <em>Minute Component</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcLocalTimeImpl#getSecondComponent <em>Second Component</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcLocalTimeImpl#getSecondComponentAsString <em>Second Component As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcLocalTimeImpl#getZone <em>Zone</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcLocalTimeImpl#getDaylightSavingOffset <em>Daylight Saving Offset</em>}</li>
  * </ul>
@@ -46,7 +51,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class IfcLocalTimeImpl extends IdEObjectImpl implements IfcLocalTime {
+public class IfcLocalTimeImpl extends EObjectImpl implements IfcLocalTime {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -81,8 +86,8 @@ public class IfcLocalTimeImpl extends IdEObjectImpl implements IfcLocalTime {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getHourComponent() {
-		return (Integer) eGet(Ifc2x3Package.eINSTANCE.getIfcLocalTime_HourComponent(), true);
+	public IfcHourInDay getHourComponent() {
+		return (IfcHourInDay) eGet(Ifc2x3Package.eINSTANCE.getIfcLocalTime_HourComponent(), true);
 	}
 
 	/**
@@ -90,7 +95,7 @@ public class IfcLocalTimeImpl extends IdEObjectImpl implements IfcLocalTime {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setHourComponent(int newHourComponent) {
+	public void setHourComponent(IfcHourInDay newHourComponent) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcLocalTime_HourComponent(), newHourComponent);
 	}
 
@@ -99,8 +104,8 @@ public class IfcLocalTimeImpl extends IdEObjectImpl implements IfcLocalTime {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getMinuteComponent() {
-		return (Integer) eGet(Ifc2x3Package.eINSTANCE.getIfcLocalTime_MinuteComponent(), true);
+	public IfcMinuteInHour getMinuteComponent() {
+		return (IfcMinuteInHour) eGet(Ifc2x3Package.eINSTANCE.getIfcLocalTime_MinuteComponent(), true);
 	}
 
 	/**
@@ -108,7 +113,7 @@ public class IfcLocalTimeImpl extends IdEObjectImpl implements IfcLocalTime {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMinuteComponent(int newMinuteComponent) {
+	public void setMinuteComponent(IfcMinuteInHour newMinuteComponent) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcLocalTime_MinuteComponent(), newMinuteComponent);
 	}
 
@@ -135,8 +140,8 @@ public class IfcLocalTimeImpl extends IdEObjectImpl implements IfcLocalTime {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getSecondComponent() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcLocalTime_SecondComponent(), true);
+	public IfcSecondInMinute getSecondComponent() {
+		return (IfcSecondInMinute) eGet(Ifc2x3Package.eINSTANCE.getIfcLocalTime_SecondComponent(), true);
 	}
 
 	/**
@@ -144,7 +149,7 @@ public class IfcLocalTimeImpl extends IdEObjectImpl implements IfcLocalTime {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSecondComponent(float newSecondComponent) {
+	public void setSecondComponent(IfcSecondInMinute newSecondComponent) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcLocalTime_SecondComponent(), newSecondComponent);
 	}
 
@@ -164,42 +169,6 @@ public class IfcLocalTimeImpl extends IdEObjectImpl implements IfcLocalTime {
 	 */
 	public boolean isSetSecondComponent() {
 		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcLocalTime_SecondComponent());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getSecondComponentAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcLocalTime_SecondComponentAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSecondComponentAsString(String newSecondComponentAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcLocalTime_SecondComponentAsString(), newSecondComponentAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetSecondComponentAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcLocalTime_SecondComponentAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetSecondComponentAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcLocalTime_SecondComponentAsString());
 	}
 
 	/**
@@ -243,8 +212,8 @@ public class IfcLocalTimeImpl extends IdEObjectImpl implements IfcLocalTime {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getDaylightSavingOffset() {
-		return (Integer) eGet(Ifc2x3Package.eINSTANCE.getIfcLocalTime_DaylightSavingOffset(), true);
+	public IfcDaylightSavingHour getDaylightSavingOffset() {
+		return (IfcDaylightSavingHour) eGet(Ifc2x3Package.eINSTANCE.getIfcLocalTime_DaylightSavingOffset(), true);
 	}
 
 	/**
@@ -252,7 +221,7 @@ public class IfcLocalTimeImpl extends IdEObjectImpl implements IfcLocalTime {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDaylightSavingOffset(int newDaylightSavingOffset) {
+	public void setDaylightSavingOffset(IfcDaylightSavingHour newDaylightSavingOffset) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcLocalTime_DaylightSavingOffset(), newDaylightSavingOffset);
 	}
 

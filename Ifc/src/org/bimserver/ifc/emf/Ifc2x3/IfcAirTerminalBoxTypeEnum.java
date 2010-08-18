@@ -194,8 +194,8 @@ public enum IfcAirTerminalBoxTypeEnum implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final IfcAirTerminalBoxTypeEnum[] VALUES_ARRAY = new IfcAirTerminalBoxTypeEnum[] { NULL, NOTDEFINED, VARIABLEFLOWPRESSUREINDEPENDANT, CONSTANTFLOW, USERDEFINED,
-			VARIABLEFLOWPRESSUREDEPENDANT, };
+	private static final IfcAirTerminalBoxTypeEnum[] VALUES_ARRAY = new IfcAirTerminalBoxTypeEnum[] { NULL, NOTDEFINED, VARIABLEFLOWPRESSUREINDEPENDANT,
+			CONSTANTFLOW, USERDEFINED, VARIABLEFLOWPRESSUREDEPENDANT, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Ifc Air Terminal Box Type Enum</b></em>' enumerators.

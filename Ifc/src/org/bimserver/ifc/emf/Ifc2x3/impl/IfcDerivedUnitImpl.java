@@ -22,13 +22,18 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
-import org.bimserver.emf.IdEObjectImpl;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcDerivedUnit;
 import org.bimserver.ifc.emf.Ifc2x3.IfcDerivedUnitElement;
 import org.bimserver.ifc.emf.Ifc2x3.IfcDerivedUnitEnum;
+import org.bimserver.ifc.emf.Ifc2x3.IfcDimensionalExponents;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -40,12 +45,13 @@ import org.eclipse.emf.ecore.EClass;
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcDerivedUnitImpl#getElements <em>Elements</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcDerivedUnitImpl#getUnitType <em>Unit Type</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcDerivedUnitImpl#getUserDefinedType <em>User Defined Type</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcDerivedUnitImpl#getDimensions <em>Dimensions</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class IfcDerivedUnitImpl extends IdEObjectImpl implements IfcDerivedUnit {
+public class IfcDerivedUnitImpl extends EObjectImpl implements IfcDerivedUnit {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -108,8 +114,8 @@ public class IfcDerivedUnitImpl extends IdEObjectImpl implements IfcDerivedUnit 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getUserDefinedType() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcDerivedUnit_UserDefinedType(), true);
+	public IfcLabel getUserDefinedType() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcDerivedUnit_UserDefinedType(), true);
 	}
 
 	/**
@@ -117,7 +123,7 @@ public class IfcDerivedUnitImpl extends IdEObjectImpl implements IfcDerivedUnit 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUserDefinedType(String newUserDefinedType) {
+	public void setUserDefinedType(IfcLabel newUserDefinedType) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcDerivedUnit_UserDefinedType(), newUserDefinedType);
 	}
 
@@ -137,6 +143,24 @@ public class IfcDerivedUnitImpl extends IdEObjectImpl implements IfcDerivedUnit 
 	 */
 	public boolean isSetUserDefinedType() {
 		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcDerivedUnit_UserDefinedType());
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IfcDimensionalExponents getDimensions() {
+		return (IfcDimensionalExponents) eGet(Ifc2x3Package.eINSTANCE.getIfcDerivedUnit_Dimensions(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDimensions(IfcDimensionalExponents newDimensions) {
+		eSet(Ifc2x3Package.eINSTANCE.getIfcDerivedUnit_Dimensions(), newDimensions);
 	}
 
 } //IfcDerivedUnitImpl

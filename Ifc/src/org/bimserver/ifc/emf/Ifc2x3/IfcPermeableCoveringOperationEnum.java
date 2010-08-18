@@ -194,7 +194,8 @@ public enum IfcPermeableCoveringOperationEnum implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final IfcPermeableCoveringOperationEnum[] VALUES_ARRAY = new IfcPermeableCoveringOperationEnum[] { NULL, NOTDEFINED, SCREEN, USERDEFINED, LOUVER, GRILL, };
+	private static final IfcPermeableCoveringOperationEnum[] VALUES_ARRAY = new IfcPermeableCoveringOperationEnum[] { NULL, NOTDEFINED, SCREEN, USERDEFINED,
+			LOUVER, GRILL, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Ifc Permeable Covering Operation Enum</b></em>' enumerators.

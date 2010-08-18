@@ -23,7 +23,10 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLengthMeasure;
+import org.bimserver.ifc.emf.Ifc2x3.IfcPositiveLengthMeasure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcTrapeziumProfileDef;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -34,13 +37,9 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcTrapeziumProfileDefImpl#getBottomXDim <em>Bottom XDim</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcTrapeziumProfileDefImpl#getBottomXDimAsString <em>Bottom XDim As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcTrapeziumProfileDefImpl#getTopXDim <em>Top XDim</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcTrapeziumProfileDefImpl#getTopXDimAsString <em>Top XDim As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcTrapeziumProfileDefImpl#getYDim <em>YDim</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcTrapeziumProfileDefImpl#getYDimAsString <em>YDim As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcTrapeziumProfileDefImpl#getTopXOffset <em>Top XOffset</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcTrapeziumProfileDefImpl#getTopXOffsetAsString <em>Top XOffset As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -71,8 +70,8 @@ public class IfcTrapeziumProfileDefImpl extends IfcParameterizedProfileDefImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getBottomXDim() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcTrapeziumProfileDef_BottomXDim(), true);
+	public IfcPositiveLengthMeasure getBottomXDim() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcTrapeziumProfileDef_BottomXDim(), true);
 	}
 
 	/**
@@ -80,7 +79,7 @@ public class IfcTrapeziumProfileDefImpl extends IfcParameterizedProfileDefImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setBottomXDim(float newBottomXDim) {
+	public void setBottomXDim(IfcPositiveLengthMeasure newBottomXDim) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcTrapeziumProfileDef_BottomXDim(), newBottomXDim);
 	}
 
@@ -89,8 +88,8 @@ public class IfcTrapeziumProfileDefImpl extends IfcParameterizedProfileDefImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getBottomXDimAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcTrapeziumProfileDef_BottomXDimAsString(), true);
+	public IfcPositiveLengthMeasure getTopXDim() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcTrapeziumProfileDef_TopXDim(), true);
 	}
 
 	/**
@@ -98,25 +97,7 @@ public class IfcTrapeziumProfileDefImpl extends IfcParameterizedProfileDefImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setBottomXDimAsString(String newBottomXDimAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcTrapeziumProfileDef_BottomXDimAsString(), newBottomXDimAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getTopXDim() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcTrapeziumProfileDef_TopXDim(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTopXDim(float newTopXDim) {
+	public void setTopXDim(IfcPositiveLengthMeasure newTopXDim) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcTrapeziumProfileDef_TopXDim(), newTopXDim);
 	}
 
@@ -125,8 +106,8 @@ public class IfcTrapeziumProfileDefImpl extends IfcParameterizedProfileDefImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getTopXDimAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcTrapeziumProfileDef_TopXDimAsString(), true);
+	public IfcPositiveLengthMeasure getYDim() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcTrapeziumProfileDef_YDim(), true);
 	}
 
 	/**
@@ -134,25 +115,7 @@ public class IfcTrapeziumProfileDefImpl extends IfcParameterizedProfileDefImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTopXDimAsString(String newTopXDimAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcTrapeziumProfileDef_TopXDimAsString(), newTopXDimAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getYDim() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcTrapeziumProfileDef_YDim(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setYDim(float newYDim) {
+	public void setYDim(IfcPositiveLengthMeasure newYDim) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcTrapeziumProfileDef_YDim(), newYDim);
 	}
 
@@ -161,8 +124,8 @@ public class IfcTrapeziumProfileDefImpl extends IfcParameterizedProfileDefImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getYDimAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcTrapeziumProfileDef_YDimAsString(), true);
+	public IfcLengthMeasure getTopXOffset() {
+		return (IfcLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcTrapeziumProfileDef_TopXOffset(), true);
 	}
 
 	/**
@@ -170,44 +133,8 @@ public class IfcTrapeziumProfileDefImpl extends IfcParameterizedProfileDefImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setYDimAsString(String newYDimAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcTrapeziumProfileDef_YDimAsString(), newYDimAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getTopXOffset() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcTrapeziumProfileDef_TopXOffset(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTopXOffset(float newTopXOffset) {
+	public void setTopXOffset(IfcLengthMeasure newTopXOffset) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcTrapeziumProfileDef_TopXOffset(), newTopXOffset);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getTopXOffsetAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcTrapeziumProfileDef_TopXOffsetAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTopXOffsetAsString(String newTopXOffsetAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcTrapeziumProfileDef_TopXOffsetAsString(), newTopXOffsetAsString);
 	}
 
 } //IfcTrapeziumProfileDefImpl

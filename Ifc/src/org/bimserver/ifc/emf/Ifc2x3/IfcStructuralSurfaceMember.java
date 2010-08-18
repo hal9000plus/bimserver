@@ -32,7 +32,6 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralSurfaceMember#getPredefinedType <em>Predefined Type</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralSurfaceMember#getThickness <em>Thickness</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralSurfaceMember#getThicknessAsString <em>Thickness As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -71,109 +70,56 @@ public interface IfcStructuralSurfaceMember extends IfcStructuralMember {
 	void setPredefinedType(IfcStructuralSurfaceTypeEnum value);
 
 	/**
-	 * Returns the value of the '<em><b>Thickness</b></em>' attribute.
+	 * Returns the value of the '<em><b>Thickness</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Thickness</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Thickness</em>' attribute.
+	 * @return the value of the '<em>Thickness</em>' reference.
 	 * @see #isSetThickness()
 	 * @see #unsetThickness()
-	 * @see #setThickness(float)
+	 * @see #setThickness(IfcPositiveLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralSurfaceMember_Thickness()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getThickness();
+	IfcPositiveLengthMeasure getThickness();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralSurfaceMember#getThickness <em>Thickness</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralSurfaceMember#getThickness <em>Thickness</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Thickness</em>' attribute.
+	 * @param value the new value of the '<em>Thickness</em>' reference.
 	 * @see #isSetThickness()
 	 * @see #unsetThickness()
 	 * @see #getThickness()
 	 * @generated
 	 */
-	void setThickness(float value);
+	void setThickness(IfcPositiveLengthMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralSurfaceMember#getThickness <em>Thickness</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralSurfaceMember#getThickness <em>Thickness</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetThickness()
 	 * @see #getThickness()
-	 * @see #setThickness(float)
+	 * @see #setThickness(IfcPositiveLengthMeasure)
 	 * @generated
 	 */
 	void unsetThickness();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralSurfaceMember#getThickness <em>Thickness</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralSurfaceMember#getThickness <em>Thickness</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Thickness</em>' attribute is set.
+	 * @return whether the value of the '<em>Thickness</em>' reference is set.
 	 * @see #unsetThickness()
 	 * @see #getThickness()
-	 * @see #setThickness(float)
+	 * @see #setThickness(IfcPositiveLengthMeasure)
 	 * @generated
 	 */
 	boolean isSetThickness();
-
-	/**
-	 * Returns the value of the '<em><b>Thickness As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Thickness As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Thickness As String</em>' attribute.
-	 * @see #isSetThicknessAsString()
-	 * @see #unsetThicknessAsString()
-	 * @see #setThicknessAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralSurfaceMember_ThicknessAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getThicknessAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralSurfaceMember#getThicknessAsString <em>Thickness As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Thickness As String</em>' attribute.
-	 * @see #isSetThicknessAsString()
-	 * @see #unsetThicknessAsString()
-	 * @see #getThicknessAsString()
-	 * @generated
-	 */
-	void setThicknessAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralSurfaceMember#getThicknessAsString <em>Thickness As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetThicknessAsString()
-	 * @see #getThicknessAsString()
-	 * @see #setThicknessAsString(String)
-	 * @generated
-	 */
-	void unsetThicknessAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralSurfaceMember#getThicknessAsString <em>Thickness As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Thickness As String</em>' attribute is set.
-	 * @see #unsetThicknessAsString()
-	 * @see #getThicknessAsString()
-	 * @see #setThicknessAsString(String)
-	 * @generated
-	 */
-	boolean isSetThicknessAsString();
 
 } // IfcStructuralSurfaceMember

@@ -22,8 +22,9 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3;
 
-import org.bimserver.emf.IdEObject;
 import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,134 +35,72 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightDistributionData#getMainPlaneAngle <em>Main Plane Angle</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightDistributionData#getMainPlaneAngleAsString <em>Main Plane Angle As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightDistributionData#getSecondaryPlaneAngle <em>Secondary Plane Angle</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightDistributionData#getSecondaryPlaneAngleAsString <em>Secondary Plane Angle As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightDistributionData#getLuminousIntensity <em>Luminous Intensity</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightDistributionData#getLuminousIntensityAsString <em>Luminous Intensity As String</em>}</li>
  * </ul>
  * </p>
  *
  * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcLightDistributionData()
  * @model
- * @extends IdEObject
  * @generated
  */
-public interface IfcLightDistributionData extends IdEObject {
+public interface IfcLightDistributionData extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Main Plane Angle</b></em>' attribute.
+	 * Returns the value of the '<em><b>Main Plane Angle</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Main Plane Angle</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Main Plane Angle</em>' attribute.
-	 * @see #setMainPlaneAngle(float)
+	 * @return the value of the '<em>Main Plane Angle</em>' reference.
+	 * @see #setMainPlaneAngle(IfcPlaneAngleMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcLightDistributionData_MainPlaneAngle()
 	 * @model
 	 * @generated
 	 */
-	float getMainPlaneAngle();
+	IfcPlaneAngleMeasure getMainPlaneAngle();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightDistributionData#getMainPlaneAngle <em>Main Plane Angle</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightDistributionData#getMainPlaneAngle <em>Main Plane Angle</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Main Plane Angle</em>' attribute.
+	 * @param value the new value of the '<em>Main Plane Angle</em>' reference.
 	 * @see #getMainPlaneAngle()
 	 * @generated
 	 */
-	void setMainPlaneAngle(float value);
+	void setMainPlaneAngle(IfcPlaneAngleMeasure value);
 
 	/**
-	 * Returns the value of the '<em><b>Main Plane Angle As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Main Plane Angle As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Main Plane Angle As String</em>' attribute.
-	 * @see #setMainPlaneAngleAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcLightDistributionData_MainPlaneAngleAsString()
-	 * @model
-	 * @generated
-	 */
-	String getMainPlaneAngleAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightDistributionData#getMainPlaneAngleAsString <em>Main Plane Angle As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Main Plane Angle As String</em>' attribute.
-	 * @see #getMainPlaneAngleAsString()
-	 * @generated
-	 */
-	void setMainPlaneAngleAsString(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Secondary Plane Angle</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.Float}.
+	 * Returns the value of the '<em><b>Secondary Plane Angle</b></em>' reference list.
+	 * The list contents are of type {@link org.bimserver.ifc.emf.Ifc2x3.IfcPlaneAngleMeasure}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Secondary Plane Angle</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Secondary Plane Angle</em>' attribute list.
+	 * @return the value of the '<em>Secondary Plane Angle</em>' reference list.
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcLightDistributionData_SecondaryPlaneAngle()
-	 * @model unique="false"
+	 * @model
 	 * @generated
 	 */
-	EList<Float> getSecondaryPlaneAngle();
+	EList<IfcPlaneAngleMeasure> getSecondaryPlaneAngle();
 
 	/**
-	 * Returns the value of the '<em><b>Secondary Plane Angle As String</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Secondary Plane Angle As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Secondary Plane Angle As String</em>' attribute list.
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcLightDistributionData_SecondaryPlaneAngleAsString()
-	 * @model unique="false"
-	 * @generated
-	 */
-	EList<String> getSecondaryPlaneAngleAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Luminous Intensity</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.Float}.
+	 * Returns the value of the '<em><b>Luminous Intensity</b></em>' reference list.
+	 * The list contents are of type {@link org.bimserver.ifc.emf.Ifc2x3.IfcLuminousIntensityDistributionMeasure}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Luminous Intensity</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Luminous Intensity</em>' attribute list.
+	 * @return the value of the '<em>Luminous Intensity</em>' reference list.
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcLightDistributionData_LuminousIntensity()
-	 * @model unique="false"
+	 * @model
 	 * @generated
 	 */
-	EList<Float> getLuminousIntensity();
-
-	/**
-	 * Returns the value of the '<em><b>Luminous Intensity As String</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Luminous Intensity As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Luminous Intensity As String</em>' attribute list.
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcLightDistributionData_LuminousIntensityAsString()
-	 * @model unique="false"
-	 * @generated
-	 */
-	EList<String> getLuminousIntensityAsString();
+	EList<IfcLuminousIntensityDistributionMeasure> getLuminousIntensity();
 
 } // IfcLightDistributionData

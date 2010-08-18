@@ -24,10 +24,15 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcDateTimeSelect;
+import org.bimserver.ifc.emf.Ifc2x3.IfcIdentifier;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
 import org.bimserver.ifc.emf.Ifc2x3.IfcPerson;
+import org.bimserver.ifc.emf.Ifc2x3.IfcTimeMeasure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcWorkControl;
 import org.bimserver.ifc.emf.Ifc2x3.IfcWorkControlTypeEnum;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -42,9 +47,7 @@ import org.eclipse.emf.ecore.EClass;
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcWorkControlImpl#getCreators <em>Creators</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcWorkControlImpl#getPurpose <em>Purpose</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcWorkControlImpl#getDuration <em>Duration</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcWorkControlImpl#getDurationAsString <em>Duration As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcWorkControlImpl#getTotalFloat <em>Total Float</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcWorkControlImpl#getTotalFloatAsString <em>Total Float As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcWorkControlImpl#getStartTime <em>Start Time</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcWorkControlImpl#getFinishTime <em>Finish Time</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcWorkControlImpl#getWorkControlType <em>Work Control Type</em>}</li>
@@ -79,8 +82,8 @@ public class IfcWorkControlImpl extends IfcControlImpl implements IfcWorkControl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getIdentifier() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcWorkControl_Identifier(), true);
+	public IfcIdentifier getIdentifier() {
+		return (IfcIdentifier) eGet(Ifc2x3Package.eINSTANCE.getIfcWorkControl_Identifier(), true);
 	}
 
 	/**
@@ -88,7 +91,7 @@ public class IfcWorkControlImpl extends IfcControlImpl implements IfcWorkControl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIdentifier(String newIdentifier) {
+	public void setIdentifier(IfcIdentifier newIdentifier) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcWorkControl_Identifier(), newIdentifier);
 	}
 
@@ -143,8 +146,8 @@ public class IfcWorkControlImpl extends IfcControlImpl implements IfcWorkControl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getPurpose() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcWorkControl_Purpose(), true);
+	public IfcLabel getPurpose() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcWorkControl_Purpose(), true);
 	}
 
 	/**
@@ -152,7 +155,7 @@ public class IfcWorkControlImpl extends IfcControlImpl implements IfcWorkControl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPurpose(String newPurpose) {
+	public void setPurpose(IfcLabel newPurpose) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcWorkControl_Purpose(), newPurpose);
 	}
 
@@ -179,8 +182,8 @@ public class IfcWorkControlImpl extends IfcControlImpl implements IfcWorkControl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getDuration() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcWorkControl_Duration(), true);
+	public IfcTimeMeasure getDuration() {
+		return (IfcTimeMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcWorkControl_Duration(), true);
 	}
 
 	/**
@@ -188,7 +191,7 @@ public class IfcWorkControlImpl extends IfcControlImpl implements IfcWorkControl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDuration(float newDuration) {
+	public void setDuration(IfcTimeMeasure newDuration) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcWorkControl_Duration(), newDuration);
 	}
 
@@ -215,8 +218,8 @@ public class IfcWorkControlImpl extends IfcControlImpl implements IfcWorkControl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getDurationAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcWorkControl_DurationAsString(), true);
+	public IfcTimeMeasure getTotalFloat() {
+		return (IfcTimeMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcWorkControl_TotalFloat(), true);
 	}
 
 	/**
@@ -224,43 +227,7 @@ public class IfcWorkControlImpl extends IfcControlImpl implements IfcWorkControl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDurationAsString(String newDurationAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcWorkControl_DurationAsString(), newDurationAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetDurationAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcWorkControl_DurationAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetDurationAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcWorkControl_DurationAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getTotalFloat() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcWorkControl_TotalFloat(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTotalFloat(float newTotalFloat) {
+	public void setTotalFloat(IfcTimeMeasure newTotalFloat) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcWorkControl_TotalFloat(), newTotalFloat);
 	}
 
@@ -280,42 +247,6 @@ public class IfcWorkControlImpl extends IfcControlImpl implements IfcWorkControl
 	 */
 	public boolean isSetTotalFloat() {
 		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcWorkControl_TotalFloat());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getTotalFloatAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcWorkControl_TotalFloatAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTotalFloatAsString(String newTotalFloatAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcWorkControl_TotalFloatAsString(), newTotalFloatAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetTotalFloatAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcWorkControl_TotalFloatAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetTotalFloatAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcWorkControl_TotalFloatAsString());
 	}
 
 	/**
@@ -395,8 +326,8 @@ public class IfcWorkControlImpl extends IfcControlImpl implements IfcWorkControl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getUserDefinedControlType() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcWorkControl_UserDefinedControlType(), true);
+	public IfcLabel getUserDefinedControlType() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcWorkControl_UserDefinedControlType(), true);
 	}
 
 	/**
@@ -404,7 +335,7 @@ public class IfcWorkControlImpl extends IfcControlImpl implements IfcWorkControl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUserDefinedControlType(String newUserDefinedControlType) {
+	public void setUserDefinedControlType(IfcLabel newUserDefinedControlType) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcWorkControl_UserDefinedControlType(), newUserDefinedControlType);
 	}
 

@@ -22,7 +22,7 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3;
 
-import org.bimserver.emf.IdEObject;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -41,10 +41,9 @@ import org.bimserver.emf.IdEObject;
  *
  * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcApprovalRelationship()
  * @model
- * @extends IdEObject
  * @generated
  */
-public interface IfcApprovalRelationship extends IdEObject {
+public interface IfcApprovalRelationship extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Related Approval</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link org.bimserver.ifc.emf.Ifc2x3.IfcApproval#getIsRelatedWith <em>Is Related With</em>}'.
@@ -102,82 +101,82 @@ public interface IfcApprovalRelationship extends IdEObject {
 	void setRelatingApproval(IfcApproval value);
 
 	/**
-	 * Returns the value of the '<em><b>Description</b></em>' attribute.
+	 * Returns the value of the '<em><b>Description</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Description</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Description</em>' attribute.
+	 * @return the value of the '<em>Description</em>' reference.
 	 * @see #isSetDescription()
 	 * @see #unsetDescription()
-	 * @see #setDescription(String)
+	 * @see #setDescription(IfcText)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcApprovalRelationship_Description()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getDescription();
+	IfcText getDescription();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcApprovalRelationship#getDescription <em>Description</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcApprovalRelationship#getDescription <em>Description</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Description</em>' attribute.
+	 * @param value the new value of the '<em>Description</em>' reference.
 	 * @see #isSetDescription()
 	 * @see #unsetDescription()
 	 * @see #getDescription()
 	 * @generated
 	 */
-	void setDescription(String value);
+	void setDescription(IfcText value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcApprovalRelationship#getDescription <em>Description</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcApprovalRelationship#getDescription <em>Description</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetDescription()
 	 * @see #getDescription()
-	 * @see #setDescription(String)
+	 * @see #setDescription(IfcText)
 	 * @generated
 	 */
 	void unsetDescription();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcApprovalRelationship#getDescription <em>Description</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcApprovalRelationship#getDescription <em>Description</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Description</em>' attribute is set.
+	 * @return whether the value of the '<em>Description</em>' reference is set.
 	 * @see #unsetDescription()
 	 * @see #getDescription()
-	 * @see #setDescription(String)
+	 * @see #setDescription(IfcText)
 	 * @generated
 	 */
 	boolean isSetDescription();
 
 	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * Returns the value of the '<em><b>Name</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Name</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
+	 * @return the value of the '<em>Name</em>' reference.
+	 * @see #setName(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcApprovalRelationship_Name()
 	 * @model
 	 * @generated
 	 */
-	String getName();
+	IfcLabel getName();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcApprovalRelationship#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcApprovalRelationship#getName <em>Name</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @param value the new value of the '<em>Name</em>' reference.
 	 * @see #getName()
 	 * @generated
 	 */
-	void setName(String value);
+	void setName(IfcLabel value);
 
 } // IfcApprovalRelationship

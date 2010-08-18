@@ -25,8 +25,10 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcCartesianPoint;
 import org.bimserver.ifc.emf.Ifc2x3.IfcCartesianTransformationOperator;
+import org.bimserver.ifc.emf.Ifc2x3.IfcDimensionCount;
 import org.bimserver.ifc.emf.Ifc2x3.IfcDirection;
 import org.bimserver.ifc.emf.Ifc2x3.IfcReal;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -40,7 +42,7 @@ import org.eclipse.emf.ecore.EClass;
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcCartesianTransformationOperatorImpl#getAxis2 <em>Axis2</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcCartesianTransformationOperatorImpl#getLocalOrigin <em>Local Origin</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcCartesianTransformationOperatorImpl#getScale <em>Scale</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcCartesianTransformationOperatorImpl#getScaleAsString <em>Scale As String</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcCartesianTransformationOperatorImpl#getScl <em>Scl</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcCartesianTransformationOperatorImpl#getDim <em>Dim</em>}</li>
  * </ul>
  * </p>
@@ -162,8 +164,8 @@ public class IfcCartesianTransformationOperatorImpl extends IfcGeometricRepresen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getScale() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcCartesianTransformationOperator_Scale(), true);
+	public IfcReal getScale() {
+		return (IfcReal) eGet(Ifc2x3Package.eINSTANCE.getIfcCartesianTransformationOperator_Scale(), true);
 	}
 
 	/**
@@ -171,7 +173,7 @@ public class IfcCartesianTransformationOperatorImpl extends IfcGeometricRepresen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setScale(float newScale) {
+	public void setScale(IfcReal newScale) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcCartesianTransformationOperator_Scale(), newScale);
 	}
 
@@ -180,8 +182,8 @@ public class IfcCartesianTransformationOperatorImpl extends IfcGeometricRepresen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getScaleAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcCartesianTransformationOperator_ScaleAsString(), true);
+	public IfcReal getScl() {
+		return (IfcReal) eGet(Ifc2x3Package.eINSTANCE.getIfcCartesianTransformationOperator_Scl(), true);
 	}
 
 	/**
@@ -189,8 +191,8 @@ public class IfcCartesianTransformationOperatorImpl extends IfcGeometricRepresen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setScaleAsString(String newScaleAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcCartesianTransformationOperator_ScaleAsString(), newScaleAsString);
+	public void setScl(IfcReal newScl) {
+		eSet(Ifc2x3Package.eINSTANCE.getIfcCartesianTransformationOperator_Scl(), newScl);
 	}
 
 	/**
@@ -198,8 +200,8 @@ public class IfcCartesianTransformationOperatorImpl extends IfcGeometricRepresen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getDim() {
-		return (Integer) eGet(Ifc2x3Package.eINSTANCE.getIfcCartesianTransformationOperator_Dim(), true);
+	public IfcDimensionCount getDim() {
+		return (IfcDimensionCount) eGet(Ifc2x3Package.eINSTANCE.getIfcCartesianTransformationOperator_Dim(), true);
 	}
 
 	/**
@@ -207,7 +209,7 @@ public class IfcCartesianTransformationOperatorImpl extends IfcGeometricRepresen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDim(int newDim) {
+	public void setDim(IfcDimensionCount newDim) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcCartesianTransformationOperator_Dim(), newDim);
 	}
 

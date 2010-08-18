@@ -125,7 +125,7 @@
 //			}
 //			IfcModel ifcModel = reader.getModel();
 //			try {
-//				Revision checkin = session.checkin(ModelConverter.newIfcModel(ifcModel), project.getId(), user.getId(), "test");
+//				Revision checkin = session.checkin(ModelConverter.newEmfModel(ifcModel), project.getId(), user.getId(), "test");
 //				System.out.println("size: " + session.getModelSize(project.getId(), checkin.getId()));
 //				return checkin;
 //			} catch (DatabaseException e) {
@@ -201,7 +201,7 @@
 ////		Project project = session.getProject("blaat1");
 ////
 ////		Revision revision = session.getRevision(project.getId(), revisionNr);
-////		IfcModel checkout = session.download(project.getId(), revision.getId());
+////		EmfModel checkout = session.download(project.getId(), revision.getId());
 ////
 ////		IfcFileWriter writer = new IfcFileWriter(ModelConverter.newIfcModel(checkout), schema);
 ////		try {

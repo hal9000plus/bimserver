@@ -5,8 +5,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
+import org.bimserver.emf.EmfModel;
 import org.bimserver.ifc.FieldIgnoreMap;
-import org.bimserver.ifc.IfcModel;
 import org.bimserver.ifc.database.IfcDatabase;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.eclipse.emf.common.util.EList;
@@ -23,12 +23,12 @@ public class Compare {
 		this.fieldIgnoreMap = fieldIgnoreMap;
 	}
 	
-	public CompareResult compare(IfcModel model1, IfcModel model2) {
+	public CompareResult compare(EmfModel<Long> model1, EmfModel<Long> model2) {
 		CompareResult result = new CompareResult();
 		try {
-			IfcDatabase database1 = new IfcDatabase(model1, fieldIgnoreMap);
+			IfcDatabase<Long> database1 = new IfcDatabase<Long>(model1, fieldIgnoreMap);
 			database1.buildGuidIndex();
-			IfcDatabase database2 = new IfcDatabase(model2, fieldIgnoreMap);
+			IfcDatabase<Long> database2 = new IfcDatabase<Long>(model2, fieldIgnoreMap);
 			database2.buildGuidIndex();
 
 			for (EClassifier eClassifier : Ifc2x3Package.eINSTANCE.getEClassifiers()) {
@@ -86,9 +86,7 @@ public class Compare {
 						Iterator<?> iterator = list2.iterator();
 						for (Object o1 : list1) {
 							Object o2 = iterator.next();
-							if (o1 instanceof EObject && o2 instanceof EObject) {
-								compareEObjects(originalQueryClass, (EObject) o1, (EObject) o2, result);
-							}
+							compareEObjects(originalQueryClass, (EObject) o1, (EObject) o2, result);
 						}
 					} else {
 //						System.out.println("different " + eClass.getName() + "." + eStructuralFeature.getName() + " " + list1.size() + " " + list2.size());

@@ -22,8 +22,9 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3;
 
-import org.bimserver.emf.IdEObject;
 import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -41,112 +42,111 @@ import org.eclipse.emf.common.util.EList;
  *
  * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRepresentationContext()
  * @model
- * @extends IdEObject
  * @generated
  */
-public interface IfcRepresentationContext extends IdEObject {
+public interface IfcRepresentationContext extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Context Identifier</b></em>' attribute.
+	 * Returns the value of the '<em><b>Context Identifier</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Context Identifier</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Context Identifier</em>' attribute.
+	 * @return the value of the '<em>Context Identifier</em>' reference.
 	 * @see #isSetContextIdentifier()
 	 * @see #unsetContextIdentifier()
-	 * @see #setContextIdentifier(String)
+	 * @see #setContextIdentifier(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRepresentationContext_ContextIdentifier()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getContextIdentifier();
+	IfcLabel getContextIdentifier();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRepresentationContext#getContextIdentifier <em>Context Identifier</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRepresentationContext#getContextIdentifier <em>Context Identifier</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Context Identifier</em>' attribute.
+	 * @param value the new value of the '<em>Context Identifier</em>' reference.
 	 * @see #isSetContextIdentifier()
 	 * @see #unsetContextIdentifier()
 	 * @see #getContextIdentifier()
 	 * @generated
 	 */
-	void setContextIdentifier(String value);
+	void setContextIdentifier(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRepresentationContext#getContextIdentifier <em>Context Identifier</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRepresentationContext#getContextIdentifier <em>Context Identifier</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetContextIdentifier()
 	 * @see #getContextIdentifier()
-	 * @see #setContextIdentifier(String)
+	 * @see #setContextIdentifier(IfcLabel)
 	 * @generated
 	 */
 	void unsetContextIdentifier();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRepresentationContext#getContextIdentifier <em>Context Identifier</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRepresentationContext#getContextIdentifier <em>Context Identifier</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Context Identifier</em>' attribute is set.
+	 * @return whether the value of the '<em>Context Identifier</em>' reference is set.
 	 * @see #unsetContextIdentifier()
 	 * @see #getContextIdentifier()
-	 * @see #setContextIdentifier(String)
+	 * @see #setContextIdentifier(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetContextIdentifier();
 
 	/**
-	 * Returns the value of the '<em><b>Context Type</b></em>' attribute.
+	 * Returns the value of the '<em><b>Context Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Context Type</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Context Type</em>' attribute.
+	 * @return the value of the '<em>Context Type</em>' reference.
 	 * @see #isSetContextType()
 	 * @see #unsetContextType()
-	 * @see #setContextType(String)
+	 * @see #setContextType(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRepresentationContext_ContextType()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getContextType();
+	IfcLabel getContextType();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRepresentationContext#getContextType <em>Context Type</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRepresentationContext#getContextType <em>Context Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Context Type</em>' attribute.
+	 * @param value the new value of the '<em>Context Type</em>' reference.
 	 * @see #isSetContextType()
 	 * @see #unsetContextType()
 	 * @see #getContextType()
 	 * @generated
 	 */
-	void setContextType(String value);
+	void setContextType(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRepresentationContext#getContextType <em>Context Type</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRepresentationContext#getContextType <em>Context Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetContextType()
 	 * @see #getContextType()
-	 * @see #setContextType(String)
+	 * @see #setContextType(IfcLabel)
 	 * @generated
 	 */
 	void unsetContextType();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRepresentationContext#getContextType <em>Context Type</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRepresentationContext#getContextType <em>Context Type</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Context Type</em>' attribute is set.
+	 * @return whether the value of the '<em>Context Type</em>' reference is set.
 	 * @see #unsetContextType()
 	 * @see #getContextType()
-	 * @see #setContextType(String)
+	 * @see #setContextType(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetContextType();

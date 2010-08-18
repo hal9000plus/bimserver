@@ -22,13 +22,16 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
-import org.bimserver.emf.IdEObjectImpl;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcCurrencyRelationship;
 import org.bimserver.ifc.emf.Ifc2x3.IfcDateAndTime;
 import org.bimserver.ifc.emf.Ifc2x3.IfcLibraryInformation;
 import org.bimserver.ifc.emf.Ifc2x3.IfcMonetaryUnit;
+import org.bimserver.ifc.emf.Ifc2x3.IfcPositiveRatioMeasure;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -40,7 +43,6 @@ import org.eclipse.emf.ecore.EClass;
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcCurrencyRelationshipImpl#getRelatingMonetaryUnit <em>Relating Monetary Unit</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcCurrencyRelationshipImpl#getRelatedMonetaryUnit <em>Related Monetary Unit</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcCurrencyRelationshipImpl#getExchangeRate <em>Exchange Rate</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcCurrencyRelationshipImpl#getExchangeRateAsString <em>Exchange Rate As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcCurrencyRelationshipImpl#getRateDateTime <em>Rate Date Time</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcCurrencyRelationshipImpl#getRateSource <em>Rate Source</em>}</li>
  * </ul>
@@ -48,7 +50,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class IfcCurrencyRelationshipImpl extends IdEObjectImpl implements IfcCurrencyRelationship {
+public class IfcCurrencyRelationshipImpl extends EObjectImpl implements IfcCurrencyRelationship {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -119,8 +121,8 @@ public class IfcCurrencyRelationshipImpl extends IdEObjectImpl implements IfcCur
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getExchangeRate() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcCurrencyRelationship_ExchangeRate(), true);
+	public IfcPositiveRatioMeasure getExchangeRate() {
+		return (IfcPositiveRatioMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcCurrencyRelationship_ExchangeRate(), true);
 	}
 
 	/**
@@ -128,26 +130,8 @@ public class IfcCurrencyRelationshipImpl extends IdEObjectImpl implements IfcCur
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setExchangeRate(float newExchangeRate) {
+	public void setExchangeRate(IfcPositiveRatioMeasure newExchangeRate) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcCurrencyRelationship_ExchangeRate(), newExchangeRate);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getExchangeRateAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcCurrencyRelationship_ExchangeRateAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setExchangeRateAsString(String newExchangeRateAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcCurrencyRelationship_ExchangeRateAsString(), newExchangeRateAsString);
 	}
 
 	/**

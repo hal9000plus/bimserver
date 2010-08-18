@@ -32,7 +32,6 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcMaterialLayer#getMaterial <em>Material</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcMaterialLayer#getLayerThickness <em>Layer Thickness</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcMaterialLayer#getLayerThicknessAsString <em>Layer Thickness As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcMaterialLayer#getIsVentilated <em>Is Ventilated</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcMaterialLayer#getToMaterialLayerSet <em>To Material Layer Set</em>}</li>
  * </ul>
@@ -97,109 +96,80 @@ public interface IfcMaterialLayer extends IfcMaterialSelect, IfcObjectReferenceS
 	boolean isSetMaterial();
 
 	/**
-	 * Returns the value of the '<em><b>Layer Thickness</b></em>' attribute.
+	 * Returns the value of the '<em><b>Layer Thickness</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Layer Thickness</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Layer Thickness</em>' attribute.
-	 * @see #setLayerThickness(float)
+	 * @return the value of the '<em>Layer Thickness</em>' reference.
+	 * @see #setLayerThickness(IfcPositiveLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcMaterialLayer_LayerThickness()
 	 * @model
 	 * @generated
 	 */
-	float getLayerThickness();
+	IfcPositiveLengthMeasure getLayerThickness();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMaterialLayer#getLayerThickness <em>Layer Thickness</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMaterialLayer#getLayerThickness <em>Layer Thickness</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Layer Thickness</em>' attribute.
+	 * @param value the new value of the '<em>Layer Thickness</em>' reference.
 	 * @see #getLayerThickness()
 	 * @generated
 	 */
-	void setLayerThickness(float value);
+	void setLayerThickness(IfcPositiveLengthMeasure value);
 
 	/**
-	 * Returns the value of the '<em><b>Layer Thickness As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Layer Thickness As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Layer Thickness As String</em>' attribute.
-	 * @see #setLayerThicknessAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcMaterialLayer_LayerThicknessAsString()
-	 * @model
-	 * @generated
-	 */
-	String getLayerThicknessAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMaterialLayer#getLayerThicknessAsString <em>Layer Thickness As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Layer Thickness As String</em>' attribute.
-	 * @see #getLayerThicknessAsString()
-	 * @generated
-	 */
-	void setLayerThicknessAsString(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Is Ventilated</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.bimserver.ifc.emf.Ifc2x3.Tristate}.
+	 * Returns the value of the '<em><b>Is Ventilated</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Is Ventilated</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Is Ventilated</em>' attribute.
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Tristate
+	 * @return the value of the '<em>Is Ventilated</em>' reference.
 	 * @see #isSetIsVentilated()
 	 * @see #unsetIsVentilated()
-	 * @see #setIsVentilated(Tristate)
+	 * @see #setIsVentilated(IfcLogical)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcMaterialLayer_IsVentilated()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	Tristate getIsVentilated();
+	IfcLogical getIsVentilated();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMaterialLayer#getIsVentilated <em>Is Ventilated</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMaterialLayer#getIsVentilated <em>Is Ventilated</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Is Ventilated</em>' attribute.
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Tristate
+	 * @param value the new value of the '<em>Is Ventilated</em>' reference.
 	 * @see #isSetIsVentilated()
 	 * @see #unsetIsVentilated()
 	 * @see #getIsVentilated()
 	 * @generated
 	 */
-	void setIsVentilated(Tristate value);
+	void setIsVentilated(IfcLogical value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMaterialLayer#getIsVentilated <em>Is Ventilated</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMaterialLayer#getIsVentilated <em>Is Ventilated</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetIsVentilated()
 	 * @see #getIsVentilated()
-	 * @see #setIsVentilated(Tristate)
+	 * @see #setIsVentilated(IfcLogical)
 	 * @generated
 	 */
 	void unsetIsVentilated();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMaterialLayer#getIsVentilated <em>Is Ventilated</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMaterialLayer#getIsVentilated <em>Is Ventilated</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Is Ventilated</em>' attribute is set.
+	 * @return whether the value of the '<em>Is Ventilated</em>' reference is set.
 	 * @see #unsetIsVentilated()
 	 * @see #getIsVentilated()
-	 * @see #setIsVentilated(Tristate)
+	 * @see #setIsVentilated(IfcLogical)
 	 * @generated
 	 */
 	boolean isSetIsVentilated();

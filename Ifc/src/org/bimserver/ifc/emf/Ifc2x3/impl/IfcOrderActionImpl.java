@@ -23,7 +23,9 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcIdentifier;
 import org.bimserver.ifc.emf.Ifc2x3.IfcOrderAction;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -64,8 +66,8 @@ public class IfcOrderActionImpl extends IfcTaskImpl implements IfcOrderAction {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getActionID() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcOrderAction_ActionID(), true);
+	public IfcIdentifier getActionID() {
+		return (IfcIdentifier) eGet(Ifc2x3Package.eINSTANCE.getIfcOrderAction_ActionID(), true);
 	}
 
 	/**
@@ -73,7 +75,7 @@ public class IfcOrderActionImpl extends IfcTaskImpl implements IfcOrderAction {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setActionID(String newActionID) {
+	public void setActionID(IfcIdentifier newActionID) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcOrderAction_ActionID(), newActionID);
 	}
 

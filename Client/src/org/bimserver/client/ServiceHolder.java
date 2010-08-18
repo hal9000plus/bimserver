@@ -43,7 +43,7 @@ public class ServiceHolder {
 	private static final Logger LOGGER = LoggerFactory.getLogger(ServiceHolder.class);
 	private String username = "anonymous";
 	private String password = "anonymous";
-	private String address = "http://localhost:8082/services/soap";
+	private String address = "http://localhost:8082/bimserver/services/soap";
 
 	public AuthenticatedServiceWrapper getService() {
 		return service;
@@ -73,9 +73,8 @@ public class ServiceHolder {
 
 		boolean connected = false;
 		try {
-			if (remoteService.ping("test").equals("test")) {
-				connected = true;
-			}
+			remoteService.ping();
+			connected = true;
 		} catch (Exception e) {
 			LOGGER.info("Error connecting to " + address);
 		}

@@ -23,7 +23,9 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLengthMeasure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcPlanarExtent;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -34,9 +36,7 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcPlanarExtentImpl#getSizeInX <em>Size In X</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcPlanarExtentImpl#getSizeInXAsString <em>Size In XAs String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcPlanarExtentImpl#getSizeInY <em>Size In Y</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcPlanarExtentImpl#getSizeInYAsString <em>Size In YAs String</em>}</li>
  * </ul>
  * </p>
  *
@@ -67,8 +67,8 @@ public class IfcPlanarExtentImpl extends IfcGeometricRepresentationItemImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getSizeInX() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcPlanarExtent_SizeInX(), true);
+	public IfcLengthMeasure getSizeInX() {
+		return (IfcLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcPlanarExtent_SizeInX(), true);
 	}
 
 	/**
@@ -76,7 +76,7 @@ public class IfcPlanarExtentImpl extends IfcGeometricRepresentationItemImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSizeInX(float newSizeInX) {
+	public void setSizeInX(IfcLengthMeasure newSizeInX) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcPlanarExtent_SizeInX(), newSizeInX);
 	}
 
@@ -85,8 +85,8 @@ public class IfcPlanarExtentImpl extends IfcGeometricRepresentationItemImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getSizeInXAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcPlanarExtent_SizeInXAsString(), true);
+	public IfcLengthMeasure getSizeInY() {
+		return (IfcLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcPlanarExtent_SizeInY(), true);
 	}
 
 	/**
@@ -94,44 +94,8 @@ public class IfcPlanarExtentImpl extends IfcGeometricRepresentationItemImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSizeInXAsString(String newSizeInXAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcPlanarExtent_SizeInXAsString(), newSizeInXAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getSizeInY() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcPlanarExtent_SizeInY(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSizeInY(float newSizeInY) {
+	public void setSizeInY(IfcLengthMeasure newSizeInY) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcPlanarExtent_SizeInY(), newSizeInY);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getSizeInYAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcPlanarExtent_SizeInYAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSizeInYAsString(String newSizeInYAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcPlanarExtent_SizeInYAsString(), newSizeInYAsString);
 	}
 
 } //IfcPlanarExtentImpl

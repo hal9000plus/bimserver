@@ -20,26 +20,27 @@ package org.bimserver.ifc.file.writer;
  * long with Bimserver.org . If not, see <http://www.gnu.org/licenses/>.
  */
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.OutputStream;
-import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Iterator;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import nl.tue.buildingsmart.express.dictionary.EntityDefinition;
 import nl.tue.buildingsmart.express.dictionary.SchemaDefinition;
 
-import org.bimserver.database.store.Project;
-import org.bimserver.database.store.User;
-import org.bimserver.emf.IdEObject;
-import org.bimserver.ifc.IfcModel;
+import org.bimserver.emf.EmfModel;
 import org.bimserver.ifc.IfcSerializer;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcGloballyUniqueId;
 import org.bimserver.ifc.emf.Ifc2x3.Tristate;
 import org.bimserver.ifc.emf.Ifc2x3.WrappedValue;
-import org.bimserver.shared.ResultType;
 import org.bimserver.utils.UTFPrintWriter;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -51,10 +52,11 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.EcorePackage;
 
 public class IfcStepSerializer extends IfcSerializer {
-	private static final EcorePackage ECORE_PACKAGE_INSTANCE = EcorePackage.eINSTANCE;
 	private static final String NULL = "NULL";
+	private static final EcorePackage ECORE_PACKAGE_INSTANCE = EcorePackage.eINSTANCE;
 	private static final String OPEN_CLOSE_PAREN = "()";
 	private static final String ASTERISK = "*";
+	private static final String ASTERISK_COMMA = "*,";
 	private static final String PAREN_CLOSE_SEMICOLON = ");";
 	private static final String DOT_0 = ".0";
 	private static final String DASH = "#";
@@ -62,14 +64,18 @@ public class IfcStepSerializer extends IfcSerializer {
 	private static final String IFC_BOOLEAN = "IfcBoolean";
 	private static final String DOT = ".";
 	private static final String COMMA = ",";
-	private static final String OPEN_CLOSE = "(";
 	private static final String CLOSE_PAREN = ")";
 	private static final String BOOLEAN_UNDEFINED = ".U.";
 	private static final String SINGLE_QUOTE = "'";
 	private static final String BOOLEAN_FALSE = ".F.";
 	private static final String BOOLEAN_TRUE = ".T.";
 	private static final String DOLLAR = "$";
+	private static final String PAREN_OPEN = "(";
 	private static final String WRAPPED_VALUE = "wrappedValue";
+	private static final String STRING_VALUE_WRAPPED_VALUE = "stringValue" + WRAPPED_VALUE;
+	private final Map<Long, EObject> oidToObjectMap;
+	private final Map<EObject, Long> objectToOidMap;
+	private UTFPrintWriter out;
 
 	private String fileDescription = "";
 	private String name = "";
@@ -80,54 +86,42 @@ public class IfcStepSerializer extends IfcSerializer {
 	private String preProcessorVersion = "";
 	private Date date = new Date();
 
-	public enum Mode {
-		HEADER,
-		BODY,
-		FOOTER,
-		FINISHED
-	}
-
-	private Mode mode = Mode.HEADER;
-	private Iterator<Long> iterator;
-
-	public IfcStepSerializer(Project project, User user, String fileName, IfcModel model, SchemaDefinition schema) {
-		super(fileName, model, schema);
-		setAuthor(user.getName());
+	public IfcStepSerializer(EmfModel<Long> model, SchemaDefinition schema) {
+		super(schema, model);
+		setAuthor(model.getAuthor());
 		setAuthorization(model.getAuthorizedUser());
-		if (project != null) {
-			setName(project.getName() + "." + model.getRevisionNr());
-		} else {
-			setName("");
+		setName(model.getProjectName() + "." + model.getRevisionNr());
+
+		oidToObjectMap = model.getObjects();
+		objectToOidMap = new HashMap<EObject, Long>((int) model.size());
+		for (Long key : model.keySet()) {
+			EObject value = model.get(key);
+			if (!(value instanceof WrappedValue)) {
+				objectToOidMap.put(value, key);
+			}
 		}
 	}
 
-	public int write(OutputStream outputStream) {
-		UTFPrintWriter out = new UTFPrintWriter(outputStream);
-		if (mode == Mode.HEADER) {
-			writeHeader(out);
-			mode = Mode.BODY;
-			iterator = model.keySet().iterator();
-			out.flush();
-			return 1;
-		} else if (mode == Mode.BODY) {
-			if (iterator.hasNext()) {
-				long key = iterator.next();
-				write(out, key, model.get(key));
-			} else {
-				iterator = null;
-				mode = Mode.FOOTER;
-			}
-			out.flush();
-			return 1;
-		} else if (mode == Mode.FOOTER) {
-			writeFooter(out);
-			mode = Mode.FINISHED;
-			out.flush();
-			return 1;
-		} else if (mode == Mode.FINISHED) {
-			return -1;
+	public void write(OutputStream out) {
+		try {
+			this.out = new UTFPrintWriter(out);
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
 		}
-		return -1;
+		writeHeader();
+		for (Long key : oidToObjectMap.keySet()) {
+			write(key, oidToObjectMap.get(key));
+		}
+		writeFooter();
+		this.out.flush();
+	}
+
+	public void write(File file) throws FileNotFoundException {
+		try {
+			write(new FileOutputStream(file));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 	public void setFileDescription(String fileDescription) {
@@ -162,12 +156,12 @@ public class IfcStepSerializer extends IfcSerializer {
 		this.preProcessorVersion = preProcessorVersion;
 	}
 
-	private void writeFooter(UTFPrintWriter out) {
+	private void writeFooter() {
 		out.println("ENDSEC;");
 		out.println("END-ISO-10303-21;");
 	}
 
-	private void writeHeader(UTFPrintWriter out) {
+	private void writeHeader() {
 		SimpleDateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd'T'kk:mm:ss");
 		String dateString = dateFormatter.format(date);
 
@@ -183,7 +177,7 @@ public class IfcStepSerializer extends IfcSerializer {
 		// out.println("//This is free software, and you are welcome to redistribute it under certain conditions. See www.bimserver.org <http://www.bimserver.org>");
 	}
 
-	private void writePrimitive(PrintWriter out, Object val) {
+	private void printPrimitive(Object val) {
 		if (val instanceof Tristate) {
 			Tristate bool = (Tristate) val;
 			if (bool == Tristate.TRUE) {
@@ -193,19 +187,12 @@ public class IfcStepSerializer extends IfcSerializer {
 			} else if (bool == Tristate.UNDEFINED) {
 				out.print(BOOLEAN_UNDEFINED);
 			}
-		} else if (val instanceof Float || val instanceof Double) {
+		} else if (val instanceof Float) {
 			String string = val.toString();
 			if (string.endsWith(DOT_0)) {
 				out.print(string.substring(0, string.length() - 1));
 			} else {
 				out.print(string);
-			}
-		} else if (val instanceof Boolean) {
-			Boolean bool = (Boolean)val;
-			if (bool) {
-				out.print(BOOLEAN_TRUE);
-			} else {
-				out.print(BOOLEAN_FALSE);
 			}
 		} else if (val instanceof String) {
 			out.print(SINGLE_QUOTE);
@@ -216,36 +203,39 @@ public class IfcStepSerializer extends IfcSerializer {
 		}
 	}
 
-	private void write(PrintWriter out, Long key, EObject object) {
+	private void write(Long key, EObject object) {
 		EClass eClass = object.eClass();
+		if (eClass.getEStructuralFeature(WRAPPED_VALUE) != null) {
+			return;
+		}
 		out.print(DASH);
 		out.print(String.valueOf(key));
 		out.print("= ");
 		out.print(upperCases.get(eClass));
-		out.print(OPEN_CLOSE);
+		out.print(PAREN_OPEN);
 		boolean isFirst = true;
 		for (EStructuralFeature feature : eClass.getEAllStructuralFeatures()) {
-			if (!feature.isDerived() && !feature.isVolatile() && !feature.getName().endsWith("AsString")) {
+			if (!feature.isDerived() && !feature.isVolatile()) {
 				EClassifier type = feature.getEType();
 				if (type instanceof EEnum) {
 					if (!isFirst) {
 						out.print(COMMA);
 					}
-					writeEnum(out, object, feature);
+					writeEnum(object, feature);
 					isFirst = false;
 				} else if (type instanceof EClass) {
 					if (!isInverse(feature)) {
 						if (!isFirst) {
 							out.print(COMMA);
 						}
-						writeEClass(out, object, feature);
+						writeEClass(object, feature);
 						isFirst = false;
 					}
 				} else if (type instanceof EDataType) {
 					if (!isFirst) {
 						out.print(COMMA);
 					}
-					writeEDataType(out, object, feature);
+					writeEDataType(object, feature);
 					isFirst = false;
 				}
 			}
@@ -253,39 +243,39 @@ public class IfcStepSerializer extends IfcSerializer {
 		out.println(PAREN_CLOSE_SEMICOLON);
 	}
 
-	private void writeEDataType(PrintWriter out, EObject object, EStructuralFeature feature) {
+	private void writeEDataType(EObject object, EStructuralFeature feature) {
 		EntityDefinition entityBN = schema.getEntityBNNoCaseConvert(upperCases.get(object.eClass()));
 		if (entityBN != null && entityBN.isDerived(feature.getName())) {
-			out.print(ASTERISK);
-		} else if (feature.isMany()) {
-			writeList(out, object, feature);
+			out.print(ASTERISK_COMMA);
+		} else if (feature.getUpperBound() != 1) {
+			writeList(object, feature);
 		} else {
-			writeObject(out, object, feature);
+			writeObject(object, feature);
 		}
 	}
 
-	private void writeEClass(PrintWriter out, EObject object, EStructuralFeature feature) {
+	private void writeEClass(EObject object, EStructuralFeature feature) {
 		Object referencedObject = object.eGet(feature);
 		if (referencedObject instanceof WrappedValue || referencedObject instanceof IfcGloballyUniqueId) {
-			writeWrappedValue(out, object, feature, ((EObject)referencedObject).eClass());
+			writeWrappedValue(object, feature, ((EObject)referencedObject).eClass());
 		} else {
 			EntityDefinition entityBN = schema.getEntityBNNoCaseConvert(upperCases.get(object.eClass()));
-			if (referencedObject instanceof EObject && model.contains((IdEObject) referencedObject)) {
+			if (referencedObject instanceof EObject && objectToOidMap.containsKey((EObject) referencedObject)) {
 				out.print(DASH);
-				out.print(String.valueOf(model.get((IdEObject) referencedObject)));
+				out.print(String.valueOf(objectToOidMap.get((EObject) referencedObject)));
 			} else {
 				if (entityBN != null && entityBN.isDerived(feature.getName())) {
 					out.print(ASTERISK);
-				} else if (feature.isMany()) {
-					writeList(out, object, feature);
+				} else if (feature.getUpperBound() != 1) {
+					writeList(object, feature);
 				} else {
-					writeObject(out, object, feature);
+					writeObject(object, feature);
 				}
 			}
 		}
 	}
 
-	private void writeObject(PrintWriter out, EObject object, EStructuralFeature feature) {
+	private void writeObject(EObject object, EStructuralFeature feature) {
 		Object ref = object.eGet(feature);
 		if (ref == null) {
 			EClassifier type = feature.getEType();
@@ -308,30 +298,31 @@ public class IfcStepSerializer extends IfcSerializer {
 			}
 		} else {
 			if (ref instanceof EObject) {
-				writeEmbedded(out, (EObject) ref);
+				writeEmbedded(ref);
 			} else {
-				writePrimitive(out, ref);
+				printPrimitive(ref);
 			}
 		}
 	}
 
-	private void writeEmbedded(PrintWriter out, EObject eObject) {
+	private void writeEmbedded(Object ref) {
+		EObject eObject = (EObject) ref;
 		EClass class1 = eObject.eClass();
 		out.print(upperCases.get(class1));
-		out.print(OPEN_CLOSE);
+		out.print(PAREN_OPEN);
 		EStructuralFeature structuralFeature = class1.getEStructuralFeature(WRAPPED_VALUE);
 		if (structuralFeature != null) {
 			Object get = eObject.eGet(structuralFeature);
-			if (structuralFeature.getEType() == ECORE_PACKAGE_INSTANCE.getEFloat() || structuralFeature.getEType() == ECORE_PACKAGE_INSTANCE.getEDouble()) {
-				out.print(eObject.eGet(class1.getEStructuralFeature(structuralFeature.getName() + "AsString")));
+			if (structuralFeature.getEType() == ECORE_PACKAGE_INSTANCE.getEFloat()) {
+				out.print(eObject.eGet(class1.getEStructuralFeature(STRING_VALUE_WRAPPED_VALUE)));
 			} else {
-				writePrimitive(out, get);
+				printPrimitive(get);
 			}
 		}
 		out.print(CLOSE_PAREN);
 	}
 
-	private void writeList(PrintWriter out, EObject object, EStructuralFeature feature) {
+	private void writeList(EObject object, EStructuralFeature feature) {
 		List<?> list = (List<?>) object.eGet(feature);
 		if (list.size() == 0) {
 			if (feature.isUnsettable()) {
@@ -340,45 +331,43 @@ public class IfcStepSerializer extends IfcSerializer {
 				out.print(OPEN_CLOSE_PAREN);
 			}
 		} else {
-			out.print(OPEN_CLOSE);
+			out.print(PAREN_OPEN);
 			boolean first = true;
 			for (Object listObject : list) {
 				if (!first) {
 					out.print(COMMA);
 				}
-				if ((listObject instanceof IdEObject) && model.contains((IdEObject)listObject)) {
-					IdEObject eObject = (IdEObject) listObject;
+				EObject eObject = (EObject) listObject;
+				if (objectToOidMap.containsKey(eObject)) {
 					out.print(DASH);
-					out.print(String.valueOf(model.get(eObject)));
+					out.print(String.valueOf(objectToOidMap.get(eObject)));
 				} else {
 					if (listObject == null) {
 						out.print(DOLLAR);
 					} else {
 						if (listObject instanceof WrappedValue && Ifc2x3Package.eINSTANCE.getWrappedValue().isSuperTypeOf((EClass) feature.getEType())) {
-							IdEObject eObject = (IdEObject) listObject;
 							Object realVal = eObject.eGet(eObject.eClass().getEStructuralFeature("wrappedValue"));
-							if (realVal instanceof Float || realVal instanceof Double) {
-								out.print(eObject.eGet(eObject.eClass().getEStructuralFeature("wrappedValueAsString")));
+							if (realVal instanceof Float) {
+								out.print(eObject.eGet(eObject.eClass().getEStructuralFeature(STRING_VALUE_WRAPPED_VALUE)));
 							} else {
-								writePrimitive(out, realVal);
+								printPrimitive(realVal);
 							}
 						} else if (listObject instanceof EObject) {
-							IdEObject eObject = (IdEObject) listObject;
 							EClass class1 = eObject.eClass();
 							EStructuralFeature structuralFeature = class1.getEStructuralFeature(WRAPPED_VALUE);
 							if (structuralFeature != null) {
 								Object realVal = eObject.eGet(structuralFeature);
 								out.print(upperCases.get(class1));
-								out.print(OPEN_CLOSE);
-								if (realVal instanceof Float || realVal instanceof Double) {
-									out.print(eObject.eGet(class1.getEStructuralFeature(structuralFeature.getName() + "AsString")));
+								out.print(PAREN_OPEN);
+								if (realVal instanceof Float) {
+									out.print(eObject.eGet(class1.getEStructuralFeature(STRING_VALUE_WRAPPED_VALUE)));
 								} else {
-									writePrimitive(out, realVal);
+									printPrimitive(realVal);
 								}
 								out.print(CLOSE_PAREN);
 							}
 						} else {
-							writePrimitive(out, listObject);
+							printPrimitive(listObject);
 						}
 					}
 				}
@@ -388,26 +377,24 @@ public class IfcStepSerializer extends IfcSerializer {
 		}
 	}
 
-	private void writeWrappedValue(PrintWriter out, EObject object, EStructuralFeature feature, EClass ec) {
+	private void writeWrappedValue(EObject object, EStructuralFeature feature, EClass ec) {
 		Object get = object.eGet(feature);
-		boolean isWrapped = Ifc2x3Package.eINSTANCE.getWrappedValue().isSuperTypeOf(ec) || ec == Ifc2x3Package.eINSTANCE.getIfcGloballyUniqueId();
 		EStructuralFeature structuralFeature = ec.getEStructuralFeature(WRAPPED_VALUE);
 		if (get instanceof EObject) {
-			boolean isDefinedWrapped = Ifc2x3Package.eINSTANCE.getWrappedValue().isSuperTypeOf((EClass) feature.getEType()) || feature.getEType() == Ifc2x3Package.eINSTANCE.getIfcGloballyUniqueId();
 			EObject betweenObject = (EObject) get;
 			if (betweenObject != null) {
-				if (isWrapped && isDefinedWrapped) {
+				if (structuralFeature == null) {
+					writeEmbedded(betweenObject);
+				} else {
 					Object val = betweenObject.eGet(structuralFeature);
 					String name = structuralFeature.getEType().getName();
 					if ((name.equals(IFC_BOOLEAN) || name.equals(IFC_LOGICAL)) && val == null) {
 						out.print(BOOLEAN_UNDEFINED);
 					} else if (structuralFeature.getEType() == ECORE_PACKAGE_INSTANCE.getEFloat()) {
-						out.print(betweenObject.eGet(betweenObject.eClass().getEStructuralFeature("wrappedValueAsString")));
+						out.print(betweenObject.eGet(betweenObject.eClass().getEStructuralFeature(STRING_VALUE_WRAPPED_VALUE)));
 					} else {
-						writePrimitive(out, val);
+						printPrimitive(val);
 					}
-				} else {
-					writeEmbedded(out, betweenObject);
 				}
 			}
 		} else if (get instanceof EList<?>) {
@@ -419,7 +406,7 @@ public class IfcStepSerializer extends IfcSerializer {
 					out.print(OPEN_CLOSE_PAREN);
 				}
 			} else {
-				out.print(OPEN_CLOSE);
+				out.print(PAREN_OPEN);
 				boolean first = true;
 				for (Object o : list) {
 					if (!first) {
@@ -430,7 +417,7 @@ public class IfcStepSerializer extends IfcSerializer {
 					if (structuralFeature.getEType() == ECORE_PACKAGE_INSTANCE.getEFloat()) {
 						out.print(object2.eGet(object2.eClass().getEStructuralFeature("stringValue" + structuralFeature.getName())));
 					} else {
-						writePrimitive(out, val);
+						printPrimitive(val);
 					}
 					first = false;
 				}
@@ -457,27 +444,18 @@ public class IfcStepSerializer extends IfcSerializer {
 		}
 	}
 
-	private void writeEnum(PrintWriter out, EObject object, EStructuralFeature feature) {
+	private void writeEnum(EObject object, EStructuralFeature feature) {
 		Object val = object.eGet(feature);
-		if (feature.getEType() == Ifc2x3Package.eINSTANCE.getTristate()) {
-			writePrimitive(out, val);
+		if (val == null) {
+			out.print(DOLLAR);
 		} else {
-			if (val == null) {
+			if (((Enum<?>) val).toString().equals(NULL)) {
 				out.print(DOLLAR);
 			} else {
-				if (((Enum<?>) val).toString().equals(NULL)) {
-					out.print(DOLLAR);
-				} else {
-					out.print(DOT);
-					out.print(val.toString());
-					out.print(DOT);
-				}
+				out.print(DOT);
+				out.print(val.toString());
+				out.print(DOT);
 			}
 		}
-	}
-
-	@Override
-	public String getContentType() {
-		return ResultType.IFC.getContentType();
 	}
 }

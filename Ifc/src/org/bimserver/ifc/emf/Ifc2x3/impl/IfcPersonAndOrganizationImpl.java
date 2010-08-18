@@ -22,14 +22,17 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
-import org.bimserver.emf.IdEObjectImpl;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcActorRole;
 import org.bimserver.ifc.emf.Ifc2x3.IfcOrganization;
 import org.bimserver.ifc.emf.Ifc2x3.IfcPerson;
 import org.bimserver.ifc.emf.Ifc2x3.IfcPersonAndOrganization;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -46,7 +49,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class IfcPersonAndOrganizationImpl extends IdEObjectImpl implements IfcPersonAndOrganization {
+public class IfcPersonAndOrganizationImpl extends EObjectImpl implements IfcPersonAndOrganization {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

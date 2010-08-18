@@ -269,8 +269,8 @@ public enum IfcWindowStyleConstructionEnum implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final IfcWindowStyleConstructionEnum[] VALUES_ARRAY = new IfcWindowStyleConstructionEnum[] { NULL, ALUMINIUM_WOOD, HIGH_GRADE_STEEL, NOTDEFINED,
-			OTHER_CONSTRUCTION, PLASTIC, WOOD, ALUMINIUM, STEEL, };
+	private static final IfcWindowStyleConstructionEnum[] VALUES_ARRAY = new IfcWindowStyleConstructionEnum[] { NULL, ALUMINIUM_WOOD, HIGH_GRADE_STEEL,
+			NOTDEFINED, OTHER_CONSTRUCTION, PLASTIC, WOOD, ALUMINIUM, STEEL, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Ifc Window Style Construction Enum</b></em>' enumerators.

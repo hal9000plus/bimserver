@@ -24,7 +24,10 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcColourRgb;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
 import org.bimserver.ifc.emf.Ifc2x3.IfcLightSource;
+import org.bimserver.ifc.emf.Ifc2x3.IfcNormalisedRatioMeasure;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -37,9 +40,7 @@ import org.eclipse.emf.ecore.EClass;
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcLightSourceImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcLightSourceImpl#getLightColour <em>Light Colour</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcLightSourceImpl#getAmbientIntensity <em>Ambient Intensity</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcLightSourceImpl#getAmbientIntensityAsString <em>Ambient Intensity As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcLightSourceImpl#getIntensity <em>Intensity</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcLightSourceImpl#getIntensityAsString <em>Intensity As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -70,8 +71,8 @@ public class IfcLightSourceImpl extends IfcGeometricRepresentationItemImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcLightSource_Name(), true);
+	public IfcLabel getName() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcLightSource_Name(), true);
 	}
 
 	/**
@@ -79,7 +80,7 @@ public class IfcLightSourceImpl extends IfcGeometricRepresentationItemImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(String newName) {
+	public void setName(IfcLabel newName) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcLightSource_Name(), newName);
 	}
 
@@ -124,8 +125,8 @@ public class IfcLightSourceImpl extends IfcGeometricRepresentationItemImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getAmbientIntensity() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcLightSource_AmbientIntensity(), true);
+	public IfcNormalisedRatioMeasure getAmbientIntensity() {
+		return (IfcNormalisedRatioMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcLightSource_AmbientIntensity(), true);
 	}
 
 	/**
@@ -133,7 +134,7 @@ public class IfcLightSourceImpl extends IfcGeometricRepresentationItemImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAmbientIntensity(float newAmbientIntensity) {
+	public void setAmbientIntensity(IfcNormalisedRatioMeasure newAmbientIntensity) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcLightSource_AmbientIntensity(), newAmbientIntensity);
 	}
 
@@ -160,8 +161,8 @@ public class IfcLightSourceImpl extends IfcGeometricRepresentationItemImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getAmbientIntensityAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcLightSource_AmbientIntensityAsString(), true);
+	public IfcNormalisedRatioMeasure getIntensity() {
+		return (IfcNormalisedRatioMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcLightSource_Intensity(), true);
 	}
 
 	/**
@@ -169,43 +170,7 @@ public class IfcLightSourceImpl extends IfcGeometricRepresentationItemImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAmbientIntensityAsString(String newAmbientIntensityAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcLightSource_AmbientIntensityAsString(), newAmbientIntensityAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetAmbientIntensityAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcLightSource_AmbientIntensityAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetAmbientIntensityAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcLightSource_AmbientIntensityAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getIntensity() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcLightSource_Intensity(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setIntensity(float newIntensity) {
+	public void setIntensity(IfcNormalisedRatioMeasure newIntensity) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcLightSource_Intensity(), newIntensity);
 	}
 
@@ -225,42 +190,6 @@ public class IfcLightSourceImpl extends IfcGeometricRepresentationItemImpl imple
 	 */
 	public boolean isSetIntensity() {
 		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcLightSource_Intensity());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getIntensityAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcLightSource_IntensityAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setIntensityAsString(String newIntensityAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcLightSource_IntensityAsString(), newIntensityAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetIntensityAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcLightSource_IntensityAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetIntensityAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcLightSource_IntensityAsString());
 	}
 
 } //IfcLightSourceImpl

@@ -194,7 +194,8 @@ public enum IfcMotorConnectionTypeEnum implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final IfcMotorConnectionTypeEnum[] VALUES_ARRAY = new IfcMotorConnectionTypeEnum[] { NULL, BELTDRIVE, NOTDEFINED, USERDEFINED, COUPLING, DIRECTDRIVE, };
+	private static final IfcMotorConnectionTypeEnum[] VALUES_ARRAY = new IfcMotorConnectionTypeEnum[] { NULL, BELTDRIVE, NOTDEFINED, USERDEFINED, COUPLING,
+			DIRECTDRIVE, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Ifc Motor Connection Type Enum</b></em>' enumerators.

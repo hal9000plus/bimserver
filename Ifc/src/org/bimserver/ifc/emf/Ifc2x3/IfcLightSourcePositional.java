@@ -32,13 +32,9 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourcePositional#getPosition <em>Position</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourcePositional#getRadius <em>Radius</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourcePositional#getRadiusAsString <em>Radius As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourcePositional#getConstantAttenuation <em>Constant Attenuation</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourcePositional#getConstantAttenuationAsString <em>Constant Attenuation As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourcePositional#getDistanceAttenuation <em>Distance Attenuation</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourcePositional#getDistanceAttenuationAsString <em>Distance Attenuation As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourcePositional#getQuadricAttenuation <em>Quadric Attenuation</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourcePositional#getQuadricAttenuationAsString <em>Quadric Attenuation As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -74,211 +70,107 @@ public interface IfcLightSourcePositional extends IfcLightSource {
 	void setPosition(IfcCartesianPoint value);
 
 	/**
-	 * Returns the value of the '<em><b>Radius</b></em>' attribute.
+	 * Returns the value of the '<em><b>Radius</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Radius</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Radius</em>' attribute.
-	 * @see #setRadius(float)
+	 * @return the value of the '<em>Radius</em>' reference.
+	 * @see #setRadius(IfcPositiveLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcLightSourcePositional_Radius()
 	 * @model
 	 * @generated
 	 */
-	float getRadius();
+	IfcPositiveLengthMeasure getRadius();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourcePositional#getRadius <em>Radius</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourcePositional#getRadius <em>Radius</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Radius</em>' attribute.
+	 * @param value the new value of the '<em>Radius</em>' reference.
 	 * @see #getRadius()
 	 * @generated
 	 */
-	void setRadius(float value);
+	void setRadius(IfcPositiveLengthMeasure value);
 
 	/**
-	 * Returns the value of the '<em><b>Radius As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Radius As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Radius As String</em>' attribute.
-	 * @see #setRadiusAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcLightSourcePositional_RadiusAsString()
-	 * @model
-	 * @generated
-	 */
-	String getRadiusAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourcePositional#getRadiusAsString <em>Radius As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Radius As String</em>' attribute.
-	 * @see #getRadiusAsString()
-	 * @generated
-	 */
-	void setRadiusAsString(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Constant Attenuation</b></em>' attribute.
+	 * Returns the value of the '<em><b>Constant Attenuation</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Constant Attenuation</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Constant Attenuation</em>' attribute.
-	 * @see #setConstantAttenuation(float)
+	 * @return the value of the '<em>Constant Attenuation</em>' reference.
+	 * @see #setConstantAttenuation(IfcReal)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcLightSourcePositional_ConstantAttenuation()
 	 * @model
 	 * @generated
 	 */
-	float getConstantAttenuation();
+	IfcReal getConstantAttenuation();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourcePositional#getConstantAttenuation <em>Constant Attenuation</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourcePositional#getConstantAttenuation <em>Constant Attenuation</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Constant Attenuation</em>' attribute.
+	 * @param value the new value of the '<em>Constant Attenuation</em>' reference.
 	 * @see #getConstantAttenuation()
 	 * @generated
 	 */
-	void setConstantAttenuation(float value);
+	void setConstantAttenuation(IfcReal value);
 
 	/**
-	 * Returns the value of the '<em><b>Constant Attenuation As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Constant Attenuation As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Constant Attenuation As String</em>' attribute.
-	 * @see #setConstantAttenuationAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcLightSourcePositional_ConstantAttenuationAsString()
-	 * @model
-	 * @generated
-	 */
-	String getConstantAttenuationAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourcePositional#getConstantAttenuationAsString <em>Constant Attenuation As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Constant Attenuation As String</em>' attribute.
-	 * @see #getConstantAttenuationAsString()
-	 * @generated
-	 */
-	void setConstantAttenuationAsString(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Distance Attenuation</b></em>' attribute.
+	 * Returns the value of the '<em><b>Distance Attenuation</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Distance Attenuation</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Distance Attenuation</em>' attribute.
-	 * @see #setDistanceAttenuation(float)
+	 * @return the value of the '<em>Distance Attenuation</em>' reference.
+	 * @see #setDistanceAttenuation(IfcReal)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcLightSourcePositional_DistanceAttenuation()
 	 * @model
 	 * @generated
 	 */
-	float getDistanceAttenuation();
+	IfcReal getDistanceAttenuation();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourcePositional#getDistanceAttenuation <em>Distance Attenuation</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourcePositional#getDistanceAttenuation <em>Distance Attenuation</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Distance Attenuation</em>' attribute.
+	 * @param value the new value of the '<em>Distance Attenuation</em>' reference.
 	 * @see #getDistanceAttenuation()
 	 * @generated
 	 */
-	void setDistanceAttenuation(float value);
+	void setDistanceAttenuation(IfcReal value);
 
 	/**
-	 * Returns the value of the '<em><b>Distance Attenuation As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Distance Attenuation As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Distance Attenuation As String</em>' attribute.
-	 * @see #setDistanceAttenuationAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcLightSourcePositional_DistanceAttenuationAsString()
-	 * @model
-	 * @generated
-	 */
-	String getDistanceAttenuationAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourcePositional#getDistanceAttenuationAsString <em>Distance Attenuation As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Distance Attenuation As String</em>' attribute.
-	 * @see #getDistanceAttenuationAsString()
-	 * @generated
-	 */
-	void setDistanceAttenuationAsString(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Quadric Attenuation</b></em>' attribute.
+	 * Returns the value of the '<em><b>Quadric Attenuation</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Quadric Attenuation</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Quadric Attenuation</em>' attribute.
-	 * @see #setQuadricAttenuation(float)
+	 * @return the value of the '<em>Quadric Attenuation</em>' reference.
+	 * @see #setQuadricAttenuation(IfcReal)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcLightSourcePositional_QuadricAttenuation()
 	 * @model
 	 * @generated
 	 */
-	float getQuadricAttenuation();
+	IfcReal getQuadricAttenuation();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourcePositional#getQuadricAttenuation <em>Quadric Attenuation</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourcePositional#getQuadricAttenuation <em>Quadric Attenuation</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Quadric Attenuation</em>' attribute.
+	 * @param value the new value of the '<em>Quadric Attenuation</em>' reference.
 	 * @see #getQuadricAttenuation()
 	 * @generated
 	 */
-	void setQuadricAttenuation(float value);
-
-	/**
-	 * Returns the value of the '<em><b>Quadric Attenuation As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Quadric Attenuation As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Quadric Attenuation As String</em>' attribute.
-	 * @see #setQuadricAttenuationAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcLightSourcePositional_QuadricAttenuationAsString()
-	 * @model
-	 * @generated
-	 */
-	String getQuadricAttenuationAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourcePositional#getQuadricAttenuationAsString <em>Quadric Attenuation As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Quadric Attenuation As String</em>' attribute.
-	 * @see #getQuadricAttenuationAsString()
-	 * @generated
-	 */
-	void setQuadricAttenuationAsString(String value);
+	void setQuadricAttenuation(IfcReal value);
 
 } // IfcLightSourcePositional

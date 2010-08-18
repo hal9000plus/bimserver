@@ -31,15 +31,10 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getUpperVaporResistanceFactor <em>Upper Vapor Resistance Factor</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getUpperVaporResistanceFactorAsString <em>Upper Vapor Resistance Factor As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getLowerVaporResistanceFactor <em>Lower Vapor Resistance Factor</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getLowerVaporResistanceFactorAsString <em>Lower Vapor Resistance Factor As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getIsothermalMoistureCapacity <em>Isothermal Moisture Capacity</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getIsothermalMoistureCapacityAsString <em>Isothermal Moisture Capacity As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getVaporPermeability <em>Vapor Permeability</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getVaporPermeabilityAsString <em>Vapor Permeability As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getMoistureDiffusivity <em>Moisture Diffusivity</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getMoistureDiffusivityAsString <em>Moisture Diffusivity As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -49,533 +44,268 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcHygroscopicMaterialProperties extends IfcMaterialProperties {
 	/**
-	 * Returns the value of the '<em><b>Upper Vapor Resistance Factor</b></em>' attribute.
+	 * Returns the value of the '<em><b>Upper Vapor Resistance Factor</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Upper Vapor Resistance Factor</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Upper Vapor Resistance Factor</em>' attribute.
+	 * @return the value of the '<em>Upper Vapor Resistance Factor</em>' reference.
 	 * @see #isSetUpperVaporResistanceFactor()
 	 * @see #unsetUpperVaporResistanceFactor()
-	 * @see #setUpperVaporResistanceFactor(float)
+	 * @see #setUpperVaporResistanceFactor(IfcPositiveRatioMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcHygroscopicMaterialProperties_UpperVaporResistanceFactor()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getUpperVaporResistanceFactor();
+	IfcPositiveRatioMeasure getUpperVaporResistanceFactor();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getUpperVaporResistanceFactor <em>Upper Vapor Resistance Factor</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getUpperVaporResistanceFactor <em>Upper Vapor Resistance Factor</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Upper Vapor Resistance Factor</em>' attribute.
+	 * @param value the new value of the '<em>Upper Vapor Resistance Factor</em>' reference.
 	 * @see #isSetUpperVaporResistanceFactor()
 	 * @see #unsetUpperVaporResistanceFactor()
 	 * @see #getUpperVaporResistanceFactor()
 	 * @generated
 	 */
-	void setUpperVaporResistanceFactor(float value);
+	void setUpperVaporResistanceFactor(IfcPositiveRatioMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getUpperVaporResistanceFactor <em>Upper Vapor Resistance Factor</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getUpperVaporResistanceFactor <em>Upper Vapor Resistance Factor</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetUpperVaporResistanceFactor()
 	 * @see #getUpperVaporResistanceFactor()
-	 * @see #setUpperVaporResistanceFactor(float)
+	 * @see #setUpperVaporResistanceFactor(IfcPositiveRatioMeasure)
 	 * @generated
 	 */
 	void unsetUpperVaporResistanceFactor();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getUpperVaporResistanceFactor <em>Upper Vapor Resistance Factor</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getUpperVaporResistanceFactor <em>Upper Vapor Resistance Factor</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Upper Vapor Resistance Factor</em>' attribute is set.
+	 * @return whether the value of the '<em>Upper Vapor Resistance Factor</em>' reference is set.
 	 * @see #unsetUpperVaporResistanceFactor()
 	 * @see #getUpperVaporResistanceFactor()
-	 * @see #setUpperVaporResistanceFactor(float)
+	 * @see #setUpperVaporResistanceFactor(IfcPositiveRatioMeasure)
 	 * @generated
 	 */
 	boolean isSetUpperVaporResistanceFactor();
 
 	/**
-	 * Returns the value of the '<em><b>Upper Vapor Resistance Factor As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Upper Vapor Resistance Factor As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Upper Vapor Resistance Factor As String</em>' attribute.
-	 * @see #isSetUpperVaporResistanceFactorAsString()
-	 * @see #unsetUpperVaporResistanceFactorAsString()
-	 * @see #setUpperVaporResistanceFactorAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcHygroscopicMaterialProperties_UpperVaporResistanceFactorAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getUpperVaporResistanceFactorAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getUpperVaporResistanceFactorAsString <em>Upper Vapor Resistance Factor As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Upper Vapor Resistance Factor As String</em>' attribute.
-	 * @see #isSetUpperVaporResistanceFactorAsString()
-	 * @see #unsetUpperVaporResistanceFactorAsString()
-	 * @see #getUpperVaporResistanceFactorAsString()
-	 * @generated
-	 */
-	void setUpperVaporResistanceFactorAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getUpperVaporResistanceFactorAsString <em>Upper Vapor Resistance Factor As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetUpperVaporResistanceFactorAsString()
-	 * @see #getUpperVaporResistanceFactorAsString()
-	 * @see #setUpperVaporResistanceFactorAsString(String)
-	 * @generated
-	 */
-	void unsetUpperVaporResistanceFactorAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getUpperVaporResistanceFactorAsString <em>Upper Vapor Resistance Factor As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Upper Vapor Resistance Factor As String</em>' attribute is set.
-	 * @see #unsetUpperVaporResistanceFactorAsString()
-	 * @see #getUpperVaporResistanceFactorAsString()
-	 * @see #setUpperVaporResistanceFactorAsString(String)
-	 * @generated
-	 */
-	boolean isSetUpperVaporResistanceFactorAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Lower Vapor Resistance Factor</b></em>' attribute.
+	 * Returns the value of the '<em><b>Lower Vapor Resistance Factor</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Lower Vapor Resistance Factor</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Lower Vapor Resistance Factor</em>' attribute.
+	 * @return the value of the '<em>Lower Vapor Resistance Factor</em>' reference.
 	 * @see #isSetLowerVaporResistanceFactor()
 	 * @see #unsetLowerVaporResistanceFactor()
-	 * @see #setLowerVaporResistanceFactor(float)
+	 * @see #setLowerVaporResistanceFactor(IfcPositiveRatioMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcHygroscopicMaterialProperties_LowerVaporResistanceFactor()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getLowerVaporResistanceFactor();
+	IfcPositiveRatioMeasure getLowerVaporResistanceFactor();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getLowerVaporResistanceFactor <em>Lower Vapor Resistance Factor</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getLowerVaporResistanceFactor <em>Lower Vapor Resistance Factor</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Lower Vapor Resistance Factor</em>' attribute.
+	 * @param value the new value of the '<em>Lower Vapor Resistance Factor</em>' reference.
 	 * @see #isSetLowerVaporResistanceFactor()
 	 * @see #unsetLowerVaporResistanceFactor()
 	 * @see #getLowerVaporResistanceFactor()
 	 * @generated
 	 */
-	void setLowerVaporResistanceFactor(float value);
+	void setLowerVaporResistanceFactor(IfcPositiveRatioMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getLowerVaporResistanceFactor <em>Lower Vapor Resistance Factor</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getLowerVaporResistanceFactor <em>Lower Vapor Resistance Factor</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetLowerVaporResistanceFactor()
 	 * @see #getLowerVaporResistanceFactor()
-	 * @see #setLowerVaporResistanceFactor(float)
+	 * @see #setLowerVaporResistanceFactor(IfcPositiveRatioMeasure)
 	 * @generated
 	 */
 	void unsetLowerVaporResistanceFactor();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getLowerVaporResistanceFactor <em>Lower Vapor Resistance Factor</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getLowerVaporResistanceFactor <em>Lower Vapor Resistance Factor</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Lower Vapor Resistance Factor</em>' attribute is set.
+	 * @return whether the value of the '<em>Lower Vapor Resistance Factor</em>' reference is set.
 	 * @see #unsetLowerVaporResistanceFactor()
 	 * @see #getLowerVaporResistanceFactor()
-	 * @see #setLowerVaporResistanceFactor(float)
+	 * @see #setLowerVaporResistanceFactor(IfcPositiveRatioMeasure)
 	 * @generated
 	 */
 	boolean isSetLowerVaporResistanceFactor();
 
 	/**
-	 * Returns the value of the '<em><b>Lower Vapor Resistance Factor As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Lower Vapor Resistance Factor As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Lower Vapor Resistance Factor As String</em>' attribute.
-	 * @see #isSetLowerVaporResistanceFactorAsString()
-	 * @see #unsetLowerVaporResistanceFactorAsString()
-	 * @see #setLowerVaporResistanceFactorAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcHygroscopicMaterialProperties_LowerVaporResistanceFactorAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getLowerVaporResistanceFactorAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getLowerVaporResistanceFactorAsString <em>Lower Vapor Resistance Factor As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Lower Vapor Resistance Factor As String</em>' attribute.
-	 * @see #isSetLowerVaporResistanceFactorAsString()
-	 * @see #unsetLowerVaporResistanceFactorAsString()
-	 * @see #getLowerVaporResistanceFactorAsString()
-	 * @generated
-	 */
-	void setLowerVaporResistanceFactorAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getLowerVaporResistanceFactorAsString <em>Lower Vapor Resistance Factor As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetLowerVaporResistanceFactorAsString()
-	 * @see #getLowerVaporResistanceFactorAsString()
-	 * @see #setLowerVaporResistanceFactorAsString(String)
-	 * @generated
-	 */
-	void unsetLowerVaporResistanceFactorAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getLowerVaporResistanceFactorAsString <em>Lower Vapor Resistance Factor As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Lower Vapor Resistance Factor As String</em>' attribute is set.
-	 * @see #unsetLowerVaporResistanceFactorAsString()
-	 * @see #getLowerVaporResistanceFactorAsString()
-	 * @see #setLowerVaporResistanceFactorAsString(String)
-	 * @generated
-	 */
-	boolean isSetLowerVaporResistanceFactorAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Isothermal Moisture Capacity</b></em>' attribute.
+	 * Returns the value of the '<em><b>Isothermal Moisture Capacity</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Isothermal Moisture Capacity</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Isothermal Moisture Capacity</em>' attribute.
+	 * @return the value of the '<em>Isothermal Moisture Capacity</em>' reference.
 	 * @see #isSetIsothermalMoistureCapacity()
 	 * @see #unsetIsothermalMoistureCapacity()
-	 * @see #setIsothermalMoistureCapacity(float)
+	 * @see #setIsothermalMoistureCapacity(IfcIsothermalMoistureCapacityMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcHygroscopicMaterialProperties_IsothermalMoistureCapacity()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getIsothermalMoistureCapacity();
+	IfcIsothermalMoistureCapacityMeasure getIsothermalMoistureCapacity();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getIsothermalMoistureCapacity <em>Isothermal Moisture Capacity</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getIsothermalMoistureCapacity <em>Isothermal Moisture Capacity</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Isothermal Moisture Capacity</em>' attribute.
+	 * @param value the new value of the '<em>Isothermal Moisture Capacity</em>' reference.
 	 * @see #isSetIsothermalMoistureCapacity()
 	 * @see #unsetIsothermalMoistureCapacity()
 	 * @see #getIsothermalMoistureCapacity()
 	 * @generated
 	 */
-	void setIsothermalMoistureCapacity(float value);
+	void setIsothermalMoistureCapacity(IfcIsothermalMoistureCapacityMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getIsothermalMoistureCapacity <em>Isothermal Moisture Capacity</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getIsothermalMoistureCapacity <em>Isothermal Moisture Capacity</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetIsothermalMoistureCapacity()
 	 * @see #getIsothermalMoistureCapacity()
-	 * @see #setIsothermalMoistureCapacity(float)
+	 * @see #setIsothermalMoistureCapacity(IfcIsothermalMoistureCapacityMeasure)
 	 * @generated
 	 */
 	void unsetIsothermalMoistureCapacity();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getIsothermalMoistureCapacity <em>Isothermal Moisture Capacity</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getIsothermalMoistureCapacity <em>Isothermal Moisture Capacity</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Isothermal Moisture Capacity</em>' attribute is set.
+	 * @return whether the value of the '<em>Isothermal Moisture Capacity</em>' reference is set.
 	 * @see #unsetIsothermalMoistureCapacity()
 	 * @see #getIsothermalMoistureCapacity()
-	 * @see #setIsothermalMoistureCapacity(float)
+	 * @see #setIsothermalMoistureCapacity(IfcIsothermalMoistureCapacityMeasure)
 	 * @generated
 	 */
 	boolean isSetIsothermalMoistureCapacity();
 
 	/**
-	 * Returns the value of the '<em><b>Isothermal Moisture Capacity As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Isothermal Moisture Capacity As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Isothermal Moisture Capacity As String</em>' attribute.
-	 * @see #isSetIsothermalMoistureCapacityAsString()
-	 * @see #unsetIsothermalMoistureCapacityAsString()
-	 * @see #setIsothermalMoistureCapacityAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcHygroscopicMaterialProperties_IsothermalMoistureCapacityAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getIsothermalMoistureCapacityAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getIsothermalMoistureCapacityAsString <em>Isothermal Moisture Capacity As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Isothermal Moisture Capacity As String</em>' attribute.
-	 * @see #isSetIsothermalMoistureCapacityAsString()
-	 * @see #unsetIsothermalMoistureCapacityAsString()
-	 * @see #getIsothermalMoistureCapacityAsString()
-	 * @generated
-	 */
-	void setIsothermalMoistureCapacityAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getIsothermalMoistureCapacityAsString <em>Isothermal Moisture Capacity As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetIsothermalMoistureCapacityAsString()
-	 * @see #getIsothermalMoistureCapacityAsString()
-	 * @see #setIsothermalMoistureCapacityAsString(String)
-	 * @generated
-	 */
-	void unsetIsothermalMoistureCapacityAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getIsothermalMoistureCapacityAsString <em>Isothermal Moisture Capacity As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Isothermal Moisture Capacity As String</em>' attribute is set.
-	 * @see #unsetIsothermalMoistureCapacityAsString()
-	 * @see #getIsothermalMoistureCapacityAsString()
-	 * @see #setIsothermalMoistureCapacityAsString(String)
-	 * @generated
-	 */
-	boolean isSetIsothermalMoistureCapacityAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Vapor Permeability</b></em>' attribute.
+	 * Returns the value of the '<em><b>Vapor Permeability</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Vapor Permeability</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Vapor Permeability</em>' attribute.
+	 * @return the value of the '<em>Vapor Permeability</em>' reference.
 	 * @see #isSetVaporPermeability()
 	 * @see #unsetVaporPermeability()
-	 * @see #setVaporPermeability(float)
+	 * @see #setVaporPermeability(IfcVaporPermeabilityMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcHygroscopicMaterialProperties_VaporPermeability()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getVaporPermeability();
+	IfcVaporPermeabilityMeasure getVaporPermeability();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getVaporPermeability <em>Vapor Permeability</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getVaporPermeability <em>Vapor Permeability</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Vapor Permeability</em>' attribute.
+	 * @param value the new value of the '<em>Vapor Permeability</em>' reference.
 	 * @see #isSetVaporPermeability()
 	 * @see #unsetVaporPermeability()
 	 * @see #getVaporPermeability()
 	 * @generated
 	 */
-	void setVaporPermeability(float value);
+	void setVaporPermeability(IfcVaporPermeabilityMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getVaporPermeability <em>Vapor Permeability</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getVaporPermeability <em>Vapor Permeability</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetVaporPermeability()
 	 * @see #getVaporPermeability()
-	 * @see #setVaporPermeability(float)
+	 * @see #setVaporPermeability(IfcVaporPermeabilityMeasure)
 	 * @generated
 	 */
 	void unsetVaporPermeability();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getVaporPermeability <em>Vapor Permeability</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getVaporPermeability <em>Vapor Permeability</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Vapor Permeability</em>' attribute is set.
+	 * @return whether the value of the '<em>Vapor Permeability</em>' reference is set.
 	 * @see #unsetVaporPermeability()
 	 * @see #getVaporPermeability()
-	 * @see #setVaporPermeability(float)
+	 * @see #setVaporPermeability(IfcVaporPermeabilityMeasure)
 	 * @generated
 	 */
 	boolean isSetVaporPermeability();
 
 	/**
-	 * Returns the value of the '<em><b>Vapor Permeability As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Vapor Permeability As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Vapor Permeability As String</em>' attribute.
-	 * @see #isSetVaporPermeabilityAsString()
-	 * @see #unsetVaporPermeabilityAsString()
-	 * @see #setVaporPermeabilityAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcHygroscopicMaterialProperties_VaporPermeabilityAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getVaporPermeabilityAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getVaporPermeabilityAsString <em>Vapor Permeability As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Vapor Permeability As String</em>' attribute.
-	 * @see #isSetVaporPermeabilityAsString()
-	 * @see #unsetVaporPermeabilityAsString()
-	 * @see #getVaporPermeabilityAsString()
-	 * @generated
-	 */
-	void setVaporPermeabilityAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getVaporPermeabilityAsString <em>Vapor Permeability As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetVaporPermeabilityAsString()
-	 * @see #getVaporPermeabilityAsString()
-	 * @see #setVaporPermeabilityAsString(String)
-	 * @generated
-	 */
-	void unsetVaporPermeabilityAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getVaporPermeabilityAsString <em>Vapor Permeability As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Vapor Permeability As String</em>' attribute is set.
-	 * @see #unsetVaporPermeabilityAsString()
-	 * @see #getVaporPermeabilityAsString()
-	 * @see #setVaporPermeabilityAsString(String)
-	 * @generated
-	 */
-	boolean isSetVaporPermeabilityAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Moisture Diffusivity</b></em>' attribute.
+	 * Returns the value of the '<em><b>Moisture Diffusivity</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Moisture Diffusivity</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Moisture Diffusivity</em>' attribute.
+	 * @return the value of the '<em>Moisture Diffusivity</em>' reference.
 	 * @see #isSetMoistureDiffusivity()
 	 * @see #unsetMoistureDiffusivity()
-	 * @see #setMoistureDiffusivity(float)
+	 * @see #setMoistureDiffusivity(IfcMoistureDiffusivityMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcHygroscopicMaterialProperties_MoistureDiffusivity()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getMoistureDiffusivity();
+	IfcMoistureDiffusivityMeasure getMoistureDiffusivity();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getMoistureDiffusivity <em>Moisture Diffusivity</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getMoistureDiffusivity <em>Moisture Diffusivity</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Moisture Diffusivity</em>' attribute.
+	 * @param value the new value of the '<em>Moisture Diffusivity</em>' reference.
 	 * @see #isSetMoistureDiffusivity()
 	 * @see #unsetMoistureDiffusivity()
 	 * @see #getMoistureDiffusivity()
 	 * @generated
 	 */
-	void setMoistureDiffusivity(float value);
+	void setMoistureDiffusivity(IfcMoistureDiffusivityMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getMoistureDiffusivity <em>Moisture Diffusivity</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getMoistureDiffusivity <em>Moisture Diffusivity</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetMoistureDiffusivity()
 	 * @see #getMoistureDiffusivity()
-	 * @see #setMoistureDiffusivity(float)
+	 * @see #setMoistureDiffusivity(IfcMoistureDiffusivityMeasure)
 	 * @generated
 	 */
 	void unsetMoistureDiffusivity();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getMoistureDiffusivity <em>Moisture Diffusivity</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getMoistureDiffusivity <em>Moisture Diffusivity</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Moisture Diffusivity</em>' attribute is set.
+	 * @return whether the value of the '<em>Moisture Diffusivity</em>' reference is set.
 	 * @see #unsetMoistureDiffusivity()
 	 * @see #getMoistureDiffusivity()
-	 * @see #setMoistureDiffusivity(float)
+	 * @see #setMoistureDiffusivity(IfcMoistureDiffusivityMeasure)
 	 * @generated
 	 */
 	boolean isSetMoistureDiffusivity();
-
-	/**
-	 * Returns the value of the '<em><b>Moisture Diffusivity As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Moisture Diffusivity As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Moisture Diffusivity As String</em>' attribute.
-	 * @see #isSetMoistureDiffusivityAsString()
-	 * @see #unsetMoistureDiffusivityAsString()
-	 * @see #setMoistureDiffusivityAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcHygroscopicMaterialProperties_MoistureDiffusivityAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getMoistureDiffusivityAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getMoistureDiffusivityAsString <em>Moisture Diffusivity As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Moisture Diffusivity As String</em>' attribute.
-	 * @see #isSetMoistureDiffusivityAsString()
-	 * @see #unsetMoistureDiffusivityAsString()
-	 * @see #getMoistureDiffusivityAsString()
-	 * @generated
-	 */
-	void setMoistureDiffusivityAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getMoistureDiffusivityAsString <em>Moisture Diffusivity As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetMoistureDiffusivityAsString()
-	 * @see #getMoistureDiffusivityAsString()
-	 * @see #setMoistureDiffusivityAsString(String)
-	 * @generated
-	 */
-	void unsetMoistureDiffusivityAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHygroscopicMaterialProperties#getMoistureDiffusivityAsString <em>Moisture Diffusivity As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Moisture Diffusivity As String</em>' attribute is set.
-	 * @see #unsetMoistureDiffusivityAsString()
-	 * @see #getMoistureDiffusivityAsString()
-	 * @see #setMoistureDiffusivityAsString(String)
-	 * @generated
-	 */
-	boolean isSetMoistureDiffusivityAsString();
 
 } // IfcHygroscopicMaterialProperties

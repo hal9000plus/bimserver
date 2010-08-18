@@ -23,9 +23,11 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
 import org.bimserver.ifc.emf.Ifc2x3.IfcMetric;
 import org.bimserver.ifc.emf.Ifc2x3.IfcObjective;
 import org.bimserver.ifc.emf.Ifc2x3.IfcObjectiveEnum;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -159,8 +161,8 @@ public class IfcObjectiveImpl extends IfcConstraintImpl implements IfcObjective 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getUserDefinedQualifier() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcObjective_UserDefinedQualifier(), true);
+	public IfcLabel getUserDefinedQualifier() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcObjective_UserDefinedQualifier(), true);
 	}
 
 	/**
@@ -168,7 +170,7 @@ public class IfcObjectiveImpl extends IfcConstraintImpl implements IfcObjective 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUserDefinedQualifier(String newUserDefinedQualifier) {
+	public void setUserDefinedQualifier(IfcLabel newUserDefinedQualifier) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcObjective_UserDefinedQualifier(), newUserDefinedQualifier);
 	}
 

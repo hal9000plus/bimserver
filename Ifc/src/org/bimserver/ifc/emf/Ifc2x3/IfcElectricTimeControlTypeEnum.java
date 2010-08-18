@@ -194,7 +194,8 @@ public enum IfcElectricTimeControlTypeEnum implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final IfcElectricTimeControlTypeEnum[] VALUES_ARRAY = new IfcElectricTimeControlTypeEnum[] { NULL, TIMEDELAY, NOTDEFINED, USERDEFINED, TIMECLOCK, RELAY, };
+	private static final IfcElectricTimeControlTypeEnum[] VALUES_ARRAY = new IfcElectricTimeControlTypeEnum[] { NULL, TIMEDELAY, NOTDEFINED, USERDEFINED,
+			TIMECLOCK, RELAY, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Ifc Electric Time Control Type Enum</b></em>' enumerators.

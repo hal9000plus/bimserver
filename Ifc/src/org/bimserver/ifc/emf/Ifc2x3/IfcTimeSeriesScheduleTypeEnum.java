@@ -219,7 +219,8 @@ public enum IfcTimeSeriesScheduleTypeEnum implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final IfcTimeSeriesScheduleTypeEnum[] VALUES_ARRAY = new IfcTimeSeriesScheduleTypeEnum[] { NULL, NOTDEFINED, WEEKLY, MONTHLY, DAILY, USERDEFINED, ANNUAL, };
+	private static final IfcTimeSeriesScheduleTypeEnum[] VALUES_ARRAY = new IfcTimeSeriesScheduleTypeEnum[] { NULL, NOTDEFINED, WEEKLY, MONTHLY, DAILY,
+			USERDEFINED, ANNUAL, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Ifc Time Series Schedule Type Enum</b></em>' enumerators.

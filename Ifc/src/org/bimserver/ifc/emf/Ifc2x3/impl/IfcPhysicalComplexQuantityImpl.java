@@ -23,9 +23,12 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
 import org.bimserver.ifc.emf.Ifc2x3.IfcPhysicalComplexQuantity;
 import org.bimserver.ifc.emf.Ifc2x3.IfcPhysicalQuantity;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -79,8 +82,8 @@ public class IfcPhysicalComplexQuantityImpl extends IfcPhysicalQuantityImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getDiscrimination() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcPhysicalComplexQuantity_Discrimination(), true);
+	public IfcLabel getDiscrimination() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcPhysicalComplexQuantity_Discrimination(), true);
 	}
 
 	/**
@@ -88,7 +91,7 @@ public class IfcPhysicalComplexQuantityImpl extends IfcPhysicalQuantityImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDiscrimination(String newDiscrimination) {
+	public void setDiscrimination(IfcLabel newDiscrimination) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcPhysicalComplexQuantity_Discrimination(), newDiscrimination);
 	}
 
@@ -97,8 +100,8 @@ public class IfcPhysicalComplexQuantityImpl extends IfcPhysicalQuantityImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getQuality() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcPhysicalComplexQuantity_Quality(), true);
+	public IfcLabel getQuality() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcPhysicalComplexQuantity_Quality(), true);
 	}
 
 	/**
@@ -106,7 +109,7 @@ public class IfcPhysicalComplexQuantityImpl extends IfcPhysicalQuantityImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setQuality(String newQuality) {
+	public void setQuality(IfcLabel newQuality) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcPhysicalComplexQuantity_Quality(), newQuality);
 	}
 
@@ -133,8 +136,8 @@ public class IfcPhysicalComplexQuantityImpl extends IfcPhysicalQuantityImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getUsage() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcPhysicalComplexQuantity_Usage(), true);
+	public IfcLabel getUsage() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcPhysicalComplexQuantity_Usage(), true);
 	}
 
 	/**
@@ -142,7 +145,7 @@ public class IfcPhysicalComplexQuantityImpl extends IfcPhysicalQuantityImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUsage(String newUsage) {
+	public void setUsage(IfcLabel newUsage) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcPhysicalComplexQuantity_Usage(), newUsage);
 	}
 

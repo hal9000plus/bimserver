@@ -23,7 +23,9 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcPositiveLengthMeasure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcZShapeProfileDef;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -34,17 +36,11 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcZShapeProfileDefImpl#getDepth <em>Depth</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcZShapeProfileDefImpl#getDepthAsString <em>Depth As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcZShapeProfileDefImpl#getFlangeWidth <em>Flange Width</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcZShapeProfileDefImpl#getFlangeWidthAsString <em>Flange Width As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcZShapeProfileDefImpl#getWebThickness <em>Web Thickness</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcZShapeProfileDefImpl#getWebThicknessAsString <em>Web Thickness As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcZShapeProfileDefImpl#getFlangeThickness <em>Flange Thickness</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcZShapeProfileDefImpl#getFlangeThicknessAsString <em>Flange Thickness As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcZShapeProfileDefImpl#getFilletRadius <em>Fillet Radius</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcZShapeProfileDefImpl#getFilletRadiusAsString <em>Fillet Radius As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcZShapeProfileDefImpl#getEdgeRadius <em>Edge Radius</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcZShapeProfileDefImpl#getEdgeRadiusAsString <em>Edge Radius As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -75,8 +71,8 @@ public class IfcZShapeProfileDefImpl extends IfcParameterizedProfileDefImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getDepth() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcZShapeProfileDef_Depth(), true);
+	public IfcPositiveLengthMeasure getDepth() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcZShapeProfileDef_Depth(), true);
 	}
 
 	/**
@@ -84,7 +80,7 @@ public class IfcZShapeProfileDefImpl extends IfcParameterizedProfileDefImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDepth(float newDepth) {
+	public void setDepth(IfcPositiveLengthMeasure newDepth) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcZShapeProfileDef_Depth(), newDepth);
 	}
 
@@ -93,8 +89,8 @@ public class IfcZShapeProfileDefImpl extends IfcParameterizedProfileDefImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getDepthAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcZShapeProfileDef_DepthAsString(), true);
+	public IfcPositiveLengthMeasure getFlangeWidth() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcZShapeProfileDef_FlangeWidth(), true);
 	}
 
 	/**
@@ -102,25 +98,7 @@ public class IfcZShapeProfileDefImpl extends IfcParameterizedProfileDefImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDepthAsString(String newDepthAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcZShapeProfileDef_DepthAsString(), newDepthAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getFlangeWidth() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcZShapeProfileDef_FlangeWidth(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setFlangeWidth(float newFlangeWidth) {
+	public void setFlangeWidth(IfcPositiveLengthMeasure newFlangeWidth) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcZShapeProfileDef_FlangeWidth(), newFlangeWidth);
 	}
 
@@ -129,8 +107,8 @@ public class IfcZShapeProfileDefImpl extends IfcParameterizedProfileDefImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getFlangeWidthAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcZShapeProfileDef_FlangeWidthAsString(), true);
+	public IfcPositiveLengthMeasure getWebThickness() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcZShapeProfileDef_WebThickness(), true);
 	}
 
 	/**
@@ -138,25 +116,7 @@ public class IfcZShapeProfileDefImpl extends IfcParameterizedProfileDefImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFlangeWidthAsString(String newFlangeWidthAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcZShapeProfileDef_FlangeWidthAsString(), newFlangeWidthAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getWebThickness() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcZShapeProfileDef_WebThickness(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setWebThickness(float newWebThickness) {
+	public void setWebThickness(IfcPositiveLengthMeasure newWebThickness) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcZShapeProfileDef_WebThickness(), newWebThickness);
 	}
 
@@ -165,8 +125,8 @@ public class IfcZShapeProfileDefImpl extends IfcParameterizedProfileDefImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getWebThicknessAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcZShapeProfileDef_WebThicknessAsString(), true);
+	public IfcPositiveLengthMeasure getFlangeThickness() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcZShapeProfileDef_FlangeThickness(), true);
 	}
 
 	/**
@@ -174,25 +134,7 @@ public class IfcZShapeProfileDefImpl extends IfcParameterizedProfileDefImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setWebThicknessAsString(String newWebThicknessAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcZShapeProfileDef_WebThicknessAsString(), newWebThicknessAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getFlangeThickness() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcZShapeProfileDef_FlangeThickness(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setFlangeThickness(float newFlangeThickness) {
+	public void setFlangeThickness(IfcPositiveLengthMeasure newFlangeThickness) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcZShapeProfileDef_FlangeThickness(), newFlangeThickness);
 	}
 
@@ -201,8 +143,8 @@ public class IfcZShapeProfileDefImpl extends IfcParameterizedProfileDefImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getFlangeThicknessAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcZShapeProfileDef_FlangeThicknessAsString(), true);
+	public IfcPositiveLengthMeasure getFilletRadius() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcZShapeProfileDef_FilletRadius(), true);
 	}
 
 	/**
@@ -210,25 +152,7 @@ public class IfcZShapeProfileDefImpl extends IfcParameterizedProfileDefImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFlangeThicknessAsString(String newFlangeThicknessAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcZShapeProfileDef_FlangeThicknessAsString(), newFlangeThicknessAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getFilletRadius() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcZShapeProfileDef_FilletRadius(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setFilletRadius(float newFilletRadius) {
+	public void setFilletRadius(IfcPositiveLengthMeasure newFilletRadius) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcZShapeProfileDef_FilletRadius(), newFilletRadius);
 	}
 
@@ -255,8 +179,8 @@ public class IfcZShapeProfileDefImpl extends IfcParameterizedProfileDefImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getFilletRadiusAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcZShapeProfileDef_FilletRadiusAsString(), true);
+	public IfcPositiveLengthMeasure getEdgeRadius() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcZShapeProfileDef_EdgeRadius(), true);
 	}
 
 	/**
@@ -264,43 +188,7 @@ public class IfcZShapeProfileDefImpl extends IfcParameterizedProfileDefImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFilletRadiusAsString(String newFilletRadiusAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcZShapeProfileDef_FilletRadiusAsString(), newFilletRadiusAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetFilletRadiusAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcZShapeProfileDef_FilletRadiusAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetFilletRadiusAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcZShapeProfileDef_FilletRadiusAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getEdgeRadius() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcZShapeProfileDef_EdgeRadius(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setEdgeRadius(float newEdgeRadius) {
+	public void setEdgeRadius(IfcPositiveLengthMeasure newEdgeRadius) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcZShapeProfileDef_EdgeRadius(), newEdgeRadius);
 	}
 
@@ -320,42 +208,6 @@ public class IfcZShapeProfileDefImpl extends IfcParameterizedProfileDefImpl impl
 	 */
 	public boolean isSetEdgeRadius() {
 		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcZShapeProfileDef_EdgeRadius());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getEdgeRadiusAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcZShapeProfileDef_EdgeRadiusAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setEdgeRadiusAsString(String newEdgeRadiusAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcZShapeProfileDef_EdgeRadiusAsString(), newEdgeRadiusAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetEdgeRadiusAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcZShapeProfileDef_EdgeRadiusAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetEdgeRadiusAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcZShapeProfileDef_EdgeRadiusAsString());
 	}
 
 } //IfcZShapeProfileDefImpl

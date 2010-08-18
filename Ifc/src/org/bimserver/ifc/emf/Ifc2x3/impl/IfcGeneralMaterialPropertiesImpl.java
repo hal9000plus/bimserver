@@ -24,6 +24,10 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcGeneralMaterialProperties;
+import org.bimserver.ifc.emf.Ifc2x3.IfcMassDensityMeasure;
+import org.bimserver.ifc.emf.Ifc2x3.IfcMolecularWeightMeasure;
+import org.bimserver.ifc.emf.Ifc2x3.IfcNormalisedRatioMeasure;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -34,11 +38,8 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcGeneralMaterialPropertiesImpl#getMolecularWeight <em>Molecular Weight</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcGeneralMaterialPropertiesImpl#getMolecularWeightAsString <em>Molecular Weight As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcGeneralMaterialPropertiesImpl#getPorosity <em>Porosity</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcGeneralMaterialPropertiesImpl#getPorosityAsString <em>Porosity As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcGeneralMaterialPropertiesImpl#getMassDensity <em>Mass Density</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcGeneralMaterialPropertiesImpl#getMassDensityAsString <em>Mass Density As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -69,8 +70,8 @@ public class IfcGeneralMaterialPropertiesImpl extends IfcMaterialPropertiesImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getMolecularWeight() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcGeneralMaterialProperties_MolecularWeight(), true);
+	public IfcMolecularWeightMeasure getMolecularWeight() {
+		return (IfcMolecularWeightMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcGeneralMaterialProperties_MolecularWeight(), true);
 	}
 
 	/**
@@ -78,7 +79,7 @@ public class IfcGeneralMaterialPropertiesImpl extends IfcMaterialPropertiesImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMolecularWeight(float newMolecularWeight) {
+	public void setMolecularWeight(IfcMolecularWeightMeasure newMolecularWeight) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcGeneralMaterialProperties_MolecularWeight(), newMolecularWeight);
 	}
 
@@ -105,8 +106,8 @@ public class IfcGeneralMaterialPropertiesImpl extends IfcMaterialPropertiesImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getMolecularWeightAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcGeneralMaterialProperties_MolecularWeightAsString(), true);
+	public IfcNormalisedRatioMeasure getPorosity() {
+		return (IfcNormalisedRatioMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcGeneralMaterialProperties_Porosity(), true);
 	}
 
 	/**
@@ -114,43 +115,7 @@ public class IfcGeneralMaterialPropertiesImpl extends IfcMaterialPropertiesImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMolecularWeightAsString(String newMolecularWeightAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcGeneralMaterialProperties_MolecularWeightAsString(), newMolecularWeightAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetMolecularWeightAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcGeneralMaterialProperties_MolecularWeightAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetMolecularWeightAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcGeneralMaterialProperties_MolecularWeightAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getPorosity() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcGeneralMaterialProperties_Porosity(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPorosity(float newPorosity) {
+	public void setPorosity(IfcNormalisedRatioMeasure newPorosity) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcGeneralMaterialProperties_Porosity(), newPorosity);
 	}
 
@@ -177,8 +142,8 @@ public class IfcGeneralMaterialPropertiesImpl extends IfcMaterialPropertiesImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getPorosityAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcGeneralMaterialProperties_PorosityAsString(), true);
+	public IfcMassDensityMeasure getMassDensity() {
+		return (IfcMassDensityMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcGeneralMaterialProperties_MassDensity(), true);
 	}
 
 	/**
@@ -186,43 +151,7 @@ public class IfcGeneralMaterialPropertiesImpl extends IfcMaterialPropertiesImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPorosityAsString(String newPorosityAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcGeneralMaterialProperties_PorosityAsString(), newPorosityAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetPorosityAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcGeneralMaterialProperties_PorosityAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetPorosityAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcGeneralMaterialProperties_PorosityAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getMassDensity() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcGeneralMaterialProperties_MassDensity(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setMassDensity(float newMassDensity) {
+	public void setMassDensity(IfcMassDensityMeasure newMassDensity) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcGeneralMaterialProperties_MassDensity(), newMassDensity);
 	}
 
@@ -242,42 +171,6 @@ public class IfcGeneralMaterialPropertiesImpl extends IfcMaterialPropertiesImpl 
 	 */
 	public boolean isSetMassDensity() {
 		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcGeneralMaterialProperties_MassDensity());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getMassDensityAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcGeneralMaterialProperties_MassDensityAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setMassDensityAsString(String newMassDensityAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcGeneralMaterialProperties_MassDensityAsString(), newMassDensityAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetMassDensityAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcGeneralMaterialProperties_MassDensityAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetMassDensityAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcGeneralMaterialProperties_MassDensityAsString());
 	}
 
 } //IfcGeneralMaterialPropertiesImpl

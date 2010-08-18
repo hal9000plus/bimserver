@@ -24,6 +24,8 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalFastener;
+import org.bimserver.ifc.emf.Ifc2x3.IfcPositiveLengthMeasure;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -34,9 +36,7 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcMechanicalFastenerImpl#getNominalDiameter <em>Nominal Diameter</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcMechanicalFastenerImpl#getNominalDiameterAsString <em>Nominal Diameter As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcMechanicalFastenerImpl#getNominalLength <em>Nominal Length</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcMechanicalFastenerImpl#getNominalLengthAsString <em>Nominal Length As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -67,8 +67,8 @@ public class IfcMechanicalFastenerImpl extends IfcFastenerImpl implements IfcMec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getNominalDiameter() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcMechanicalFastener_NominalDiameter(), true);
+	public IfcPositiveLengthMeasure getNominalDiameter() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcMechanicalFastener_NominalDiameter(), true);
 	}
 
 	/**
@@ -76,7 +76,7 @@ public class IfcMechanicalFastenerImpl extends IfcFastenerImpl implements IfcMec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNominalDiameter(float newNominalDiameter) {
+	public void setNominalDiameter(IfcPositiveLengthMeasure newNominalDiameter) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcMechanicalFastener_NominalDiameter(), newNominalDiameter);
 	}
 
@@ -103,8 +103,8 @@ public class IfcMechanicalFastenerImpl extends IfcFastenerImpl implements IfcMec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getNominalDiameterAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcMechanicalFastener_NominalDiameterAsString(), true);
+	public IfcPositiveLengthMeasure getNominalLength() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcMechanicalFastener_NominalLength(), true);
 	}
 
 	/**
@@ -112,43 +112,7 @@ public class IfcMechanicalFastenerImpl extends IfcFastenerImpl implements IfcMec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNominalDiameterAsString(String newNominalDiameterAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcMechanicalFastener_NominalDiameterAsString(), newNominalDiameterAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetNominalDiameterAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcMechanicalFastener_NominalDiameterAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetNominalDiameterAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcMechanicalFastener_NominalDiameterAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getNominalLength() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcMechanicalFastener_NominalLength(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setNominalLength(float newNominalLength) {
+	public void setNominalLength(IfcPositiveLengthMeasure newNominalLength) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcMechanicalFastener_NominalLength(), newNominalLength);
 	}
 
@@ -168,42 +132,6 @@ public class IfcMechanicalFastenerImpl extends IfcFastenerImpl implements IfcMec
 	 */
 	public boolean isSetNominalLength() {
 		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcMechanicalFastener_NominalLength());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getNominalLengthAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcMechanicalFastener_NominalLengthAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setNominalLengthAsString(String newNominalLengthAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcMechanicalFastener_NominalLengthAsString(), newNominalLengthAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetNominalLengthAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcMechanicalFastener_NominalLengthAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetNominalLengthAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcMechanicalFastener_NominalLengthAsString());
 	}
 
 } //IfcMechanicalFastenerImpl

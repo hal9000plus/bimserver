@@ -31,17 +31,11 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcCShapeProfileDef#getDepth <em>Depth</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcCShapeProfileDef#getDepthAsString <em>Depth As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcCShapeProfileDef#getWidth <em>Width</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcCShapeProfileDef#getWidthAsString <em>Width As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcCShapeProfileDef#getWallThickness <em>Wall Thickness</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcCShapeProfileDef#getWallThicknessAsString <em>Wall Thickness As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcCShapeProfileDef#getGirth <em>Girth</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcCShapeProfileDef#getGirthAsString <em>Girth As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcCShapeProfileDef#getInternalFilletRadius <em>Internal Fillet Radius</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcCShapeProfileDef#getInternalFilletRadiusAsString <em>Internal Fillet Radius As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcCShapeProfileDef#getCentreOfGravityInX <em>Centre Of Gravity In X</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcCShapeProfileDef#getCentreOfGravityInXAsString <em>Centre Of Gravity In XAs String</em>}</li>
  * </ul>
  * </p>
  *
@@ -51,423 +45,213 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcCShapeProfileDef extends IfcParameterizedProfileDef {
 	/**
-	 * Returns the value of the '<em><b>Depth</b></em>' attribute.
+	 * Returns the value of the '<em><b>Depth</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Depth</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Depth</em>' attribute.
-	 * @see #setDepth(float)
+	 * @return the value of the '<em>Depth</em>' reference.
+	 * @see #setDepth(IfcPositiveLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcCShapeProfileDef_Depth()
 	 * @model
 	 * @generated
 	 */
-	float getDepth();
+	IfcPositiveLengthMeasure getDepth();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCShapeProfileDef#getDepth <em>Depth</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCShapeProfileDef#getDepth <em>Depth</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Depth</em>' attribute.
+	 * @param value the new value of the '<em>Depth</em>' reference.
 	 * @see #getDepth()
 	 * @generated
 	 */
-	void setDepth(float value);
+	void setDepth(IfcPositiveLengthMeasure value);
 
 	/**
-	 * Returns the value of the '<em><b>Depth As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Depth As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Depth As String</em>' attribute.
-	 * @see #setDepthAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcCShapeProfileDef_DepthAsString()
-	 * @model
-	 * @generated
-	 */
-	String getDepthAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCShapeProfileDef#getDepthAsString <em>Depth As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Depth As String</em>' attribute.
-	 * @see #getDepthAsString()
-	 * @generated
-	 */
-	void setDepthAsString(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Width</b></em>' attribute.
+	 * Returns the value of the '<em><b>Width</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Width</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Width</em>' attribute.
-	 * @see #setWidth(float)
+	 * @return the value of the '<em>Width</em>' reference.
+	 * @see #setWidth(IfcPositiveLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcCShapeProfileDef_Width()
 	 * @model
 	 * @generated
 	 */
-	float getWidth();
+	IfcPositiveLengthMeasure getWidth();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCShapeProfileDef#getWidth <em>Width</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCShapeProfileDef#getWidth <em>Width</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Width</em>' attribute.
+	 * @param value the new value of the '<em>Width</em>' reference.
 	 * @see #getWidth()
 	 * @generated
 	 */
-	void setWidth(float value);
+	void setWidth(IfcPositiveLengthMeasure value);
 
 	/**
-	 * Returns the value of the '<em><b>Width As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Width As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Width As String</em>' attribute.
-	 * @see #setWidthAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcCShapeProfileDef_WidthAsString()
-	 * @model
-	 * @generated
-	 */
-	String getWidthAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCShapeProfileDef#getWidthAsString <em>Width As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Width As String</em>' attribute.
-	 * @see #getWidthAsString()
-	 * @generated
-	 */
-	void setWidthAsString(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Wall Thickness</b></em>' attribute.
+	 * Returns the value of the '<em><b>Wall Thickness</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Wall Thickness</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Wall Thickness</em>' attribute.
-	 * @see #setWallThickness(float)
+	 * @return the value of the '<em>Wall Thickness</em>' reference.
+	 * @see #setWallThickness(IfcPositiveLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcCShapeProfileDef_WallThickness()
 	 * @model
 	 * @generated
 	 */
-	float getWallThickness();
+	IfcPositiveLengthMeasure getWallThickness();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCShapeProfileDef#getWallThickness <em>Wall Thickness</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCShapeProfileDef#getWallThickness <em>Wall Thickness</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Wall Thickness</em>' attribute.
+	 * @param value the new value of the '<em>Wall Thickness</em>' reference.
 	 * @see #getWallThickness()
 	 * @generated
 	 */
-	void setWallThickness(float value);
+	void setWallThickness(IfcPositiveLengthMeasure value);
 
 	/**
-	 * Returns the value of the '<em><b>Wall Thickness As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Wall Thickness As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Wall Thickness As String</em>' attribute.
-	 * @see #setWallThicknessAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcCShapeProfileDef_WallThicknessAsString()
-	 * @model
-	 * @generated
-	 */
-	String getWallThicknessAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCShapeProfileDef#getWallThicknessAsString <em>Wall Thickness As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Wall Thickness As String</em>' attribute.
-	 * @see #getWallThicknessAsString()
-	 * @generated
-	 */
-	void setWallThicknessAsString(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Girth</b></em>' attribute.
+	 * Returns the value of the '<em><b>Girth</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Girth</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Girth</em>' attribute.
-	 * @see #setGirth(float)
+	 * @return the value of the '<em>Girth</em>' reference.
+	 * @see #setGirth(IfcPositiveLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcCShapeProfileDef_Girth()
 	 * @model
 	 * @generated
 	 */
-	float getGirth();
+	IfcPositiveLengthMeasure getGirth();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCShapeProfileDef#getGirth <em>Girth</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCShapeProfileDef#getGirth <em>Girth</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Girth</em>' attribute.
+	 * @param value the new value of the '<em>Girth</em>' reference.
 	 * @see #getGirth()
 	 * @generated
 	 */
-	void setGirth(float value);
+	void setGirth(IfcPositiveLengthMeasure value);
 
 	/**
-	 * Returns the value of the '<em><b>Girth As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Girth As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Girth As String</em>' attribute.
-	 * @see #setGirthAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcCShapeProfileDef_GirthAsString()
-	 * @model
-	 * @generated
-	 */
-	String getGirthAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCShapeProfileDef#getGirthAsString <em>Girth As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Girth As String</em>' attribute.
-	 * @see #getGirthAsString()
-	 * @generated
-	 */
-	void setGirthAsString(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Internal Fillet Radius</b></em>' attribute.
+	 * Returns the value of the '<em><b>Internal Fillet Radius</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Internal Fillet Radius</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Internal Fillet Radius</em>' attribute.
+	 * @return the value of the '<em>Internal Fillet Radius</em>' reference.
 	 * @see #isSetInternalFilletRadius()
 	 * @see #unsetInternalFilletRadius()
-	 * @see #setInternalFilletRadius(float)
+	 * @see #setInternalFilletRadius(IfcPositiveLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcCShapeProfileDef_InternalFilletRadius()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getInternalFilletRadius();
+	IfcPositiveLengthMeasure getInternalFilletRadius();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCShapeProfileDef#getInternalFilletRadius <em>Internal Fillet Radius</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCShapeProfileDef#getInternalFilletRadius <em>Internal Fillet Radius</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Internal Fillet Radius</em>' attribute.
+	 * @param value the new value of the '<em>Internal Fillet Radius</em>' reference.
 	 * @see #isSetInternalFilletRadius()
 	 * @see #unsetInternalFilletRadius()
 	 * @see #getInternalFilletRadius()
 	 * @generated
 	 */
-	void setInternalFilletRadius(float value);
+	void setInternalFilletRadius(IfcPositiveLengthMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCShapeProfileDef#getInternalFilletRadius <em>Internal Fillet Radius</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCShapeProfileDef#getInternalFilletRadius <em>Internal Fillet Radius</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetInternalFilletRadius()
 	 * @see #getInternalFilletRadius()
-	 * @see #setInternalFilletRadius(float)
+	 * @see #setInternalFilletRadius(IfcPositiveLengthMeasure)
 	 * @generated
 	 */
 	void unsetInternalFilletRadius();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCShapeProfileDef#getInternalFilletRadius <em>Internal Fillet Radius</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCShapeProfileDef#getInternalFilletRadius <em>Internal Fillet Radius</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Internal Fillet Radius</em>' attribute is set.
+	 * @return whether the value of the '<em>Internal Fillet Radius</em>' reference is set.
 	 * @see #unsetInternalFilletRadius()
 	 * @see #getInternalFilletRadius()
-	 * @see #setInternalFilletRadius(float)
+	 * @see #setInternalFilletRadius(IfcPositiveLengthMeasure)
 	 * @generated
 	 */
 	boolean isSetInternalFilletRadius();
 
 	/**
-	 * Returns the value of the '<em><b>Internal Fillet Radius As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Internal Fillet Radius As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Internal Fillet Radius As String</em>' attribute.
-	 * @see #isSetInternalFilletRadiusAsString()
-	 * @see #unsetInternalFilletRadiusAsString()
-	 * @see #setInternalFilletRadiusAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcCShapeProfileDef_InternalFilletRadiusAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getInternalFilletRadiusAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCShapeProfileDef#getInternalFilletRadiusAsString <em>Internal Fillet Radius As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Internal Fillet Radius As String</em>' attribute.
-	 * @see #isSetInternalFilletRadiusAsString()
-	 * @see #unsetInternalFilletRadiusAsString()
-	 * @see #getInternalFilletRadiusAsString()
-	 * @generated
-	 */
-	void setInternalFilletRadiusAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCShapeProfileDef#getInternalFilletRadiusAsString <em>Internal Fillet Radius As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetInternalFilletRadiusAsString()
-	 * @see #getInternalFilletRadiusAsString()
-	 * @see #setInternalFilletRadiusAsString(String)
-	 * @generated
-	 */
-	void unsetInternalFilletRadiusAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCShapeProfileDef#getInternalFilletRadiusAsString <em>Internal Fillet Radius As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Internal Fillet Radius As String</em>' attribute is set.
-	 * @see #unsetInternalFilletRadiusAsString()
-	 * @see #getInternalFilletRadiusAsString()
-	 * @see #setInternalFilletRadiusAsString(String)
-	 * @generated
-	 */
-	boolean isSetInternalFilletRadiusAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Centre Of Gravity In X</b></em>' attribute.
+	 * Returns the value of the '<em><b>Centre Of Gravity In X</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Centre Of Gravity In X</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Centre Of Gravity In X</em>' attribute.
+	 * @return the value of the '<em>Centre Of Gravity In X</em>' reference.
 	 * @see #isSetCentreOfGravityInX()
 	 * @see #unsetCentreOfGravityInX()
-	 * @see #setCentreOfGravityInX(float)
+	 * @see #setCentreOfGravityInX(IfcPositiveLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcCShapeProfileDef_CentreOfGravityInX()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getCentreOfGravityInX();
+	IfcPositiveLengthMeasure getCentreOfGravityInX();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCShapeProfileDef#getCentreOfGravityInX <em>Centre Of Gravity In X</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCShapeProfileDef#getCentreOfGravityInX <em>Centre Of Gravity In X</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Centre Of Gravity In X</em>' attribute.
+	 * @param value the new value of the '<em>Centre Of Gravity In X</em>' reference.
 	 * @see #isSetCentreOfGravityInX()
 	 * @see #unsetCentreOfGravityInX()
 	 * @see #getCentreOfGravityInX()
 	 * @generated
 	 */
-	void setCentreOfGravityInX(float value);
+	void setCentreOfGravityInX(IfcPositiveLengthMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCShapeProfileDef#getCentreOfGravityInX <em>Centre Of Gravity In X</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCShapeProfileDef#getCentreOfGravityInX <em>Centre Of Gravity In X</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetCentreOfGravityInX()
 	 * @see #getCentreOfGravityInX()
-	 * @see #setCentreOfGravityInX(float)
+	 * @see #setCentreOfGravityInX(IfcPositiveLengthMeasure)
 	 * @generated
 	 */
 	void unsetCentreOfGravityInX();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCShapeProfileDef#getCentreOfGravityInX <em>Centre Of Gravity In X</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCShapeProfileDef#getCentreOfGravityInX <em>Centre Of Gravity In X</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Centre Of Gravity In X</em>' attribute is set.
+	 * @return whether the value of the '<em>Centre Of Gravity In X</em>' reference is set.
 	 * @see #unsetCentreOfGravityInX()
 	 * @see #getCentreOfGravityInX()
-	 * @see #setCentreOfGravityInX(float)
+	 * @see #setCentreOfGravityInX(IfcPositiveLengthMeasure)
 	 * @generated
 	 */
 	boolean isSetCentreOfGravityInX();
-
-	/**
-	 * Returns the value of the '<em><b>Centre Of Gravity In XAs String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Centre Of Gravity In XAs String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Centre Of Gravity In XAs String</em>' attribute.
-	 * @see #isSetCentreOfGravityInXAsString()
-	 * @see #unsetCentreOfGravityInXAsString()
-	 * @see #setCentreOfGravityInXAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcCShapeProfileDef_CentreOfGravityInXAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getCentreOfGravityInXAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCShapeProfileDef#getCentreOfGravityInXAsString <em>Centre Of Gravity In XAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Centre Of Gravity In XAs String</em>' attribute.
-	 * @see #isSetCentreOfGravityInXAsString()
-	 * @see #unsetCentreOfGravityInXAsString()
-	 * @see #getCentreOfGravityInXAsString()
-	 * @generated
-	 */
-	void setCentreOfGravityInXAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCShapeProfileDef#getCentreOfGravityInXAsString <em>Centre Of Gravity In XAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetCentreOfGravityInXAsString()
-	 * @see #getCentreOfGravityInXAsString()
-	 * @see #setCentreOfGravityInXAsString(String)
-	 * @generated
-	 */
-	void unsetCentreOfGravityInXAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCShapeProfileDef#getCentreOfGravityInXAsString <em>Centre Of Gravity In XAs String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Centre Of Gravity In XAs String</em>' attribute is set.
-	 * @see #unsetCentreOfGravityInXAsString()
-	 * @see #getCentreOfGravityInXAsString()
-	 * @see #setCentreOfGravityInXAsString(String)
-	 * @generated
-	 */
-	boolean isSetCentreOfGravityInXAsString();
 
 } // IfcCShapeProfileDef

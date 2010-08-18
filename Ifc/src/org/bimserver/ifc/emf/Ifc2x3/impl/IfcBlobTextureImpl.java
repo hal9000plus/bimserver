@@ -24,8 +24,9 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcBlobTexture;
-import org.bimserver.ifc.emf.Ifc2x3.Tristate;
+import org.bimserver.ifc.emf.Ifc2x3.IfcIdentifier;
 import org.bimserver.ifc.emf.Ifc2x3.IfcLogical;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -67,8 +68,8 @@ public class IfcBlobTextureImpl extends IfcSurfaceTextureImpl implements IfcBlob
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getRasterFormat() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcBlobTexture_RasterFormat(), true);
+	public IfcIdentifier getRasterFormat() {
+		return (IfcIdentifier) eGet(Ifc2x3Package.eINSTANCE.getIfcBlobTexture_RasterFormat(), true);
 	}
 
 	/**
@@ -76,7 +77,7 @@ public class IfcBlobTextureImpl extends IfcSurfaceTextureImpl implements IfcBlob
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRasterFormat(String newRasterFormat) {
+	public void setRasterFormat(IfcIdentifier newRasterFormat) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcBlobTexture_RasterFormat(), newRasterFormat);
 	}
 
@@ -85,8 +86,8 @@ public class IfcBlobTextureImpl extends IfcSurfaceTextureImpl implements IfcBlob
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Tristate getRasterCode() {
-		return (Tristate) eGet(Ifc2x3Package.eINSTANCE.getIfcBlobTexture_RasterCode(), true);
+	public IfcLogical getRasterCode() {
+		return (IfcLogical) eGet(Ifc2x3Package.eINSTANCE.getIfcBlobTexture_RasterCode(), true);
 	}
 
 	/**
@@ -94,7 +95,7 @@ public class IfcBlobTextureImpl extends IfcSurfaceTextureImpl implements IfcBlob
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRasterCode(Tristate newRasterCode) {
+	public void setRasterCode(IfcLogical newRasterCode) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcBlobTexture_RasterCode(), newRasterCode);
 	}
 

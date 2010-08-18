@@ -99,107 +99,107 @@ public interface IfcTextStyleTextModel extends IfcTextStyleSelect {
 	boolean isSetTextIndent();
 
 	/**
-	 * Returns the value of the '<em><b>Text Align</b></em>' attribute.
+	 * Returns the value of the '<em><b>Text Align</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Text Align</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Text Align</em>' attribute.
+	 * @return the value of the '<em>Text Align</em>' reference.
 	 * @see #isSetTextAlign()
 	 * @see #unsetTextAlign()
-	 * @see #setTextAlign(String)
+	 * @see #setTextAlign(IfcTextAlignment)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTextStyleTextModel_TextAlign()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getTextAlign();
+	IfcTextAlignment getTextAlign();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleTextModel#getTextAlign <em>Text Align</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleTextModel#getTextAlign <em>Text Align</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Text Align</em>' attribute.
+	 * @param value the new value of the '<em>Text Align</em>' reference.
 	 * @see #isSetTextAlign()
 	 * @see #unsetTextAlign()
 	 * @see #getTextAlign()
 	 * @generated
 	 */
-	void setTextAlign(String value);
+	void setTextAlign(IfcTextAlignment value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleTextModel#getTextAlign <em>Text Align</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleTextModel#getTextAlign <em>Text Align</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetTextAlign()
 	 * @see #getTextAlign()
-	 * @see #setTextAlign(String)
+	 * @see #setTextAlign(IfcTextAlignment)
 	 * @generated
 	 */
 	void unsetTextAlign();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleTextModel#getTextAlign <em>Text Align</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleTextModel#getTextAlign <em>Text Align</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Text Align</em>' attribute is set.
+	 * @return whether the value of the '<em>Text Align</em>' reference is set.
 	 * @see #unsetTextAlign()
 	 * @see #getTextAlign()
-	 * @see #setTextAlign(String)
+	 * @see #setTextAlign(IfcTextAlignment)
 	 * @generated
 	 */
 	boolean isSetTextAlign();
 
 	/**
-	 * Returns the value of the '<em><b>Text Decoration</b></em>' attribute.
+	 * Returns the value of the '<em><b>Text Decoration</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Text Decoration</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Text Decoration</em>' attribute.
+	 * @return the value of the '<em>Text Decoration</em>' reference.
 	 * @see #isSetTextDecoration()
 	 * @see #unsetTextDecoration()
-	 * @see #setTextDecoration(String)
+	 * @see #setTextDecoration(IfcTextDecoration)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTextStyleTextModel_TextDecoration()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getTextDecoration();
+	IfcTextDecoration getTextDecoration();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleTextModel#getTextDecoration <em>Text Decoration</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleTextModel#getTextDecoration <em>Text Decoration</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Text Decoration</em>' attribute.
+	 * @param value the new value of the '<em>Text Decoration</em>' reference.
 	 * @see #isSetTextDecoration()
 	 * @see #unsetTextDecoration()
 	 * @see #getTextDecoration()
 	 * @generated
 	 */
-	void setTextDecoration(String value);
+	void setTextDecoration(IfcTextDecoration value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleTextModel#getTextDecoration <em>Text Decoration</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleTextModel#getTextDecoration <em>Text Decoration</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetTextDecoration()
 	 * @see #getTextDecoration()
-	 * @see #setTextDecoration(String)
+	 * @see #setTextDecoration(IfcTextDecoration)
 	 * @generated
 	 */
 	void unsetTextDecoration();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleTextModel#getTextDecoration <em>Text Decoration</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleTextModel#getTextDecoration <em>Text Decoration</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Text Decoration</em>' attribute is set.
+	 * @return whether the value of the '<em>Text Decoration</em>' reference is set.
 	 * @see #unsetTextDecoration()
 	 * @see #getTextDecoration()
-	 * @see #setTextDecoration(String)
+	 * @see #setTextDecoration(IfcTextDecoration)
 	 * @generated
 	 */
 	boolean isSetTextDecoration();
@@ -311,54 +311,54 @@ public interface IfcTextStyleTextModel extends IfcTextStyleSelect {
 	boolean isSetWordSpacing();
 
 	/**
-	 * Returns the value of the '<em><b>Text Transform</b></em>' attribute.
+	 * Returns the value of the '<em><b>Text Transform</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Text Transform</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Text Transform</em>' attribute.
+	 * @return the value of the '<em>Text Transform</em>' reference.
 	 * @see #isSetTextTransform()
 	 * @see #unsetTextTransform()
-	 * @see #setTextTransform(String)
+	 * @see #setTextTransform(IfcTextTransformation)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTextStyleTextModel_TextTransform()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getTextTransform();
+	IfcTextTransformation getTextTransform();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleTextModel#getTextTransform <em>Text Transform</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleTextModel#getTextTransform <em>Text Transform</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Text Transform</em>' attribute.
+	 * @param value the new value of the '<em>Text Transform</em>' reference.
 	 * @see #isSetTextTransform()
 	 * @see #unsetTextTransform()
 	 * @see #getTextTransform()
 	 * @generated
 	 */
-	void setTextTransform(String value);
+	void setTextTransform(IfcTextTransformation value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleTextModel#getTextTransform <em>Text Transform</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleTextModel#getTextTransform <em>Text Transform</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetTextTransform()
 	 * @see #getTextTransform()
-	 * @see #setTextTransform(String)
+	 * @see #setTextTransform(IfcTextTransformation)
 	 * @generated
 	 */
 	void unsetTextTransform();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleTextModel#getTextTransform <em>Text Transform</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleTextModel#getTextTransform <em>Text Transform</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Text Transform</em>' attribute is set.
+	 * @return whether the value of the '<em>Text Transform</em>' reference is set.
 	 * @see #unsetTextTransform()
 	 * @see #getTextTransform()
-	 * @see #setTextTransform(String)
+	 * @see #setTextTransform(IfcTextTransformation)
 	 * @generated
 	 */
 	boolean isSetTextTransform();

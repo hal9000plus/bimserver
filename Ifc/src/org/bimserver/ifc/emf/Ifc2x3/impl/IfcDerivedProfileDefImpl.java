@@ -25,7 +25,9 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcCartesianTransformationOperator2D;
 import org.bimserver.ifc.emf.Ifc2x3.IfcDerivedProfileDef;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
 import org.bimserver.ifc.emf.Ifc2x3.IfcProfileDef;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -104,8 +106,8 @@ public class IfcDerivedProfileDefImpl extends IfcProfileDefImpl implements IfcDe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getLabel() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcDerivedProfileDef_Label(), true);
+	public IfcLabel getLabel() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcDerivedProfileDef_Label(), true);
 	}
 
 	/**
@@ -113,7 +115,7 @@ public class IfcDerivedProfileDefImpl extends IfcProfileDefImpl implements IfcDe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLabel(String newLabel) {
+	public void setLabel(IfcLabel newLabel) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcDerivedProfileDef_Label(), newLabel);
 	}
 

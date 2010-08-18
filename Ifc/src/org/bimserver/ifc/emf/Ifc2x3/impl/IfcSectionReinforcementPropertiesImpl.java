@@ -22,14 +22,18 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
-import org.bimserver.emf.IdEObjectImpl;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLengthMeasure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcReinforcementBarProperties;
 import org.bimserver.ifc.emf.Ifc2x3.IfcReinforcingBarRoleEnum;
 import org.bimserver.ifc.emf.Ifc2x3.IfcSectionProperties;
 import org.bimserver.ifc.emf.Ifc2x3.IfcSectionReinforcementProperties;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -39,11 +43,8 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSectionReinforcementPropertiesImpl#getLongitudinalStartPosition <em>Longitudinal Start Position</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSectionReinforcementPropertiesImpl#getLongitudinalStartPositionAsString <em>Longitudinal Start Position As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSectionReinforcementPropertiesImpl#getLongitudinalEndPosition <em>Longitudinal End Position</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSectionReinforcementPropertiesImpl#getLongitudinalEndPositionAsString <em>Longitudinal End Position As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSectionReinforcementPropertiesImpl#getTransversePosition <em>Transverse Position</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSectionReinforcementPropertiesImpl#getTransversePositionAsString <em>Transverse Position As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSectionReinforcementPropertiesImpl#getReinforcementRole <em>Reinforcement Role</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSectionReinforcementPropertiesImpl#getSectionDefinition <em>Section Definition</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSectionReinforcementPropertiesImpl#getCrossSectionReinforcementDefinitions <em>Cross Section Reinforcement Definitions</em>}</li>
@@ -52,7 +53,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class IfcSectionReinforcementPropertiesImpl extends IdEObjectImpl implements IfcSectionReinforcementProperties {
+public class IfcSectionReinforcementPropertiesImpl extends EObjectImpl implements IfcSectionReinforcementProperties {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -87,8 +88,8 @@ public class IfcSectionReinforcementPropertiesImpl extends IdEObjectImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getLongitudinalStartPosition() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcSectionReinforcementProperties_LongitudinalStartPosition(), true);
+	public IfcLengthMeasure getLongitudinalStartPosition() {
+		return (IfcLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcSectionReinforcementProperties_LongitudinalStartPosition(), true);
 	}
 
 	/**
@@ -96,7 +97,7 @@ public class IfcSectionReinforcementPropertiesImpl extends IdEObjectImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLongitudinalStartPosition(float newLongitudinalStartPosition) {
+	public void setLongitudinalStartPosition(IfcLengthMeasure newLongitudinalStartPosition) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcSectionReinforcementProperties_LongitudinalStartPosition(), newLongitudinalStartPosition);
 	}
 
@@ -105,8 +106,8 @@ public class IfcSectionReinforcementPropertiesImpl extends IdEObjectImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getLongitudinalStartPositionAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcSectionReinforcementProperties_LongitudinalStartPositionAsString(), true);
+	public IfcLengthMeasure getLongitudinalEndPosition() {
+		return (IfcLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcSectionReinforcementProperties_LongitudinalEndPosition(), true);
 	}
 
 	/**
@@ -114,25 +115,7 @@ public class IfcSectionReinforcementPropertiesImpl extends IdEObjectImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLongitudinalStartPositionAsString(String newLongitudinalStartPositionAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcSectionReinforcementProperties_LongitudinalStartPositionAsString(), newLongitudinalStartPositionAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getLongitudinalEndPosition() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcSectionReinforcementProperties_LongitudinalEndPosition(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setLongitudinalEndPosition(float newLongitudinalEndPosition) {
+	public void setLongitudinalEndPosition(IfcLengthMeasure newLongitudinalEndPosition) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcSectionReinforcementProperties_LongitudinalEndPosition(), newLongitudinalEndPosition);
 	}
 
@@ -141,8 +124,8 @@ public class IfcSectionReinforcementPropertiesImpl extends IdEObjectImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getLongitudinalEndPositionAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcSectionReinforcementProperties_LongitudinalEndPositionAsString(), true);
+	public IfcLengthMeasure getTransversePosition() {
+		return (IfcLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcSectionReinforcementProperties_TransversePosition(), true);
 	}
 
 	/**
@@ -150,25 +133,7 @@ public class IfcSectionReinforcementPropertiesImpl extends IdEObjectImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLongitudinalEndPositionAsString(String newLongitudinalEndPositionAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcSectionReinforcementProperties_LongitudinalEndPositionAsString(), newLongitudinalEndPositionAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getTransversePosition() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcSectionReinforcementProperties_TransversePosition(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTransversePosition(float newTransversePosition) {
+	public void setTransversePosition(IfcLengthMeasure newTransversePosition) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcSectionReinforcementProperties_TransversePosition(), newTransversePosition);
 	}
 
@@ -188,42 +153,6 @@ public class IfcSectionReinforcementPropertiesImpl extends IdEObjectImpl impleme
 	 */
 	public boolean isSetTransversePosition() {
 		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcSectionReinforcementProperties_TransversePosition());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getTransversePositionAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcSectionReinforcementProperties_TransversePositionAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTransversePositionAsString(String newTransversePositionAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcSectionReinforcementProperties_TransversePositionAsString(), newTransversePositionAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetTransversePositionAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcSectionReinforcementProperties_TransversePositionAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetTransversePositionAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcSectionReinforcementProperties_TransversePositionAsString());
 	}
 
 	/**
@@ -269,7 +198,8 @@ public class IfcSectionReinforcementPropertiesImpl extends IdEObjectImpl impleme
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<IfcReinforcementBarProperties> getCrossSectionReinforcementDefinitions() {
-		return (EList<IfcReinforcementBarProperties>) eGet(Ifc2x3Package.eINSTANCE.getIfcSectionReinforcementProperties_CrossSectionReinforcementDefinitions(), true);
+		return (EList<IfcReinforcementBarProperties>) eGet(Ifc2x3Package.eINSTANCE.getIfcSectionReinforcementProperties_CrossSectionReinforcementDefinitions(),
+				true);
 	}
 
 } //IfcSectionReinforcementPropertiesImpl

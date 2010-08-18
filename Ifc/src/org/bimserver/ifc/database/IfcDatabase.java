@@ -29,11 +29,10 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
 
+import org.bimserver.emf.EmfModel;
 import org.bimserver.ifc.FieldIgnoreMap;
-import org.bimserver.ifc.IfcModel;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRoot;
-import org.bimserver.ifc.emf.Ifc2x3.WrappedValue;
 import org.eclipse.emf.common.util.ECollections;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -42,15 +41,15 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.EcorePackage;
 
-public class IfcDatabase {
+public class IfcDatabase<K> {
 
 	private static final Map<Class<?>, Class<?>> interfaceClassMap = initInterfaceClassMap();
 	private final Map<Class<?>, List<? extends EObject>> index = new HashMap<Class<?>, List<? extends EObject>>();
-	private final IfcModel model;
+	private final EmfModel<K> model;
 	private final Map<EClass, Map<String, EObject>> guidIndex = new HashMap<EClass, Map<String, EObject>>();
 	private final FieldIgnoreMap fieldIgnoreMap;
 
-	public IfcDatabase(IfcModel model, FieldIgnoreMap fieldIgnoreMap) {
+	public IfcDatabase(EmfModel<K> model, FieldIgnoreMap fieldIgnoreMap) {
 		this.model = model;
 		this.fieldIgnoreMap = fieldIgnoreMap;
 		buildIndex();
@@ -76,7 +75,7 @@ public class IfcDatabase {
 
 	@SuppressWarnings("unchecked")
 	private void buildIndex() {
-		for (Long key : model.keySet()) {
+		for (K key : model.keySet()) {
 			EObject value = model.get((Long) key);
 			if (value != null) {
 				Class<?> clazz = interfaceClassMap.get(value.getClass());
@@ -95,7 +94,7 @@ public class IfcDatabase {
 				guidIndex.put((EClass) classifier, map);
 			}
 		}
-		for (Long key : model.keySet()) {
+		for (K key : model.keySet()) {
 			EObject value = model.get((Long) key);
 			if (value instanceof IfcRoot) {
 				IfcRoot ifcRoot = (IfcRoot) value;
@@ -125,7 +124,7 @@ public class IfcDatabase {
 	}
 
 	private void sortPrimitiveList(EList<EObject> list) {
-		ECollections.sort(list, new Comparator<EObject>() {
+		Collections.sort(list, new Comparator<EObject>() {
 			@Override
 			public int compare(EObject o1, EObject o2) {
 				return comparePrimitives(o1, o2);
@@ -191,21 +190,5 @@ public class IfcDatabase {
 
 	public EObject getByGuid(EClass eClass, String guid) {
 		return guidIndex.get(eClass).get(guid);
-	}
-
-	public <T extends EObject> List<T> getAll(Class<T> clazz, final EStructuralFeature sortFeature) {
-		List<T> all = getAll(clazz);
-		if (!(sortFeature instanceof WrappedValue)) {
-			throw new UnsupportedOperationException("Only WrappedValue types supported");
-		}
-		Collections.sort(all, new Comparator<T>(){
-			@Override
-			public int compare(T o1, T o2) {
-				WrappedValue val1 = (WrappedValue) o1.eGet(sortFeature);
-				WrappedValue val2 = (WrappedValue) o2.eGet(sortFeature);
-				val1.eGet(o1.eClass().getEStructuralFeature("wrappedValue"));
-				return 0;
-			}});
-		return all;
 	}
 }

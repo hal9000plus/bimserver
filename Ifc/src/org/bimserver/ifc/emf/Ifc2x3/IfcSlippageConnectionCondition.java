@@ -31,11 +31,8 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSlippageConnectionCondition#getSlippageX <em>Slippage X</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSlippageConnectionCondition#getSlippageXAsString <em>Slippage XAs String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSlippageConnectionCondition#getSlippageY <em>Slippage Y</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSlippageConnectionCondition#getSlippageYAsString <em>Slippage YAs String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSlippageConnectionCondition#getSlippageZ <em>Slippage Z</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSlippageConnectionCondition#getSlippageZAsString <em>Slippage ZAs String</em>}</li>
  * </ul>
  * </p>
  *
@@ -45,321 +42,162 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcSlippageConnectionCondition extends IfcStructuralConnectionCondition {
 	/**
-	 * Returns the value of the '<em><b>Slippage X</b></em>' attribute.
+	 * Returns the value of the '<em><b>Slippage X</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Slippage X</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Slippage X</em>' attribute.
+	 * @return the value of the '<em>Slippage X</em>' reference.
 	 * @see #isSetSlippageX()
 	 * @see #unsetSlippageX()
-	 * @see #setSlippageX(float)
+	 * @see #setSlippageX(IfcLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSlippageConnectionCondition_SlippageX()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getSlippageX();
+	IfcLengthMeasure getSlippageX();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSlippageConnectionCondition#getSlippageX <em>Slippage X</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSlippageConnectionCondition#getSlippageX <em>Slippage X</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Slippage X</em>' attribute.
+	 * @param value the new value of the '<em>Slippage X</em>' reference.
 	 * @see #isSetSlippageX()
 	 * @see #unsetSlippageX()
 	 * @see #getSlippageX()
 	 * @generated
 	 */
-	void setSlippageX(float value);
+	void setSlippageX(IfcLengthMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSlippageConnectionCondition#getSlippageX <em>Slippage X</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSlippageConnectionCondition#getSlippageX <em>Slippage X</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetSlippageX()
 	 * @see #getSlippageX()
-	 * @see #setSlippageX(float)
+	 * @see #setSlippageX(IfcLengthMeasure)
 	 * @generated
 	 */
 	void unsetSlippageX();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSlippageConnectionCondition#getSlippageX <em>Slippage X</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSlippageConnectionCondition#getSlippageX <em>Slippage X</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Slippage X</em>' attribute is set.
+	 * @return whether the value of the '<em>Slippage X</em>' reference is set.
 	 * @see #unsetSlippageX()
 	 * @see #getSlippageX()
-	 * @see #setSlippageX(float)
+	 * @see #setSlippageX(IfcLengthMeasure)
 	 * @generated
 	 */
 	boolean isSetSlippageX();
 
 	/**
-	 * Returns the value of the '<em><b>Slippage XAs String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Slippage XAs String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Slippage XAs String</em>' attribute.
-	 * @see #isSetSlippageXAsString()
-	 * @see #unsetSlippageXAsString()
-	 * @see #setSlippageXAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSlippageConnectionCondition_SlippageXAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getSlippageXAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSlippageConnectionCondition#getSlippageXAsString <em>Slippage XAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Slippage XAs String</em>' attribute.
-	 * @see #isSetSlippageXAsString()
-	 * @see #unsetSlippageXAsString()
-	 * @see #getSlippageXAsString()
-	 * @generated
-	 */
-	void setSlippageXAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSlippageConnectionCondition#getSlippageXAsString <em>Slippage XAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetSlippageXAsString()
-	 * @see #getSlippageXAsString()
-	 * @see #setSlippageXAsString(String)
-	 * @generated
-	 */
-	void unsetSlippageXAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSlippageConnectionCondition#getSlippageXAsString <em>Slippage XAs String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Slippage XAs String</em>' attribute is set.
-	 * @see #unsetSlippageXAsString()
-	 * @see #getSlippageXAsString()
-	 * @see #setSlippageXAsString(String)
-	 * @generated
-	 */
-	boolean isSetSlippageXAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Slippage Y</b></em>' attribute.
+	 * Returns the value of the '<em><b>Slippage Y</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Slippage Y</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Slippage Y</em>' attribute.
+	 * @return the value of the '<em>Slippage Y</em>' reference.
 	 * @see #isSetSlippageY()
 	 * @see #unsetSlippageY()
-	 * @see #setSlippageY(float)
+	 * @see #setSlippageY(IfcLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSlippageConnectionCondition_SlippageY()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getSlippageY();
+	IfcLengthMeasure getSlippageY();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSlippageConnectionCondition#getSlippageY <em>Slippage Y</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSlippageConnectionCondition#getSlippageY <em>Slippage Y</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Slippage Y</em>' attribute.
+	 * @param value the new value of the '<em>Slippage Y</em>' reference.
 	 * @see #isSetSlippageY()
 	 * @see #unsetSlippageY()
 	 * @see #getSlippageY()
 	 * @generated
 	 */
-	void setSlippageY(float value);
+	void setSlippageY(IfcLengthMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSlippageConnectionCondition#getSlippageY <em>Slippage Y</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSlippageConnectionCondition#getSlippageY <em>Slippage Y</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetSlippageY()
 	 * @see #getSlippageY()
-	 * @see #setSlippageY(float)
+	 * @see #setSlippageY(IfcLengthMeasure)
 	 * @generated
 	 */
 	void unsetSlippageY();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSlippageConnectionCondition#getSlippageY <em>Slippage Y</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSlippageConnectionCondition#getSlippageY <em>Slippage Y</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Slippage Y</em>' attribute is set.
+	 * @return whether the value of the '<em>Slippage Y</em>' reference is set.
 	 * @see #unsetSlippageY()
 	 * @see #getSlippageY()
-	 * @see #setSlippageY(float)
+	 * @see #setSlippageY(IfcLengthMeasure)
 	 * @generated
 	 */
 	boolean isSetSlippageY();
 
 	/**
-	 * Returns the value of the '<em><b>Slippage YAs String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Slippage YAs String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Slippage YAs String</em>' attribute.
-	 * @see #isSetSlippageYAsString()
-	 * @see #unsetSlippageYAsString()
-	 * @see #setSlippageYAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSlippageConnectionCondition_SlippageYAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getSlippageYAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSlippageConnectionCondition#getSlippageYAsString <em>Slippage YAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Slippage YAs String</em>' attribute.
-	 * @see #isSetSlippageYAsString()
-	 * @see #unsetSlippageYAsString()
-	 * @see #getSlippageYAsString()
-	 * @generated
-	 */
-	void setSlippageYAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSlippageConnectionCondition#getSlippageYAsString <em>Slippage YAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetSlippageYAsString()
-	 * @see #getSlippageYAsString()
-	 * @see #setSlippageYAsString(String)
-	 * @generated
-	 */
-	void unsetSlippageYAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSlippageConnectionCondition#getSlippageYAsString <em>Slippage YAs String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Slippage YAs String</em>' attribute is set.
-	 * @see #unsetSlippageYAsString()
-	 * @see #getSlippageYAsString()
-	 * @see #setSlippageYAsString(String)
-	 * @generated
-	 */
-	boolean isSetSlippageYAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Slippage Z</b></em>' attribute.
+	 * Returns the value of the '<em><b>Slippage Z</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Slippage Z</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Slippage Z</em>' attribute.
+	 * @return the value of the '<em>Slippage Z</em>' reference.
 	 * @see #isSetSlippageZ()
 	 * @see #unsetSlippageZ()
-	 * @see #setSlippageZ(float)
+	 * @see #setSlippageZ(IfcLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSlippageConnectionCondition_SlippageZ()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getSlippageZ();
+	IfcLengthMeasure getSlippageZ();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSlippageConnectionCondition#getSlippageZ <em>Slippage Z</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSlippageConnectionCondition#getSlippageZ <em>Slippage Z</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Slippage Z</em>' attribute.
+	 * @param value the new value of the '<em>Slippage Z</em>' reference.
 	 * @see #isSetSlippageZ()
 	 * @see #unsetSlippageZ()
 	 * @see #getSlippageZ()
 	 * @generated
 	 */
-	void setSlippageZ(float value);
+	void setSlippageZ(IfcLengthMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSlippageConnectionCondition#getSlippageZ <em>Slippage Z</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSlippageConnectionCondition#getSlippageZ <em>Slippage Z</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetSlippageZ()
 	 * @see #getSlippageZ()
-	 * @see #setSlippageZ(float)
+	 * @see #setSlippageZ(IfcLengthMeasure)
 	 * @generated
 	 */
 	void unsetSlippageZ();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSlippageConnectionCondition#getSlippageZ <em>Slippage Z</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSlippageConnectionCondition#getSlippageZ <em>Slippage Z</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Slippage Z</em>' attribute is set.
+	 * @return whether the value of the '<em>Slippage Z</em>' reference is set.
 	 * @see #unsetSlippageZ()
 	 * @see #getSlippageZ()
-	 * @see #setSlippageZ(float)
+	 * @see #setSlippageZ(IfcLengthMeasure)
 	 * @generated
 	 */
 	boolean isSetSlippageZ();
-
-	/**
-	 * Returns the value of the '<em><b>Slippage ZAs String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Slippage ZAs String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Slippage ZAs String</em>' attribute.
-	 * @see #isSetSlippageZAsString()
-	 * @see #unsetSlippageZAsString()
-	 * @see #setSlippageZAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSlippageConnectionCondition_SlippageZAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getSlippageZAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSlippageConnectionCondition#getSlippageZAsString <em>Slippage ZAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Slippage ZAs String</em>' attribute.
-	 * @see #isSetSlippageZAsString()
-	 * @see #unsetSlippageZAsString()
-	 * @see #getSlippageZAsString()
-	 * @generated
-	 */
-	void setSlippageZAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSlippageConnectionCondition#getSlippageZAsString <em>Slippage ZAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetSlippageZAsString()
-	 * @see #getSlippageZAsString()
-	 * @see #setSlippageZAsString(String)
-	 * @generated
-	 */
-	void unsetSlippageZAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSlippageConnectionCondition#getSlippageZAsString <em>Slippage ZAs String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Slippage ZAs String</em>' attribute is set.
-	 * @see #unsetSlippageZAsString()
-	 * @see #getSlippageZAsString()
-	 * @see #setSlippageZAsString(String)
-	 * @generated
-	 */
-	boolean isSetSlippageZAsString();
 
 } // IfcSlippageConnectionCondition

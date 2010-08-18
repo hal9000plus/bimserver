@@ -344,8 +344,9 @@ public enum IfcWindowStyleOperationEnum implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final IfcWindowStyleOperationEnum[] VALUES_ARRAY = new IfcWindowStyleOperationEnum[] { NULL, TRIPLE_PANEL_RIGHT, TRIPLE_PANEL_VERTICAL, TRIPLE_PANEL_LEFT,
-			NOTDEFINED, TRIPLE_PANEL_BOTTOM, TRIPLE_PANEL_HORIZONTAL, TRIPLE_PANEL_TOP, DOUBLE_PANEL_VERTICAL, SINGLE_PANEL, USERDEFINED, DOUBLE_PANEL_HORIZONTAL, };
+	private static final IfcWindowStyleOperationEnum[] VALUES_ARRAY = new IfcWindowStyleOperationEnum[] { NULL, TRIPLE_PANEL_RIGHT, TRIPLE_PANEL_VERTICAL,
+			TRIPLE_PANEL_LEFT, NOTDEFINED, TRIPLE_PANEL_BOTTOM, TRIPLE_PANEL_HORIZONTAL, TRIPLE_PANEL_TOP, DOUBLE_PANEL_VERTICAL, SINGLE_PANEL, USERDEFINED,
+			DOUBLE_PANEL_HORIZONTAL, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Ifc Window Style Operation Enum</b></em>' enumerators.

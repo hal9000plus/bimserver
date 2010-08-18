@@ -34,7 +34,7 @@ package org.bimserver.ifc.emf.Ifc2x3;
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcCartesianTransformationOperator#getAxis2 <em>Axis2</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcCartesianTransformationOperator#getLocalOrigin <em>Local Origin</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcCartesianTransformationOperator#getScale <em>Scale</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcCartesianTransformationOperator#getScaleAsString <em>Scale As String</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcCartesianTransformationOperator#getScl <em>Scl</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcCartesianTransformationOperator#getDim <em>Dim</em>}</li>
  * </ul>
  * </p>
@@ -177,81 +177,83 @@ public interface IfcCartesianTransformationOperator extends IfcGeometricRepresen
 	void setLocalOrigin(IfcCartesianPoint value);
 
 	/**
-	 * Returns the value of the '<em><b>Scale</b></em>' attribute.
+	 * Returns the value of the '<em><b>Scale</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Scale</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Scale</em>' attribute.
-	 * @see #setScale(float)
+	 * @return the value of the '<em>Scale</em>' reference.
+	 * @see #setScale(IfcReal)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcCartesianTransformationOperator_Scale()
 	 * @model
 	 * @generated
 	 */
-	float getScale();
+	IfcReal getScale();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCartesianTransformationOperator#getScale <em>Scale</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCartesianTransformationOperator#getScale <em>Scale</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Scale</em>' attribute.
+	 * @param value the new value of the '<em>Scale</em>' reference.
 	 * @see #getScale()
 	 * @generated
 	 */
-	void setScale(float value);
+	void setScale(IfcReal value);
 
 	/**
-	 * Returns the value of the '<em><b>Scale As String</b></em>' attribute.
+	 * Returns the value of the '<em><b>Scl</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Scale As String</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Scl</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Scale As String</em>' attribute.
-	 * @see #setScaleAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcCartesianTransformationOperator_ScaleAsString()
-	 * @model
+	 * @return the value of the '<em>Scl</em>' reference.
+	 * @see #setScl(IfcReal)
+	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcCartesianTransformationOperator_Scl()
+	 * @model transient="true" volatile="true" derived="true"
+	 *        annotation="http://www.iso.org/iso10303-11/EXPRESS code=' NVL(Scale, 1.0);'"
 	 * @generated
 	 */
-	String getScaleAsString();
+	IfcReal getScl();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCartesianTransformationOperator#getScaleAsString <em>Scale As String</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCartesianTransformationOperator#getScl <em>Scl</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Scale As String</em>' attribute.
-	 * @see #getScaleAsString()
+	 * @param value the new value of the '<em>Scl</em>' reference.
+	 * @see #getScl()
 	 * @generated
 	 */
-	void setScaleAsString(String value);
+	void setScl(IfcReal value);
 
 	/**
-	 * Returns the value of the '<em><b>Dim</b></em>' attribute.
+	 * Returns the value of the '<em><b>Dim</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Dim</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Dim</em>' attribute.
-	 * @see #setDim(int)
+	 * @return the value of the '<em>Dim</em>' reference.
+	 * @see #setDim(IfcDimensionCount)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcCartesianTransformationOperator_Dim()
-	 * @model derived="true"
+	 * @model transient="true" volatile="true" derived="true"
+	 *        annotation="http://www.iso.org/iso10303-11/EXPRESS code=' LocalOrigin.Dim;'"
 	 * @generated
 	 */
-	int getDim();
+	IfcDimensionCount getDim();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCartesianTransformationOperator#getDim <em>Dim</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCartesianTransformationOperator#getDim <em>Dim</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Dim</em>' attribute.
+	 * @param value the new value of the '<em>Dim</em>' reference.
 	 * @see #getDim()
 	 * @generated
 	 */
-	void setDim(int value);
+	void setDim(IfcDimensionCount value);
 
 } // IfcCartesianTransformationOperator

@@ -22,7 +22,7 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3;
 
-import org.bimserver.emf.IdEObject;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,8 +32,7 @@ import org.bimserver.emf.IdEObject;
  *
  * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcPresentationStyleSelect()
  * @model interface="true" abstract="true"
- * @extends IdEObject
  * @generated
  */
-public interface IfcPresentationStyleSelect extends IdEObject {
+public interface IfcPresentationStyleSelect extends EObject {
 } // IfcPresentationStyleSelect

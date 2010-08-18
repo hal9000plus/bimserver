@@ -33,6 +33,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcEdgeLoop#getEdgeList <em>Edge List</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcEdgeLoop#getNe <em>Ne</em>}</li>
  * </ul>
  * </p>
  *
@@ -56,5 +57,32 @@ public interface IfcEdgeLoop extends IfcLoop {
 	 * @generated
 	 */
 	EList<IfcOrientedEdge> getEdgeList();
+
+	/**
+	 * Returns the value of the '<em><b>Ne</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Ne</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Ne</em>' reference.
+	 * @see #setNe(IfcInteger)
+	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcEdgeLoop_Ne()
+	 * @model transient="true" volatile="true" derived="true"
+	 *        annotation="http://www.iso.org/iso10303-11/EXPRESS code=' SIZEOF(EdgeList);'"
+	 * @generated
+	 */
+	IfcInteger getNe();
+
+	/**
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcEdgeLoop#getNe <em>Ne</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Ne</em>' reference.
+	 * @see #getNe()
+	 * @generated
+	 */
+	void setNe(IfcInteger value);
 
 } // IfcEdgeLoop

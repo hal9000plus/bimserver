@@ -23,11 +23,14 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.*;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
+
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
+
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
 /**
@@ -74,1507 +77,1543 @@ public class Ifc2x3FactoryImpl extends EFactoryImpl implements Ifc2x3Factory {
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 		case Ifc2x3Package.IFC_ABSORBED_DOSE_MEASURE:
-			return (EObject) createIfcAbsorbedDoseMeasure();
+			return createIfcAbsorbedDoseMeasure();
 		case Ifc2x3Package.IFC_ACCELERATION_MEASURE:
-			return (EObject) createIfcAccelerationMeasure();
+			return createIfcAccelerationMeasure();
 		case Ifc2x3Package.IFC_AMOUNT_OF_SUBSTANCE_MEASURE:
-			return (EObject) createIfcAmountOfSubstanceMeasure();
+			return createIfcAmountOfSubstanceMeasure();
 		case Ifc2x3Package.IFC_ANGULAR_VELOCITY_MEASURE:
-			return (EObject) createIfcAngularVelocityMeasure();
+			return createIfcAngularVelocityMeasure();
 		case Ifc2x3Package.IFC_AREA_MEASURE:
-			return (EObject) createIfcAreaMeasure();
+			return createIfcAreaMeasure();
 		case Ifc2x3Package.IFC_BOOLEAN:
-			return (EObject) createIfcBoolean();
+			return createIfcBoolean();
 		case Ifc2x3Package.IFC_CONTEXT_DEPENDENT_MEASURE:
-			return (EObject) createIfcContextDependentMeasure();
+			return createIfcContextDependentMeasure();
 		case Ifc2x3Package.IFC_COUNT_MEASURE:
-			return (EObject) createIfcCountMeasure();
+			return createIfcCountMeasure();
 		case Ifc2x3Package.IFC_CURVATURE_MEASURE:
-			return (EObject) createIfcCurvatureMeasure();
+			return createIfcCurvatureMeasure();
+		case Ifc2x3Package.IFC_DAY_IN_MONTH_NUMBER:
+			return createIfcDayInMonthNumber();
+		case Ifc2x3Package.IFC_DAYLIGHT_SAVING_HOUR:
+			return createIfcDaylightSavingHour();
 		case Ifc2x3Package.IFC_DESCRIPTIVE_MEASURE:
-			return (EObject) createIfcDescriptiveMeasure();
+			return createIfcDescriptiveMeasure();
+		case Ifc2x3Package.IFC_DIMENSION_COUNT:
+			return createIfcDimensionCount();
 		case Ifc2x3Package.IFC_DOSE_EQUIVALENT_MEASURE:
-			return (EObject) createIfcDoseEquivalentMeasure();
+			return createIfcDoseEquivalentMeasure();
 		case Ifc2x3Package.IFC_DYNAMIC_VISCOSITY_MEASURE:
-			return (EObject) createIfcDynamicViscosityMeasure();
+			return createIfcDynamicViscosityMeasure();
 		case Ifc2x3Package.IFC_ELECTRIC_CAPACITANCE_MEASURE:
-			return (EObject) createIfcElectricCapacitanceMeasure();
+			return createIfcElectricCapacitanceMeasure();
 		case Ifc2x3Package.IFC_ELECTRIC_CHARGE_MEASURE:
-			return (EObject) createIfcElectricChargeMeasure();
+			return createIfcElectricChargeMeasure();
 		case Ifc2x3Package.IFC_ELECTRIC_CONDUCTANCE_MEASURE:
-			return (EObject) createIfcElectricConductanceMeasure();
+			return createIfcElectricConductanceMeasure();
 		case Ifc2x3Package.IFC_ELECTRIC_CURRENT_MEASURE:
-			return (EObject) createIfcElectricCurrentMeasure();
+			return createIfcElectricCurrentMeasure();
 		case Ifc2x3Package.IFC_ELECTRIC_RESISTANCE_MEASURE:
-			return (EObject) createIfcElectricResistanceMeasure();
+			return createIfcElectricResistanceMeasure();
 		case Ifc2x3Package.IFC_ELECTRIC_VOLTAGE_MEASURE:
-			return (EObject) createIfcElectricVoltageMeasure();
+			return createIfcElectricVoltageMeasure();
 		case Ifc2x3Package.IFC_ENERGY_MEASURE:
-			return (EObject) createIfcEnergyMeasure();
+			return createIfcEnergyMeasure();
+		case Ifc2x3Package.IFC_FONT_STYLE:
+			return createIfcFontStyle();
+		case Ifc2x3Package.IFC_FONT_VARIANT:
+			return createIfcFontVariant();
+		case Ifc2x3Package.IFC_FONT_WEIGHT:
+			return createIfcFontWeight();
 		case Ifc2x3Package.IFC_FORCE_MEASURE:
-			return (EObject) createIfcForceMeasure();
+			return createIfcForceMeasure();
 		case Ifc2x3Package.IFC_FREQUENCY_MEASURE:
-			return (EObject) createIfcFrequencyMeasure();
+			return createIfcFrequencyMeasure();
 		case Ifc2x3Package.IFC_GLOBALLY_UNIQUE_ID:
-			return (EObject) createIfcGloballyUniqueId();
+			return createIfcGloballyUniqueId();
 		case Ifc2x3Package.IFC_HEAT_FLUX_DENSITY_MEASURE:
-			return (EObject) createIfcHeatFluxDensityMeasure();
+			return createIfcHeatFluxDensityMeasure();
 		case Ifc2x3Package.IFC_HEATING_VALUE_MEASURE:
-			return (EObject) createIfcHeatingValueMeasure();
+			return createIfcHeatingValueMeasure();
+		case Ifc2x3Package.IFC_HOUR_IN_DAY:
+			return createIfcHourInDay();
 		case Ifc2x3Package.IFC_IDENTIFIER:
-			return (EObject) createIfcIdentifier();
+			return createIfcIdentifier();
 		case Ifc2x3Package.IFC_ILLUMINANCE_MEASURE:
-			return (EObject) createIfcIlluminanceMeasure();
+			return createIfcIlluminanceMeasure();
 		case Ifc2x3Package.IFC_INDUCTANCE_MEASURE:
-			return (EObject) createIfcInductanceMeasure();
+			return createIfcInductanceMeasure();
 		case Ifc2x3Package.IFC_INTEGER:
-			return (EObject) createIfcInteger();
+			return createIfcInteger();
 		case Ifc2x3Package.IFC_INTEGER_COUNT_RATE_MEASURE:
-			return (EObject) createIfcIntegerCountRateMeasure();
+			return createIfcIntegerCountRateMeasure();
 		case Ifc2x3Package.IFC_ION_CONCENTRATION_MEASURE:
-			return (EObject) createIfcIonConcentrationMeasure();
+			return createIfcIonConcentrationMeasure();
 		case Ifc2x3Package.IFC_ISOTHERMAL_MOISTURE_CAPACITY_MEASURE:
-			return (EObject) createIfcIsothermalMoistureCapacityMeasure();
+			return createIfcIsothermalMoistureCapacityMeasure();
 		case Ifc2x3Package.IFC_KINEMATIC_VISCOSITY_MEASURE:
-			return (EObject) createIfcKinematicViscosityMeasure();
+			return createIfcKinematicViscosityMeasure();
 		case Ifc2x3Package.IFC_LABEL:
-			return (EObject) createIfcLabel();
+			return createIfcLabel();
 		case Ifc2x3Package.IFC_LENGTH_MEASURE:
-			return (EObject) createIfcLengthMeasure();
+			return createIfcLengthMeasure();
 		case Ifc2x3Package.IFC_LINEAR_FORCE_MEASURE:
-			return (EObject) createIfcLinearForceMeasure();
+			return createIfcLinearForceMeasure();
 		case Ifc2x3Package.IFC_LINEAR_MOMENT_MEASURE:
-			return (EObject) createIfcLinearMomentMeasure();
+			return createIfcLinearMomentMeasure();
 		case Ifc2x3Package.IFC_LINEAR_STIFFNESS_MEASURE:
-			return (EObject) createIfcLinearStiffnessMeasure();
+			return createIfcLinearStiffnessMeasure();
 		case Ifc2x3Package.IFC_LINEAR_VELOCITY_MEASURE:
-			return (EObject) createIfcLinearVelocityMeasure();
+			return createIfcLinearVelocityMeasure();
 		case Ifc2x3Package.IFC_LOGICAL:
-			return (EObject) createIfcLogical();
+			return createIfcLogical();
 		case Ifc2x3Package.IFC_LUMINOUS_FLUX_MEASURE:
-			return (EObject) createIfcLuminousFluxMeasure();
+			return createIfcLuminousFluxMeasure();
 		case Ifc2x3Package.IFC_LUMINOUS_INTENSITY_DISTRIBUTION_MEASURE:
-			return (EObject) createIfcLuminousIntensityDistributionMeasure();
+			return createIfcLuminousIntensityDistributionMeasure();
 		case Ifc2x3Package.IFC_LUMINOUS_INTENSITY_MEASURE:
-			return (EObject) createIfcLuminousIntensityMeasure();
+			return createIfcLuminousIntensityMeasure();
 		case Ifc2x3Package.IFC_MAGNETIC_FLUX_DENSITY_MEASURE:
-			return (EObject) createIfcMagneticFluxDensityMeasure();
+			return createIfcMagneticFluxDensityMeasure();
 		case Ifc2x3Package.IFC_MAGNETIC_FLUX_MEASURE:
-			return (EObject) createIfcMagneticFluxMeasure();
+			return createIfcMagneticFluxMeasure();
 		case Ifc2x3Package.IFC_MASS_DENSITY_MEASURE:
-			return (EObject) createIfcMassDensityMeasure();
+			return createIfcMassDensityMeasure();
 		case Ifc2x3Package.IFC_MASS_FLOW_RATE_MEASURE:
-			return (EObject) createIfcMassFlowRateMeasure();
+			return createIfcMassFlowRateMeasure();
 		case Ifc2x3Package.IFC_MASS_MEASURE:
-			return (EObject) createIfcMassMeasure();
+			return createIfcMassMeasure();
 		case Ifc2x3Package.IFC_MASS_PER_LENGTH_MEASURE:
-			return (EObject) createIfcMassPerLengthMeasure();
+			return createIfcMassPerLengthMeasure();
+		case Ifc2x3Package.IFC_MINUTE_IN_HOUR:
+			return createIfcMinuteInHour();
 		case Ifc2x3Package.IFC_MODULUS_OF_ELASTICITY_MEASURE:
-			return (EObject) createIfcModulusOfElasticityMeasure();
+			return createIfcModulusOfElasticityMeasure();
 		case Ifc2x3Package.IFC_MODULUS_OF_LINEAR_SUBGRADE_REACTION_MEASURE:
-			return (EObject) createIfcModulusOfLinearSubgradeReactionMeasure();
+			return createIfcModulusOfLinearSubgradeReactionMeasure();
 		case Ifc2x3Package.IFC_MODULUS_OF_ROTATIONAL_SUBGRADE_REACTION_MEASURE:
-			return (EObject) createIfcModulusOfRotationalSubgradeReactionMeasure();
+			return createIfcModulusOfRotationalSubgradeReactionMeasure();
 		case Ifc2x3Package.IFC_MODULUS_OF_SUBGRADE_REACTION_MEASURE:
-			return (EObject) createIfcModulusOfSubgradeReactionMeasure();
+			return createIfcModulusOfSubgradeReactionMeasure();
 		case Ifc2x3Package.IFC_MOISTURE_DIFFUSIVITY_MEASURE:
-			return (EObject) createIfcMoistureDiffusivityMeasure();
+			return createIfcMoistureDiffusivityMeasure();
 		case Ifc2x3Package.IFC_MOLECULAR_WEIGHT_MEASURE:
-			return (EObject) createIfcMolecularWeightMeasure();
+			return createIfcMolecularWeightMeasure();
 		case Ifc2x3Package.IFC_MOMENT_OF_INERTIA_MEASURE:
-			return (EObject) createIfcMomentOfInertiaMeasure();
+			return createIfcMomentOfInertiaMeasure();
 		case Ifc2x3Package.IFC_MONETARY_MEASURE:
-			return (EObject) createIfcMonetaryMeasure();
+			return createIfcMonetaryMeasure();
+		case Ifc2x3Package.IFC_MONTH_IN_YEAR_NUMBER:
+			return createIfcMonthInYearNumber();
 		case Ifc2x3Package.IFC_NUMERIC_MEASURE:
-			return (EObject) createIfcNumericMeasure();
+			return createIfcNumericMeasure();
 		case Ifc2x3Package.IFC_PH_MEASURE:
-			return (EObject) createIfcPHMeasure();
+			return createIfcPHMeasure();
 		case Ifc2x3Package.IFC_PARAMETER_VALUE:
-			return (EObject) createIfcParameterValue();
+			return createIfcParameterValue();
 		case Ifc2x3Package.IFC_PLANAR_FORCE_MEASURE:
-			return (EObject) createIfcPlanarForceMeasure();
+			return createIfcPlanarForceMeasure();
 		case Ifc2x3Package.IFC_PLANE_ANGLE_MEASURE:
-			return (EObject) createIfcPlaneAngleMeasure();
+			return createIfcPlaneAngleMeasure();
 		case Ifc2x3Package.IFC_POWER_MEASURE:
-			return (EObject) createIfcPowerMeasure();
+			return createIfcPowerMeasure();
+		case Ifc2x3Package.IFC_PRESENTABLE_TEXT:
+			return createIfcPresentableText();
 		case Ifc2x3Package.IFC_PRESSURE_MEASURE:
-			return (EObject) createIfcPressureMeasure();
+			return createIfcPressureMeasure();
 		case Ifc2x3Package.IFC_RADIO_ACTIVITY_MEASURE:
-			return (EObject) createIfcRadioActivityMeasure();
+			return createIfcRadioActivityMeasure();
 		case Ifc2x3Package.IFC_RATIO_MEASURE:
-			return (EObject) createIfcRatioMeasure();
+			return createIfcRatioMeasure();
 		case Ifc2x3Package.IFC_REAL:
-			return (EObject) createIfcReal();
+			return createIfcReal();
 		case Ifc2x3Package.IFC_ROTATIONAL_FREQUENCY_MEASURE:
-			return (EObject) createIfcRotationalFrequencyMeasure();
+			return createIfcRotationalFrequencyMeasure();
 		case Ifc2x3Package.IFC_ROTATIONAL_MASS_MEASURE:
-			return (EObject) createIfcRotationalMassMeasure();
+			return createIfcRotationalMassMeasure();
 		case Ifc2x3Package.IFC_ROTATIONAL_STIFFNESS_MEASURE:
-			return (EObject) createIfcRotationalStiffnessMeasure();
+			return createIfcRotationalStiffnessMeasure();
+		case Ifc2x3Package.IFC_SECOND_IN_MINUTE:
+			return createIfcSecondInMinute();
 		case Ifc2x3Package.IFC_SECTION_MODULUS_MEASURE:
-			return (EObject) createIfcSectionModulusMeasure();
+			return createIfcSectionModulusMeasure();
 		case Ifc2x3Package.IFC_SECTIONAL_AREA_INTEGRAL_MEASURE:
-			return (EObject) createIfcSectionalAreaIntegralMeasure();
+			return createIfcSectionalAreaIntegralMeasure();
 		case Ifc2x3Package.IFC_SHEAR_MODULUS_MEASURE:
-			return (EObject) createIfcShearModulusMeasure();
+			return createIfcShearModulusMeasure();
 		case Ifc2x3Package.IFC_SOLID_ANGLE_MEASURE:
-			return (EObject) createIfcSolidAngleMeasure();
+			return createIfcSolidAngleMeasure();
 		case Ifc2x3Package.IFC_SOUND_POWER_MEASURE:
-			return (EObject) createIfcSoundPowerMeasure();
+			return createIfcSoundPowerMeasure();
 		case Ifc2x3Package.IFC_SOUND_PRESSURE_MEASURE:
-			return (EObject) createIfcSoundPressureMeasure();
+			return createIfcSoundPressureMeasure();
 		case Ifc2x3Package.IFC_SPECIFIC_HEAT_CAPACITY_MEASURE:
-			return (EObject) createIfcSpecificHeatCapacityMeasure();
+			return createIfcSpecificHeatCapacityMeasure();
 		case Ifc2x3Package.IFC_SPECULAR_EXPONENT:
-			return (EObject) createIfcSpecularExponent();
+			return createIfcSpecularExponent();
 		case Ifc2x3Package.IFC_SPECULAR_ROUGHNESS:
-			return (EObject) createIfcSpecularRoughness();
+			return createIfcSpecularRoughness();
 		case Ifc2x3Package.IFC_TEMPERATURE_GRADIENT_MEASURE:
-			return (EObject) createIfcTemperatureGradientMeasure();
+			return createIfcTemperatureGradientMeasure();
 		case Ifc2x3Package.IFC_TEXT:
-			return (EObject) createIfcText();
+			return createIfcText();
+		case Ifc2x3Package.IFC_TEXT_ALIGNMENT:
+			return createIfcTextAlignment();
+		case Ifc2x3Package.IFC_TEXT_DECORATION:
+			return createIfcTextDecoration();
+		case Ifc2x3Package.IFC_TEXT_FONT_NAME:
+			return createIfcTextFontName();
+		case Ifc2x3Package.IFC_TEXT_TRANSFORMATION:
+			return createIfcTextTransformation();
 		case Ifc2x3Package.IFC_THERMAL_ADMITTANCE_MEASURE:
-			return (EObject) createIfcThermalAdmittanceMeasure();
+			return createIfcThermalAdmittanceMeasure();
 		case Ifc2x3Package.IFC_THERMAL_CONDUCTIVITY_MEASURE:
-			return (EObject) createIfcThermalConductivityMeasure();
+			return createIfcThermalConductivityMeasure();
 		case Ifc2x3Package.IFC_THERMAL_EXPANSION_COEFFICIENT_MEASURE:
-			return (EObject) createIfcThermalExpansionCoefficientMeasure();
+			return createIfcThermalExpansionCoefficientMeasure();
 		case Ifc2x3Package.IFC_THERMAL_RESISTANCE_MEASURE:
-			return (EObject) createIfcThermalResistanceMeasure();
+			return createIfcThermalResistanceMeasure();
 		case Ifc2x3Package.IFC_THERMAL_TRANSMITTANCE_MEASURE:
-			return (EObject) createIfcThermalTransmittanceMeasure();
+			return createIfcThermalTransmittanceMeasure();
 		case Ifc2x3Package.IFC_THERMODYNAMIC_TEMPERATURE_MEASURE:
-			return (EObject) createIfcThermodynamicTemperatureMeasure();
+			return createIfcThermodynamicTemperatureMeasure();
 		case Ifc2x3Package.IFC_TIME_MEASURE:
-			return (EObject) createIfcTimeMeasure();
+			return createIfcTimeMeasure();
 		case Ifc2x3Package.IFC_TIME_STAMP:
-			return (EObject) createIfcTimeStamp();
+			return createIfcTimeStamp();
 		case Ifc2x3Package.IFC_TORQUE_MEASURE:
-			return (EObject) createIfcTorqueMeasure();
+			return createIfcTorqueMeasure();
 		case Ifc2x3Package.IFC_VAPOR_PERMEABILITY_MEASURE:
-			return (EObject) createIfcVaporPermeabilityMeasure();
+			return createIfcVaporPermeabilityMeasure();
 		case Ifc2x3Package.IFC_VOLUME_MEASURE:
-			return (EObject) createIfcVolumeMeasure();
+			return createIfcVolumeMeasure();
 		case Ifc2x3Package.IFC_VOLUMETRIC_FLOW_RATE_MEASURE:
-			return (EObject) createIfcVolumetricFlowRateMeasure();
+			return createIfcVolumetricFlowRateMeasure();
 		case Ifc2x3Package.IFC_WARPING_CONSTANT_MEASURE:
-			return (EObject) createIfcWarpingConstantMeasure();
+			return createIfcWarpingConstantMeasure();
 		case Ifc2x3Package.IFC_WARPING_MOMENT_MEASURE:
-			return (EObject) createIfcWarpingMomentMeasure();
+			return createIfcWarpingMomentMeasure();
+		case Ifc2x3Package.IFC_YEAR_NUMBER:
+			return createIfcYearNumber();
+		case Ifc2x3Package.IFC_BOX_ALIGNMENT:
+			return createIfcBoxAlignment();
+		case Ifc2x3Package.IFC_COMPOUND_PLANE_ANGLE_MEASURE:
+			return createIfcCompoundPlaneAngleMeasure();
 		case Ifc2x3Package.IFC_NORMALISED_RATIO_MEASURE:
-			return (EObject) createIfcNormalisedRatioMeasure();
+			return createIfcNormalisedRatioMeasure();
 		case Ifc2x3Package.IFC_POSITIVE_LENGTH_MEASURE:
-			return (EObject) createIfcPositiveLengthMeasure();
+			return createIfcPositiveLengthMeasure();
 		case Ifc2x3Package.IFC_POSITIVE_PLANE_ANGLE_MEASURE:
-			return (EObject) createIfcPositivePlaneAngleMeasure();
+			return createIfcPositivePlaneAngleMeasure();
 		case Ifc2x3Package.IFC_POSITIVE_RATIO_MEASURE:
-			return (EObject) createIfcPositiveRatioMeasure();
+			return createIfcPositiveRatioMeasure();
 		case Ifc2x3Package.IFC2_DCOMPOSITE_CURVE:
-			return (EObject) createIfc2DCompositeCurve();
+			return createIfc2DCompositeCurve();
 		case Ifc2x3Package.IFC_ACTION_REQUEST:
-			return (EObject) createIfcActionRequest();
+			return createIfcActionRequest();
 		case Ifc2x3Package.IFC_ACTOR:
-			return (EObject) createIfcActor();
+			return createIfcActor();
 		case Ifc2x3Package.IFC_ACTOR_ROLE:
-			return (EObject) createIfcActorRole();
+			return createIfcActorRole();
 		case Ifc2x3Package.IFC_ACTUATOR_TYPE:
-			return (EObject) createIfcActuatorType();
+			return createIfcActuatorType();
 		case Ifc2x3Package.IFC_ADDRESS:
-			return (EObject) createIfcAddress();
+			return createIfcAddress();
 		case Ifc2x3Package.IFC_AIR_TERMINAL_BOX_TYPE:
-			return (EObject) createIfcAirTerminalBoxType();
+			return createIfcAirTerminalBoxType();
 		case Ifc2x3Package.IFC_AIR_TERMINAL_TYPE:
-			return (EObject) createIfcAirTerminalType();
+			return createIfcAirTerminalType();
 		case Ifc2x3Package.IFC_AIR_TO_AIR_HEAT_RECOVERY_TYPE:
-			return (EObject) createIfcAirToAirHeatRecoveryType();
+			return createIfcAirToAirHeatRecoveryType();
 		case Ifc2x3Package.IFC_ALARM_TYPE:
-			return (EObject) createIfcAlarmType();
+			return createIfcAlarmType();
 		case Ifc2x3Package.IFC_ANGULAR_DIMENSION:
-			return (EObject) createIfcAngularDimension();
+			return createIfcAngularDimension();
 		case Ifc2x3Package.IFC_ANNOTATION:
-			return (EObject) createIfcAnnotation();
+			return createIfcAnnotation();
 		case Ifc2x3Package.IFC_ANNOTATION_CURVE_OCCURRENCE:
-			return (EObject) createIfcAnnotationCurveOccurrence();
+			return createIfcAnnotationCurveOccurrence();
 		case Ifc2x3Package.IFC_ANNOTATION_FILL_AREA:
-			return (EObject) createIfcAnnotationFillArea();
+			return createIfcAnnotationFillArea();
 		case Ifc2x3Package.IFC_ANNOTATION_FILL_AREA_OCCURRENCE:
-			return (EObject) createIfcAnnotationFillAreaOccurrence();
+			return createIfcAnnotationFillAreaOccurrence();
 		case Ifc2x3Package.IFC_ANNOTATION_OCCURRENCE:
-			return (EObject) createIfcAnnotationOccurrence();
+			return createIfcAnnotationOccurrence();
 		case Ifc2x3Package.IFC_ANNOTATION_SURFACE:
-			return (EObject) createIfcAnnotationSurface();
+			return createIfcAnnotationSurface();
 		case Ifc2x3Package.IFC_ANNOTATION_SURFACE_OCCURRENCE:
-			return (EObject) createIfcAnnotationSurfaceOccurrence();
+			return createIfcAnnotationSurfaceOccurrence();
 		case Ifc2x3Package.IFC_ANNOTATION_SYMBOL_OCCURRENCE:
-			return (EObject) createIfcAnnotationSymbolOccurrence();
+			return createIfcAnnotationSymbolOccurrence();
 		case Ifc2x3Package.IFC_ANNOTATION_TEXT_OCCURRENCE:
-			return (EObject) createIfcAnnotationTextOccurrence();
+			return createIfcAnnotationTextOccurrence();
 		case Ifc2x3Package.IFC_APPLICATION:
-			return (EObject) createIfcApplication();
+			return createIfcApplication();
 		case Ifc2x3Package.IFC_APPLIED_VALUE:
-			return (EObject) createIfcAppliedValue();
+			return createIfcAppliedValue();
 		case Ifc2x3Package.IFC_APPLIED_VALUE_RELATIONSHIP:
-			return (EObject) createIfcAppliedValueRelationship();
+			return createIfcAppliedValueRelationship();
 		case Ifc2x3Package.IFC_APPROVAL:
-			return (EObject) createIfcApproval();
+			return createIfcApproval();
 		case Ifc2x3Package.IFC_APPROVAL_ACTOR_RELATIONSHIP:
-			return (EObject) createIfcApprovalActorRelationship();
+			return createIfcApprovalActorRelationship();
 		case Ifc2x3Package.IFC_APPROVAL_PROPERTY_RELATIONSHIP:
-			return (EObject) createIfcApprovalPropertyRelationship();
+			return createIfcApprovalPropertyRelationship();
 		case Ifc2x3Package.IFC_APPROVAL_RELATIONSHIP:
-			return (EObject) createIfcApprovalRelationship();
+			return createIfcApprovalRelationship();
 		case Ifc2x3Package.IFC_ARBITRARY_CLOSED_PROFILE_DEF:
-			return (EObject) createIfcArbitraryClosedProfileDef();
+			return createIfcArbitraryClosedProfileDef();
 		case Ifc2x3Package.IFC_ARBITRARY_OPEN_PROFILE_DEF:
-			return (EObject) createIfcArbitraryOpenProfileDef();
+			return createIfcArbitraryOpenProfileDef();
 		case Ifc2x3Package.IFC_ARBITRARY_PROFILE_DEF_WITH_VOIDS:
-			return (EObject) createIfcArbitraryProfileDefWithVoids();
+			return createIfcArbitraryProfileDefWithVoids();
 		case Ifc2x3Package.IFC_ASSET:
-			return (EObject) createIfcAsset();
+			return createIfcAsset();
 		case Ifc2x3Package.IFC_ASYMMETRIC_ISHAPE_PROFILE_DEF:
-			return (EObject) createIfcAsymmetricIShapeProfileDef();
+			return createIfcAsymmetricIShapeProfileDef();
 		case Ifc2x3Package.IFC_AXIS1_PLACEMENT:
-			return (EObject) createIfcAxis1Placement();
+			return createIfcAxis1Placement();
 		case Ifc2x3Package.IFC_AXIS2_PLACEMENT2_D:
-			return (EObject) createIfcAxis2Placement2D();
+			return createIfcAxis2Placement2D();
 		case Ifc2x3Package.IFC_AXIS2_PLACEMENT3_D:
-			return (EObject) createIfcAxis2Placement3D();
+			return createIfcAxis2Placement3D();
 		case Ifc2x3Package.IFC_BSPLINE_CURVE:
-			return (EObject) createIfcBSplineCurve();
+			return createIfcBSplineCurve();
 		case Ifc2x3Package.IFC_BEAM:
-			return (EObject) createIfcBeam();
+			return createIfcBeam();
 		case Ifc2x3Package.IFC_BEAM_TYPE:
-			return (EObject) createIfcBeamType();
+			return createIfcBeamType();
 		case Ifc2x3Package.IFC_BEZIER_CURVE:
-			return (EObject) createIfcBezierCurve();
+			return createIfcBezierCurve();
 		case Ifc2x3Package.IFC_BLOB_TEXTURE:
-			return (EObject) createIfcBlobTexture();
+			return createIfcBlobTexture();
 		case Ifc2x3Package.IFC_BLOCK:
-			return (EObject) createIfcBlock();
+			return createIfcBlock();
 		case Ifc2x3Package.IFC_BOILER_TYPE:
-			return (EObject) createIfcBoilerType();
+			return createIfcBoilerType();
 		case Ifc2x3Package.IFC_BOOLEAN_CLIPPING_RESULT:
-			return (EObject) createIfcBooleanClippingResult();
+			return createIfcBooleanClippingResult();
 		case Ifc2x3Package.IFC_BOOLEAN_RESULT:
-			return (EObject) createIfcBooleanResult();
+			return createIfcBooleanResult();
 		case Ifc2x3Package.IFC_BOUNDARY_CONDITION:
-			return (EObject) createIfcBoundaryCondition();
+			return createIfcBoundaryCondition();
 		case Ifc2x3Package.IFC_BOUNDARY_EDGE_CONDITION:
-			return (EObject) createIfcBoundaryEdgeCondition();
+			return createIfcBoundaryEdgeCondition();
 		case Ifc2x3Package.IFC_BOUNDARY_FACE_CONDITION:
-			return (EObject) createIfcBoundaryFaceCondition();
+			return createIfcBoundaryFaceCondition();
 		case Ifc2x3Package.IFC_BOUNDARY_NODE_CONDITION:
-			return (EObject) createIfcBoundaryNodeCondition();
+			return createIfcBoundaryNodeCondition();
 		case Ifc2x3Package.IFC_BOUNDARY_NODE_CONDITION_WARPING:
-			return (EObject) createIfcBoundaryNodeConditionWarping();
+			return createIfcBoundaryNodeConditionWarping();
 		case Ifc2x3Package.IFC_BOUNDED_CURVE:
-			return (EObject) createIfcBoundedCurve();
+			return createIfcBoundedCurve();
 		case Ifc2x3Package.IFC_BOUNDED_SURFACE:
-			return (EObject) createIfcBoundedSurface();
+			return createIfcBoundedSurface();
 		case Ifc2x3Package.IFC_BOUNDING_BOX:
-			return (EObject) createIfcBoundingBox();
+			return createIfcBoundingBox();
 		case Ifc2x3Package.IFC_BOXED_HALF_SPACE:
-			return (EObject) createIfcBoxedHalfSpace();
+			return createIfcBoxedHalfSpace();
 		case Ifc2x3Package.IFC_BUILDING:
-			return (EObject) createIfcBuilding();
+			return createIfcBuilding();
 		case Ifc2x3Package.IFC_BUILDING_ELEMENT:
-			return (EObject) createIfcBuildingElement();
+			return createIfcBuildingElement();
 		case Ifc2x3Package.IFC_BUILDING_ELEMENT_COMPONENT:
-			return (EObject) createIfcBuildingElementComponent();
+			return createIfcBuildingElementComponent();
 		case Ifc2x3Package.IFC_BUILDING_ELEMENT_PART:
-			return (EObject) createIfcBuildingElementPart();
+			return createIfcBuildingElementPart();
 		case Ifc2x3Package.IFC_BUILDING_ELEMENT_PROXY:
-			return (EObject) createIfcBuildingElementProxy();
+			return createIfcBuildingElementProxy();
 		case Ifc2x3Package.IFC_BUILDING_ELEMENT_PROXY_TYPE:
-			return (EObject) createIfcBuildingElementProxyType();
+			return createIfcBuildingElementProxyType();
 		case Ifc2x3Package.IFC_BUILDING_ELEMENT_TYPE:
-			return (EObject) createIfcBuildingElementType();
+			return createIfcBuildingElementType();
 		case Ifc2x3Package.IFC_BUILDING_STOREY:
-			return (EObject) createIfcBuildingStorey();
+			return createIfcBuildingStorey();
 		case Ifc2x3Package.IFC_CSHAPE_PROFILE_DEF:
-			return (EObject) createIfcCShapeProfileDef();
+			return createIfcCShapeProfileDef();
 		case Ifc2x3Package.IFC_CABLE_CARRIER_FITTING_TYPE:
-			return (EObject) createIfcCableCarrierFittingType();
+			return createIfcCableCarrierFittingType();
 		case Ifc2x3Package.IFC_CABLE_CARRIER_SEGMENT_TYPE:
-			return (EObject) createIfcCableCarrierSegmentType();
+			return createIfcCableCarrierSegmentType();
 		case Ifc2x3Package.IFC_CABLE_SEGMENT_TYPE:
-			return (EObject) createIfcCableSegmentType();
+			return createIfcCableSegmentType();
 		case Ifc2x3Package.IFC_CALENDAR_DATE:
-			return (EObject) createIfcCalendarDate();
+			return createIfcCalendarDate();
 		case Ifc2x3Package.IFC_CARTESIAN_POINT:
-			return (EObject) createIfcCartesianPoint();
+			return createIfcCartesianPoint();
 		case Ifc2x3Package.IFC_CARTESIAN_TRANSFORMATION_OPERATOR:
-			return (EObject) createIfcCartesianTransformationOperator();
+			return createIfcCartesianTransformationOperator();
 		case Ifc2x3Package.IFC_CARTESIAN_TRANSFORMATION_OPERATOR2_D:
-			return (EObject) createIfcCartesianTransformationOperator2D();
+			return createIfcCartesianTransformationOperator2D();
 		case Ifc2x3Package.IFC_CARTESIAN_TRANSFORMATION_OPERATOR2_DNON_UNIFORM:
-			return (EObject) createIfcCartesianTransformationOperator2DnonUniform();
+			return createIfcCartesianTransformationOperator2DnonUniform();
 		case Ifc2x3Package.IFC_CARTESIAN_TRANSFORMATION_OPERATOR3_D:
-			return (EObject) createIfcCartesianTransformationOperator3D();
+			return createIfcCartesianTransformationOperator3D();
 		case Ifc2x3Package.IFC_CARTESIAN_TRANSFORMATION_OPERATOR3_DNON_UNIFORM:
-			return (EObject) createIfcCartesianTransformationOperator3DnonUniform();
+			return createIfcCartesianTransformationOperator3DnonUniform();
 		case Ifc2x3Package.IFC_CENTER_LINE_PROFILE_DEF:
-			return (EObject) createIfcCenterLineProfileDef();
+			return createIfcCenterLineProfileDef();
 		case Ifc2x3Package.IFC_CHAMFER_EDGE_FEATURE:
-			return (EObject) createIfcChamferEdgeFeature();
+			return createIfcChamferEdgeFeature();
 		case Ifc2x3Package.IFC_CHILLER_TYPE:
-			return (EObject) createIfcChillerType();
+			return createIfcChillerType();
 		case Ifc2x3Package.IFC_CIRCLE:
-			return (EObject) createIfcCircle();
+			return createIfcCircle();
 		case Ifc2x3Package.IFC_CIRCLE_HOLLOW_PROFILE_DEF:
-			return (EObject) createIfcCircleHollowProfileDef();
+			return createIfcCircleHollowProfileDef();
 		case Ifc2x3Package.IFC_CIRCLE_PROFILE_DEF:
-			return (EObject) createIfcCircleProfileDef();
+			return createIfcCircleProfileDef();
 		case Ifc2x3Package.IFC_CLASSIFICATION:
-			return (EObject) createIfcClassification();
+			return createIfcClassification();
 		case Ifc2x3Package.IFC_CLASSIFICATION_ITEM:
-			return (EObject) createIfcClassificationItem();
+			return createIfcClassificationItem();
 		case Ifc2x3Package.IFC_CLASSIFICATION_ITEM_RELATIONSHIP:
-			return (EObject) createIfcClassificationItemRelationship();
+			return createIfcClassificationItemRelationship();
 		case Ifc2x3Package.IFC_CLASSIFICATION_NOTATION:
-			return (EObject) createIfcClassificationNotation();
+			return createIfcClassificationNotation();
 		case Ifc2x3Package.IFC_CLASSIFICATION_NOTATION_FACET:
-			return (EObject) createIfcClassificationNotationFacet();
+			return createIfcClassificationNotationFacet();
 		case Ifc2x3Package.IFC_CLASSIFICATION_REFERENCE:
-			return (EObject) createIfcClassificationReference();
+			return createIfcClassificationReference();
 		case Ifc2x3Package.IFC_CLOSED_SHELL:
-			return (EObject) createIfcClosedShell();
+			return createIfcClosedShell();
 		case Ifc2x3Package.IFC_COIL_TYPE:
-			return (EObject) createIfcCoilType();
+			return createIfcCoilType();
 		case Ifc2x3Package.IFC_COLOUR_RGB:
-			return (EObject) createIfcColourRgb();
+			return createIfcColourRgb();
 		case Ifc2x3Package.IFC_COLOUR_SPECIFICATION:
-			return (EObject) createIfcColourSpecification();
+			return createIfcColourSpecification();
 		case Ifc2x3Package.IFC_COLUMN:
-			return (EObject) createIfcColumn();
+			return createIfcColumn();
 		case Ifc2x3Package.IFC_COLUMN_TYPE:
-			return (EObject) createIfcColumnType();
+			return createIfcColumnType();
 		case Ifc2x3Package.IFC_COMPLEX_PROPERTY:
-			return (EObject) createIfcComplexProperty();
+			return createIfcComplexProperty();
 		case Ifc2x3Package.IFC_COMPOSITE_CURVE:
-			return (EObject) createIfcCompositeCurve();
+			return createIfcCompositeCurve();
 		case Ifc2x3Package.IFC_COMPOSITE_CURVE_SEGMENT:
-			return (EObject) createIfcCompositeCurveSegment();
+			return createIfcCompositeCurveSegment();
 		case Ifc2x3Package.IFC_COMPOSITE_PROFILE_DEF:
-			return (EObject) createIfcCompositeProfileDef();
+			return createIfcCompositeProfileDef();
 		case Ifc2x3Package.IFC_COMPRESSOR_TYPE:
-			return (EObject) createIfcCompressorType();
+			return createIfcCompressorType();
 		case Ifc2x3Package.IFC_CONDENSER_TYPE:
-			return (EObject) createIfcCondenserType();
+			return createIfcCondenserType();
 		case Ifc2x3Package.IFC_CONDITION:
-			return (EObject) createIfcCondition();
+			return createIfcCondition();
 		case Ifc2x3Package.IFC_CONDITION_CRITERION:
-			return (EObject) createIfcConditionCriterion();
+			return createIfcConditionCriterion();
 		case Ifc2x3Package.IFC_CONIC:
-			return (EObject) createIfcConic();
+			return createIfcConic();
 		case Ifc2x3Package.IFC_CONNECTED_FACE_SET:
-			return (EObject) createIfcConnectedFaceSet();
+			return createIfcConnectedFaceSet();
 		case Ifc2x3Package.IFC_CONNECTION_CURVE_GEOMETRY:
-			return (EObject) createIfcConnectionCurveGeometry();
+			return createIfcConnectionCurveGeometry();
 		case Ifc2x3Package.IFC_CONNECTION_GEOMETRY:
-			return (EObject) createIfcConnectionGeometry();
+			return createIfcConnectionGeometry();
 		case Ifc2x3Package.IFC_CONNECTION_POINT_ECCENTRICITY:
-			return (EObject) createIfcConnectionPointEccentricity();
+			return createIfcConnectionPointEccentricity();
 		case Ifc2x3Package.IFC_CONNECTION_POINT_GEOMETRY:
-			return (EObject) createIfcConnectionPointGeometry();
+			return createIfcConnectionPointGeometry();
 		case Ifc2x3Package.IFC_CONNECTION_PORT_GEOMETRY:
-			return (EObject) createIfcConnectionPortGeometry();
+			return createIfcConnectionPortGeometry();
 		case Ifc2x3Package.IFC_CONNECTION_SURFACE_GEOMETRY:
-			return (EObject) createIfcConnectionSurfaceGeometry();
+			return createIfcConnectionSurfaceGeometry();
 		case Ifc2x3Package.IFC_CONSTRAINT:
-			return (EObject) createIfcConstraint();
+			return createIfcConstraint();
 		case Ifc2x3Package.IFC_CONSTRAINT_AGGREGATION_RELATIONSHIP:
-			return (EObject) createIfcConstraintAggregationRelationship();
+			return createIfcConstraintAggregationRelationship();
 		case Ifc2x3Package.IFC_CONSTRAINT_CLASSIFICATION_RELATIONSHIP:
-			return (EObject) createIfcConstraintClassificationRelationship();
+			return createIfcConstraintClassificationRelationship();
 		case Ifc2x3Package.IFC_CONSTRAINT_RELATIONSHIP:
-			return (EObject) createIfcConstraintRelationship();
+			return createIfcConstraintRelationship();
 		case Ifc2x3Package.IFC_CONSTRUCTION_EQUIPMENT_RESOURCE:
-			return (EObject) createIfcConstructionEquipmentResource();
+			return createIfcConstructionEquipmentResource();
 		case Ifc2x3Package.IFC_CONSTRUCTION_MATERIAL_RESOURCE:
-			return (EObject) createIfcConstructionMaterialResource();
+			return createIfcConstructionMaterialResource();
 		case Ifc2x3Package.IFC_CONSTRUCTION_PRODUCT_RESOURCE:
-			return (EObject) createIfcConstructionProductResource();
+			return createIfcConstructionProductResource();
 		case Ifc2x3Package.IFC_CONSTRUCTION_RESOURCE:
-			return (EObject) createIfcConstructionResource();
+			return createIfcConstructionResource();
 		case Ifc2x3Package.IFC_CONTEXT_DEPENDENT_UNIT:
-			return (EObject) createIfcContextDependentUnit();
+			return createIfcContextDependentUnit();
 		case Ifc2x3Package.IFC_CONTROL:
-			return (EObject) createIfcControl();
+			return createIfcControl();
 		case Ifc2x3Package.IFC_CONTROLLER_TYPE:
-			return (EObject) createIfcControllerType();
+			return createIfcControllerType();
 		case Ifc2x3Package.IFC_CONVERSION_BASED_UNIT:
-			return (EObject) createIfcConversionBasedUnit();
+			return createIfcConversionBasedUnit();
 		case Ifc2x3Package.IFC_COOLED_BEAM_TYPE:
-			return (EObject) createIfcCooledBeamType();
+			return createIfcCooledBeamType();
 		case Ifc2x3Package.IFC_COOLING_TOWER_TYPE:
-			return (EObject) createIfcCoolingTowerType();
+			return createIfcCoolingTowerType();
 		case Ifc2x3Package.IFC_COORDINATED_UNIVERSAL_TIME_OFFSET:
-			return (EObject) createIfcCoordinatedUniversalTimeOffset();
+			return createIfcCoordinatedUniversalTimeOffset();
 		case Ifc2x3Package.IFC_COST_ITEM:
-			return (EObject) createIfcCostItem();
+			return createIfcCostItem();
 		case Ifc2x3Package.IFC_COST_SCHEDULE:
-			return (EObject) createIfcCostSchedule();
+			return createIfcCostSchedule();
 		case Ifc2x3Package.IFC_COST_VALUE:
-			return (EObject) createIfcCostValue();
+			return createIfcCostValue();
 		case Ifc2x3Package.IFC_COVERING:
-			return (EObject) createIfcCovering();
+			return createIfcCovering();
 		case Ifc2x3Package.IFC_COVERING_TYPE:
-			return (EObject) createIfcCoveringType();
+			return createIfcCoveringType();
 		case Ifc2x3Package.IFC_CRANE_RAIL_ASHAPE_PROFILE_DEF:
-			return (EObject) createIfcCraneRailAShapeProfileDef();
+			return createIfcCraneRailAShapeProfileDef();
 		case Ifc2x3Package.IFC_CRANE_RAIL_FSHAPE_PROFILE_DEF:
-			return (EObject) createIfcCraneRailFShapeProfileDef();
+			return createIfcCraneRailFShapeProfileDef();
 		case Ifc2x3Package.IFC_CREW_RESOURCE:
-			return (EObject) createIfcCrewResource();
+			return createIfcCrewResource();
 		case Ifc2x3Package.IFC_CSG_PRIMITIVE3_D:
-			return (EObject) createIfcCsgPrimitive3D();
+			return createIfcCsgPrimitive3D();
 		case Ifc2x3Package.IFC_CSG_SOLID:
-			return (EObject) createIfcCsgSolid();
+			return createIfcCsgSolid();
 		case Ifc2x3Package.IFC_CURRENCY_RELATIONSHIP:
-			return (EObject) createIfcCurrencyRelationship();
+			return createIfcCurrencyRelationship();
 		case Ifc2x3Package.IFC_CURTAIN_WALL:
-			return (EObject) createIfcCurtainWall();
+			return createIfcCurtainWall();
 		case Ifc2x3Package.IFC_CURTAIN_WALL_TYPE:
-			return (EObject) createIfcCurtainWallType();
+			return createIfcCurtainWallType();
 		case Ifc2x3Package.IFC_CURVE:
-			return (EObject) createIfcCurve();
+			return createIfcCurve();
 		case Ifc2x3Package.IFC_CURVE_BOUNDED_PLANE:
-			return (EObject) createIfcCurveBoundedPlane();
+			return createIfcCurveBoundedPlane();
 		case Ifc2x3Package.IFC_CURVE_STYLE:
-			return (EObject) createIfcCurveStyle();
+			return createIfcCurveStyle();
 		case Ifc2x3Package.IFC_CURVE_STYLE_FONT:
-			return (EObject) createIfcCurveStyleFont();
+			return createIfcCurveStyleFont();
 		case Ifc2x3Package.IFC_CURVE_STYLE_FONT_AND_SCALING:
-			return (EObject) createIfcCurveStyleFontAndScaling();
+			return createIfcCurveStyleFontAndScaling();
 		case Ifc2x3Package.IFC_CURVE_STYLE_FONT_PATTERN:
-			return (EObject) createIfcCurveStyleFontPattern();
+			return createIfcCurveStyleFontPattern();
 		case Ifc2x3Package.IFC_DAMPER_TYPE:
-			return (EObject) createIfcDamperType();
+			return createIfcDamperType();
 		case Ifc2x3Package.IFC_DATE_AND_TIME:
-			return (EObject) createIfcDateAndTime();
+			return createIfcDateAndTime();
 		case Ifc2x3Package.IFC_DEFINED_SYMBOL:
-			return (EObject) createIfcDefinedSymbol();
+			return createIfcDefinedSymbol();
 		case Ifc2x3Package.IFC_DERIVED_PROFILE_DEF:
-			return (EObject) createIfcDerivedProfileDef();
+			return createIfcDerivedProfileDef();
 		case Ifc2x3Package.IFC_DERIVED_UNIT:
-			return (EObject) createIfcDerivedUnit();
+			return createIfcDerivedUnit();
 		case Ifc2x3Package.IFC_DERIVED_UNIT_ELEMENT:
-			return (EObject) createIfcDerivedUnitElement();
+			return createIfcDerivedUnitElement();
 		case Ifc2x3Package.IFC_DIAMETER_DIMENSION:
-			return (EObject) createIfcDiameterDimension();
+			return createIfcDiameterDimension();
 		case Ifc2x3Package.IFC_DIMENSION_CALLOUT_RELATIONSHIP:
-			return (EObject) createIfcDimensionCalloutRelationship();
+			return createIfcDimensionCalloutRelationship();
 		case Ifc2x3Package.IFC_DIMENSION_CURVE:
-			return (EObject) createIfcDimensionCurve();
+			return createIfcDimensionCurve();
 		case Ifc2x3Package.IFC_DIMENSION_CURVE_DIRECTED_CALLOUT:
-			return (EObject) createIfcDimensionCurveDirectedCallout();
+			return createIfcDimensionCurveDirectedCallout();
 		case Ifc2x3Package.IFC_DIMENSION_CURVE_TERMINATOR:
-			return (EObject) createIfcDimensionCurveTerminator();
+			return createIfcDimensionCurveTerminator();
 		case Ifc2x3Package.IFC_DIMENSION_PAIR:
-			return (EObject) createIfcDimensionPair();
+			return createIfcDimensionPair();
 		case Ifc2x3Package.IFC_DIMENSIONAL_EXPONENTS:
-			return (EObject) createIfcDimensionalExponents();
+			return createIfcDimensionalExponents();
 		case Ifc2x3Package.IFC_DIRECTION:
-			return (EObject) createIfcDirection();
+			return createIfcDirection();
 		case Ifc2x3Package.IFC_DISCRETE_ACCESSORY:
-			return (EObject) createIfcDiscreteAccessory();
+			return createIfcDiscreteAccessory();
 		case Ifc2x3Package.IFC_DISCRETE_ACCESSORY_TYPE:
-			return (EObject) createIfcDiscreteAccessoryType();
+			return createIfcDiscreteAccessoryType();
 		case Ifc2x3Package.IFC_DISTRIBUTION_CHAMBER_ELEMENT:
-			return (EObject) createIfcDistributionChamberElement();
+			return createIfcDistributionChamberElement();
 		case Ifc2x3Package.IFC_DISTRIBUTION_CHAMBER_ELEMENT_TYPE:
-			return (EObject) createIfcDistributionChamberElementType();
+			return createIfcDistributionChamberElementType();
 		case Ifc2x3Package.IFC_DISTRIBUTION_CONTROL_ELEMENT:
-			return (EObject) createIfcDistributionControlElement();
+			return createIfcDistributionControlElement();
 		case Ifc2x3Package.IFC_DISTRIBUTION_CONTROL_ELEMENT_TYPE:
-			return (EObject) createIfcDistributionControlElementType();
+			return createIfcDistributionControlElementType();
 		case Ifc2x3Package.IFC_DISTRIBUTION_ELEMENT:
-			return (EObject) createIfcDistributionElement();
+			return createIfcDistributionElement();
 		case Ifc2x3Package.IFC_DISTRIBUTION_ELEMENT_TYPE:
-			return (EObject) createIfcDistributionElementType();
+			return createIfcDistributionElementType();
 		case Ifc2x3Package.IFC_DISTRIBUTION_FLOW_ELEMENT:
-			return (EObject) createIfcDistributionFlowElement();
+			return createIfcDistributionFlowElement();
 		case Ifc2x3Package.IFC_DISTRIBUTION_FLOW_ELEMENT_TYPE:
-			return (EObject) createIfcDistributionFlowElementType();
+			return createIfcDistributionFlowElementType();
 		case Ifc2x3Package.IFC_DISTRIBUTION_PORT:
-			return (EObject) createIfcDistributionPort();
+			return createIfcDistributionPort();
 		case Ifc2x3Package.IFC_DOCUMENT_ELECTRONIC_FORMAT:
-			return (EObject) createIfcDocumentElectronicFormat();
+			return createIfcDocumentElectronicFormat();
 		case Ifc2x3Package.IFC_DOCUMENT_INFORMATION:
-			return (EObject) createIfcDocumentInformation();
+			return createIfcDocumentInformation();
 		case Ifc2x3Package.IFC_DOCUMENT_INFORMATION_RELATIONSHIP:
-			return (EObject) createIfcDocumentInformationRelationship();
+			return createIfcDocumentInformationRelationship();
 		case Ifc2x3Package.IFC_DOCUMENT_REFERENCE:
-			return (EObject) createIfcDocumentReference();
+			return createIfcDocumentReference();
 		case Ifc2x3Package.IFC_DOOR:
-			return (EObject) createIfcDoor();
+			return createIfcDoor();
 		case Ifc2x3Package.IFC_DOOR_LINING_PROPERTIES:
-			return (EObject) createIfcDoorLiningProperties();
+			return createIfcDoorLiningProperties();
 		case Ifc2x3Package.IFC_DOOR_PANEL_PROPERTIES:
-			return (EObject) createIfcDoorPanelProperties();
+			return createIfcDoorPanelProperties();
 		case Ifc2x3Package.IFC_DOOR_STYLE:
-			return (EObject) createIfcDoorStyle();
+			return createIfcDoorStyle();
 		case Ifc2x3Package.IFC_DRAUGHTING_CALLOUT:
-			return (EObject) createIfcDraughtingCallout();
+			return createIfcDraughtingCallout();
 		case Ifc2x3Package.IFC_DRAUGHTING_CALLOUT_RELATIONSHIP:
-			return (EObject) createIfcDraughtingCalloutRelationship();
+			return createIfcDraughtingCalloutRelationship();
 		case Ifc2x3Package.IFC_DRAUGHTING_PRE_DEFINED_COLOUR:
-			return (EObject) createIfcDraughtingPreDefinedColour();
+			return createIfcDraughtingPreDefinedColour();
 		case Ifc2x3Package.IFC_DRAUGHTING_PRE_DEFINED_CURVE_FONT:
-			return (EObject) createIfcDraughtingPreDefinedCurveFont();
+			return createIfcDraughtingPreDefinedCurveFont();
 		case Ifc2x3Package.IFC_DRAUGHTING_PRE_DEFINED_TEXT_FONT:
-			return (EObject) createIfcDraughtingPreDefinedTextFont();
+			return createIfcDraughtingPreDefinedTextFont();
 		case Ifc2x3Package.IFC_DUCT_FITTING_TYPE:
-			return (EObject) createIfcDuctFittingType();
+			return createIfcDuctFittingType();
 		case Ifc2x3Package.IFC_DUCT_SEGMENT_TYPE:
-			return (EObject) createIfcDuctSegmentType();
+			return createIfcDuctSegmentType();
 		case Ifc2x3Package.IFC_DUCT_SILENCER_TYPE:
-			return (EObject) createIfcDuctSilencerType();
+			return createIfcDuctSilencerType();
 		case Ifc2x3Package.IFC_EDGE:
-			return (EObject) createIfcEdge();
+			return createIfcEdge();
 		case Ifc2x3Package.IFC_EDGE_CURVE:
-			return (EObject) createIfcEdgeCurve();
+			return createIfcEdgeCurve();
 		case Ifc2x3Package.IFC_EDGE_FEATURE:
-			return (EObject) createIfcEdgeFeature();
+			return createIfcEdgeFeature();
 		case Ifc2x3Package.IFC_EDGE_LOOP:
-			return (EObject) createIfcEdgeLoop();
+			return createIfcEdgeLoop();
 		case Ifc2x3Package.IFC_ELECTRIC_APPLIANCE_TYPE:
-			return (EObject) createIfcElectricApplianceType();
+			return createIfcElectricApplianceType();
 		case Ifc2x3Package.IFC_ELECTRIC_DISTRIBUTION_POINT:
-			return (EObject) createIfcElectricDistributionPoint();
+			return createIfcElectricDistributionPoint();
 		case Ifc2x3Package.IFC_ELECTRIC_FLOW_STORAGE_DEVICE_TYPE:
-			return (EObject) createIfcElectricFlowStorageDeviceType();
+			return createIfcElectricFlowStorageDeviceType();
 		case Ifc2x3Package.IFC_ELECTRIC_GENERATOR_TYPE:
-			return (EObject) createIfcElectricGeneratorType();
+			return createIfcElectricGeneratorType();
 		case Ifc2x3Package.IFC_ELECTRIC_HEATER_TYPE:
-			return (EObject) createIfcElectricHeaterType();
+			return createIfcElectricHeaterType();
 		case Ifc2x3Package.IFC_ELECTRIC_MOTOR_TYPE:
-			return (EObject) createIfcElectricMotorType();
+			return createIfcElectricMotorType();
 		case Ifc2x3Package.IFC_ELECTRIC_TIME_CONTROL_TYPE:
-			return (EObject) createIfcElectricTimeControlType();
+			return createIfcElectricTimeControlType();
 		case Ifc2x3Package.IFC_ELECTRICAL_BASE_PROPERTIES:
-			return (EObject) createIfcElectricalBaseProperties();
+			return createIfcElectricalBaseProperties();
 		case Ifc2x3Package.IFC_ELECTRICAL_CIRCUIT:
-			return (EObject) createIfcElectricalCircuit();
+			return createIfcElectricalCircuit();
 		case Ifc2x3Package.IFC_ELECTRICAL_ELEMENT:
-			return (EObject) createIfcElectricalElement();
+			return createIfcElectricalElement();
 		case Ifc2x3Package.IFC_ELEMENT:
-			return (EObject) createIfcElement();
+			return createIfcElement();
 		case Ifc2x3Package.IFC_ELEMENT_ASSEMBLY:
-			return (EObject) createIfcElementAssembly();
+			return createIfcElementAssembly();
 		case Ifc2x3Package.IFC_ELEMENT_COMPONENT:
-			return (EObject) createIfcElementComponent();
+			return createIfcElementComponent();
 		case Ifc2x3Package.IFC_ELEMENT_COMPONENT_TYPE:
-			return (EObject) createIfcElementComponentType();
+			return createIfcElementComponentType();
 		case Ifc2x3Package.IFC_ELEMENT_QUANTITY:
-			return (EObject) createIfcElementQuantity();
+			return createIfcElementQuantity();
 		case Ifc2x3Package.IFC_ELEMENT_TYPE:
-			return (EObject) createIfcElementType();
+			return createIfcElementType();
 		case Ifc2x3Package.IFC_ELEMENTARY_SURFACE:
-			return (EObject) createIfcElementarySurface();
+			return createIfcElementarySurface();
 		case Ifc2x3Package.IFC_ELLIPSE:
-			return (EObject) createIfcEllipse();
+			return createIfcEllipse();
 		case Ifc2x3Package.IFC_ELLIPSE_PROFILE_DEF:
-			return (EObject) createIfcEllipseProfileDef();
+			return createIfcEllipseProfileDef();
 		case Ifc2x3Package.IFC_ENERGY_CONVERSION_DEVICE:
-			return (EObject) createIfcEnergyConversionDevice();
+			return createIfcEnergyConversionDevice();
 		case Ifc2x3Package.IFC_ENERGY_CONVERSION_DEVICE_TYPE:
-			return (EObject) createIfcEnergyConversionDeviceType();
+			return createIfcEnergyConversionDeviceType();
 		case Ifc2x3Package.IFC_ENERGY_PROPERTIES:
-			return (EObject) createIfcEnergyProperties();
+			return createIfcEnergyProperties();
 		case Ifc2x3Package.IFC_ENVIRONMENTAL_IMPACT_VALUE:
-			return (EObject) createIfcEnvironmentalImpactValue();
+			return createIfcEnvironmentalImpactValue();
 		case Ifc2x3Package.IFC_EQUIPMENT_ELEMENT:
-			return (EObject) createIfcEquipmentElement();
+			return createIfcEquipmentElement();
 		case Ifc2x3Package.IFC_EQUIPMENT_STANDARD:
-			return (EObject) createIfcEquipmentStandard();
+			return createIfcEquipmentStandard();
 		case Ifc2x3Package.IFC_EVAPORATIVE_COOLER_TYPE:
-			return (EObject) createIfcEvaporativeCoolerType();
+			return createIfcEvaporativeCoolerType();
 		case Ifc2x3Package.IFC_EVAPORATOR_TYPE:
-			return (EObject) createIfcEvaporatorType();
+			return createIfcEvaporatorType();
 		case Ifc2x3Package.IFC_EXTENDED_MATERIAL_PROPERTIES:
-			return (EObject) createIfcExtendedMaterialProperties();
+			return createIfcExtendedMaterialProperties();
 		case Ifc2x3Package.IFC_EXTERNAL_REFERENCE:
-			return (EObject) createIfcExternalReference();
+			return createIfcExternalReference();
 		case Ifc2x3Package.IFC_EXTERNALLY_DEFINED_HATCH_STYLE:
-			return (EObject) createIfcExternallyDefinedHatchStyle();
+			return createIfcExternallyDefinedHatchStyle();
 		case Ifc2x3Package.IFC_EXTERNALLY_DEFINED_SURFACE_STYLE:
-			return (EObject) createIfcExternallyDefinedSurfaceStyle();
+			return createIfcExternallyDefinedSurfaceStyle();
 		case Ifc2x3Package.IFC_EXTERNALLY_DEFINED_SYMBOL:
-			return (EObject) createIfcExternallyDefinedSymbol();
+			return createIfcExternallyDefinedSymbol();
 		case Ifc2x3Package.IFC_EXTERNALLY_DEFINED_TEXT_FONT:
-			return (EObject) createIfcExternallyDefinedTextFont();
+			return createIfcExternallyDefinedTextFont();
 		case Ifc2x3Package.IFC_EXTRUDED_AREA_SOLID:
-			return (EObject) createIfcExtrudedAreaSolid();
+			return createIfcExtrudedAreaSolid();
 		case Ifc2x3Package.IFC_FACE:
-			return (EObject) createIfcFace();
+			return createIfcFace();
 		case Ifc2x3Package.IFC_FACE_BASED_SURFACE_MODEL:
-			return (EObject) createIfcFaceBasedSurfaceModel();
+			return createIfcFaceBasedSurfaceModel();
 		case Ifc2x3Package.IFC_FACE_BOUND:
-			return (EObject) createIfcFaceBound();
+			return createIfcFaceBound();
 		case Ifc2x3Package.IFC_FACE_OUTER_BOUND:
-			return (EObject) createIfcFaceOuterBound();
+			return createIfcFaceOuterBound();
 		case Ifc2x3Package.IFC_FACE_SURFACE:
-			return (EObject) createIfcFaceSurface();
+			return createIfcFaceSurface();
 		case Ifc2x3Package.IFC_FACETED_BREP:
-			return (EObject) createIfcFacetedBrep();
+			return createIfcFacetedBrep();
 		case Ifc2x3Package.IFC_FACETED_BREP_WITH_VOIDS:
-			return (EObject) createIfcFacetedBrepWithVoids();
+			return createIfcFacetedBrepWithVoids();
 		case Ifc2x3Package.IFC_FAILURE_CONNECTION_CONDITION:
-			return (EObject) createIfcFailureConnectionCondition();
+			return createIfcFailureConnectionCondition();
 		case Ifc2x3Package.IFC_FAN_TYPE:
-			return (EObject) createIfcFanType();
+			return createIfcFanType();
 		case Ifc2x3Package.IFC_FASTENER:
-			return (EObject) createIfcFastener();
+			return createIfcFastener();
 		case Ifc2x3Package.IFC_FASTENER_TYPE:
-			return (EObject) createIfcFastenerType();
+			return createIfcFastenerType();
 		case Ifc2x3Package.IFC_FEATURE_ELEMENT:
-			return (EObject) createIfcFeatureElement();
+			return createIfcFeatureElement();
 		case Ifc2x3Package.IFC_FEATURE_ELEMENT_ADDITION:
-			return (EObject) createIfcFeatureElementAddition();
+			return createIfcFeatureElementAddition();
 		case Ifc2x3Package.IFC_FEATURE_ELEMENT_SUBTRACTION:
-			return (EObject) createIfcFeatureElementSubtraction();
+			return createIfcFeatureElementSubtraction();
 		case Ifc2x3Package.IFC_FILL_AREA_STYLE:
-			return (EObject) createIfcFillAreaStyle();
+			return createIfcFillAreaStyle();
 		case Ifc2x3Package.IFC_FILL_AREA_STYLE_HATCHING:
-			return (EObject) createIfcFillAreaStyleHatching();
+			return createIfcFillAreaStyleHatching();
 		case Ifc2x3Package.IFC_FILL_AREA_STYLE_TILE_SYMBOL_WITH_STYLE:
-			return (EObject) createIfcFillAreaStyleTileSymbolWithStyle();
+			return createIfcFillAreaStyleTileSymbolWithStyle();
 		case Ifc2x3Package.IFC_FILL_AREA_STYLE_TILES:
-			return (EObject) createIfcFillAreaStyleTiles();
+			return createIfcFillAreaStyleTiles();
 		case Ifc2x3Package.IFC_FILTER_TYPE:
-			return (EObject) createIfcFilterType();
+			return createIfcFilterType();
 		case Ifc2x3Package.IFC_FIRE_SUPPRESSION_TERMINAL_TYPE:
-			return (EObject) createIfcFireSuppressionTerminalType();
+			return createIfcFireSuppressionTerminalType();
 		case Ifc2x3Package.IFC_FLOW_CONTROLLER:
-			return (EObject) createIfcFlowController();
+			return createIfcFlowController();
 		case Ifc2x3Package.IFC_FLOW_CONTROLLER_TYPE:
-			return (EObject) createIfcFlowControllerType();
+			return createIfcFlowControllerType();
 		case Ifc2x3Package.IFC_FLOW_FITTING:
-			return (EObject) createIfcFlowFitting();
+			return createIfcFlowFitting();
 		case Ifc2x3Package.IFC_FLOW_FITTING_TYPE:
-			return (EObject) createIfcFlowFittingType();
+			return createIfcFlowFittingType();
 		case Ifc2x3Package.IFC_FLOW_INSTRUMENT_TYPE:
-			return (EObject) createIfcFlowInstrumentType();
+			return createIfcFlowInstrumentType();
 		case Ifc2x3Package.IFC_FLOW_METER_TYPE:
-			return (EObject) createIfcFlowMeterType();
+			return createIfcFlowMeterType();
 		case Ifc2x3Package.IFC_FLOW_MOVING_DEVICE:
-			return (EObject) createIfcFlowMovingDevice();
+			return createIfcFlowMovingDevice();
 		case Ifc2x3Package.IFC_FLOW_MOVING_DEVICE_TYPE:
-			return (EObject) createIfcFlowMovingDeviceType();
+			return createIfcFlowMovingDeviceType();
 		case Ifc2x3Package.IFC_FLOW_SEGMENT:
-			return (EObject) createIfcFlowSegment();
+			return createIfcFlowSegment();
 		case Ifc2x3Package.IFC_FLOW_SEGMENT_TYPE:
-			return (EObject) createIfcFlowSegmentType();
+			return createIfcFlowSegmentType();
 		case Ifc2x3Package.IFC_FLOW_STORAGE_DEVICE:
-			return (EObject) createIfcFlowStorageDevice();
+			return createIfcFlowStorageDevice();
 		case Ifc2x3Package.IFC_FLOW_STORAGE_DEVICE_TYPE:
-			return (EObject) createIfcFlowStorageDeviceType();
+			return createIfcFlowStorageDeviceType();
 		case Ifc2x3Package.IFC_FLOW_TERMINAL:
-			return (EObject) createIfcFlowTerminal();
+			return createIfcFlowTerminal();
 		case Ifc2x3Package.IFC_FLOW_TERMINAL_TYPE:
-			return (EObject) createIfcFlowTerminalType();
+			return createIfcFlowTerminalType();
 		case Ifc2x3Package.IFC_FLOW_TREATMENT_DEVICE:
-			return (EObject) createIfcFlowTreatmentDevice();
+			return createIfcFlowTreatmentDevice();
 		case Ifc2x3Package.IFC_FLOW_TREATMENT_DEVICE_TYPE:
-			return (EObject) createIfcFlowTreatmentDeviceType();
+			return createIfcFlowTreatmentDeviceType();
 		case Ifc2x3Package.IFC_FLUID_FLOW_PROPERTIES:
-			return (EObject) createIfcFluidFlowProperties();
+			return createIfcFluidFlowProperties();
 		case Ifc2x3Package.IFC_FOOTING:
-			return (EObject) createIfcFooting();
+			return createIfcFooting();
 		case Ifc2x3Package.IFC_FUEL_PROPERTIES:
-			return (EObject) createIfcFuelProperties();
+			return createIfcFuelProperties();
 		case Ifc2x3Package.IFC_FURNISHING_ELEMENT:
-			return (EObject) createIfcFurnishingElement();
+			return createIfcFurnishingElement();
 		case Ifc2x3Package.IFC_FURNISHING_ELEMENT_TYPE:
-			return (EObject) createIfcFurnishingElementType();
+			return createIfcFurnishingElementType();
 		case Ifc2x3Package.IFC_FURNITURE_STANDARD:
-			return (EObject) createIfcFurnitureStandard();
+			return createIfcFurnitureStandard();
 		case Ifc2x3Package.IFC_FURNITURE_TYPE:
-			return (EObject) createIfcFurnitureType();
+			return createIfcFurnitureType();
 		case Ifc2x3Package.IFC_GAS_TERMINAL_TYPE:
-			return (EObject) createIfcGasTerminalType();
+			return createIfcGasTerminalType();
 		case Ifc2x3Package.IFC_GENERAL_MATERIAL_PROPERTIES:
-			return (EObject) createIfcGeneralMaterialProperties();
+			return createIfcGeneralMaterialProperties();
 		case Ifc2x3Package.IFC_GENERAL_PROFILE_PROPERTIES:
-			return (EObject) createIfcGeneralProfileProperties();
+			return createIfcGeneralProfileProperties();
 		case Ifc2x3Package.IFC_GEOMETRIC_CURVE_SET:
-			return (EObject) createIfcGeometricCurveSet();
+			return createIfcGeometricCurveSet();
 		case Ifc2x3Package.IFC_GEOMETRIC_REPRESENTATION_CONTEXT:
-			return (EObject) createIfcGeometricRepresentationContext();
+			return createIfcGeometricRepresentationContext();
 		case Ifc2x3Package.IFC_GEOMETRIC_REPRESENTATION_ITEM:
-			return (EObject) createIfcGeometricRepresentationItem();
+			return createIfcGeometricRepresentationItem();
 		case Ifc2x3Package.IFC_GEOMETRIC_REPRESENTATION_SUB_CONTEXT:
-			return (EObject) createIfcGeometricRepresentationSubContext();
+			return createIfcGeometricRepresentationSubContext();
 		case Ifc2x3Package.IFC_GEOMETRIC_SET:
-			return (EObject) createIfcGeometricSet();
+			return createIfcGeometricSet();
 		case Ifc2x3Package.IFC_GRID:
-			return (EObject) createIfcGrid();
+			return createIfcGrid();
 		case Ifc2x3Package.IFC_GRID_AXIS:
-			return (EObject) createIfcGridAxis();
+			return createIfcGridAxis();
 		case Ifc2x3Package.IFC_GRID_PLACEMENT:
-			return (EObject) createIfcGridPlacement();
+			return createIfcGridPlacement();
 		case Ifc2x3Package.IFC_GROUP:
-			return (EObject) createIfcGroup();
+			return createIfcGroup();
 		case Ifc2x3Package.IFC_HALF_SPACE_SOLID:
-			return (EObject) createIfcHalfSpaceSolid();
+			return createIfcHalfSpaceSolid();
 		case Ifc2x3Package.IFC_HEAT_EXCHANGER_TYPE:
-			return (EObject) createIfcHeatExchangerType();
+			return createIfcHeatExchangerType();
 		case Ifc2x3Package.IFC_HUMIDIFIER_TYPE:
-			return (EObject) createIfcHumidifierType();
+			return createIfcHumidifierType();
 		case Ifc2x3Package.IFC_HYGROSCOPIC_MATERIAL_PROPERTIES:
-			return (EObject) createIfcHygroscopicMaterialProperties();
+			return createIfcHygroscopicMaterialProperties();
 		case Ifc2x3Package.IFC_ISHAPE_PROFILE_DEF:
-			return (EObject) createIfcIShapeProfileDef();
+			return createIfcIShapeProfileDef();
 		case Ifc2x3Package.IFC_IMAGE_TEXTURE:
-			return (EObject) createIfcImageTexture();
+			return createIfcImageTexture();
 		case Ifc2x3Package.IFC_INVENTORY:
-			return (EObject) createIfcInventory();
+			return createIfcInventory();
 		case Ifc2x3Package.IFC_IRREGULAR_TIME_SERIES:
-			return (EObject) createIfcIrregularTimeSeries();
+			return createIfcIrregularTimeSeries();
 		case Ifc2x3Package.IFC_IRREGULAR_TIME_SERIES_VALUE:
-			return (EObject) createIfcIrregularTimeSeriesValue();
+			return createIfcIrregularTimeSeriesValue();
 		case Ifc2x3Package.IFC_JUNCTION_BOX_TYPE:
-			return (EObject) createIfcJunctionBoxType();
+			return createIfcJunctionBoxType();
 		case Ifc2x3Package.IFC_LSHAPE_PROFILE_DEF:
-			return (EObject) createIfcLShapeProfileDef();
+			return createIfcLShapeProfileDef();
 		case Ifc2x3Package.IFC_LABOR_RESOURCE:
-			return (EObject) createIfcLaborResource();
+			return createIfcLaborResource();
 		case Ifc2x3Package.IFC_LAMP_TYPE:
-			return (EObject) createIfcLampType();
+			return createIfcLampType();
 		case Ifc2x3Package.IFC_LIBRARY_INFORMATION:
-			return (EObject) createIfcLibraryInformation();
+			return createIfcLibraryInformation();
 		case Ifc2x3Package.IFC_LIBRARY_REFERENCE:
-			return (EObject) createIfcLibraryReference();
+			return createIfcLibraryReference();
 		case Ifc2x3Package.IFC_LIGHT_DISTRIBUTION_DATA:
-			return (EObject) createIfcLightDistributionData();
+			return createIfcLightDistributionData();
 		case Ifc2x3Package.IFC_LIGHT_FIXTURE_TYPE:
-			return (EObject) createIfcLightFixtureType();
+			return createIfcLightFixtureType();
 		case Ifc2x3Package.IFC_LIGHT_INTENSITY_DISTRIBUTION:
-			return (EObject) createIfcLightIntensityDistribution();
+			return createIfcLightIntensityDistribution();
 		case Ifc2x3Package.IFC_LIGHT_SOURCE:
-			return (EObject) createIfcLightSource();
+			return createIfcLightSource();
 		case Ifc2x3Package.IFC_LIGHT_SOURCE_AMBIENT:
-			return (EObject) createIfcLightSourceAmbient();
+			return createIfcLightSourceAmbient();
 		case Ifc2x3Package.IFC_LIGHT_SOURCE_DIRECTIONAL:
-			return (EObject) createIfcLightSourceDirectional();
+			return createIfcLightSourceDirectional();
 		case Ifc2x3Package.IFC_LIGHT_SOURCE_GONIOMETRIC:
-			return (EObject) createIfcLightSourceGoniometric();
+			return createIfcLightSourceGoniometric();
 		case Ifc2x3Package.IFC_LIGHT_SOURCE_POSITIONAL:
-			return (EObject) createIfcLightSourcePositional();
+			return createIfcLightSourcePositional();
 		case Ifc2x3Package.IFC_LIGHT_SOURCE_SPOT:
-			return (EObject) createIfcLightSourceSpot();
+			return createIfcLightSourceSpot();
 		case Ifc2x3Package.IFC_LINE:
-			return (EObject) createIfcLine();
+			return createIfcLine();
 		case Ifc2x3Package.IFC_LINEAR_DIMENSION:
-			return (EObject) createIfcLinearDimension();
+			return createIfcLinearDimension();
 		case Ifc2x3Package.IFC_LOCAL_PLACEMENT:
-			return (EObject) createIfcLocalPlacement();
+			return createIfcLocalPlacement();
 		case Ifc2x3Package.IFC_LOCAL_TIME:
-			return (EObject) createIfcLocalTime();
+			return createIfcLocalTime();
 		case Ifc2x3Package.IFC_LOOP:
-			return (EObject) createIfcLoop();
+			return createIfcLoop();
 		case Ifc2x3Package.IFC_MANIFOLD_SOLID_BREP:
-			return (EObject) createIfcManifoldSolidBrep();
+			return createIfcManifoldSolidBrep();
 		case Ifc2x3Package.IFC_MAPPED_ITEM:
-			return (EObject) createIfcMappedItem();
+			return createIfcMappedItem();
 		case Ifc2x3Package.IFC_MATERIAL:
-			return (EObject) createIfcMaterial();
+			return createIfcMaterial();
 		case Ifc2x3Package.IFC_MATERIAL_CLASSIFICATION_RELATIONSHIP:
-			return (EObject) createIfcMaterialClassificationRelationship();
+			return createIfcMaterialClassificationRelationship();
 		case Ifc2x3Package.IFC_MATERIAL_DEFINITION_REPRESENTATION:
-			return (EObject) createIfcMaterialDefinitionRepresentation();
+			return createIfcMaterialDefinitionRepresentation();
 		case Ifc2x3Package.IFC_MATERIAL_LAYER:
-			return (EObject) createIfcMaterialLayer();
+			return createIfcMaterialLayer();
 		case Ifc2x3Package.IFC_MATERIAL_LAYER_SET:
-			return (EObject) createIfcMaterialLayerSet();
+			return createIfcMaterialLayerSet();
 		case Ifc2x3Package.IFC_MATERIAL_LAYER_SET_USAGE:
-			return (EObject) createIfcMaterialLayerSetUsage();
+			return createIfcMaterialLayerSetUsage();
 		case Ifc2x3Package.IFC_MATERIAL_LIST:
-			return (EObject) createIfcMaterialList();
+			return createIfcMaterialList();
 		case Ifc2x3Package.IFC_MATERIAL_PROPERTIES:
-			return (EObject) createIfcMaterialProperties();
+			return createIfcMaterialProperties();
 		case Ifc2x3Package.IFC_MEASURE_WITH_UNIT:
-			return (EObject) createIfcMeasureWithUnit();
+			return createIfcMeasureWithUnit();
 		case Ifc2x3Package.IFC_MECHANICAL_CONCRETE_MATERIAL_PROPERTIES:
-			return (EObject) createIfcMechanicalConcreteMaterialProperties();
+			return createIfcMechanicalConcreteMaterialProperties();
 		case Ifc2x3Package.IFC_MECHANICAL_FASTENER:
-			return (EObject) createIfcMechanicalFastener();
+			return createIfcMechanicalFastener();
 		case Ifc2x3Package.IFC_MECHANICAL_FASTENER_TYPE:
-			return (EObject) createIfcMechanicalFastenerType();
+			return createIfcMechanicalFastenerType();
 		case Ifc2x3Package.IFC_MECHANICAL_MATERIAL_PROPERTIES:
-			return (EObject) createIfcMechanicalMaterialProperties();
+			return createIfcMechanicalMaterialProperties();
 		case Ifc2x3Package.IFC_MECHANICAL_STEEL_MATERIAL_PROPERTIES:
-			return (EObject) createIfcMechanicalSteelMaterialProperties();
+			return createIfcMechanicalSteelMaterialProperties();
 		case Ifc2x3Package.IFC_MEMBER:
-			return (EObject) createIfcMember();
+			return createIfcMember();
 		case Ifc2x3Package.IFC_MEMBER_TYPE:
-			return (EObject) createIfcMemberType();
+			return createIfcMemberType();
 		case Ifc2x3Package.IFC_METRIC:
-			return (EObject) createIfcMetric();
+			return createIfcMetric();
 		case Ifc2x3Package.IFC_MONETARY_UNIT:
-			return (EObject) createIfcMonetaryUnit();
+			return createIfcMonetaryUnit();
 		case Ifc2x3Package.IFC_MOTOR_CONNECTION_TYPE:
-			return (EObject) createIfcMotorConnectionType();
+			return createIfcMotorConnectionType();
 		case Ifc2x3Package.IFC_MOVE:
-			return (EObject) createIfcMove();
+			return createIfcMove();
 		case Ifc2x3Package.IFC_NAMED_UNIT:
-			return (EObject) createIfcNamedUnit();
+			return createIfcNamedUnit();
 		case Ifc2x3Package.IFC_OBJECT:
-			return (EObject) createIfcObject();
+			return createIfcObject();
 		case Ifc2x3Package.IFC_OBJECT_DEFINITION:
-			return (EObject) createIfcObjectDefinition();
+			return createIfcObjectDefinition();
 		case Ifc2x3Package.IFC_OBJECT_PLACEMENT:
-			return (EObject) createIfcObjectPlacement();
+			return createIfcObjectPlacement();
 		case Ifc2x3Package.IFC_OBJECTIVE:
-			return (EObject) createIfcObjective();
+			return createIfcObjective();
 		case Ifc2x3Package.IFC_OCCUPANT:
-			return (EObject) createIfcOccupant();
+			return createIfcOccupant();
 		case Ifc2x3Package.IFC_OFFSET_CURVE2_D:
-			return (EObject) createIfcOffsetCurve2D();
+			return createIfcOffsetCurve2D();
 		case Ifc2x3Package.IFC_OFFSET_CURVE3_D:
-			return (EObject) createIfcOffsetCurve3D();
+			return createIfcOffsetCurve3D();
 		case Ifc2x3Package.IFC_ONE_DIRECTION_REPEAT_FACTOR:
-			return (EObject) createIfcOneDirectionRepeatFactor();
+			return createIfcOneDirectionRepeatFactor();
 		case Ifc2x3Package.IFC_OPEN_SHELL:
-			return (EObject) createIfcOpenShell();
+			return createIfcOpenShell();
 		case Ifc2x3Package.IFC_OPENING_ELEMENT:
-			return (EObject) createIfcOpeningElement();
+			return createIfcOpeningElement();
 		case Ifc2x3Package.IFC_OPTICAL_MATERIAL_PROPERTIES:
-			return (EObject) createIfcOpticalMaterialProperties();
+			return createIfcOpticalMaterialProperties();
 		case Ifc2x3Package.IFC_ORDER_ACTION:
-			return (EObject) createIfcOrderAction();
+			return createIfcOrderAction();
 		case Ifc2x3Package.IFC_ORGANIZATION:
-			return (EObject) createIfcOrganization();
+			return createIfcOrganization();
 		case Ifc2x3Package.IFC_ORGANIZATION_RELATIONSHIP:
-			return (EObject) createIfcOrganizationRelationship();
+			return createIfcOrganizationRelationship();
 		case Ifc2x3Package.IFC_ORIENTED_EDGE:
-			return (EObject) createIfcOrientedEdge();
+			return createIfcOrientedEdge();
 		case Ifc2x3Package.IFC_OUTLET_TYPE:
-			return (EObject) createIfcOutletType();
+			return createIfcOutletType();
 		case Ifc2x3Package.IFC_OWNER_HISTORY:
-			return (EObject) createIfcOwnerHistory();
+			return createIfcOwnerHistory();
 		case Ifc2x3Package.IFC_PARAMETERIZED_PROFILE_DEF:
-			return (EObject) createIfcParameterizedProfileDef();
+			return createIfcParameterizedProfileDef();
 		case Ifc2x3Package.IFC_PATH:
-			return (EObject) createIfcPath();
+			return createIfcPath();
 		case Ifc2x3Package.IFC_PERFORMANCE_HISTORY:
-			return (EObject) createIfcPerformanceHistory();
+			return createIfcPerformanceHistory();
 		case Ifc2x3Package.IFC_PERMEABLE_COVERING_PROPERTIES:
-			return (EObject) createIfcPermeableCoveringProperties();
+			return createIfcPermeableCoveringProperties();
 		case Ifc2x3Package.IFC_PERMIT:
-			return (EObject) createIfcPermit();
+			return createIfcPermit();
 		case Ifc2x3Package.IFC_PERSON:
-			return (EObject) createIfcPerson();
+			return createIfcPerson();
 		case Ifc2x3Package.IFC_PERSON_AND_ORGANIZATION:
-			return (EObject) createIfcPersonAndOrganization();
+			return createIfcPersonAndOrganization();
 		case Ifc2x3Package.IFC_PHYSICAL_COMPLEX_QUANTITY:
-			return (EObject) createIfcPhysicalComplexQuantity();
+			return createIfcPhysicalComplexQuantity();
 		case Ifc2x3Package.IFC_PHYSICAL_QUANTITY:
-			return (EObject) createIfcPhysicalQuantity();
+			return createIfcPhysicalQuantity();
 		case Ifc2x3Package.IFC_PHYSICAL_SIMPLE_QUANTITY:
-			return (EObject) createIfcPhysicalSimpleQuantity();
+			return createIfcPhysicalSimpleQuantity();
 		case Ifc2x3Package.IFC_PILE:
-			return (EObject) createIfcPile();
+			return createIfcPile();
 		case Ifc2x3Package.IFC_PIPE_FITTING_TYPE:
-			return (EObject) createIfcPipeFittingType();
+			return createIfcPipeFittingType();
 		case Ifc2x3Package.IFC_PIPE_SEGMENT_TYPE:
-			return (EObject) createIfcPipeSegmentType();
+			return createIfcPipeSegmentType();
 		case Ifc2x3Package.IFC_PIXEL_TEXTURE:
-			return (EObject) createIfcPixelTexture();
+			return createIfcPixelTexture();
 		case Ifc2x3Package.IFC_PLACEMENT:
-			return (EObject) createIfcPlacement();
+			return createIfcPlacement();
 		case Ifc2x3Package.IFC_PLANAR_BOX:
-			return (EObject) createIfcPlanarBox();
+			return createIfcPlanarBox();
 		case Ifc2x3Package.IFC_PLANAR_EXTENT:
-			return (EObject) createIfcPlanarExtent();
+			return createIfcPlanarExtent();
 		case Ifc2x3Package.IFC_PLANE:
-			return (EObject) createIfcPlane();
+			return createIfcPlane();
 		case Ifc2x3Package.IFC_PLATE:
-			return (EObject) createIfcPlate();
+			return createIfcPlate();
 		case Ifc2x3Package.IFC_PLATE_TYPE:
-			return (EObject) createIfcPlateType();
+			return createIfcPlateType();
 		case Ifc2x3Package.IFC_POINT:
-			return (EObject) createIfcPoint();
+			return createIfcPoint();
 		case Ifc2x3Package.IFC_POINT_ON_CURVE:
-			return (EObject) createIfcPointOnCurve();
+			return createIfcPointOnCurve();
 		case Ifc2x3Package.IFC_POINT_ON_SURFACE:
-			return (EObject) createIfcPointOnSurface();
+			return createIfcPointOnSurface();
 		case Ifc2x3Package.IFC_POLY_LOOP:
-			return (EObject) createIfcPolyLoop();
+			return createIfcPolyLoop();
 		case Ifc2x3Package.IFC_POLYGONAL_BOUNDED_HALF_SPACE:
-			return (EObject) createIfcPolygonalBoundedHalfSpace();
+			return createIfcPolygonalBoundedHalfSpace();
 		case Ifc2x3Package.IFC_POLYLINE:
-			return (EObject) createIfcPolyline();
+			return createIfcPolyline();
 		case Ifc2x3Package.IFC_PORT:
-			return (EObject) createIfcPort();
+			return createIfcPort();
 		case Ifc2x3Package.IFC_POSTAL_ADDRESS:
-			return (EObject) createIfcPostalAddress();
+			return createIfcPostalAddress();
 		case Ifc2x3Package.IFC_PRE_DEFINED_COLOUR:
-			return (EObject) createIfcPreDefinedColour();
+			return createIfcPreDefinedColour();
 		case Ifc2x3Package.IFC_PRE_DEFINED_CURVE_FONT:
-			return (EObject) createIfcPreDefinedCurveFont();
+			return createIfcPreDefinedCurveFont();
 		case Ifc2x3Package.IFC_PRE_DEFINED_DIMENSION_SYMBOL:
-			return (EObject) createIfcPreDefinedDimensionSymbol();
+			return createIfcPreDefinedDimensionSymbol();
 		case Ifc2x3Package.IFC_PRE_DEFINED_ITEM:
-			return (EObject) createIfcPreDefinedItem();
+			return createIfcPreDefinedItem();
 		case Ifc2x3Package.IFC_PRE_DEFINED_POINT_MARKER_SYMBOL:
-			return (EObject) createIfcPreDefinedPointMarkerSymbol();
+			return createIfcPreDefinedPointMarkerSymbol();
 		case Ifc2x3Package.IFC_PRE_DEFINED_SYMBOL:
-			return (EObject) createIfcPreDefinedSymbol();
+			return createIfcPreDefinedSymbol();
 		case Ifc2x3Package.IFC_PRE_DEFINED_TERMINATOR_SYMBOL:
-			return (EObject) createIfcPreDefinedTerminatorSymbol();
+			return createIfcPreDefinedTerminatorSymbol();
 		case Ifc2x3Package.IFC_PRE_DEFINED_TEXT_FONT:
-			return (EObject) createIfcPreDefinedTextFont();
+			return createIfcPreDefinedTextFont();
 		case Ifc2x3Package.IFC_PRESENTATION_LAYER_ASSIGNMENT:
-			return (EObject) createIfcPresentationLayerAssignment();
+			return createIfcPresentationLayerAssignment();
 		case Ifc2x3Package.IFC_PRESENTATION_LAYER_WITH_STYLE:
-			return (EObject) createIfcPresentationLayerWithStyle();
+			return createIfcPresentationLayerWithStyle();
 		case Ifc2x3Package.IFC_PRESENTATION_STYLE:
-			return (EObject) createIfcPresentationStyle();
+			return createIfcPresentationStyle();
 		case Ifc2x3Package.IFC_PRESENTATION_STYLE_ASSIGNMENT:
-			return (EObject) createIfcPresentationStyleAssignment();
+			return createIfcPresentationStyleAssignment();
 		case Ifc2x3Package.IFC_PROCEDURE:
-			return (EObject) createIfcProcedure();
+			return createIfcProcedure();
 		case Ifc2x3Package.IFC_PROCESS:
-			return (EObject) createIfcProcess();
+			return createIfcProcess();
 		case Ifc2x3Package.IFC_PRODUCT:
-			return (EObject) createIfcProduct();
+			return createIfcProduct();
 		case Ifc2x3Package.IFC_PRODUCT_DEFINITION_SHAPE:
-			return (EObject) createIfcProductDefinitionShape();
+			return createIfcProductDefinitionShape();
 		case Ifc2x3Package.IFC_PRODUCT_REPRESENTATION:
-			return (EObject) createIfcProductRepresentation();
+			return createIfcProductRepresentation();
 		case Ifc2x3Package.IFC_PRODUCTS_OF_COMBUSTION_PROPERTIES:
-			return (EObject) createIfcProductsOfCombustionProperties();
+			return createIfcProductsOfCombustionProperties();
 		case Ifc2x3Package.IFC_PROFILE_DEF:
-			return (EObject) createIfcProfileDef();
+			return createIfcProfileDef();
 		case Ifc2x3Package.IFC_PROFILE_PROPERTIES:
-			return (EObject) createIfcProfileProperties();
+			return createIfcProfileProperties();
 		case Ifc2x3Package.IFC_PROJECT:
-			return (EObject) createIfcProject();
+			return createIfcProject();
 		case Ifc2x3Package.IFC_PROJECT_ORDER:
-			return (EObject) createIfcProjectOrder();
+			return createIfcProjectOrder();
 		case Ifc2x3Package.IFC_PROJECT_ORDER_RECORD:
-			return (EObject) createIfcProjectOrderRecord();
+			return createIfcProjectOrderRecord();
 		case Ifc2x3Package.IFC_PROJECTION_CURVE:
-			return (EObject) createIfcProjectionCurve();
+			return createIfcProjectionCurve();
 		case Ifc2x3Package.IFC_PROJECTION_ELEMENT:
-			return (EObject) createIfcProjectionElement();
+			return createIfcProjectionElement();
 		case Ifc2x3Package.IFC_PROPERTY:
-			return (EObject) createIfcProperty();
+			return createIfcProperty();
 		case Ifc2x3Package.IFC_PROPERTY_BOUNDED_VALUE:
-			return (EObject) createIfcPropertyBoundedValue();
+			return createIfcPropertyBoundedValue();
 		case Ifc2x3Package.IFC_PROPERTY_CONSTRAINT_RELATIONSHIP:
-			return (EObject) createIfcPropertyConstraintRelationship();
+			return createIfcPropertyConstraintRelationship();
 		case Ifc2x3Package.IFC_PROPERTY_DEFINITION:
-			return (EObject) createIfcPropertyDefinition();
+			return createIfcPropertyDefinition();
 		case Ifc2x3Package.IFC_PROPERTY_DEPENDENCY_RELATIONSHIP:
-			return (EObject) createIfcPropertyDependencyRelationship();
+			return createIfcPropertyDependencyRelationship();
 		case Ifc2x3Package.IFC_PROPERTY_ENUMERATED_VALUE:
-			return (EObject) createIfcPropertyEnumeratedValue();
+			return createIfcPropertyEnumeratedValue();
 		case Ifc2x3Package.IFC_PROPERTY_ENUMERATION:
-			return (EObject) createIfcPropertyEnumeration();
+			return createIfcPropertyEnumeration();
 		case Ifc2x3Package.IFC_PROPERTY_LIST_VALUE:
-			return (EObject) createIfcPropertyListValue();
+			return createIfcPropertyListValue();
 		case Ifc2x3Package.IFC_PROPERTY_REFERENCE_VALUE:
-			return (EObject) createIfcPropertyReferenceValue();
+			return createIfcPropertyReferenceValue();
 		case Ifc2x3Package.IFC_PROPERTY_SET:
-			return (EObject) createIfcPropertySet();
+			return createIfcPropertySet();
 		case Ifc2x3Package.IFC_PROPERTY_SET_DEFINITION:
-			return (EObject) createIfcPropertySetDefinition();
+			return createIfcPropertySetDefinition();
 		case Ifc2x3Package.IFC_PROPERTY_SINGLE_VALUE:
-			return (EObject) createIfcPropertySingleValue();
+			return createIfcPropertySingleValue();
 		case Ifc2x3Package.IFC_PROPERTY_TABLE_VALUE:
-			return (EObject) createIfcPropertyTableValue();
+			return createIfcPropertyTableValue();
 		case Ifc2x3Package.IFC_PROTECTIVE_DEVICE_TYPE:
-			return (EObject) createIfcProtectiveDeviceType();
+			return createIfcProtectiveDeviceType();
 		case Ifc2x3Package.IFC_PROXY:
-			return (EObject) createIfcProxy();
+			return createIfcProxy();
 		case Ifc2x3Package.IFC_PUMP_TYPE:
-			return (EObject) createIfcPumpType();
+			return createIfcPumpType();
 		case Ifc2x3Package.IFC_QUANTITY_AREA:
-			return (EObject) createIfcQuantityArea();
+			return createIfcQuantityArea();
 		case Ifc2x3Package.IFC_QUANTITY_COUNT:
-			return (EObject) createIfcQuantityCount();
+			return createIfcQuantityCount();
 		case Ifc2x3Package.IFC_QUANTITY_LENGTH:
-			return (EObject) createIfcQuantityLength();
+			return createIfcQuantityLength();
 		case Ifc2x3Package.IFC_QUANTITY_TIME:
-			return (EObject) createIfcQuantityTime();
+			return createIfcQuantityTime();
 		case Ifc2x3Package.IFC_QUANTITY_VOLUME:
-			return (EObject) createIfcQuantityVolume();
+			return createIfcQuantityVolume();
 		case Ifc2x3Package.IFC_QUANTITY_WEIGHT:
-			return (EObject) createIfcQuantityWeight();
+			return createIfcQuantityWeight();
 		case Ifc2x3Package.IFC_RADIUS_DIMENSION:
-			return (EObject) createIfcRadiusDimension();
+			return createIfcRadiusDimension();
 		case Ifc2x3Package.IFC_RAILING:
-			return (EObject) createIfcRailing();
+			return createIfcRailing();
 		case Ifc2x3Package.IFC_RAILING_TYPE:
-			return (EObject) createIfcRailingType();
+			return createIfcRailingType();
 		case Ifc2x3Package.IFC_RAMP:
-			return (EObject) createIfcRamp();
+			return createIfcRamp();
 		case Ifc2x3Package.IFC_RAMP_FLIGHT:
-			return (EObject) createIfcRampFlight();
+			return createIfcRampFlight();
 		case Ifc2x3Package.IFC_RAMP_FLIGHT_TYPE:
-			return (EObject) createIfcRampFlightType();
+			return createIfcRampFlightType();
 		case Ifc2x3Package.IFC_RATIONAL_BEZIER_CURVE:
-			return (EObject) createIfcRationalBezierCurve();
+			return createIfcRationalBezierCurve();
 		case Ifc2x3Package.IFC_RECTANGLE_HOLLOW_PROFILE_DEF:
-			return (EObject) createIfcRectangleHollowProfileDef();
+			return createIfcRectangleHollowProfileDef();
 		case Ifc2x3Package.IFC_RECTANGLE_PROFILE_DEF:
-			return (EObject) createIfcRectangleProfileDef();
+			return createIfcRectangleProfileDef();
 		case Ifc2x3Package.IFC_RECTANGULAR_PYRAMID:
-			return (EObject) createIfcRectangularPyramid();
+			return createIfcRectangularPyramid();
 		case Ifc2x3Package.IFC_RECTANGULAR_TRIMMED_SURFACE:
-			return (EObject) createIfcRectangularTrimmedSurface();
+			return createIfcRectangularTrimmedSurface();
 		case Ifc2x3Package.IFC_REFERENCES_VALUE_DOCUMENT:
-			return (EObject) createIfcReferencesValueDocument();
+			return createIfcReferencesValueDocument();
 		case Ifc2x3Package.IFC_REGULAR_TIME_SERIES:
-			return (EObject) createIfcRegularTimeSeries();
+			return createIfcRegularTimeSeries();
 		case Ifc2x3Package.IFC_REINFORCEMENT_BAR_PROPERTIES:
-			return (EObject) createIfcReinforcementBarProperties();
+			return createIfcReinforcementBarProperties();
 		case Ifc2x3Package.IFC_REINFORCEMENT_DEFINITION_PROPERTIES:
-			return (EObject) createIfcReinforcementDefinitionProperties();
+			return createIfcReinforcementDefinitionProperties();
 		case Ifc2x3Package.IFC_REINFORCING_BAR:
-			return (EObject) createIfcReinforcingBar();
+			return createIfcReinforcingBar();
 		case Ifc2x3Package.IFC_REINFORCING_ELEMENT:
-			return (EObject) createIfcReinforcingElement();
+			return createIfcReinforcingElement();
 		case Ifc2x3Package.IFC_REINFORCING_MESH:
-			return (EObject) createIfcReinforcingMesh();
+			return createIfcReinforcingMesh();
 		case Ifc2x3Package.IFC_REL_AGGREGATES:
-			return (EObject) createIfcRelAggregates();
+			return createIfcRelAggregates();
 		case Ifc2x3Package.IFC_REL_ASSIGNS:
-			return (EObject) createIfcRelAssigns();
+			return createIfcRelAssigns();
 		case Ifc2x3Package.IFC_REL_ASSIGNS_TASKS:
-			return (EObject) createIfcRelAssignsTasks();
+			return createIfcRelAssignsTasks();
 		case Ifc2x3Package.IFC_REL_ASSIGNS_TO_ACTOR:
-			return (EObject) createIfcRelAssignsToActor();
+			return createIfcRelAssignsToActor();
 		case Ifc2x3Package.IFC_REL_ASSIGNS_TO_CONTROL:
-			return (EObject) createIfcRelAssignsToControl();
+			return createIfcRelAssignsToControl();
 		case Ifc2x3Package.IFC_REL_ASSIGNS_TO_GROUP:
-			return (EObject) createIfcRelAssignsToGroup();
+			return createIfcRelAssignsToGroup();
 		case Ifc2x3Package.IFC_REL_ASSIGNS_TO_PROCESS:
-			return (EObject) createIfcRelAssignsToProcess();
+			return createIfcRelAssignsToProcess();
 		case Ifc2x3Package.IFC_REL_ASSIGNS_TO_PRODUCT:
-			return (EObject) createIfcRelAssignsToProduct();
+			return createIfcRelAssignsToProduct();
 		case Ifc2x3Package.IFC_REL_ASSIGNS_TO_PROJECT_ORDER:
-			return (EObject) createIfcRelAssignsToProjectOrder();
+			return createIfcRelAssignsToProjectOrder();
 		case Ifc2x3Package.IFC_REL_ASSIGNS_TO_RESOURCE:
-			return (EObject) createIfcRelAssignsToResource();
+			return createIfcRelAssignsToResource();
 		case Ifc2x3Package.IFC_REL_ASSOCIATES:
-			return (EObject) createIfcRelAssociates();
+			return createIfcRelAssociates();
 		case Ifc2x3Package.IFC_REL_ASSOCIATES_APPLIED_VALUE:
-			return (EObject) createIfcRelAssociatesAppliedValue();
+			return createIfcRelAssociatesAppliedValue();
 		case Ifc2x3Package.IFC_REL_ASSOCIATES_APPROVAL:
-			return (EObject) createIfcRelAssociatesApproval();
+			return createIfcRelAssociatesApproval();
 		case Ifc2x3Package.IFC_REL_ASSOCIATES_CLASSIFICATION:
-			return (EObject) createIfcRelAssociatesClassification();
+			return createIfcRelAssociatesClassification();
 		case Ifc2x3Package.IFC_REL_ASSOCIATES_CONSTRAINT:
-			return (EObject) createIfcRelAssociatesConstraint();
+			return createIfcRelAssociatesConstraint();
 		case Ifc2x3Package.IFC_REL_ASSOCIATES_DOCUMENT:
-			return (EObject) createIfcRelAssociatesDocument();
+			return createIfcRelAssociatesDocument();
 		case Ifc2x3Package.IFC_REL_ASSOCIATES_LIBRARY:
-			return (EObject) createIfcRelAssociatesLibrary();
+			return createIfcRelAssociatesLibrary();
 		case Ifc2x3Package.IFC_REL_ASSOCIATES_MATERIAL:
-			return (EObject) createIfcRelAssociatesMaterial();
+			return createIfcRelAssociatesMaterial();
 		case Ifc2x3Package.IFC_REL_ASSOCIATES_PROFILE_PROPERTIES:
-			return (EObject) createIfcRelAssociatesProfileProperties();
+			return createIfcRelAssociatesProfileProperties();
 		case Ifc2x3Package.IFC_REL_CONNECTS:
-			return (EObject) createIfcRelConnects();
+			return createIfcRelConnects();
 		case Ifc2x3Package.IFC_REL_CONNECTS_ELEMENTS:
-			return (EObject) createIfcRelConnectsElements();
+			return createIfcRelConnectsElements();
 		case Ifc2x3Package.IFC_REL_CONNECTS_PATH_ELEMENTS:
-			return (EObject) createIfcRelConnectsPathElements();
+			return createIfcRelConnectsPathElements();
 		case Ifc2x3Package.IFC_REL_CONNECTS_PORT_TO_ELEMENT:
-			return (EObject) createIfcRelConnectsPortToElement();
+			return createIfcRelConnectsPortToElement();
 		case Ifc2x3Package.IFC_REL_CONNECTS_PORTS:
-			return (EObject) createIfcRelConnectsPorts();
+			return createIfcRelConnectsPorts();
 		case Ifc2x3Package.IFC_REL_CONNECTS_STRUCTURAL_ACTIVITY:
-			return (EObject) createIfcRelConnectsStructuralActivity();
+			return createIfcRelConnectsStructuralActivity();
 		case Ifc2x3Package.IFC_REL_CONNECTS_STRUCTURAL_ELEMENT:
-			return (EObject) createIfcRelConnectsStructuralElement();
+			return createIfcRelConnectsStructuralElement();
 		case Ifc2x3Package.IFC_REL_CONNECTS_STRUCTURAL_MEMBER:
-			return (EObject) createIfcRelConnectsStructuralMember();
+			return createIfcRelConnectsStructuralMember();
 		case Ifc2x3Package.IFC_REL_CONNECTS_WITH_ECCENTRICITY:
-			return (EObject) createIfcRelConnectsWithEccentricity();
+			return createIfcRelConnectsWithEccentricity();
 		case Ifc2x3Package.IFC_REL_CONNECTS_WITH_REALIZING_ELEMENTS:
-			return (EObject) createIfcRelConnectsWithRealizingElements();
+			return createIfcRelConnectsWithRealizingElements();
 		case Ifc2x3Package.IFC_REL_CONTAINED_IN_SPATIAL_STRUCTURE:
-			return (EObject) createIfcRelContainedInSpatialStructure();
+			return createIfcRelContainedInSpatialStructure();
 		case Ifc2x3Package.IFC_REL_COVERS_BLDG_ELEMENTS:
-			return (EObject) createIfcRelCoversBldgElements();
+			return createIfcRelCoversBldgElements();
 		case Ifc2x3Package.IFC_REL_COVERS_SPACES:
-			return (EObject) createIfcRelCoversSpaces();
+			return createIfcRelCoversSpaces();
 		case Ifc2x3Package.IFC_REL_DECOMPOSES:
-			return (EObject) createIfcRelDecomposes();
+			return createIfcRelDecomposes();
 		case Ifc2x3Package.IFC_REL_DEFINES:
-			return (EObject) createIfcRelDefines();
+			return createIfcRelDefines();
 		case Ifc2x3Package.IFC_REL_DEFINES_BY_PROPERTIES:
-			return (EObject) createIfcRelDefinesByProperties();
+			return createIfcRelDefinesByProperties();
 		case Ifc2x3Package.IFC_REL_DEFINES_BY_TYPE:
-			return (EObject) createIfcRelDefinesByType();
+			return createIfcRelDefinesByType();
 		case Ifc2x3Package.IFC_REL_FILLS_ELEMENT:
-			return (EObject) createIfcRelFillsElement();
+			return createIfcRelFillsElement();
 		case Ifc2x3Package.IFC_REL_FLOW_CONTROL_ELEMENTS:
-			return (EObject) createIfcRelFlowControlElements();
+			return createIfcRelFlowControlElements();
 		case Ifc2x3Package.IFC_REL_INTERACTION_REQUIREMENTS:
-			return (EObject) createIfcRelInteractionRequirements();
+			return createIfcRelInteractionRequirements();
 		case Ifc2x3Package.IFC_REL_NESTS:
-			return (EObject) createIfcRelNests();
+			return createIfcRelNests();
 		case Ifc2x3Package.IFC_REL_OCCUPIES_SPACES:
-			return (EObject) createIfcRelOccupiesSpaces();
+			return createIfcRelOccupiesSpaces();
 		case Ifc2x3Package.IFC_REL_OVERRIDES_PROPERTIES:
-			return (EObject) createIfcRelOverridesProperties();
+			return createIfcRelOverridesProperties();
 		case Ifc2x3Package.IFC_REL_PROJECTS_ELEMENT:
-			return (EObject) createIfcRelProjectsElement();
+			return createIfcRelProjectsElement();
 		case Ifc2x3Package.IFC_REL_REFERENCED_IN_SPATIAL_STRUCTURE:
-			return (EObject) createIfcRelReferencedInSpatialStructure();
+			return createIfcRelReferencedInSpatialStructure();
 		case Ifc2x3Package.IFC_REL_SCHEDULES_COST_ITEMS:
-			return (EObject) createIfcRelSchedulesCostItems();
+			return createIfcRelSchedulesCostItems();
 		case Ifc2x3Package.IFC_REL_SEQUENCE:
-			return (EObject) createIfcRelSequence();
+			return createIfcRelSequence();
 		case Ifc2x3Package.IFC_REL_SERVICES_BUILDINGS:
-			return (EObject) createIfcRelServicesBuildings();
+			return createIfcRelServicesBuildings();
 		case Ifc2x3Package.IFC_REL_SPACE_BOUNDARY:
-			return (EObject) createIfcRelSpaceBoundary();
+			return createIfcRelSpaceBoundary();
 		case Ifc2x3Package.IFC_REL_VOIDS_ELEMENT:
-			return (EObject) createIfcRelVoidsElement();
+			return createIfcRelVoidsElement();
 		case Ifc2x3Package.IFC_RELATIONSHIP:
-			return (EObject) createIfcRelationship();
+			return createIfcRelationship();
 		case Ifc2x3Package.IFC_RELAXATION:
-			return (EObject) createIfcRelaxation();
+			return createIfcRelaxation();
 		case Ifc2x3Package.IFC_REPRESENTATION:
-			return (EObject) createIfcRepresentation();
+			return createIfcRepresentation();
 		case Ifc2x3Package.IFC_REPRESENTATION_CONTEXT:
-			return (EObject) createIfcRepresentationContext();
+			return createIfcRepresentationContext();
 		case Ifc2x3Package.IFC_REPRESENTATION_ITEM:
-			return (EObject) createIfcRepresentationItem();
+			return createIfcRepresentationItem();
 		case Ifc2x3Package.IFC_REPRESENTATION_MAP:
-			return (EObject) createIfcRepresentationMap();
+			return createIfcRepresentationMap();
 		case Ifc2x3Package.IFC_RESOURCE:
-			return (EObject) createIfcResource();
+			return createIfcResource();
 		case Ifc2x3Package.IFC_REVOLVED_AREA_SOLID:
-			return (EObject) createIfcRevolvedAreaSolid();
+			return createIfcRevolvedAreaSolid();
 		case Ifc2x3Package.IFC_RIB_PLATE_PROFILE_PROPERTIES:
-			return (EObject) createIfcRibPlateProfileProperties();
+			return createIfcRibPlateProfileProperties();
 		case Ifc2x3Package.IFC_RIGHT_CIRCULAR_CONE:
-			return (EObject) createIfcRightCircularCone();
+			return createIfcRightCircularCone();
 		case Ifc2x3Package.IFC_RIGHT_CIRCULAR_CYLINDER:
-			return (EObject) createIfcRightCircularCylinder();
+			return createIfcRightCircularCylinder();
 		case Ifc2x3Package.IFC_ROOF:
-			return (EObject) createIfcRoof();
+			return createIfcRoof();
 		case Ifc2x3Package.IFC_ROOT:
-			return (EObject) createIfcRoot();
+			return createIfcRoot();
 		case Ifc2x3Package.IFC_ROUNDED_EDGE_FEATURE:
-			return (EObject) createIfcRoundedEdgeFeature();
+			return createIfcRoundedEdgeFeature();
 		case Ifc2x3Package.IFC_ROUNDED_RECTANGLE_PROFILE_DEF:
-			return (EObject) createIfcRoundedRectangleProfileDef();
+			return createIfcRoundedRectangleProfileDef();
 		case Ifc2x3Package.IFC_SI_UNIT:
-			return (EObject) createIfcSIUnit();
+			return createIfcSIUnit();
 		case Ifc2x3Package.IFC_SANITARY_TERMINAL_TYPE:
-			return (EObject) createIfcSanitaryTerminalType();
+			return createIfcSanitaryTerminalType();
 		case Ifc2x3Package.IFC_SCHEDULE_TIME_CONTROL:
-			return (EObject) createIfcScheduleTimeControl();
+			return createIfcScheduleTimeControl();
 		case Ifc2x3Package.IFC_SECTION_PROPERTIES:
-			return (EObject) createIfcSectionProperties();
+			return createIfcSectionProperties();
 		case Ifc2x3Package.IFC_SECTION_REINFORCEMENT_PROPERTIES:
-			return (EObject) createIfcSectionReinforcementProperties();
+			return createIfcSectionReinforcementProperties();
 		case Ifc2x3Package.IFC_SECTIONED_SPINE:
-			return (EObject) createIfcSectionedSpine();
+			return createIfcSectionedSpine();
 		case Ifc2x3Package.IFC_SENSOR_TYPE:
-			return (EObject) createIfcSensorType();
+			return createIfcSensorType();
 		case Ifc2x3Package.IFC_SERVICE_LIFE:
-			return (EObject) createIfcServiceLife();
+			return createIfcServiceLife();
 		case Ifc2x3Package.IFC_SERVICE_LIFE_FACTOR:
-			return (EObject) createIfcServiceLifeFactor();
+			return createIfcServiceLifeFactor();
 		case Ifc2x3Package.IFC_SHAPE_ASPECT:
-			return (EObject) createIfcShapeAspect();
+			return createIfcShapeAspect();
 		case Ifc2x3Package.IFC_SHAPE_MODEL:
-			return (EObject) createIfcShapeModel();
+			return createIfcShapeModel();
 		case Ifc2x3Package.IFC_SHAPE_REPRESENTATION:
-			return (EObject) createIfcShapeRepresentation();
+			return createIfcShapeRepresentation();
 		case Ifc2x3Package.IFC_SHELL_BASED_SURFACE_MODEL:
-			return (EObject) createIfcShellBasedSurfaceModel();
+			return createIfcShellBasedSurfaceModel();
 		case Ifc2x3Package.IFC_SIMPLE_PROPERTY:
-			return (EObject) createIfcSimpleProperty();
+			return createIfcSimpleProperty();
 		case Ifc2x3Package.IFC_SITE:
-			return (EObject) createIfcSite();
+			return createIfcSite();
 		case Ifc2x3Package.IFC_SLAB:
-			return (EObject) createIfcSlab();
+			return createIfcSlab();
 		case Ifc2x3Package.IFC_SLAB_TYPE:
-			return (EObject) createIfcSlabType();
+			return createIfcSlabType();
 		case Ifc2x3Package.IFC_SLIPPAGE_CONNECTION_CONDITION:
-			return (EObject) createIfcSlippageConnectionCondition();
+			return createIfcSlippageConnectionCondition();
 		case Ifc2x3Package.IFC_SOLID_MODEL:
-			return (EObject) createIfcSolidModel();
+			return createIfcSolidModel();
 		case Ifc2x3Package.IFC_SOUND_PROPERTIES:
-			return (EObject) createIfcSoundProperties();
+			return createIfcSoundProperties();
 		case Ifc2x3Package.IFC_SOUND_VALUE:
-			return (EObject) createIfcSoundValue();
+			return createIfcSoundValue();
 		case Ifc2x3Package.IFC_SPACE:
-			return (EObject) createIfcSpace();
+			return createIfcSpace();
 		case Ifc2x3Package.IFC_SPACE_HEATER_TYPE:
-			return (EObject) createIfcSpaceHeaterType();
+			return createIfcSpaceHeaterType();
 		case Ifc2x3Package.IFC_SPACE_PROGRAM:
-			return (EObject) createIfcSpaceProgram();
+			return createIfcSpaceProgram();
 		case Ifc2x3Package.IFC_SPACE_THERMAL_LOAD_PROPERTIES:
-			return (EObject) createIfcSpaceThermalLoadProperties();
+			return createIfcSpaceThermalLoadProperties();
 		case Ifc2x3Package.IFC_SPACE_TYPE:
-			return (EObject) createIfcSpaceType();
+			return createIfcSpaceType();
 		case Ifc2x3Package.IFC_SPATIAL_STRUCTURE_ELEMENT:
-			return (EObject) createIfcSpatialStructureElement();
+			return createIfcSpatialStructureElement();
 		case Ifc2x3Package.IFC_SPATIAL_STRUCTURE_ELEMENT_TYPE:
-			return (EObject) createIfcSpatialStructureElementType();
+			return createIfcSpatialStructureElementType();
 		case Ifc2x3Package.IFC_SPHERE:
-			return (EObject) createIfcSphere();
+			return createIfcSphere();
 		case Ifc2x3Package.IFC_STACK_TERMINAL_TYPE:
-			return (EObject) createIfcStackTerminalType();
+			return createIfcStackTerminalType();
 		case Ifc2x3Package.IFC_STAIR:
-			return (EObject) createIfcStair();
+			return createIfcStair();
 		case Ifc2x3Package.IFC_STAIR_FLIGHT:
-			return (EObject) createIfcStairFlight();
+			return createIfcStairFlight();
 		case Ifc2x3Package.IFC_STAIR_FLIGHT_TYPE:
-			return (EObject) createIfcStairFlightType();
+			return createIfcStairFlightType();
 		case Ifc2x3Package.IFC_STRUCTURAL_ACTION:
-			return (EObject) createIfcStructuralAction();
+			return createIfcStructuralAction();
 		case Ifc2x3Package.IFC_STRUCTURAL_ACTIVITY:
-			return (EObject) createIfcStructuralActivity();
+			return createIfcStructuralActivity();
 		case Ifc2x3Package.IFC_STRUCTURAL_ANALYSIS_MODEL:
-			return (EObject) createIfcStructuralAnalysisModel();
+			return createIfcStructuralAnalysisModel();
 		case Ifc2x3Package.IFC_STRUCTURAL_CONNECTION:
-			return (EObject) createIfcStructuralConnection();
+			return createIfcStructuralConnection();
 		case Ifc2x3Package.IFC_STRUCTURAL_CONNECTION_CONDITION:
-			return (EObject) createIfcStructuralConnectionCondition();
+			return createIfcStructuralConnectionCondition();
 		case Ifc2x3Package.IFC_STRUCTURAL_CURVE_CONNECTION:
-			return (EObject) createIfcStructuralCurveConnection();
+			return createIfcStructuralCurveConnection();
 		case Ifc2x3Package.IFC_STRUCTURAL_CURVE_MEMBER:
-			return (EObject) createIfcStructuralCurveMember();
+			return createIfcStructuralCurveMember();
 		case Ifc2x3Package.IFC_STRUCTURAL_CURVE_MEMBER_VARYING:
-			return (EObject) createIfcStructuralCurveMemberVarying();
+			return createIfcStructuralCurveMemberVarying();
 		case Ifc2x3Package.IFC_STRUCTURAL_ITEM:
-			return (EObject) createIfcStructuralItem();
+			return createIfcStructuralItem();
 		case Ifc2x3Package.IFC_STRUCTURAL_LINEAR_ACTION:
-			return (EObject) createIfcStructuralLinearAction();
+			return createIfcStructuralLinearAction();
 		case Ifc2x3Package.IFC_STRUCTURAL_LINEAR_ACTION_VARYING:
-			return (EObject) createIfcStructuralLinearActionVarying();
+			return createIfcStructuralLinearActionVarying();
 		case Ifc2x3Package.IFC_STRUCTURAL_LOAD:
-			return (EObject) createIfcStructuralLoad();
+			return createIfcStructuralLoad();
 		case Ifc2x3Package.IFC_STRUCTURAL_LOAD_GROUP:
-			return (EObject) createIfcStructuralLoadGroup();
+			return createIfcStructuralLoadGroup();
 		case Ifc2x3Package.IFC_STRUCTURAL_LOAD_LINEAR_FORCE:
-			return (EObject) createIfcStructuralLoadLinearForce();
+			return createIfcStructuralLoadLinearForce();
 		case Ifc2x3Package.IFC_STRUCTURAL_LOAD_PLANAR_FORCE:
-			return (EObject) createIfcStructuralLoadPlanarForce();
+			return createIfcStructuralLoadPlanarForce();
 		case Ifc2x3Package.IFC_STRUCTURAL_LOAD_SINGLE_DISPLACEMENT:
-			return (EObject) createIfcStructuralLoadSingleDisplacement();
+			return createIfcStructuralLoadSingleDisplacement();
 		case Ifc2x3Package.IFC_STRUCTURAL_LOAD_SINGLE_DISPLACEMENT_DISTORTION:
-			return (EObject) createIfcStructuralLoadSingleDisplacementDistortion();
+			return createIfcStructuralLoadSingleDisplacementDistortion();
 		case Ifc2x3Package.IFC_STRUCTURAL_LOAD_SINGLE_FORCE:
-			return (EObject) createIfcStructuralLoadSingleForce();
+			return createIfcStructuralLoadSingleForce();
 		case Ifc2x3Package.IFC_STRUCTURAL_LOAD_SINGLE_FORCE_WARPING:
-			return (EObject) createIfcStructuralLoadSingleForceWarping();
+			return createIfcStructuralLoadSingleForceWarping();
 		case Ifc2x3Package.IFC_STRUCTURAL_LOAD_STATIC:
-			return (EObject) createIfcStructuralLoadStatic();
+			return createIfcStructuralLoadStatic();
 		case Ifc2x3Package.IFC_STRUCTURAL_LOAD_TEMPERATURE:
-			return (EObject) createIfcStructuralLoadTemperature();
+			return createIfcStructuralLoadTemperature();
 		case Ifc2x3Package.IFC_STRUCTURAL_MEMBER:
-			return (EObject) createIfcStructuralMember();
+			return createIfcStructuralMember();
 		case Ifc2x3Package.IFC_STRUCTURAL_PLANAR_ACTION:
-			return (EObject) createIfcStructuralPlanarAction();
+			return createIfcStructuralPlanarAction();
 		case Ifc2x3Package.IFC_STRUCTURAL_PLANAR_ACTION_VARYING:
-			return (EObject) createIfcStructuralPlanarActionVarying();
+			return createIfcStructuralPlanarActionVarying();
 		case Ifc2x3Package.IFC_STRUCTURAL_POINT_ACTION:
-			return (EObject) createIfcStructuralPointAction();
+			return createIfcStructuralPointAction();
 		case Ifc2x3Package.IFC_STRUCTURAL_POINT_CONNECTION:
-			return (EObject) createIfcStructuralPointConnection();
+			return createIfcStructuralPointConnection();
 		case Ifc2x3Package.IFC_STRUCTURAL_POINT_REACTION:
-			return (EObject) createIfcStructuralPointReaction();
+			return createIfcStructuralPointReaction();
 		case Ifc2x3Package.IFC_STRUCTURAL_PROFILE_PROPERTIES:
-			return (EObject) createIfcStructuralProfileProperties();
+			return createIfcStructuralProfileProperties();
 		case Ifc2x3Package.IFC_STRUCTURAL_REACTION:
-			return (EObject) createIfcStructuralReaction();
+			return createIfcStructuralReaction();
 		case Ifc2x3Package.IFC_STRUCTURAL_RESULT_GROUP:
-			return (EObject) createIfcStructuralResultGroup();
+			return createIfcStructuralResultGroup();
 		case Ifc2x3Package.IFC_STRUCTURAL_STEEL_PROFILE_PROPERTIES:
-			return (EObject) createIfcStructuralSteelProfileProperties();
+			return createIfcStructuralSteelProfileProperties();
 		case Ifc2x3Package.IFC_STRUCTURAL_SURFACE_CONNECTION:
-			return (EObject) createIfcStructuralSurfaceConnection();
+			return createIfcStructuralSurfaceConnection();
 		case Ifc2x3Package.IFC_STRUCTURAL_SURFACE_MEMBER:
-			return (EObject) createIfcStructuralSurfaceMember();
+			return createIfcStructuralSurfaceMember();
 		case Ifc2x3Package.IFC_STRUCTURAL_SURFACE_MEMBER_VARYING:
-			return (EObject) createIfcStructuralSurfaceMemberVarying();
+			return createIfcStructuralSurfaceMemberVarying();
 		case Ifc2x3Package.IFC_STRUCTURED_DIMENSION_CALLOUT:
-			return (EObject) createIfcStructuredDimensionCallout();
+			return createIfcStructuredDimensionCallout();
 		case Ifc2x3Package.IFC_STYLE_MODEL:
-			return (EObject) createIfcStyleModel();
+			return createIfcStyleModel();
 		case Ifc2x3Package.IFC_STYLED_ITEM:
-			return (EObject) createIfcStyledItem();
+			return createIfcStyledItem();
 		case Ifc2x3Package.IFC_STYLED_REPRESENTATION:
-			return (EObject) createIfcStyledRepresentation();
+			return createIfcStyledRepresentation();
 		case Ifc2x3Package.IFC_SUB_CONTRACT_RESOURCE:
-			return (EObject) createIfcSubContractResource();
+			return createIfcSubContractResource();
 		case Ifc2x3Package.IFC_SUBEDGE:
-			return (EObject) createIfcSubedge();
+			return createIfcSubedge();
 		case Ifc2x3Package.IFC_SURFACE:
-			return (EObject) createIfcSurface();
+			return createIfcSurface();
 		case Ifc2x3Package.IFC_SURFACE_CURVE_SWEPT_AREA_SOLID:
-			return (EObject) createIfcSurfaceCurveSweptAreaSolid();
+			return createIfcSurfaceCurveSweptAreaSolid();
 		case Ifc2x3Package.IFC_SURFACE_OF_LINEAR_EXTRUSION:
-			return (EObject) createIfcSurfaceOfLinearExtrusion();
+			return createIfcSurfaceOfLinearExtrusion();
 		case Ifc2x3Package.IFC_SURFACE_OF_REVOLUTION:
-			return (EObject) createIfcSurfaceOfRevolution();
+			return createIfcSurfaceOfRevolution();
 		case Ifc2x3Package.IFC_SURFACE_STYLE:
-			return (EObject) createIfcSurfaceStyle();
+			return createIfcSurfaceStyle();
 		case Ifc2x3Package.IFC_SURFACE_STYLE_LIGHTING:
-			return (EObject) createIfcSurfaceStyleLighting();
+			return createIfcSurfaceStyleLighting();
 		case Ifc2x3Package.IFC_SURFACE_STYLE_REFRACTION:
-			return (EObject) createIfcSurfaceStyleRefraction();
+			return createIfcSurfaceStyleRefraction();
 		case Ifc2x3Package.IFC_SURFACE_STYLE_RENDERING:
-			return (EObject) createIfcSurfaceStyleRendering();
+			return createIfcSurfaceStyleRendering();
 		case Ifc2x3Package.IFC_SURFACE_STYLE_SHADING:
-			return (EObject) createIfcSurfaceStyleShading();
+			return createIfcSurfaceStyleShading();
 		case Ifc2x3Package.IFC_SURFACE_STYLE_WITH_TEXTURES:
-			return (EObject) createIfcSurfaceStyleWithTextures();
+			return createIfcSurfaceStyleWithTextures();
 		case Ifc2x3Package.IFC_SURFACE_TEXTURE:
-			return (EObject) createIfcSurfaceTexture();
+			return createIfcSurfaceTexture();
 		case Ifc2x3Package.IFC_SWEPT_AREA_SOLID:
-			return (EObject) createIfcSweptAreaSolid();
+			return createIfcSweptAreaSolid();
 		case Ifc2x3Package.IFC_SWEPT_DISK_SOLID:
-			return (EObject) createIfcSweptDiskSolid();
+			return createIfcSweptDiskSolid();
 		case Ifc2x3Package.IFC_SWEPT_SURFACE:
-			return (EObject) createIfcSweptSurface();
+			return createIfcSweptSurface();
 		case Ifc2x3Package.IFC_SWITCHING_DEVICE_TYPE:
-			return (EObject) createIfcSwitchingDeviceType();
+			return createIfcSwitchingDeviceType();
 		case Ifc2x3Package.IFC_SYMBOL_STYLE:
-			return (EObject) createIfcSymbolStyle();
+			return createIfcSymbolStyle();
 		case Ifc2x3Package.IFC_SYSTEM:
-			return (EObject) createIfcSystem();
+			return createIfcSystem();
 		case Ifc2x3Package.IFC_SYSTEM_FURNITURE_ELEMENT_TYPE:
-			return (EObject) createIfcSystemFurnitureElementType();
+			return createIfcSystemFurnitureElementType();
 		case Ifc2x3Package.IFC_TSHAPE_PROFILE_DEF:
-			return (EObject) createIfcTShapeProfileDef();
+			return createIfcTShapeProfileDef();
 		case Ifc2x3Package.IFC_TABLE:
-			return (EObject) createIfcTable();
+			return createIfcTable();
 		case Ifc2x3Package.IFC_TABLE_ROW:
-			return (EObject) createIfcTableRow();
+			return createIfcTableRow();
 		case Ifc2x3Package.IFC_TANK_TYPE:
-			return (EObject) createIfcTankType();
+			return createIfcTankType();
 		case Ifc2x3Package.IFC_TASK:
-			return (EObject) createIfcTask();
+			return createIfcTask();
 		case Ifc2x3Package.IFC_TELECOM_ADDRESS:
-			return (EObject) createIfcTelecomAddress();
+			return createIfcTelecomAddress();
 		case Ifc2x3Package.IFC_TENDON:
-			return (EObject) createIfcTendon();
+			return createIfcTendon();
 		case Ifc2x3Package.IFC_TENDON_ANCHOR:
-			return (EObject) createIfcTendonAnchor();
+			return createIfcTendonAnchor();
 		case Ifc2x3Package.IFC_TERMINATOR_SYMBOL:
-			return (EObject) createIfcTerminatorSymbol();
+			return createIfcTerminatorSymbol();
 		case Ifc2x3Package.IFC_TEXT_LITERAL:
-			return (EObject) createIfcTextLiteral();
+			return createIfcTextLiteral();
 		case Ifc2x3Package.IFC_TEXT_LITERAL_WITH_EXTENT:
-			return (EObject) createIfcTextLiteralWithExtent();
+			return createIfcTextLiteralWithExtent();
 		case Ifc2x3Package.IFC_TEXT_STYLE:
-			return (EObject) createIfcTextStyle();
+			return createIfcTextStyle();
 		case Ifc2x3Package.IFC_TEXT_STYLE_FONT_MODEL:
-			return (EObject) createIfcTextStyleFontModel();
+			return createIfcTextStyleFontModel();
 		case Ifc2x3Package.IFC_TEXT_STYLE_FOR_DEFINED_FONT:
-			return (EObject) createIfcTextStyleForDefinedFont();
+			return createIfcTextStyleForDefinedFont();
 		case Ifc2x3Package.IFC_TEXT_STYLE_TEXT_MODEL:
-			return (EObject) createIfcTextStyleTextModel();
+			return createIfcTextStyleTextModel();
 		case Ifc2x3Package.IFC_TEXT_STYLE_WITH_BOX_CHARACTERISTICS:
-			return (EObject) createIfcTextStyleWithBoxCharacteristics();
+			return createIfcTextStyleWithBoxCharacteristics();
 		case Ifc2x3Package.IFC_TEXTURE_COORDINATE:
-			return (EObject) createIfcTextureCoordinate();
+			return createIfcTextureCoordinate();
 		case Ifc2x3Package.IFC_TEXTURE_COORDINATE_GENERATOR:
-			return (EObject) createIfcTextureCoordinateGenerator();
+			return createIfcTextureCoordinateGenerator();
 		case Ifc2x3Package.IFC_TEXTURE_MAP:
-			return (EObject) createIfcTextureMap();
+			return createIfcTextureMap();
 		case Ifc2x3Package.IFC_TEXTURE_VERTEX:
-			return (EObject) createIfcTextureVertex();
+			return createIfcTextureVertex();
 		case Ifc2x3Package.IFC_THERMAL_MATERIAL_PROPERTIES:
-			return (EObject) createIfcThermalMaterialProperties();
+			return createIfcThermalMaterialProperties();
 		case Ifc2x3Package.IFC_TIME_SERIES:
-			return (EObject) createIfcTimeSeries();
+			return createIfcTimeSeries();
 		case Ifc2x3Package.IFC_TIME_SERIES_REFERENCE_RELATIONSHIP:
-			return (EObject) createIfcTimeSeriesReferenceRelationship();
+			return createIfcTimeSeriesReferenceRelationship();
 		case Ifc2x3Package.IFC_TIME_SERIES_SCHEDULE:
-			return (EObject) createIfcTimeSeriesSchedule();
+			return createIfcTimeSeriesSchedule();
 		case Ifc2x3Package.IFC_TIME_SERIES_VALUE:
-			return (EObject) createIfcTimeSeriesValue();
+			return createIfcTimeSeriesValue();
 		case Ifc2x3Package.IFC_TOPOLOGICAL_REPRESENTATION_ITEM:
-			return (EObject) createIfcTopologicalRepresentationItem();
+			return createIfcTopologicalRepresentationItem();
 		case Ifc2x3Package.IFC_TOPOLOGY_REPRESENTATION:
-			return (EObject) createIfcTopologyRepresentation();
+			return createIfcTopologyRepresentation();
 		case Ifc2x3Package.IFC_TRANSFORMER_TYPE:
-			return (EObject) createIfcTransformerType();
+			return createIfcTransformerType();
 		case Ifc2x3Package.IFC_TRANSPORT_ELEMENT:
-			return (EObject) createIfcTransportElement();
+			return createIfcTransportElement();
 		case Ifc2x3Package.IFC_TRANSPORT_ELEMENT_TYPE:
-			return (EObject) createIfcTransportElementType();
+			return createIfcTransportElementType();
 		case Ifc2x3Package.IFC_TRAPEZIUM_PROFILE_DEF:
-			return (EObject) createIfcTrapeziumProfileDef();
+			return createIfcTrapeziumProfileDef();
 		case Ifc2x3Package.IFC_TRIMMED_CURVE:
-			return (EObject) createIfcTrimmedCurve();
+			return createIfcTrimmedCurve();
 		case Ifc2x3Package.IFC_TUBE_BUNDLE_TYPE:
-			return (EObject) createIfcTubeBundleType();
+			return createIfcTubeBundleType();
 		case Ifc2x3Package.IFC_TWO_DIRECTION_REPEAT_FACTOR:
-			return (EObject) createIfcTwoDirectionRepeatFactor();
+			return createIfcTwoDirectionRepeatFactor();
 		case Ifc2x3Package.IFC_TYPE_OBJECT:
-			return (EObject) createIfcTypeObject();
+			return createIfcTypeObject();
 		case Ifc2x3Package.IFC_TYPE_PRODUCT:
-			return (EObject) createIfcTypeProduct();
+			return createIfcTypeProduct();
 		case Ifc2x3Package.IFC_USHAPE_PROFILE_DEF:
-			return (EObject) createIfcUShapeProfileDef();
+			return createIfcUShapeProfileDef();
 		case Ifc2x3Package.IFC_UNIT_ASSIGNMENT:
-			return (EObject) createIfcUnitAssignment();
+			return createIfcUnitAssignment();
 		case Ifc2x3Package.IFC_UNITARY_EQUIPMENT_TYPE:
-			return (EObject) createIfcUnitaryEquipmentType();
+			return createIfcUnitaryEquipmentType();
 		case Ifc2x3Package.IFC_VALVE_TYPE:
-			return (EObject) createIfcValveType();
+			return createIfcValveType();
 		case Ifc2x3Package.IFC_VECTOR:
-			return (EObject) createIfcVector();
+			return createIfcVector();
 		case Ifc2x3Package.IFC_VERTEX:
-			return (EObject) createIfcVertex();
+			return createIfcVertex();
 		case Ifc2x3Package.IFC_VERTEX_BASED_TEXTURE_MAP:
-			return (EObject) createIfcVertexBasedTextureMap();
+			return createIfcVertexBasedTextureMap();
 		case Ifc2x3Package.IFC_VERTEX_LOOP:
-			return (EObject) createIfcVertexLoop();
+			return createIfcVertexLoop();
 		case Ifc2x3Package.IFC_VERTEX_POINT:
-			return (EObject) createIfcVertexPoint();
+			return createIfcVertexPoint();
 		case Ifc2x3Package.IFC_VIBRATION_ISOLATOR_TYPE:
-			return (EObject) createIfcVibrationIsolatorType();
+			return createIfcVibrationIsolatorType();
 		case Ifc2x3Package.IFC_VIRTUAL_ELEMENT:
-			return (EObject) createIfcVirtualElement();
+			return createIfcVirtualElement();
 		case Ifc2x3Package.IFC_VIRTUAL_GRID_INTERSECTION:
-			return (EObject) createIfcVirtualGridIntersection();
+			return createIfcVirtualGridIntersection();
 		case Ifc2x3Package.IFC_WALL:
-			return (EObject) createIfcWall();
+			return createIfcWall();
 		case Ifc2x3Package.IFC_WALL_STANDARD_CASE:
-			return (EObject) createIfcWallStandardCase();
+			return createIfcWallStandardCase();
 		case Ifc2x3Package.IFC_WALL_TYPE:
-			return (EObject) createIfcWallType();
+			return createIfcWallType();
 		case Ifc2x3Package.IFC_WASTE_TERMINAL_TYPE:
-			return (EObject) createIfcWasteTerminalType();
+			return createIfcWasteTerminalType();
 		case Ifc2x3Package.IFC_WATER_PROPERTIES:
-			return (EObject) createIfcWaterProperties();
+			return createIfcWaterProperties();
 		case Ifc2x3Package.IFC_WINDOW:
-			return (EObject) createIfcWindow();
+			return createIfcWindow();
 		case Ifc2x3Package.IFC_WINDOW_LINING_PROPERTIES:
-			return (EObject) createIfcWindowLiningProperties();
+			return createIfcWindowLiningProperties();
 		case Ifc2x3Package.IFC_WINDOW_PANEL_PROPERTIES:
-			return (EObject) createIfcWindowPanelProperties();
+			return createIfcWindowPanelProperties();
 		case Ifc2x3Package.IFC_WINDOW_STYLE:
-			return (EObject) createIfcWindowStyle();
+			return createIfcWindowStyle();
 		case Ifc2x3Package.IFC_WORK_CONTROL:
-			return (EObject) createIfcWorkControl();
+			return createIfcWorkControl();
 		case Ifc2x3Package.IFC_WORK_PLAN:
-			return (EObject) createIfcWorkPlan();
+			return createIfcWorkPlan();
 		case Ifc2x3Package.IFC_WORK_SCHEDULE:
-			return (EObject) createIfcWorkSchedule();
+			return createIfcWorkSchedule();
 		case Ifc2x3Package.IFC_ZSHAPE_PROFILE_DEF:
-			return (EObject) createIfcZShapeProfileDef();
+			return createIfcZShapeProfileDef();
 		case Ifc2x3Package.IFC_ZONE:
-			return (EObject) createIfcZone();
+			return createIfcZone();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -2361,9 +2400,39 @@ public class Ifc2x3FactoryImpl extends EFactoryImpl implements Ifc2x3Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public IfcDayInMonthNumber createIfcDayInMonthNumber() {
+		IfcDayInMonthNumberImpl ifcDayInMonthNumber = new IfcDayInMonthNumberImpl();
+		return ifcDayInMonthNumber;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IfcDaylightSavingHour createIfcDaylightSavingHour() {
+		IfcDaylightSavingHourImpl ifcDaylightSavingHour = new IfcDaylightSavingHourImpl();
+		return ifcDaylightSavingHour;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public IfcDescriptiveMeasure createIfcDescriptiveMeasure() {
 		IfcDescriptiveMeasureImpl ifcDescriptiveMeasure = new IfcDescriptiveMeasureImpl();
 		return ifcDescriptiveMeasure;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IfcDimensionCount createIfcDimensionCount() {
+		IfcDimensionCountImpl ifcDimensionCount = new IfcDimensionCountImpl();
+		return ifcDimensionCount;
 	}
 
 	/**
@@ -2461,6 +2530,36 @@ public class Ifc2x3FactoryImpl extends EFactoryImpl implements Ifc2x3Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public IfcFontStyle createIfcFontStyle() {
+		IfcFontStyleImpl ifcFontStyle = new IfcFontStyleImpl();
+		return ifcFontStyle;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IfcFontVariant createIfcFontVariant() {
+		IfcFontVariantImpl ifcFontVariant = new IfcFontVariantImpl();
+		return ifcFontVariant;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IfcFontWeight createIfcFontWeight() {
+		IfcFontWeightImpl ifcFontWeight = new IfcFontWeightImpl();
+		return ifcFontWeight;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public IfcForceMeasure createIfcForceMeasure() {
 		IfcForceMeasureImpl ifcForceMeasure = new IfcForceMeasureImpl();
 		return ifcForceMeasure;
@@ -2504,6 +2603,16 @@ public class Ifc2x3FactoryImpl extends EFactoryImpl implements Ifc2x3Factory {
 	public IfcHeatingValueMeasure createIfcHeatingValueMeasure() {
 		IfcHeatingValueMeasureImpl ifcHeatingValueMeasure = new IfcHeatingValueMeasureImpl();
 		return ifcHeatingValueMeasure;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IfcHourInDay createIfcHourInDay() {
+		IfcHourInDayImpl ifcHourInDay = new IfcHourInDayImpl();
+		return ifcHourInDay;
 	}
 
 	/**
@@ -2751,6 +2860,16 @@ public class Ifc2x3FactoryImpl extends EFactoryImpl implements Ifc2x3Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public IfcMinuteInHour createIfcMinuteInHour() {
+		IfcMinuteInHourImpl ifcMinuteInHour = new IfcMinuteInHourImpl();
+		return ifcMinuteInHour;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public IfcModulusOfElasticityMeasure createIfcModulusOfElasticityMeasure() {
 		IfcModulusOfElasticityMeasureImpl ifcModulusOfElasticityMeasure = new IfcModulusOfElasticityMeasureImpl();
 		return ifcModulusOfElasticityMeasure;
@@ -2831,6 +2950,16 @@ public class Ifc2x3FactoryImpl extends EFactoryImpl implements Ifc2x3Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public IfcMonthInYearNumber createIfcMonthInYearNumber() {
+		IfcMonthInYearNumberImpl ifcMonthInYearNumber = new IfcMonthInYearNumberImpl();
+		return ifcMonthInYearNumber;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public IfcNumericMeasure createIfcNumericMeasure() {
 		IfcNumericMeasureImpl ifcNumericMeasure = new IfcNumericMeasureImpl();
 		return ifcNumericMeasure;
@@ -2884,6 +3013,16 @@ public class Ifc2x3FactoryImpl extends EFactoryImpl implements Ifc2x3Factory {
 	public IfcPowerMeasure createIfcPowerMeasure() {
 		IfcPowerMeasureImpl ifcPowerMeasure = new IfcPowerMeasureImpl();
 		return ifcPowerMeasure;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IfcPresentableText createIfcPresentableText() {
+		IfcPresentableTextImpl ifcPresentableText = new IfcPresentableTextImpl();
+		return ifcPresentableText;
 	}
 
 	/**
@@ -2954,6 +3093,16 @@ public class Ifc2x3FactoryImpl extends EFactoryImpl implements Ifc2x3Factory {
 	public IfcRotationalStiffnessMeasure createIfcRotationalStiffnessMeasure() {
 		IfcRotationalStiffnessMeasureImpl ifcRotationalStiffnessMeasure = new IfcRotationalStiffnessMeasureImpl();
 		return ifcRotationalStiffnessMeasure;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IfcSecondInMinute createIfcSecondInMinute() {
+		IfcSecondInMinuteImpl ifcSecondInMinute = new IfcSecondInMinuteImpl();
+		return ifcSecondInMinute;
 	}
 
 	/**
@@ -3064,6 +3213,46 @@ public class Ifc2x3FactoryImpl extends EFactoryImpl implements Ifc2x3Factory {
 	public IfcText createIfcText() {
 		IfcTextImpl ifcText = new IfcTextImpl();
 		return ifcText;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IfcTextAlignment createIfcTextAlignment() {
+		IfcTextAlignmentImpl ifcTextAlignment = new IfcTextAlignmentImpl();
+		return ifcTextAlignment;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IfcTextDecoration createIfcTextDecoration() {
+		IfcTextDecorationImpl ifcTextDecoration = new IfcTextDecorationImpl();
+		return ifcTextDecoration;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IfcTextFontName createIfcTextFontName() {
+		IfcTextFontNameImpl ifcTextFontName = new IfcTextFontNameImpl();
+		return ifcTextFontName;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IfcTextTransformation createIfcTextTransformation() {
+		IfcTextTransformationImpl ifcTextTransformation = new IfcTextTransformationImpl();
+		return ifcTextTransformation;
 	}
 
 	/**
@@ -3204,6 +3393,36 @@ public class Ifc2x3FactoryImpl extends EFactoryImpl implements Ifc2x3Factory {
 	public IfcWarpingMomentMeasure createIfcWarpingMomentMeasure() {
 		IfcWarpingMomentMeasureImpl ifcWarpingMomentMeasure = new IfcWarpingMomentMeasureImpl();
 		return ifcWarpingMomentMeasure;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IfcYearNumber createIfcYearNumber() {
+		IfcYearNumberImpl ifcYearNumber = new IfcYearNumberImpl();
+		return ifcYearNumber;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IfcBoxAlignment createIfcBoxAlignment() {
+		IfcBoxAlignmentImpl ifcBoxAlignment = new IfcBoxAlignmentImpl();
+		return ifcBoxAlignment;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IfcCompoundPlaneAngleMeasure createIfcCompoundPlaneAngleMeasure() {
+		IfcCompoundPlaneAngleMeasureImpl ifcCompoundPlaneAngleMeasure = new IfcCompoundPlaneAngleMeasureImpl();
+		return ifcCompoundPlaneAngleMeasure;
 	}
 
 	/**

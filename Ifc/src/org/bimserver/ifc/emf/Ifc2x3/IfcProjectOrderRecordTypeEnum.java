@@ -244,8 +244,8 @@ public enum IfcProjectOrderRecordTypeEnum implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final IfcProjectOrderRecordTypeEnum[] VALUES_ARRAY = new IfcProjectOrderRecordTypeEnum[] { NULL, NOTDEFINED, MAINTENANCE, PURCHASE, WORK, MOVE, USERDEFINED,
-			CHANGE, };
+	private static final IfcProjectOrderRecordTypeEnum[] VALUES_ARRAY = new IfcProjectOrderRecordTypeEnum[] { NULL, NOTDEFINED, MAINTENANCE, PURCHASE, WORK,
+			MOVE, USERDEFINED, CHANGE, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Ifc Project Order Record Type Enum</b></em>' enumerators.

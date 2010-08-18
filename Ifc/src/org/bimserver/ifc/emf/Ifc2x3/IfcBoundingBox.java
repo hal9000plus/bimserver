@@ -32,11 +32,8 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundingBox#getCorner <em>Corner</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundingBox#getXDim <em>XDim</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundingBox#getXDimAsString <em>XDim As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundingBox#getYDim <em>YDim</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundingBox#getYDimAsString <em>YDim As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundingBox#getZDim <em>ZDim</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundingBox#getZDimAsString <em>ZDim As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundingBox#getDim <em>Dim</em>}</li>
  * </ul>
  * </p>
@@ -73,185 +70,108 @@ public interface IfcBoundingBox extends IfcGeometricRepresentationItem {
 	void setCorner(IfcCartesianPoint value);
 
 	/**
-	 * Returns the value of the '<em><b>XDim</b></em>' attribute.
+	 * Returns the value of the '<em><b>XDim</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>XDim</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>XDim</em>' attribute.
-	 * @see #setXDim(float)
+	 * @return the value of the '<em>XDim</em>' reference.
+	 * @see #setXDim(IfcPositiveLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcBoundingBox_XDim()
 	 * @model
 	 * @generated
 	 */
-	float getXDim();
+	IfcPositiveLengthMeasure getXDim();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundingBox#getXDim <em>XDim</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundingBox#getXDim <em>XDim</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>XDim</em>' attribute.
+	 * @param value the new value of the '<em>XDim</em>' reference.
 	 * @see #getXDim()
 	 * @generated
 	 */
-	void setXDim(float value);
+	void setXDim(IfcPositiveLengthMeasure value);
 
 	/**
-	 * Returns the value of the '<em><b>XDim As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>XDim As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>XDim As String</em>' attribute.
-	 * @see #setXDimAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcBoundingBox_XDimAsString()
-	 * @model
-	 * @generated
-	 */
-	String getXDimAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundingBox#getXDimAsString <em>XDim As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>XDim As String</em>' attribute.
-	 * @see #getXDimAsString()
-	 * @generated
-	 */
-	void setXDimAsString(String value);
-
-	/**
-	 * Returns the value of the '<em><b>YDim</b></em>' attribute.
+	 * Returns the value of the '<em><b>YDim</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>YDim</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>YDim</em>' attribute.
-	 * @see #setYDim(float)
+	 * @return the value of the '<em>YDim</em>' reference.
+	 * @see #setYDim(IfcPositiveLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcBoundingBox_YDim()
 	 * @model
 	 * @generated
 	 */
-	float getYDim();
+	IfcPositiveLengthMeasure getYDim();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundingBox#getYDim <em>YDim</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundingBox#getYDim <em>YDim</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>YDim</em>' attribute.
+	 * @param value the new value of the '<em>YDim</em>' reference.
 	 * @see #getYDim()
 	 * @generated
 	 */
-	void setYDim(float value);
+	void setYDim(IfcPositiveLengthMeasure value);
 
 	/**
-	 * Returns the value of the '<em><b>YDim As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>YDim As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>YDim As String</em>' attribute.
-	 * @see #setYDimAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcBoundingBox_YDimAsString()
-	 * @model
-	 * @generated
-	 */
-	String getYDimAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundingBox#getYDimAsString <em>YDim As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>YDim As String</em>' attribute.
-	 * @see #getYDimAsString()
-	 * @generated
-	 */
-	void setYDimAsString(String value);
-
-	/**
-	 * Returns the value of the '<em><b>ZDim</b></em>' attribute.
+	 * Returns the value of the '<em><b>ZDim</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>ZDim</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>ZDim</em>' attribute.
-	 * @see #setZDim(float)
+	 * @return the value of the '<em>ZDim</em>' reference.
+	 * @see #setZDim(IfcPositiveLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcBoundingBox_ZDim()
 	 * @model
 	 * @generated
 	 */
-	float getZDim();
+	IfcPositiveLengthMeasure getZDim();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundingBox#getZDim <em>ZDim</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundingBox#getZDim <em>ZDim</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>ZDim</em>' attribute.
+	 * @param value the new value of the '<em>ZDim</em>' reference.
 	 * @see #getZDim()
 	 * @generated
 	 */
-	void setZDim(float value);
+	void setZDim(IfcPositiveLengthMeasure value);
 
 	/**
-	 * Returns the value of the '<em><b>ZDim As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>ZDim As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>ZDim As String</em>' attribute.
-	 * @see #setZDimAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcBoundingBox_ZDimAsString()
-	 * @model
-	 * @generated
-	 */
-	String getZDimAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundingBox#getZDimAsString <em>ZDim As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>ZDim As String</em>' attribute.
-	 * @see #getZDimAsString()
-	 * @generated
-	 */
-	void setZDimAsString(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Dim</b></em>' attribute.
+	 * Returns the value of the '<em><b>Dim</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Dim</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Dim</em>' attribute.
-	 * @see #setDim(int)
+	 * @return the value of the '<em>Dim</em>' reference.
+	 * @see #setDim(IfcDimensionCount)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcBoundingBox_Dim()
-	 * @model derived="true"
+	 * @model transient="true" volatile="true" derived="true"
+	 *        annotation="http://www.iso.org/iso10303-11/EXPRESS code=' 3;'"
 	 * @generated
 	 */
-	int getDim();
+	IfcDimensionCount getDim();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundingBox#getDim <em>Dim</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundingBox#getDim <em>Dim</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Dim</em>' attribute.
+	 * @param value the new value of the '<em>Dim</em>' reference.
 	 * @see #getDim()
 	 * @generated
 	 */
-	void setDim(int value);
+	void setDim(IfcDimensionCount value);
 
 } // IfcBoundingBox

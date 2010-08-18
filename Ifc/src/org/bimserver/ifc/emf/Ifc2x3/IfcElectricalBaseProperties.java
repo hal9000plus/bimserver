@@ -32,17 +32,11 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getElectricCurrentType <em>Electric Current Type</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getInputVoltage <em>Input Voltage</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getInputVoltageAsString <em>Input Voltage As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getInputFrequency <em>Input Frequency</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getInputFrequencyAsString <em>Input Frequency As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getFullLoadCurrent <em>Full Load Current</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getFullLoadCurrentAsString <em>Full Load Current As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getMinimumCircuitCurrent <em>Minimum Circuit Current</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getMinimumCircuitCurrentAsString <em>Minimum Circuit Current As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getMaximumPowerInput <em>Maximum Power Input</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getMaximumPowerInputAsString <em>Maximum Power Input As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getRatedPowerInput <em>Rated Power Input</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getRatedPowerInputAsString <em>Rated Power Input As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getInputPhase <em>Input Phase</em>}</li>
  * </ul>
  * </p>
@@ -82,557 +76,293 @@ public interface IfcElectricalBaseProperties extends IfcEnergyProperties {
 	void setElectricCurrentType(IfcElectricCurrentEnum value);
 
 	/**
-	 * Returns the value of the '<em><b>Input Voltage</b></em>' attribute.
+	 * Returns the value of the '<em><b>Input Voltage</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Input Voltage</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Input Voltage</em>' attribute.
-	 * @see #setInputVoltage(float)
+	 * @return the value of the '<em>Input Voltage</em>' reference.
+	 * @see #setInputVoltage(IfcElectricVoltageMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcElectricalBaseProperties_InputVoltage()
 	 * @model
 	 * @generated
 	 */
-	float getInputVoltage();
+	IfcElectricVoltageMeasure getInputVoltage();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getInputVoltage <em>Input Voltage</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getInputVoltage <em>Input Voltage</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Input Voltage</em>' attribute.
+	 * @param value the new value of the '<em>Input Voltage</em>' reference.
 	 * @see #getInputVoltage()
 	 * @generated
 	 */
-	void setInputVoltage(float value);
+	void setInputVoltage(IfcElectricVoltageMeasure value);
 
 	/**
-	 * Returns the value of the '<em><b>Input Voltage As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Input Voltage As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Input Voltage As String</em>' attribute.
-	 * @see #setInputVoltageAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcElectricalBaseProperties_InputVoltageAsString()
-	 * @model
-	 * @generated
-	 */
-	String getInputVoltageAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getInputVoltageAsString <em>Input Voltage As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Input Voltage As String</em>' attribute.
-	 * @see #getInputVoltageAsString()
-	 * @generated
-	 */
-	void setInputVoltageAsString(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Input Frequency</b></em>' attribute.
+	 * Returns the value of the '<em><b>Input Frequency</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Input Frequency</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Input Frequency</em>' attribute.
-	 * @see #setInputFrequency(float)
+	 * @return the value of the '<em>Input Frequency</em>' reference.
+	 * @see #setInputFrequency(IfcFrequencyMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcElectricalBaseProperties_InputFrequency()
 	 * @model
 	 * @generated
 	 */
-	float getInputFrequency();
+	IfcFrequencyMeasure getInputFrequency();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getInputFrequency <em>Input Frequency</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getInputFrequency <em>Input Frequency</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Input Frequency</em>' attribute.
+	 * @param value the new value of the '<em>Input Frequency</em>' reference.
 	 * @see #getInputFrequency()
 	 * @generated
 	 */
-	void setInputFrequency(float value);
+	void setInputFrequency(IfcFrequencyMeasure value);
 
 	/**
-	 * Returns the value of the '<em><b>Input Frequency As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Input Frequency As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Input Frequency As String</em>' attribute.
-	 * @see #setInputFrequencyAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcElectricalBaseProperties_InputFrequencyAsString()
-	 * @model
-	 * @generated
-	 */
-	String getInputFrequencyAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getInputFrequencyAsString <em>Input Frequency As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Input Frequency As String</em>' attribute.
-	 * @see #getInputFrequencyAsString()
-	 * @generated
-	 */
-	void setInputFrequencyAsString(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Full Load Current</b></em>' attribute.
+	 * Returns the value of the '<em><b>Full Load Current</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Full Load Current</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Full Load Current</em>' attribute.
+	 * @return the value of the '<em>Full Load Current</em>' reference.
 	 * @see #isSetFullLoadCurrent()
 	 * @see #unsetFullLoadCurrent()
-	 * @see #setFullLoadCurrent(float)
+	 * @see #setFullLoadCurrent(IfcElectricCurrentMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcElectricalBaseProperties_FullLoadCurrent()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getFullLoadCurrent();
+	IfcElectricCurrentMeasure getFullLoadCurrent();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getFullLoadCurrent <em>Full Load Current</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getFullLoadCurrent <em>Full Load Current</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Full Load Current</em>' attribute.
+	 * @param value the new value of the '<em>Full Load Current</em>' reference.
 	 * @see #isSetFullLoadCurrent()
 	 * @see #unsetFullLoadCurrent()
 	 * @see #getFullLoadCurrent()
 	 * @generated
 	 */
-	void setFullLoadCurrent(float value);
+	void setFullLoadCurrent(IfcElectricCurrentMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getFullLoadCurrent <em>Full Load Current</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getFullLoadCurrent <em>Full Load Current</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetFullLoadCurrent()
 	 * @see #getFullLoadCurrent()
-	 * @see #setFullLoadCurrent(float)
+	 * @see #setFullLoadCurrent(IfcElectricCurrentMeasure)
 	 * @generated
 	 */
 	void unsetFullLoadCurrent();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getFullLoadCurrent <em>Full Load Current</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getFullLoadCurrent <em>Full Load Current</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Full Load Current</em>' attribute is set.
+	 * @return whether the value of the '<em>Full Load Current</em>' reference is set.
 	 * @see #unsetFullLoadCurrent()
 	 * @see #getFullLoadCurrent()
-	 * @see #setFullLoadCurrent(float)
+	 * @see #setFullLoadCurrent(IfcElectricCurrentMeasure)
 	 * @generated
 	 */
 	boolean isSetFullLoadCurrent();
 
 	/**
-	 * Returns the value of the '<em><b>Full Load Current As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Full Load Current As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Full Load Current As String</em>' attribute.
-	 * @see #isSetFullLoadCurrentAsString()
-	 * @see #unsetFullLoadCurrentAsString()
-	 * @see #setFullLoadCurrentAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcElectricalBaseProperties_FullLoadCurrentAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getFullLoadCurrentAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getFullLoadCurrentAsString <em>Full Load Current As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Full Load Current As String</em>' attribute.
-	 * @see #isSetFullLoadCurrentAsString()
-	 * @see #unsetFullLoadCurrentAsString()
-	 * @see #getFullLoadCurrentAsString()
-	 * @generated
-	 */
-	void setFullLoadCurrentAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getFullLoadCurrentAsString <em>Full Load Current As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetFullLoadCurrentAsString()
-	 * @see #getFullLoadCurrentAsString()
-	 * @see #setFullLoadCurrentAsString(String)
-	 * @generated
-	 */
-	void unsetFullLoadCurrentAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getFullLoadCurrentAsString <em>Full Load Current As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Full Load Current As String</em>' attribute is set.
-	 * @see #unsetFullLoadCurrentAsString()
-	 * @see #getFullLoadCurrentAsString()
-	 * @see #setFullLoadCurrentAsString(String)
-	 * @generated
-	 */
-	boolean isSetFullLoadCurrentAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Minimum Circuit Current</b></em>' attribute.
+	 * Returns the value of the '<em><b>Minimum Circuit Current</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Minimum Circuit Current</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Minimum Circuit Current</em>' attribute.
+	 * @return the value of the '<em>Minimum Circuit Current</em>' reference.
 	 * @see #isSetMinimumCircuitCurrent()
 	 * @see #unsetMinimumCircuitCurrent()
-	 * @see #setMinimumCircuitCurrent(float)
+	 * @see #setMinimumCircuitCurrent(IfcElectricCurrentMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcElectricalBaseProperties_MinimumCircuitCurrent()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getMinimumCircuitCurrent();
+	IfcElectricCurrentMeasure getMinimumCircuitCurrent();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getMinimumCircuitCurrent <em>Minimum Circuit Current</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getMinimumCircuitCurrent <em>Minimum Circuit Current</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Minimum Circuit Current</em>' attribute.
+	 * @param value the new value of the '<em>Minimum Circuit Current</em>' reference.
 	 * @see #isSetMinimumCircuitCurrent()
 	 * @see #unsetMinimumCircuitCurrent()
 	 * @see #getMinimumCircuitCurrent()
 	 * @generated
 	 */
-	void setMinimumCircuitCurrent(float value);
+	void setMinimumCircuitCurrent(IfcElectricCurrentMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getMinimumCircuitCurrent <em>Minimum Circuit Current</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getMinimumCircuitCurrent <em>Minimum Circuit Current</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetMinimumCircuitCurrent()
 	 * @see #getMinimumCircuitCurrent()
-	 * @see #setMinimumCircuitCurrent(float)
+	 * @see #setMinimumCircuitCurrent(IfcElectricCurrentMeasure)
 	 * @generated
 	 */
 	void unsetMinimumCircuitCurrent();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getMinimumCircuitCurrent <em>Minimum Circuit Current</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getMinimumCircuitCurrent <em>Minimum Circuit Current</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Minimum Circuit Current</em>' attribute is set.
+	 * @return whether the value of the '<em>Minimum Circuit Current</em>' reference is set.
 	 * @see #unsetMinimumCircuitCurrent()
 	 * @see #getMinimumCircuitCurrent()
-	 * @see #setMinimumCircuitCurrent(float)
+	 * @see #setMinimumCircuitCurrent(IfcElectricCurrentMeasure)
 	 * @generated
 	 */
 	boolean isSetMinimumCircuitCurrent();
 
 	/**
-	 * Returns the value of the '<em><b>Minimum Circuit Current As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Minimum Circuit Current As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Minimum Circuit Current As String</em>' attribute.
-	 * @see #isSetMinimumCircuitCurrentAsString()
-	 * @see #unsetMinimumCircuitCurrentAsString()
-	 * @see #setMinimumCircuitCurrentAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcElectricalBaseProperties_MinimumCircuitCurrentAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getMinimumCircuitCurrentAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getMinimumCircuitCurrentAsString <em>Minimum Circuit Current As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Minimum Circuit Current As String</em>' attribute.
-	 * @see #isSetMinimumCircuitCurrentAsString()
-	 * @see #unsetMinimumCircuitCurrentAsString()
-	 * @see #getMinimumCircuitCurrentAsString()
-	 * @generated
-	 */
-	void setMinimumCircuitCurrentAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getMinimumCircuitCurrentAsString <em>Minimum Circuit Current As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetMinimumCircuitCurrentAsString()
-	 * @see #getMinimumCircuitCurrentAsString()
-	 * @see #setMinimumCircuitCurrentAsString(String)
-	 * @generated
-	 */
-	void unsetMinimumCircuitCurrentAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getMinimumCircuitCurrentAsString <em>Minimum Circuit Current As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Minimum Circuit Current As String</em>' attribute is set.
-	 * @see #unsetMinimumCircuitCurrentAsString()
-	 * @see #getMinimumCircuitCurrentAsString()
-	 * @see #setMinimumCircuitCurrentAsString(String)
-	 * @generated
-	 */
-	boolean isSetMinimumCircuitCurrentAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Maximum Power Input</b></em>' attribute.
+	 * Returns the value of the '<em><b>Maximum Power Input</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Maximum Power Input</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Maximum Power Input</em>' attribute.
+	 * @return the value of the '<em>Maximum Power Input</em>' reference.
 	 * @see #isSetMaximumPowerInput()
 	 * @see #unsetMaximumPowerInput()
-	 * @see #setMaximumPowerInput(float)
+	 * @see #setMaximumPowerInput(IfcPowerMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcElectricalBaseProperties_MaximumPowerInput()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getMaximumPowerInput();
+	IfcPowerMeasure getMaximumPowerInput();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getMaximumPowerInput <em>Maximum Power Input</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getMaximumPowerInput <em>Maximum Power Input</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Maximum Power Input</em>' attribute.
+	 * @param value the new value of the '<em>Maximum Power Input</em>' reference.
 	 * @see #isSetMaximumPowerInput()
 	 * @see #unsetMaximumPowerInput()
 	 * @see #getMaximumPowerInput()
 	 * @generated
 	 */
-	void setMaximumPowerInput(float value);
+	void setMaximumPowerInput(IfcPowerMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getMaximumPowerInput <em>Maximum Power Input</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getMaximumPowerInput <em>Maximum Power Input</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetMaximumPowerInput()
 	 * @see #getMaximumPowerInput()
-	 * @see #setMaximumPowerInput(float)
+	 * @see #setMaximumPowerInput(IfcPowerMeasure)
 	 * @generated
 	 */
 	void unsetMaximumPowerInput();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getMaximumPowerInput <em>Maximum Power Input</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getMaximumPowerInput <em>Maximum Power Input</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Maximum Power Input</em>' attribute is set.
+	 * @return whether the value of the '<em>Maximum Power Input</em>' reference is set.
 	 * @see #unsetMaximumPowerInput()
 	 * @see #getMaximumPowerInput()
-	 * @see #setMaximumPowerInput(float)
+	 * @see #setMaximumPowerInput(IfcPowerMeasure)
 	 * @generated
 	 */
 	boolean isSetMaximumPowerInput();
 
 	/**
-	 * Returns the value of the '<em><b>Maximum Power Input As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Maximum Power Input As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Maximum Power Input As String</em>' attribute.
-	 * @see #isSetMaximumPowerInputAsString()
-	 * @see #unsetMaximumPowerInputAsString()
-	 * @see #setMaximumPowerInputAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcElectricalBaseProperties_MaximumPowerInputAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getMaximumPowerInputAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getMaximumPowerInputAsString <em>Maximum Power Input As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Maximum Power Input As String</em>' attribute.
-	 * @see #isSetMaximumPowerInputAsString()
-	 * @see #unsetMaximumPowerInputAsString()
-	 * @see #getMaximumPowerInputAsString()
-	 * @generated
-	 */
-	void setMaximumPowerInputAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getMaximumPowerInputAsString <em>Maximum Power Input As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetMaximumPowerInputAsString()
-	 * @see #getMaximumPowerInputAsString()
-	 * @see #setMaximumPowerInputAsString(String)
-	 * @generated
-	 */
-	void unsetMaximumPowerInputAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getMaximumPowerInputAsString <em>Maximum Power Input As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Maximum Power Input As String</em>' attribute is set.
-	 * @see #unsetMaximumPowerInputAsString()
-	 * @see #getMaximumPowerInputAsString()
-	 * @see #setMaximumPowerInputAsString(String)
-	 * @generated
-	 */
-	boolean isSetMaximumPowerInputAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Rated Power Input</b></em>' attribute.
+	 * Returns the value of the '<em><b>Rated Power Input</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Rated Power Input</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Rated Power Input</em>' attribute.
+	 * @return the value of the '<em>Rated Power Input</em>' reference.
 	 * @see #isSetRatedPowerInput()
 	 * @see #unsetRatedPowerInput()
-	 * @see #setRatedPowerInput(float)
+	 * @see #setRatedPowerInput(IfcPowerMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcElectricalBaseProperties_RatedPowerInput()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getRatedPowerInput();
+	IfcPowerMeasure getRatedPowerInput();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getRatedPowerInput <em>Rated Power Input</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getRatedPowerInput <em>Rated Power Input</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Rated Power Input</em>' attribute.
+	 * @param value the new value of the '<em>Rated Power Input</em>' reference.
 	 * @see #isSetRatedPowerInput()
 	 * @see #unsetRatedPowerInput()
 	 * @see #getRatedPowerInput()
 	 * @generated
 	 */
-	void setRatedPowerInput(float value);
+	void setRatedPowerInput(IfcPowerMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getRatedPowerInput <em>Rated Power Input</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getRatedPowerInput <em>Rated Power Input</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetRatedPowerInput()
 	 * @see #getRatedPowerInput()
-	 * @see #setRatedPowerInput(float)
+	 * @see #setRatedPowerInput(IfcPowerMeasure)
 	 * @generated
 	 */
 	void unsetRatedPowerInput();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getRatedPowerInput <em>Rated Power Input</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getRatedPowerInput <em>Rated Power Input</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Rated Power Input</em>' attribute is set.
+	 * @return whether the value of the '<em>Rated Power Input</em>' reference is set.
 	 * @see #unsetRatedPowerInput()
 	 * @see #getRatedPowerInput()
-	 * @see #setRatedPowerInput(float)
+	 * @see #setRatedPowerInput(IfcPowerMeasure)
 	 * @generated
 	 */
 	boolean isSetRatedPowerInput();
 
 	/**
-	 * Returns the value of the '<em><b>Rated Power Input As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Rated Power Input As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Rated Power Input As String</em>' attribute.
-	 * @see #isSetRatedPowerInputAsString()
-	 * @see #unsetRatedPowerInputAsString()
-	 * @see #setRatedPowerInputAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcElectricalBaseProperties_RatedPowerInputAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getRatedPowerInputAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getRatedPowerInputAsString <em>Rated Power Input As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Rated Power Input As String</em>' attribute.
-	 * @see #isSetRatedPowerInputAsString()
-	 * @see #unsetRatedPowerInputAsString()
-	 * @see #getRatedPowerInputAsString()
-	 * @generated
-	 */
-	void setRatedPowerInputAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getRatedPowerInputAsString <em>Rated Power Input As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetRatedPowerInputAsString()
-	 * @see #getRatedPowerInputAsString()
-	 * @see #setRatedPowerInputAsString(String)
-	 * @generated
-	 */
-	void unsetRatedPowerInputAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getRatedPowerInputAsString <em>Rated Power Input As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Rated Power Input As String</em>' attribute is set.
-	 * @see #unsetRatedPowerInputAsString()
-	 * @see #getRatedPowerInputAsString()
-	 * @see #setRatedPowerInputAsString(String)
-	 * @generated
-	 */
-	boolean isSetRatedPowerInputAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Input Phase</b></em>' attribute.
+	 * Returns the value of the '<em><b>Input Phase</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Input Phase</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Input Phase</em>' attribute.
-	 * @see #setInputPhase(int)
+	 * @return the value of the '<em>Input Phase</em>' reference.
+	 * @see #setInputPhase(IfcInteger)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcElectricalBaseProperties_InputPhase()
 	 * @model
 	 * @generated
 	 */
-	int getInputPhase();
+	IfcInteger getInputPhase();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getInputPhase <em>Input Phase</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties#getInputPhase <em>Input Phase</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Input Phase</em>' attribute.
+	 * @param value the new value of the '<em>Input Phase</em>' reference.
 	 * @see #getInputPhase()
 	 * @generated
 	 */
-	void setInputPhase(int value);
+	void setInputPhase(IfcInteger value);
 
 } // IfcElectricalBaseProperties

@@ -35,7 +35,6 @@ package org.bimserver.ifc.emf.Ifc2x3;
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcFillAreaStyleHatching#getPointOfReferenceHatchLine <em>Point Of Reference Hatch Line</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcFillAreaStyleHatching#getPatternStart <em>Pattern Start</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcFillAreaStyleHatching#getHatchLineAngle <em>Hatch Line Angle</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcFillAreaStyleHatching#getHatchLineAngleAsString <em>Hatch Line Angle As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -203,55 +202,29 @@ public interface IfcFillAreaStyleHatching extends IfcGeometricRepresentationItem
 	boolean isSetPatternStart();
 
 	/**
-	 * Returns the value of the '<em><b>Hatch Line Angle</b></em>' attribute.
+	 * Returns the value of the '<em><b>Hatch Line Angle</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Hatch Line Angle</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Hatch Line Angle</em>' attribute.
-	 * @see #setHatchLineAngle(float)
+	 * @return the value of the '<em>Hatch Line Angle</em>' reference.
+	 * @see #setHatchLineAngle(IfcPlaneAngleMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcFillAreaStyleHatching_HatchLineAngle()
 	 * @model
 	 * @generated
 	 */
-	float getHatchLineAngle();
+	IfcPlaneAngleMeasure getHatchLineAngle();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFillAreaStyleHatching#getHatchLineAngle <em>Hatch Line Angle</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFillAreaStyleHatching#getHatchLineAngle <em>Hatch Line Angle</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Hatch Line Angle</em>' attribute.
+	 * @param value the new value of the '<em>Hatch Line Angle</em>' reference.
 	 * @see #getHatchLineAngle()
 	 * @generated
 	 */
-	void setHatchLineAngle(float value);
-
-	/**
-	 * Returns the value of the '<em><b>Hatch Line Angle As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Hatch Line Angle As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Hatch Line Angle As String</em>' attribute.
-	 * @see #setHatchLineAngleAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcFillAreaStyleHatching_HatchLineAngleAsString()
-	 * @model
-	 * @generated
-	 */
-	String getHatchLineAngleAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFillAreaStyleHatching#getHatchLineAngleAsString <em>Hatch Line Angle As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Hatch Line Angle As String</em>' attribute.
-	 * @see #getHatchLineAngleAsString()
-	 * @generated
-	 */
-	void setHatchLineAngleAsString(String value);
+	void setHatchLineAngle(IfcPlaneAngleMeasure value);
 
 } // IfcFillAreaStyleHatching

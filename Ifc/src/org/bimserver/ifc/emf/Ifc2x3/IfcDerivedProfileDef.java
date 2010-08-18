@@ -94,54 +94,54 @@ public interface IfcDerivedProfileDef extends IfcProfileDef {
 	void setOperator(IfcCartesianTransformationOperator2D value);
 
 	/**
-	 * Returns the value of the '<em><b>Label</b></em>' attribute.
+	 * Returns the value of the '<em><b>Label</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Label</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Label</em>' attribute.
+	 * @return the value of the '<em>Label</em>' reference.
 	 * @see #isSetLabel()
 	 * @see #unsetLabel()
-	 * @see #setLabel(String)
+	 * @see #setLabel(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcDerivedProfileDef_Label()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getLabel();
+	IfcLabel getLabel();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDerivedProfileDef#getLabel <em>Label</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDerivedProfileDef#getLabel <em>Label</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Label</em>' attribute.
+	 * @param value the new value of the '<em>Label</em>' reference.
 	 * @see #isSetLabel()
 	 * @see #unsetLabel()
 	 * @see #getLabel()
 	 * @generated
 	 */
-	void setLabel(String value);
+	void setLabel(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDerivedProfileDef#getLabel <em>Label</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDerivedProfileDef#getLabel <em>Label</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetLabel()
 	 * @see #getLabel()
-	 * @see #setLabel(String)
+	 * @see #setLabel(IfcLabel)
 	 * @generated
 	 */
 	void unsetLabel();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDerivedProfileDef#getLabel <em>Label</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDerivedProfileDef#getLabel <em>Label</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Label</em>' attribute is set.
+	 * @return whether the value of the '<em>Label</em>' reference is set.
 	 * @see #unsetLabel()
 	 * @see #getLabel()
-	 * @see #setLabel(String)
+	 * @see #setLabel(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetLabel();

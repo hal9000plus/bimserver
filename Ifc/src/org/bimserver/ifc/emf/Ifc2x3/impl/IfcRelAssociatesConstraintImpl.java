@@ -24,7 +24,9 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcConstraint;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRelAssociatesConstraint;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -66,8 +68,8 @@ public class IfcRelAssociatesConstraintImpl extends IfcRelAssociatesImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getIntent() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcRelAssociatesConstraint_Intent(), true);
+	public IfcLabel getIntent() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcRelAssociatesConstraint_Intent(), true);
 	}
 
 	/**
@@ -75,7 +77,7 @@ public class IfcRelAssociatesConstraintImpl extends IfcRelAssociatesImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIntent(String newIntent) {
+	public void setIntent(IfcLabel newIntent) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcRelAssociatesConstraint_Intent(), newIntent);
 	}
 

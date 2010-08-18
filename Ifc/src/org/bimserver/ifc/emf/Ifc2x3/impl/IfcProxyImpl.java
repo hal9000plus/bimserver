@@ -23,8 +23,10 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
 import org.bimserver.ifc.emf.Ifc2x3.IfcObjectTypeEnum;
 import org.bimserver.ifc.emf.Ifc2x3.IfcProxy;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -84,8 +86,8 @@ public class IfcProxyImpl extends IfcProductImpl implements IfcProxy {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getTag() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcProxy_Tag(), true);
+	public IfcLabel getTag() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcProxy_Tag(), true);
 	}
 
 	/**
@@ -93,7 +95,7 @@ public class IfcProxyImpl extends IfcProductImpl implements IfcProxy {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTag(String newTag) {
+	public void setTag(IfcLabel newTag) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcProxy_Tag(), newTag);
 	}
 

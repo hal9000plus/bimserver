@@ -35,7 +35,7 @@
 //import org.bimserver.ModelConverter;
 //import org.bimserver.emf2codb.Database;
 //import org.bimserver.emf2codb.DatabaseReadException;
-//import org.bimserver.emf2codb.IfcModel;
+//import org.bimserver.emf2codb.EmfModel;
 //import org.bimserver.emf2codb.FieldIgnoreMap;
 //import org.bimserver.emf2codb.Session;
 //import org.bimserver.emf2codb.berkeley.BerkeleyColumnDatabase;
@@ -75,7 +75,7 @@
 //		pid = createProject("project");
 //		// pid = 2;
 //		IfcModel model = readModelFromFile(TestFile.WALL_ONLY.getFile());
-//		Revision checkInModel = checkInModel(ModelConverter.newIfcModel(model), pid, uid, TestFile.WALL_ONLY.getFile().getName());
+//		Revision checkInModel = checkInModel(ModelConverter.newEmfModel(model), pid, uid, TestFile.WALL_ONLY.getFile().getName());
 //		check(1);
 //
 //		ChangeSetResult processChangeSet = processChangeSet(new File("ChangeSetAuto.xml"));
@@ -85,7 +85,7 @@
 //	private void check(int rid) {
 //		File dataDir = new File("../BimServer/database");
 //		BerkeleyColumnDatabase columnDatabase = new BerkeleyColumnDatabase(dataDir);
-//		IfcModel newModel2 = downloadModel(pid, rid);
+//		EmfModel newModel2 = downloadModel(pid, rid);
 //		writeToFile(ModelConverter.newIfcModel(newModel2), new File("files" + File.separator + "test." + rid + ".ifc"));
 //	}
 //
@@ -98,10 +98,10 @@
 //		}
 //	}
 //
-//	private IfcModel downloadModel(int pid, int rid) {
+//	private EmfModel downloadModel(int pid, int rid) {
 //		Session session = new Session(database, "admin");
 //		try {
-//			IfcModel newModel = session.download(pid, rid);
+//			EmfModel newModel = session.download(pid, rid);
 //			return newModel;
 //		} catch (DatabaseReadException e) {
 //			e.printStackTrace();
@@ -111,7 +111,7 @@
 //		}
 //	}
 //
-//	private Revision checkInModel(IfcModel model, int pid, int uid, String comment) {
+//	private Revision checkInModel(EmfModel model, int pid, int uid, String comment) {
 //		Session session = new Session(database, "admin");
 //		try {
 //			Revision revision = session.checkin(model, pid, uid, comment);

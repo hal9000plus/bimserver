@@ -46,54 +46,54 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface IfcSpatialStructureElement extends IfcProduct {
 	/**
-	 * Returns the value of the '<em><b>Long Name</b></em>' attribute.
+	 * Returns the value of the '<em><b>Long Name</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Long Name</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Long Name</em>' attribute.
+	 * @return the value of the '<em>Long Name</em>' reference.
 	 * @see #isSetLongName()
 	 * @see #unsetLongName()
-	 * @see #setLongName(String)
+	 * @see #setLongName(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSpatialStructureElement_LongName()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getLongName();
+	IfcLabel getLongName();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpatialStructureElement#getLongName <em>Long Name</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpatialStructureElement#getLongName <em>Long Name</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Long Name</em>' attribute.
+	 * @param value the new value of the '<em>Long Name</em>' reference.
 	 * @see #isSetLongName()
 	 * @see #unsetLongName()
 	 * @see #getLongName()
 	 * @generated
 	 */
-	void setLongName(String value);
+	void setLongName(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpatialStructureElement#getLongName <em>Long Name</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpatialStructureElement#getLongName <em>Long Name</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetLongName()
 	 * @see #getLongName()
-	 * @see #setLongName(String)
+	 * @see #setLongName(IfcLabel)
 	 * @generated
 	 */
 	void unsetLongName();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpatialStructureElement#getLongName <em>Long Name</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpatialStructureElement#getLongName <em>Long Name</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Long Name</em>' attribute is set.
+	 * @return whether the value of the '<em>Long Name</em>' reference is set.
 	 * @see #unsetLongName()
 	 * @see #getLongName()
-	 * @see #setLongName(String)
+	 * @see #setLongName(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetLongName();

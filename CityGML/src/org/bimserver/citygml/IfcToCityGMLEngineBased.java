@@ -32,7 +32,7 @@
 //import javax.xml.bind.Marshaller;
 //
 //import org.bimserver.citygml.IfcToCityGML.Entity;
-//import org.bimserver.emf.IfcModel;
+//import org.bimserver.emf.BasicEmfModel;
 //import org.bimserver.ifc.IfcRootObject;
 //import org.bimserver.ifc.database.IfcDatabase;
 //import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Factory;
@@ -195,11 +195,11 @@
 //			// FastIfcFileReader fastIfcFileReader = new
 //			// FastIfcFileReader(schema);
 //			// fastIfcFileReader.read(testFile.getFile());
-//			// IfcModel IfcModel = fastIfcFileReader.getModel();
-//			// IfcSerializer ifcSerializer = new IfcSerializer(IfcModel,
+//			// EmfModel<Long> emfModel = fastIfcFileReader.getModel();
+//			// IfcSerializer ifcSerializer = new IfcSerializer(emfModel,
 //			// schema);
 //			// ifcSerializer.write(new File("test.ifc"));
-//			IfcModel<Integer> IfcModel = new IfcModel<Integer>(objects);
+//			BasicEmfModel<Integer> emfModel = new BasicEmfModel<Integer>(objects);
 //			System.out.println("2");
 //
 //			CityGMLContext ctx = new CityGMLContext();
@@ -218,7 +218,7 @@
 //			exterior.setSurface(compositeSurface);
 //			solid.setExterior(exterior);
 //
-//			IfcDatabase<Integer> ifcDatabase = new IfcDatabase<Integer>(IfcModel);
+//			IfcDatabase<Integer> ifcDatabase = new IfcDatabase<Integer>(emfModel);
 //			Map<EObject, CityObject> convertedObjects = new HashMap<EObject, CityObject>();
 //			for (IfcSpace ifcSpace : ifcDatabase.getAll(IfcSpace.class)) {
 //				if (convertedObjects.containsKey(ifcSpace)) {

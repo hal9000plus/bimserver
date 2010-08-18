@@ -24,8 +24,12 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcExtendedMaterialProperties;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
 import org.bimserver.ifc.emf.Ifc2x3.IfcProperty;
+import org.bimserver.ifc.emf.Ifc2x3.IfcText;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -78,8 +82,8 @@ public class IfcExtendedMaterialPropertiesImpl extends IfcMaterialPropertiesImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getDescription() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcExtendedMaterialProperties_Description(), true);
+	public IfcText getDescription() {
+		return (IfcText) eGet(Ifc2x3Package.eINSTANCE.getIfcExtendedMaterialProperties_Description(), true);
 	}
 
 	/**
@@ -87,7 +91,7 @@ public class IfcExtendedMaterialPropertiesImpl extends IfcMaterialPropertiesImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDescription(String newDescription) {
+	public void setDescription(IfcText newDescription) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcExtendedMaterialProperties_Description(), newDescription);
 	}
 
@@ -114,8 +118,8 @@ public class IfcExtendedMaterialPropertiesImpl extends IfcMaterialPropertiesImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcExtendedMaterialProperties_Name(), true);
+	public IfcLabel getName() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcExtendedMaterialProperties_Name(), true);
 	}
 
 	/**
@@ -123,7 +127,7 @@ public class IfcExtendedMaterialPropertiesImpl extends IfcMaterialPropertiesImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(String newName) {
+	public void setName(IfcLabel newName) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcExtendedMaterialProperties_Name(), newName);
 	}
 

@@ -26,7 +26,7 @@ import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcEdge;
 import org.bimserver.ifc.emf.Ifc2x3.IfcLogical;
 import org.bimserver.ifc.emf.Ifc2x3.IfcOrientedEdge;
-import org.bimserver.ifc.emf.Ifc2x3.Tristate;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -86,8 +86,8 @@ public class IfcOrientedEdgeImpl extends IfcEdgeImpl implements IfcOrientedEdge 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Tristate getOrientation() {
-		return (Tristate) eGet(Ifc2x3Package.eINSTANCE.getIfcOrientedEdge_Orientation(), true);
+	public IfcLogical getOrientation() {
+		return (IfcLogical) eGet(Ifc2x3Package.eINSTANCE.getIfcOrientedEdge_Orientation(), true);
 	}
 
 	/**
@@ -95,7 +95,7 @@ public class IfcOrientedEdgeImpl extends IfcEdgeImpl implements IfcOrientedEdge 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setOrientation(Tristate newOrientation) {
+	public void setOrientation(IfcLogical newOrientation) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcOrientedEdge_Orientation(), newOrientation);
 	}
 

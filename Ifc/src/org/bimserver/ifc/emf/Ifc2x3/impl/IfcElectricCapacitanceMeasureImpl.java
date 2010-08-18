@@ -24,6 +24,7 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcElectricCapacitanceMeasure;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -34,7 +35,7 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcElectricCapacitanceMeasureImpl#getWrappedValue <em>Wrapped Value</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcElectricCapacitanceMeasureImpl#getWrappedValueAsString <em>Wrapped Value As String</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcElectricCapacitanceMeasureImpl#getStringValuewrappedValue <em>String Valuewrapped Value</em>}</li>
  * </ul>
  * </p>
  *
@@ -83,8 +84,8 @@ public class IfcElectricCapacitanceMeasureImpl extends WrappedValueImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getWrappedValueAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcElectricCapacitanceMeasure_WrappedValueAsString(), true);
+	public String getStringValuewrappedValue() {
+		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcElectricCapacitanceMeasure_StringValuewrappedValue(), true);
 	}
 
 	/**
@@ -92,8 +93,8 @@ public class IfcElectricCapacitanceMeasureImpl extends WrappedValueImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setWrappedValueAsString(String newWrappedValueAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcElectricCapacitanceMeasure_WrappedValueAsString(), newWrappedValueAsString);
+	public void setStringValuewrappedValue(String newStringValuewrappedValue) {
+		eSet(Ifc2x3Package.eINSTANCE.getIfcElectricCapacitanceMeasure_StringValuewrappedValue(), newStringValuewrappedValue);
 	}
 
 } //IfcElectricCapacitanceMeasureImpl

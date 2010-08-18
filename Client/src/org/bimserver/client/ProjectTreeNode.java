@@ -24,7 +24,7 @@ import java.util.Enumeration;
 
 import javax.swing.tree.TreeNode;
 
-import org.bimserver.interfaces.objects.SProject;
+import org.bimserver.shared.SProject;
 
 public class ProjectTreeNode implements TreeNode {
 

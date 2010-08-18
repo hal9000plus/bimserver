@@ -38,7 +38,7 @@ import org.slf4j.LoggerFactory;
 
 public class IfcRioleringTest {
 	private static final Logger LOGGER = LoggerFactory.getLogger(IfcRioleringTest.class);
-	private IfcDatabase database;
+	private IfcDatabase<Long> database;
 
 	public static void main(String[] args) {
 		new IfcRioleringTest().start();
@@ -53,7 +53,7 @@ public class IfcRioleringTest {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		database = new IfcDatabase(ifcReader.getModel(), null);
+		database = new IfcDatabase<Long>(ifcReader.getModel(), null);
 		step1();
 	}
 
@@ -81,7 +81,7 @@ public class IfcRioleringTest {
 			if (distributionPort == originaldistributionPort) {
 				originalPortsFound++;
 			} else {
-				String name = distributionPort.getName();
+				String name = distributionPort.getName().getWrappedValue();
 				relevantPortsFound++;
 				LOGGER.info("Step 3: Port= " + relevantPortsFound + "DistributionPort = " + name);
 				step4((IfcDistributionPort) distributionPort);
@@ -103,7 +103,7 @@ public class IfcRioleringTest {
 
 	private void step5(IfcDistributionPort distributionPort) {
 		IfcElement unknown = distributionPort.getContainedIn().getRelatedElement();
-		String name = unknown.getName();
+		String name = unknown.getName().getWrappedValue();
 		if (unknown instanceof IfcFlowSegment) {
 			LOGGER.info("Step 5: FlowSegment = " + name);
 			step3(unknown, distributionPort);
@@ -125,7 +125,7 @@ public class IfcRioleringTest {
 			if (distributionPort == originalDistributionPort) {
 				originalPortsFound++;
 			} else {
-				String name = distributionPort.getName();
+				String name = distributionPort.getName().getWrappedValue();
 				LOGGER.info("Step 6: Port = " + relevantPortsFound + " DistributionPort = " + name);
 				step4(distributionPort);
 				relevantPortsFound++;

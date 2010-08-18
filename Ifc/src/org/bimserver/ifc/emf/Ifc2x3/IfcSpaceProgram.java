@@ -34,12 +34,9 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceProgram#getSpaceProgramIdentifier <em>Space Program Identifier</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceProgram#getMaxRequiredArea <em>Max Required Area</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceProgram#getMaxRequiredAreaAsString <em>Max Required Area As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceProgram#getMinRequiredArea <em>Min Required Area</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceProgram#getMinRequiredAreaAsString <em>Min Required Area As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceProgram#getRequestedLocation <em>Requested Location</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceProgram#getStandardRequiredArea <em>Standard Required Area</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceProgram#getStandardRequiredAreaAsString <em>Standard Required Area As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceProgram#getHasInteractionReqsFrom <em>Has Interaction Reqs From</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceProgram#getHasInteractionReqsTo <em>Has Interaction Reqs To</em>}</li>
  * </ul>
@@ -51,242 +48,136 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface IfcSpaceProgram extends IfcControl {
 	/**
-	 * Returns the value of the '<em><b>Space Program Identifier</b></em>' attribute.
+	 * Returns the value of the '<em><b>Space Program Identifier</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Space Program Identifier</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Space Program Identifier</em>' attribute.
-	 * @see #setSpaceProgramIdentifier(String)
+	 * @return the value of the '<em>Space Program Identifier</em>' reference.
+	 * @see #setSpaceProgramIdentifier(IfcIdentifier)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSpaceProgram_SpaceProgramIdentifier()
 	 * @model
 	 * @generated
 	 */
-	String getSpaceProgramIdentifier();
+	IfcIdentifier getSpaceProgramIdentifier();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceProgram#getSpaceProgramIdentifier <em>Space Program Identifier</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceProgram#getSpaceProgramIdentifier <em>Space Program Identifier</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Space Program Identifier</em>' attribute.
+	 * @param value the new value of the '<em>Space Program Identifier</em>' reference.
 	 * @see #getSpaceProgramIdentifier()
 	 * @generated
 	 */
-	void setSpaceProgramIdentifier(String value);
+	void setSpaceProgramIdentifier(IfcIdentifier value);
 
 	/**
-	 * Returns the value of the '<em><b>Max Required Area</b></em>' attribute.
+	 * Returns the value of the '<em><b>Max Required Area</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Max Required Area</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Max Required Area</em>' attribute.
+	 * @return the value of the '<em>Max Required Area</em>' reference.
 	 * @see #isSetMaxRequiredArea()
 	 * @see #unsetMaxRequiredArea()
-	 * @see #setMaxRequiredArea(float)
+	 * @see #setMaxRequiredArea(IfcAreaMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSpaceProgram_MaxRequiredArea()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getMaxRequiredArea();
+	IfcAreaMeasure getMaxRequiredArea();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceProgram#getMaxRequiredArea <em>Max Required Area</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceProgram#getMaxRequiredArea <em>Max Required Area</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Max Required Area</em>' attribute.
+	 * @param value the new value of the '<em>Max Required Area</em>' reference.
 	 * @see #isSetMaxRequiredArea()
 	 * @see #unsetMaxRequiredArea()
 	 * @see #getMaxRequiredArea()
 	 * @generated
 	 */
-	void setMaxRequiredArea(float value);
+	void setMaxRequiredArea(IfcAreaMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceProgram#getMaxRequiredArea <em>Max Required Area</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceProgram#getMaxRequiredArea <em>Max Required Area</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetMaxRequiredArea()
 	 * @see #getMaxRequiredArea()
-	 * @see #setMaxRequiredArea(float)
+	 * @see #setMaxRequiredArea(IfcAreaMeasure)
 	 * @generated
 	 */
 	void unsetMaxRequiredArea();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceProgram#getMaxRequiredArea <em>Max Required Area</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceProgram#getMaxRequiredArea <em>Max Required Area</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Max Required Area</em>' attribute is set.
+	 * @return whether the value of the '<em>Max Required Area</em>' reference is set.
 	 * @see #unsetMaxRequiredArea()
 	 * @see #getMaxRequiredArea()
-	 * @see #setMaxRequiredArea(float)
+	 * @see #setMaxRequiredArea(IfcAreaMeasure)
 	 * @generated
 	 */
 	boolean isSetMaxRequiredArea();
 
 	/**
-	 * Returns the value of the '<em><b>Max Required Area As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Max Required Area As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Max Required Area As String</em>' attribute.
-	 * @see #isSetMaxRequiredAreaAsString()
-	 * @see #unsetMaxRequiredAreaAsString()
-	 * @see #setMaxRequiredAreaAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSpaceProgram_MaxRequiredAreaAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getMaxRequiredAreaAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceProgram#getMaxRequiredAreaAsString <em>Max Required Area As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Max Required Area As String</em>' attribute.
-	 * @see #isSetMaxRequiredAreaAsString()
-	 * @see #unsetMaxRequiredAreaAsString()
-	 * @see #getMaxRequiredAreaAsString()
-	 * @generated
-	 */
-	void setMaxRequiredAreaAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceProgram#getMaxRequiredAreaAsString <em>Max Required Area As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetMaxRequiredAreaAsString()
-	 * @see #getMaxRequiredAreaAsString()
-	 * @see #setMaxRequiredAreaAsString(String)
-	 * @generated
-	 */
-	void unsetMaxRequiredAreaAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceProgram#getMaxRequiredAreaAsString <em>Max Required Area As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Max Required Area As String</em>' attribute is set.
-	 * @see #unsetMaxRequiredAreaAsString()
-	 * @see #getMaxRequiredAreaAsString()
-	 * @see #setMaxRequiredAreaAsString(String)
-	 * @generated
-	 */
-	boolean isSetMaxRequiredAreaAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Min Required Area</b></em>' attribute.
+	 * Returns the value of the '<em><b>Min Required Area</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Min Required Area</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Min Required Area</em>' attribute.
+	 * @return the value of the '<em>Min Required Area</em>' reference.
 	 * @see #isSetMinRequiredArea()
 	 * @see #unsetMinRequiredArea()
-	 * @see #setMinRequiredArea(float)
+	 * @see #setMinRequiredArea(IfcAreaMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSpaceProgram_MinRequiredArea()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getMinRequiredArea();
+	IfcAreaMeasure getMinRequiredArea();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceProgram#getMinRequiredArea <em>Min Required Area</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceProgram#getMinRequiredArea <em>Min Required Area</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Min Required Area</em>' attribute.
+	 * @param value the new value of the '<em>Min Required Area</em>' reference.
 	 * @see #isSetMinRequiredArea()
 	 * @see #unsetMinRequiredArea()
 	 * @see #getMinRequiredArea()
 	 * @generated
 	 */
-	void setMinRequiredArea(float value);
+	void setMinRequiredArea(IfcAreaMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceProgram#getMinRequiredArea <em>Min Required Area</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceProgram#getMinRequiredArea <em>Min Required Area</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetMinRequiredArea()
 	 * @see #getMinRequiredArea()
-	 * @see #setMinRequiredArea(float)
+	 * @see #setMinRequiredArea(IfcAreaMeasure)
 	 * @generated
 	 */
 	void unsetMinRequiredArea();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceProgram#getMinRequiredArea <em>Min Required Area</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceProgram#getMinRequiredArea <em>Min Required Area</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Min Required Area</em>' attribute is set.
+	 * @return whether the value of the '<em>Min Required Area</em>' reference is set.
 	 * @see #unsetMinRequiredArea()
 	 * @see #getMinRequiredArea()
-	 * @see #setMinRequiredArea(float)
+	 * @see #setMinRequiredArea(IfcAreaMeasure)
 	 * @generated
 	 */
 	boolean isSetMinRequiredArea();
-
-	/**
-	 * Returns the value of the '<em><b>Min Required Area As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Min Required Area As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Min Required Area As String</em>' attribute.
-	 * @see #isSetMinRequiredAreaAsString()
-	 * @see #unsetMinRequiredAreaAsString()
-	 * @see #setMinRequiredAreaAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSpaceProgram_MinRequiredAreaAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getMinRequiredAreaAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceProgram#getMinRequiredAreaAsString <em>Min Required Area As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Min Required Area As String</em>' attribute.
-	 * @see #isSetMinRequiredAreaAsString()
-	 * @see #unsetMinRequiredAreaAsString()
-	 * @see #getMinRequiredAreaAsString()
-	 * @generated
-	 */
-	void setMinRequiredAreaAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceProgram#getMinRequiredAreaAsString <em>Min Required Area As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetMinRequiredAreaAsString()
-	 * @see #getMinRequiredAreaAsString()
-	 * @see #setMinRequiredAreaAsString(String)
-	 * @generated
-	 */
-	void unsetMinRequiredAreaAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceProgram#getMinRequiredAreaAsString <em>Min Required Area As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Min Required Area As String</em>' attribute is set.
-	 * @see #unsetMinRequiredAreaAsString()
-	 * @see #getMinRequiredAreaAsString()
-	 * @see #setMinRequiredAreaAsString(String)
-	 * @generated
-	 */
-	boolean isSetMinRequiredAreaAsString();
 
 	/**
 	 * Returns the value of the '<em><b>Requested Location</b></em>' reference.
@@ -342,56 +233,30 @@ public interface IfcSpaceProgram extends IfcControl {
 	boolean isSetRequestedLocation();
 
 	/**
-	 * Returns the value of the '<em><b>Standard Required Area</b></em>' attribute.
+	 * Returns the value of the '<em><b>Standard Required Area</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Standard Required Area</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Standard Required Area</em>' attribute.
-	 * @see #setStandardRequiredArea(float)
+	 * @return the value of the '<em>Standard Required Area</em>' reference.
+	 * @see #setStandardRequiredArea(IfcAreaMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSpaceProgram_StandardRequiredArea()
 	 * @model
 	 * @generated
 	 */
-	float getStandardRequiredArea();
+	IfcAreaMeasure getStandardRequiredArea();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceProgram#getStandardRequiredArea <em>Standard Required Area</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceProgram#getStandardRequiredArea <em>Standard Required Area</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Standard Required Area</em>' attribute.
+	 * @param value the new value of the '<em>Standard Required Area</em>' reference.
 	 * @see #getStandardRequiredArea()
 	 * @generated
 	 */
-	void setStandardRequiredArea(float value);
-
-	/**
-	 * Returns the value of the '<em><b>Standard Required Area As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Standard Required Area As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Standard Required Area As String</em>' attribute.
-	 * @see #setStandardRequiredAreaAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSpaceProgram_StandardRequiredAreaAsString()
-	 * @model
-	 * @generated
-	 */
-	String getStandardRequiredAreaAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceProgram#getStandardRequiredAreaAsString <em>Standard Required Area As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Standard Required Area As String</em>' attribute.
-	 * @see #getStandardRequiredAreaAsString()
-	 * @generated
-	 */
-	void setStandardRequiredAreaAsString(String value);
+	void setStandardRequiredArea(IfcAreaMeasure value);
 
 	/**
 	 * Returns the value of the '<em><b>Has Interaction Reqs From</b></em>' reference list.

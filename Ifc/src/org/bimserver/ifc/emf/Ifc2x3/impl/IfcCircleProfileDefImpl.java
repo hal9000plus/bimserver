@@ -24,6 +24,8 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcCircleProfileDef;
+import org.bimserver.ifc.emf.Ifc2x3.IfcPositiveLengthMeasure;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -34,7 +36,6 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcCircleProfileDefImpl#getRadius <em>Radius</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcCircleProfileDefImpl#getRadiusAsString <em>Radius As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -65,8 +66,8 @@ public class IfcCircleProfileDefImpl extends IfcParameterizedProfileDefImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getRadius() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcCircleProfileDef_Radius(), true);
+	public IfcPositiveLengthMeasure getRadius() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcCircleProfileDef_Radius(), true);
 	}
 
 	/**
@@ -74,26 +75,8 @@ public class IfcCircleProfileDefImpl extends IfcParameterizedProfileDefImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRadius(float newRadius) {
+	public void setRadius(IfcPositiveLengthMeasure newRadius) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcCircleProfileDef_Radius(), newRadius);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getRadiusAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcCircleProfileDef_RadiusAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRadiusAsString(String newRadiusAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcCircleProfileDef_RadiusAsString(), newRadiusAsString);
 	}
 
 } //IfcCircleProfileDefImpl

@@ -70,10 +70,8 @@ public class DataObject {
 		public SimpleDataValue(Object value) {
 			if (value instanceof String) {
 				stringValue = (String) value;
-			} else if (value != null) {
-				stringValue = value.toString();
 			} else {
-				stringValue = "";
+				stringValue = value.toString();
 			}
 		}
 

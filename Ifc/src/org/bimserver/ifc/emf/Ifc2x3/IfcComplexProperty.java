@@ -43,30 +43,30 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface IfcComplexProperty extends IfcProperty {
 	/**
-	 * Returns the value of the '<em><b>Usage Name</b></em>' attribute.
+	 * Returns the value of the '<em><b>Usage Name</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Usage Name</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Usage Name</em>' attribute.
-	 * @see #setUsageName(String)
+	 * @return the value of the '<em>Usage Name</em>' reference.
+	 * @see #setUsageName(IfcIdentifier)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcComplexProperty_UsageName()
 	 * @model
 	 * @generated
 	 */
-	String getUsageName();
+	IfcIdentifier getUsageName();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcComplexProperty#getUsageName <em>Usage Name</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcComplexProperty#getUsageName <em>Usage Name</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Usage Name</em>' attribute.
+	 * @param value the new value of the '<em>Usage Name</em>' reference.
 	 * @see #getUsageName()
 	 * @generated
 	 */
-	void setUsageName(String value);
+	void setUsageName(IfcIdentifier value);
 
 	/**
 	 * Returns the value of the '<em><b>Has Properties</b></em>' reference list.

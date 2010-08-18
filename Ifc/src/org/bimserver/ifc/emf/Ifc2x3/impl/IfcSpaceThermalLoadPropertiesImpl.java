@@ -23,11 +23,16 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
+import org.bimserver.ifc.emf.Ifc2x3.IfcPositiveRatioMeasure;
+import org.bimserver.ifc.emf.Ifc2x3.IfcPowerMeasure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcPropertySourceEnum;
 import org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties;
+import org.bimserver.ifc.emf.Ifc2x3.IfcText;
 import org.bimserver.ifc.emf.Ifc2x3.IfcThermalLoadSourceEnum;
 import org.bimserver.ifc.emf.Ifc2x3.IfcThermalLoadTypeEnum;
 import org.bimserver.ifc.emf.Ifc2x3.IfcTimeSeries;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -38,14 +43,11 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSpaceThermalLoadPropertiesImpl#getApplicableValueRatio <em>Applicable Value Ratio</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSpaceThermalLoadPropertiesImpl#getApplicableValueRatioAsString <em>Applicable Value Ratio As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSpaceThermalLoadPropertiesImpl#getThermalLoadSource <em>Thermal Load Source</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSpaceThermalLoadPropertiesImpl#getPropertySource <em>Property Source</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSpaceThermalLoadPropertiesImpl#getSourceDescription <em>Source Description</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSpaceThermalLoadPropertiesImpl#getMaximumValue <em>Maximum Value</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSpaceThermalLoadPropertiesImpl#getMaximumValueAsString <em>Maximum Value As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSpaceThermalLoadPropertiesImpl#getMinimumValue <em>Minimum Value</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSpaceThermalLoadPropertiesImpl#getMinimumValueAsString <em>Minimum Value As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSpaceThermalLoadPropertiesImpl#getThermalLoadTimeSeriesValues <em>Thermal Load Time Series Values</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSpaceThermalLoadPropertiesImpl#getUserDefinedThermalLoadSource <em>User Defined Thermal Load Source</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSpaceThermalLoadPropertiesImpl#getUserDefinedPropertySource <em>User Defined Property Source</em>}</li>
@@ -80,8 +82,8 @@ public class IfcSpaceThermalLoadPropertiesImpl extends IfcPropertySetDefinitionI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getApplicableValueRatio() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcSpaceThermalLoadProperties_ApplicableValueRatio(), true);
+	public IfcPositiveRatioMeasure getApplicableValueRatio() {
+		return (IfcPositiveRatioMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcSpaceThermalLoadProperties_ApplicableValueRatio(), true);
 	}
 
 	/**
@@ -89,7 +91,7 @@ public class IfcSpaceThermalLoadPropertiesImpl extends IfcPropertySetDefinitionI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setApplicableValueRatio(float newApplicableValueRatio) {
+	public void setApplicableValueRatio(IfcPositiveRatioMeasure newApplicableValueRatio) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcSpaceThermalLoadProperties_ApplicableValueRatio(), newApplicableValueRatio);
 	}
 
@@ -109,42 +111,6 @@ public class IfcSpaceThermalLoadPropertiesImpl extends IfcPropertySetDefinitionI
 	 */
 	public boolean isSetApplicableValueRatio() {
 		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcSpaceThermalLoadProperties_ApplicableValueRatio());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getApplicableValueRatioAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcSpaceThermalLoadProperties_ApplicableValueRatioAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setApplicableValueRatioAsString(String newApplicableValueRatioAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcSpaceThermalLoadProperties_ApplicableValueRatioAsString(), newApplicableValueRatioAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetApplicableValueRatioAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcSpaceThermalLoadProperties_ApplicableValueRatioAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetApplicableValueRatioAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcSpaceThermalLoadProperties_ApplicableValueRatioAsString());
 	}
 
 	/**
@@ -188,8 +154,8 @@ public class IfcSpaceThermalLoadPropertiesImpl extends IfcPropertySetDefinitionI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getSourceDescription() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcSpaceThermalLoadProperties_SourceDescription(), true);
+	public IfcText getSourceDescription() {
+		return (IfcText) eGet(Ifc2x3Package.eINSTANCE.getIfcSpaceThermalLoadProperties_SourceDescription(), true);
 	}
 
 	/**
@@ -197,7 +163,7 @@ public class IfcSpaceThermalLoadPropertiesImpl extends IfcPropertySetDefinitionI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSourceDescription(String newSourceDescription) {
+	public void setSourceDescription(IfcText newSourceDescription) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcSpaceThermalLoadProperties_SourceDescription(), newSourceDescription);
 	}
 
@@ -224,8 +190,8 @@ public class IfcSpaceThermalLoadPropertiesImpl extends IfcPropertySetDefinitionI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getMaximumValue() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcSpaceThermalLoadProperties_MaximumValue(), true);
+	public IfcPowerMeasure getMaximumValue() {
+		return (IfcPowerMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcSpaceThermalLoadProperties_MaximumValue(), true);
 	}
 
 	/**
@@ -233,7 +199,7 @@ public class IfcSpaceThermalLoadPropertiesImpl extends IfcPropertySetDefinitionI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMaximumValue(float newMaximumValue) {
+	public void setMaximumValue(IfcPowerMeasure newMaximumValue) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcSpaceThermalLoadProperties_MaximumValue(), newMaximumValue);
 	}
 
@@ -242,8 +208,8 @@ public class IfcSpaceThermalLoadPropertiesImpl extends IfcPropertySetDefinitionI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getMaximumValueAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcSpaceThermalLoadProperties_MaximumValueAsString(), true);
+	public IfcPowerMeasure getMinimumValue() {
+		return (IfcPowerMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcSpaceThermalLoadProperties_MinimumValue(), true);
 	}
 
 	/**
@@ -251,25 +217,7 @@ public class IfcSpaceThermalLoadPropertiesImpl extends IfcPropertySetDefinitionI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMaximumValueAsString(String newMaximumValueAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcSpaceThermalLoadProperties_MaximumValueAsString(), newMaximumValueAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getMinimumValue() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcSpaceThermalLoadProperties_MinimumValue(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setMinimumValue(float newMinimumValue) {
+	public void setMinimumValue(IfcPowerMeasure newMinimumValue) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcSpaceThermalLoadProperties_MinimumValue(), newMinimumValue);
 	}
 
@@ -289,42 +237,6 @@ public class IfcSpaceThermalLoadPropertiesImpl extends IfcPropertySetDefinitionI
 	 */
 	public boolean isSetMinimumValue() {
 		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcSpaceThermalLoadProperties_MinimumValue());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getMinimumValueAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcSpaceThermalLoadProperties_MinimumValueAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setMinimumValueAsString(String newMinimumValueAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcSpaceThermalLoadProperties_MinimumValueAsString(), newMinimumValueAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetMinimumValueAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcSpaceThermalLoadProperties_MinimumValueAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetMinimumValueAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcSpaceThermalLoadProperties_MinimumValueAsString());
 	}
 
 	/**
@@ -368,8 +280,8 @@ public class IfcSpaceThermalLoadPropertiesImpl extends IfcPropertySetDefinitionI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getUserDefinedThermalLoadSource() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcSpaceThermalLoadProperties_UserDefinedThermalLoadSource(), true);
+	public IfcLabel getUserDefinedThermalLoadSource() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcSpaceThermalLoadProperties_UserDefinedThermalLoadSource(), true);
 	}
 
 	/**
@@ -377,7 +289,7 @@ public class IfcSpaceThermalLoadPropertiesImpl extends IfcPropertySetDefinitionI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUserDefinedThermalLoadSource(String newUserDefinedThermalLoadSource) {
+	public void setUserDefinedThermalLoadSource(IfcLabel newUserDefinedThermalLoadSource) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcSpaceThermalLoadProperties_UserDefinedThermalLoadSource(), newUserDefinedThermalLoadSource);
 	}
 
@@ -404,8 +316,8 @@ public class IfcSpaceThermalLoadPropertiesImpl extends IfcPropertySetDefinitionI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getUserDefinedPropertySource() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcSpaceThermalLoadProperties_UserDefinedPropertySource(), true);
+	public IfcLabel getUserDefinedPropertySource() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcSpaceThermalLoadProperties_UserDefinedPropertySource(), true);
 	}
 
 	/**
@@ -413,7 +325,7 @@ public class IfcSpaceThermalLoadPropertiesImpl extends IfcPropertySetDefinitionI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUserDefinedPropertySource(String newUserDefinedPropertySource) {
+	public void setUserDefinedPropertySource(IfcLabel newUserDefinedPropertySource) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcSpaceThermalLoadProperties_UserDefinedPropertySource(), newUserDefinedPropertySource);
 	}
 

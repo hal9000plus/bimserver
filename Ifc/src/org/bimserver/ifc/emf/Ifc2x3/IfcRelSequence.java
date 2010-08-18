@@ -33,7 +33,6 @@ package org.bimserver.ifc.emf.Ifc2x3;
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelSequence#getRelatingProcess <em>Relating Process</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelSequence#getRelatedProcess <em>Related Process</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelSequence#getTimeLag <em>Time Lag</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelSequence#getTimeLagAsString <em>Time Lag As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelSequence#getSequenceType <em>Sequence Type</em>}</li>
  * </ul>
  * </p>
@@ -100,56 +99,30 @@ public interface IfcRelSequence extends IfcRelConnects {
 	void setRelatedProcess(IfcProcess value);
 
 	/**
-	 * Returns the value of the '<em><b>Time Lag</b></em>' attribute.
+	 * Returns the value of the '<em><b>Time Lag</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Time Lag</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Time Lag</em>' attribute.
-	 * @see #setTimeLag(float)
+	 * @return the value of the '<em>Time Lag</em>' reference.
+	 * @see #setTimeLag(IfcTimeMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRelSequence_TimeLag()
 	 * @model
 	 * @generated
 	 */
-	float getTimeLag();
+	IfcTimeMeasure getTimeLag();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelSequence#getTimeLag <em>Time Lag</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelSequence#getTimeLag <em>Time Lag</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Time Lag</em>' attribute.
+	 * @param value the new value of the '<em>Time Lag</em>' reference.
 	 * @see #getTimeLag()
 	 * @generated
 	 */
-	void setTimeLag(float value);
-
-	/**
-	 * Returns the value of the '<em><b>Time Lag As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Time Lag As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Time Lag As String</em>' attribute.
-	 * @see #setTimeLagAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRelSequence_TimeLagAsString()
-	 * @model
-	 * @generated
-	 */
-	String getTimeLagAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelSequence#getTimeLagAsString <em>Time Lag As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Time Lag As String</em>' attribute.
-	 * @see #getTimeLagAsString()
-	 * @generated
-	 */
-	void setTimeLagAsString(String value);
+	void setTimeLag(IfcTimeMeasure value);
 
 	/**
 	 * Returns the value of the '<em><b>Sequence Type</b></em>' attribute.

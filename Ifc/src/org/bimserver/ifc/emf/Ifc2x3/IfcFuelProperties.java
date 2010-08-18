@@ -31,13 +31,9 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcFuelProperties#getCombustionTemperature <em>Combustion Temperature</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcFuelProperties#getCombustionTemperatureAsString <em>Combustion Temperature As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcFuelProperties#getCarbonContent <em>Carbon Content</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcFuelProperties#getCarbonContentAsString <em>Carbon Content As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcFuelProperties#getLowerHeatingValue <em>Lower Heating Value</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcFuelProperties#getLowerHeatingValueAsString <em>Lower Heating Value As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcFuelProperties#getHigherHeatingValue <em>Higher Heating Value</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcFuelProperties#getHigherHeatingValueAsString <em>Higher Heating Value As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -47,427 +43,215 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcFuelProperties extends IfcMaterialProperties {
 	/**
-	 * Returns the value of the '<em><b>Combustion Temperature</b></em>' attribute.
+	 * Returns the value of the '<em><b>Combustion Temperature</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Combustion Temperature</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Combustion Temperature</em>' attribute.
+	 * @return the value of the '<em>Combustion Temperature</em>' reference.
 	 * @see #isSetCombustionTemperature()
 	 * @see #unsetCombustionTemperature()
-	 * @see #setCombustionTemperature(float)
+	 * @see #setCombustionTemperature(IfcThermodynamicTemperatureMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcFuelProperties_CombustionTemperature()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getCombustionTemperature();
+	IfcThermodynamicTemperatureMeasure getCombustionTemperature();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFuelProperties#getCombustionTemperature <em>Combustion Temperature</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFuelProperties#getCombustionTemperature <em>Combustion Temperature</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Combustion Temperature</em>' attribute.
+	 * @param value the new value of the '<em>Combustion Temperature</em>' reference.
 	 * @see #isSetCombustionTemperature()
 	 * @see #unsetCombustionTemperature()
 	 * @see #getCombustionTemperature()
 	 * @generated
 	 */
-	void setCombustionTemperature(float value);
+	void setCombustionTemperature(IfcThermodynamicTemperatureMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFuelProperties#getCombustionTemperature <em>Combustion Temperature</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFuelProperties#getCombustionTemperature <em>Combustion Temperature</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetCombustionTemperature()
 	 * @see #getCombustionTemperature()
-	 * @see #setCombustionTemperature(float)
+	 * @see #setCombustionTemperature(IfcThermodynamicTemperatureMeasure)
 	 * @generated
 	 */
 	void unsetCombustionTemperature();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFuelProperties#getCombustionTemperature <em>Combustion Temperature</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFuelProperties#getCombustionTemperature <em>Combustion Temperature</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Combustion Temperature</em>' attribute is set.
+	 * @return whether the value of the '<em>Combustion Temperature</em>' reference is set.
 	 * @see #unsetCombustionTemperature()
 	 * @see #getCombustionTemperature()
-	 * @see #setCombustionTemperature(float)
+	 * @see #setCombustionTemperature(IfcThermodynamicTemperatureMeasure)
 	 * @generated
 	 */
 	boolean isSetCombustionTemperature();
 
 	/**
-	 * Returns the value of the '<em><b>Combustion Temperature As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Combustion Temperature As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Combustion Temperature As String</em>' attribute.
-	 * @see #isSetCombustionTemperatureAsString()
-	 * @see #unsetCombustionTemperatureAsString()
-	 * @see #setCombustionTemperatureAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcFuelProperties_CombustionTemperatureAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getCombustionTemperatureAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFuelProperties#getCombustionTemperatureAsString <em>Combustion Temperature As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Combustion Temperature As String</em>' attribute.
-	 * @see #isSetCombustionTemperatureAsString()
-	 * @see #unsetCombustionTemperatureAsString()
-	 * @see #getCombustionTemperatureAsString()
-	 * @generated
-	 */
-	void setCombustionTemperatureAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFuelProperties#getCombustionTemperatureAsString <em>Combustion Temperature As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetCombustionTemperatureAsString()
-	 * @see #getCombustionTemperatureAsString()
-	 * @see #setCombustionTemperatureAsString(String)
-	 * @generated
-	 */
-	void unsetCombustionTemperatureAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFuelProperties#getCombustionTemperatureAsString <em>Combustion Temperature As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Combustion Temperature As String</em>' attribute is set.
-	 * @see #unsetCombustionTemperatureAsString()
-	 * @see #getCombustionTemperatureAsString()
-	 * @see #setCombustionTemperatureAsString(String)
-	 * @generated
-	 */
-	boolean isSetCombustionTemperatureAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Carbon Content</b></em>' attribute.
+	 * Returns the value of the '<em><b>Carbon Content</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Carbon Content</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Carbon Content</em>' attribute.
+	 * @return the value of the '<em>Carbon Content</em>' reference.
 	 * @see #isSetCarbonContent()
 	 * @see #unsetCarbonContent()
-	 * @see #setCarbonContent(float)
+	 * @see #setCarbonContent(IfcPositiveRatioMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcFuelProperties_CarbonContent()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getCarbonContent();
+	IfcPositiveRatioMeasure getCarbonContent();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFuelProperties#getCarbonContent <em>Carbon Content</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFuelProperties#getCarbonContent <em>Carbon Content</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Carbon Content</em>' attribute.
+	 * @param value the new value of the '<em>Carbon Content</em>' reference.
 	 * @see #isSetCarbonContent()
 	 * @see #unsetCarbonContent()
 	 * @see #getCarbonContent()
 	 * @generated
 	 */
-	void setCarbonContent(float value);
+	void setCarbonContent(IfcPositiveRatioMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFuelProperties#getCarbonContent <em>Carbon Content</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFuelProperties#getCarbonContent <em>Carbon Content</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetCarbonContent()
 	 * @see #getCarbonContent()
-	 * @see #setCarbonContent(float)
+	 * @see #setCarbonContent(IfcPositiveRatioMeasure)
 	 * @generated
 	 */
 	void unsetCarbonContent();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFuelProperties#getCarbonContent <em>Carbon Content</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFuelProperties#getCarbonContent <em>Carbon Content</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Carbon Content</em>' attribute is set.
+	 * @return whether the value of the '<em>Carbon Content</em>' reference is set.
 	 * @see #unsetCarbonContent()
 	 * @see #getCarbonContent()
-	 * @see #setCarbonContent(float)
+	 * @see #setCarbonContent(IfcPositiveRatioMeasure)
 	 * @generated
 	 */
 	boolean isSetCarbonContent();
 
 	/**
-	 * Returns the value of the '<em><b>Carbon Content As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Carbon Content As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Carbon Content As String</em>' attribute.
-	 * @see #isSetCarbonContentAsString()
-	 * @see #unsetCarbonContentAsString()
-	 * @see #setCarbonContentAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcFuelProperties_CarbonContentAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getCarbonContentAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFuelProperties#getCarbonContentAsString <em>Carbon Content As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Carbon Content As String</em>' attribute.
-	 * @see #isSetCarbonContentAsString()
-	 * @see #unsetCarbonContentAsString()
-	 * @see #getCarbonContentAsString()
-	 * @generated
-	 */
-	void setCarbonContentAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFuelProperties#getCarbonContentAsString <em>Carbon Content As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetCarbonContentAsString()
-	 * @see #getCarbonContentAsString()
-	 * @see #setCarbonContentAsString(String)
-	 * @generated
-	 */
-	void unsetCarbonContentAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFuelProperties#getCarbonContentAsString <em>Carbon Content As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Carbon Content As String</em>' attribute is set.
-	 * @see #unsetCarbonContentAsString()
-	 * @see #getCarbonContentAsString()
-	 * @see #setCarbonContentAsString(String)
-	 * @generated
-	 */
-	boolean isSetCarbonContentAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Lower Heating Value</b></em>' attribute.
+	 * Returns the value of the '<em><b>Lower Heating Value</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Lower Heating Value</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Lower Heating Value</em>' attribute.
+	 * @return the value of the '<em>Lower Heating Value</em>' reference.
 	 * @see #isSetLowerHeatingValue()
 	 * @see #unsetLowerHeatingValue()
-	 * @see #setLowerHeatingValue(float)
+	 * @see #setLowerHeatingValue(IfcHeatingValueMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcFuelProperties_LowerHeatingValue()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getLowerHeatingValue();
+	IfcHeatingValueMeasure getLowerHeatingValue();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFuelProperties#getLowerHeatingValue <em>Lower Heating Value</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFuelProperties#getLowerHeatingValue <em>Lower Heating Value</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Lower Heating Value</em>' attribute.
+	 * @param value the new value of the '<em>Lower Heating Value</em>' reference.
 	 * @see #isSetLowerHeatingValue()
 	 * @see #unsetLowerHeatingValue()
 	 * @see #getLowerHeatingValue()
 	 * @generated
 	 */
-	void setLowerHeatingValue(float value);
+	void setLowerHeatingValue(IfcHeatingValueMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFuelProperties#getLowerHeatingValue <em>Lower Heating Value</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFuelProperties#getLowerHeatingValue <em>Lower Heating Value</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetLowerHeatingValue()
 	 * @see #getLowerHeatingValue()
-	 * @see #setLowerHeatingValue(float)
+	 * @see #setLowerHeatingValue(IfcHeatingValueMeasure)
 	 * @generated
 	 */
 	void unsetLowerHeatingValue();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFuelProperties#getLowerHeatingValue <em>Lower Heating Value</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFuelProperties#getLowerHeatingValue <em>Lower Heating Value</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Lower Heating Value</em>' attribute is set.
+	 * @return whether the value of the '<em>Lower Heating Value</em>' reference is set.
 	 * @see #unsetLowerHeatingValue()
 	 * @see #getLowerHeatingValue()
-	 * @see #setLowerHeatingValue(float)
+	 * @see #setLowerHeatingValue(IfcHeatingValueMeasure)
 	 * @generated
 	 */
 	boolean isSetLowerHeatingValue();
 
 	/**
-	 * Returns the value of the '<em><b>Lower Heating Value As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Lower Heating Value As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Lower Heating Value As String</em>' attribute.
-	 * @see #isSetLowerHeatingValueAsString()
-	 * @see #unsetLowerHeatingValueAsString()
-	 * @see #setLowerHeatingValueAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcFuelProperties_LowerHeatingValueAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getLowerHeatingValueAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFuelProperties#getLowerHeatingValueAsString <em>Lower Heating Value As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Lower Heating Value As String</em>' attribute.
-	 * @see #isSetLowerHeatingValueAsString()
-	 * @see #unsetLowerHeatingValueAsString()
-	 * @see #getLowerHeatingValueAsString()
-	 * @generated
-	 */
-	void setLowerHeatingValueAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFuelProperties#getLowerHeatingValueAsString <em>Lower Heating Value As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetLowerHeatingValueAsString()
-	 * @see #getLowerHeatingValueAsString()
-	 * @see #setLowerHeatingValueAsString(String)
-	 * @generated
-	 */
-	void unsetLowerHeatingValueAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFuelProperties#getLowerHeatingValueAsString <em>Lower Heating Value As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Lower Heating Value As String</em>' attribute is set.
-	 * @see #unsetLowerHeatingValueAsString()
-	 * @see #getLowerHeatingValueAsString()
-	 * @see #setLowerHeatingValueAsString(String)
-	 * @generated
-	 */
-	boolean isSetLowerHeatingValueAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Higher Heating Value</b></em>' attribute.
+	 * Returns the value of the '<em><b>Higher Heating Value</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Higher Heating Value</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Higher Heating Value</em>' attribute.
+	 * @return the value of the '<em>Higher Heating Value</em>' reference.
 	 * @see #isSetHigherHeatingValue()
 	 * @see #unsetHigherHeatingValue()
-	 * @see #setHigherHeatingValue(float)
+	 * @see #setHigherHeatingValue(IfcHeatingValueMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcFuelProperties_HigherHeatingValue()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getHigherHeatingValue();
+	IfcHeatingValueMeasure getHigherHeatingValue();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFuelProperties#getHigherHeatingValue <em>Higher Heating Value</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFuelProperties#getHigherHeatingValue <em>Higher Heating Value</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Higher Heating Value</em>' attribute.
+	 * @param value the new value of the '<em>Higher Heating Value</em>' reference.
 	 * @see #isSetHigherHeatingValue()
 	 * @see #unsetHigherHeatingValue()
 	 * @see #getHigherHeatingValue()
 	 * @generated
 	 */
-	void setHigherHeatingValue(float value);
+	void setHigherHeatingValue(IfcHeatingValueMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFuelProperties#getHigherHeatingValue <em>Higher Heating Value</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFuelProperties#getHigherHeatingValue <em>Higher Heating Value</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetHigherHeatingValue()
 	 * @see #getHigherHeatingValue()
-	 * @see #setHigherHeatingValue(float)
+	 * @see #setHigherHeatingValue(IfcHeatingValueMeasure)
 	 * @generated
 	 */
 	void unsetHigherHeatingValue();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFuelProperties#getHigherHeatingValue <em>Higher Heating Value</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFuelProperties#getHigherHeatingValue <em>Higher Heating Value</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Higher Heating Value</em>' attribute is set.
+	 * @return whether the value of the '<em>Higher Heating Value</em>' reference is set.
 	 * @see #unsetHigherHeatingValue()
 	 * @see #getHigherHeatingValue()
-	 * @see #setHigherHeatingValue(float)
+	 * @see #setHigherHeatingValue(IfcHeatingValueMeasure)
 	 * @generated
 	 */
 	boolean isSetHigherHeatingValue();
-
-	/**
-	 * Returns the value of the '<em><b>Higher Heating Value As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Higher Heating Value As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Higher Heating Value As String</em>' attribute.
-	 * @see #isSetHigherHeatingValueAsString()
-	 * @see #unsetHigherHeatingValueAsString()
-	 * @see #setHigherHeatingValueAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcFuelProperties_HigherHeatingValueAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getHigherHeatingValueAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFuelProperties#getHigherHeatingValueAsString <em>Higher Heating Value As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Higher Heating Value As String</em>' attribute.
-	 * @see #isSetHigherHeatingValueAsString()
-	 * @see #unsetHigherHeatingValueAsString()
-	 * @see #getHigherHeatingValueAsString()
-	 * @generated
-	 */
-	void setHigherHeatingValueAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFuelProperties#getHigherHeatingValueAsString <em>Higher Heating Value As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetHigherHeatingValueAsString()
-	 * @see #getHigherHeatingValueAsString()
-	 * @see #setHigherHeatingValueAsString(String)
-	 * @generated
-	 */
-	void unsetHigherHeatingValueAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFuelProperties#getHigherHeatingValueAsString <em>Higher Heating Value As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Higher Heating Value As String</em>' attribute is set.
-	 * @see #unsetHigherHeatingValueAsString()
-	 * @see #getHigherHeatingValueAsString()
-	 * @see #setHigherHeatingValueAsString(String)
-	 * @generated
-	 */
-	boolean isSetHigherHeatingValueAsString();
 
 } // IfcFuelProperties

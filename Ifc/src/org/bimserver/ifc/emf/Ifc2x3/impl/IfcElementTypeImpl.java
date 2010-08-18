@@ -24,6 +24,8 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcElementType;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -64,8 +66,8 @@ public class IfcElementTypeImpl extends IfcTypeProductImpl implements IfcElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getElementType() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcElementType_ElementType(), true);
+	public IfcLabel getElementType() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcElementType_ElementType(), true);
 	}
 
 	/**
@@ -73,7 +75,7 @@ public class IfcElementTypeImpl extends IfcTypeProductImpl implements IfcElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setElementType(String newElementType) {
+	public void setElementType(IfcLabel newElementType) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcElementType_ElementType(), newElementType);
 	}
 

@@ -244,8 +244,8 @@ public enum IfcActuatorTypeEnum implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final IfcActuatorTypeEnum[] VALUES_ARRAY = new IfcActuatorTypeEnum[] { NULL, ELECTRICACTUATOR, NOTDEFINED, PNEUMATICACTUATOR, HANDOPERATEDACTUATOR,
-			THERMOSTATICACTUATOR, USERDEFINED, HYDRAULICACTUATOR, };
+	private static final IfcActuatorTypeEnum[] VALUES_ARRAY = new IfcActuatorTypeEnum[] { NULL, ELECTRICACTUATOR, NOTDEFINED, PNEUMATICACTUATOR,
+			HANDOPERATEDACTUATOR, THERMOSTATICACTUATOR, USERDEFINED, HYDRAULICACTUATOR, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Ifc Actuator Type Enum</b></em>' enumerators.

@@ -26,6 +26,7 @@ import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcCartesianTransformationOperator2D;
 import org.bimserver.ifc.emf.Ifc2x3.IfcDefinedSymbol;
 import org.bimserver.ifc.emf.Ifc2x3.IfcDefinedSymbolSelect;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

@@ -129,33 +129,30 @@ public interface IfcStructuralResultGroup extends IfcGroup {
 	boolean isSetResultForLoadGroup();
 
 	/**
-	 * Returns the value of the '<em><b>Is Linear</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.bimserver.ifc.emf.Ifc2x3.Tristate}.
+	 * Returns the value of the '<em><b>Is Linear</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Is Linear</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Is Linear</em>' attribute.
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Tristate
-	 * @see #setIsLinear(Tristate)
+	 * @return the value of the '<em>Is Linear</em>' reference.
+	 * @see #setIsLinear(IfcLogical)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralResultGroup_IsLinear()
 	 * @model
 	 * @generated
 	 */
-	Tristate getIsLinear();
+	IfcLogical getIsLinear();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralResultGroup#getIsLinear <em>Is Linear</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralResultGroup#getIsLinear <em>Is Linear</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Is Linear</em>' attribute.
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Tristate
+	 * @param value the new value of the '<em>Is Linear</em>' reference.
 	 * @see #getIsLinear()
 	 * @generated
 	 */
-	void setIsLinear(Tristate value);
+	void setIsLinear(IfcLogical value);
 
 	/**
 	 * Returns the value of the '<em><b>Result Group For</b></em>' reference list.

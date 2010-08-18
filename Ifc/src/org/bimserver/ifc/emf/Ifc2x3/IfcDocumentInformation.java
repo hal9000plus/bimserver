@@ -60,106 +60,106 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface IfcDocumentInformation extends IfcDocumentSelect {
 	/**
-	 * Returns the value of the '<em><b>Document Id</b></em>' attribute.
+	 * Returns the value of the '<em><b>Document Id</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Document Id</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Document Id</em>' attribute.
-	 * @see #setDocumentId(String)
+	 * @return the value of the '<em>Document Id</em>' reference.
+	 * @see #setDocumentId(IfcIdentifier)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcDocumentInformation_DocumentId()
 	 * @model
 	 * @generated
 	 */
-	String getDocumentId();
+	IfcIdentifier getDocumentId();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentInformation#getDocumentId <em>Document Id</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentInformation#getDocumentId <em>Document Id</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Document Id</em>' attribute.
+	 * @param value the new value of the '<em>Document Id</em>' reference.
 	 * @see #getDocumentId()
 	 * @generated
 	 */
-	void setDocumentId(String value);
+	void setDocumentId(IfcIdentifier value);
 
 	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * Returns the value of the '<em><b>Name</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Name</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
+	 * @return the value of the '<em>Name</em>' reference.
+	 * @see #setName(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcDocumentInformation_Name()
 	 * @model
 	 * @generated
 	 */
-	String getName();
+	IfcLabel getName();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentInformation#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentInformation#getName <em>Name</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @param value the new value of the '<em>Name</em>' reference.
 	 * @see #getName()
 	 * @generated
 	 */
-	void setName(String value);
+	void setName(IfcLabel value);
 
 	/**
-	 * Returns the value of the '<em><b>Description</b></em>' attribute.
+	 * Returns the value of the '<em><b>Description</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Description</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Description</em>' attribute.
+	 * @return the value of the '<em>Description</em>' reference.
 	 * @see #isSetDescription()
 	 * @see #unsetDescription()
-	 * @see #setDescription(String)
+	 * @see #setDescription(IfcText)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcDocumentInformation_Description()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getDescription();
+	IfcText getDescription();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentInformation#getDescription <em>Description</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentInformation#getDescription <em>Description</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Description</em>' attribute.
+	 * @param value the new value of the '<em>Description</em>' reference.
 	 * @see #isSetDescription()
 	 * @see #unsetDescription()
 	 * @see #getDescription()
 	 * @generated
 	 */
-	void setDescription(String value);
+	void setDescription(IfcText value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentInformation#getDescription <em>Description</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentInformation#getDescription <em>Description</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetDescription()
 	 * @see #getDescription()
-	 * @see #setDescription(String)
+	 * @see #setDescription(IfcText)
 	 * @generated
 	 */
 	void unsetDescription();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentInformation#getDescription <em>Description</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentInformation#getDescription <em>Description</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Description</em>' attribute is set.
+	 * @return whether the value of the '<em>Description</em>' reference is set.
 	 * @see #unsetDescription()
 	 * @see #getDescription()
-	 * @see #setDescription(String)
+	 * @see #setDescription(IfcText)
 	 * @generated
 	 */
 	boolean isSetDescription();
@@ -206,213 +206,213 @@ public interface IfcDocumentInformation extends IfcDocumentSelect {
 	boolean isSetDocumentReferences();
 
 	/**
-	 * Returns the value of the '<em><b>Purpose</b></em>' attribute.
+	 * Returns the value of the '<em><b>Purpose</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Purpose</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Purpose</em>' attribute.
+	 * @return the value of the '<em>Purpose</em>' reference.
 	 * @see #isSetPurpose()
 	 * @see #unsetPurpose()
-	 * @see #setPurpose(String)
+	 * @see #setPurpose(IfcText)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcDocumentInformation_Purpose()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getPurpose();
+	IfcText getPurpose();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentInformation#getPurpose <em>Purpose</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentInformation#getPurpose <em>Purpose</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Purpose</em>' attribute.
+	 * @param value the new value of the '<em>Purpose</em>' reference.
 	 * @see #isSetPurpose()
 	 * @see #unsetPurpose()
 	 * @see #getPurpose()
 	 * @generated
 	 */
-	void setPurpose(String value);
+	void setPurpose(IfcText value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentInformation#getPurpose <em>Purpose</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentInformation#getPurpose <em>Purpose</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetPurpose()
 	 * @see #getPurpose()
-	 * @see #setPurpose(String)
+	 * @see #setPurpose(IfcText)
 	 * @generated
 	 */
 	void unsetPurpose();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentInformation#getPurpose <em>Purpose</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentInformation#getPurpose <em>Purpose</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Purpose</em>' attribute is set.
+	 * @return whether the value of the '<em>Purpose</em>' reference is set.
 	 * @see #unsetPurpose()
 	 * @see #getPurpose()
-	 * @see #setPurpose(String)
+	 * @see #setPurpose(IfcText)
 	 * @generated
 	 */
 	boolean isSetPurpose();
 
 	/**
-	 * Returns the value of the '<em><b>Intended Use</b></em>' attribute.
+	 * Returns the value of the '<em><b>Intended Use</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Intended Use</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Intended Use</em>' attribute.
+	 * @return the value of the '<em>Intended Use</em>' reference.
 	 * @see #isSetIntendedUse()
 	 * @see #unsetIntendedUse()
-	 * @see #setIntendedUse(String)
+	 * @see #setIntendedUse(IfcText)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcDocumentInformation_IntendedUse()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getIntendedUse();
+	IfcText getIntendedUse();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentInformation#getIntendedUse <em>Intended Use</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentInformation#getIntendedUse <em>Intended Use</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Intended Use</em>' attribute.
+	 * @param value the new value of the '<em>Intended Use</em>' reference.
 	 * @see #isSetIntendedUse()
 	 * @see #unsetIntendedUse()
 	 * @see #getIntendedUse()
 	 * @generated
 	 */
-	void setIntendedUse(String value);
+	void setIntendedUse(IfcText value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentInformation#getIntendedUse <em>Intended Use</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentInformation#getIntendedUse <em>Intended Use</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetIntendedUse()
 	 * @see #getIntendedUse()
-	 * @see #setIntendedUse(String)
+	 * @see #setIntendedUse(IfcText)
 	 * @generated
 	 */
 	void unsetIntendedUse();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentInformation#getIntendedUse <em>Intended Use</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentInformation#getIntendedUse <em>Intended Use</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Intended Use</em>' attribute is set.
+	 * @return whether the value of the '<em>Intended Use</em>' reference is set.
 	 * @see #unsetIntendedUse()
 	 * @see #getIntendedUse()
-	 * @see #setIntendedUse(String)
+	 * @see #setIntendedUse(IfcText)
 	 * @generated
 	 */
 	boolean isSetIntendedUse();
 
 	/**
-	 * Returns the value of the '<em><b>Scope</b></em>' attribute.
+	 * Returns the value of the '<em><b>Scope</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Scope</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Scope</em>' attribute.
+	 * @return the value of the '<em>Scope</em>' reference.
 	 * @see #isSetScope()
 	 * @see #unsetScope()
-	 * @see #setScope(String)
+	 * @see #setScope(IfcText)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcDocumentInformation_Scope()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getScope();
+	IfcText getScope();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentInformation#getScope <em>Scope</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentInformation#getScope <em>Scope</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Scope</em>' attribute.
+	 * @param value the new value of the '<em>Scope</em>' reference.
 	 * @see #isSetScope()
 	 * @see #unsetScope()
 	 * @see #getScope()
 	 * @generated
 	 */
-	void setScope(String value);
+	void setScope(IfcText value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentInformation#getScope <em>Scope</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentInformation#getScope <em>Scope</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetScope()
 	 * @see #getScope()
-	 * @see #setScope(String)
+	 * @see #setScope(IfcText)
 	 * @generated
 	 */
 	void unsetScope();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentInformation#getScope <em>Scope</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentInformation#getScope <em>Scope</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Scope</em>' attribute is set.
+	 * @return whether the value of the '<em>Scope</em>' reference is set.
 	 * @see #unsetScope()
 	 * @see #getScope()
-	 * @see #setScope(String)
+	 * @see #setScope(IfcText)
 	 * @generated
 	 */
 	boolean isSetScope();
 
 	/**
-	 * Returns the value of the '<em><b>Revision</b></em>' attribute.
+	 * Returns the value of the '<em><b>Revision</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Revision</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Revision</em>' attribute.
+	 * @return the value of the '<em>Revision</em>' reference.
 	 * @see #isSetRevision()
 	 * @see #unsetRevision()
-	 * @see #setRevision(String)
+	 * @see #setRevision(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcDocumentInformation_Revision()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getRevision();
+	IfcLabel getRevision();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentInformation#getRevision <em>Revision</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentInformation#getRevision <em>Revision</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Revision</em>' attribute.
+	 * @param value the new value of the '<em>Revision</em>' reference.
 	 * @see #isSetRevision()
 	 * @see #unsetRevision()
 	 * @see #getRevision()
 	 * @generated
 	 */
-	void setRevision(String value);
+	void setRevision(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentInformation#getRevision <em>Revision</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentInformation#getRevision <em>Revision</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetRevision()
 	 * @see #getRevision()
-	 * @see #setRevision(String)
+	 * @see #setRevision(IfcLabel)
 	 * @generated
 	 */
 	void unsetRevision();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentInformation#getRevision <em>Revision</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentInformation#getRevision <em>Revision</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Revision</em>' attribute is set.
+	 * @return whether the value of the '<em>Revision</em>' reference is set.
 	 * @see #unsetRevision()
 	 * @see #getRevision()
-	 * @see #setRevision(String)
+	 * @see #setRevision(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetRevision();

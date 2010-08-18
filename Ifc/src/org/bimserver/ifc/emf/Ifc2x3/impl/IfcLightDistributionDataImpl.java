@@ -22,11 +22,16 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
-import org.bimserver.emf.IdEObjectImpl;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcLightDistributionData;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLuminousIntensityDistributionMeasure;
+import org.bimserver.ifc.emf.Ifc2x3.IfcPlaneAngleMeasure;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,17 +41,14 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcLightDistributionDataImpl#getMainPlaneAngle <em>Main Plane Angle</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcLightDistributionDataImpl#getMainPlaneAngleAsString <em>Main Plane Angle As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcLightDistributionDataImpl#getSecondaryPlaneAngle <em>Secondary Plane Angle</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcLightDistributionDataImpl#getSecondaryPlaneAngleAsString <em>Secondary Plane Angle As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcLightDistributionDataImpl#getLuminousIntensity <em>Luminous Intensity</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcLightDistributionDataImpl#getLuminousIntensityAsString <em>Luminous Intensity As String</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class IfcLightDistributionDataImpl extends IdEObjectImpl implements IfcLightDistributionData {
+public class IfcLightDistributionDataImpl extends EObjectImpl implements IfcLightDistributionData {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -81,8 +83,8 @@ public class IfcLightDistributionDataImpl extends IdEObjectImpl implements IfcLi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getMainPlaneAngle() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcLightDistributionData_MainPlaneAngle(), true);
+	public IfcPlaneAngleMeasure getMainPlaneAngle() {
+		return (IfcPlaneAngleMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcLightDistributionData_MainPlaneAngle(), true);
 	}
 
 	/**
@@ -90,7 +92,7 @@ public class IfcLightDistributionDataImpl extends IdEObjectImpl implements IfcLi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMainPlaneAngle(float newMainPlaneAngle) {
+	public void setMainPlaneAngle(IfcPlaneAngleMeasure newMainPlaneAngle) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcLightDistributionData_MainPlaneAngle(), newMainPlaneAngle);
 	}
 
@@ -99,17 +101,9 @@ public class IfcLightDistributionDataImpl extends IdEObjectImpl implements IfcLi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getMainPlaneAngleAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcLightDistributionData_MainPlaneAngleAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setMainPlaneAngleAsString(String newMainPlaneAngleAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcLightDistributionData_MainPlaneAngleAsString(), newMainPlaneAngleAsString);
+	@SuppressWarnings("unchecked")
+	public EList<IfcPlaneAngleMeasure> getSecondaryPlaneAngle() {
+		return (EList<IfcPlaneAngleMeasure>) eGet(Ifc2x3Package.eINSTANCE.getIfcLightDistributionData_SecondaryPlaneAngle(), true);
 	}
 
 	/**
@@ -118,38 +112,8 @@ public class IfcLightDistributionDataImpl extends IdEObjectImpl implements IfcLi
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<Float> getSecondaryPlaneAngle() {
-		return (EList<Float>) eGet(Ifc2x3Package.eINSTANCE.getIfcLightDistributionData_SecondaryPlaneAngle(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<String> getSecondaryPlaneAngleAsString() {
-		return (EList<String>) eGet(Ifc2x3Package.eINSTANCE.getIfcLightDistributionData_SecondaryPlaneAngleAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<Float> getLuminousIntensity() {
-		return (EList<Float>) eGet(Ifc2x3Package.eINSTANCE.getIfcLightDistributionData_LuminousIntensity(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<String> getLuminousIntensityAsString() {
-		return (EList<String>) eGet(Ifc2x3Package.eINSTANCE.getIfcLightDistributionData_LuminousIntensityAsString(), true);
+	public EList<IfcLuminousIntensityDistributionMeasure> getLuminousIntensity() {
+		return (EList<IfcLuminousIntensityDistributionMeasure>) eGet(Ifc2x3Package.eINSTANCE.getIfcLightDistributionData_LuminousIntensity(), true);
 	}
 
 } //IfcLightDistributionDataImpl

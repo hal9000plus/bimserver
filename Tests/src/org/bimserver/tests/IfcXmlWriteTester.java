@@ -1,13 +1,11 @@
 package org.bimserver.tests;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 
-import nl.tue.buildingsmart.emf.DerivedReader;
 import nl.tue.buildingsmart.express.dictionary.SchemaDefinition;
 import nl.tue.buildingsmart.express.parser.ExpressSchemaParser;
 
-import org.bimserver.ifc.IfcModel;
+import org.bimserver.emf.EmfModel;
 import org.bimserver.ifc.file.reader.FastIfcFileReader;
 import org.bimserver.ifc.file.reader.IfcFileReader;
 import org.bimserver.ifc.file.reader.IncorrectIfcFileException;
@@ -22,23 +20,17 @@ public class IfcXmlWriteTester {
 		ExpressSchemaParser schemaParser = new ExpressSchemaParser(IfcFileReader.DEFAULT_SCHEMA_FILE);
 		schemaParser.parse();
 		SchemaDefinition schema = schemaParser.getSchema();
-		try {
-			new DerivedReader(IfcFileReader.DEFAULT_SCHEMA_FILE, schema);
-		} catch (FileNotFoundException e1) {
-			e1.printStackTrace();
-		}
 		
 		FastIfcFileReader reader = new FastIfcFileReader(schema);
 		try {
 			reader.read(TestFile.HAUS_SOURCE_FILE.getFile());
-			// reader.read(TestFile.AC11.getFile());
 		} catch (IncorrectIfcFileException e) {
 			e.printStackTrace();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		IfcModel model = reader.getModel();
-		IfcXmlSerializer ifcXmlWriter = new IfcXmlSerializer("", model, schema);
+		EmfModel<Long> model = reader.getModel();
+		IfcXmlSerializer ifcXmlWriter = new IfcXmlSerializer(model, schema);
 		ifcXmlWriter.write(new File("test.xml"));
 	}
 }

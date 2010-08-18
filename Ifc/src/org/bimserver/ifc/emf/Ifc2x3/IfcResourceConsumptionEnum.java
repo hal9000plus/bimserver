@@ -269,8 +269,8 @@ public enum IfcResourceConsumptionEnum implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final IfcResourceConsumptionEnum[] VALUES_ARRAY = new IfcResourceConsumptionEnum[] { NULL, CONSUMED, NOTCONSUMED, NOTDEFINED, PARTIALLYCONSUMED, OCCUPIED,
-			USERDEFINED, NOTOCCUPIED, PARTIALLYOCCUPIED, };
+	private static final IfcResourceConsumptionEnum[] VALUES_ARRAY = new IfcResourceConsumptionEnum[] { NULL, CONSUMED, NOTCONSUMED, NOTDEFINED,
+			PARTIALLYCONSUMED, OCCUPIED, USERDEFINED, NOTOCCUPIED, PARTIALLYOCCUPIED, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Ifc Resource Consumption Enum</b></em>' enumerators.

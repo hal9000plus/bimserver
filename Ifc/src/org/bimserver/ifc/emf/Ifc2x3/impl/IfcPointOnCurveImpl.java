@@ -24,7 +24,10 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcCurve;
+import org.bimserver.ifc.emf.Ifc2x3.IfcDimensionCount;
+import org.bimserver.ifc.emf.Ifc2x3.IfcParameterValue;
 import org.bimserver.ifc.emf.Ifc2x3.IfcPointOnCurve;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -36,7 +39,6 @@ import org.eclipse.emf.ecore.EClass;
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcPointOnCurveImpl#getBasisCurve <em>Basis Curve</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcPointOnCurveImpl#getPointParameter <em>Point Parameter</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcPointOnCurveImpl#getPointParameterAsString <em>Point Parameter As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcPointOnCurveImpl#getDim <em>Dim</em>}</li>
  * </ul>
  * </p>
@@ -86,8 +88,8 @@ public class IfcPointOnCurveImpl extends IfcPointImpl implements IfcPointOnCurve
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getPointParameter() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcPointOnCurve_PointParameter(), true);
+	public IfcParameterValue getPointParameter() {
+		return (IfcParameterValue) eGet(Ifc2x3Package.eINSTANCE.getIfcPointOnCurve_PointParameter(), true);
 	}
 
 	/**
@@ -95,7 +97,7 @@ public class IfcPointOnCurveImpl extends IfcPointImpl implements IfcPointOnCurve
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPointParameter(float newPointParameter) {
+	public void setPointParameter(IfcParameterValue newPointParameter) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcPointOnCurve_PointParameter(), newPointParameter);
 	}
 
@@ -104,8 +106,8 @@ public class IfcPointOnCurveImpl extends IfcPointImpl implements IfcPointOnCurve
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getPointParameterAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcPointOnCurve_PointParameterAsString(), true);
+	public IfcDimensionCount getDim() {
+		return (IfcDimensionCount) eGet(Ifc2x3Package.eINSTANCE.getIfcPointOnCurve_Dim(), true);
 	}
 
 	/**
@@ -113,25 +115,7 @@ public class IfcPointOnCurveImpl extends IfcPointImpl implements IfcPointOnCurve
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPointParameterAsString(String newPointParameterAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcPointOnCurve_PointParameterAsString(), newPointParameterAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int getDim() {
-		return (Integer) eGet(Ifc2x3Package.eINSTANCE.getIfcPointOnCurve_Dim(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDim(int newDim) {
+	public void setDim(IfcDimensionCount newDim) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcPointOnCurve_Dim(), newDim);
 	}
 

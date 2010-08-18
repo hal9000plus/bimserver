@@ -31,17 +31,11 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearForceX <em>Linear Force X</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearForceXAsString <em>Linear Force XAs String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearForceY <em>Linear Force Y</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearForceYAsString <em>Linear Force YAs String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearForceZ <em>Linear Force Z</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearForceZAsString <em>Linear Force ZAs String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearMomentX <em>Linear Moment X</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearMomentXAsString <em>Linear Moment XAs String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearMomentY <em>Linear Moment Y</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearMomentYAsString <em>Linear Moment YAs String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearMomentZ <em>Linear Moment Z</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearMomentZAsString <em>Linear Moment ZAs String</em>}</li>
  * </ul>
  * </p>
  *
@@ -51,639 +45,321 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcStructuralLoadLinearForce extends IfcStructuralLoadStatic {
 	/**
-	 * Returns the value of the '<em><b>Linear Force X</b></em>' attribute.
+	 * Returns the value of the '<em><b>Linear Force X</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Linear Force X</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Linear Force X</em>' attribute.
+	 * @return the value of the '<em>Linear Force X</em>' reference.
 	 * @see #isSetLinearForceX()
 	 * @see #unsetLinearForceX()
-	 * @see #setLinearForceX(float)
+	 * @see #setLinearForceX(IfcLinearForceMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoadLinearForce_LinearForceX()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getLinearForceX();
+	IfcLinearForceMeasure getLinearForceX();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearForceX <em>Linear Force X</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearForceX <em>Linear Force X</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Linear Force X</em>' attribute.
+	 * @param value the new value of the '<em>Linear Force X</em>' reference.
 	 * @see #isSetLinearForceX()
 	 * @see #unsetLinearForceX()
 	 * @see #getLinearForceX()
 	 * @generated
 	 */
-	void setLinearForceX(float value);
+	void setLinearForceX(IfcLinearForceMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearForceX <em>Linear Force X</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearForceX <em>Linear Force X</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetLinearForceX()
 	 * @see #getLinearForceX()
-	 * @see #setLinearForceX(float)
+	 * @see #setLinearForceX(IfcLinearForceMeasure)
 	 * @generated
 	 */
 	void unsetLinearForceX();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearForceX <em>Linear Force X</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearForceX <em>Linear Force X</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Linear Force X</em>' attribute is set.
+	 * @return whether the value of the '<em>Linear Force X</em>' reference is set.
 	 * @see #unsetLinearForceX()
 	 * @see #getLinearForceX()
-	 * @see #setLinearForceX(float)
+	 * @see #setLinearForceX(IfcLinearForceMeasure)
 	 * @generated
 	 */
 	boolean isSetLinearForceX();
 
 	/**
-	 * Returns the value of the '<em><b>Linear Force XAs String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Linear Force XAs String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Linear Force XAs String</em>' attribute.
-	 * @see #isSetLinearForceXAsString()
-	 * @see #unsetLinearForceXAsString()
-	 * @see #setLinearForceXAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoadLinearForce_LinearForceXAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getLinearForceXAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearForceXAsString <em>Linear Force XAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Linear Force XAs String</em>' attribute.
-	 * @see #isSetLinearForceXAsString()
-	 * @see #unsetLinearForceXAsString()
-	 * @see #getLinearForceXAsString()
-	 * @generated
-	 */
-	void setLinearForceXAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearForceXAsString <em>Linear Force XAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetLinearForceXAsString()
-	 * @see #getLinearForceXAsString()
-	 * @see #setLinearForceXAsString(String)
-	 * @generated
-	 */
-	void unsetLinearForceXAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearForceXAsString <em>Linear Force XAs String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Linear Force XAs String</em>' attribute is set.
-	 * @see #unsetLinearForceXAsString()
-	 * @see #getLinearForceXAsString()
-	 * @see #setLinearForceXAsString(String)
-	 * @generated
-	 */
-	boolean isSetLinearForceXAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Linear Force Y</b></em>' attribute.
+	 * Returns the value of the '<em><b>Linear Force Y</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Linear Force Y</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Linear Force Y</em>' attribute.
+	 * @return the value of the '<em>Linear Force Y</em>' reference.
 	 * @see #isSetLinearForceY()
 	 * @see #unsetLinearForceY()
-	 * @see #setLinearForceY(float)
+	 * @see #setLinearForceY(IfcLinearForceMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoadLinearForce_LinearForceY()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getLinearForceY();
+	IfcLinearForceMeasure getLinearForceY();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearForceY <em>Linear Force Y</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearForceY <em>Linear Force Y</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Linear Force Y</em>' attribute.
+	 * @param value the new value of the '<em>Linear Force Y</em>' reference.
 	 * @see #isSetLinearForceY()
 	 * @see #unsetLinearForceY()
 	 * @see #getLinearForceY()
 	 * @generated
 	 */
-	void setLinearForceY(float value);
+	void setLinearForceY(IfcLinearForceMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearForceY <em>Linear Force Y</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearForceY <em>Linear Force Y</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetLinearForceY()
 	 * @see #getLinearForceY()
-	 * @see #setLinearForceY(float)
+	 * @see #setLinearForceY(IfcLinearForceMeasure)
 	 * @generated
 	 */
 	void unsetLinearForceY();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearForceY <em>Linear Force Y</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearForceY <em>Linear Force Y</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Linear Force Y</em>' attribute is set.
+	 * @return whether the value of the '<em>Linear Force Y</em>' reference is set.
 	 * @see #unsetLinearForceY()
 	 * @see #getLinearForceY()
-	 * @see #setLinearForceY(float)
+	 * @see #setLinearForceY(IfcLinearForceMeasure)
 	 * @generated
 	 */
 	boolean isSetLinearForceY();
 
 	/**
-	 * Returns the value of the '<em><b>Linear Force YAs String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Linear Force YAs String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Linear Force YAs String</em>' attribute.
-	 * @see #isSetLinearForceYAsString()
-	 * @see #unsetLinearForceYAsString()
-	 * @see #setLinearForceYAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoadLinearForce_LinearForceYAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getLinearForceYAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearForceYAsString <em>Linear Force YAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Linear Force YAs String</em>' attribute.
-	 * @see #isSetLinearForceYAsString()
-	 * @see #unsetLinearForceYAsString()
-	 * @see #getLinearForceYAsString()
-	 * @generated
-	 */
-	void setLinearForceYAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearForceYAsString <em>Linear Force YAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetLinearForceYAsString()
-	 * @see #getLinearForceYAsString()
-	 * @see #setLinearForceYAsString(String)
-	 * @generated
-	 */
-	void unsetLinearForceYAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearForceYAsString <em>Linear Force YAs String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Linear Force YAs String</em>' attribute is set.
-	 * @see #unsetLinearForceYAsString()
-	 * @see #getLinearForceYAsString()
-	 * @see #setLinearForceYAsString(String)
-	 * @generated
-	 */
-	boolean isSetLinearForceYAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Linear Force Z</b></em>' attribute.
+	 * Returns the value of the '<em><b>Linear Force Z</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Linear Force Z</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Linear Force Z</em>' attribute.
+	 * @return the value of the '<em>Linear Force Z</em>' reference.
 	 * @see #isSetLinearForceZ()
 	 * @see #unsetLinearForceZ()
-	 * @see #setLinearForceZ(float)
+	 * @see #setLinearForceZ(IfcLinearForceMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoadLinearForce_LinearForceZ()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getLinearForceZ();
+	IfcLinearForceMeasure getLinearForceZ();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearForceZ <em>Linear Force Z</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearForceZ <em>Linear Force Z</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Linear Force Z</em>' attribute.
+	 * @param value the new value of the '<em>Linear Force Z</em>' reference.
 	 * @see #isSetLinearForceZ()
 	 * @see #unsetLinearForceZ()
 	 * @see #getLinearForceZ()
 	 * @generated
 	 */
-	void setLinearForceZ(float value);
+	void setLinearForceZ(IfcLinearForceMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearForceZ <em>Linear Force Z</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearForceZ <em>Linear Force Z</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetLinearForceZ()
 	 * @see #getLinearForceZ()
-	 * @see #setLinearForceZ(float)
+	 * @see #setLinearForceZ(IfcLinearForceMeasure)
 	 * @generated
 	 */
 	void unsetLinearForceZ();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearForceZ <em>Linear Force Z</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearForceZ <em>Linear Force Z</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Linear Force Z</em>' attribute is set.
+	 * @return whether the value of the '<em>Linear Force Z</em>' reference is set.
 	 * @see #unsetLinearForceZ()
 	 * @see #getLinearForceZ()
-	 * @see #setLinearForceZ(float)
+	 * @see #setLinearForceZ(IfcLinearForceMeasure)
 	 * @generated
 	 */
 	boolean isSetLinearForceZ();
 
 	/**
-	 * Returns the value of the '<em><b>Linear Force ZAs String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Linear Force ZAs String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Linear Force ZAs String</em>' attribute.
-	 * @see #isSetLinearForceZAsString()
-	 * @see #unsetLinearForceZAsString()
-	 * @see #setLinearForceZAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoadLinearForce_LinearForceZAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getLinearForceZAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearForceZAsString <em>Linear Force ZAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Linear Force ZAs String</em>' attribute.
-	 * @see #isSetLinearForceZAsString()
-	 * @see #unsetLinearForceZAsString()
-	 * @see #getLinearForceZAsString()
-	 * @generated
-	 */
-	void setLinearForceZAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearForceZAsString <em>Linear Force ZAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetLinearForceZAsString()
-	 * @see #getLinearForceZAsString()
-	 * @see #setLinearForceZAsString(String)
-	 * @generated
-	 */
-	void unsetLinearForceZAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearForceZAsString <em>Linear Force ZAs String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Linear Force ZAs String</em>' attribute is set.
-	 * @see #unsetLinearForceZAsString()
-	 * @see #getLinearForceZAsString()
-	 * @see #setLinearForceZAsString(String)
-	 * @generated
-	 */
-	boolean isSetLinearForceZAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Linear Moment X</b></em>' attribute.
+	 * Returns the value of the '<em><b>Linear Moment X</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Linear Moment X</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Linear Moment X</em>' attribute.
+	 * @return the value of the '<em>Linear Moment X</em>' reference.
 	 * @see #isSetLinearMomentX()
 	 * @see #unsetLinearMomentX()
-	 * @see #setLinearMomentX(float)
+	 * @see #setLinearMomentX(IfcLinearMomentMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoadLinearForce_LinearMomentX()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getLinearMomentX();
+	IfcLinearMomentMeasure getLinearMomentX();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearMomentX <em>Linear Moment X</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearMomentX <em>Linear Moment X</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Linear Moment X</em>' attribute.
+	 * @param value the new value of the '<em>Linear Moment X</em>' reference.
 	 * @see #isSetLinearMomentX()
 	 * @see #unsetLinearMomentX()
 	 * @see #getLinearMomentX()
 	 * @generated
 	 */
-	void setLinearMomentX(float value);
+	void setLinearMomentX(IfcLinearMomentMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearMomentX <em>Linear Moment X</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearMomentX <em>Linear Moment X</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetLinearMomentX()
 	 * @see #getLinearMomentX()
-	 * @see #setLinearMomentX(float)
+	 * @see #setLinearMomentX(IfcLinearMomentMeasure)
 	 * @generated
 	 */
 	void unsetLinearMomentX();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearMomentX <em>Linear Moment X</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearMomentX <em>Linear Moment X</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Linear Moment X</em>' attribute is set.
+	 * @return whether the value of the '<em>Linear Moment X</em>' reference is set.
 	 * @see #unsetLinearMomentX()
 	 * @see #getLinearMomentX()
-	 * @see #setLinearMomentX(float)
+	 * @see #setLinearMomentX(IfcLinearMomentMeasure)
 	 * @generated
 	 */
 	boolean isSetLinearMomentX();
 
 	/**
-	 * Returns the value of the '<em><b>Linear Moment XAs String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Linear Moment XAs String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Linear Moment XAs String</em>' attribute.
-	 * @see #isSetLinearMomentXAsString()
-	 * @see #unsetLinearMomentXAsString()
-	 * @see #setLinearMomentXAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoadLinearForce_LinearMomentXAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getLinearMomentXAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearMomentXAsString <em>Linear Moment XAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Linear Moment XAs String</em>' attribute.
-	 * @see #isSetLinearMomentXAsString()
-	 * @see #unsetLinearMomentXAsString()
-	 * @see #getLinearMomentXAsString()
-	 * @generated
-	 */
-	void setLinearMomentXAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearMomentXAsString <em>Linear Moment XAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetLinearMomentXAsString()
-	 * @see #getLinearMomentXAsString()
-	 * @see #setLinearMomentXAsString(String)
-	 * @generated
-	 */
-	void unsetLinearMomentXAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearMomentXAsString <em>Linear Moment XAs String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Linear Moment XAs String</em>' attribute is set.
-	 * @see #unsetLinearMomentXAsString()
-	 * @see #getLinearMomentXAsString()
-	 * @see #setLinearMomentXAsString(String)
-	 * @generated
-	 */
-	boolean isSetLinearMomentXAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Linear Moment Y</b></em>' attribute.
+	 * Returns the value of the '<em><b>Linear Moment Y</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Linear Moment Y</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Linear Moment Y</em>' attribute.
+	 * @return the value of the '<em>Linear Moment Y</em>' reference.
 	 * @see #isSetLinearMomentY()
 	 * @see #unsetLinearMomentY()
-	 * @see #setLinearMomentY(float)
+	 * @see #setLinearMomentY(IfcLinearMomentMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoadLinearForce_LinearMomentY()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getLinearMomentY();
+	IfcLinearMomentMeasure getLinearMomentY();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearMomentY <em>Linear Moment Y</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearMomentY <em>Linear Moment Y</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Linear Moment Y</em>' attribute.
+	 * @param value the new value of the '<em>Linear Moment Y</em>' reference.
 	 * @see #isSetLinearMomentY()
 	 * @see #unsetLinearMomentY()
 	 * @see #getLinearMomentY()
 	 * @generated
 	 */
-	void setLinearMomentY(float value);
+	void setLinearMomentY(IfcLinearMomentMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearMomentY <em>Linear Moment Y</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearMomentY <em>Linear Moment Y</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetLinearMomentY()
 	 * @see #getLinearMomentY()
-	 * @see #setLinearMomentY(float)
+	 * @see #setLinearMomentY(IfcLinearMomentMeasure)
 	 * @generated
 	 */
 	void unsetLinearMomentY();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearMomentY <em>Linear Moment Y</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearMomentY <em>Linear Moment Y</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Linear Moment Y</em>' attribute is set.
+	 * @return whether the value of the '<em>Linear Moment Y</em>' reference is set.
 	 * @see #unsetLinearMomentY()
 	 * @see #getLinearMomentY()
-	 * @see #setLinearMomentY(float)
+	 * @see #setLinearMomentY(IfcLinearMomentMeasure)
 	 * @generated
 	 */
 	boolean isSetLinearMomentY();
 
 	/**
-	 * Returns the value of the '<em><b>Linear Moment YAs String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Linear Moment YAs String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Linear Moment YAs String</em>' attribute.
-	 * @see #isSetLinearMomentYAsString()
-	 * @see #unsetLinearMomentYAsString()
-	 * @see #setLinearMomentYAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoadLinearForce_LinearMomentYAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getLinearMomentYAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearMomentYAsString <em>Linear Moment YAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Linear Moment YAs String</em>' attribute.
-	 * @see #isSetLinearMomentYAsString()
-	 * @see #unsetLinearMomentYAsString()
-	 * @see #getLinearMomentYAsString()
-	 * @generated
-	 */
-	void setLinearMomentYAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearMomentYAsString <em>Linear Moment YAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetLinearMomentYAsString()
-	 * @see #getLinearMomentYAsString()
-	 * @see #setLinearMomentYAsString(String)
-	 * @generated
-	 */
-	void unsetLinearMomentYAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearMomentYAsString <em>Linear Moment YAs String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Linear Moment YAs String</em>' attribute is set.
-	 * @see #unsetLinearMomentYAsString()
-	 * @see #getLinearMomentYAsString()
-	 * @see #setLinearMomentYAsString(String)
-	 * @generated
-	 */
-	boolean isSetLinearMomentYAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Linear Moment Z</b></em>' attribute.
+	 * Returns the value of the '<em><b>Linear Moment Z</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Linear Moment Z</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Linear Moment Z</em>' attribute.
+	 * @return the value of the '<em>Linear Moment Z</em>' reference.
 	 * @see #isSetLinearMomentZ()
 	 * @see #unsetLinearMomentZ()
-	 * @see #setLinearMomentZ(float)
+	 * @see #setLinearMomentZ(IfcLinearMomentMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoadLinearForce_LinearMomentZ()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getLinearMomentZ();
+	IfcLinearMomentMeasure getLinearMomentZ();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearMomentZ <em>Linear Moment Z</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearMomentZ <em>Linear Moment Z</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Linear Moment Z</em>' attribute.
+	 * @param value the new value of the '<em>Linear Moment Z</em>' reference.
 	 * @see #isSetLinearMomentZ()
 	 * @see #unsetLinearMomentZ()
 	 * @see #getLinearMomentZ()
 	 * @generated
 	 */
-	void setLinearMomentZ(float value);
+	void setLinearMomentZ(IfcLinearMomentMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearMomentZ <em>Linear Moment Z</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearMomentZ <em>Linear Moment Z</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetLinearMomentZ()
 	 * @see #getLinearMomentZ()
-	 * @see #setLinearMomentZ(float)
+	 * @see #setLinearMomentZ(IfcLinearMomentMeasure)
 	 * @generated
 	 */
 	void unsetLinearMomentZ();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearMomentZ <em>Linear Moment Z</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearMomentZ <em>Linear Moment Z</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Linear Moment Z</em>' attribute is set.
+	 * @return whether the value of the '<em>Linear Moment Z</em>' reference is set.
 	 * @see #unsetLinearMomentZ()
 	 * @see #getLinearMomentZ()
-	 * @see #setLinearMomentZ(float)
+	 * @see #setLinearMomentZ(IfcLinearMomentMeasure)
 	 * @generated
 	 */
 	boolean isSetLinearMomentZ();
-
-	/**
-	 * Returns the value of the '<em><b>Linear Moment ZAs String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Linear Moment ZAs String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Linear Moment ZAs String</em>' attribute.
-	 * @see #isSetLinearMomentZAsString()
-	 * @see #unsetLinearMomentZAsString()
-	 * @see #setLinearMomentZAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoadLinearForce_LinearMomentZAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getLinearMomentZAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearMomentZAsString <em>Linear Moment ZAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Linear Moment ZAs String</em>' attribute.
-	 * @see #isSetLinearMomentZAsString()
-	 * @see #unsetLinearMomentZAsString()
-	 * @see #getLinearMomentZAsString()
-	 * @generated
-	 */
-	void setLinearMomentZAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearMomentZAsString <em>Linear Moment ZAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetLinearMomentZAsString()
-	 * @see #getLinearMomentZAsString()
-	 * @see #setLinearMomentZAsString(String)
-	 * @generated
-	 */
-	void unsetLinearMomentZAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadLinearForce#getLinearMomentZAsString <em>Linear Moment ZAs String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Linear Moment ZAs String</em>' attribute is set.
-	 * @see #unsetLinearMomentZAsString()
-	 * @see #getLinearMomentZAsString()
-	 * @see #setLinearMomentZAsString(String)
-	 * @generated
-	 */
-	boolean isSetLinearMomentZAsString();
 
 } // IfcStructuralLoadLinearForce

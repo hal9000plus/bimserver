@@ -27,6 +27,8 @@ import java.net.URLDecoder;
 
 public class StringUtils {
 
+//	private static final Logger LOGGER = LoggerFactory.getLogger(StringUtils.class);
+	
 	public static StringBuilder stripEnd(StringBuilder sb, String needle) {
 		if (needle.length() > sb.length()) {
 			return sb;

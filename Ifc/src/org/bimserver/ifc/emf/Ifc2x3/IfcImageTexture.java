@@ -40,29 +40,29 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcImageTexture extends IfcSurfaceTexture {
 	/**
-	 * Returns the value of the '<em><b>Url Reference</b></em>' attribute.
+	 * Returns the value of the '<em><b>Url Reference</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Url Reference</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Url Reference</em>' attribute.
-	 * @see #setUrlReference(String)
+	 * @return the value of the '<em>Url Reference</em>' reference.
+	 * @see #setUrlReference(IfcIdentifier)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcImageTexture_UrlReference()
 	 * @model
 	 * @generated
 	 */
-	String getUrlReference();
+	IfcIdentifier getUrlReference();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcImageTexture#getUrlReference <em>Url Reference</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcImageTexture#getUrlReference <em>Url Reference</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Url Reference</em>' attribute.
+	 * @param value the new value of the '<em>Url Reference</em>' reference.
 	 * @see #getUrlReference()
 	 * @generated
 	 */
-	void setUrlReference(String value);
+	void setUrlReference(IfcIdentifier value);
 
 } // IfcImageTexture

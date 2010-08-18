@@ -23,10 +23,14 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcAreaMeasure;
+import org.bimserver.ifc.emf.Ifc2x3.IfcIdentifier;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRelInteractionRequirements;
 import org.bimserver.ifc.emf.Ifc2x3.IfcSpaceProgram;
 import org.bimserver.ifc.emf.Ifc2x3.IfcSpatialStructureElement;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -38,12 +42,9 @@ import org.eclipse.emf.ecore.EClass;
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSpaceProgramImpl#getSpaceProgramIdentifier <em>Space Program Identifier</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSpaceProgramImpl#getMaxRequiredArea <em>Max Required Area</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSpaceProgramImpl#getMaxRequiredAreaAsString <em>Max Required Area As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSpaceProgramImpl#getMinRequiredArea <em>Min Required Area</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSpaceProgramImpl#getMinRequiredAreaAsString <em>Min Required Area As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSpaceProgramImpl#getRequestedLocation <em>Requested Location</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSpaceProgramImpl#getStandardRequiredArea <em>Standard Required Area</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSpaceProgramImpl#getStandardRequiredAreaAsString <em>Standard Required Area As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSpaceProgramImpl#getHasInteractionReqsFrom <em>Has Interaction Reqs From</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSpaceProgramImpl#getHasInteractionReqsTo <em>Has Interaction Reqs To</em>}</li>
  * </ul>
@@ -76,8 +77,8 @@ public class IfcSpaceProgramImpl extends IfcControlImpl implements IfcSpaceProgr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getSpaceProgramIdentifier() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcSpaceProgram_SpaceProgramIdentifier(), true);
+	public IfcIdentifier getSpaceProgramIdentifier() {
+		return (IfcIdentifier) eGet(Ifc2x3Package.eINSTANCE.getIfcSpaceProgram_SpaceProgramIdentifier(), true);
 	}
 
 	/**
@@ -85,7 +86,7 @@ public class IfcSpaceProgramImpl extends IfcControlImpl implements IfcSpaceProgr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSpaceProgramIdentifier(String newSpaceProgramIdentifier) {
+	public void setSpaceProgramIdentifier(IfcIdentifier newSpaceProgramIdentifier) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcSpaceProgram_SpaceProgramIdentifier(), newSpaceProgramIdentifier);
 	}
 
@@ -94,8 +95,8 @@ public class IfcSpaceProgramImpl extends IfcControlImpl implements IfcSpaceProgr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getMaxRequiredArea() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcSpaceProgram_MaxRequiredArea(), true);
+	public IfcAreaMeasure getMaxRequiredArea() {
+		return (IfcAreaMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcSpaceProgram_MaxRequiredArea(), true);
 	}
 
 	/**
@@ -103,7 +104,7 @@ public class IfcSpaceProgramImpl extends IfcControlImpl implements IfcSpaceProgr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMaxRequiredArea(float newMaxRequiredArea) {
+	public void setMaxRequiredArea(IfcAreaMeasure newMaxRequiredArea) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcSpaceProgram_MaxRequiredArea(), newMaxRequiredArea);
 	}
 
@@ -130,8 +131,8 @@ public class IfcSpaceProgramImpl extends IfcControlImpl implements IfcSpaceProgr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getMaxRequiredAreaAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcSpaceProgram_MaxRequiredAreaAsString(), true);
+	public IfcAreaMeasure getMinRequiredArea() {
+		return (IfcAreaMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcSpaceProgram_MinRequiredArea(), true);
 	}
 
 	/**
@@ -139,43 +140,7 @@ public class IfcSpaceProgramImpl extends IfcControlImpl implements IfcSpaceProgr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMaxRequiredAreaAsString(String newMaxRequiredAreaAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcSpaceProgram_MaxRequiredAreaAsString(), newMaxRequiredAreaAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetMaxRequiredAreaAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcSpaceProgram_MaxRequiredAreaAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetMaxRequiredAreaAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcSpaceProgram_MaxRequiredAreaAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getMinRequiredArea() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcSpaceProgram_MinRequiredArea(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setMinRequiredArea(float newMinRequiredArea) {
+	public void setMinRequiredArea(IfcAreaMeasure newMinRequiredArea) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcSpaceProgram_MinRequiredArea(), newMinRequiredArea);
 	}
 
@@ -195,42 +160,6 @@ public class IfcSpaceProgramImpl extends IfcControlImpl implements IfcSpaceProgr
 	 */
 	public boolean isSetMinRequiredArea() {
 		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcSpaceProgram_MinRequiredArea());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getMinRequiredAreaAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcSpaceProgram_MinRequiredAreaAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setMinRequiredAreaAsString(String newMinRequiredAreaAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcSpaceProgram_MinRequiredAreaAsString(), newMinRequiredAreaAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetMinRequiredAreaAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcSpaceProgram_MinRequiredAreaAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetMinRequiredAreaAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcSpaceProgram_MinRequiredAreaAsString());
 	}
 
 	/**
@@ -274,8 +203,8 @@ public class IfcSpaceProgramImpl extends IfcControlImpl implements IfcSpaceProgr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getStandardRequiredArea() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcSpaceProgram_StandardRequiredArea(), true);
+	public IfcAreaMeasure getStandardRequiredArea() {
+		return (IfcAreaMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcSpaceProgram_StandardRequiredArea(), true);
 	}
 
 	/**
@@ -283,26 +212,8 @@ public class IfcSpaceProgramImpl extends IfcControlImpl implements IfcSpaceProgr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setStandardRequiredArea(float newStandardRequiredArea) {
+	public void setStandardRequiredArea(IfcAreaMeasure newStandardRequiredArea) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcSpaceProgram_StandardRequiredArea(), newStandardRequiredArea);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getStandardRequiredAreaAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcSpaceProgram_StandardRequiredAreaAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setStandardRequiredAreaAsString(String newStandardRequiredAreaAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcSpaceProgram_StandardRequiredAreaAsString(), newStandardRequiredAreaAsString);
 	}
 
 	/**

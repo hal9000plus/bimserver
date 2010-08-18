@@ -11,41 +11,40 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 
 import org.bimserver.shared.ResourceFetcher;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class FailSafeIfcEngine {
-	private static final Logger LOGGER = LoggerFactory.getLogger(FailSafeIfcEngine.class);
-	private static final int PORT_START = 20000;
-	private static final int PORT_END = 50000;
-	private static int portCounter = PORT_START;
+	private Process exec;
 	private Socket socket;
 	private DataInputStream in;
 	private DataOutputStream out;
 	private IfcEngineServer ifcEngineServer;
+	private boolean running = true;
+	private final File schemaFile;
+	private final File nativeBaseDir;
 	private EngineProces engineProces;
 	private int port;
+	private final ResourceFetcher resourceFetcher;
+	private int restarts = 0;
 
-	public FailSafeIfcEngine(final File schemaFile, final File nativeBaseDir, ResourceFetcher resourceFetcher) {
+	public FailSafeIfcEngine(final File schemaFile, final File nativeBaseDir, ResourceFetcher resourceFetcher, boolean useSecondJVM) {
+		this.schemaFile = schemaFile;
+		this.nativeBaseDir = nativeBaseDir;
+		this.resourceFetcher = resourceFetcher;
 		try {
-			port = getNewPort();
-			engineProces = new EngineProces(this, port, schemaFile, nativeBaseDir, resourceFetcher);
-			engineProces.start();
+			port = 12345;
+			if (useSecondJVM) {
+				engineProces = new EngineProces(this, port, schemaFile, nativeBaseDir, resourceFetcher);
+				engineProces.start();
+			} else {
+				ifcEngineServer = new IfcEngineServer(port, schemaFile.getAbsolutePath(), nativeBaseDir.getAbsolutePath());
+				ifcEngineServer.start();
+			}
 			connectClient();
 		} catch (IOException e) {
-			LOGGER.error("", e);
+			e.printStackTrace();
 		}
 	}
 
-	private synchronized static int getNewPort() {
-		if (portCounter < PORT_END) {
-			portCounter++;
-		} else {
-			portCounter = PORT_START;
-		}
-		return portCounter;
-	}
-	
 	private void connectClient() throws UnknownHostException, IOException {
 		for (int i = 0; i < 3; i++) {
 			try {
@@ -63,15 +62,16 @@ public class FailSafeIfcEngine {
 		}
 	}
 
-	public synchronized IfcEngineModel openModel(File ifcFile) throws IfcEngineException {
+	public IfcEngineModel openModel(File ifcFile) throws IfcEngineException {
 		writeCommand(Command.OPEN_MODEL);
 		writeUTF(ifcFile.getAbsolutePath());
 		flush();
-		int modelId = readInt();
+		int modelId;
+		modelId = readInt();
 		return new IfcEngineModel(this, modelId);
 	}
 
-	public int readInt() throws IfcEngineException {
+	int readInt() throws IfcEngineException {
 		try {
 			return in.readInt();
 		} catch (IOException e) {
@@ -103,9 +103,10 @@ public class FailSafeIfcEngine {
 		}
 	}
 
-	public synchronized void close() {
-		if (engineProces != null) {
-			engineProces.shutdown();
+	public void close() {
+		running = false;
+		if (exec != null) {
+			exec.destroy();
 		}
 		if (ifcEngineServer != null) {
 			ifcEngineServer.close();
@@ -136,22 +137,23 @@ public class FailSafeIfcEngine {
 		}
 	}
 
-	public synchronized void engineStopped() {
-	}
-
-	public String readString() throws IfcEngineException {
-		try {
-			return in.readUTF();
-		} catch (IOException e) {
-			throw new IfcEngineException(e);
-		}
-	}
-
-	public void writeDouble(double d) throws IfcEngineException {
-		try {
-			out.writeDouble(d);
-		} catch (IOException e) {
-			throw new IfcEngineException(e);
+	public void engineStopped() {
+		if (running && restarts < 10) {
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			restarts++;
+			engineProces = new EngineProces(this, port, schemaFile, nativeBaseDir, resourceFetcher);
+			engineProces.start();
+			try {
+				connectClient();
+			} catch (UnknownHostException e) {
+				e.printStackTrace();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 		}
 	}
 }

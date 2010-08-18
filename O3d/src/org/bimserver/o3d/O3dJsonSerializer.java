@@ -11,12 +11,10 @@ import java.util.zip.GZIPOutputStream;
 
 import nl.tue.buildingsmart.express.dictionary.SchemaDefinition;
 
-import org.bimserver.database.store.Project;
-import org.bimserver.database.store.User;
+import org.bimserver.emf.BasicEmfModel;
+import org.bimserver.emf.EmfModel;
 import org.bimserver.ifc.BimModelSerializer;
 import org.bimserver.ifc.FieldIgnoreMap;
-import org.bimserver.ifc.IfcModel;
-import org.bimserver.ifc.SerializerException;
 import org.bimserver.ifc.database.IfcDatabase;
 import org.bimserver.ifc.emf.Ifc2x3.IfcColumn;
 import org.bimserver.ifc.emf.Ifc2x3.IfcDoor;
@@ -33,84 +31,89 @@ import org.bimserver.ifc.emf.Ifc2x3.IfcWindow;
 import org.bimserver.ifc.file.writer.IfcStepSerializer;
 import org.bimserver.ifcengine.FailSafeIfcEngine;
 import org.bimserver.ifcengine.Geometry;
-import org.bimserver.ifcengine.IfcEngineException;
-import org.bimserver.ifcengine.IfcEngineFactory;
+import org.bimserver.ifcengine.IfcEngine;
 import org.bimserver.ifcengine.IfcEngineModel;
 import org.bimserver.ifcengine.Instance;
-import org.bimserver.ifcengine.IfcEngineJNA.InstanceVisualisationProperties;
-import org.bimserver.shared.ResultType;
+import org.bimserver.ifcengine.IfcEngine.InstanceVisualisationProperties;
+import org.bimserver.utils.LittleEndianBinUtils;
 import org.codehaus.jettison.json.JSONException;
 import org.eclipse.emf.ecore.EObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.ice.tar.TarEntry;
 import com.ice.tar.TarOutputStream;
 
 public class O3dJsonSerializer extends BimModelSerializer {
+	private static final Logger LOGGER = LoggerFactory.getLogger(O3dJsonSerializer.class);
 	private final SchemaDefinition schemaDefinition;
 	private final FailSafeIfcEngine ifcEngine;
 	private int convertCounter;
-	private BinaryIndexFile binaryIndexFile = new BinaryIndexFile();
-	private BinaryVertexFile binaryVertexFile = new BinaryVertexFile();
-	private SimpleMode mode = SimpleMode.BUSY;
-	private final Project project;
-	private final User user;
 
-	public O3dJsonSerializer(Project project, User user, String fileName, IfcModel model, FieldIgnoreMap fieldIgnoreMap, SchemaDefinition schemaDefinition, IfcEngineFactory ifcEngineFactory) {
-		super(fileName, model, fieldIgnoreMap);
-		this.project = project;
-		this.user = user;
+	public O3dJsonSerializer(EmfModel<Long> model, FieldIgnoreMap fieldIgnoreMap, SchemaDefinition schemaDefinition, FailSafeIfcEngine ifcEngine) {
+		super(model, fieldIgnoreMap);
 		this.schemaDefinition = schemaDefinition;
-		this.ifcEngine = ifcEngineFactory.createFailSafeIfcEngine();
+		this.ifcEngine = ifcEngine;
 	}
 
 	@Override
-	public int write(OutputStream out) {
-		if (mode == SimpleMode.BUSY) {
+	public void write(OutputStream out) {
+		try {
+			GZIPOutputStream gzipOutputStream = new GZIPOutputStream(out);
+			TarOutputStream tarOutputStream = new TarOutputStream(gzipOutputStream, 512, 512);
+			TarEntry tarEntry = new TarEntry("aaaaaaaa.o3d");
+			tarEntry.setSize(3);
+			tarOutputStream.putNextEntry(tarEntry);
+			tarOutputStream.write("o3d".getBytes("UTF-8"));
+			tarOutputStream.closeEntry();
 			try {
-				GZIPOutputStream gzipOutputStream = new GZIPOutputStream(out);
-				TarOutputStream tarOutputStream = new TarOutputStream(gzipOutputStream, 512, 512);
-				TarEntry tarEntry = new TarEntry("aaaaaaaa.o3d");
-				tarEntry.setSize(3);
-				tarOutputStream.putNextEntry(tarEntry);
-				tarOutputStream.write("o3d".getBytes("UTF-8"));
+				Scene scene = createScene();
+				byte[] buffer = serialize(scene);
+				TarEntry sceneEntry = new TarEntry("scene.json");
+				sceneEntry.setSize(buffer.length);
+				tarOutputStream.putNextEntry(sceneEntry);
+				tarOutputStream.write(buffer);
 				tarOutputStream.closeEntry();
-				try {
-					Scene scene = createScene();
-					byte[] buffer = serialize(scene);
-					TarEntry sceneEntry = new TarEntry("scene.json");
-					sceneEntry.setSize(buffer.length);
-					tarOutputStream.putNextEntry(sceneEntry);
-					tarOutputStream.write(buffer);
-					tarOutputStream.closeEntry();
 
-					TarEntry indexEntry = new TarEntry("index-buffers.bin");
-					indexEntry.setSize(binaryIndexFile.getNextOffset());
-					tarOutputStream.putNextEntry(indexEntry);
-					binaryIndexFile.serialize(tarOutputStream);
-					tarOutputStream.closeEntry();
-
-					TarEntry vertexEntry = new TarEntry("vertex-buffers.bin");
-					vertexEntry.setSize(binaryVertexFile.getNextOffset());
-					tarOutputStream.putNextEntry(vertexEntry);
-					binaryVertexFile.serialize(tarOutputStream);
-					tarOutputStream.closeEntry();
-				} catch (JSONException e) {
-					e.printStackTrace();
+				TarEntry indexEntry = new TarEntry("index-buffers.bin");
+				indexEntry.setSize(4 + 4 + 4 + 1 + 1 + 4 + (scene.getIndices().size() * 4));
+				tarOutputStream.putNextEntry(indexEntry);
+				tarOutputStream.write("BUFF".getBytes("ASCII"));
+				tarOutputStream.write(LittleEndianBinUtils.intToByteArray(1));
+				tarOutputStream.write(LittleEndianBinUtils.intToByteArray(1));
+				tarOutputStream.write(LittleEndianBinUtils.byteToByteArray((byte) 2));
+				tarOutputStream.write(LittleEndianBinUtils.byteToByteArray((byte) 1));
+				tarOutputStream.write(LittleEndianBinUtils.intToByteArray(scene.getIndices().size()));
+				for (Integer i : scene.getIndices()) {
+					tarOutputStream.write(LittleEndianBinUtils.intToByteArray(i));
 				}
-				tarOutputStream.finish();
-				tarOutputStream.flush();
-				out.flush();
-				gzipOutputStream.finish();
-				mode = SimpleMode.DONE;
-				ifcEngine.close();
-				return 1;
-			} catch (IOException e) {
+				tarOutputStream.closeEntry();
+
+				TarEntry vertexEntry = new TarEntry("vertex-buffers.bin");
+				vertexEntry.setSize(4 + 4 + 4 + 1 + 1 + 1 + 1 + 4 + (scene.getVertices().size() * 4));
+				tarOutputStream.putNextEntry(vertexEntry);
+				tarOutputStream.write("BUFF".getBytes("ASCII"));
+				tarOutputStream.write(LittleEndianBinUtils.intToByteArray(1));
+				tarOutputStream.write(LittleEndianBinUtils.intToByteArray(2));
+				tarOutputStream.write(LittleEndianBinUtils.byteToByteArray((byte) 1));
+				tarOutputStream.write(LittleEndianBinUtils.byteToByteArray((byte) 3));
+				tarOutputStream.write(LittleEndianBinUtils.byteToByteArray((byte) 1));
+				tarOutputStream.write(LittleEndianBinUtils.byteToByteArray((byte) 3));
+				tarOutputStream.write(LittleEndianBinUtils.intToByteArray(scene.getVertices().size() / 6));
+				for (Float v : scene.getVertices()) {
+					tarOutputStream.write(LittleEndianBinUtils.floatToByteArray(v));
+				}
+				tarOutputStream.closeEntry();
+			} catch (JSONException e) {
 				e.printStackTrace();
 			}
-		} else if (mode == SimpleMode.DONE) {
-			return -1;
+			tarOutputStream.finish();
+			tarOutputStream.flush();
+			out.flush();
+			gzipOutputStream.finish();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
-		return -1;
 	}
 
 	@SuppressWarnings("unchecked")
@@ -118,13 +121,15 @@ public class O3dJsonSerializer extends BimModelSerializer {
 		JsonFactory jsonFactory = new JsonFactory();
 		Scene scene = new Scene();
 		Transformation rootTransformation = jsonFactory.createRootTransformation();
+//		Transformation theTransformation = jsonFactory.createTransformation(rootTransformation.getId());
 		scene.addTransformation(rootTransformation);
+//		scene.addTransformation(theTransformation);
 
-		Material roofMaterial = jsonFactory.createMaterial("RoofMaterial", new Color(255, 0, 0));
-		Material wallMaterial = jsonFactory.createMaterial("WallMaterial", new Color(200, 200, 200));
-		Material slabMaterial = jsonFactory.createMaterial("SlabMaterial", new Color(150, 150, 150));
-		Material windowMaterial = jsonFactory.createMaterial("WindowMaterial", new Color(0, 0, 255), 0.6f);
-		Material doorMaterial = jsonFactory.createMaterial("DoorMaterial", new Color(0, 0, 255));
+		Material roofMaterial = jsonFactory.createMaterial("RoofMaterial", Color.red);
+		Material wallMaterial = jsonFactory.createMaterial("WallMaterial", Color.gray);
+		Material slabMaterial = jsonFactory.createMaterial("SlabMaterial", Color.gray);
+		Material windowMaterial = jsonFactory.createMaterial("WindowMaterial", Color.blue, 0.5f);
+		Material doorMaterial = jsonFactory.createMaterial("DoorMaterial", Color.green);
 		Material columnMaterial = jsonFactory.createMaterial("ColumnMaterial", Color.yellow);
 		Material rampMaterial = jsonFactory.createMaterial("RampMaterial", Color.yellow);
 		Material stairMaterial = jsonFactory.createMaterial("StairMaterial", Color.yellow);
@@ -138,74 +143,70 @@ public class O3dJsonSerializer extends BimModelSerializer {
 		scene.addMaterial(rampMaterial);
 		scene.addMaterial(stairMaterial);
 		scene.addMaterial(stairFlightMaterial);
-		IfcDatabase database = new IfcDatabase(model, getFieldIgnoreMap());
-		Class[] eClasses = new Class[] { IfcSlab.class, IfcRoof.class, IfcWall.class, IfcWallStandardCase.class, IfcWindow.class, IfcDoor.class, IfcColumn.class, IfcRamp.class,
-				IfcStair.class, IfcStairFlight.class };
-		try {
-			for (Class<? extends EObject> eClass : eClasses) {
-				for (Object object : database.getAll(eClass)) {
-					int fieldId1 = jsonFactory.incCounter();
-					int fieldId2 = jsonFactory.incCounter();
-					int fieldId3 = jsonFactory.incCounter();
-					StreamBank streamBank = jsonFactory.createStreamBank();
-					streamBank.addStream(jsonFactory.createStream(1, fieldId1, 0));
-					streamBank.addStream(jsonFactory.createStream(2, fieldId2, 0));
-					scene.addStreamBank(streamBank);
-					VertexBuffer vertexBuffer = jsonFactory.createVertexBuffer(fieldId1, fieldId2);
-					scene.addVertexBuffer(vertexBuffer);
-					IndexBuffer indexBuffer = jsonFactory.createIndexBuffer(fieldId3);
-					scene.addIndexBuffer(indexBuffer);
-					IfcRoot ifcRoot = (IfcRoot) object;
-					Shape shape = jsonFactory.createShape(ifcRoot.getGlobalId().getWrappedValue());
-					scene.addShape(shape);
-					rootTransformation.addShape(shape);
-					SetGeometryResult setGeometryResult = setGeometry(ifcRoot);
-					if (setGeometryResult != null) {
-						Primitive primitive = jsonFactory.createPrimitive();
-						primitive.setIndexBuffer(indexBuffer);
-						if (object instanceof IfcRoof) {
-							primitive.setMaterial(roofMaterial);
-						} else if (object instanceof IfcWall) {
-							primitive.setMaterial(wallMaterial);
-						} else if (object instanceof IfcSlab) {
-							if (((IfcSlab) object).getPredefinedType() == IfcSlabTypeEnum.ROOF) {
-								primitive.setMaterial(roofMaterial);
-							} else {
-								primitive.setMaterial(slabMaterial);
-							}
-						} else if (object instanceof IfcWindow) {
-							primitive.setMaterial(windowMaterial);
-						} else if (object instanceof IfcDoor) {
-							primitive.setMaterial(doorMaterial);
-						} else if (object instanceof IfcColumn) {
-							primitive.setMaterial(columnMaterial);
-						} else if (object instanceof IfcStair) {
-							primitive.setMaterial(stairMaterial);
-						} else if (object instanceof IfcStairFlight) {
-							primitive.setMaterial(stairFlightMaterial);
-						} else if (object instanceof IfcRamp) {
-							primitive.setMaterial(rampMaterial);
-						}
-						primitive.setNumberPrimitives(setGeometryResult.getAddedIndices() / 3);
-						primitive.setNumberVertices(setGeometryResult.getAddedVertices() / 3);
-						primitive.setStartIndex(0);
-						primitive.setStreamBank(streamBank);
-						primitive.setOwner(shape);
-						scene.addPrimitive(primitive);
-						shape.setPrimitive(primitive);
-						
-						binaryIndexFile.addBuffer(setGeometryResult.getBinaryIndexBuffer());
-						binaryVertexFile.addBuffer(setGeometryResult.getBinaryVertexBuffer());
-						indexBuffer.setBinaryRange(binaryIndexFile.getCurrentOffset(), binaryIndexFile.getNextOffset());
-						vertexBuffer.setBinaryRange(binaryVertexFile.getCurrentOffset(), binaryVertexFile.getNextOffset());
+		int fieldId1 = jsonFactory.incCounter();
+		int fieldId2 = jsonFactory.incCounter();
+		int fieldId3 = jsonFactory.incCounter();
+		VertexBuffer vertexBuffer = jsonFactory.createVertexBuffer(fieldId1, fieldId2);
+		scene.addVertexBuffer(vertexBuffer);
+		IndexBuffer indexBuffer = jsonFactory.createIndexBuffer(fieldId3);
+		scene.addIndexBuffer(indexBuffer);
+		IfcDatabase<Long> database = new IfcDatabase<Long>(model, getFieldIgnoreMap());
+		Class[] eClasses = new Class[] {IfcSlab.class, IfcRoof.class, IfcWall.class, IfcWallStandardCase.class, IfcWindow.class, IfcColumn.class, IfcRamp.class, IfcStair.class,
+				IfcStairFlight.class };
+		int indexCounter = 0;
+		int vertexCounter = 0;
+		int objectCount = 0;
+		StreamBank streamBank = jsonFactory.createStreamBank();
+		streamBank.addStream(jsonFactory.createStream(1, fieldId1, 0));
+		streamBank.addStream(jsonFactory.createStream(2, fieldId2, 0));
+		scene.addStreamBank(streamBank);
+		for (Class<? extends EObject> eClass : eClasses) {
+			for (Object object : database.getAll(eClass)) {
+				IfcRoot ifcRoot = (IfcRoot) object;
+				Shape shape = jsonFactory.createShape(ifcRoot.getGlobalId().getWrappedValue());
+				scene.addShape(shape);
+				rootTransformation.addShape(shape);
+				SetGeometryResult setGeometryResult = setGeometry(scene, ifcRoot, 2 * (vertexCounter / 3));
+				Primitive primitive = jsonFactory.createPrimitive();
+				primitive.setIndexBuffer(indexBuffer);
+				if (object instanceof IfcRoof) {
+					primitive.setMaterial(roofMaterial);
+				} else if (object instanceof IfcWall) {
+					primitive.setMaterial(wallMaterial);
+				} else if (object instanceof IfcSlab) {
+					if (((IfcSlab)object).getPredefinedType() == IfcSlabTypeEnum.ROOF) {
+						primitive.setMaterial(roofMaterial);
+					} else {
+						primitive.setMaterial(slabMaterial);
 					}
+				} else if (object instanceof IfcWindow) {
+					primitive.setMaterial(windowMaterial);
+				} else if (object instanceof IfcDoor) {
+					primitive.setMaterial(doorMaterial);
+				} else if (object instanceof IfcColumn) {
+					primitive.setMaterial(columnMaterial);
+				} else if (object instanceof IfcStair) {
+					primitive.setMaterial(stairMaterial);
+				} else if (object instanceof IfcStairFlight) {
+					primitive.setMaterial(stairFlightMaterial);
+				} else if (object instanceof IfcRamp) {
+					primitive.setMaterial(rampMaterial);
 				}
+				primitive.setNumberPrimitives(setGeometryResult.getAddedIndices() / 3);
+				primitive.setNumberVertices(setGeometryResult.getAddedVertices() / 3);
+				primitive.setStartIndex(indexCounter);
+				primitive.setStreamBank(streamBank);
+				primitive.setOwner(shape);
+				scene.addPrimitive(primitive);
+				shape.setPrimitive(primitive);
+
+				indexCounter += setGeometryResult.getAddedIndices();
+				vertexCounter += setGeometryResult.getAddedVertices();
+				objectCount++;
 			}
-		} catch (SerializerException e) {
-			e.printStackTrace();
-		} catch (IfcEngineException e) {
-			e.printStackTrace();
 		}
+		indexBuffer.addBinaryRange(0, 4 + 4 + 4 + 1 + 1 + 4 + (scene.getIndices().size() * 4));
+		vertexBuffer.addBinaryRange(4 + 4 + 4 + 1 + 1 + 1 + 1 + 4 + (scene.getVertices().size() * 4));
 		return scene;
 	}
 
@@ -221,51 +222,43 @@ public class O3dJsonSerializer extends BimModelSerializer {
 		return baos.toByteArray();
 	}
 
-	private SetGeometryResult setGeometry(EObject ifcRootObject) throws SerializerException, IfcEngineException {
+	private SetGeometryResult setGeometry(Scene scene, EObject ifcRootObject, int vertexOffset) {
 		convertCounter++;
-		IfcModel IfcModel = new IfcModel();
-		convertToSubset(ifcRootObject.eClass(), ifcRootObject, IfcModel, new HashMap<EObject, EObject>());
-		IfcStepSerializer ifcSerializer = new IfcStepSerializer(project, user, "", IfcModel, schemaDefinition);
-		BinaryIndexBuffer binaryIndexBuffer = new BinaryIndexBuffer();
-		BinaryVertexBuffer binaryVertexBuffer = new BinaryVertexBuffer();
+		EmfModel<Long> basicEmfModel = new BasicEmfModel<Long>();
+		convertToSubset(ifcRootObject.eClass(), ifcRootObject, basicEmfModel, new HashMap<EObject, EObject>());
+		IfcStepSerializer ifcSerializer = new IfcStepSerializer(basicEmfModel, schemaDefinition);
 		File file = createTempFile();
-		ifcSerializer.writeToFile(file);
-		IfcEngineModel model = ifcEngine.openModel(file);
 		try {
-			org.bimserver.ifcengine.SurfaceProperties sp = model.initializeModelling();
+			ifcSerializer.write(file);
+			IfcEngineModel model = ifcEngine.openModel(file);
+			IfcEngine.SurfaceProperties sp = model.initializeModelling();
 			model.setPostProcessing(true);
 			Geometry geometry = model.finalizeModelling(sp);
 			int nrIndices = 0;
-			if (geometry != null) {
-				for (Instance instance : model.getInstances(ifcRootObject.eClass().getName().toUpperCase())) {
-					InstanceVisualisationProperties instanceInModelling = instance.getVisualisationProperties();
-					for (int i = instanceInModelling.getStartIndex(); i < instanceInModelling.getPrimitiveCount() * 3 + instanceInModelling.getStartIndex(); i += 3) {
-						binaryIndexBuffer.addIndex(geometry.getIndex(i));
-						binaryIndexBuffer.addIndex(geometry.getIndex(i + 2));
-						binaryIndexBuffer.addIndex(geometry.getIndex(i + 1));
-						nrIndices++;
-					}
+			for (Instance instance : model.getInstances(ifcRootObject.eClass().getName().toUpperCase())) {
+				InstanceVisualisationProperties instanceInModelling = instance.getVisualisationProperties();
+				for (int i = instanceInModelling.getStartIndex(); i < instanceInModelling.getPrimitiveCount() * 3 + instanceInModelling.getStartIndex(); i += 3) {
+					scene.addIndex(geometry.getIndex(i) + vertexOffset);
+					scene.addIndex(geometry.getIndex(i + 2) + vertexOffset);
+					scene.addIndex(geometry.getIndex(i + 1) + vertexOffset);
+					nrIndices++;
 				}
-				for (int i = 0; i < geometry.getNrVertices(); i += 3) {
-					binaryVertexBuffer.addVertex(geometry.getVertex(i));
-					binaryVertexBuffer.addVertex(geometry.getVertex(i + 1));
-					binaryVertexBuffer.addVertex(geometry.getVertex(i + 2));
-				}
-				for (int i = 0; i < geometry.getNrNormals(); i += 3) {
-					binaryVertexBuffer.addVertex(geometry.getNormal(i));
-					binaryVertexBuffer.addVertex(geometry.getNormal(i + 1));
-					binaryVertexBuffer.addVertex(geometry.getNormal(i + 2));
-				}
-				return new SetGeometryResult(nrIndices * 3, geometry.getNrVertices(), binaryIndexBuffer, binaryVertexBuffer);
 			}
-		} finally {
+			for (int i = 0; i < geometry.getNrVertices(); i += 3) {
+				scene.addVertex(geometry.getVertex(i));
+				scene.addVertex(geometry.getVertex(i + 1));
+				scene.addVertex(geometry.getVertex(i + 2));
+			}
+			for (int i = 0; i < geometry.getNrNormals(); i += 3) {
+				scene.addVertex(geometry.getNormal(i));
+				scene.addVertex(geometry.getNormal(i + 1));
+				scene.addVertex(geometry.getNormal(i + 2));
+			}
 			model.close();
+			return new SetGeometryResult(nrIndices * 3, geometry.getNrVertices());
+		} catch (Exception e) {
+			LOGGER.error("", e);
 		}
 		return null;
-	}
-
-	@Override
-	public String getContentType() {
-		return ResultType.O3D_JSON.getContentType();
 	}
 }

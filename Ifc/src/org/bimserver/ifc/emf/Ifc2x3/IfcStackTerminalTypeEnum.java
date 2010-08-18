@@ -194,7 +194,8 @@ public enum IfcStackTerminalTypeEnum implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final IfcStackTerminalTypeEnum[] VALUES_ARRAY = new IfcStackTerminalTypeEnum[] { NULL, COWL, NOTDEFINED, BIRDCAGE, USERDEFINED, RAINWATERHOPPER, };
+	private static final IfcStackTerminalTypeEnum[] VALUES_ARRAY = new IfcStackTerminalTypeEnum[] { NULL, COWL, NOTDEFINED, BIRDCAGE, USERDEFINED,
+			RAINWATERHOPPER, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Ifc Stack Terminal Type Enum</b></em>' enumerators.

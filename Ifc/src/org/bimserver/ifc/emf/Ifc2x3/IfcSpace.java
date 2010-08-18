@@ -34,7 +34,6 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpace#getInteriorOrExteriorSpace <em>Interior Or Exterior Space</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpace#getElevationWithFlooring <em>Elevation With Flooring</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpace#getElevationWithFlooringAsString <em>Elevation With Flooring As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpace#getHasCoverings <em>Has Coverings</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpace#getBoundedBy <em>Bounded By</em>}</li>
  * </ul>
@@ -75,110 +74,57 @@ public interface IfcSpace extends IfcSpatialStructureElement {
 	void setInteriorOrExteriorSpace(IfcInternalOrExternalEnum value);
 
 	/**
-	 * Returns the value of the '<em><b>Elevation With Flooring</b></em>' attribute.
+	 * Returns the value of the '<em><b>Elevation With Flooring</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Elevation With Flooring</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Elevation With Flooring</em>' attribute.
+	 * @return the value of the '<em>Elevation With Flooring</em>' reference.
 	 * @see #isSetElevationWithFlooring()
 	 * @see #unsetElevationWithFlooring()
-	 * @see #setElevationWithFlooring(float)
+	 * @see #setElevationWithFlooring(IfcLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSpace_ElevationWithFlooring()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getElevationWithFlooring();
+	IfcLengthMeasure getElevationWithFlooring();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpace#getElevationWithFlooring <em>Elevation With Flooring</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpace#getElevationWithFlooring <em>Elevation With Flooring</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Elevation With Flooring</em>' attribute.
+	 * @param value the new value of the '<em>Elevation With Flooring</em>' reference.
 	 * @see #isSetElevationWithFlooring()
 	 * @see #unsetElevationWithFlooring()
 	 * @see #getElevationWithFlooring()
 	 * @generated
 	 */
-	void setElevationWithFlooring(float value);
+	void setElevationWithFlooring(IfcLengthMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpace#getElevationWithFlooring <em>Elevation With Flooring</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpace#getElevationWithFlooring <em>Elevation With Flooring</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetElevationWithFlooring()
 	 * @see #getElevationWithFlooring()
-	 * @see #setElevationWithFlooring(float)
+	 * @see #setElevationWithFlooring(IfcLengthMeasure)
 	 * @generated
 	 */
 	void unsetElevationWithFlooring();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpace#getElevationWithFlooring <em>Elevation With Flooring</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpace#getElevationWithFlooring <em>Elevation With Flooring</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Elevation With Flooring</em>' attribute is set.
+	 * @return whether the value of the '<em>Elevation With Flooring</em>' reference is set.
 	 * @see #unsetElevationWithFlooring()
 	 * @see #getElevationWithFlooring()
-	 * @see #setElevationWithFlooring(float)
+	 * @see #setElevationWithFlooring(IfcLengthMeasure)
 	 * @generated
 	 */
 	boolean isSetElevationWithFlooring();
-
-	/**
-	 * Returns the value of the '<em><b>Elevation With Flooring As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Elevation With Flooring As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Elevation With Flooring As String</em>' attribute.
-	 * @see #isSetElevationWithFlooringAsString()
-	 * @see #unsetElevationWithFlooringAsString()
-	 * @see #setElevationWithFlooringAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSpace_ElevationWithFlooringAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getElevationWithFlooringAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpace#getElevationWithFlooringAsString <em>Elevation With Flooring As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Elevation With Flooring As String</em>' attribute.
-	 * @see #isSetElevationWithFlooringAsString()
-	 * @see #unsetElevationWithFlooringAsString()
-	 * @see #getElevationWithFlooringAsString()
-	 * @generated
-	 */
-	void setElevationWithFlooringAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpace#getElevationWithFlooringAsString <em>Elevation With Flooring As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetElevationWithFlooringAsString()
-	 * @see #getElevationWithFlooringAsString()
-	 * @see #setElevationWithFlooringAsString(String)
-	 * @generated
-	 */
-	void unsetElevationWithFlooringAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpace#getElevationWithFlooringAsString <em>Elevation With Flooring As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Elevation With Flooring As String</em>' attribute is set.
-	 * @see #unsetElevationWithFlooringAsString()
-	 * @see #getElevationWithFlooringAsString()
-	 * @see #setElevationWithFlooringAsString(String)
-	 * @generated
-	 */
-	boolean isSetElevationWithFlooringAsString();
 
 	/**
 	 * Returns the value of the '<em><b>Has Coverings</b></em>' reference list.

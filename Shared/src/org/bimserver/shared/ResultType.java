@@ -1,18 +1,16 @@
 package org.bimserver.shared;
 
-import java.util.HashSet;
-import java.util.Set;
-
 public enum ResultType {
-	CITYGML("City GML 1.0.0", "gml", "application/gml", UseInCheckout.USE_NOT_IN_CHECKOUT, UserType.USER_TYPE, Type.MULTIPLE, DefaultSelected.FALSE),
-	COLLADA("Collada", "dae", "appliction/collada", UseInCheckout.USE_NOT_IN_CHECKOUT, UserType.USER_TYPE, Type.MULTIPLE, DefaultSelected.FALSE),
-	IFC("IFC2x3", "ifc", "application/ifc", UseInCheckout.USE_IN_CHECKOUT, UserType.USER_TYPE, Type.MULTIPLE, DefaultSelected.TRUE), 
-	IFCXML("IFCXML2x3", "ifcxml", "application/ifcxml", UseInCheckout.USE_IN_CHECKOUT, UserType.USER_TYPE, Type.MULTIPLE, DefaultSelected.FALSE), 
-	O3D_JSON("Google O3D", "o3dtgz", "appliction/tgz", UseInCheckout.USE_NOT_IN_CHECKOUT, UserType.USER_TYPE, Type.MULTIPLE, DefaultSelected.FALSE),
-	OBJECT_INFO("Object Info", "html", "text/html", UseInCheckout.USE_NOT_IN_CHECKOUT, UserType.USER_TYPE, Type.SINGLE, DefaultSelected.FALSE),
-	TEXT("Plain text IFC", "txt", "text", UseInCheckout.USE_NOT_IN_CHECKOUT, UserType.USER_TYPE, Type.MULTIPLE, DefaultSelected.FALSE),
-	KML("KML", "kml", "application/vnd.google-earth.kml+xml", UseInCheckout.USE_NOT_IN_CHECKOUT, UserType.NO_USER_TYPE, Type.MULTIPLE, DefaultSelected.FALSE),
-	KMZ("KMZ", "kmz", "application/vnd.google-earth.kmz", UseInCheckout.USE_NOT_IN_CHECKOUT, UserType.USER_TYPE, Type.MULTIPLE, DefaultSelected.FALSE);
+	IFC("IFC2x3", "ifc", "application/ifc", UseInCheckout.USE_IN_CHECKOUT, UserType.USER_TYPE, Type.MULTIPLE), 
+	IFCXML("IFCXML2x3", "ifcxml", "application/ifcxml", UseInCheckout.USE_IN_CHECKOUT, UserType.USER_TYPE, Type.MULTIPLE), 
+	TEXT("Plain text IFC", "txt", "text", UseInCheckout.USE_NOT_IN_CHECKOUT, UserType.USER_TYPE, Type.MULTIPLE),
+	OBJECT_INFO("Object Info", "html", "text/html", UseInCheckout.USE_NOT_IN_CHECKOUT, UserType.USER_TYPE, Type.SINGLE),
+	SOAP("SOAP", "xml", "xml", UseInCheckout.USE_NOT_IN_CHECKOUT, UserType.NO_USER_TYPE, Type.MULTIPLE),
+	CITYGML("City GML 1.0.0", "gml", "application/gml", UseInCheckout.USE_NOT_IN_CHECKOUT, UserType.USER_TYPE, Type.MULTIPLE),
+	COLLADA("Collada", "dae", "appliction/collada", UseInCheckout.USE_NOT_IN_CHECKOUT, UserType.USER_TYPE, Type.MULTIPLE),
+	O3D_JSON("Google O3D (experimental)", "o3dtgz", "appliction/tgz", UseInCheckout.USE_NOT_IN_CHECKOUT, UserType.USER_TYPE, Type.MULTIPLE),
+	KML("KML", "kml", "application/vnd.google-earth.kml+xml", UseInCheckout.USE_NOT_IN_CHECKOUT, UserType.NO_USER_TYPE, Type.MULTIPLE),
+	KMZ("KMZ", "kmz", "application/vnd.google-earth.kmz", UseInCheckout.USE_NOT_IN_CHECKOUT, UserType.USER_TYPE, Type.MULTIPLE);
 
 	public static enum UseInCheckout {
 		USE_IN_CHECKOUT,
@@ -29,27 +27,20 @@ public enum ResultType {
 		MULTIPLE;
 	}
 	
-	public static enum DefaultSelected {
-		TRUE,
-		FALSE
-	}
-	
 	private final String defaultExtension;
 	private final String contentType;
 	private final String niceName;
 	private final UseInCheckout useInCheckout;
 	private final UserType userType;
 	private final Type type;
-	private final DefaultSelected defaultSelected;
 
-	ResultType(String niceName, String defaultExtension, String contentType, UseInCheckout useInCheckout, UserType userType, Type type, DefaultSelected defaultSelected) {
+	ResultType(String niceName, String defaultExtension, String contentType, UseInCheckout useInCheckout, UserType userType, Type type) {
 		this.niceName = niceName;
 		this.defaultExtension = defaultExtension;
 		this.contentType = contentType;
 		this.useInCheckout = useInCheckout;
 		this.userType = userType;
 		this.type = type;
-		this.defaultSelected = defaultSelected;
 	}
 	
 	public String getDefaultExtension() {
@@ -74,23 +65,5 @@ public enum ResultType {
 
 	public String getNiceName() {
 		return niceName;
-	}
-	
-	public static Set<ResultType> getUserTypes() {
-		Set<ResultType> types = new HashSet<ResultType>();
-		for (ResultType resultType : values()) {
-			if (resultType.isUserType()) {
-				types.add(resultType);
-			}
-		}
-		return types;
-	}
-
-	public boolean isDefaultSelected() {
-		return defaultSelected == DefaultSelected.TRUE;
-	}
-	
-	public DefaultSelected getDefaultSelected() {
-		return defaultSelected;
 	}
 }

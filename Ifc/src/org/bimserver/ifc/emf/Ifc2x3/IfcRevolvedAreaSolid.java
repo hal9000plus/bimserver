@@ -32,7 +32,7 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRevolvedAreaSolid#getAxis <em>Axis</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRevolvedAreaSolid#getAngle <em>Angle</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRevolvedAreaSolid#getAngleAsString <em>Angle As String</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRevolvedAreaSolid#getAxisLine <em>Axis Line</em>}</li>
  * </ul>
  * </p>
  *
@@ -68,55 +68,56 @@ public interface IfcRevolvedAreaSolid extends IfcSweptAreaSolid {
 	void setAxis(IfcAxis1Placement value);
 
 	/**
-	 * Returns the value of the '<em><b>Angle</b></em>' attribute.
+	 * Returns the value of the '<em><b>Angle</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Angle</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Angle</em>' attribute.
-	 * @see #setAngle(float)
+	 * @return the value of the '<em>Angle</em>' reference.
+	 * @see #setAngle(IfcPlaneAngleMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRevolvedAreaSolid_Angle()
 	 * @model
 	 * @generated
 	 */
-	float getAngle();
+	IfcPlaneAngleMeasure getAngle();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRevolvedAreaSolid#getAngle <em>Angle</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRevolvedAreaSolid#getAngle <em>Angle</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Angle</em>' attribute.
+	 * @param value the new value of the '<em>Angle</em>' reference.
 	 * @see #getAngle()
 	 * @generated
 	 */
-	void setAngle(float value);
+	void setAngle(IfcPlaneAngleMeasure value);
 
 	/**
-	 * Returns the value of the '<em><b>Angle As String</b></em>' attribute.
+	 * Returns the value of the '<em><b>Axis Line</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Angle As String</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Axis Line</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Angle As String</em>' attribute.
-	 * @see #setAngleAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRevolvedAreaSolid_AngleAsString()
-	 * @model
+	 * @return the value of the '<em>Axis Line</em>' reference.
+	 * @see #setAxisLine(IfcLine)
+	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRevolvedAreaSolid_AxisLine()
+	 * @model transient="true" volatile="true" derived="true"
+	 *        annotation="http://www.iso.org/iso10303-11/EXPRESS code=' IfcRepresentationItem() || IfcGeometricRepresentationItem () || IfcCurve() || IfcLine(Axis.Location,                    IfcRepresentationItem() || IfcGeometricRepresentationItem () || IfcVector(Axis.Z,1.0));'"
 	 * @generated
 	 */
-	String getAngleAsString();
+	IfcLine getAxisLine();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRevolvedAreaSolid#getAngleAsString <em>Angle As String</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRevolvedAreaSolid#getAxisLine <em>Axis Line</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Angle As String</em>' attribute.
-	 * @see #getAngleAsString()
+	 * @param value the new value of the '<em>Axis Line</em>' reference.
+	 * @see #getAxisLine()
 	 * @generated
 	 */
-	void setAngleAsString(String value);
+	void setAxisLine(IfcLine value);
 
 } // IfcRevolvedAreaSolid

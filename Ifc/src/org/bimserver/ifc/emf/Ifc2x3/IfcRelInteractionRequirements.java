@@ -31,9 +31,7 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelInteractionRequirements#getDailyInteraction <em>Daily Interaction</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelInteractionRequirements#getDailyInteractionAsString <em>Daily Interaction As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelInteractionRequirements#getImportanceRating <em>Importance Rating</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelInteractionRequirements#getImportanceRatingAsString <em>Importance Rating As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelInteractionRequirements#getLocationOfInteraction <em>Location Of Interaction</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelInteractionRequirements#getRelatedSpaceProgram <em>Related Space Program</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelInteractionRequirements#getRelatingSpaceProgram <em>Relating Space Program</em>}</li>
@@ -46,216 +44,110 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcRelInteractionRequirements extends IfcRelConnects {
 	/**
-	 * Returns the value of the '<em><b>Daily Interaction</b></em>' attribute.
+	 * Returns the value of the '<em><b>Daily Interaction</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Daily Interaction</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Daily Interaction</em>' attribute.
+	 * @return the value of the '<em>Daily Interaction</em>' reference.
 	 * @see #isSetDailyInteraction()
 	 * @see #unsetDailyInteraction()
-	 * @see #setDailyInteraction(float)
+	 * @see #setDailyInteraction(IfcCountMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRelInteractionRequirements_DailyInteraction()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getDailyInteraction();
+	IfcCountMeasure getDailyInteraction();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelInteractionRequirements#getDailyInteraction <em>Daily Interaction</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelInteractionRequirements#getDailyInteraction <em>Daily Interaction</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Daily Interaction</em>' attribute.
+	 * @param value the new value of the '<em>Daily Interaction</em>' reference.
 	 * @see #isSetDailyInteraction()
 	 * @see #unsetDailyInteraction()
 	 * @see #getDailyInteraction()
 	 * @generated
 	 */
-	void setDailyInteraction(float value);
+	void setDailyInteraction(IfcCountMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelInteractionRequirements#getDailyInteraction <em>Daily Interaction</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelInteractionRequirements#getDailyInteraction <em>Daily Interaction</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetDailyInteraction()
 	 * @see #getDailyInteraction()
-	 * @see #setDailyInteraction(float)
+	 * @see #setDailyInteraction(IfcCountMeasure)
 	 * @generated
 	 */
 	void unsetDailyInteraction();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelInteractionRequirements#getDailyInteraction <em>Daily Interaction</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelInteractionRequirements#getDailyInteraction <em>Daily Interaction</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Daily Interaction</em>' attribute is set.
+	 * @return whether the value of the '<em>Daily Interaction</em>' reference is set.
 	 * @see #unsetDailyInteraction()
 	 * @see #getDailyInteraction()
-	 * @see #setDailyInteraction(float)
+	 * @see #setDailyInteraction(IfcCountMeasure)
 	 * @generated
 	 */
 	boolean isSetDailyInteraction();
 
 	/**
-	 * Returns the value of the '<em><b>Daily Interaction As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Daily Interaction As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Daily Interaction As String</em>' attribute.
-	 * @see #isSetDailyInteractionAsString()
-	 * @see #unsetDailyInteractionAsString()
-	 * @see #setDailyInteractionAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRelInteractionRequirements_DailyInteractionAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getDailyInteractionAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelInteractionRequirements#getDailyInteractionAsString <em>Daily Interaction As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Daily Interaction As String</em>' attribute.
-	 * @see #isSetDailyInteractionAsString()
-	 * @see #unsetDailyInteractionAsString()
-	 * @see #getDailyInteractionAsString()
-	 * @generated
-	 */
-	void setDailyInteractionAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelInteractionRequirements#getDailyInteractionAsString <em>Daily Interaction As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetDailyInteractionAsString()
-	 * @see #getDailyInteractionAsString()
-	 * @see #setDailyInteractionAsString(String)
-	 * @generated
-	 */
-	void unsetDailyInteractionAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelInteractionRequirements#getDailyInteractionAsString <em>Daily Interaction As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Daily Interaction As String</em>' attribute is set.
-	 * @see #unsetDailyInteractionAsString()
-	 * @see #getDailyInteractionAsString()
-	 * @see #setDailyInteractionAsString(String)
-	 * @generated
-	 */
-	boolean isSetDailyInteractionAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Importance Rating</b></em>' attribute.
+	 * Returns the value of the '<em><b>Importance Rating</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Importance Rating</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Importance Rating</em>' attribute.
+	 * @return the value of the '<em>Importance Rating</em>' reference.
 	 * @see #isSetImportanceRating()
 	 * @see #unsetImportanceRating()
-	 * @see #setImportanceRating(float)
+	 * @see #setImportanceRating(IfcNormalisedRatioMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRelInteractionRequirements_ImportanceRating()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getImportanceRating();
+	IfcNormalisedRatioMeasure getImportanceRating();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelInteractionRequirements#getImportanceRating <em>Importance Rating</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelInteractionRequirements#getImportanceRating <em>Importance Rating</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Importance Rating</em>' attribute.
+	 * @param value the new value of the '<em>Importance Rating</em>' reference.
 	 * @see #isSetImportanceRating()
 	 * @see #unsetImportanceRating()
 	 * @see #getImportanceRating()
 	 * @generated
 	 */
-	void setImportanceRating(float value);
+	void setImportanceRating(IfcNormalisedRatioMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelInteractionRequirements#getImportanceRating <em>Importance Rating</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelInteractionRequirements#getImportanceRating <em>Importance Rating</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetImportanceRating()
 	 * @see #getImportanceRating()
-	 * @see #setImportanceRating(float)
+	 * @see #setImportanceRating(IfcNormalisedRatioMeasure)
 	 * @generated
 	 */
 	void unsetImportanceRating();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelInteractionRequirements#getImportanceRating <em>Importance Rating</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelInteractionRequirements#getImportanceRating <em>Importance Rating</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Importance Rating</em>' attribute is set.
+	 * @return whether the value of the '<em>Importance Rating</em>' reference is set.
 	 * @see #unsetImportanceRating()
 	 * @see #getImportanceRating()
-	 * @see #setImportanceRating(float)
+	 * @see #setImportanceRating(IfcNormalisedRatioMeasure)
 	 * @generated
 	 */
 	boolean isSetImportanceRating();
-
-	/**
-	 * Returns the value of the '<em><b>Importance Rating As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Importance Rating As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Importance Rating As String</em>' attribute.
-	 * @see #isSetImportanceRatingAsString()
-	 * @see #unsetImportanceRatingAsString()
-	 * @see #setImportanceRatingAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRelInteractionRequirements_ImportanceRatingAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getImportanceRatingAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelInteractionRequirements#getImportanceRatingAsString <em>Importance Rating As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Importance Rating As String</em>' attribute.
-	 * @see #isSetImportanceRatingAsString()
-	 * @see #unsetImportanceRatingAsString()
-	 * @see #getImportanceRatingAsString()
-	 * @generated
-	 */
-	void setImportanceRatingAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelInteractionRequirements#getImportanceRatingAsString <em>Importance Rating As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetImportanceRatingAsString()
-	 * @see #getImportanceRatingAsString()
-	 * @see #setImportanceRatingAsString(String)
-	 * @generated
-	 */
-	void unsetImportanceRatingAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelInteractionRequirements#getImportanceRatingAsString <em>Importance Rating As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Importance Rating As String</em>' attribute is set.
-	 * @see #unsetImportanceRatingAsString()
-	 * @see #getImportanceRatingAsString()
-	 * @see #setImportanceRatingAsString(String)
-	 * @generated
-	 */
-	boolean isSetImportanceRatingAsString();
 
 	/**
 	 * Returns the value of the '<em><b>Location Of Interaction</b></em>' reference.

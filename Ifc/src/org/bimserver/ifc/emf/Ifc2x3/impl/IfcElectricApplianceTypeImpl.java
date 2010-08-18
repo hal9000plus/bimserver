@@ -25,6 +25,7 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcElectricApplianceType;
 import org.bimserver.ifc.emf.Ifc2x3.IfcElectricApplianceTypeEnum;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

@@ -22,7 +22,7 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3;
 
-import org.bimserver.emf.IdEObject;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -40,10 +40,9 @@ import org.bimserver.emf.IdEObject;
  *
  * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcActorRole()
  * @model
- * @extends IdEObject
  * @generated
  */
-public interface IfcActorRole extends IdEObject {
+public interface IfcActorRole extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Role</b></em>' attribute.
 	 * The literals are from the enumeration {@link org.bimserver.ifc.emf.Ifc2x3.IfcRoleEnum}.
@@ -74,107 +73,107 @@ public interface IfcActorRole extends IdEObject {
 	void setRole(IfcRoleEnum value);
 
 	/**
-	 * Returns the value of the '<em><b>User Defined Role</b></em>' attribute.
+	 * Returns the value of the '<em><b>User Defined Role</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>User Defined Role</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>User Defined Role</em>' attribute.
+	 * @return the value of the '<em>User Defined Role</em>' reference.
 	 * @see #isSetUserDefinedRole()
 	 * @see #unsetUserDefinedRole()
-	 * @see #setUserDefinedRole(String)
+	 * @see #setUserDefinedRole(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcActorRole_UserDefinedRole()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getUserDefinedRole();
+	IfcLabel getUserDefinedRole();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcActorRole#getUserDefinedRole <em>User Defined Role</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcActorRole#getUserDefinedRole <em>User Defined Role</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>User Defined Role</em>' attribute.
+	 * @param value the new value of the '<em>User Defined Role</em>' reference.
 	 * @see #isSetUserDefinedRole()
 	 * @see #unsetUserDefinedRole()
 	 * @see #getUserDefinedRole()
 	 * @generated
 	 */
-	void setUserDefinedRole(String value);
+	void setUserDefinedRole(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcActorRole#getUserDefinedRole <em>User Defined Role</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcActorRole#getUserDefinedRole <em>User Defined Role</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetUserDefinedRole()
 	 * @see #getUserDefinedRole()
-	 * @see #setUserDefinedRole(String)
+	 * @see #setUserDefinedRole(IfcLabel)
 	 * @generated
 	 */
 	void unsetUserDefinedRole();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcActorRole#getUserDefinedRole <em>User Defined Role</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcActorRole#getUserDefinedRole <em>User Defined Role</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>User Defined Role</em>' attribute is set.
+	 * @return whether the value of the '<em>User Defined Role</em>' reference is set.
 	 * @see #unsetUserDefinedRole()
 	 * @see #getUserDefinedRole()
-	 * @see #setUserDefinedRole(String)
+	 * @see #setUserDefinedRole(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetUserDefinedRole();
 
 	/**
-	 * Returns the value of the '<em><b>Description</b></em>' attribute.
+	 * Returns the value of the '<em><b>Description</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Description</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Description</em>' attribute.
+	 * @return the value of the '<em>Description</em>' reference.
 	 * @see #isSetDescription()
 	 * @see #unsetDescription()
-	 * @see #setDescription(String)
+	 * @see #setDescription(IfcText)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcActorRole_Description()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getDescription();
+	IfcText getDescription();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcActorRole#getDescription <em>Description</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcActorRole#getDescription <em>Description</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Description</em>' attribute.
+	 * @param value the new value of the '<em>Description</em>' reference.
 	 * @see #isSetDescription()
 	 * @see #unsetDescription()
 	 * @see #getDescription()
 	 * @generated
 	 */
-	void setDescription(String value);
+	void setDescription(IfcText value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcActorRole#getDescription <em>Description</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcActorRole#getDescription <em>Description</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetDescription()
 	 * @see #getDescription()
-	 * @see #setDescription(String)
+	 * @see #setDescription(IfcText)
 	 * @generated
 	 */
 	void unsetDescription();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcActorRole#getDescription <em>Description</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcActorRole#getDescription <em>Description</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Description</em>' attribute is set.
+	 * @return whether the value of the '<em>Description</em>' reference is set.
 	 * @see #unsetDescription()
 	 * @see #getDescription()
-	 * @see #setDescription(String)
+	 * @see #setDescription(IfcText)
 	 * @generated
 	 */
 	boolean isSetDescription();

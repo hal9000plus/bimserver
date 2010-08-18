@@ -23,8 +23,11 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcIdentifier;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
 import org.bimserver.ifc.emf.Ifc2x3.IfcProcedure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcProcedureTypeEnum;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -67,8 +70,8 @@ public class IfcProcedureImpl extends IfcProcessImpl implements IfcProcedure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getProcedureID() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcProcedure_ProcedureID(), true);
+	public IfcIdentifier getProcedureID() {
+		return (IfcIdentifier) eGet(Ifc2x3Package.eINSTANCE.getIfcProcedure_ProcedureID(), true);
 	}
 
 	/**
@@ -76,7 +79,7 @@ public class IfcProcedureImpl extends IfcProcessImpl implements IfcProcedure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setProcedureID(String newProcedureID) {
+	public void setProcedureID(IfcIdentifier newProcedureID) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcProcedure_ProcedureID(), newProcedureID);
 	}
 
@@ -103,8 +106,8 @@ public class IfcProcedureImpl extends IfcProcessImpl implements IfcProcedure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getUserDefinedProcedureType() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcProcedure_UserDefinedProcedureType(), true);
+	public IfcLabel getUserDefinedProcedureType() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcProcedure_UserDefinedProcedureType(), true);
 	}
 
 	/**
@@ -112,7 +115,7 @@ public class IfcProcedureImpl extends IfcProcessImpl implements IfcProcedure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUserDefinedProcedureType(String newUserDefinedProcedureType) {
+	public void setUserDefinedProcedureType(IfcLabel newUserDefinedProcedureType) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcProcedure_UserDefinedProcedureType(), newUserDefinedProcedureType);
 	}
 

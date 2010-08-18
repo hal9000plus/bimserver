@@ -43,54 +43,54 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface IfcElementQuantity extends IfcPropertySetDefinition {
 	/**
-	 * Returns the value of the '<em><b>Method Of Measurement</b></em>' attribute.
+	 * Returns the value of the '<em><b>Method Of Measurement</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Method Of Measurement</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Method Of Measurement</em>' attribute.
+	 * @return the value of the '<em>Method Of Measurement</em>' reference.
 	 * @see #isSetMethodOfMeasurement()
 	 * @see #unsetMethodOfMeasurement()
-	 * @see #setMethodOfMeasurement(String)
+	 * @see #setMethodOfMeasurement(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcElementQuantity_MethodOfMeasurement()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getMethodOfMeasurement();
+	IfcLabel getMethodOfMeasurement();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElementQuantity#getMethodOfMeasurement <em>Method Of Measurement</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElementQuantity#getMethodOfMeasurement <em>Method Of Measurement</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Method Of Measurement</em>' attribute.
+	 * @param value the new value of the '<em>Method Of Measurement</em>' reference.
 	 * @see #isSetMethodOfMeasurement()
 	 * @see #unsetMethodOfMeasurement()
 	 * @see #getMethodOfMeasurement()
 	 * @generated
 	 */
-	void setMethodOfMeasurement(String value);
+	void setMethodOfMeasurement(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElementQuantity#getMethodOfMeasurement <em>Method Of Measurement</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElementQuantity#getMethodOfMeasurement <em>Method Of Measurement</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetMethodOfMeasurement()
 	 * @see #getMethodOfMeasurement()
-	 * @see #setMethodOfMeasurement(String)
+	 * @see #setMethodOfMeasurement(IfcLabel)
 	 * @generated
 	 */
 	void unsetMethodOfMeasurement();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElementQuantity#getMethodOfMeasurement <em>Method Of Measurement</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElementQuantity#getMethodOfMeasurement <em>Method Of Measurement</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Method Of Measurement</em>' attribute is set.
+	 * @return whether the value of the '<em>Method Of Measurement</em>' reference is set.
 	 * @see #unsetMethodOfMeasurement()
 	 * @see #getMethodOfMeasurement()
-	 * @see #setMethodOfMeasurement(String)
+	 * @see #setMethodOfMeasurement(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetMethodOfMeasurement();

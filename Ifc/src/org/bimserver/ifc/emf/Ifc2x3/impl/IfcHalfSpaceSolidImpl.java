@@ -23,10 +23,11 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcDimensionCount;
 import org.bimserver.ifc.emf.Ifc2x3.IfcHalfSpaceSolid;
 import org.bimserver.ifc.emf.Ifc2x3.IfcLogical;
 import org.bimserver.ifc.emf.Ifc2x3.IfcSurface;
-import org.bimserver.ifc.emf.Ifc2x3.Tristate;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -87,8 +88,8 @@ public class IfcHalfSpaceSolidImpl extends IfcGeometricRepresentationItemImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Tristate getAgreementFlag() {
-		return (Tristate) eGet(Ifc2x3Package.eINSTANCE.getIfcHalfSpaceSolid_AgreementFlag(), true);
+	public IfcLogical getAgreementFlag() {
+		return (IfcLogical) eGet(Ifc2x3Package.eINSTANCE.getIfcHalfSpaceSolid_AgreementFlag(), true);
 	}
 
 	/**
@@ -96,7 +97,7 @@ public class IfcHalfSpaceSolidImpl extends IfcGeometricRepresentationItemImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAgreementFlag(Tristate newAgreementFlag) {
+	public void setAgreementFlag(IfcLogical newAgreementFlag) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcHalfSpaceSolid_AgreementFlag(), newAgreementFlag);
 	}
 
@@ -105,8 +106,8 @@ public class IfcHalfSpaceSolidImpl extends IfcGeometricRepresentationItemImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getDim() {
-		return (Integer) eGet(Ifc2x3Package.eINSTANCE.getIfcHalfSpaceSolid_Dim(), true);
+	public IfcDimensionCount getDim() {
+		return (IfcDimensionCount) eGet(Ifc2x3Package.eINSTANCE.getIfcHalfSpaceSolid_Dim(), true);
 	}
 
 	/**
@@ -114,7 +115,7 @@ public class IfcHalfSpaceSolidImpl extends IfcGeometricRepresentationItemImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDim(int newDim) {
+	public void setDim(IfcDimensionCount newDim) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcHalfSpaceSolid_Dim(), newDim);
 	}
 

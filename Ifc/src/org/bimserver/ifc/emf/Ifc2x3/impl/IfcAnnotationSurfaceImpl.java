@@ -26,6 +26,7 @@ import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcAnnotationSurface;
 import org.bimserver.ifc.emf.Ifc2x3.IfcGeometricRepresentationItem;
 import org.bimserver.ifc.emf.Ifc2x3.IfcTextureCoordinate;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

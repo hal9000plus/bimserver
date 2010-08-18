@@ -75,107 +75,107 @@ public interface IfcAddress extends IfcObjectReferenceSelect {
 	void setPurpose(IfcAddressTypeEnum value);
 
 	/**
-	 * Returns the value of the '<em><b>Description</b></em>' attribute.
+	 * Returns the value of the '<em><b>Description</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Description</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Description</em>' attribute.
+	 * @return the value of the '<em>Description</em>' reference.
 	 * @see #isSetDescription()
 	 * @see #unsetDescription()
-	 * @see #setDescription(String)
+	 * @see #setDescription(IfcText)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcAddress_Description()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getDescription();
+	IfcText getDescription();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcAddress#getDescription <em>Description</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcAddress#getDescription <em>Description</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Description</em>' attribute.
+	 * @param value the new value of the '<em>Description</em>' reference.
 	 * @see #isSetDescription()
 	 * @see #unsetDescription()
 	 * @see #getDescription()
 	 * @generated
 	 */
-	void setDescription(String value);
+	void setDescription(IfcText value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcAddress#getDescription <em>Description</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcAddress#getDescription <em>Description</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetDescription()
 	 * @see #getDescription()
-	 * @see #setDescription(String)
+	 * @see #setDescription(IfcText)
 	 * @generated
 	 */
 	void unsetDescription();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcAddress#getDescription <em>Description</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcAddress#getDescription <em>Description</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Description</em>' attribute is set.
+	 * @return whether the value of the '<em>Description</em>' reference is set.
 	 * @see #unsetDescription()
 	 * @see #getDescription()
-	 * @see #setDescription(String)
+	 * @see #setDescription(IfcText)
 	 * @generated
 	 */
 	boolean isSetDescription();
 
 	/**
-	 * Returns the value of the '<em><b>User Defined Purpose</b></em>' attribute.
+	 * Returns the value of the '<em><b>User Defined Purpose</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>User Defined Purpose</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>User Defined Purpose</em>' attribute.
+	 * @return the value of the '<em>User Defined Purpose</em>' reference.
 	 * @see #isSetUserDefinedPurpose()
 	 * @see #unsetUserDefinedPurpose()
-	 * @see #setUserDefinedPurpose(String)
+	 * @see #setUserDefinedPurpose(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcAddress_UserDefinedPurpose()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getUserDefinedPurpose();
+	IfcLabel getUserDefinedPurpose();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcAddress#getUserDefinedPurpose <em>User Defined Purpose</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcAddress#getUserDefinedPurpose <em>User Defined Purpose</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>User Defined Purpose</em>' attribute.
+	 * @param value the new value of the '<em>User Defined Purpose</em>' reference.
 	 * @see #isSetUserDefinedPurpose()
 	 * @see #unsetUserDefinedPurpose()
 	 * @see #getUserDefinedPurpose()
 	 * @generated
 	 */
-	void setUserDefinedPurpose(String value);
+	void setUserDefinedPurpose(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcAddress#getUserDefinedPurpose <em>User Defined Purpose</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcAddress#getUserDefinedPurpose <em>User Defined Purpose</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetUserDefinedPurpose()
 	 * @see #getUserDefinedPurpose()
-	 * @see #setUserDefinedPurpose(String)
+	 * @see #setUserDefinedPurpose(IfcLabel)
 	 * @generated
 	 */
 	void unsetUserDefinedPurpose();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcAddress#getUserDefinedPurpose <em>User Defined Purpose</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcAddress#getUserDefinedPurpose <em>User Defined Purpose</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>User Defined Purpose</em>' attribute is set.
+	 * @return whether the value of the '<em>User Defined Purpose</em>' reference is set.
 	 * @see #unsetUserDefinedPurpose()
 	 * @see #getUserDefinedPurpose()
-	 * @see #setUserDefinedPurpose(String)
+	 * @see #setUserDefinedPurpose(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetUserDefinedPurpose();

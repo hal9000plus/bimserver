@@ -22,7 +22,7 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3;
 
-import org.bimserver.emf.IdEObject;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -41,67 +41,60 @@ import org.bimserver.emf.IdEObject;
  *
  * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSurfaceTexture()
  * @model
- * @extends IdEObject
  * @generated
  */
-public interface IfcSurfaceTexture extends IdEObject {
+public interface IfcSurfaceTexture extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Repeat S</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.bimserver.ifc.emf.Ifc2x3.Tristate}.
+	 * Returns the value of the '<em><b>Repeat S</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Repeat S</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Repeat S</em>' attribute.
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Tristate
-	 * @see #setRepeatS(Tristate)
+	 * @return the value of the '<em>Repeat S</em>' reference.
+	 * @see #setRepeatS(IfcLogical)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSurfaceTexture_RepeatS()
 	 * @model
 	 * @generated
 	 */
-	Tristate getRepeatS();
+	IfcLogical getRepeatS();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceTexture#getRepeatS <em>Repeat S</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceTexture#getRepeatS <em>Repeat S</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Repeat S</em>' attribute.
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Tristate
+	 * @param value the new value of the '<em>Repeat S</em>' reference.
 	 * @see #getRepeatS()
 	 * @generated
 	 */
-	void setRepeatS(Tristate value);
+	void setRepeatS(IfcLogical value);
 
 	/**
-	 * Returns the value of the '<em><b>Repeat T</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.bimserver.ifc.emf.Ifc2x3.Tristate}.
+	 * Returns the value of the '<em><b>Repeat T</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Repeat T</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Repeat T</em>' attribute.
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Tristate
-	 * @see #setRepeatT(Tristate)
+	 * @return the value of the '<em>Repeat T</em>' reference.
+	 * @see #setRepeatT(IfcLogical)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSurfaceTexture_RepeatT()
 	 * @model
 	 * @generated
 	 */
-	Tristate getRepeatT();
+	IfcLogical getRepeatT();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceTexture#getRepeatT <em>Repeat T</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceTexture#getRepeatT <em>Repeat T</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Repeat T</em>' attribute.
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Tristate
+	 * @param value the new value of the '<em>Repeat T</em>' reference.
 	 * @see #getRepeatT()
 	 * @generated
 	 */
-	void setRepeatT(Tristate value);
+	void setRepeatT(IfcLogical value);
 
 	/**
 	 * Returns the value of the '<em><b>Texture Type</b></em>' attribute.

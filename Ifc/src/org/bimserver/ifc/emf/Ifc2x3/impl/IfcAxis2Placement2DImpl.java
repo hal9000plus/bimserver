@@ -25,6 +25,9 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcAxis2Placement2D;
 import org.bimserver.ifc.emf.Ifc2x3.IfcDirection;
+
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -35,6 +38,7 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcAxis2Placement2DImpl#getRefDirection <em>Ref Direction</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcAxis2Placement2DImpl#getP <em>P</em>}</li>
  * </ul>
  * </p>
  *
@@ -94,6 +98,16 @@ public class IfcAxis2Placement2DImpl extends IfcPlacementImpl implements IfcAxis
 	 */
 	public boolean isSetRefDirection() {
 		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcAxis2Placement2D_RefDirection());
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<IfcDirection> getP() {
+		return (EList<IfcDirection>) eGet(Ifc2x3Package.eINSTANCE.getIfcAxis2Placement2D_P(), true);
 	}
 
 } //IfcAxis2Placement2DImpl

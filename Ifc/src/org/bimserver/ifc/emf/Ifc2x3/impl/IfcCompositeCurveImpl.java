@@ -25,8 +25,11 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcCompositeCurve;
 import org.bimserver.ifc.emf.Ifc2x3.IfcCompositeCurveSegment;
+import org.bimserver.ifc.emf.Ifc2x3.IfcInteger;
 import org.bimserver.ifc.emf.Ifc2x3.IfcLogical;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -37,7 +40,9 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcCompositeCurveImpl#getSegments <em>Segments</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcCompositeCurveImpl#isSelfIntersect <em>Self Intersect</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcCompositeCurveImpl#getSelfIntersect <em>Self Intersect</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcCompositeCurveImpl#getClosedCurve <em>Closed Curve</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcCompositeCurveImpl#getNSegments <em>NSegments</em>}</li>
  * </ul>
  * </p>
  *
@@ -78,8 +83,8 @@ public class IfcCompositeCurveImpl extends IfcBoundedCurveImpl implements IfcCom
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isSelfIntersect() {
-		return (Boolean) eGet(Ifc2x3Package.eINSTANCE.getIfcCompositeCurve_SelfIntersect(), true);
+	public IfcLogical getSelfIntersect() {
+		return (IfcLogical) eGet(Ifc2x3Package.eINSTANCE.getIfcCompositeCurve_SelfIntersect(), true);
 	}
 
 	/**
@@ -87,8 +92,44 @@ public class IfcCompositeCurveImpl extends IfcBoundedCurveImpl implements IfcCom
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSelfIntersect(boolean newSelfIntersect) {
+	public void setSelfIntersect(IfcLogical newSelfIntersect) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcCompositeCurve_SelfIntersect(), newSelfIntersect);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IfcLogical getClosedCurve() {
+		return (IfcLogical) eGet(Ifc2x3Package.eINSTANCE.getIfcCompositeCurve_ClosedCurve(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setClosedCurve(IfcLogical newClosedCurve) {
+		eSet(Ifc2x3Package.eINSTANCE.getIfcCompositeCurve_ClosedCurve(), newClosedCurve);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IfcInteger getNSegments() {
+		return (IfcInteger) eGet(Ifc2x3Package.eINSTANCE.getIfcCompositeCurve_NSegments(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNSegments(IfcInteger newNSegments) {
+		eSet(Ifc2x3Package.eINSTANCE.getIfcCompositeCurve_NSegments(), newNSegments);
 	}
 
 } //IfcCompositeCurveImpl

@@ -394,8 +394,8 @@ public enum IfcThermalLoadSourceEnum implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final IfcThermalLoadSourceEnum[] VALUES_ARRAY = new IfcThermalLoadSourceEnum[] { NULL, VENTILATIONINDOORAIR, RECIRCULATEDAIR, NOTDEFINED, EXHAUSTAIR,
-			VENTILATIONOUTSIDEAIR, EQUIPMENT, DRYBULBTEMPERATURE, RELATIVEHUMIDITY, PEOPLE, INFILTRATION, USERDEFINED, AIREXCHANGERATE, LIGHTING, };
+	private static final IfcThermalLoadSourceEnum[] VALUES_ARRAY = new IfcThermalLoadSourceEnum[] { NULL, VENTILATIONINDOORAIR, RECIRCULATEDAIR, NOTDEFINED,
+			EXHAUSTAIR, VENTILATIONOUTSIDEAIR, EQUIPMENT, DRYBULBTEMPERATURE, RELATIVEHUMIDITY, PEOPLE, INFILTRATION, USERDEFINED, AIREXCHANGERATE, LIGHTING, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Ifc Thermal Load Source Enum</b></em>' enumerators.

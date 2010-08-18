@@ -23,8 +23,12 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcDimensionCount;
 import org.bimserver.ifc.emf.Ifc2x3.IfcDirection;
+import org.bimserver.ifc.emf.Ifc2x3.IfcReal;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -67,8 +71,8 @@ public class IfcDirectionImpl extends IfcGeometricRepresentationItemImpl impleme
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<Float> getDirectionRatios() {
-		return (EList<Float>) eGet(Ifc2x3Package.eINSTANCE.getIfcDirection_DirectionRatios(), true);
+	public EList<IfcReal> getDirectionRatios() {
+		return (EList<IfcReal>) eGet(Ifc2x3Package.eINSTANCE.getIfcDirection_DirectionRatios(), true);
 	}
 
 	/**
@@ -76,8 +80,8 @@ public class IfcDirectionImpl extends IfcGeometricRepresentationItemImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getDim() {
-		return (Integer) eGet(Ifc2x3Package.eINSTANCE.getIfcDirection_Dim(), true);
+	public IfcDimensionCount getDim() {
+		return (IfcDimensionCount) eGet(Ifc2x3Package.eINSTANCE.getIfcDirection_Dim(), true);
 	}
 
 	/**
@@ -85,7 +89,7 @@ public class IfcDirectionImpl extends IfcGeometricRepresentationItemImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDim(int newDim) {
+	public void setDim(IfcDimensionCount newDim) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcDirection_Dim(), newDim);
 	}
 

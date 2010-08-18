@@ -31,7 +31,6 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceStyleRendering#getTransparency <em>Transparency</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceStyleRendering#getTransparencyAsString <em>Transparency As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceStyleRendering#getDiffuseColour <em>Diffuse Colour</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceStyleRendering#getTransmissionColour <em>Transmission Colour</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceStyleRendering#getDiffuseTransmissionColour <em>Diffuse Transmission Colour</em>}</li>
@@ -48,110 +47,57 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcSurfaceStyleRendering extends IfcSurfaceStyleShading {
 	/**
-	 * Returns the value of the '<em><b>Transparency</b></em>' attribute.
+	 * Returns the value of the '<em><b>Transparency</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Transparency</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Transparency</em>' attribute.
+	 * @return the value of the '<em>Transparency</em>' reference.
 	 * @see #isSetTransparency()
 	 * @see #unsetTransparency()
-	 * @see #setTransparency(float)
+	 * @see #setTransparency(IfcNormalisedRatioMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSurfaceStyleRendering_Transparency()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getTransparency();
+	IfcNormalisedRatioMeasure getTransparency();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceStyleRendering#getTransparency <em>Transparency</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceStyleRendering#getTransparency <em>Transparency</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Transparency</em>' attribute.
+	 * @param value the new value of the '<em>Transparency</em>' reference.
 	 * @see #isSetTransparency()
 	 * @see #unsetTransparency()
 	 * @see #getTransparency()
 	 * @generated
 	 */
-	void setTransparency(float value);
+	void setTransparency(IfcNormalisedRatioMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceStyleRendering#getTransparency <em>Transparency</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceStyleRendering#getTransparency <em>Transparency</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetTransparency()
 	 * @see #getTransparency()
-	 * @see #setTransparency(float)
+	 * @see #setTransparency(IfcNormalisedRatioMeasure)
 	 * @generated
 	 */
 	void unsetTransparency();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceStyleRendering#getTransparency <em>Transparency</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceStyleRendering#getTransparency <em>Transparency</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Transparency</em>' attribute is set.
+	 * @return whether the value of the '<em>Transparency</em>' reference is set.
 	 * @see #unsetTransparency()
 	 * @see #getTransparency()
-	 * @see #setTransparency(float)
+	 * @see #setTransparency(IfcNormalisedRatioMeasure)
 	 * @generated
 	 */
 	boolean isSetTransparency();
-
-	/**
-	 * Returns the value of the '<em><b>Transparency As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Transparency As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Transparency As String</em>' attribute.
-	 * @see #isSetTransparencyAsString()
-	 * @see #unsetTransparencyAsString()
-	 * @see #setTransparencyAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSurfaceStyleRendering_TransparencyAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getTransparencyAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceStyleRendering#getTransparencyAsString <em>Transparency As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Transparency As String</em>' attribute.
-	 * @see #isSetTransparencyAsString()
-	 * @see #unsetTransparencyAsString()
-	 * @see #getTransparencyAsString()
-	 * @generated
-	 */
-	void setTransparencyAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceStyleRendering#getTransparencyAsString <em>Transparency As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetTransparencyAsString()
-	 * @see #getTransparencyAsString()
-	 * @see #setTransparencyAsString(String)
-	 * @generated
-	 */
-	void unsetTransparencyAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceStyleRendering#getTransparencyAsString <em>Transparency As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Transparency As String</em>' attribute is set.
-	 * @see #unsetTransparencyAsString()
-	 * @see #getTransparencyAsString()
-	 * @see #setTransparencyAsString(String)
-	 * @generated
-	 */
-	boolean isSetTransparencyAsString();
 
 	/**
 	 * Returns the value of the '<em><b>Diffuse Colour</b></em>' reference.

@@ -44,8 +44,8 @@ import nl.tue.buildingsmart.express.dictionary.SchemaDefinition;
 import nl.tue.buildingsmart.express.dictionary.StringType;
 import nl.tue.buildingsmart.express.dictionary.UnderlyingType;
 
-import org.bimserver.emf.IdEObject;
-import org.bimserver.ifc.IfcModel;
+import org.bimserver.emf.BasicEmfModel;
+import org.bimserver.emf.EmfModel;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Factory;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcBoolean;
@@ -60,7 +60,6 @@ import org.eclipse.emf.ecore.EEnumLiteral;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EClassImpl;
 import org.eclipse.emf.ecore.impl.EEnumImpl;
 
@@ -79,7 +78,7 @@ public class FastIfcFileReader {
 	private final SchemaDefinition schema;
 	private final EPackage ePackage;
 	private Mode mode = Mode.HEADER;
-	private IfcModel model = new IfcModel();
+	private BasicEmfModel<Long> model = new BasicEmfModel<Long>();
 
 	public FastIfcFileReader(SchemaDefinition schema) {
 		this.ePackage = Ifc2x3Package.eINSTANCE;
@@ -89,7 +88,7 @@ public class FastIfcFileReader {
 	public void read(InputStream in, long fileSize) throws IncorrectIfcFileException, Exception {
 		BufferedReader reader = new BufferedReader(new InputStreamReader(in, "UTF-8"));
 		int initialCapacity = (int) (fileSize / AVERAGE_LINE_LENGTH);
-		model = new IfcModel(initialCapacity);
+		model = new BasicEmfModel<Long>(initialCapacity);
 		int lineNumber = 0;
 		try {
 			String line = reader.readLine();
@@ -125,7 +124,7 @@ public class FastIfcFileReader {
 		in.close();
 	}
 
-	public IfcModel getModel() {
+	public EmfModel<Long> getModel() {
 		return model;
 	}
 
@@ -178,13 +177,10 @@ public class FastIfcFileReader {
 		String name = line.substring(equalSignLocation + 1, indexOfFirstParen).trim();
 		EClass classifier = (EClass) classes.get(name);
 		if (classifier != null) {
-			IdEObject object = (IdEObject) Ifc2x3Factory.eINSTANCE.create(classifier);
+			EObject object = Ifc2x3Factory.eINSTANCE.create(classifier);
 			String realData = line.substring(indexOfFirstParen + 1, lastIndexOfSemiColon - 1);
 			int lastIndex = 0;
 			EntityDefinition entityBN = schema.getEntityBN(name);
-			if (entityBN == null) {
-				throw new IncorrectIfcFileException("Unknown entity " + name);
-			}
 			for (Attribute attribute : entityBN.getAttributesCached(true)) {
 				if (attribute instanceof ExplicitAttribute) {
 					if (!entityBN.isDerived(attribute.getName())) {
@@ -219,10 +215,6 @@ public class FastIfcFileReader {
 						} else {
 							if (structuralFeature.getUpperBound() == 1) {
 								object.eSet(structuralFeature, convert(structuralFeature.getEType(), val));
-								if (structuralFeature.getEType() == EcorePackage.eINSTANCE.getEFloat() || structuralFeature.getEType() == EcorePackage.eINSTANCE.getEDouble()) {
-									EStructuralFeature floatStringFeature = classifier.getEStructuralFeature(attribute.getName() + "AsString");
-									object.eSet(floatStringFeature, val);
-								}
 							}
 						}
 					} else {
@@ -331,11 +323,7 @@ public class FastIfcFileReader {
 			} else if (instanceClass == Float.class || instanceClass == float.class) {
 				return Float.parseFloat(value);
 			} else if (instanceClass == String.class) {
-				if (value.startsWith("'") && value.endsWith("'")) {
-					return value.substring(1, value.length()-1);
-				} else {
-					return value;
-				}
+				return value;
 			}
 		}
 		return null;
@@ -366,7 +354,7 @@ public class FastIfcFileReader {
 							} catch (NumberFormatException e) {
 								throw new IncorrectIfcFileException(value + " is not a valid floating point number");
 							}
-							create.eSet(create.eClass().getEStructuralFeature(WRAPPED_VALUE + "AsString"), value);
+							create.eSet(create.eClass().getEStructuralFeature("stringValue" + WRAPPED_VALUE), value);
 						} else if (instanceClass == String.class) {
 							create.eSet(create.eClass().getEStructuralFeature(WRAPPED_VALUE), value.substring(1, value.length() - 1));
 						} else if (instanceClass == Tristate.class) {
@@ -428,9 +416,7 @@ public class FastIfcFileReader {
 
 	private void readEnum(String val, EObject object, EStructuralFeature structuralFeature) throws IncorrectIfcFileException {
 		if (val.equals(".T.")) {
-			if (structuralFeature.getEType() == Ifc2x3Package.eINSTANCE.getTristate()) {
-				object.eSet(structuralFeature, Tristate.TRUE);
-			} else if (structuralFeature.getEType().getName().equals("IfcBoolean")) {
+			if (structuralFeature.getEType().getName().equals("IfcBoolean")) {
 				IfcBoolean createIfcBoolean = Ifc2x3Factory.eINSTANCE.createIfcBoolean();
 				createIfcBoolean.setWrappedValue(Tristate.TRUE);
 				object.eSet(structuralFeature, createIfcBoolean);
@@ -440,9 +426,7 @@ public class FastIfcFileReader {
 				object.eSet(structuralFeature, createIfcBoolean);
 			}
 		} else if (val.equals(".F.")) {
-			if (structuralFeature.getEType() == Ifc2x3Package.eINSTANCE.getTristate()) {
-				object.eSet(structuralFeature, Tristate.FALSE);
-			} else if (structuralFeature.getEType().getName().equals("IfcBoolean")) {
+			if (structuralFeature.getEType().getName().equals("IfcBoolean")) {
 				IfcBoolean createIfcBoolean = Ifc2x3Factory.eINSTANCE.createIfcBoolean();
 				createIfcBoolean.setWrappedValue(Tristate.FALSE);
 				object.eSet(structuralFeature, createIfcBoolean);
@@ -452,10 +436,10 @@ public class FastIfcFileReader {
 				object.eSet(structuralFeature, createIfcBoolean);
 			}
 		} else if (val.equals(".U.")) {
-			if (structuralFeature.getEType() == Ifc2x3Package.eINSTANCE.getTristate()) {
-				object.eSet(structuralFeature, Tristate.UNDEFINED);
-			} else if (structuralFeature.getEType() == EcorePackage.eINSTANCE.getEBoolean()) {
-				object.eUnset(structuralFeature);
+			if (structuralFeature.getEType().getName().equals("IfcBoolean")) {
+				IfcBoolean createIfcBoolean = Ifc2x3Factory.eINSTANCE.createIfcBoolean();
+				createIfcBoolean.setWrappedValue(Tristate.UNDEFINED);
+				object.eSet(structuralFeature, createIfcBoolean);
 			} else {
 				IfcLogical createIfcBoolean = Ifc2x3Factory.eINSTANCE.createIfcLogical();
 				createIfcBoolean.setWrappedValue(Tristate.UNDEFINED);

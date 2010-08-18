@@ -40,54 +40,54 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcReinforcingElement extends IfcBuildingElementComponent {
 	/**
-	 * Returns the value of the '<em><b>Steel Grade</b></em>' attribute.
+	 * Returns the value of the '<em><b>Steel Grade</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Steel Grade</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Steel Grade</em>' attribute.
+	 * @return the value of the '<em>Steel Grade</em>' reference.
 	 * @see #isSetSteelGrade()
 	 * @see #unsetSteelGrade()
-	 * @see #setSteelGrade(String)
+	 * @see #setSteelGrade(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcReinforcingElement_SteelGrade()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getSteelGrade();
+	IfcLabel getSteelGrade();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcReinforcingElement#getSteelGrade <em>Steel Grade</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcReinforcingElement#getSteelGrade <em>Steel Grade</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Steel Grade</em>' attribute.
+	 * @param value the new value of the '<em>Steel Grade</em>' reference.
 	 * @see #isSetSteelGrade()
 	 * @see #unsetSteelGrade()
 	 * @see #getSteelGrade()
 	 * @generated
 	 */
-	void setSteelGrade(String value);
+	void setSteelGrade(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcReinforcingElement#getSteelGrade <em>Steel Grade</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcReinforcingElement#getSteelGrade <em>Steel Grade</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetSteelGrade()
 	 * @see #getSteelGrade()
-	 * @see #setSteelGrade(String)
+	 * @see #setSteelGrade(IfcLabel)
 	 * @generated
 	 */
 	void unsetSteelGrade();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcReinforcingElement#getSteelGrade <em>Steel Grade</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcReinforcingElement#getSteelGrade <em>Steel Grade</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Steel Grade</em>' attribute is set.
+	 * @return whether the value of the '<em>Steel Grade</em>' reference is set.
 	 * @see #unsetSteelGrade()
 	 * @see #getSteelGrade()
-	 * @see #setSteelGrade(String)
+	 * @see #setSteelGrade(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetSteelGrade();

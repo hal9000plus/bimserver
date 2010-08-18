@@ -269,8 +269,8 @@ public enum IfcDoorPanelOperationEnum implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final IfcDoorPanelOperationEnum[] VALUES_ARRAY = new IfcDoorPanelOperationEnum[] { NULL, DOUBLE_ACTING, SWINGING, NOTDEFINED, REVOLVING, ROLLINGUP, FOLDING,
-			SLIDING, USERDEFINED, };
+	private static final IfcDoorPanelOperationEnum[] VALUES_ARRAY = new IfcDoorPanelOperationEnum[] { NULL, DOUBLE_ACTING, SWINGING, NOTDEFINED, REVOLVING,
+			ROLLINGUP, FOLDING, SLIDING, USERDEFINED, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Ifc Door Panel Operation Enum</b></em>' enumerators.

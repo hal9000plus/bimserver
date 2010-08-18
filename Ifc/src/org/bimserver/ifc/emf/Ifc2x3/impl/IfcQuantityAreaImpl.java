@@ -23,7 +23,9 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcAreaMeasure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcQuantityArea;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -34,7 +36,6 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcQuantityAreaImpl#getAreaValue <em>Area Value</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcQuantityAreaImpl#getAreaValueAsString <em>Area Value As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -65,8 +66,8 @@ public class IfcQuantityAreaImpl extends IfcPhysicalSimpleQuantityImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getAreaValue() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcQuantityArea_AreaValue(), true);
+	public IfcAreaMeasure getAreaValue() {
+		return (IfcAreaMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcQuantityArea_AreaValue(), true);
 	}
 
 	/**
@@ -74,26 +75,8 @@ public class IfcQuantityAreaImpl extends IfcPhysicalSimpleQuantityImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAreaValue(float newAreaValue) {
+	public void setAreaValue(IfcAreaMeasure newAreaValue) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcQuantityArea_AreaValue(), newAreaValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getAreaValueAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcQuantityArea_AreaValueAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setAreaValueAsString(String newAreaValueAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcQuantityArea_AreaValueAsString(), newAreaValueAsString);
 	}
 
 } //IfcQuantityAreaImpl

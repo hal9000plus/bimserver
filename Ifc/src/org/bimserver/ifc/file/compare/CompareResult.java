@@ -53,7 +53,7 @@ public class CompareResult {
 				if (item.eObject instanceof IfcRoot) {
 					IfcRoot ifcRoot = (IfcRoot) item.eObject;
 					if (ifcRoot.getName() != null) {
-						name = " " + ifcRoot.getName();
+						name = " " + ifcRoot.getName().getWrappedValue();
 					} else if (ifcRoot.getGlobalId() != null) {
 						name = " " + ifcRoot.getGlobalId().getWrappedValue();
 					}

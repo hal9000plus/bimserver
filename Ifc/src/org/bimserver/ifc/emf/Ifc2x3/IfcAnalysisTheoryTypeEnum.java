@@ -219,8 +219,8 @@ public enum IfcAnalysisTheoryTypeEnum implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final IfcAnalysisTheoryTypeEnum[] VALUES_ARRAY = new IfcAnalysisTheoryTypeEnum[] { NULL, FULL_NONLINEAR_THEORY, NOTDEFINED, THIRD_ORDER_THEORY,
-			FIRST_ORDER_THEORY, SECOND_ORDER_THEORY, USERDEFINED, };
+	private static final IfcAnalysisTheoryTypeEnum[] VALUES_ARRAY = new IfcAnalysisTheoryTypeEnum[] { NULL, FULL_NONLINEAR_THEORY, NOTDEFINED,
+			THIRD_ORDER_THEORY, FIRST_ORDER_THEORY, SECOND_ORDER_THEORY, USERDEFINED, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Ifc Analysis Theory Type Enum</b></em>' enumerators.

@@ -23,7 +23,9 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcPositiveLengthMeasure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRectangleHollowProfileDef;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -34,11 +36,8 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRectangleHollowProfileDefImpl#getWallThickness <em>Wall Thickness</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRectangleHollowProfileDefImpl#getWallThicknessAsString <em>Wall Thickness As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRectangleHollowProfileDefImpl#getInnerFilletRadius <em>Inner Fillet Radius</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRectangleHollowProfileDefImpl#getInnerFilletRadiusAsString <em>Inner Fillet Radius As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRectangleHollowProfileDefImpl#getOuterFilletRadius <em>Outer Fillet Radius</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRectangleHollowProfileDefImpl#getOuterFilletRadiusAsString <em>Outer Fillet Radius As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -69,8 +68,8 @@ public class IfcRectangleHollowProfileDefImpl extends IfcRectangleProfileDefImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getWallThickness() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcRectangleHollowProfileDef_WallThickness(), true);
+	public IfcPositiveLengthMeasure getWallThickness() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcRectangleHollowProfileDef_WallThickness(), true);
 	}
 
 	/**
@@ -78,7 +77,7 @@ public class IfcRectangleHollowProfileDefImpl extends IfcRectangleProfileDefImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setWallThickness(float newWallThickness) {
+	public void setWallThickness(IfcPositiveLengthMeasure newWallThickness) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcRectangleHollowProfileDef_WallThickness(), newWallThickness);
 	}
 
@@ -87,8 +86,8 @@ public class IfcRectangleHollowProfileDefImpl extends IfcRectangleProfileDefImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getWallThicknessAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcRectangleHollowProfileDef_WallThicknessAsString(), true);
+	public IfcPositiveLengthMeasure getInnerFilletRadius() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcRectangleHollowProfileDef_InnerFilletRadius(), true);
 	}
 
 	/**
@@ -96,25 +95,7 @@ public class IfcRectangleHollowProfileDefImpl extends IfcRectangleProfileDefImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setWallThicknessAsString(String newWallThicknessAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcRectangleHollowProfileDef_WallThicknessAsString(), newWallThicknessAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getInnerFilletRadius() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcRectangleHollowProfileDef_InnerFilletRadius(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setInnerFilletRadius(float newInnerFilletRadius) {
+	public void setInnerFilletRadius(IfcPositiveLengthMeasure newInnerFilletRadius) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcRectangleHollowProfileDef_InnerFilletRadius(), newInnerFilletRadius);
 	}
 
@@ -141,8 +122,8 @@ public class IfcRectangleHollowProfileDefImpl extends IfcRectangleProfileDefImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getInnerFilletRadiusAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcRectangleHollowProfileDef_InnerFilletRadiusAsString(), true);
+	public IfcPositiveLengthMeasure getOuterFilletRadius() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcRectangleHollowProfileDef_OuterFilletRadius(), true);
 	}
 
 	/**
@@ -150,43 +131,7 @@ public class IfcRectangleHollowProfileDefImpl extends IfcRectangleProfileDefImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setInnerFilletRadiusAsString(String newInnerFilletRadiusAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcRectangleHollowProfileDef_InnerFilletRadiusAsString(), newInnerFilletRadiusAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetInnerFilletRadiusAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcRectangleHollowProfileDef_InnerFilletRadiusAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetInnerFilletRadiusAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcRectangleHollowProfileDef_InnerFilletRadiusAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getOuterFilletRadius() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcRectangleHollowProfileDef_OuterFilletRadius(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setOuterFilletRadius(float newOuterFilletRadius) {
+	public void setOuterFilletRadius(IfcPositiveLengthMeasure newOuterFilletRadius) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcRectangleHollowProfileDef_OuterFilletRadius(), newOuterFilletRadius);
 	}
 
@@ -206,42 +151,6 @@ public class IfcRectangleHollowProfileDefImpl extends IfcRectangleProfileDefImpl
 	 */
 	public boolean isSetOuterFilletRadius() {
 		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcRectangleHollowProfileDef_OuterFilletRadius());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getOuterFilletRadiusAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcRectangleHollowProfileDef_OuterFilletRadiusAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setOuterFilletRadiusAsString(String newOuterFilletRadiusAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcRectangleHollowProfileDef_OuterFilletRadiusAsString(), newOuterFilletRadiusAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetOuterFilletRadiusAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcRectangleHollowProfileDef_OuterFilletRadiusAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetOuterFilletRadiusAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcRectangleHollowProfileDef_OuterFilletRadiusAsString());
 	}
 
 } //IfcRectangleHollowProfileDefImpl

@@ -23,9 +23,14 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcCompoundPlaneAngleMeasure;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLengthMeasure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcPostalAddress;
 import org.bimserver.ifc.emf.Ifc2x3.IfcSite;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -38,7 +43,6 @@ import org.eclipse.emf.ecore.EClass;
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSiteImpl#getRefLatitude <em>Ref Latitude</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSiteImpl#getRefLongitude <em>Ref Longitude</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSiteImpl#getRefElevation <em>Ref Elevation</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSiteImpl#getRefElevationAsString <em>Ref Elevation As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSiteImpl#getLandTitleNumber <em>Land Title Number</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSiteImpl#getSiteAddress <em>Site Address</em>}</li>
  * </ul>
@@ -72,8 +76,8 @@ public class IfcSiteImpl extends IfcSpatialStructureElementImpl implements IfcSi
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<Integer> getRefLatitude() {
-		return (EList<Integer>) eGet(Ifc2x3Package.eINSTANCE.getIfcSite_RefLatitude(), true);
+	public EList<IfcCompoundPlaneAngleMeasure> getRefLatitude() {
+		return (EList<IfcCompoundPlaneAngleMeasure>) eGet(Ifc2x3Package.eINSTANCE.getIfcSite_RefLatitude(), true);
 	}
 
 	/**
@@ -100,8 +104,8 @@ public class IfcSiteImpl extends IfcSpatialStructureElementImpl implements IfcSi
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<Integer> getRefLongitude() {
-		return (EList<Integer>) eGet(Ifc2x3Package.eINSTANCE.getIfcSite_RefLongitude(), true);
+	public EList<IfcCompoundPlaneAngleMeasure> getRefLongitude() {
+		return (EList<IfcCompoundPlaneAngleMeasure>) eGet(Ifc2x3Package.eINSTANCE.getIfcSite_RefLongitude(), true);
 	}
 
 	/**
@@ -127,8 +131,8 @@ public class IfcSiteImpl extends IfcSpatialStructureElementImpl implements IfcSi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getRefElevation() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcSite_RefElevation(), true);
+	public IfcLengthMeasure getRefElevation() {
+		return (IfcLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcSite_RefElevation(), true);
 	}
 
 	/**
@@ -136,7 +140,7 @@ public class IfcSiteImpl extends IfcSpatialStructureElementImpl implements IfcSi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRefElevation(float newRefElevation) {
+	public void setRefElevation(IfcLengthMeasure newRefElevation) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcSite_RefElevation(), newRefElevation);
 	}
 
@@ -163,8 +167,8 @@ public class IfcSiteImpl extends IfcSpatialStructureElementImpl implements IfcSi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getRefElevationAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcSite_RefElevationAsString(), true);
+	public IfcLabel getLandTitleNumber() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcSite_LandTitleNumber(), true);
 	}
 
 	/**
@@ -172,43 +176,7 @@ public class IfcSiteImpl extends IfcSpatialStructureElementImpl implements IfcSi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRefElevationAsString(String newRefElevationAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcSite_RefElevationAsString(), newRefElevationAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetRefElevationAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcSite_RefElevationAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetRefElevationAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcSite_RefElevationAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getLandTitleNumber() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcSite_LandTitleNumber(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setLandTitleNumber(String newLandTitleNumber) {
+	public void setLandTitleNumber(IfcLabel newLandTitleNumber) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcSite_LandTitleNumber(), newLandTitleNumber);
 	}
 

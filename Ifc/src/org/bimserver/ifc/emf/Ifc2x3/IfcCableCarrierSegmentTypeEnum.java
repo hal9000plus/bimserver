@@ -219,8 +219,8 @@ public enum IfcCableCarrierSegmentTypeEnum implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final IfcCableCarrierSegmentTypeEnum[] VALUES_ARRAY = new IfcCableCarrierSegmentTypeEnum[] { NULL, NOTDEFINED, CABLETRUNKINGSEGMENT, CABLETRAYSEGMENT,
-			USERDEFINED, CABLELADDERSEGMENT, CONDUITSEGMENT, };
+	private static final IfcCableCarrierSegmentTypeEnum[] VALUES_ARRAY = new IfcCableCarrierSegmentTypeEnum[] { NULL, NOTDEFINED, CABLETRUNKINGSEGMENT,
+			CABLETRAYSEGMENT, USERDEFINED, CABLELADDERSEGMENT, CONDUITSEGMENT, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Ifc Cable Carrier Segment Type Enum</b></em>' enumerators.

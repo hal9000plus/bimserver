@@ -18,7 +18,6 @@ public class EngineProces extends Thread {
 	private final File schemaFile;
 	private final FailSafeIfcEngine failSafeIfcEngine;
 	private final ResourceFetcher resourceFetcher;
-	private boolean running;
 
 	public EngineProces(FailSafeIfcEngine failSafeIfcEngine, int port, File schemaFile, File nativeBaseDir, ResourceFetcher resourceFetcher) {
 		this.failSafeIfcEngine = failSafeIfcEngine;
@@ -31,75 +30,55 @@ public class EngineProces extends Thread {
 	}
 
 	public void run() {
-		running = true;
 		try {
-			File tmp = new File("tmp");
-			if (!tmp.exists()) {
-				tmp.mkdir();
+			String command = "java -classpath ";
+			File binFile = new File(".." + File.separator + "IFCEngine" + File.separator + "bin");
+			if (binFile.exists()) {
+				// For local development
+				if (binFile.getAbsolutePath().contains(" ")) {
+					command += "\"" + binFile.getAbsolutePath() + "\"" + File.pathSeparator;
+				} else {
+					command += binFile.getAbsolutePath() + File.pathSeparator;
+				}
 			}
-			StringBuilder command = new StringBuilder("java");
-			command.append(" -Djna.library.path=" + nativeBaseDir.toString() + File.separator + System.getProperty("sun.arch.data.model"));
-			if (tmp.getAbsolutePath().toString().contains(" ")) {
-				command.append(" -Djava.io.tmpdir=\"" + tmp.getAbsolutePath().toString() + "\"");
-			} else {
-				command.append(" -Djava.io.tmpdir=" + tmp.getAbsolutePath().toString());
+			File libFile = new File(".." + File.separator + "IFCEngine" + "lib" + File.separator);
+			if (libFile.exists()) {
+				if (libFile.getAbsolutePath().contains(" ")) {
+					command += "\"" + libFile.getAbsolutePath() + File.pathSeparator + "\"";
+				} else {
+					command += libFile.getAbsolutePath() + File.pathSeparator;
+				}
 			}
-			command.append(" -classpath ");
-			addBinDir(new File(".." + File.separator + "IFCEngine" + File.separator + "bin"), command);
-			addBinDir(new File(".." + File.separator + "Store" + File.separator + "bin"), command);
-			addBinDir(new File(".." + File.separator + "Ifc" + File.separator + "bin"), command);
-			addBinDir(new File(".." + File.separator + "Emf" + File.separator + "bin"), command);
-			command.append(addJar("logging/slf4j-log4j12-1.6.0.jar"));
-			command.append(addJar("logging/slf4j-api-1.6.0.jar"));
-			command.append(addJar("logging/log4j-1.2.16.jar"));
-			command.append(addJar("bimserver.jar"));
-			command.append(addJar("jna.jar"));
-			command.append(addJar("emf/org.eclipse.emf_2.5.0.v200906151043.jar"));
-			command.append(addJar("emf/org.eclipse.emf.common_2.5.0.v200906151043.jar"));
-			command.append(addJar("emf/org.eclipse.emf.ecore_2.5.0.v200906151043.jar"));
-			command.append(addJar("emf/org.eclipse.emf.ecore.xmi_2.5.0.v200906151043.jar"));
-			command.append(" -Xmx512m");
-			command.append(" org.bimserver.ifcengine.IfcEngineServer");
-			command.append(" " + port);
+			command += addJar(command, "slf4j-api-1.5.6.jar");
+			command += addJar(command, "slf4j-log4j12-1.5.6.jar");
+			command += addJar(command, "log4j.jar");
+			command += addJar(command, "bimserver.jar");
+			command += addJar(command, "JNative.jar");
+			command += " org.bimserver.ifcengine.IfcEngineServer";
+			command += " " + port;
 			if (schemaFile.getAbsolutePath().contains(" ")) {
-				command.append(" \"" + schemaFile.getAbsolutePath() + "\"");
+				command += " \"" + schemaFile.getAbsolutePath() + "\"";
 			} else {
-				command.append(" " + schemaFile.getAbsolutePath());
+				command += " " + schemaFile.getAbsolutePath();
 			}
 			if (nativeBaseDir.getAbsolutePath().contains(" ")) {
-				command.append(" \"" + nativeBaseDir.getAbsolutePath() + "\"");
+				command += " \"" + nativeBaseDir.getAbsolutePath() + "\"";
 			} else {
-				command.append(" " + nativeBaseDir.getAbsolutePath());
+				command += " " + nativeBaseDir.getAbsolutePath();
 			}
-			LOGGER.info(command.toString());
-			process = Runtime.getRuntime().exec(command.toString());
+			LOGGER.info(command);
+			process = Runtime.getRuntime().exec(command);
 			new StreamReaderToLog("EngineProces - InputStreamProcessor", process.getInputStream()).start();
 			new StreamReaderToLog("EngineProces - ErrorStreamProcessor", process.getErrorStream()).start();
 			process.waitFor();
 			failSafeIfcEngine.engineStopped();
 		} catch (Exception e) {
-			if (running) {
-				LOGGER.error("", e);
-			}
+			LOGGER.error("", e);
 		}
 	}
 
-	private void addBinDir(File binFile, StringBuilder command) {
-		if (binFile.exists()) {
-			// For local development
-			if (binFile.getAbsolutePath().contains(" ")) {
-				command.append("\"" + binFile.getAbsolutePath() + "\"" + File.pathSeparator);
-			} else {
-				command.append(binFile.getAbsolutePath() + File.pathSeparator);
-			}
-		}
-	}
-
-	private String addJar(String string) throws UnsupportedEncodingException, URISyntaxException {
+	private String addJar(String command, String string) throws UnsupportedEncodingException, URISyntaxException {
 		URL resource = resourceFetcher.getResource("lib/" + string);
-		if (resource == null) {
-			resource = resourceFetcher.getResource("lib/" + string.substring(string.indexOf("/") + 1));
-		}
 		if (resource != null) {
 			File file = new File(resource.toURI());
 			String fileString = file.getAbsolutePath();
@@ -110,11 +89,5 @@ public class EngineProces extends Thread {
 			}
 		}
 		return "";
-	}
-
-	public void shutdown() {
-		running = false;
-		process.destroy();
-		interrupt();
 	}
 }

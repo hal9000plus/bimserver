@@ -22,12 +22,16 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
-import org.bimserver.emf.IdEObjectImpl;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcCurveStyleFont;
 import org.bimserver.ifc.emf.Ifc2x3.IfcCurveStyleFontPattern;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -43,7 +47,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class IfcCurveStyleFontImpl extends IdEObjectImpl implements IfcCurveStyleFont {
+public class IfcCurveStyleFontImpl extends EObjectImpl implements IfcCurveStyleFont {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -78,8 +82,8 @@ public class IfcCurveStyleFontImpl extends IdEObjectImpl implements IfcCurveStyl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcCurveStyleFont_Name(), true);
+	public IfcLabel getName() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcCurveStyleFont_Name(), true);
 	}
 
 	/**
@@ -87,7 +91,7 @@ public class IfcCurveStyleFontImpl extends IdEObjectImpl implements IfcCurveStyl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(String newName) {
+	public void setName(IfcLabel newName) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcCurveStyleFont_Name(), newName);
 	}
 

@@ -45,10 +45,13 @@ import javax.swing.event.PopupMenuListener;
 import javax.swing.event.TreeSelectionEvent;
 import javax.swing.event.TreeSelectionListener;
 
-import org.bimserver.interfaces.objects.SProject;
-import org.bimserver.interfaces.objects.SRevision;
-import org.bimserver.interfaces.objects.SUser;
+import org.bimserver.shared.ProjectList;
+import org.bimserver.shared.SGeoTag;
+import org.bimserver.shared.SProject;
+import org.bimserver.shared.SRevision;
+import org.bimserver.shared.SUser;
 import org.bimserver.shared.UserException;
+import org.bimserver.shared.UserList;
 import org.bimserver.utils.InputStreamDataSource;
 
 public class TreePanel extends JPanel {
@@ -124,7 +127,7 @@ public class TreePanel extends JPanel {
 					int showConfirmDialog = JOptionPane.showConfirmDialog(testWindow, "Are you sure you want to delete this user?", "Delete user", JOptionPane.YES_NO_OPTION);
 					if (showConfirmDialog == JOptionPane.YES_OPTION) {
 						try {
-							serviceHolder.getService().deleteUser(((UserTreeNode) lastPathComponent).getUser().getOid());
+							serviceHolder.getService().deleteUser(((UserTreeNode) lastPathComponent).getUser().getId());
 						} catch (UserException e1) {
 							e1.printStackTrace();
 						}
@@ -163,7 +166,7 @@ public class TreePanel extends JPanel {
 						| JOptionPane.INFORMATION_MESSAGE);
 				if (newProjectName != null) {
 					try {
-						serviceHolder.getService().addProject(newProjectName);
+						serviceHolder.getService().addProject(newProjectName, new SGeoTag());
 					} catch (UserException e1) {
 						JOptionPane.showMessageDialog(testWindow, e1.getUserMessage());
 					}
@@ -255,7 +258,7 @@ public class TreePanel extends JPanel {
 			public void actionPerformed(ActionEvent e) {
 				ProjectTreeNode ptn = (ProjectTreeNode) tree.getSelectionPath().getLastPathComponent();
 				try {
-					SRevision revision = serviceHolder.getService().getRevision(ptn.getProject().getLastRevisionId());
+					SRevision revision = serviceHolder.getService().getLastRevision(ptn.getProject().getId());
 					testWindow.checkout(revision);
 				} catch (UserException e1) {
 					e1.printStackTrace();
@@ -268,7 +271,7 @@ public class TreePanel extends JPanel {
 			public void actionPerformed(ActionEvent e) {
 				ProjectTreeNode ptn = (ProjectTreeNode) tree.getSelectionPath().getLastPathComponent();
 				try {
-					SRevision revision = serviceHolder.getService().getRevision(ptn.getProject().getLastRevisionId());
+					SRevision revision = serviceHolder.getService().getLastRevision(ptn.getProject().getId());
 					testWindow.download(revision);
 				} catch (UserException e1) {
 					e1.printStackTrace();
@@ -315,7 +318,7 @@ public class TreePanel extends JPanel {
 			@Override
 			public void popupMenuWillBecomeVisible(PopupMenuEvent e) {
 				try {
-					if (serviceHolder.getService().getAllRevisionsOfProject(((ProjectTreeNode) tree.getSelectionPath().getLastPathComponent()).getProject().getOid()) == null) {
+					if (serviceHolder.getService().getAllRevisionsOfProject(((ProjectTreeNode) tree.getSelectionPath().getLastPathComponent()).getProject().getId()) == null) {
 						checkout.setEnabled(false);
 						checkin.setText("Checkin initial revision...");
 					} else {
@@ -344,11 +347,12 @@ public class TreePanel extends JPanel {
 	}
 
 	private void updateProjects(ServerTreeNode serverTreeNode) {
+		ProjectList projectList;
 		try {
-			List<SProject> projectList = serviceHolder.getService().getAllProjects();
+			projectList = serviceHolder.getService().getAllProjects();
 			serverTreeNode.clearProjects();
 			if (projectList != null) {
-				for (SProject p : projectList) {
+				for (SProject p : projectList.getProjects()) {
 					ProjectTreeNode projectTreeNode = new ProjectTreeNode(p);
 					serverTreeNode.add(projectTreeNode);
 				}
@@ -360,11 +364,12 @@ public class TreePanel extends JPanel {
 	}
 
 	private void updateUsers(ServerTreeNode serverTreeNode) {
+		UserList userList;
 		try {
-			List<SUser> userList = serviceHolder.getService().getAllUsers();
+			userList = serviceHolder.getService().getAllUsers();
 			serverTreeNode.clearUsers();
 			if (userList != null) {
-				for (SUser u : userList) {
+				for (SUser u : userList.getUsers()) {
 					UserTreeNode userTreeNode = new UserTreeNode(u);
 					serverTreeNode.add(userTreeNode);
 				}

@@ -24,7 +24,11 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcCartesianPoint;
+import org.bimserver.ifc.emf.Ifc2x3.IfcDimensionCount;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLengthMeasure;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -35,7 +39,6 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcCartesianPointImpl#getCoordinates <em>Coordinates</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcCartesianPointImpl#getCoordinatesAsString <em>Coordinates As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcCartesianPointImpl#getDim <em>Dim</em>}</li>
  * </ul>
  * </p>
@@ -68,8 +71,8 @@ public class IfcCartesianPointImpl extends IfcPointImpl implements IfcCartesianP
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<Float> getCoordinates() {
-		return (EList<Float>) eGet(Ifc2x3Package.eINSTANCE.getIfcCartesianPoint_Coordinates(), true);
+	public EList<IfcLengthMeasure> getCoordinates() {
+		return (EList<IfcLengthMeasure>) eGet(Ifc2x3Package.eINSTANCE.getIfcCartesianPoint_Coordinates(), true);
 	}
 
 	/**
@@ -77,9 +80,8 @@ public class IfcCartesianPointImpl extends IfcPointImpl implements IfcCartesianP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
-	public EList<String> getCoordinatesAsString() {
-		return (EList<String>) eGet(Ifc2x3Package.eINSTANCE.getIfcCartesianPoint_CoordinatesAsString(), true);
+	public IfcDimensionCount getDim() {
+		return (IfcDimensionCount) eGet(Ifc2x3Package.eINSTANCE.getIfcCartesianPoint_Dim(), true);
 	}
 
 	/**
@@ -87,16 +89,7 @@ public class IfcCartesianPointImpl extends IfcPointImpl implements IfcCartesianP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getDim() {
-		return (Integer) eGet(Ifc2x3Package.eINSTANCE.getIfcCartesianPoint_Dim(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDim(int newDim) {
+	public void setDim(IfcDimensionCount newDim) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcCartesianPoint_Dim(), newDim);
 	}
 

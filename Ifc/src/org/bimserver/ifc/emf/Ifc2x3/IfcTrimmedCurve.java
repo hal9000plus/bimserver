@@ -104,33 +104,30 @@ public interface IfcTrimmedCurve extends IfcBoundedCurve {
 	EList<IfcTrimmingSelect> getTrim2();
 
 	/**
-	 * Returns the value of the '<em><b>Sense Agreement</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.bimserver.ifc.emf.Ifc2x3.Tristate}.
+	 * Returns the value of the '<em><b>Sense Agreement</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Sense Agreement</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Sense Agreement</em>' attribute.
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Tristate
-	 * @see #setSenseAgreement(Tristate)
+	 * @return the value of the '<em>Sense Agreement</em>' reference.
+	 * @see #setSenseAgreement(IfcLogical)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTrimmedCurve_SenseAgreement()
 	 * @model
 	 * @generated
 	 */
-	Tristate getSenseAgreement();
+	IfcLogical getSenseAgreement();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTrimmedCurve#getSenseAgreement <em>Sense Agreement</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTrimmedCurve#getSenseAgreement <em>Sense Agreement</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Sense Agreement</em>' attribute.
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Tristate
+	 * @param value the new value of the '<em>Sense Agreement</em>' reference.
 	 * @see #getSenseAgreement()
 	 * @generated
 	 */
-	void setSenseAgreement(Tristate value);
+	void setSenseAgreement(IfcLogical value);
 
 	/**
 	 * Returns the value of the '<em><b>Master Representation</b></em>' attribute.

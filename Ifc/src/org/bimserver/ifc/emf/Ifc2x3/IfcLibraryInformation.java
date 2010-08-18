@@ -46,80 +46,80 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface IfcLibraryInformation extends IfcLibrarySelect {
 	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * Returns the value of the '<em><b>Name</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Name</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
+	 * @return the value of the '<em>Name</em>' reference.
+	 * @see #setName(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcLibraryInformation_Name()
 	 * @model
 	 * @generated
 	 */
-	String getName();
+	IfcLabel getName();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLibraryInformation#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLibraryInformation#getName <em>Name</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @param value the new value of the '<em>Name</em>' reference.
 	 * @see #getName()
 	 * @generated
 	 */
-	void setName(String value);
+	void setName(IfcLabel value);
 
 	/**
-	 * Returns the value of the '<em><b>Version</b></em>' attribute.
+	 * Returns the value of the '<em><b>Version</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Version</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Version</em>' attribute.
+	 * @return the value of the '<em>Version</em>' reference.
 	 * @see #isSetVersion()
 	 * @see #unsetVersion()
-	 * @see #setVersion(String)
+	 * @see #setVersion(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcLibraryInformation_Version()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getVersion();
+	IfcLabel getVersion();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLibraryInformation#getVersion <em>Version</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLibraryInformation#getVersion <em>Version</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Version</em>' attribute.
+	 * @param value the new value of the '<em>Version</em>' reference.
 	 * @see #isSetVersion()
 	 * @see #unsetVersion()
 	 * @see #getVersion()
 	 * @generated
 	 */
-	void setVersion(String value);
+	void setVersion(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLibraryInformation#getVersion <em>Version</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLibraryInformation#getVersion <em>Version</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetVersion()
 	 * @see #getVersion()
-	 * @see #setVersion(String)
+	 * @see #setVersion(IfcLabel)
 	 * @generated
 	 */
 	void unsetVersion();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLibraryInformation#getVersion <em>Version</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLibraryInformation#getVersion <em>Version</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Version</em>' attribute is set.
+	 * @return whether the value of the '<em>Version</em>' reference is set.
 	 * @see #unsetVersion()
 	 * @see #getVersion()
-	 * @see #setVersion(String)
+	 * @see #setVersion(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetVersion();

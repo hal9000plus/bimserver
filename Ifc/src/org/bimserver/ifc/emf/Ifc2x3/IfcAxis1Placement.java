@@ -31,6 +31,7 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcAxis1Placement#getAxis <em>Axis</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcAxis1Placement#getZ <em>Z</em>}</li>
  * </ul>
  * </p>
  *
@@ -91,5 +92,32 @@ public interface IfcAxis1Placement extends IfcPlacement {
 	 * @generated
 	 */
 	boolean isSetAxis();
+
+	/**
+	 * Returns the value of the '<em><b>Z</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Z</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Z</em>' reference.
+	 * @see #setZ(IfcDirection)
+	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcAxis1Placement_Z()
+	 * @model transient="true" volatile="true" derived="true"
+	 *        annotation="http://www.iso.org/iso10303-11/EXPRESS code=' NVL (IfcNormalise(Axis), IfcRepresentationItem() || IfcGeometricRepresentationItem () || IfcDirection([0.0,0.0,1.0]));'"
+	 * @generated
+	 */
+	IfcDirection getZ();
+
+	/**
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcAxis1Placement#getZ <em>Z</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Z</em>' reference.
+	 * @see #getZ()
+	 * @generated
+	 */
+	void setZ(IfcDirection value);
 
 } // IfcAxis1Placement

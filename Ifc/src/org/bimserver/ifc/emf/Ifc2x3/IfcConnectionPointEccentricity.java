@@ -31,11 +31,8 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcConnectionPointEccentricity#getEccentricityInX <em>Eccentricity In X</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcConnectionPointEccentricity#getEccentricityInXAsString <em>Eccentricity In XAs String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcConnectionPointEccentricity#getEccentricityInY <em>Eccentricity In Y</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcConnectionPointEccentricity#getEccentricityInYAsString <em>Eccentricity In YAs String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcConnectionPointEccentricity#getEccentricityInZ <em>Eccentricity In Z</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcConnectionPointEccentricity#getEccentricityInZAsString <em>Eccentricity In ZAs String</em>}</li>
  * </ul>
  * </p>
  *
@@ -45,321 +42,162 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcConnectionPointEccentricity extends IfcConnectionPointGeometry {
 	/**
-	 * Returns the value of the '<em><b>Eccentricity In X</b></em>' attribute.
+	 * Returns the value of the '<em><b>Eccentricity In X</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Eccentricity In X</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Eccentricity In X</em>' attribute.
+	 * @return the value of the '<em>Eccentricity In X</em>' reference.
 	 * @see #isSetEccentricityInX()
 	 * @see #unsetEccentricityInX()
-	 * @see #setEccentricityInX(float)
+	 * @see #setEccentricityInX(IfcLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcConnectionPointEccentricity_EccentricityInX()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getEccentricityInX();
+	IfcLengthMeasure getEccentricityInX();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConnectionPointEccentricity#getEccentricityInX <em>Eccentricity In X</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConnectionPointEccentricity#getEccentricityInX <em>Eccentricity In X</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Eccentricity In X</em>' attribute.
+	 * @param value the new value of the '<em>Eccentricity In X</em>' reference.
 	 * @see #isSetEccentricityInX()
 	 * @see #unsetEccentricityInX()
 	 * @see #getEccentricityInX()
 	 * @generated
 	 */
-	void setEccentricityInX(float value);
+	void setEccentricityInX(IfcLengthMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConnectionPointEccentricity#getEccentricityInX <em>Eccentricity In X</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConnectionPointEccentricity#getEccentricityInX <em>Eccentricity In X</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetEccentricityInX()
 	 * @see #getEccentricityInX()
-	 * @see #setEccentricityInX(float)
+	 * @see #setEccentricityInX(IfcLengthMeasure)
 	 * @generated
 	 */
 	void unsetEccentricityInX();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConnectionPointEccentricity#getEccentricityInX <em>Eccentricity In X</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConnectionPointEccentricity#getEccentricityInX <em>Eccentricity In X</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Eccentricity In X</em>' attribute is set.
+	 * @return whether the value of the '<em>Eccentricity In X</em>' reference is set.
 	 * @see #unsetEccentricityInX()
 	 * @see #getEccentricityInX()
-	 * @see #setEccentricityInX(float)
+	 * @see #setEccentricityInX(IfcLengthMeasure)
 	 * @generated
 	 */
 	boolean isSetEccentricityInX();
 
 	/**
-	 * Returns the value of the '<em><b>Eccentricity In XAs String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Eccentricity In XAs String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Eccentricity In XAs String</em>' attribute.
-	 * @see #isSetEccentricityInXAsString()
-	 * @see #unsetEccentricityInXAsString()
-	 * @see #setEccentricityInXAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcConnectionPointEccentricity_EccentricityInXAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getEccentricityInXAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConnectionPointEccentricity#getEccentricityInXAsString <em>Eccentricity In XAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Eccentricity In XAs String</em>' attribute.
-	 * @see #isSetEccentricityInXAsString()
-	 * @see #unsetEccentricityInXAsString()
-	 * @see #getEccentricityInXAsString()
-	 * @generated
-	 */
-	void setEccentricityInXAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConnectionPointEccentricity#getEccentricityInXAsString <em>Eccentricity In XAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetEccentricityInXAsString()
-	 * @see #getEccentricityInXAsString()
-	 * @see #setEccentricityInXAsString(String)
-	 * @generated
-	 */
-	void unsetEccentricityInXAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConnectionPointEccentricity#getEccentricityInXAsString <em>Eccentricity In XAs String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Eccentricity In XAs String</em>' attribute is set.
-	 * @see #unsetEccentricityInXAsString()
-	 * @see #getEccentricityInXAsString()
-	 * @see #setEccentricityInXAsString(String)
-	 * @generated
-	 */
-	boolean isSetEccentricityInXAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Eccentricity In Y</b></em>' attribute.
+	 * Returns the value of the '<em><b>Eccentricity In Y</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Eccentricity In Y</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Eccentricity In Y</em>' attribute.
+	 * @return the value of the '<em>Eccentricity In Y</em>' reference.
 	 * @see #isSetEccentricityInY()
 	 * @see #unsetEccentricityInY()
-	 * @see #setEccentricityInY(float)
+	 * @see #setEccentricityInY(IfcLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcConnectionPointEccentricity_EccentricityInY()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getEccentricityInY();
+	IfcLengthMeasure getEccentricityInY();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConnectionPointEccentricity#getEccentricityInY <em>Eccentricity In Y</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConnectionPointEccentricity#getEccentricityInY <em>Eccentricity In Y</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Eccentricity In Y</em>' attribute.
+	 * @param value the new value of the '<em>Eccentricity In Y</em>' reference.
 	 * @see #isSetEccentricityInY()
 	 * @see #unsetEccentricityInY()
 	 * @see #getEccentricityInY()
 	 * @generated
 	 */
-	void setEccentricityInY(float value);
+	void setEccentricityInY(IfcLengthMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConnectionPointEccentricity#getEccentricityInY <em>Eccentricity In Y</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConnectionPointEccentricity#getEccentricityInY <em>Eccentricity In Y</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetEccentricityInY()
 	 * @see #getEccentricityInY()
-	 * @see #setEccentricityInY(float)
+	 * @see #setEccentricityInY(IfcLengthMeasure)
 	 * @generated
 	 */
 	void unsetEccentricityInY();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConnectionPointEccentricity#getEccentricityInY <em>Eccentricity In Y</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConnectionPointEccentricity#getEccentricityInY <em>Eccentricity In Y</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Eccentricity In Y</em>' attribute is set.
+	 * @return whether the value of the '<em>Eccentricity In Y</em>' reference is set.
 	 * @see #unsetEccentricityInY()
 	 * @see #getEccentricityInY()
-	 * @see #setEccentricityInY(float)
+	 * @see #setEccentricityInY(IfcLengthMeasure)
 	 * @generated
 	 */
 	boolean isSetEccentricityInY();
 
 	/**
-	 * Returns the value of the '<em><b>Eccentricity In YAs String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Eccentricity In YAs String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Eccentricity In YAs String</em>' attribute.
-	 * @see #isSetEccentricityInYAsString()
-	 * @see #unsetEccentricityInYAsString()
-	 * @see #setEccentricityInYAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcConnectionPointEccentricity_EccentricityInYAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getEccentricityInYAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConnectionPointEccentricity#getEccentricityInYAsString <em>Eccentricity In YAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Eccentricity In YAs String</em>' attribute.
-	 * @see #isSetEccentricityInYAsString()
-	 * @see #unsetEccentricityInYAsString()
-	 * @see #getEccentricityInYAsString()
-	 * @generated
-	 */
-	void setEccentricityInYAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConnectionPointEccentricity#getEccentricityInYAsString <em>Eccentricity In YAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetEccentricityInYAsString()
-	 * @see #getEccentricityInYAsString()
-	 * @see #setEccentricityInYAsString(String)
-	 * @generated
-	 */
-	void unsetEccentricityInYAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConnectionPointEccentricity#getEccentricityInYAsString <em>Eccentricity In YAs String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Eccentricity In YAs String</em>' attribute is set.
-	 * @see #unsetEccentricityInYAsString()
-	 * @see #getEccentricityInYAsString()
-	 * @see #setEccentricityInYAsString(String)
-	 * @generated
-	 */
-	boolean isSetEccentricityInYAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Eccentricity In Z</b></em>' attribute.
+	 * Returns the value of the '<em><b>Eccentricity In Z</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Eccentricity In Z</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Eccentricity In Z</em>' attribute.
+	 * @return the value of the '<em>Eccentricity In Z</em>' reference.
 	 * @see #isSetEccentricityInZ()
 	 * @see #unsetEccentricityInZ()
-	 * @see #setEccentricityInZ(float)
+	 * @see #setEccentricityInZ(IfcLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcConnectionPointEccentricity_EccentricityInZ()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getEccentricityInZ();
+	IfcLengthMeasure getEccentricityInZ();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConnectionPointEccentricity#getEccentricityInZ <em>Eccentricity In Z</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConnectionPointEccentricity#getEccentricityInZ <em>Eccentricity In Z</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Eccentricity In Z</em>' attribute.
+	 * @param value the new value of the '<em>Eccentricity In Z</em>' reference.
 	 * @see #isSetEccentricityInZ()
 	 * @see #unsetEccentricityInZ()
 	 * @see #getEccentricityInZ()
 	 * @generated
 	 */
-	void setEccentricityInZ(float value);
+	void setEccentricityInZ(IfcLengthMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConnectionPointEccentricity#getEccentricityInZ <em>Eccentricity In Z</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConnectionPointEccentricity#getEccentricityInZ <em>Eccentricity In Z</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetEccentricityInZ()
 	 * @see #getEccentricityInZ()
-	 * @see #setEccentricityInZ(float)
+	 * @see #setEccentricityInZ(IfcLengthMeasure)
 	 * @generated
 	 */
 	void unsetEccentricityInZ();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConnectionPointEccentricity#getEccentricityInZ <em>Eccentricity In Z</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConnectionPointEccentricity#getEccentricityInZ <em>Eccentricity In Z</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Eccentricity In Z</em>' attribute is set.
+	 * @return whether the value of the '<em>Eccentricity In Z</em>' reference is set.
 	 * @see #unsetEccentricityInZ()
 	 * @see #getEccentricityInZ()
-	 * @see #setEccentricityInZ(float)
+	 * @see #setEccentricityInZ(IfcLengthMeasure)
 	 * @generated
 	 */
 	boolean isSetEccentricityInZ();
-
-	/**
-	 * Returns the value of the '<em><b>Eccentricity In ZAs String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Eccentricity In ZAs String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Eccentricity In ZAs String</em>' attribute.
-	 * @see #isSetEccentricityInZAsString()
-	 * @see #unsetEccentricityInZAsString()
-	 * @see #setEccentricityInZAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcConnectionPointEccentricity_EccentricityInZAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getEccentricityInZAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConnectionPointEccentricity#getEccentricityInZAsString <em>Eccentricity In ZAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Eccentricity In ZAs String</em>' attribute.
-	 * @see #isSetEccentricityInZAsString()
-	 * @see #unsetEccentricityInZAsString()
-	 * @see #getEccentricityInZAsString()
-	 * @generated
-	 */
-	void setEccentricityInZAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConnectionPointEccentricity#getEccentricityInZAsString <em>Eccentricity In ZAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetEccentricityInZAsString()
-	 * @see #getEccentricityInZAsString()
-	 * @see #setEccentricityInZAsString(String)
-	 * @generated
-	 */
-	void unsetEccentricityInZAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConnectionPointEccentricity#getEccentricityInZAsString <em>Eccentricity In ZAs String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Eccentricity In ZAs String</em>' attribute is set.
-	 * @see #unsetEccentricityInZAsString()
-	 * @see #getEccentricityInZAsString()
-	 * @see #setEccentricityInZAsString(String)
-	 * @generated
-	 */
-	boolean isSetEccentricityInZAsString();
 
 } // IfcConnectionPointEccentricity

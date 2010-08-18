@@ -26,8 +26,6 @@ import java.util.List;
 
 import javax.swing.tree.TreeNode;
 
-import org.bimserver.utils.ListEnumeration;
-
 public class ProjectsTreeNode implements TreeNode{
 
 	private List<ProjectTreeNode> projects = new ArrayList<ProjectTreeNode>();

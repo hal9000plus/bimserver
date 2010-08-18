@@ -11,7 +11,7 @@ import java.util.Set;
 import nl.tue.buildingsmart.express.dictionary.SchemaDefinition;
 import nl.tue.buildingsmart.express.parser.ExpressSchemaParser;
 
-import org.bimserver.ifc.IfcModel;
+import org.bimserver.emf.EmfModel;
 import org.bimserver.ifc.database.IfcDatabase;
 import org.bimserver.ifc.emf.Ifc2x3.IfcArbitraryClosedProfileDef;
 import org.bimserver.ifc.emf.Ifc2x3.IfcAxis2Placement3D;
@@ -22,6 +22,7 @@ import org.bimserver.ifc.emf.Ifc2x3.IfcPolyline;
 import org.bimserver.ifc.emf.Ifc2x3.IfcProduct;
 import org.bimserver.ifc.emf.Ifc2x3.IfcProductDefinitionShape;
 import org.bimserver.ifc.emf.Ifc2x3.IfcProductRepresentation;
+import org.bimserver.ifc.emf.Ifc2x3.IfcReal;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRepresentation;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRepresentationItem;
 import org.bimserver.ifc.emf.Ifc2x3.IfcShapeRepresentation;
@@ -47,8 +48,8 @@ public class KmlExportTest {
 			Set<IfcExtrudedAreaSolid> solids = new HashSet<IfcExtrudedAreaSolid>();
 			try {
 				fastIfcFileReader.read(TestFile.AC11.getFile());
-				IfcModel model = fastIfcFileReader.getModel();
-				IfcDatabase database = new IfcDatabase(model, null);
+				EmfModel<Long> model = fastIfcFileReader.getModel();
+				IfcDatabase<Long> database = new IfcDatabase<Long>(model, null);
 				out.println("<?xml version=\"1.0\" encoding=\"UTF-8\"?><kml xmlns=\"http://www.opengis.net/kml/2.2\">  <Document>");
 				out.println("      <Folder>       <name>Extruded Polygon</name>        <description>A simple way to model a building</description>        ");
 				List<IfcProduct> products = new ArrayList<IfcProduct>();
@@ -108,40 +109,40 @@ public class KmlExportTest {
 		out.println("<Polygon>       <extrude>0</extrude>            <altitudeMode>relativeToGround</altitudeMode>            <outerBoundaryIs>");
 		out.println("<LinearRing>");
 		out.println("<coordinates>");
-		EList<Float> directionRatios = placement.getRefDirection().getDirectionRatios();
+		EList<IfcReal> directionRatios = placement.getRefDirection().getDirectionRatios();
 		
 		for (IfcCartesianPoint icp : poly.getPoints()) {
-			float x = icp.getCoordinates().get(0);
-			float y = icp.getCoordinates().get(1);
+			float x = icp.getCoordinates().get(0).getWrappedValue();
+			float y = icp.getCoordinates().get(1).getWrappedValue();
 			float z = 0;
 
-			if (directionRatios.get(0) == 1) {
-			} else if (directionRatios.get(0) == -1) {
+			if (directionRatios.get(0).getWrappedValue() == 1) {
+			} else if (directionRatios.get(0).getWrappedValue() == -1) {
 				x = -x;
 //				y = -y;
-			} else if (directionRatios.get(1) == 1) {
+			} else if (directionRatios.get(1).getWrappedValue() == 1) {
 				float q = x;
 				x = y;
 				y = q;
-			} else if (directionRatios.get(1) == -1) {
+			} else if (directionRatios.get(1).getWrappedValue() == -1) {
 				float q = x;
 				x = -y;
 				y = -q;
-			} else if (directionRatios.get(2) == 1) {
+			} else if (directionRatios.get(2).getWrappedValue() == 1) {
 				float q = x;
 				float w = y;
 				x = z;
 				y = -q;
 				z = w;
-			} else if (directionRatios.get(2) == -1) {
+			} else if (directionRatios.get(2).getWrappedValue() == -1) {
 				float q = x;
 				x = -z;
 				y = -y;
 				z = q;
 			}
-			x += placement.getLocation().getCoordinates().get(0);
-			y += placement.getLocation().getCoordinates().get(1);
-			z += placement2.getLocation().getCoordinates().get(2);
+			x += placement.getLocation().getCoordinates().get(0).getWrappedValue();
+			y += placement.getLocation().getCoordinates().get(1).getWrappedValue();
+			z += placement2.getLocation().getCoordinates().get(2).getWrappedValue();
 			
 			x = x/10000;
 			out.print(x + ", ");

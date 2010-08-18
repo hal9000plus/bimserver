@@ -22,10 +22,14 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
-import org.bimserver.emf.IdEObjectImpl;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcExternalReference;
+import org.bimserver.ifc.emf.Ifc2x3.IfcIdentifier;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -42,7 +46,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class IfcExternalReferenceImpl extends IdEObjectImpl implements IfcExternalReference {
+public class IfcExternalReferenceImpl extends EObjectImpl implements IfcExternalReference {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -77,8 +81,8 @@ public class IfcExternalReferenceImpl extends IdEObjectImpl implements IfcExtern
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getLocation() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcExternalReference_Location(), true);
+	public IfcLabel getLocation() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcExternalReference_Location(), true);
 	}
 
 	/**
@@ -86,7 +90,7 @@ public class IfcExternalReferenceImpl extends IdEObjectImpl implements IfcExtern
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLocation(String newLocation) {
+	public void setLocation(IfcLabel newLocation) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcExternalReference_Location(), newLocation);
 	}
 
@@ -113,8 +117,8 @@ public class IfcExternalReferenceImpl extends IdEObjectImpl implements IfcExtern
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getItemReference() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcExternalReference_ItemReference(), true);
+	public IfcIdentifier getItemReference() {
+		return (IfcIdentifier) eGet(Ifc2x3Package.eINSTANCE.getIfcExternalReference_ItemReference(), true);
 	}
 
 	/**
@@ -122,7 +126,7 @@ public class IfcExternalReferenceImpl extends IdEObjectImpl implements IfcExtern
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setItemReference(String newItemReference) {
+	public void setItemReference(IfcIdentifier newItemReference) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcExternalReference_ItemReference(), newItemReference);
 	}
 
@@ -149,8 +153,8 @@ public class IfcExternalReferenceImpl extends IdEObjectImpl implements IfcExtern
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcExternalReference_Name(), true);
+	public IfcLabel getName() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcExternalReference_Name(), true);
 	}
 
 	/**
@@ -158,7 +162,7 @@ public class IfcExternalReferenceImpl extends IdEObjectImpl implements IfcExtern
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(String newName) {
+	public void setName(IfcLabel newName) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcExternalReference_Name(), newName);
 	}
 

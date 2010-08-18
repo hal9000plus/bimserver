@@ -25,6 +25,7 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcPipeFittingType;
 import org.bimserver.ifc.emf.Ifc2x3.IfcPipeFittingTypeEnum;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

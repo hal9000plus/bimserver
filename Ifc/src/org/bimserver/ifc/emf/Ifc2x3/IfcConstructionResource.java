@@ -43,107 +43,107 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcConstructionResource extends IfcResource {
 	/**
-	 * Returns the value of the '<em><b>Resource Identifier</b></em>' attribute.
+	 * Returns the value of the '<em><b>Resource Identifier</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Resource Identifier</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Resource Identifier</em>' attribute.
+	 * @return the value of the '<em>Resource Identifier</em>' reference.
 	 * @see #isSetResourceIdentifier()
 	 * @see #unsetResourceIdentifier()
-	 * @see #setResourceIdentifier(String)
+	 * @see #setResourceIdentifier(IfcIdentifier)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcConstructionResource_ResourceIdentifier()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getResourceIdentifier();
+	IfcIdentifier getResourceIdentifier();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConstructionResource#getResourceIdentifier <em>Resource Identifier</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConstructionResource#getResourceIdentifier <em>Resource Identifier</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Resource Identifier</em>' attribute.
+	 * @param value the new value of the '<em>Resource Identifier</em>' reference.
 	 * @see #isSetResourceIdentifier()
 	 * @see #unsetResourceIdentifier()
 	 * @see #getResourceIdentifier()
 	 * @generated
 	 */
-	void setResourceIdentifier(String value);
+	void setResourceIdentifier(IfcIdentifier value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConstructionResource#getResourceIdentifier <em>Resource Identifier</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConstructionResource#getResourceIdentifier <em>Resource Identifier</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetResourceIdentifier()
 	 * @see #getResourceIdentifier()
-	 * @see #setResourceIdentifier(String)
+	 * @see #setResourceIdentifier(IfcIdentifier)
 	 * @generated
 	 */
 	void unsetResourceIdentifier();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConstructionResource#getResourceIdentifier <em>Resource Identifier</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConstructionResource#getResourceIdentifier <em>Resource Identifier</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Resource Identifier</em>' attribute is set.
+	 * @return whether the value of the '<em>Resource Identifier</em>' reference is set.
 	 * @see #unsetResourceIdentifier()
 	 * @see #getResourceIdentifier()
-	 * @see #setResourceIdentifier(String)
+	 * @see #setResourceIdentifier(IfcIdentifier)
 	 * @generated
 	 */
 	boolean isSetResourceIdentifier();
 
 	/**
-	 * Returns the value of the '<em><b>Resource Group</b></em>' attribute.
+	 * Returns the value of the '<em><b>Resource Group</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Resource Group</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Resource Group</em>' attribute.
+	 * @return the value of the '<em>Resource Group</em>' reference.
 	 * @see #isSetResourceGroup()
 	 * @see #unsetResourceGroup()
-	 * @see #setResourceGroup(String)
+	 * @see #setResourceGroup(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcConstructionResource_ResourceGroup()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getResourceGroup();
+	IfcLabel getResourceGroup();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConstructionResource#getResourceGroup <em>Resource Group</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConstructionResource#getResourceGroup <em>Resource Group</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Resource Group</em>' attribute.
+	 * @param value the new value of the '<em>Resource Group</em>' reference.
 	 * @see #isSetResourceGroup()
 	 * @see #unsetResourceGroup()
 	 * @see #getResourceGroup()
 	 * @generated
 	 */
-	void setResourceGroup(String value);
+	void setResourceGroup(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConstructionResource#getResourceGroup <em>Resource Group</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConstructionResource#getResourceGroup <em>Resource Group</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetResourceGroup()
 	 * @see #getResourceGroup()
-	 * @see #setResourceGroup(String)
+	 * @see #setResourceGroup(IfcLabel)
 	 * @generated
 	 */
 	void unsetResourceGroup();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConstructionResource#getResourceGroup <em>Resource Group</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConstructionResource#getResourceGroup <em>Resource Group</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Resource Group</em>' attribute is set.
+	 * @return whether the value of the '<em>Resource Group</em>' reference is set.
 	 * @see #unsetResourceGroup()
 	 * @see #getResourceGroup()
-	 * @see #setResourceGroup(String)
+	 * @see #setResourceGroup(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetResourceGroup();

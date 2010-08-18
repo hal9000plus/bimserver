@@ -32,9 +32,9 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcPresentationLayerWithStyle#isLayerOn <em>Layer On</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcPresentationLayerWithStyle#isLayerFrozen <em>Layer Frozen</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcPresentationLayerWithStyle#isLayerBlocked <em>Layer Blocked</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcPresentationLayerWithStyle#getLayerOn <em>Layer On</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcPresentationLayerWithStyle#getLayerFrozen <em>Layer Frozen</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcPresentationLayerWithStyle#getLayerBlocked <em>Layer Blocked</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcPresentationLayerWithStyle#getLayerStyles <em>Layer Styles</em>}</li>
  * </ul>
  * </p>
@@ -45,82 +45,82 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface IfcPresentationLayerWithStyle extends IfcPresentationLayerAssignment {
 	/**
-	 * Returns the value of the '<em><b>Layer On</b></em>' attribute.
+	 * Returns the value of the '<em><b>Layer On</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Layer On</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Layer On</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Layer On</em>' attribute.
-	 * @see #setLayerOn(boolean)
+	 * @return the value of the '<em>Layer On</em>' reference.
+	 * @see #setLayerOn(IfcLogical)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcPresentationLayerWithStyle_LayerOn()
 	 * @model
 	 * @generated
 	 */
-	boolean isLayerOn();
+	IfcLogical getLayerOn();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPresentationLayerWithStyle#isLayerOn <em>Layer On</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPresentationLayerWithStyle#getLayerOn <em>Layer On</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Layer On</em>' attribute.
-	 * @see #isLayerOn()
+	 * @param value the new value of the '<em>Layer On</em>' reference.
+	 * @see #getLayerOn()
 	 * @generated
 	 */
-	void setLayerOn(boolean value);
+	void setLayerOn(IfcLogical value);
 
 	/**
-	 * Returns the value of the '<em><b>Layer Frozen</b></em>' attribute.
+	 * Returns the value of the '<em><b>Layer Frozen</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Layer Frozen</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Layer Frozen</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Layer Frozen</em>' attribute.
-	 * @see #setLayerFrozen(boolean)
+	 * @return the value of the '<em>Layer Frozen</em>' reference.
+	 * @see #setLayerFrozen(IfcLogical)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcPresentationLayerWithStyle_LayerFrozen()
 	 * @model
 	 * @generated
 	 */
-	boolean isLayerFrozen();
+	IfcLogical getLayerFrozen();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPresentationLayerWithStyle#isLayerFrozen <em>Layer Frozen</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPresentationLayerWithStyle#getLayerFrozen <em>Layer Frozen</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Layer Frozen</em>' attribute.
-	 * @see #isLayerFrozen()
+	 * @param value the new value of the '<em>Layer Frozen</em>' reference.
+	 * @see #getLayerFrozen()
 	 * @generated
 	 */
-	void setLayerFrozen(boolean value);
+	void setLayerFrozen(IfcLogical value);
 
 	/**
-	 * Returns the value of the '<em><b>Layer Blocked</b></em>' attribute.
+	 * Returns the value of the '<em><b>Layer Blocked</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Layer Blocked</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Layer Blocked</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Layer Blocked</em>' attribute.
-	 * @see #setLayerBlocked(boolean)
+	 * @return the value of the '<em>Layer Blocked</em>' reference.
+	 * @see #setLayerBlocked(IfcLogical)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcPresentationLayerWithStyle_LayerBlocked()
 	 * @model
 	 * @generated
 	 */
-	boolean isLayerBlocked();
+	IfcLogical getLayerBlocked();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPresentationLayerWithStyle#isLayerBlocked <em>Layer Blocked</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPresentationLayerWithStyle#getLayerBlocked <em>Layer Blocked</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Layer Blocked</em>' attribute.
-	 * @see #isLayerBlocked()
+	 * @param value the new value of the '<em>Layer Blocked</em>' reference.
+	 * @see #getLayerBlocked()
 	 * @generated
 	 */
-	void setLayerBlocked(boolean value);
+	void setLayerBlocked(IfcLogical value);
 
 	/**
 	 * Returns the value of the '<em><b>Layer Styles</b></em>' reference list.

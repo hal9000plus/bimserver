@@ -22,16 +22,21 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
-import org.bimserver.emf.IdEObjectImpl;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcAppliedValue;
 import org.bimserver.ifc.emf.Ifc2x3.IfcAppliedValueRelationship;
 import org.bimserver.ifc.emf.Ifc2x3.IfcAppliedValueSelect;
 import org.bimserver.ifc.emf.Ifc2x3.IfcDateTimeSelect;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
 import org.bimserver.ifc.emf.Ifc2x3.IfcMeasureWithUnit;
 import org.bimserver.ifc.emf.Ifc2x3.IfcReferencesValueDocument;
+import org.bimserver.ifc.emf.Ifc2x3.IfcText;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -54,7 +59,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class IfcAppliedValueImpl extends IdEObjectImpl implements IfcAppliedValue {
+public class IfcAppliedValueImpl extends EObjectImpl implements IfcAppliedValue {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -89,8 +94,8 @@ public class IfcAppliedValueImpl extends IdEObjectImpl implements IfcAppliedValu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcAppliedValue_Name(), true);
+	public IfcLabel getName() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcAppliedValue_Name(), true);
 	}
 
 	/**
@@ -98,7 +103,7 @@ public class IfcAppliedValueImpl extends IdEObjectImpl implements IfcAppliedValu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(String newName) {
+	public void setName(IfcLabel newName) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcAppliedValue_Name(), newName);
 	}
 
@@ -125,8 +130,8 @@ public class IfcAppliedValueImpl extends IdEObjectImpl implements IfcAppliedValu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getDescription() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcAppliedValue_Description(), true);
+	public IfcText getDescription() {
+		return (IfcText) eGet(Ifc2x3Package.eINSTANCE.getIfcAppliedValue_Description(), true);
 	}
 
 	/**
@@ -134,7 +139,7 @@ public class IfcAppliedValueImpl extends IdEObjectImpl implements IfcAppliedValu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDescription(String newDescription) {
+	public void setDescription(IfcText newDescription) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcAppliedValue_Description(), newDescription);
 	}
 

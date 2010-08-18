@@ -219,8 +219,8 @@ public enum IfcDocumentConfidentialityEnum implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final IfcDocumentConfidentialityEnum[] VALUES_ARRAY = new IfcDocumentConfidentialityEnum[] { NULL, RESTRICTED, NOTDEFINED, CONFIDENTIAL, PERSONAL, PUBLIC,
-			USERDEFINED, };
+	private static final IfcDocumentConfidentialityEnum[] VALUES_ARRAY = new IfcDocumentConfidentialityEnum[] { NULL, RESTRICTED, NOTDEFINED, CONFIDENTIAL,
+			PERSONAL, PUBLIC, USERDEFINED, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Ifc Document Confidentiality Enum</b></em>' enumerators.

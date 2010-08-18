@@ -22,7 +22,7 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3;
 
-import org.bimserver.emf.IdEObject;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -40,165 +40,164 @@ import org.bimserver.emf.IdEObject;
  *
  * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcDocumentElectronicFormat()
  * @model
- * @extends IdEObject
  * @generated
  */
-public interface IfcDocumentElectronicFormat extends IdEObject {
+public interface IfcDocumentElectronicFormat extends EObject {
 	/**
-	 * Returns the value of the '<em><b>File Extension</b></em>' attribute.
+	 * Returns the value of the '<em><b>File Extension</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>File Extension</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>File Extension</em>' attribute.
+	 * @return the value of the '<em>File Extension</em>' reference.
 	 * @see #isSetFileExtension()
 	 * @see #unsetFileExtension()
-	 * @see #setFileExtension(String)
+	 * @see #setFileExtension(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcDocumentElectronicFormat_FileExtension()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getFileExtension();
+	IfcLabel getFileExtension();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentElectronicFormat#getFileExtension <em>File Extension</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentElectronicFormat#getFileExtension <em>File Extension</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>File Extension</em>' attribute.
+	 * @param value the new value of the '<em>File Extension</em>' reference.
 	 * @see #isSetFileExtension()
 	 * @see #unsetFileExtension()
 	 * @see #getFileExtension()
 	 * @generated
 	 */
-	void setFileExtension(String value);
+	void setFileExtension(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentElectronicFormat#getFileExtension <em>File Extension</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentElectronicFormat#getFileExtension <em>File Extension</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetFileExtension()
 	 * @see #getFileExtension()
-	 * @see #setFileExtension(String)
+	 * @see #setFileExtension(IfcLabel)
 	 * @generated
 	 */
 	void unsetFileExtension();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentElectronicFormat#getFileExtension <em>File Extension</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentElectronicFormat#getFileExtension <em>File Extension</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>File Extension</em>' attribute is set.
+	 * @return whether the value of the '<em>File Extension</em>' reference is set.
 	 * @see #unsetFileExtension()
 	 * @see #getFileExtension()
-	 * @see #setFileExtension(String)
+	 * @see #setFileExtension(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetFileExtension();
 
 	/**
-	 * Returns the value of the '<em><b>Mime Content Type</b></em>' attribute.
+	 * Returns the value of the '<em><b>Mime Content Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Mime Content Type</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Mime Content Type</em>' attribute.
+	 * @return the value of the '<em>Mime Content Type</em>' reference.
 	 * @see #isSetMimeContentType()
 	 * @see #unsetMimeContentType()
-	 * @see #setMimeContentType(String)
+	 * @see #setMimeContentType(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcDocumentElectronicFormat_MimeContentType()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getMimeContentType();
+	IfcLabel getMimeContentType();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentElectronicFormat#getMimeContentType <em>Mime Content Type</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentElectronicFormat#getMimeContentType <em>Mime Content Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Mime Content Type</em>' attribute.
+	 * @param value the new value of the '<em>Mime Content Type</em>' reference.
 	 * @see #isSetMimeContentType()
 	 * @see #unsetMimeContentType()
 	 * @see #getMimeContentType()
 	 * @generated
 	 */
-	void setMimeContentType(String value);
+	void setMimeContentType(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentElectronicFormat#getMimeContentType <em>Mime Content Type</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentElectronicFormat#getMimeContentType <em>Mime Content Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetMimeContentType()
 	 * @see #getMimeContentType()
-	 * @see #setMimeContentType(String)
+	 * @see #setMimeContentType(IfcLabel)
 	 * @generated
 	 */
 	void unsetMimeContentType();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentElectronicFormat#getMimeContentType <em>Mime Content Type</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentElectronicFormat#getMimeContentType <em>Mime Content Type</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Mime Content Type</em>' attribute is set.
+	 * @return whether the value of the '<em>Mime Content Type</em>' reference is set.
 	 * @see #unsetMimeContentType()
 	 * @see #getMimeContentType()
-	 * @see #setMimeContentType(String)
+	 * @see #setMimeContentType(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetMimeContentType();
 
 	/**
-	 * Returns the value of the '<em><b>Mime Subtype</b></em>' attribute.
+	 * Returns the value of the '<em><b>Mime Subtype</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Mime Subtype</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Mime Subtype</em>' attribute.
+	 * @return the value of the '<em>Mime Subtype</em>' reference.
 	 * @see #isSetMimeSubtype()
 	 * @see #unsetMimeSubtype()
-	 * @see #setMimeSubtype(String)
+	 * @see #setMimeSubtype(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcDocumentElectronicFormat_MimeSubtype()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getMimeSubtype();
+	IfcLabel getMimeSubtype();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentElectronicFormat#getMimeSubtype <em>Mime Subtype</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentElectronicFormat#getMimeSubtype <em>Mime Subtype</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Mime Subtype</em>' attribute.
+	 * @param value the new value of the '<em>Mime Subtype</em>' reference.
 	 * @see #isSetMimeSubtype()
 	 * @see #unsetMimeSubtype()
 	 * @see #getMimeSubtype()
 	 * @generated
 	 */
-	void setMimeSubtype(String value);
+	void setMimeSubtype(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentElectronicFormat#getMimeSubtype <em>Mime Subtype</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentElectronicFormat#getMimeSubtype <em>Mime Subtype</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetMimeSubtype()
 	 * @see #getMimeSubtype()
-	 * @see #setMimeSubtype(String)
+	 * @see #setMimeSubtype(IfcLabel)
 	 * @generated
 	 */
 	void unsetMimeSubtype();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentElectronicFormat#getMimeSubtype <em>Mime Subtype</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentElectronicFormat#getMimeSubtype <em>Mime Subtype</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Mime Subtype</em>' attribute is set.
+	 * @return whether the value of the '<em>Mime Subtype</em>' reference is set.
 	 * @see #unsetMimeSubtype()
 	 * @see #getMimeSubtype()
-	 * @see #setMimeSubtype(String)
+	 * @see #setMimeSubtype(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetMimeSubtype();

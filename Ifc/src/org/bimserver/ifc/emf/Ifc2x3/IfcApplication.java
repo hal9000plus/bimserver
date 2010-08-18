@@ -22,7 +22,7 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3;
 
-import org.bimserver.emf.IdEObject;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -41,10 +41,9 @@ import org.bimserver.emf.IdEObject;
  *
  * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcApplication()
  * @model
- * @extends IdEObject
  * @generated
  */
-public interface IfcApplication extends IdEObject {
+public interface IfcApplication extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Application Developer</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -72,81 +71,81 @@ public interface IfcApplication extends IdEObject {
 	void setApplicationDeveloper(IfcOrganization value);
 
 	/**
-	 * Returns the value of the '<em><b>Version</b></em>' attribute.
+	 * Returns the value of the '<em><b>Version</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Version</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Version</em>' attribute.
-	 * @see #setVersion(String)
+	 * @return the value of the '<em>Version</em>' reference.
+	 * @see #setVersion(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcApplication_Version()
 	 * @model
 	 * @generated
 	 */
-	String getVersion();
+	IfcLabel getVersion();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcApplication#getVersion <em>Version</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcApplication#getVersion <em>Version</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Version</em>' attribute.
+	 * @param value the new value of the '<em>Version</em>' reference.
 	 * @see #getVersion()
 	 * @generated
 	 */
-	void setVersion(String value);
+	void setVersion(IfcLabel value);
 
 	/**
-	 * Returns the value of the '<em><b>Application Full Name</b></em>' attribute.
+	 * Returns the value of the '<em><b>Application Full Name</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Application Full Name</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Application Full Name</em>' attribute.
-	 * @see #setApplicationFullName(String)
+	 * @return the value of the '<em>Application Full Name</em>' reference.
+	 * @see #setApplicationFullName(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcApplication_ApplicationFullName()
 	 * @model
 	 * @generated
 	 */
-	String getApplicationFullName();
+	IfcLabel getApplicationFullName();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcApplication#getApplicationFullName <em>Application Full Name</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcApplication#getApplicationFullName <em>Application Full Name</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Application Full Name</em>' attribute.
+	 * @param value the new value of the '<em>Application Full Name</em>' reference.
 	 * @see #getApplicationFullName()
 	 * @generated
 	 */
-	void setApplicationFullName(String value);
+	void setApplicationFullName(IfcLabel value);
 
 	/**
-	 * Returns the value of the '<em><b>Application Identifier</b></em>' attribute.
+	 * Returns the value of the '<em><b>Application Identifier</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Application Identifier</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Application Identifier</em>' attribute.
-	 * @see #setApplicationIdentifier(String)
+	 * @return the value of the '<em>Application Identifier</em>' reference.
+	 * @see #setApplicationIdentifier(IfcIdentifier)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcApplication_ApplicationIdentifier()
 	 * @model
 	 * @generated
 	 */
-	String getApplicationIdentifier();
+	IfcIdentifier getApplicationIdentifier();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcApplication#getApplicationIdentifier <em>Application Identifier</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcApplication#getApplicationIdentifier <em>Application Identifier</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Application Identifier</em>' attribute.
+	 * @param value the new value of the '<em>Application Identifier</em>' reference.
 	 * @see #getApplicationIdentifier()
 	 * @generated
 	 */
-	void setApplicationIdentifier(String value);
+	void setApplicationIdentifier(IfcIdentifier value);
 
 } // IfcApplication

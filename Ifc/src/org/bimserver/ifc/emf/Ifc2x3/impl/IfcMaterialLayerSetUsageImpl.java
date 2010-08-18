@@ -22,13 +22,16 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
-import org.bimserver.emf.IdEObjectImpl;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcDirectionSenseEnum;
 import org.bimserver.ifc.emf.Ifc2x3.IfcLayerSetDirectionEnum;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLengthMeasure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcMaterialLayerSet;
 import org.bimserver.ifc.emf.Ifc2x3.IfcMaterialLayerSetUsage;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -41,13 +44,12 @@ import org.eclipse.emf.ecore.EClass;
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcMaterialLayerSetUsageImpl#getLayerSetDirection <em>Layer Set Direction</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcMaterialLayerSetUsageImpl#getDirectionSense <em>Direction Sense</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcMaterialLayerSetUsageImpl#getOffsetFromReferenceLine <em>Offset From Reference Line</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcMaterialLayerSetUsageImpl#getOffsetFromReferenceLineAsString <em>Offset From Reference Line As String</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class IfcMaterialLayerSetUsageImpl extends IdEObjectImpl implements IfcMaterialLayerSetUsage {
+public class IfcMaterialLayerSetUsageImpl extends EObjectImpl implements IfcMaterialLayerSetUsage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -136,8 +138,8 @@ public class IfcMaterialLayerSetUsageImpl extends IdEObjectImpl implements IfcMa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getOffsetFromReferenceLine() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcMaterialLayerSetUsage_OffsetFromReferenceLine(), true);
+	public IfcLengthMeasure getOffsetFromReferenceLine() {
+		return (IfcLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcMaterialLayerSetUsage_OffsetFromReferenceLine(), true);
 	}
 
 	/**
@@ -145,26 +147,8 @@ public class IfcMaterialLayerSetUsageImpl extends IdEObjectImpl implements IfcMa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setOffsetFromReferenceLine(float newOffsetFromReferenceLine) {
+	public void setOffsetFromReferenceLine(IfcLengthMeasure newOffsetFromReferenceLine) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcMaterialLayerSetUsage_OffsetFromReferenceLine(), newOffsetFromReferenceLine);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getOffsetFromReferenceLineAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcMaterialLayerSetUsage_OffsetFromReferenceLineAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setOffsetFromReferenceLineAsString(String newOffsetFromReferenceLineAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcMaterialLayerSetUsage_OffsetFromReferenceLineAsString(), newOffsetFromReferenceLineAsString);
 	}
 
 } //IfcMaterialLayerSetUsageImpl

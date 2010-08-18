@@ -41,54 +41,54 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcPropertyReferenceValue extends IfcSimpleProperty {
 	/**
-	 * Returns the value of the '<em><b>Usage Name</b></em>' attribute.
+	 * Returns the value of the '<em><b>Usage Name</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Usage Name</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Usage Name</em>' attribute.
+	 * @return the value of the '<em>Usage Name</em>' reference.
 	 * @see #isSetUsageName()
 	 * @see #unsetUsageName()
-	 * @see #setUsageName(String)
+	 * @see #setUsageName(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcPropertyReferenceValue_UsageName()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getUsageName();
+	IfcLabel getUsageName();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPropertyReferenceValue#getUsageName <em>Usage Name</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPropertyReferenceValue#getUsageName <em>Usage Name</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Usage Name</em>' attribute.
+	 * @param value the new value of the '<em>Usage Name</em>' reference.
 	 * @see #isSetUsageName()
 	 * @see #unsetUsageName()
 	 * @see #getUsageName()
 	 * @generated
 	 */
-	void setUsageName(String value);
+	void setUsageName(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPropertyReferenceValue#getUsageName <em>Usage Name</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPropertyReferenceValue#getUsageName <em>Usage Name</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetUsageName()
 	 * @see #getUsageName()
-	 * @see #setUsageName(String)
+	 * @see #setUsageName(IfcLabel)
 	 * @generated
 	 */
 	void unsetUsageName();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPropertyReferenceValue#getUsageName <em>Usage Name</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPropertyReferenceValue#getUsageName <em>Usage Name</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Usage Name</em>' attribute is set.
+	 * @return whether the value of the '<em>Usage Name</em>' reference is set.
 	 * @see #unsetUsageName()
 	 * @see #getUsageName()
-	 * @see #setUsageName(String)
+	 * @see #setUsageName(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetUsageName();

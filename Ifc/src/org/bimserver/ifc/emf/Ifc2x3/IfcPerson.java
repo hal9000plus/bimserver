@@ -50,184 +50,184 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface IfcPerson extends IfcActorSelect, IfcObjectReferenceSelect {
 	/**
-	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * Returns the value of the '<em><b>Id</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Id</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id</em>' attribute.
+	 * @return the value of the '<em>Id</em>' reference.
 	 * @see #isSetId()
 	 * @see #unsetId()
-	 * @see #setId(String)
+	 * @see #setId(IfcIdentifier)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcPerson_Id()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getId();
+	IfcIdentifier getId();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPerson#getId <em>Id</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPerson#getId <em>Id</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id</em>' attribute.
+	 * @param value the new value of the '<em>Id</em>' reference.
 	 * @see #isSetId()
 	 * @see #unsetId()
 	 * @see #getId()
 	 * @generated
 	 */
-	void setId(String value);
+	void setId(IfcIdentifier value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPerson#getId <em>Id</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPerson#getId <em>Id</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetId()
 	 * @see #getId()
-	 * @see #setId(String)
+	 * @see #setId(IfcIdentifier)
 	 * @generated
 	 */
 	void unsetId();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPerson#getId <em>Id</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPerson#getId <em>Id</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Id</em>' attribute is set.
+	 * @return whether the value of the '<em>Id</em>' reference is set.
 	 * @see #unsetId()
 	 * @see #getId()
-	 * @see #setId(String)
+	 * @see #setId(IfcIdentifier)
 	 * @generated
 	 */
 	boolean isSetId();
 
 	/**
-	 * Returns the value of the '<em><b>Family Name</b></em>' attribute.
+	 * Returns the value of the '<em><b>Family Name</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Family Name</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Family Name</em>' attribute.
+	 * @return the value of the '<em>Family Name</em>' reference.
 	 * @see #isSetFamilyName()
 	 * @see #unsetFamilyName()
-	 * @see #setFamilyName(String)
+	 * @see #setFamilyName(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcPerson_FamilyName()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getFamilyName();
+	IfcLabel getFamilyName();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPerson#getFamilyName <em>Family Name</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPerson#getFamilyName <em>Family Name</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Family Name</em>' attribute.
+	 * @param value the new value of the '<em>Family Name</em>' reference.
 	 * @see #isSetFamilyName()
 	 * @see #unsetFamilyName()
 	 * @see #getFamilyName()
 	 * @generated
 	 */
-	void setFamilyName(String value);
+	void setFamilyName(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPerson#getFamilyName <em>Family Name</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPerson#getFamilyName <em>Family Name</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetFamilyName()
 	 * @see #getFamilyName()
-	 * @see #setFamilyName(String)
+	 * @see #setFamilyName(IfcLabel)
 	 * @generated
 	 */
 	void unsetFamilyName();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPerson#getFamilyName <em>Family Name</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPerson#getFamilyName <em>Family Name</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Family Name</em>' attribute is set.
+	 * @return whether the value of the '<em>Family Name</em>' reference is set.
 	 * @see #unsetFamilyName()
 	 * @see #getFamilyName()
-	 * @see #setFamilyName(String)
+	 * @see #setFamilyName(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetFamilyName();
 
 	/**
-	 * Returns the value of the '<em><b>Given Name</b></em>' attribute.
+	 * Returns the value of the '<em><b>Given Name</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Given Name</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Given Name</em>' attribute.
+	 * @return the value of the '<em>Given Name</em>' reference.
 	 * @see #isSetGivenName()
 	 * @see #unsetGivenName()
-	 * @see #setGivenName(String)
+	 * @see #setGivenName(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcPerson_GivenName()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getGivenName();
+	IfcLabel getGivenName();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPerson#getGivenName <em>Given Name</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPerson#getGivenName <em>Given Name</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Given Name</em>' attribute.
+	 * @param value the new value of the '<em>Given Name</em>' reference.
 	 * @see #isSetGivenName()
 	 * @see #unsetGivenName()
 	 * @see #getGivenName()
 	 * @generated
 	 */
-	void setGivenName(String value);
+	void setGivenName(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPerson#getGivenName <em>Given Name</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPerson#getGivenName <em>Given Name</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetGivenName()
 	 * @see #getGivenName()
-	 * @see #setGivenName(String)
+	 * @see #setGivenName(IfcLabel)
 	 * @generated
 	 */
 	void unsetGivenName();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPerson#getGivenName <em>Given Name</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPerson#getGivenName <em>Given Name</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Given Name</em>' attribute is set.
+	 * @return whether the value of the '<em>Given Name</em>' reference is set.
 	 * @see #unsetGivenName()
 	 * @see #getGivenName()
-	 * @see #setGivenName(String)
+	 * @see #setGivenName(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetGivenName();
 
 	/**
-	 * Returns the value of the '<em><b>Middle Names</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
+	 * Returns the value of the '<em><b>Middle Names</b></em>' reference list.
+	 * The list contents are of type {@link org.bimserver.ifc.emf.Ifc2x3.IfcLabel}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Middle Names</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Middle Names</em>' attribute list.
+	 * @return the value of the '<em>Middle Names</em>' reference list.
 	 * @see #isSetMiddleNames()
 	 * @see #unsetMiddleNames()
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcPerson_MiddleNames()
-	 * @model unique="false" unsettable="true"
+	 * @model unsettable="true"
 	 * @generated
 	 */
-	EList<String> getMiddleNames();
+	EList<IfcLabel> getMiddleNames();
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPerson#getMiddleNames <em>Middle Names</em>}' attribute list.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPerson#getMiddleNames <em>Middle Names</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetMiddleNames()
@@ -237,10 +237,10 @@ public interface IfcPerson extends IfcActorSelect, IfcObjectReferenceSelect {
 	void unsetMiddleNames();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPerson#getMiddleNames <em>Middle Names</em>}' attribute list is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPerson#getMiddleNames <em>Middle Names</em>}' reference list is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Middle Names</em>' attribute list is set.
+	 * @return whether the value of the '<em>Middle Names</em>' reference list is set.
 	 * @see #unsetMiddleNames()
 	 * @see #getMiddleNames()
 	 * @generated
@@ -248,25 +248,25 @@ public interface IfcPerson extends IfcActorSelect, IfcObjectReferenceSelect {
 	boolean isSetMiddleNames();
 
 	/**
-	 * Returns the value of the '<em><b>Prefix Titles</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
+	 * Returns the value of the '<em><b>Prefix Titles</b></em>' reference list.
+	 * The list contents are of type {@link org.bimserver.ifc.emf.Ifc2x3.IfcLabel}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Prefix Titles</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Prefix Titles</em>' attribute list.
+	 * @return the value of the '<em>Prefix Titles</em>' reference list.
 	 * @see #isSetPrefixTitles()
 	 * @see #unsetPrefixTitles()
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcPerson_PrefixTitles()
-	 * @model unique="false" unsettable="true"
+	 * @model unsettable="true"
 	 * @generated
 	 */
-	EList<String> getPrefixTitles();
+	EList<IfcLabel> getPrefixTitles();
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPerson#getPrefixTitles <em>Prefix Titles</em>}' attribute list.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPerson#getPrefixTitles <em>Prefix Titles</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetPrefixTitles()
@@ -276,10 +276,10 @@ public interface IfcPerson extends IfcActorSelect, IfcObjectReferenceSelect {
 	void unsetPrefixTitles();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPerson#getPrefixTitles <em>Prefix Titles</em>}' attribute list is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPerson#getPrefixTitles <em>Prefix Titles</em>}' reference list is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Prefix Titles</em>' attribute list is set.
+	 * @return whether the value of the '<em>Prefix Titles</em>' reference list is set.
 	 * @see #unsetPrefixTitles()
 	 * @see #getPrefixTitles()
 	 * @generated
@@ -287,25 +287,25 @@ public interface IfcPerson extends IfcActorSelect, IfcObjectReferenceSelect {
 	boolean isSetPrefixTitles();
 
 	/**
-	 * Returns the value of the '<em><b>Suffix Titles</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
+	 * Returns the value of the '<em><b>Suffix Titles</b></em>' reference list.
+	 * The list contents are of type {@link org.bimserver.ifc.emf.Ifc2x3.IfcLabel}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Suffix Titles</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Suffix Titles</em>' attribute list.
+	 * @return the value of the '<em>Suffix Titles</em>' reference list.
 	 * @see #isSetSuffixTitles()
 	 * @see #unsetSuffixTitles()
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcPerson_SuffixTitles()
-	 * @model unique="false" unsettable="true"
+	 * @model unsettable="true"
 	 * @generated
 	 */
-	EList<String> getSuffixTitles();
+	EList<IfcLabel> getSuffixTitles();
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPerson#getSuffixTitles <em>Suffix Titles</em>}' attribute list.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPerson#getSuffixTitles <em>Suffix Titles</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetSuffixTitles()
@@ -315,10 +315,10 @@ public interface IfcPerson extends IfcActorSelect, IfcObjectReferenceSelect {
 	void unsetSuffixTitles();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPerson#getSuffixTitles <em>Suffix Titles</em>}' attribute list is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPerson#getSuffixTitles <em>Suffix Titles</em>}' reference list is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Suffix Titles</em>' attribute list is set.
+	 * @return whether the value of the '<em>Suffix Titles</em>' reference list is set.
 	 * @see #unsetSuffixTitles()
 	 * @see #getSuffixTitles()
 	 * @generated

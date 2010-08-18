@@ -23,7 +23,9 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcPositiveLengthMeasure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRightCircularCylinder;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -34,9 +36,7 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRightCircularCylinderImpl#getHeight <em>Height</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRightCircularCylinderImpl#getHeightAsString <em>Height As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRightCircularCylinderImpl#getRadius <em>Radius</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRightCircularCylinderImpl#getRadiusAsString <em>Radius As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -67,8 +67,8 @@ public class IfcRightCircularCylinderImpl extends IfcCsgPrimitive3DImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getHeight() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcRightCircularCylinder_Height(), true);
+	public IfcPositiveLengthMeasure getHeight() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcRightCircularCylinder_Height(), true);
 	}
 
 	/**
@@ -76,7 +76,7 @@ public class IfcRightCircularCylinderImpl extends IfcCsgPrimitive3DImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setHeight(float newHeight) {
+	public void setHeight(IfcPositiveLengthMeasure newHeight) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcRightCircularCylinder_Height(), newHeight);
 	}
 
@@ -85,8 +85,8 @@ public class IfcRightCircularCylinderImpl extends IfcCsgPrimitive3DImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getHeightAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcRightCircularCylinder_HeightAsString(), true);
+	public IfcPositiveLengthMeasure getRadius() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcRightCircularCylinder_Radius(), true);
 	}
 
 	/**
@@ -94,44 +94,8 @@ public class IfcRightCircularCylinderImpl extends IfcCsgPrimitive3DImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setHeightAsString(String newHeightAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcRightCircularCylinder_HeightAsString(), newHeightAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getRadius() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcRightCircularCylinder_Radius(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRadius(float newRadius) {
+	public void setRadius(IfcPositiveLengthMeasure newRadius) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcRightCircularCylinder_Radius(), newRadius);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getRadiusAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcRightCircularCylinder_RadiusAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRadiusAsString(String newRadiusAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcRightCircularCylinder_RadiusAsString(), newRadiusAsString);
 	}
 
 } //IfcRightCircularCylinderImpl

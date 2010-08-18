@@ -22,12 +22,14 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
-import org.bimserver.emf.IdEObjectImpl;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcProfileDef;
 import org.bimserver.ifc.emf.Ifc2x3.IfcSectionProperties;
 import org.bimserver.ifc.emf.Ifc2x3.IfcSectionTypeEnum;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -44,7 +46,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class IfcSectionPropertiesImpl extends IdEObjectImpl implements IfcSectionProperties {
+public class IfcSectionPropertiesImpl extends EObjectImpl implements IfcSectionProperties {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

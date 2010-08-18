@@ -34,7 +34,6 @@ package org.bimserver.ifc.emf.Ifc2x3;
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcMaterialLayerSetUsage#getLayerSetDirection <em>Layer Set Direction</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcMaterialLayerSetUsage#getDirectionSense <em>Direction Sense</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcMaterialLayerSetUsage#getOffsetFromReferenceLine <em>Offset From Reference Line</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcMaterialLayerSetUsage#getOffsetFromReferenceLineAsString <em>Offset From Reference Line As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -128,55 +127,29 @@ public interface IfcMaterialLayerSetUsage extends IfcMaterialSelect {
 	void setDirectionSense(IfcDirectionSenseEnum value);
 
 	/**
-	 * Returns the value of the '<em><b>Offset From Reference Line</b></em>' attribute.
+	 * Returns the value of the '<em><b>Offset From Reference Line</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Offset From Reference Line</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Offset From Reference Line</em>' attribute.
-	 * @see #setOffsetFromReferenceLine(float)
+	 * @return the value of the '<em>Offset From Reference Line</em>' reference.
+	 * @see #setOffsetFromReferenceLine(IfcLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcMaterialLayerSetUsage_OffsetFromReferenceLine()
 	 * @model
 	 * @generated
 	 */
-	float getOffsetFromReferenceLine();
+	IfcLengthMeasure getOffsetFromReferenceLine();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMaterialLayerSetUsage#getOffsetFromReferenceLine <em>Offset From Reference Line</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMaterialLayerSetUsage#getOffsetFromReferenceLine <em>Offset From Reference Line</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Offset From Reference Line</em>' attribute.
+	 * @param value the new value of the '<em>Offset From Reference Line</em>' reference.
 	 * @see #getOffsetFromReferenceLine()
 	 * @generated
 	 */
-	void setOffsetFromReferenceLine(float value);
-
-	/**
-	 * Returns the value of the '<em><b>Offset From Reference Line As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Offset From Reference Line As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Offset From Reference Line As String</em>' attribute.
-	 * @see #setOffsetFromReferenceLineAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcMaterialLayerSetUsage_OffsetFromReferenceLineAsString()
-	 * @model
-	 * @generated
-	 */
-	String getOffsetFromReferenceLineAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMaterialLayerSetUsage#getOffsetFromReferenceLineAsString <em>Offset From Reference Line As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Offset From Reference Line As String</em>' attribute.
-	 * @see #getOffsetFromReferenceLineAsString()
-	 * @generated
-	 */
-	void setOffsetFromReferenceLineAsString(String value);
+	void setOffsetFromReferenceLine(IfcLengthMeasure value);
 
 } // IfcMaterialLayerSetUsage

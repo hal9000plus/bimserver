@@ -22,11 +22,15 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
-import org.bimserver.emf.IdEObjectImpl;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
 import org.bimserver.ifc.emf.Ifc2x3.IfcProperty;
 import org.bimserver.ifc.emf.Ifc2x3.IfcPropertyDependencyRelationship;
+import org.bimserver.ifc.emf.Ifc2x3.IfcText;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -45,7 +49,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class IfcPropertyDependencyRelationshipImpl extends IdEObjectImpl implements IfcPropertyDependencyRelationship {
+public class IfcPropertyDependencyRelationshipImpl extends EObjectImpl implements IfcPropertyDependencyRelationship {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -116,8 +120,8 @@ public class IfcPropertyDependencyRelationshipImpl extends IdEObjectImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcPropertyDependencyRelationship_Name(), true);
+	public IfcLabel getName() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcPropertyDependencyRelationship_Name(), true);
 	}
 
 	/**
@@ -125,7 +129,7 @@ public class IfcPropertyDependencyRelationshipImpl extends IdEObjectImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(String newName) {
+	public void setName(IfcLabel newName) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcPropertyDependencyRelationship_Name(), newName);
 	}
 
@@ -152,8 +156,8 @@ public class IfcPropertyDependencyRelationshipImpl extends IdEObjectImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getDescription() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcPropertyDependencyRelationship_Description(), true);
+	public IfcText getDescription() {
+		return (IfcText) eGet(Ifc2x3Package.eINSTANCE.getIfcPropertyDependencyRelationship_Description(), true);
 	}
 
 	/**
@@ -161,7 +165,7 @@ public class IfcPropertyDependencyRelationshipImpl extends IdEObjectImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDescription(String newDescription) {
+	public void setDescription(IfcText newDescription) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcPropertyDependencyRelationship_Description(), newDescription);
 	}
 
@@ -188,8 +192,8 @@ public class IfcPropertyDependencyRelationshipImpl extends IdEObjectImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getExpression() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcPropertyDependencyRelationship_Expression(), true);
+	public IfcText getExpression() {
+		return (IfcText) eGet(Ifc2x3Package.eINSTANCE.getIfcPropertyDependencyRelationship_Expression(), true);
 	}
 
 	/**
@@ -197,7 +201,7 @@ public class IfcPropertyDependencyRelationshipImpl extends IdEObjectImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setExpression(String newExpression) {
+	public void setExpression(IfcText newExpression) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcPropertyDependencyRelationship_Expression(), newExpression);
 	}
 

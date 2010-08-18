@@ -101,61 +101,55 @@ public interface IfcDoorStyle extends IfcTypeProduct {
 	void setConstructionType(IfcDoorStyleConstructionEnum value);
 
 	/**
-	 * Returns the value of the '<em><b>Parameter Takes Precedence</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.bimserver.ifc.emf.Ifc2x3.Tristate}.
+	 * Returns the value of the '<em><b>Parameter Takes Precedence</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Parameter Takes Precedence</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Parameter Takes Precedence</em>' attribute.
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Tristate
-	 * @see #setParameterTakesPrecedence(Tristate)
+	 * @return the value of the '<em>Parameter Takes Precedence</em>' reference.
+	 * @see #setParameterTakesPrecedence(IfcLogical)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcDoorStyle_ParameterTakesPrecedence()
 	 * @model
 	 * @generated
 	 */
-	Tristate getParameterTakesPrecedence();
+	IfcLogical getParameterTakesPrecedence();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDoorStyle#getParameterTakesPrecedence <em>Parameter Takes Precedence</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDoorStyle#getParameterTakesPrecedence <em>Parameter Takes Precedence</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Parameter Takes Precedence</em>' attribute.
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Tristate
+	 * @param value the new value of the '<em>Parameter Takes Precedence</em>' reference.
 	 * @see #getParameterTakesPrecedence()
 	 * @generated
 	 */
-	void setParameterTakesPrecedence(Tristate value);
+	void setParameterTakesPrecedence(IfcLogical value);
 
 	/**
-	 * Returns the value of the '<em><b>Sizeable</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.bimserver.ifc.emf.Ifc2x3.Tristate}.
+	 * Returns the value of the '<em><b>Sizeable</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Sizeable</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Sizeable</em>' attribute.
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Tristate
-	 * @see #setSizeable(Tristate)
+	 * @return the value of the '<em>Sizeable</em>' reference.
+	 * @see #setSizeable(IfcLogical)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcDoorStyle_Sizeable()
 	 * @model
 	 * @generated
 	 */
-	Tristate getSizeable();
+	IfcLogical getSizeable();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDoorStyle#getSizeable <em>Sizeable</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDoorStyle#getSizeable <em>Sizeable</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Sizeable</em>' attribute.
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Tristate
+	 * @param value the new value of the '<em>Sizeable</em>' reference.
 	 * @see #getSizeable()
 	 * @generated
 	 */
-	void setSizeable(Tristate value);
+	void setSizeable(IfcLogical value);
 
 } // IfcDoorStyle

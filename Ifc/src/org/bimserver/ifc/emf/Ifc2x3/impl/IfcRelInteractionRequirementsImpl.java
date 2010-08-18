@@ -23,9 +23,12 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcCountMeasure;
+import org.bimserver.ifc.emf.Ifc2x3.IfcNormalisedRatioMeasure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRelInteractionRequirements;
 import org.bimserver.ifc.emf.Ifc2x3.IfcSpaceProgram;
 import org.bimserver.ifc.emf.Ifc2x3.IfcSpatialStructureElement;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -36,9 +39,7 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRelInteractionRequirementsImpl#getDailyInteraction <em>Daily Interaction</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRelInteractionRequirementsImpl#getDailyInteractionAsString <em>Daily Interaction As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRelInteractionRequirementsImpl#getImportanceRating <em>Importance Rating</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRelInteractionRequirementsImpl#getImportanceRatingAsString <em>Importance Rating As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRelInteractionRequirementsImpl#getLocationOfInteraction <em>Location Of Interaction</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRelInteractionRequirementsImpl#getRelatedSpaceProgram <em>Related Space Program</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRelInteractionRequirementsImpl#getRelatingSpaceProgram <em>Relating Space Program</em>}</li>
@@ -72,8 +73,8 @@ public class IfcRelInteractionRequirementsImpl extends IfcRelConnectsImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getDailyInteraction() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcRelInteractionRequirements_DailyInteraction(), true);
+	public IfcCountMeasure getDailyInteraction() {
+		return (IfcCountMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcRelInteractionRequirements_DailyInteraction(), true);
 	}
 
 	/**
@@ -81,7 +82,7 @@ public class IfcRelInteractionRequirementsImpl extends IfcRelConnectsImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDailyInteraction(float newDailyInteraction) {
+	public void setDailyInteraction(IfcCountMeasure newDailyInteraction) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcRelInteractionRequirements_DailyInteraction(), newDailyInteraction);
 	}
 
@@ -108,8 +109,8 @@ public class IfcRelInteractionRequirementsImpl extends IfcRelConnectsImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getDailyInteractionAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcRelInteractionRequirements_DailyInteractionAsString(), true);
+	public IfcNormalisedRatioMeasure getImportanceRating() {
+		return (IfcNormalisedRatioMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcRelInteractionRequirements_ImportanceRating(), true);
 	}
 
 	/**
@@ -117,43 +118,7 @@ public class IfcRelInteractionRequirementsImpl extends IfcRelConnectsImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDailyInteractionAsString(String newDailyInteractionAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcRelInteractionRequirements_DailyInteractionAsString(), newDailyInteractionAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetDailyInteractionAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcRelInteractionRequirements_DailyInteractionAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetDailyInteractionAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcRelInteractionRequirements_DailyInteractionAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getImportanceRating() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcRelInteractionRequirements_ImportanceRating(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setImportanceRating(float newImportanceRating) {
+	public void setImportanceRating(IfcNormalisedRatioMeasure newImportanceRating) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcRelInteractionRequirements_ImportanceRating(), newImportanceRating);
 	}
 
@@ -173,42 +138,6 @@ public class IfcRelInteractionRequirementsImpl extends IfcRelConnectsImpl implem
 	 */
 	public boolean isSetImportanceRating() {
 		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcRelInteractionRequirements_ImportanceRating());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getImportanceRatingAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcRelInteractionRequirements_ImportanceRatingAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setImportanceRatingAsString(String newImportanceRatingAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcRelInteractionRequirements_ImportanceRatingAsString(), newImportanceRatingAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetImportanceRatingAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcRelInteractionRequirements_ImportanceRatingAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetImportanceRatingAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcRelInteractionRequirements_ImportanceRatingAsString());
 	}
 
 	/**

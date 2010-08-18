@@ -24,8 +24,11 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRegularTimeSeries;
+import org.bimserver.ifc.emf.Ifc2x3.IfcTimeMeasure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcTimeSeriesValue;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -36,7 +39,6 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRegularTimeSeriesImpl#getTimeStep <em>Time Step</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRegularTimeSeriesImpl#getTimeStepAsString <em>Time Step As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRegularTimeSeriesImpl#getValues <em>Values</em>}</li>
  * </ul>
  * </p>
@@ -68,8 +70,8 @@ public class IfcRegularTimeSeriesImpl extends IfcTimeSeriesImpl implements IfcRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getTimeStep() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcRegularTimeSeries_TimeStep(), true);
+	public IfcTimeMeasure getTimeStep() {
+		return (IfcTimeMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcRegularTimeSeries_TimeStep(), true);
 	}
 
 	/**
@@ -77,26 +79,8 @@ public class IfcRegularTimeSeriesImpl extends IfcTimeSeriesImpl implements IfcRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTimeStep(float newTimeStep) {
+	public void setTimeStep(IfcTimeMeasure newTimeStep) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcRegularTimeSeries_TimeStep(), newTimeStep);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getTimeStepAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcRegularTimeSeries_TimeStepAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTimeStepAsString(String newTimeStepAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcRegularTimeSeries_TimeStepAsString(), newTimeStepAsString);
 	}
 
 	/**

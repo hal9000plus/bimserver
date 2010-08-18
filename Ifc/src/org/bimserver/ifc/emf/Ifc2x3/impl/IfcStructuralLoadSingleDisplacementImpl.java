@@ -23,7 +23,10 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLengthMeasure;
+import org.bimserver.ifc.emf.Ifc2x3.IfcPlaneAngleMeasure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -34,17 +37,11 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcStructuralLoadSingleDisplacementImpl#getDisplacementX <em>Displacement X</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcStructuralLoadSingleDisplacementImpl#getDisplacementXAsString <em>Displacement XAs String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcStructuralLoadSingleDisplacementImpl#getDisplacementY <em>Displacement Y</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcStructuralLoadSingleDisplacementImpl#getDisplacementYAsString <em>Displacement YAs String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcStructuralLoadSingleDisplacementImpl#getDisplacementZ <em>Displacement Z</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcStructuralLoadSingleDisplacementImpl#getDisplacementZAsString <em>Displacement ZAs String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcStructuralLoadSingleDisplacementImpl#getRotationalDisplacementRX <em>Rotational Displacement RX</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcStructuralLoadSingleDisplacementImpl#getRotationalDisplacementRXAsString <em>Rotational Displacement RX As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcStructuralLoadSingleDisplacementImpl#getRotationalDisplacementRY <em>Rotational Displacement RY</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcStructuralLoadSingleDisplacementImpl#getRotationalDisplacementRYAsString <em>Rotational Displacement RY As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcStructuralLoadSingleDisplacementImpl#getRotationalDisplacementRZ <em>Rotational Displacement RZ</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcStructuralLoadSingleDisplacementImpl#getRotationalDisplacementRZAsString <em>Rotational Displacement RZ As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -75,8 +72,8 @@ public class IfcStructuralLoadSingleDisplacementImpl extends IfcStructuralLoadSt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getDisplacementX() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleDisplacement_DisplacementX(), true);
+	public IfcLengthMeasure getDisplacementX() {
+		return (IfcLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleDisplacement_DisplacementX(), true);
 	}
 
 	/**
@@ -84,7 +81,7 @@ public class IfcStructuralLoadSingleDisplacementImpl extends IfcStructuralLoadSt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDisplacementX(float newDisplacementX) {
+	public void setDisplacementX(IfcLengthMeasure newDisplacementX) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleDisplacement_DisplacementX(), newDisplacementX);
 	}
 
@@ -111,8 +108,8 @@ public class IfcStructuralLoadSingleDisplacementImpl extends IfcStructuralLoadSt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getDisplacementXAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleDisplacement_DisplacementXAsString(), true);
+	public IfcLengthMeasure getDisplacementY() {
+		return (IfcLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleDisplacement_DisplacementY(), true);
 	}
 
 	/**
@@ -120,43 +117,7 @@ public class IfcStructuralLoadSingleDisplacementImpl extends IfcStructuralLoadSt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDisplacementXAsString(String newDisplacementXAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleDisplacement_DisplacementXAsString(), newDisplacementXAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetDisplacementXAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleDisplacement_DisplacementXAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetDisplacementXAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleDisplacement_DisplacementXAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getDisplacementY() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleDisplacement_DisplacementY(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDisplacementY(float newDisplacementY) {
+	public void setDisplacementY(IfcLengthMeasure newDisplacementY) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleDisplacement_DisplacementY(), newDisplacementY);
 	}
 
@@ -183,8 +144,8 @@ public class IfcStructuralLoadSingleDisplacementImpl extends IfcStructuralLoadSt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getDisplacementYAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleDisplacement_DisplacementYAsString(), true);
+	public IfcLengthMeasure getDisplacementZ() {
+		return (IfcLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleDisplacement_DisplacementZ(), true);
 	}
 
 	/**
@@ -192,43 +153,7 @@ public class IfcStructuralLoadSingleDisplacementImpl extends IfcStructuralLoadSt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDisplacementYAsString(String newDisplacementYAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleDisplacement_DisplacementYAsString(), newDisplacementYAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetDisplacementYAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleDisplacement_DisplacementYAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetDisplacementYAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleDisplacement_DisplacementYAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getDisplacementZ() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleDisplacement_DisplacementZ(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDisplacementZ(float newDisplacementZ) {
+	public void setDisplacementZ(IfcLengthMeasure newDisplacementZ) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleDisplacement_DisplacementZ(), newDisplacementZ);
 	}
 
@@ -255,8 +180,8 @@ public class IfcStructuralLoadSingleDisplacementImpl extends IfcStructuralLoadSt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getDisplacementZAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleDisplacement_DisplacementZAsString(), true);
+	public IfcPlaneAngleMeasure getRotationalDisplacementRX() {
+		return (IfcPlaneAngleMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleDisplacement_RotationalDisplacementRX(), true);
 	}
 
 	/**
@@ -264,43 +189,7 @@ public class IfcStructuralLoadSingleDisplacementImpl extends IfcStructuralLoadSt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDisplacementZAsString(String newDisplacementZAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleDisplacement_DisplacementZAsString(), newDisplacementZAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetDisplacementZAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleDisplacement_DisplacementZAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetDisplacementZAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleDisplacement_DisplacementZAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getRotationalDisplacementRX() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleDisplacement_RotationalDisplacementRX(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRotationalDisplacementRX(float newRotationalDisplacementRX) {
+	public void setRotationalDisplacementRX(IfcPlaneAngleMeasure newRotationalDisplacementRX) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleDisplacement_RotationalDisplacementRX(), newRotationalDisplacementRX);
 	}
 
@@ -327,8 +216,8 @@ public class IfcStructuralLoadSingleDisplacementImpl extends IfcStructuralLoadSt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getRotationalDisplacementRXAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleDisplacement_RotationalDisplacementRXAsString(), true);
+	public IfcPlaneAngleMeasure getRotationalDisplacementRY() {
+		return (IfcPlaneAngleMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleDisplacement_RotationalDisplacementRY(), true);
 	}
 
 	/**
@@ -336,43 +225,7 @@ public class IfcStructuralLoadSingleDisplacementImpl extends IfcStructuralLoadSt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRotationalDisplacementRXAsString(String newRotationalDisplacementRXAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleDisplacement_RotationalDisplacementRXAsString(), newRotationalDisplacementRXAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetRotationalDisplacementRXAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleDisplacement_RotationalDisplacementRXAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetRotationalDisplacementRXAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleDisplacement_RotationalDisplacementRXAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getRotationalDisplacementRY() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleDisplacement_RotationalDisplacementRY(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRotationalDisplacementRY(float newRotationalDisplacementRY) {
+	public void setRotationalDisplacementRY(IfcPlaneAngleMeasure newRotationalDisplacementRY) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleDisplacement_RotationalDisplacementRY(), newRotationalDisplacementRY);
 	}
 
@@ -399,8 +252,8 @@ public class IfcStructuralLoadSingleDisplacementImpl extends IfcStructuralLoadSt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getRotationalDisplacementRYAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleDisplacement_RotationalDisplacementRYAsString(), true);
+	public IfcPlaneAngleMeasure getRotationalDisplacementRZ() {
+		return (IfcPlaneAngleMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleDisplacement_RotationalDisplacementRZ(), true);
 	}
 
 	/**
@@ -408,43 +261,7 @@ public class IfcStructuralLoadSingleDisplacementImpl extends IfcStructuralLoadSt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRotationalDisplacementRYAsString(String newRotationalDisplacementRYAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleDisplacement_RotationalDisplacementRYAsString(), newRotationalDisplacementRYAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetRotationalDisplacementRYAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleDisplacement_RotationalDisplacementRYAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetRotationalDisplacementRYAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleDisplacement_RotationalDisplacementRYAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getRotationalDisplacementRZ() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleDisplacement_RotationalDisplacementRZ(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRotationalDisplacementRZ(float newRotationalDisplacementRZ) {
+	public void setRotationalDisplacementRZ(IfcPlaneAngleMeasure newRotationalDisplacementRZ) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleDisplacement_RotationalDisplacementRZ(), newRotationalDisplacementRZ);
 	}
 
@@ -464,42 +281,6 @@ public class IfcStructuralLoadSingleDisplacementImpl extends IfcStructuralLoadSt
 	 */
 	public boolean isSetRotationalDisplacementRZ() {
 		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleDisplacement_RotationalDisplacementRZ());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getRotationalDisplacementRZAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleDisplacement_RotationalDisplacementRZAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRotationalDisplacementRZAsString(String newRotationalDisplacementRZAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleDisplacement_RotationalDisplacementRZAsString(), newRotationalDisplacementRZAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetRotationalDisplacementRZAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleDisplacement_RotationalDisplacementRZAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetRotationalDisplacementRZAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleDisplacement_RotationalDisplacementRZAsString());
 	}
 
 } //IfcStructuralLoadSingleDisplacementImpl

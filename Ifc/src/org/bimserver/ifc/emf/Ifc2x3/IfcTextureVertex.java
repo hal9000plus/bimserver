@@ -22,8 +22,9 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3;
 
-import org.bimserver.emf.IdEObject;
 import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,46 +35,28 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextureVertex#getCoordinates <em>Coordinates</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextureVertex#getCoordinatesAsString <em>Coordinates As String</em>}</li>
  * </ul>
  * </p>
  *
  * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTextureVertex()
  * @model
- * @extends IdEObject
  * @generated
  */
-public interface IfcTextureVertex extends IdEObject {
+public interface IfcTextureVertex extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Coordinates</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.Float}.
+	 * Returns the value of the '<em><b>Coordinates</b></em>' reference list.
+	 * The list contents are of type {@link org.bimserver.ifc.emf.Ifc2x3.IfcParameterValue}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Coordinates</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Coordinates</em>' attribute list.
+	 * @return the value of the '<em>Coordinates</em>' reference list.
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTextureVertex_Coordinates()
-	 * @model unique="false"
+	 * @model
 	 * @generated
 	 */
-	EList<Float> getCoordinates();
-
-	/**
-	 * Returns the value of the '<em><b>Coordinates As String</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Coordinates As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Coordinates As String</em>' attribute list.
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTextureVertex_CoordinatesAsString()
-	 * @model unique="false"
-	 * @generated
-	 */
-	EList<String> getCoordinatesAsString();
+	EList<IfcParameterValue> getCoordinates();
 
 } // IfcTextureVertex

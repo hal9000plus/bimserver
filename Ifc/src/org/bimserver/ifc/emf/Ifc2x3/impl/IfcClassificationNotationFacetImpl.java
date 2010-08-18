@@ -22,10 +22,13 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
-import org.bimserver.emf.IdEObjectImpl;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcClassificationNotationFacet;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -40,7 +43,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class IfcClassificationNotationFacetImpl extends IdEObjectImpl implements IfcClassificationNotationFacet {
+public class IfcClassificationNotationFacetImpl extends EObjectImpl implements IfcClassificationNotationFacet {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -75,8 +78,8 @@ public class IfcClassificationNotationFacetImpl extends IdEObjectImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getNotationValue() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcClassificationNotationFacet_NotationValue(), true);
+	public IfcLabel getNotationValue() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcClassificationNotationFacet_NotationValue(), true);
 	}
 
 	/**
@@ -84,7 +87,7 @@ public class IfcClassificationNotationFacetImpl extends IdEObjectImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNotationValue(String newNotationValue) {
+	public void setNotationValue(IfcLabel newNotationValue) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcClassificationNotationFacet_NotationValue(), newNotationValue);
 	}
 

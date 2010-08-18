@@ -4,7 +4,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Map;
 
-import org.bimserver.emf.IdEObject;
+import org.bimserver.emf.EmfModel;
+import org.bimserver.emf.EmfSerializer;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Factory;
 import org.bimserver.ifc.emf.Ifc2x3.WrappedValue;
 import org.bimserver.utils.TempUtils;
@@ -18,16 +19,15 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 public abstract class BimModelSerializer extends EmfSerializer {
 	private final FieldIgnoreMap fieldIgnoreMap;
 	private int convertCounter;
-	private File tempDir;
 
-	public BimModelSerializer(String fileName, IfcModel model, FieldIgnoreMap fieldIgnoreMap) {
-		super(fileName, model);
+	public BimModelSerializer(EmfModel<Long> model, FieldIgnoreMap fieldIgnoreMap) {
+		super(model);
 		this.fieldIgnoreMap = fieldIgnoreMap;
-		tempDir = TempUtils.makeTempDir("bimserver" + File.separator + this.hashCode());
+		TempUtils.makeTempDir("bimserver" + File.separator + this.hashCode());
 	}
 
 	protected File createTempFile() {
-		File makeTempFile = TempUtils.makeTempFile(tempDir, (convertCounter++) + ".ifc");
+		File makeTempFile = TempUtils.makeTempFile("bimserver" + File.separator + this.hashCode() + File.separator + (convertCounter++) + ".ifc");
 		try {
 			makeTempFile.createNewFile();
 		} catch (IOException e) {
@@ -37,8 +37,8 @@ public abstract class BimModelSerializer extends EmfSerializer {
 	}
 
 	@SuppressWarnings("unchecked")
-	protected EObject convertToSubset(EClass originalClass, EObject ifcRootObject, IfcModel newModel, Map<EObject, EObject> converted) {
-		IdEObject newObject = (IdEObject) Ifc2x3Factory.eINSTANCE.create(ifcRootObject.eClass());
+	protected EObject convertToSubset(EClass originalClass, EObject ifcRootObject, EmfModel<Long> newModel, Map<EObject, EObject> converted) {
+		EObject newObject = Ifc2x3Factory.eINSTANCE.create(ifcRootObject.eClass());
 		converted.put(ifcRootObject, newObject);
 		if (!(newObject instanceof WrappedValue)) {
 			newModel.add(newObject);
@@ -48,20 +48,15 @@ public abstract class BimModelSerializer extends EmfSerializer {
 				Object get = ifcRootObject.eGet(eStructuralFeature);
 				if (eStructuralFeature instanceof EAttribute) {
 					if (get instanceof Float || get instanceof Double) {
-						EStructuralFeature floatStringFeature = ifcRootObject.eClass().getEStructuralFeature("wrappedValueAsString");
-						if (floatStringFeature != null) {
-							Object floatString = ifcRootObject.eGet(floatStringFeature);
-							newObject.eSet(floatStringFeature, floatString);
-						} else {
-							newObject.eSet(eStructuralFeature, get);
-						}
-					} else {
-						newObject.eSet(eStructuralFeature, get);
+						EStructuralFeature floatStringFeature = ifcRootObject.eClass().getEStructuralFeature("stringValuewrappedValue");
+						Object floatString = ifcRootObject.eGet(floatStringFeature);
+						newObject.eSet(floatStringFeature, floatString);
 					}
+					newObject.eSet(eStructuralFeature, get);
 				} else if (eStructuralFeature instanceof EReference) {
 					if (get == null) {
 					} else {
-						if (eStructuralFeature.isMany()) {
+						if (eStructuralFeature.getUpperBound() == -1 || eStructuralFeature.getUpperBound() > 1) {
 							BasicEList<EObject> list = (BasicEList<EObject>) get;
 							BasicEList<EObject> toList = (BasicEList<EObject>) newObject.eGet(eStructuralFeature);
 							for (Object o : list) {

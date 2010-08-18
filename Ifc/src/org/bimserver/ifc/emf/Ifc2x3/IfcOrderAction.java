@@ -40,29 +40,29 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcOrderAction extends IfcTask {
 	/**
-	 * Returns the value of the '<em><b>Action ID</b></em>' attribute.
+	 * Returns the value of the '<em><b>Action ID</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Action ID</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Action ID</em>' attribute.
-	 * @see #setActionID(String)
+	 * @return the value of the '<em>Action ID</em>' reference.
+	 * @see #setActionID(IfcIdentifier)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcOrderAction_ActionID()
 	 * @model
 	 * @generated
 	 */
-	String getActionID();
+	IfcIdentifier getActionID();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOrderAction#getActionID <em>Action ID</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOrderAction#getActionID <em>Action ID</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Action ID</em>' attribute.
+	 * @param value the new value of the '<em>Action ID</em>' reference.
 	 * @see #getActionID()
 	 * @generated
 	 */
-	void setActionID(String value);
+	void setActionID(IfcIdentifier value);
 
 } // IfcOrderAction

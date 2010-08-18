@@ -24,9 +24,11 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcColourOrFactor;
+import org.bimserver.ifc.emf.Ifc2x3.IfcNormalisedRatioMeasure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcReflectanceMethodEnum;
 import org.bimserver.ifc.emf.Ifc2x3.IfcSpecularHighlightSelect;
 import org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceStyleRendering;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -37,7 +39,6 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSurfaceStyleRenderingImpl#getTransparency <em>Transparency</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSurfaceStyleRenderingImpl#getTransparencyAsString <em>Transparency As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSurfaceStyleRenderingImpl#getDiffuseColour <em>Diffuse Colour</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSurfaceStyleRenderingImpl#getTransmissionColour <em>Transmission Colour</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSurfaceStyleRenderingImpl#getDiffuseTransmissionColour <em>Diffuse Transmission Colour</em>}</li>
@@ -75,8 +76,8 @@ public class IfcSurfaceStyleRenderingImpl extends IfcSurfaceStyleShadingImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getTransparency() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcSurfaceStyleRendering_Transparency(), true);
+	public IfcNormalisedRatioMeasure getTransparency() {
+		return (IfcNormalisedRatioMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcSurfaceStyleRendering_Transparency(), true);
 	}
 
 	/**
@@ -84,7 +85,7 @@ public class IfcSurfaceStyleRenderingImpl extends IfcSurfaceStyleShadingImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTransparency(float newTransparency) {
+	public void setTransparency(IfcNormalisedRatioMeasure newTransparency) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcSurfaceStyleRendering_Transparency(), newTransparency);
 	}
 
@@ -104,42 +105,6 @@ public class IfcSurfaceStyleRenderingImpl extends IfcSurfaceStyleShadingImpl imp
 	 */
 	public boolean isSetTransparency() {
 		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcSurfaceStyleRendering_Transparency());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getTransparencyAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcSurfaceStyleRendering_TransparencyAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTransparencyAsString(String newTransparencyAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcSurfaceStyleRendering_TransparencyAsString(), newTransparencyAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetTransparencyAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcSurfaceStyleRendering_TransparencyAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetTransparencyAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcSurfaceStyleRendering_TransparencyAsString());
 	}
 
 	/**

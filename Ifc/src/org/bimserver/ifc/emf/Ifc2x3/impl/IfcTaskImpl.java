@@ -23,10 +23,12 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcIdentifier;
 import org.bimserver.ifc.emf.Ifc2x3.IfcInteger;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
 import org.bimserver.ifc.emf.Ifc2x3.IfcLogical;
 import org.bimserver.ifc.emf.Ifc2x3.IfcTask;
-import org.bimserver.ifc.emf.Ifc2x3.Tristate;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -71,8 +73,8 @@ public class IfcTaskImpl extends IfcProcessImpl implements IfcTask {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getTaskId() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcTask_TaskId(), true);
+	public IfcIdentifier getTaskId() {
+		return (IfcIdentifier) eGet(Ifc2x3Package.eINSTANCE.getIfcTask_TaskId(), true);
 	}
 
 	/**
@@ -80,7 +82,7 @@ public class IfcTaskImpl extends IfcProcessImpl implements IfcTask {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTaskId(String newTaskId) {
+	public void setTaskId(IfcIdentifier newTaskId) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcTask_TaskId(), newTaskId);
 	}
 
@@ -89,8 +91,8 @@ public class IfcTaskImpl extends IfcProcessImpl implements IfcTask {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getStatus() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcTask_Status(), true);
+	public IfcLabel getStatus() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcTask_Status(), true);
 	}
 
 	/**
@@ -98,7 +100,7 @@ public class IfcTaskImpl extends IfcProcessImpl implements IfcTask {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setStatus(String newStatus) {
+	public void setStatus(IfcLabel newStatus) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcTask_Status(), newStatus);
 	}
 
@@ -125,8 +127,8 @@ public class IfcTaskImpl extends IfcProcessImpl implements IfcTask {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getWorkMethod() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcTask_WorkMethod(), true);
+	public IfcLabel getWorkMethod() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcTask_WorkMethod(), true);
 	}
 
 	/**
@@ -134,7 +136,7 @@ public class IfcTaskImpl extends IfcProcessImpl implements IfcTask {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setWorkMethod(String newWorkMethod) {
+	public void setWorkMethod(IfcLabel newWorkMethod) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcTask_WorkMethod(), newWorkMethod);
 	}
 
@@ -161,8 +163,8 @@ public class IfcTaskImpl extends IfcProcessImpl implements IfcTask {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Tristate getIsMilestone() {
-		return (Tristate) eGet(Ifc2x3Package.eINSTANCE.getIfcTask_IsMilestone(), true);
+	public IfcLogical getIsMilestone() {
+		return (IfcLogical) eGet(Ifc2x3Package.eINSTANCE.getIfcTask_IsMilestone(), true);
 	}
 
 	/**
@@ -170,7 +172,7 @@ public class IfcTaskImpl extends IfcProcessImpl implements IfcTask {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIsMilestone(Tristate newIsMilestone) {
+	public void setIsMilestone(IfcLogical newIsMilestone) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcTask_IsMilestone(), newIsMilestone);
 	}
 
@@ -179,8 +181,8 @@ public class IfcTaskImpl extends IfcProcessImpl implements IfcTask {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getPriority() {
-		return (Integer) eGet(Ifc2x3Package.eINSTANCE.getIfcTask_Priority(), true);
+	public IfcInteger getPriority() {
+		return (IfcInteger) eGet(Ifc2x3Package.eINSTANCE.getIfcTask_Priority(), true);
 	}
 
 	/**
@@ -188,7 +190,7 @@ public class IfcTaskImpl extends IfcProcessImpl implements IfcTask {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPriority(int newPriority) {
+	public void setPriority(IfcInteger newPriority) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcTask_Priority(), newPriority);
 	}
 

@@ -24,8 +24,11 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcConnectionTypeEnum;
+import org.bimserver.ifc.emf.Ifc2x3.IfcInteger;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRelConnectsPathElements;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -39,6 +42,8 @@ import org.eclipse.emf.ecore.EClass;
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRelConnectsPathElementsImpl#getRelatedPriorities <em>Related Priorities</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRelConnectsPathElementsImpl#getRelatedConnectionType <em>Related Connection Type</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRelConnectsPathElementsImpl#getRelatingConnectionType <em>Relating Connection Type</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRelConnectsPathElementsImpl#getRelatingLayerCount <em>Relating Layer Count</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRelConnectsPathElementsImpl#getRelatedLayerCount <em>Related Layer Count</em>}</li>
  * </ul>
  * </p>
  *
@@ -70,8 +75,8 @@ public class IfcRelConnectsPathElementsImpl extends IfcRelConnectsElementsImpl i
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<Integer> getRelatingPriorities() {
-		return (EList<Integer>) eGet(Ifc2x3Package.eINSTANCE.getIfcRelConnectsPathElements_RelatingPriorities(), true);
+	public EList<IfcInteger> getRelatingPriorities() {
+		return (EList<IfcInteger>) eGet(Ifc2x3Package.eINSTANCE.getIfcRelConnectsPathElements_RelatingPriorities(), true);
 	}
 
 	/**
@@ -80,8 +85,8 @@ public class IfcRelConnectsPathElementsImpl extends IfcRelConnectsElementsImpl i
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<Integer> getRelatedPriorities() {
-		return (EList<Integer>) eGet(Ifc2x3Package.eINSTANCE.getIfcRelConnectsPathElements_RelatedPriorities(), true);
+	public EList<IfcInteger> getRelatedPriorities() {
+		return (EList<IfcInteger>) eGet(Ifc2x3Package.eINSTANCE.getIfcRelConnectsPathElements_RelatedPriorities(), true);
 	}
 
 	/**
@@ -118,6 +123,42 @@ public class IfcRelConnectsPathElementsImpl extends IfcRelConnectsElementsImpl i
 	 */
 	public void setRelatingConnectionType(IfcConnectionTypeEnum newRelatingConnectionType) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcRelConnectsPathElements_RelatingConnectionType(), newRelatingConnectionType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IfcInteger getRelatingLayerCount() {
+		return (IfcInteger) eGet(Ifc2x3Package.eINSTANCE.getIfcRelConnectsPathElements_RelatingLayerCount(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRelatingLayerCount(IfcInteger newRelatingLayerCount) {
+		eSet(Ifc2x3Package.eINSTANCE.getIfcRelConnectsPathElements_RelatingLayerCount(), newRelatingLayerCount);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IfcInteger getRelatedLayerCount() {
+		return (IfcInteger) eGet(Ifc2x3Package.eINSTANCE.getIfcRelConnectsPathElements_RelatedLayerCount(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRelatedLayerCount(IfcInteger newRelatedLayerCount) {
+		eSet(Ifc2x3Package.eINSTANCE.getIfcRelConnectsPathElements_RelatedLayerCount(), newRelatedLayerCount);
 	}
 
 } //IfcRelConnectsPathElementsImpl

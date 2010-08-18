@@ -27,7 +27,9 @@ import org.bimserver.ifc.emf.Ifc2x3.IfcObjectPlacement;
 import org.bimserver.ifc.emf.Ifc2x3.IfcProduct;
 import org.bimserver.ifc.emf.Ifc2x3.IfcProductRepresentation;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRelAssignsToProduct;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

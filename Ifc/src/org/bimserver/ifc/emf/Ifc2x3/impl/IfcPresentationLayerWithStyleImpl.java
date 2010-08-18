@@ -26,7 +26,9 @@ import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcLogical;
 import org.bimserver.ifc.emf.Ifc2x3.IfcPresentationLayerWithStyle;
 import org.bimserver.ifc.emf.Ifc2x3.IfcPresentationStyleSelect;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -36,9 +38,9 @@ import org.eclipse.emf.ecore.EClass;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcPresentationLayerWithStyleImpl#isLayerOn <em>Layer On</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcPresentationLayerWithStyleImpl#isLayerFrozen <em>Layer Frozen</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcPresentationLayerWithStyleImpl#isLayerBlocked <em>Layer Blocked</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcPresentationLayerWithStyleImpl#getLayerOn <em>Layer On</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcPresentationLayerWithStyleImpl#getLayerFrozen <em>Layer Frozen</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcPresentationLayerWithStyleImpl#getLayerBlocked <em>Layer Blocked</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcPresentationLayerWithStyleImpl#getLayerStyles <em>Layer Styles</em>}</li>
  * </ul>
  * </p>
@@ -70,8 +72,8 @@ public class IfcPresentationLayerWithStyleImpl extends IfcPresentationLayerAssig
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isLayerOn() {
-		return (Boolean) eGet(Ifc2x3Package.eINSTANCE.getIfcPresentationLayerWithStyle_LayerOn(), true);
+	public IfcLogical getLayerOn() {
+		return (IfcLogical) eGet(Ifc2x3Package.eINSTANCE.getIfcPresentationLayerWithStyle_LayerOn(), true);
 	}
 
 	/**
@@ -79,7 +81,7 @@ public class IfcPresentationLayerWithStyleImpl extends IfcPresentationLayerAssig
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLayerOn(boolean newLayerOn) {
+	public void setLayerOn(IfcLogical newLayerOn) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcPresentationLayerWithStyle_LayerOn(), newLayerOn);
 	}
 
@@ -88,8 +90,8 @@ public class IfcPresentationLayerWithStyleImpl extends IfcPresentationLayerAssig
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isLayerFrozen() {
-		return (Boolean) eGet(Ifc2x3Package.eINSTANCE.getIfcPresentationLayerWithStyle_LayerFrozen(), true);
+	public IfcLogical getLayerFrozen() {
+		return (IfcLogical) eGet(Ifc2x3Package.eINSTANCE.getIfcPresentationLayerWithStyle_LayerFrozen(), true);
 	}
 
 	/**
@@ -97,7 +99,7 @@ public class IfcPresentationLayerWithStyleImpl extends IfcPresentationLayerAssig
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLayerFrozen(boolean newLayerFrozen) {
+	public void setLayerFrozen(IfcLogical newLayerFrozen) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcPresentationLayerWithStyle_LayerFrozen(), newLayerFrozen);
 	}
 
@@ -106,8 +108,8 @@ public class IfcPresentationLayerWithStyleImpl extends IfcPresentationLayerAssig
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isLayerBlocked() {
-		return (Boolean) eGet(Ifc2x3Package.eINSTANCE.getIfcPresentationLayerWithStyle_LayerBlocked(), true);
+	public IfcLogical getLayerBlocked() {
+		return (IfcLogical) eGet(Ifc2x3Package.eINSTANCE.getIfcPresentationLayerWithStyle_LayerBlocked(), true);
 	}
 
 	/**
@@ -115,7 +117,7 @@ public class IfcPresentationLayerWithStyleImpl extends IfcPresentationLayerAssig
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLayerBlocked(boolean newLayerBlocked) {
+	public void setLayerBlocked(IfcLogical newLayerBlocked) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcPresentationLayerWithStyle_LayerBlocked(), newLayerBlocked);
 	}
 

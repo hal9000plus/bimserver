@@ -44,54 +44,54 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface IfcTypeObject extends IfcObjectDefinition {
 	/**
-	 * Returns the value of the '<em><b>Applicable Occurrence</b></em>' attribute.
+	 * Returns the value of the '<em><b>Applicable Occurrence</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Applicable Occurrence</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Applicable Occurrence</em>' attribute.
+	 * @return the value of the '<em>Applicable Occurrence</em>' reference.
 	 * @see #isSetApplicableOccurrence()
 	 * @see #unsetApplicableOccurrence()
-	 * @see #setApplicableOccurrence(String)
+	 * @see #setApplicableOccurrence(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTypeObject_ApplicableOccurrence()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getApplicableOccurrence();
+	IfcLabel getApplicableOccurrence();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTypeObject#getApplicableOccurrence <em>Applicable Occurrence</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTypeObject#getApplicableOccurrence <em>Applicable Occurrence</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Applicable Occurrence</em>' attribute.
+	 * @param value the new value of the '<em>Applicable Occurrence</em>' reference.
 	 * @see #isSetApplicableOccurrence()
 	 * @see #unsetApplicableOccurrence()
 	 * @see #getApplicableOccurrence()
 	 * @generated
 	 */
-	void setApplicableOccurrence(String value);
+	void setApplicableOccurrence(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTypeObject#getApplicableOccurrence <em>Applicable Occurrence</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTypeObject#getApplicableOccurrence <em>Applicable Occurrence</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetApplicableOccurrence()
 	 * @see #getApplicableOccurrence()
-	 * @see #setApplicableOccurrence(String)
+	 * @see #setApplicableOccurrence(IfcLabel)
 	 * @generated
 	 */
 	void unsetApplicableOccurrence();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTypeObject#getApplicableOccurrence <em>Applicable Occurrence</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTypeObject#getApplicableOccurrence <em>Applicable Occurrence</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Applicable Occurrence</em>' attribute is set.
+	 * @return whether the value of the '<em>Applicable Occurrence</em>' reference is set.
 	 * @see #unsetApplicableOccurrence()
 	 * @see #getApplicableOccurrence()
-	 * @see #setApplicableOccurrence(String)
+	 * @see #setApplicableOccurrence(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetApplicableOccurrence();

@@ -31,10 +31,8 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcDoorPanelProperties#getPanelDepth <em>Panel Depth</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcDoorPanelProperties#getPanelDepthAsString <em>Panel Depth As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcDoorPanelProperties#getPanelOperation <em>Panel Operation</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcDoorPanelProperties#getPanelWidth <em>Panel Width</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcDoorPanelProperties#getPanelWidthAsString <em>Panel Width As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcDoorPanelProperties#getPanelPosition <em>Panel Position</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcDoorPanelProperties#getShapeAspectStyle <em>Shape Aspect Style</em>}</li>
  * </ul>
@@ -46,110 +44,57 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcDoorPanelProperties extends IfcPropertySetDefinition {
 	/**
-	 * Returns the value of the '<em><b>Panel Depth</b></em>' attribute.
+	 * Returns the value of the '<em><b>Panel Depth</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Panel Depth</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Panel Depth</em>' attribute.
+	 * @return the value of the '<em>Panel Depth</em>' reference.
 	 * @see #isSetPanelDepth()
 	 * @see #unsetPanelDepth()
-	 * @see #setPanelDepth(float)
+	 * @see #setPanelDepth(IfcPositiveLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcDoorPanelProperties_PanelDepth()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getPanelDepth();
+	IfcPositiveLengthMeasure getPanelDepth();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDoorPanelProperties#getPanelDepth <em>Panel Depth</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDoorPanelProperties#getPanelDepth <em>Panel Depth</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Panel Depth</em>' attribute.
+	 * @param value the new value of the '<em>Panel Depth</em>' reference.
 	 * @see #isSetPanelDepth()
 	 * @see #unsetPanelDepth()
 	 * @see #getPanelDepth()
 	 * @generated
 	 */
-	void setPanelDepth(float value);
+	void setPanelDepth(IfcPositiveLengthMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDoorPanelProperties#getPanelDepth <em>Panel Depth</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDoorPanelProperties#getPanelDepth <em>Panel Depth</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetPanelDepth()
 	 * @see #getPanelDepth()
-	 * @see #setPanelDepth(float)
+	 * @see #setPanelDepth(IfcPositiveLengthMeasure)
 	 * @generated
 	 */
 	void unsetPanelDepth();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDoorPanelProperties#getPanelDepth <em>Panel Depth</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDoorPanelProperties#getPanelDepth <em>Panel Depth</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Panel Depth</em>' attribute is set.
+	 * @return whether the value of the '<em>Panel Depth</em>' reference is set.
 	 * @see #unsetPanelDepth()
 	 * @see #getPanelDepth()
-	 * @see #setPanelDepth(float)
+	 * @see #setPanelDepth(IfcPositiveLengthMeasure)
 	 * @generated
 	 */
 	boolean isSetPanelDepth();
-
-	/**
-	 * Returns the value of the '<em><b>Panel Depth As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Panel Depth As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Panel Depth As String</em>' attribute.
-	 * @see #isSetPanelDepthAsString()
-	 * @see #unsetPanelDepthAsString()
-	 * @see #setPanelDepthAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcDoorPanelProperties_PanelDepthAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getPanelDepthAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDoorPanelProperties#getPanelDepthAsString <em>Panel Depth As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Panel Depth As String</em>' attribute.
-	 * @see #isSetPanelDepthAsString()
-	 * @see #unsetPanelDepthAsString()
-	 * @see #getPanelDepthAsString()
-	 * @generated
-	 */
-	void setPanelDepthAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDoorPanelProperties#getPanelDepthAsString <em>Panel Depth As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetPanelDepthAsString()
-	 * @see #getPanelDepthAsString()
-	 * @see #setPanelDepthAsString(String)
-	 * @generated
-	 */
-	void unsetPanelDepthAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDoorPanelProperties#getPanelDepthAsString <em>Panel Depth As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Panel Depth As String</em>' attribute is set.
-	 * @see #unsetPanelDepthAsString()
-	 * @see #getPanelDepthAsString()
-	 * @see #setPanelDepthAsString(String)
-	 * @generated
-	 */
-	boolean isSetPanelDepthAsString();
 
 	/**
 	 * Returns the value of the '<em><b>Panel Operation</b></em>' attribute.
@@ -181,110 +126,57 @@ public interface IfcDoorPanelProperties extends IfcPropertySetDefinition {
 	void setPanelOperation(IfcDoorPanelOperationEnum value);
 
 	/**
-	 * Returns the value of the '<em><b>Panel Width</b></em>' attribute.
+	 * Returns the value of the '<em><b>Panel Width</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Panel Width</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Panel Width</em>' attribute.
+	 * @return the value of the '<em>Panel Width</em>' reference.
 	 * @see #isSetPanelWidth()
 	 * @see #unsetPanelWidth()
-	 * @see #setPanelWidth(float)
+	 * @see #setPanelWidth(IfcNormalisedRatioMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcDoorPanelProperties_PanelWidth()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getPanelWidth();
+	IfcNormalisedRatioMeasure getPanelWidth();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDoorPanelProperties#getPanelWidth <em>Panel Width</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDoorPanelProperties#getPanelWidth <em>Panel Width</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Panel Width</em>' attribute.
+	 * @param value the new value of the '<em>Panel Width</em>' reference.
 	 * @see #isSetPanelWidth()
 	 * @see #unsetPanelWidth()
 	 * @see #getPanelWidth()
 	 * @generated
 	 */
-	void setPanelWidth(float value);
+	void setPanelWidth(IfcNormalisedRatioMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDoorPanelProperties#getPanelWidth <em>Panel Width</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDoorPanelProperties#getPanelWidth <em>Panel Width</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetPanelWidth()
 	 * @see #getPanelWidth()
-	 * @see #setPanelWidth(float)
+	 * @see #setPanelWidth(IfcNormalisedRatioMeasure)
 	 * @generated
 	 */
 	void unsetPanelWidth();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDoorPanelProperties#getPanelWidth <em>Panel Width</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDoorPanelProperties#getPanelWidth <em>Panel Width</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Panel Width</em>' attribute is set.
+	 * @return whether the value of the '<em>Panel Width</em>' reference is set.
 	 * @see #unsetPanelWidth()
 	 * @see #getPanelWidth()
-	 * @see #setPanelWidth(float)
+	 * @see #setPanelWidth(IfcNormalisedRatioMeasure)
 	 * @generated
 	 */
 	boolean isSetPanelWidth();
-
-	/**
-	 * Returns the value of the '<em><b>Panel Width As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Panel Width As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Panel Width As String</em>' attribute.
-	 * @see #isSetPanelWidthAsString()
-	 * @see #unsetPanelWidthAsString()
-	 * @see #setPanelWidthAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcDoorPanelProperties_PanelWidthAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getPanelWidthAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDoorPanelProperties#getPanelWidthAsString <em>Panel Width As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Panel Width As String</em>' attribute.
-	 * @see #isSetPanelWidthAsString()
-	 * @see #unsetPanelWidthAsString()
-	 * @see #getPanelWidthAsString()
-	 * @generated
-	 */
-	void setPanelWidthAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDoorPanelProperties#getPanelWidthAsString <em>Panel Width As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetPanelWidthAsString()
-	 * @see #getPanelWidthAsString()
-	 * @see #setPanelWidthAsString(String)
-	 * @generated
-	 */
-	void unsetPanelWidthAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDoorPanelProperties#getPanelWidthAsString <em>Panel Width As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Panel Width As String</em>' attribute is set.
-	 * @see #unsetPanelWidthAsString()
-	 * @see #getPanelWidthAsString()
-	 * @see #setPanelWidthAsString(String)
-	 * @generated
-	 */
-	boolean isSetPanelWidthAsString();
 
 	/**
 	 * Returns the value of the '<em><b>Panel Position</b></em>' attribute.

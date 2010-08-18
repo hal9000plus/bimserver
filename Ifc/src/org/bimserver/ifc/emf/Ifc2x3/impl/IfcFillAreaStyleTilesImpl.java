@@ -26,7 +26,10 @@ import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcFillAreaStyleTileShapeSelect;
 import org.bimserver.ifc.emf.Ifc2x3.IfcFillAreaStyleTiles;
 import org.bimserver.ifc.emf.Ifc2x3.IfcOneDirectionRepeatFactor;
+import org.bimserver.ifc.emf.Ifc2x3.IfcPositiveRatioMeasure;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -39,7 +42,6 @@ import org.eclipse.emf.ecore.EClass;
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcFillAreaStyleTilesImpl#getTilingPattern <em>Tiling Pattern</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcFillAreaStyleTilesImpl#getTiles <em>Tiles</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcFillAreaStyleTilesImpl#getTilingScale <em>Tiling Scale</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcFillAreaStyleTilesImpl#getTilingScaleAsString <em>Tiling Scale As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -98,8 +100,8 @@ public class IfcFillAreaStyleTilesImpl extends IfcGeometricRepresentationItemImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getTilingScale() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcFillAreaStyleTiles_TilingScale(), true);
+	public IfcPositiveRatioMeasure getTilingScale() {
+		return (IfcPositiveRatioMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcFillAreaStyleTiles_TilingScale(), true);
 	}
 
 	/**
@@ -107,26 +109,8 @@ public class IfcFillAreaStyleTilesImpl extends IfcGeometricRepresentationItemImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTilingScale(float newTilingScale) {
+	public void setTilingScale(IfcPositiveRatioMeasure newTilingScale) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcFillAreaStyleTiles_TilingScale(), newTilingScale);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getTilingScaleAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcFillAreaStyleTiles_TilingScaleAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTilingScaleAsString(String newTilingScaleAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcFillAreaStyleTiles_TilingScaleAsString(), newTilingScaleAsString);
 	}
 
 } //IfcFillAreaStyleTilesImpl

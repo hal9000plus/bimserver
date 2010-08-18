@@ -23,9 +23,12 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcDimensionCount;
 import org.bimserver.ifc.emf.Ifc2x3.IfcShell;
 import org.bimserver.ifc.emf.Ifc2x3.IfcShellBasedSurfaceModel;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -77,8 +80,8 @@ public class IfcShellBasedSurfaceModelImpl extends IfcGeometricRepresentationIte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getDim() {
-		return (Integer) eGet(Ifc2x3Package.eINSTANCE.getIfcShellBasedSurfaceModel_Dim(), true);
+	public IfcDimensionCount getDim() {
+		return (IfcDimensionCount) eGet(Ifc2x3Package.eINSTANCE.getIfcShellBasedSurfaceModel_Dim(), true);
 	}
 
 	/**
@@ -86,7 +89,7 @@ public class IfcShellBasedSurfaceModelImpl extends IfcGeometricRepresentationIte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDim(int newDim) {
+	public void setDim(IfcDimensionCount newDim) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcShellBasedSurfaceModel_Dim(), newDim);
 	}
 

@@ -63,133 +63,133 @@ public interface IfcPhysicalComplexQuantity extends IfcPhysicalQuantity {
 	EList<IfcPhysicalQuantity> getHasQuantities();
 
 	/**
-	 * Returns the value of the '<em><b>Discrimination</b></em>' attribute.
+	 * Returns the value of the '<em><b>Discrimination</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Discrimination</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Discrimination</em>' attribute.
-	 * @see #setDiscrimination(String)
+	 * @return the value of the '<em>Discrimination</em>' reference.
+	 * @see #setDiscrimination(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcPhysicalComplexQuantity_Discrimination()
 	 * @model
 	 * @generated
 	 */
-	String getDiscrimination();
+	IfcLabel getDiscrimination();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPhysicalComplexQuantity#getDiscrimination <em>Discrimination</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPhysicalComplexQuantity#getDiscrimination <em>Discrimination</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Discrimination</em>' attribute.
+	 * @param value the new value of the '<em>Discrimination</em>' reference.
 	 * @see #getDiscrimination()
 	 * @generated
 	 */
-	void setDiscrimination(String value);
+	void setDiscrimination(IfcLabel value);
 
 	/**
-	 * Returns the value of the '<em><b>Quality</b></em>' attribute.
+	 * Returns the value of the '<em><b>Quality</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Quality</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Quality</em>' attribute.
+	 * @return the value of the '<em>Quality</em>' reference.
 	 * @see #isSetQuality()
 	 * @see #unsetQuality()
-	 * @see #setQuality(String)
+	 * @see #setQuality(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcPhysicalComplexQuantity_Quality()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getQuality();
+	IfcLabel getQuality();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPhysicalComplexQuantity#getQuality <em>Quality</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPhysicalComplexQuantity#getQuality <em>Quality</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Quality</em>' attribute.
+	 * @param value the new value of the '<em>Quality</em>' reference.
 	 * @see #isSetQuality()
 	 * @see #unsetQuality()
 	 * @see #getQuality()
 	 * @generated
 	 */
-	void setQuality(String value);
+	void setQuality(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPhysicalComplexQuantity#getQuality <em>Quality</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPhysicalComplexQuantity#getQuality <em>Quality</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetQuality()
 	 * @see #getQuality()
-	 * @see #setQuality(String)
+	 * @see #setQuality(IfcLabel)
 	 * @generated
 	 */
 	void unsetQuality();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPhysicalComplexQuantity#getQuality <em>Quality</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPhysicalComplexQuantity#getQuality <em>Quality</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Quality</em>' attribute is set.
+	 * @return whether the value of the '<em>Quality</em>' reference is set.
 	 * @see #unsetQuality()
 	 * @see #getQuality()
-	 * @see #setQuality(String)
+	 * @see #setQuality(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetQuality();
 
 	/**
-	 * Returns the value of the '<em><b>Usage</b></em>' attribute.
+	 * Returns the value of the '<em><b>Usage</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Usage</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Usage</em>' attribute.
+	 * @return the value of the '<em>Usage</em>' reference.
 	 * @see #isSetUsage()
 	 * @see #unsetUsage()
-	 * @see #setUsage(String)
+	 * @see #setUsage(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcPhysicalComplexQuantity_Usage()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getUsage();
+	IfcLabel getUsage();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPhysicalComplexQuantity#getUsage <em>Usage</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPhysicalComplexQuantity#getUsage <em>Usage</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Usage</em>' attribute.
+	 * @param value the new value of the '<em>Usage</em>' reference.
 	 * @see #isSetUsage()
 	 * @see #unsetUsage()
 	 * @see #getUsage()
 	 * @generated
 	 */
-	void setUsage(String value);
+	void setUsage(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPhysicalComplexQuantity#getUsage <em>Usage</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPhysicalComplexQuantity#getUsage <em>Usage</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetUsage()
 	 * @see #getUsage()
-	 * @see #setUsage(String)
+	 * @see #setUsage(IfcLabel)
 	 * @generated
 	 */
 	void unsetUsage();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPhysicalComplexQuantity#getUsage <em>Usage</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPhysicalComplexQuantity#getUsage <em>Usage</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Usage</em>' attribute is set.
+	 * @return whether the value of the '<em>Usage</em>' reference is set.
 	 * @see #unsetUsage()
 	 * @see #getUsage()
-	 * @see #setUsage(String)
+	 * @see #setUsage(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetUsage();

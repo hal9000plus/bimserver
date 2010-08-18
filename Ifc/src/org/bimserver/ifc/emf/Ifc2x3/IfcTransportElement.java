@@ -32,9 +32,7 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTransportElement#getOperationType <em>Operation Type</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTransportElement#getCapacityByWeight <em>Capacity By Weight</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTransportElement#getCapacityByWeightAsString <em>Capacity By Weight As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTransportElement#getCapacityByNumber <em>Capacity By Number</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTransportElement#getCapacityByNumberAsString <em>Capacity By Number As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -73,215 +71,109 @@ public interface IfcTransportElement extends IfcElement {
 	void setOperationType(IfcTransportElementTypeEnum value);
 
 	/**
-	 * Returns the value of the '<em><b>Capacity By Weight</b></em>' attribute.
+	 * Returns the value of the '<em><b>Capacity By Weight</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Capacity By Weight</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Capacity By Weight</em>' attribute.
+	 * @return the value of the '<em>Capacity By Weight</em>' reference.
 	 * @see #isSetCapacityByWeight()
 	 * @see #unsetCapacityByWeight()
-	 * @see #setCapacityByWeight(float)
+	 * @see #setCapacityByWeight(IfcMassMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTransportElement_CapacityByWeight()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getCapacityByWeight();
+	IfcMassMeasure getCapacityByWeight();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTransportElement#getCapacityByWeight <em>Capacity By Weight</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTransportElement#getCapacityByWeight <em>Capacity By Weight</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Capacity By Weight</em>' attribute.
+	 * @param value the new value of the '<em>Capacity By Weight</em>' reference.
 	 * @see #isSetCapacityByWeight()
 	 * @see #unsetCapacityByWeight()
 	 * @see #getCapacityByWeight()
 	 * @generated
 	 */
-	void setCapacityByWeight(float value);
+	void setCapacityByWeight(IfcMassMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTransportElement#getCapacityByWeight <em>Capacity By Weight</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTransportElement#getCapacityByWeight <em>Capacity By Weight</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetCapacityByWeight()
 	 * @see #getCapacityByWeight()
-	 * @see #setCapacityByWeight(float)
+	 * @see #setCapacityByWeight(IfcMassMeasure)
 	 * @generated
 	 */
 	void unsetCapacityByWeight();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTransportElement#getCapacityByWeight <em>Capacity By Weight</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTransportElement#getCapacityByWeight <em>Capacity By Weight</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Capacity By Weight</em>' attribute is set.
+	 * @return whether the value of the '<em>Capacity By Weight</em>' reference is set.
 	 * @see #unsetCapacityByWeight()
 	 * @see #getCapacityByWeight()
-	 * @see #setCapacityByWeight(float)
+	 * @see #setCapacityByWeight(IfcMassMeasure)
 	 * @generated
 	 */
 	boolean isSetCapacityByWeight();
 
 	/**
-	 * Returns the value of the '<em><b>Capacity By Weight As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Capacity By Weight As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Capacity By Weight As String</em>' attribute.
-	 * @see #isSetCapacityByWeightAsString()
-	 * @see #unsetCapacityByWeightAsString()
-	 * @see #setCapacityByWeightAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTransportElement_CapacityByWeightAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getCapacityByWeightAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTransportElement#getCapacityByWeightAsString <em>Capacity By Weight As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Capacity By Weight As String</em>' attribute.
-	 * @see #isSetCapacityByWeightAsString()
-	 * @see #unsetCapacityByWeightAsString()
-	 * @see #getCapacityByWeightAsString()
-	 * @generated
-	 */
-	void setCapacityByWeightAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTransportElement#getCapacityByWeightAsString <em>Capacity By Weight As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetCapacityByWeightAsString()
-	 * @see #getCapacityByWeightAsString()
-	 * @see #setCapacityByWeightAsString(String)
-	 * @generated
-	 */
-	void unsetCapacityByWeightAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTransportElement#getCapacityByWeightAsString <em>Capacity By Weight As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Capacity By Weight As String</em>' attribute is set.
-	 * @see #unsetCapacityByWeightAsString()
-	 * @see #getCapacityByWeightAsString()
-	 * @see #setCapacityByWeightAsString(String)
-	 * @generated
-	 */
-	boolean isSetCapacityByWeightAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Capacity By Number</b></em>' attribute.
+	 * Returns the value of the '<em><b>Capacity By Number</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Capacity By Number</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Capacity By Number</em>' attribute.
+	 * @return the value of the '<em>Capacity By Number</em>' reference.
 	 * @see #isSetCapacityByNumber()
 	 * @see #unsetCapacityByNumber()
-	 * @see #setCapacityByNumber(float)
+	 * @see #setCapacityByNumber(IfcCountMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTransportElement_CapacityByNumber()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getCapacityByNumber();
+	IfcCountMeasure getCapacityByNumber();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTransportElement#getCapacityByNumber <em>Capacity By Number</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTransportElement#getCapacityByNumber <em>Capacity By Number</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Capacity By Number</em>' attribute.
+	 * @param value the new value of the '<em>Capacity By Number</em>' reference.
 	 * @see #isSetCapacityByNumber()
 	 * @see #unsetCapacityByNumber()
 	 * @see #getCapacityByNumber()
 	 * @generated
 	 */
-	void setCapacityByNumber(float value);
+	void setCapacityByNumber(IfcCountMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTransportElement#getCapacityByNumber <em>Capacity By Number</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTransportElement#getCapacityByNumber <em>Capacity By Number</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetCapacityByNumber()
 	 * @see #getCapacityByNumber()
-	 * @see #setCapacityByNumber(float)
+	 * @see #setCapacityByNumber(IfcCountMeasure)
 	 * @generated
 	 */
 	void unsetCapacityByNumber();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTransportElement#getCapacityByNumber <em>Capacity By Number</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTransportElement#getCapacityByNumber <em>Capacity By Number</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Capacity By Number</em>' attribute is set.
+	 * @return whether the value of the '<em>Capacity By Number</em>' reference is set.
 	 * @see #unsetCapacityByNumber()
 	 * @see #getCapacityByNumber()
-	 * @see #setCapacityByNumber(float)
+	 * @see #setCapacityByNumber(IfcCountMeasure)
 	 * @generated
 	 */
 	boolean isSetCapacityByNumber();
-
-	/**
-	 * Returns the value of the '<em><b>Capacity By Number As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Capacity By Number As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Capacity By Number As String</em>' attribute.
-	 * @see #isSetCapacityByNumberAsString()
-	 * @see #unsetCapacityByNumberAsString()
-	 * @see #setCapacityByNumberAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTransportElement_CapacityByNumberAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getCapacityByNumberAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTransportElement#getCapacityByNumberAsString <em>Capacity By Number As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Capacity By Number As String</em>' attribute.
-	 * @see #isSetCapacityByNumberAsString()
-	 * @see #unsetCapacityByNumberAsString()
-	 * @see #getCapacityByNumberAsString()
-	 * @generated
-	 */
-	void setCapacityByNumberAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTransportElement#getCapacityByNumberAsString <em>Capacity By Number As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetCapacityByNumberAsString()
-	 * @see #getCapacityByNumberAsString()
-	 * @see #setCapacityByNumberAsString(String)
-	 * @generated
-	 */
-	void unsetCapacityByNumberAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTransportElement#getCapacityByNumberAsString <em>Capacity By Number As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Capacity By Number As String</em>' attribute is set.
-	 * @see #unsetCapacityByNumberAsString()
-	 * @see #getCapacityByNumberAsString()
-	 * @see #setCapacityByNumberAsString(String)
-	 * @generated
-	 */
-	boolean isSetCapacityByNumberAsString();
 
 } // IfcTransportElement

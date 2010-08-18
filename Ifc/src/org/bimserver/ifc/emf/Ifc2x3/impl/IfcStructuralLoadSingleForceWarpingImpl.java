@@ -24,6 +24,8 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForceWarping;
+import org.bimserver.ifc.emf.Ifc2x3.IfcWarpingMomentMeasure;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -34,7 +36,6 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcStructuralLoadSingleForceWarpingImpl#getWarpingMoment <em>Warping Moment</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcStructuralLoadSingleForceWarpingImpl#getWarpingMomentAsString <em>Warping Moment As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -65,8 +66,8 @@ public class IfcStructuralLoadSingleForceWarpingImpl extends IfcStructuralLoadSi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getWarpingMoment() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleForceWarping_WarpingMoment(), true);
+	public IfcWarpingMomentMeasure getWarpingMoment() {
+		return (IfcWarpingMomentMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleForceWarping_WarpingMoment(), true);
 	}
 
 	/**
@@ -74,7 +75,7 @@ public class IfcStructuralLoadSingleForceWarpingImpl extends IfcStructuralLoadSi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setWarpingMoment(float newWarpingMoment) {
+	public void setWarpingMoment(IfcWarpingMomentMeasure newWarpingMoment) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleForceWarping_WarpingMoment(), newWarpingMoment);
 	}
 
@@ -94,42 +95,6 @@ public class IfcStructuralLoadSingleForceWarpingImpl extends IfcStructuralLoadSi
 	 */
 	public boolean isSetWarpingMoment() {
 		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleForceWarping_WarpingMoment());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getWarpingMomentAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleForceWarping_WarpingMomentAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setWarpingMomentAsString(String newWarpingMomentAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleForceWarping_WarpingMomentAsString(), newWarpingMomentAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetWarpingMomentAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleForceWarping_WarpingMomentAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetWarpingMomentAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadSingleForceWarping_WarpingMomentAsString());
 	}
 
 } //IfcStructuralLoadSingleForceWarpingImpl

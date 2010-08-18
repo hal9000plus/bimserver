@@ -27,7 +27,11 @@ import org.bimserver.ifc.emf.Ifc2x3.IfcActorSelect;
 import org.bimserver.ifc.emf.Ifc2x3.IfcCostSchedule;
 import org.bimserver.ifc.emf.Ifc2x3.IfcCostScheduleTypeEnum;
 import org.bimserver.ifc.emf.Ifc2x3.IfcDateTimeSelect;
+import org.bimserver.ifc.emf.Ifc2x3.IfcIdentifier;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -183,8 +187,8 @@ public class IfcCostScheduleImpl extends IfcControlImpl implements IfcCostSchedu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getStatus() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcCostSchedule_Status(), true);
+	public IfcLabel getStatus() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcCostSchedule_Status(), true);
 	}
 
 	/**
@@ -192,7 +196,7 @@ public class IfcCostScheduleImpl extends IfcControlImpl implements IfcCostSchedu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setStatus(String newStatus) {
+	public void setStatus(IfcLabel newStatus) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcCostSchedule_Status(), newStatus);
 	}
 
@@ -283,8 +287,8 @@ public class IfcCostScheduleImpl extends IfcControlImpl implements IfcCostSchedu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getID() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcCostSchedule_ID(), true);
+	public IfcIdentifier getID() {
+		return (IfcIdentifier) eGet(Ifc2x3Package.eINSTANCE.getIfcCostSchedule_ID(), true);
 	}
 
 	/**
@@ -292,7 +296,7 @@ public class IfcCostScheduleImpl extends IfcControlImpl implements IfcCostSchedu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setID(String newID) {
+	public void setID(IfcIdentifier newID) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcCostSchedule_ID(), newID);
 	}
 

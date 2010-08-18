@@ -24,6 +24,7 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcElement;
+import org.bimserver.ifc.emf.Ifc2x3.IfcIdentifier;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRelConnectsElements;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRelConnectsPortToElement;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRelConnectsStructuralElement;
@@ -35,7 +36,9 @@ import org.bimserver.ifc.emf.Ifc2x3.IfcRelProjectsElement;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRelReferencedInSpatialStructure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRelSpaceBoundary;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRelVoidsElement;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -88,8 +91,8 @@ public class IfcElementImpl extends IfcProductImpl implements IfcElement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getTag() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcElement_Tag(), true);
+	public IfcIdentifier getTag() {
+		return (IfcIdentifier) eGet(Ifc2x3Package.eINSTANCE.getIfcElement_Tag(), true);
 	}
 
 	/**
@@ -97,7 +100,7 @@ public class IfcElementImpl extends IfcProductImpl implements IfcElement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTag(String newTag) {
+	public void setTag(IfcIdentifier newTag) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcElement_Tag(), newTag);
 	}
 

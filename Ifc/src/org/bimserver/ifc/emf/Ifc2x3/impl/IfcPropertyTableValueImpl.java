@@ -24,9 +24,12 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcPropertyTableValue;
+import org.bimserver.ifc.emf.Ifc2x3.IfcText;
 import org.bimserver.ifc.emf.Ifc2x3.IfcUnit;
 import org.bimserver.ifc.emf.Ifc2x3.IfcValue;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -91,8 +94,8 @@ public class IfcPropertyTableValueImpl extends IfcSimplePropertyImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getExpression() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcPropertyTableValue_Expression(), true);
+	public IfcText getExpression() {
+		return (IfcText) eGet(Ifc2x3Package.eINSTANCE.getIfcPropertyTableValue_Expression(), true);
 	}
 
 	/**
@@ -100,7 +103,7 @@ public class IfcPropertyTableValueImpl extends IfcSimplePropertyImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setExpression(String newExpression) {
+	public void setExpression(IfcText newExpression) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcPropertyTableValue_Expression(), newExpression);
 	}
 

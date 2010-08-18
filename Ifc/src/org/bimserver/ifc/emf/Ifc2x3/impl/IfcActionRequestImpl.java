@@ -24,6 +24,8 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcActionRequest;
+import org.bimserver.ifc.emf.Ifc2x3.IfcIdentifier;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -64,8 +66,8 @@ public class IfcActionRequestImpl extends IfcControlImpl implements IfcActionReq
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getRequestID() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcActionRequest_RequestID(), true);
+	public IfcIdentifier getRequestID() {
+		return (IfcIdentifier) eGet(Ifc2x3Package.eINSTANCE.getIfcActionRequest_RequestID(), true);
 	}
 
 	/**
@@ -73,7 +75,7 @@ public class IfcActionRequestImpl extends IfcControlImpl implements IfcActionReq
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRequestID(String newRequestID) {
+	public void setRequestID(IfcIdentifier newRequestID) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcActionRequest_RequestID(), newRequestID);
 	}
 

@@ -22,7 +22,7 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3;
 
-import org.bimserver.emf.IdEObject;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -39,10 +39,9 @@ import org.bimserver.emf.IdEObject;
  *
  * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcProfileDef()
  * @model
- * @extends IdEObject
  * @generated
  */
-public interface IfcProfileDef extends IdEObject {
+public interface IfcProfileDef extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Profile Type</b></em>' attribute.
 	 * The literals are from the enumeration {@link org.bimserver.ifc.emf.Ifc2x3.IfcProfileTypeEnum}.
@@ -73,54 +72,54 @@ public interface IfcProfileDef extends IdEObject {
 	void setProfileType(IfcProfileTypeEnum value);
 
 	/**
-	 * Returns the value of the '<em><b>Profile Name</b></em>' attribute.
+	 * Returns the value of the '<em><b>Profile Name</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Profile Name</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Profile Name</em>' attribute.
+	 * @return the value of the '<em>Profile Name</em>' reference.
 	 * @see #isSetProfileName()
 	 * @see #unsetProfileName()
-	 * @see #setProfileName(String)
+	 * @see #setProfileName(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcProfileDef_ProfileName()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getProfileName();
+	IfcLabel getProfileName();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProfileDef#getProfileName <em>Profile Name</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProfileDef#getProfileName <em>Profile Name</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Profile Name</em>' attribute.
+	 * @param value the new value of the '<em>Profile Name</em>' reference.
 	 * @see #isSetProfileName()
 	 * @see #unsetProfileName()
 	 * @see #getProfileName()
 	 * @generated
 	 */
-	void setProfileName(String value);
+	void setProfileName(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProfileDef#getProfileName <em>Profile Name</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProfileDef#getProfileName <em>Profile Name</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetProfileName()
 	 * @see #getProfileName()
-	 * @see #setProfileName(String)
+	 * @see #setProfileName(IfcLabel)
 	 * @generated
 	 */
 	void unsetProfileName();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProfileDef#getProfileName <em>Profile Name</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProfileDef#getProfileName <em>Profile Name</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Profile Name</em>' attribute is set.
+	 * @return whether the value of the '<em>Profile Name</em>' reference is set.
 	 * @see #unsetProfileName()
 	 * @see #getProfileName()
-	 * @see #setProfileName(String)
+	 * @see #setProfileName(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetProfileName();

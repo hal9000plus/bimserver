@@ -32,7 +32,6 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcServiceLife#getServiceLifeType <em>Service Life Type</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcServiceLife#getServiceLifeDuration <em>Service Life Duration</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcServiceLife#getServiceLifeDurationAsString <em>Service Life Duration As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -71,55 +70,29 @@ public interface IfcServiceLife extends IfcControl {
 	void setServiceLifeType(IfcServiceLifeTypeEnum value);
 
 	/**
-	 * Returns the value of the '<em><b>Service Life Duration</b></em>' attribute.
+	 * Returns the value of the '<em><b>Service Life Duration</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Service Life Duration</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Service Life Duration</em>' attribute.
-	 * @see #setServiceLifeDuration(float)
+	 * @return the value of the '<em>Service Life Duration</em>' reference.
+	 * @see #setServiceLifeDuration(IfcTimeMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcServiceLife_ServiceLifeDuration()
 	 * @model
 	 * @generated
 	 */
-	float getServiceLifeDuration();
+	IfcTimeMeasure getServiceLifeDuration();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcServiceLife#getServiceLifeDuration <em>Service Life Duration</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcServiceLife#getServiceLifeDuration <em>Service Life Duration</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Service Life Duration</em>' attribute.
+	 * @param value the new value of the '<em>Service Life Duration</em>' reference.
 	 * @see #getServiceLifeDuration()
 	 * @generated
 	 */
-	void setServiceLifeDuration(float value);
-
-	/**
-	 * Returns the value of the '<em><b>Service Life Duration As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Service Life Duration As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Service Life Duration As String</em>' attribute.
-	 * @see #setServiceLifeDurationAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcServiceLife_ServiceLifeDurationAsString()
-	 * @model
-	 * @generated
-	 */
-	String getServiceLifeDurationAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcServiceLife#getServiceLifeDurationAsString <em>Service Life Duration As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Service Life Duration As String</em>' attribute.
-	 * @see #getServiceLifeDurationAsString()
-	 * @generated
-	 */
-	void setServiceLifeDurationAsString(String value);
+	void setServiceLifeDuration(IfcTimeMeasure value);
 
 } // IfcServiceLife

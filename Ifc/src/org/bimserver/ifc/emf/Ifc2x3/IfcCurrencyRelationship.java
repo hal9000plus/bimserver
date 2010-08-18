@@ -22,7 +22,7 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3;
 
-import org.bimserver.emf.IdEObject;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,7 +35,6 @@ import org.bimserver.emf.IdEObject;
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcCurrencyRelationship#getRelatingMonetaryUnit <em>Relating Monetary Unit</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcCurrencyRelationship#getRelatedMonetaryUnit <em>Related Monetary Unit</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcCurrencyRelationship#getExchangeRate <em>Exchange Rate</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcCurrencyRelationship#getExchangeRateAsString <em>Exchange Rate As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcCurrencyRelationship#getRateDateTime <em>Rate Date Time</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcCurrencyRelationship#getRateSource <em>Rate Source</em>}</li>
  * </ul>
@@ -43,10 +42,9 @@ import org.bimserver.emf.IdEObject;
  *
  * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcCurrencyRelationship()
  * @model
- * @extends IdEObject
  * @generated
  */
-public interface IfcCurrencyRelationship extends IdEObject {
+public interface IfcCurrencyRelationship extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Relating Monetary Unit</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -100,56 +98,30 @@ public interface IfcCurrencyRelationship extends IdEObject {
 	void setRelatedMonetaryUnit(IfcMonetaryUnit value);
 
 	/**
-	 * Returns the value of the '<em><b>Exchange Rate</b></em>' attribute.
+	 * Returns the value of the '<em><b>Exchange Rate</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Exchange Rate</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Exchange Rate</em>' attribute.
-	 * @see #setExchangeRate(float)
+	 * @return the value of the '<em>Exchange Rate</em>' reference.
+	 * @see #setExchangeRate(IfcPositiveRatioMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcCurrencyRelationship_ExchangeRate()
 	 * @model
 	 * @generated
 	 */
-	float getExchangeRate();
+	IfcPositiveRatioMeasure getExchangeRate();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCurrencyRelationship#getExchangeRate <em>Exchange Rate</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCurrencyRelationship#getExchangeRate <em>Exchange Rate</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Exchange Rate</em>' attribute.
+	 * @param value the new value of the '<em>Exchange Rate</em>' reference.
 	 * @see #getExchangeRate()
 	 * @generated
 	 */
-	void setExchangeRate(float value);
-
-	/**
-	 * Returns the value of the '<em><b>Exchange Rate As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Exchange Rate As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Exchange Rate As String</em>' attribute.
-	 * @see #setExchangeRateAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcCurrencyRelationship_ExchangeRateAsString()
-	 * @model
-	 * @generated
-	 */
-	String getExchangeRateAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCurrencyRelationship#getExchangeRateAsString <em>Exchange Rate As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Exchange Rate As String</em>' attribute.
-	 * @see #getExchangeRateAsString()
-	 * @generated
-	 */
-	void setExchangeRateAsString(String value);
+	void setExchangeRate(IfcPositiveRatioMeasure value);
 
 	/**
 	 * Returns the value of the '<em><b>Rate Date Time</b></em>' reference.

@@ -23,8 +23,11 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
 import org.bimserver.ifc.emf.Ifc2x3.IfcPostalAddress;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -71,8 +74,8 @@ public class IfcPostalAddressImpl extends IfcAddressImpl implements IfcPostalAdd
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getInternalLocation() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcPostalAddress_InternalLocation(), true);
+	public IfcLabel getInternalLocation() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcPostalAddress_InternalLocation(), true);
 	}
 
 	/**
@@ -80,7 +83,7 @@ public class IfcPostalAddressImpl extends IfcAddressImpl implements IfcPostalAdd
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setInternalLocation(String newInternalLocation) {
+	public void setInternalLocation(IfcLabel newInternalLocation) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcPostalAddress_InternalLocation(), newInternalLocation);
 	}
 
@@ -108,8 +111,8 @@ public class IfcPostalAddressImpl extends IfcAddressImpl implements IfcPostalAdd
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<String> getAddressLines() {
-		return (EList<String>) eGet(Ifc2x3Package.eINSTANCE.getIfcPostalAddress_AddressLines(), true);
+	public EList<IfcLabel> getAddressLines() {
+		return (EList<IfcLabel>) eGet(Ifc2x3Package.eINSTANCE.getIfcPostalAddress_AddressLines(), true);
 	}
 
 	/**
@@ -135,8 +138,8 @@ public class IfcPostalAddressImpl extends IfcAddressImpl implements IfcPostalAdd
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getPostalBox() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcPostalAddress_PostalBox(), true);
+	public IfcLabel getPostalBox() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcPostalAddress_PostalBox(), true);
 	}
 
 	/**
@@ -144,7 +147,7 @@ public class IfcPostalAddressImpl extends IfcAddressImpl implements IfcPostalAdd
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPostalBox(String newPostalBox) {
+	public void setPostalBox(IfcLabel newPostalBox) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcPostalAddress_PostalBox(), newPostalBox);
 	}
 
@@ -171,8 +174,8 @@ public class IfcPostalAddressImpl extends IfcAddressImpl implements IfcPostalAdd
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getTown() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcPostalAddress_Town(), true);
+	public IfcLabel getTown() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcPostalAddress_Town(), true);
 	}
 
 	/**
@@ -180,7 +183,7 @@ public class IfcPostalAddressImpl extends IfcAddressImpl implements IfcPostalAdd
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTown(String newTown) {
+	public void setTown(IfcLabel newTown) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcPostalAddress_Town(), newTown);
 	}
 
@@ -207,8 +210,8 @@ public class IfcPostalAddressImpl extends IfcAddressImpl implements IfcPostalAdd
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getRegion() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcPostalAddress_Region(), true);
+	public IfcLabel getRegion() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcPostalAddress_Region(), true);
 	}
 
 	/**
@@ -216,7 +219,7 @@ public class IfcPostalAddressImpl extends IfcAddressImpl implements IfcPostalAdd
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRegion(String newRegion) {
+	public void setRegion(IfcLabel newRegion) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcPostalAddress_Region(), newRegion);
 	}
 
@@ -243,8 +246,8 @@ public class IfcPostalAddressImpl extends IfcAddressImpl implements IfcPostalAdd
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getPostalCode() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcPostalAddress_PostalCode(), true);
+	public IfcLabel getPostalCode() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcPostalAddress_PostalCode(), true);
 	}
 
 	/**
@@ -252,7 +255,7 @@ public class IfcPostalAddressImpl extends IfcAddressImpl implements IfcPostalAdd
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPostalCode(String newPostalCode) {
+	public void setPostalCode(IfcLabel newPostalCode) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcPostalAddress_PostalCode(), newPostalCode);
 	}
 
@@ -279,8 +282,8 @@ public class IfcPostalAddressImpl extends IfcAddressImpl implements IfcPostalAdd
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getCountry() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcPostalAddress_Country(), true);
+	public IfcLabel getCountry() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcPostalAddress_Country(), true);
 	}
 
 	/**
@@ -288,7 +291,7 @@ public class IfcPostalAddressImpl extends IfcAddressImpl implements IfcPostalAdd
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCountry(String newCountry) {
+	public void setCountry(IfcLabel newCountry) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcPostalAddress_Country(), newCountry);
 	}
 

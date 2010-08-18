@@ -25,6 +25,7 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcAxis1Placement;
 import org.bimserver.ifc.emf.Ifc2x3.IfcDirection;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -35,6 +36,7 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcAxis1PlacementImpl#getAxis <em>Axis</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcAxis1PlacementImpl#getZ <em>Z</em>}</li>
  * </ul>
  * </p>
  *
@@ -94,6 +96,24 @@ public class IfcAxis1PlacementImpl extends IfcPlacementImpl implements IfcAxis1P
 	 */
 	public boolean isSetAxis() {
 		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcAxis1Placement_Axis());
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IfcDirection getZ() {
+		return (IfcDirection) eGet(Ifc2x3Package.eINSTANCE.getIfcAxis1Placement_Z(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setZ(IfcDirection newZ) {
+		eSet(Ifc2x3Package.eINSTANCE.getIfcAxis1Placement_Z(), newZ);
 	}
 
 } //IfcAxis1PlacementImpl

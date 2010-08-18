@@ -31,13 +31,9 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcAsymmetricIShapeProfileDef#getTopFlangeWidth <em>Top Flange Width</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcAsymmetricIShapeProfileDef#getTopFlangeWidthAsString <em>Top Flange Width As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcAsymmetricIShapeProfileDef#getTopFlangeThickness <em>Top Flange Thickness</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcAsymmetricIShapeProfileDef#getTopFlangeThicknessAsString <em>Top Flange Thickness As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcAsymmetricIShapeProfileDef#getTopFlangeFilletRadius <em>Top Flange Fillet Radius</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcAsymmetricIShapeProfileDef#getTopFlangeFilletRadiusAsString <em>Top Flange Fillet Radius As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcAsymmetricIShapeProfileDef#getCentreOfGravityInY <em>Centre Of Gravity In Y</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcAsymmetricIShapeProfileDef#getCentreOfGravityInYAsString <em>Centre Of Gravity In YAs String</em>}</li>
  * </ul>
  * </p>
  *
@@ -47,373 +43,188 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcAsymmetricIShapeProfileDef extends IfcIShapeProfileDef {
 	/**
-	 * Returns the value of the '<em><b>Top Flange Width</b></em>' attribute.
+	 * Returns the value of the '<em><b>Top Flange Width</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Top Flange Width</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Top Flange Width</em>' attribute.
-	 * @see #setTopFlangeWidth(float)
+	 * @return the value of the '<em>Top Flange Width</em>' reference.
+	 * @see #setTopFlangeWidth(IfcPositiveLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcAsymmetricIShapeProfileDef_TopFlangeWidth()
 	 * @model
 	 * @generated
 	 */
-	float getTopFlangeWidth();
+	IfcPositiveLengthMeasure getTopFlangeWidth();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcAsymmetricIShapeProfileDef#getTopFlangeWidth <em>Top Flange Width</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcAsymmetricIShapeProfileDef#getTopFlangeWidth <em>Top Flange Width</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Top Flange Width</em>' attribute.
+	 * @param value the new value of the '<em>Top Flange Width</em>' reference.
 	 * @see #getTopFlangeWidth()
 	 * @generated
 	 */
-	void setTopFlangeWidth(float value);
+	void setTopFlangeWidth(IfcPositiveLengthMeasure value);
 
 	/**
-	 * Returns the value of the '<em><b>Top Flange Width As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Top Flange Width As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Top Flange Width As String</em>' attribute.
-	 * @see #setTopFlangeWidthAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcAsymmetricIShapeProfileDef_TopFlangeWidthAsString()
-	 * @model
-	 * @generated
-	 */
-	String getTopFlangeWidthAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcAsymmetricIShapeProfileDef#getTopFlangeWidthAsString <em>Top Flange Width As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Top Flange Width As String</em>' attribute.
-	 * @see #getTopFlangeWidthAsString()
-	 * @generated
-	 */
-	void setTopFlangeWidthAsString(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Top Flange Thickness</b></em>' attribute.
+	 * Returns the value of the '<em><b>Top Flange Thickness</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Top Flange Thickness</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Top Flange Thickness</em>' attribute.
+	 * @return the value of the '<em>Top Flange Thickness</em>' reference.
 	 * @see #isSetTopFlangeThickness()
 	 * @see #unsetTopFlangeThickness()
-	 * @see #setTopFlangeThickness(float)
+	 * @see #setTopFlangeThickness(IfcPositiveLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcAsymmetricIShapeProfileDef_TopFlangeThickness()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getTopFlangeThickness();
+	IfcPositiveLengthMeasure getTopFlangeThickness();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcAsymmetricIShapeProfileDef#getTopFlangeThickness <em>Top Flange Thickness</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcAsymmetricIShapeProfileDef#getTopFlangeThickness <em>Top Flange Thickness</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Top Flange Thickness</em>' attribute.
+	 * @param value the new value of the '<em>Top Flange Thickness</em>' reference.
 	 * @see #isSetTopFlangeThickness()
 	 * @see #unsetTopFlangeThickness()
 	 * @see #getTopFlangeThickness()
 	 * @generated
 	 */
-	void setTopFlangeThickness(float value);
+	void setTopFlangeThickness(IfcPositiveLengthMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcAsymmetricIShapeProfileDef#getTopFlangeThickness <em>Top Flange Thickness</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcAsymmetricIShapeProfileDef#getTopFlangeThickness <em>Top Flange Thickness</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetTopFlangeThickness()
 	 * @see #getTopFlangeThickness()
-	 * @see #setTopFlangeThickness(float)
+	 * @see #setTopFlangeThickness(IfcPositiveLengthMeasure)
 	 * @generated
 	 */
 	void unsetTopFlangeThickness();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcAsymmetricIShapeProfileDef#getTopFlangeThickness <em>Top Flange Thickness</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcAsymmetricIShapeProfileDef#getTopFlangeThickness <em>Top Flange Thickness</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Top Flange Thickness</em>' attribute is set.
+	 * @return whether the value of the '<em>Top Flange Thickness</em>' reference is set.
 	 * @see #unsetTopFlangeThickness()
 	 * @see #getTopFlangeThickness()
-	 * @see #setTopFlangeThickness(float)
+	 * @see #setTopFlangeThickness(IfcPositiveLengthMeasure)
 	 * @generated
 	 */
 	boolean isSetTopFlangeThickness();
 
 	/**
-	 * Returns the value of the '<em><b>Top Flange Thickness As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Top Flange Thickness As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Top Flange Thickness As String</em>' attribute.
-	 * @see #isSetTopFlangeThicknessAsString()
-	 * @see #unsetTopFlangeThicknessAsString()
-	 * @see #setTopFlangeThicknessAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcAsymmetricIShapeProfileDef_TopFlangeThicknessAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getTopFlangeThicknessAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcAsymmetricIShapeProfileDef#getTopFlangeThicknessAsString <em>Top Flange Thickness As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Top Flange Thickness As String</em>' attribute.
-	 * @see #isSetTopFlangeThicknessAsString()
-	 * @see #unsetTopFlangeThicknessAsString()
-	 * @see #getTopFlangeThicknessAsString()
-	 * @generated
-	 */
-	void setTopFlangeThicknessAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcAsymmetricIShapeProfileDef#getTopFlangeThicknessAsString <em>Top Flange Thickness As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetTopFlangeThicknessAsString()
-	 * @see #getTopFlangeThicknessAsString()
-	 * @see #setTopFlangeThicknessAsString(String)
-	 * @generated
-	 */
-	void unsetTopFlangeThicknessAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcAsymmetricIShapeProfileDef#getTopFlangeThicknessAsString <em>Top Flange Thickness As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Top Flange Thickness As String</em>' attribute is set.
-	 * @see #unsetTopFlangeThicknessAsString()
-	 * @see #getTopFlangeThicknessAsString()
-	 * @see #setTopFlangeThicknessAsString(String)
-	 * @generated
-	 */
-	boolean isSetTopFlangeThicknessAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Top Flange Fillet Radius</b></em>' attribute.
+	 * Returns the value of the '<em><b>Top Flange Fillet Radius</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Top Flange Fillet Radius</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Top Flange Fillet Radius</em>' attribute.
+	 * @return the value of the '<em>Top Flange Fillet Radius</em>' reference.
 	 * @see #isSetTopFlangeFilletRadius()
 	 * @see #unsetTopFlangeFilletRadius()
-	 * @see #setTopFlangeFilletRadius(float)
+	 * @see #setTopFlangeFilletRadius(IfcPositiveLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcAsymmetricIShapeProfileDef_TopFlangeFilletRadius()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getTopFlangeFilletRadius();
+	IfcPositiveLengthMeasure getTopFlangeFilletRadius();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcAsymmetricIShapeProfileDef#getTopFlangeFilletRadius <em>Top Flange Fillet Radius</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcAsymmetricIShapeProfileDef#getTopFlangeFilletRadius <em>Top Flange Fillet Radius</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Top Flange Fillet Radius</em>' attribute.
+	 * @param value the new value of the '<em>Top Flange Fillet Radius</em>' reference.
 	 * @see #isSetTopFlangeFilletRadius()
 	 * @see #unsetTopFlangeFilletRadius()
 	 * @see #getTopFlangeFilletRadius()
 	 * @generated
 	 */
-	void setTopFlangeFilletRadius(float value);
+	void setTopFlangeFilletRadius(IfcPositiveLengthMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcAsymmetricIShapeProfileDef#getTopFlangeFilletRadius <em>Top Flange Fillet Radius</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcAsymmetricIShapeProfileDef#getTopFlangeFilletRadius <em>Top Flange Fillet Radius</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetTopFlangeFilletRadius()
 	 * @see #getTopFlangeFilletRadius()
-	 * @see #setTopFlangeFilletRadius(float)
+	 * @see #setTopFlangeFilletRadius(IfcPositiveLengthMeasure)
 	 * @generated
 	 */
 	void unsetTopFlangeFilletRadius();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcAsymmetricIShapeProfileDef#getTopFlangeFilletRadius <em>Top Flange Fillet Radius</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcAsymmetricIShapeProfileDef#getTopFlangeFilletRadius <em>Top Flange Fillet Radius</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Top Flange Fillet Radius</em>' attribute is set.
+	 * @return whether the value of the '<em>Top Flange Fillet Radius</em>' reference is set.
 	 * @see #unsetTopFlangeFilletRadius()
 	 * @see #getTopFlangeFilletRadius()
-	 * @see #setTopFlangeFilletRadius(float)
+	 * @see #setTopFlangeFilletRadius(IfcPositiveLengthMeasure)
 	 * @generated
 	 */
 	boolean isSetTopFlangeFilletRadius();
 
 	/**
-	 * Returns the value of the '<em><b>Top Flange Fillet Radius As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Top Flange Fillet Radius As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Top Flange Fillet Radius As String</em>' attribute.
-	 * @see #isSetTopFlangeFilletRadiusAsString()
-	 * @see #unsetTopFlangeFilletRadiusAsString()
-	 * @see #setTopFlangeFilletRadiusAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcAsymmetricIShapeProfileDef_TopFlangeFilletRadiusAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getTopFlangeFilletRadiusAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcAsymmetricIShapeProfileDef#getTopFlangeFilletRadiusAsString <em>Top Flange Fillet Radius As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Top Flange Fillet Radius As String</em>' attribute.
-	 * @see #isSetTopFlangeFilletRadiusAsString()
-	 * @see #unsetTopFlangeFilletRadiusAsString()
-	 * @see #getTopFlangeFilletRadiusAsString()
-	 * @generated
-	 */
-	void setTopFlangeFilletRadiusAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcAsymmetricIShapeProfileDef#getTopFlangeFilletRadiusAsString <em>Top Flange Fillet Radius As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetTopFlangeFilletRadiusAsString()
-	 * @see #getTopFlangeFilletRadiusAsString()
-	 * @see #setTopFlangeFilletRadiusAsString(String)
-	 * @generated
-	 */
-	void unsetTopFlangeFilletRadiusAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcAsymmetricIShapeProfileDef#getTopFlangeFilletRadiusAsString <em>Top Flange Fillet Radius As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Top Flange Fillet Radius As String</em>' attribute is set.
-	 * @see #unsetTopFlangeFilletRadiusAsString()
-	 * @see #getTopFlangeFilletRadiusAsString()
-	 * @see #setTopFlangeFilletRadiusAsString(String)
-	 * @generated
-	 */
-	boolean isSetTopFlangeFilletRadiusAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Centre Of Gravity In Y</b></em>' attribute.
+	 * Returns the value of the '<em><b>Centre Of Gravity In Y</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Centre Of Gravity In Y</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Centre Of Gravity In Y</em>' attribute.
+	 * @return the value of the '<em>Centre Of Gravity In Y</em>' reference.
 	 * @see #isSetCentreOfGravityInY()
 	 * @see #unsetCentreOfGravityInY()
-	 * @see #setCentreOfGravityInY(float)
+	 * @see #setCentreOfGravityInY(IfcPositiveLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcAsymmetricIShapeProfileDef_CentreOfGravityInY()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getCentreOfGravityInY();
+	IfcPositiveLengthMeasure getCentreOfGravityInY();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcAsymmetricIShapeProfileDef#getCentreOfGravityInY <em>Centre Of Gravity In Y</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcAsymmetricIShapeProfileDef#getCentreOfGravityInY <em>Centre Of Gravity In Y</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Centre Of Gravity In Y</em>' attribute.
+	 * @param value the new value of the '<em>Centre Of Gravity In Y</em>' reference.
 	 * @see #isSetCentreOfGravityInY()
 	 * @see #unsetCentreOfGravityInY()
 	 * @see #getCentreOfGravityInY()
 	 * @generated
 	 */
-	void setCentreOfGravityInY(float value);
+	void setCentreOfGravityInY(IfcPositiveLengthMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcAsymmetricIShapeProfileDef#getCentreOfGravityInY <em>Centre Of Gravity In Y</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcAsymmetricIShapeProfileDef#getCentreOfGravityInY <em>Centre Of Gravity In Y</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetCentreOfGravityInY()
 	 * @see #getCentreOfGravityInY()
-	 * @see #setCentreOfGravityInY(float)
+	 * @see #setCentreOfGravityInY(IfcPositiveLengthMeasure)
 	 * @generated
 	 */
 	void unsetCentreOfGravityInY();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcAsymmetricIShapeProfileDef#getCentreOfGravityInY <em>Centre Of Gravity In Y</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcAsymmetricIShapeProfileDef#getCentreOfGravityInY <em>Centre Of Gravity In Y</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Centre Of Gravity In Y</em>' attribute is set.
+	 * @return whether the value of the '<em>Centre Of Gravity In Y</em>' reference is set.
 	 * @see #unsetCentreOfGravityInY()
 	 * @see #getCentreOfGravityInY()
-	 * @see #setCentreOfGravityInY(float)
+	 * @see #setCentreOfGravityInY(IfcPositiveLengthMeasure)
 	 * @generated
 	 */
 	boolean isSetCentreOfGravityInY();
-
-	/**
-	 * Returns the value of the '<em><b>Centre Of Gravity In YAs String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Centre Of Gravity In YAs String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Centre Of Gravity In YAs String</em>' attribute.
-	 * @see #isSetCentreOfGravityInYAsString()
-	 * @see #unsetCentreOfGravityInYAsString()
-	 * @see #setCentreOfGravityInYAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcAsymmetricIShapeProfileDef_CentreOfGravityInYAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getCentreOfGravityInYAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcAsymmetricIShapeProfileDef#getCentreOfGravityInYAsString <em>Centre Of Gravity In YAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Centre Of Gravity In YAs String</em>' attribute.
-	 * @see #isSetCentreOfGravityInYAsString()
-	 * @see #unsetCentreOfGravityInYAsString()
-	 * @see #getCentreOfGravityInYAsString()
-	 * @generated
-	 */
-	void setCentreOfGravityInYAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcAsymmetricIShapeProfileDef#getCentreOfGravityInYAsString <em>Centre Of Gravity In YAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetCentreOfGravityInYAsString()
-	 * @see #getCentreOfGravityInYAsString()
-	 * @see #setCentreOfGravityInYAsString(String)
-	 * @generated
-	 */
-	void unsetCentreOfGravityInYAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcAsymmetricIShapeProfileDef#getCentreOfGravityInYAsString <em>Centre Of Gravity In YAs String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Centre Of Gravity In YAs String</em>' attribute is set.
-	 * @see #unsetCentreOfGravityInYAsString()
-	 * @see #getCentreOfGravityInYAsString()
-	 * @see #setCentreOfGravityInYAsString(String)
-	 * @generated
-	 */
-	boolean isSetCentreOfGravityInYAsString();
 
 } // IfcAsymmetricIShapeProfileDef

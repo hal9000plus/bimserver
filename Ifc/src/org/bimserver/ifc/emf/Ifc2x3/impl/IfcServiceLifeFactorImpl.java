@@ -26,6 +26,7 @@ import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcMeasureValue;
 import org.bimserver.ifc.emf.Ifc2x3.IfcServiceLifeFactor;
 import org.bimserver.ifc.emf.Ifc2x3.IfcServiceLifeFactorTypeEnum;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

@@ -23,15 +23,11 @@ package org.bimserver.client;
 import java.awt.Cursor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
 
-import javax.swing.AbstractAction;
-import javax.swing.Action;
 import javax.swing.JButton;
-import javax.swing.JComponent;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
-import javax.swing.KeyStroke;
+import javax.swing.JTextField;
 import javax.swing.SpringLayout;
 import javax.swing.WindowConstants;
 
@@ -49,19 +45,19 @@ public class SettingsFrame extends JDialog {
 		getContentPane().setLayout(new SpringLayout());
 		JLabel usernameLabel = new JLabel("Username");
 		getContentPane().add(usernameLabel);
-		final AutoSelectTextField usernameField = new AutoSelectTextField(20);
+		final JTextField usernameField = new JTextField(20);
 		usernameField.setText(testClient.getServiceHolder().getUsername());
 		getContentPane().add(usernameField);
 		
 		JLabel passwordLabel = new JLabel("Password");
 		getContentPane().add(passwordLabel);
-		final AutoSelectTextField passwordField = new AutoSelectTextField(20);
+		final JTextField passwordField = new JTextField(20);
 		passwordField.setText(testClient.getServiceHolder().getPassword());
 		getContentPane().add(passwordField);
 		
 		JLabel serverLabel = new JLabel("Server URL");
 		getContentPane().add(serverLabel);
-		final AutoSelectTextField serverField = new AutoSelectTextField(25);
+		final JTextField serverField = new JTextField(25);
 		serverField.setText(testClient.getServiceHolder().getAddress());
 		getContentPane().add(serverField);
 			
@@ -87,18 +83,6 @@ public class SettingsFrame extends JDialog {
 				setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
 			}});
 		getContentPane().add(save);
-		getRootPane().setDefaultButton(save);
-
-		KeyStroke escapeKeyStroke = KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0, false);
-		Action escapeAction = new AbstractAction() {
-			private static final long serialVersionUID = 8237515446053964032L;
-
-			public void actionPerformed(ActionEvent e) {
-		        dispose();
-		    }
-		}; 
-		getRootPane().getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(escapeKeyStroke, "ESCAPE");
-		getRootPane().getActionMap().put("ESCAPE", escapeAction);
 		
 		SpringUtilities.makeCompactGrid(getContentPane(),
                 4, 2, //rows, cols

@@ -32,19 +32,12 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getPredefinedType <em>Predefined Type</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getNominalDiameter <em>Nominal Diameter</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getNominalDiameterAsString <em>Nominal Diameter As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getCrossSectionArea <em>Cross Section Area</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getCrossSectionAreaAsString <em>Cross Section Area As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getTensionForce <em>Tension Force</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getTensionForceAsString <em>Tension Force As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getPreStress <em>Pre Stress</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getPreStressAsString <em>Pre Stress As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getFrictionCoefficient <em>Friction Coefficient</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getFrictionCoefficientAsString <em>Friction Coefficient As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getAnchorageSlip <em>Anchorage Slip</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getAnchorageSlipAsString <em>Anchorage Slip As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getMinCurvatureRadius <em>Min Curvature Radius</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getMinCurvatureRadiusAsString <em>Min Curvature Radius As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -83,637 +76,320 @@ public interface IfcTendon extends IfcReinforcingElement {
 	void setPredefinedType(IfcTendonTypeEnum value);
 
 	/**
-	 * Returns the value of the '<em><b>Nominal Diameter</b></em>' attribute.
+	 * Returns the value of the '<em><b>Nominal Diameter</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Nominal Diameter</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Nominal Diameter</em>' attribute.
-	 * @see #setNominalDiameter(float)
+	 * @return the value of the '<em>Nominal Diameter</em>' reference.
+	 * @see #setNominalDiameter(IfcPositiveLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTendon_NominalDiameter()
 	 * @model
 	 * @generated
 	 */
-	float getNominalDiameter();
+	IfcPositiveLengthMeasure getNominalDiameter();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getNominalDiameter <em>Nominal Diameter</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getNominalDiameter <em>Nominal Diameter</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Nominal Diameter</em>' attribute.
+	 * @param value the new value of the '<em>Nominal Diameter</em>' reference.
 	 * @see #getNominalDiameter()
 	 * @generated
 	 */
-	void setNominalDiameter(float value);
+	void setNominalDiameter(IfcPositiveLengthMeasure value);
 
 	/**
-	 * Returns the value of the '<em><b>Nominal Diameter As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Nominal Diameter As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Nominal Diameter As String</em>' attribute.
-	 * @see #setNominalDiameterAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTendon_NominalDiameterAsString()
-	 * @model
-	 * @generated
-	 */
-	String getNominalDiameterAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getNominalDiameterAsString <em>Nominal Diameter As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Nominal Diameter As String</em>' attribute.
-	 * @see #getNominalDiameterAsString()
-	 * @generated
-	 */
-	void setNominalDiameterAsString(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Cross Section Area</b></em>' attribute.
+	 * Returns the value of the '<em><b>Cross Section Area</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Cross Section Area</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Cross Section Area</em>' attribute.
-	 * @see #setCrossSectionArea(float)
+	 * @return the value of the '<em>Cross Section Area</em>' reference.
+	 * @see #setCrossSectionArea(IfcAreaMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTendon_CrossSectionArea()
 	 * @model
 	 * @generated
 	 */
-	float getCrossSectionArea();
+	IfcAreaMeasure getCrossSectionArea();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getCrossSectionArea <em>Cross Section Area</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getCrossSectionArea <em>Cross Section Area</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Cross Section Area</em>' attribute.
+	 * @param value the new value of the '<em>Cross Section Area</em>' reference.
 	 * @see #getCrossSectionArea()
 	 * @generated
 	 */
-	void setCrossSectionArea(float value);
+	void setCrossSectionArea(IfcAreaMeasure value);
 
 	/**
-	 * Returns the value of the '<em><b>Cross Section Area As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Cross Section Area As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Cross Section Area As String</em>' attribute.
-	 * @see #setCrossSectionAreaAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTendon_CrossSectionAreaAsString()
-	 * @model
-	 * @generated
-	 */
-	String getCrossSectionAreaAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getCrossSectionAreaAsString <em>Cross Section Area As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Cross Section Area As String</em>' attribute.
-	 * @see #getCrossSectionAreaAsString()
-	 * @generated
-	 */
-	void setCrossSectionAreaAsString(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Tension Force</b></em>' attribute.
+	 * Returns the value of the '<em><b>Tension Force</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Tension Force</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Tension Force</em>' attribute.
+	 * @return the value of the '<em>Tension Force</em>' reference.
 	 * @see #isSetTensionForce()
 	 * @see #unsetTensionForce()
-	 * @see #setTensionForce(float)
+	 * @see #setTensionForce(IfcForceMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTendon_TensionForce()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getTensionForce();
+	IfcForceMeasure getTensionForce();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getTensionForce <em>Tension Force</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getTensionForce <em>Tension Force</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Tension Force</em>' attribute.
+	 * @param value the new value of the '<em>Tension Force</em>' reference.
 	 * @see #isSetTensionForce()
 	 * @see #unsetTensionForce()
 	 * @see #getTensionForce()
 	 * @generated
 	 */
-	void setTensionForce(float value);
+	void setTensionForce(IfcForceMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getTensionForce <em>Tension Force</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getTensionForce <em>Tension Force</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetTensionForce()
 	 * @see #getTensionForce()
-	 * @see #setTensionForce(float)
+	 * @see #setTensionForce(IfcForceMeasure)
 	 * @generated
 	 */
 	void unsetTensionForce();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getTensionForce <em>Tension Force</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getTensionForce <em>Tension Force</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Tension Force</em>' attribute is set.
+	 * @return whether the value of the '<em>Tension Force</em>' reference is set.
 	 * @see #unsetTensionForce()
 	 * @see #getTensionForce()
-	 * @see #setTensionForce(float)
+	 * @see #setTensionForce(IfcForceMeasure)
 	 * @generated
 	 */
 	boolean isSetTensionForce();
 
 	/**
-	 * Returns the value of the '<em><b>Tension Force As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Tension Force As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Tension Force As String</em>' attribute.
-	 * @see #isSetTensionForceAsString()
-	 * @see #unsetTensionForceAsString()
-	 * @see #setTensionForceAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTendon_TensionForceAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getTensionForceAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getTensionForceAsString <em>Tension Force As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Tension Force As String</em>' attribute.
-	 * @see #isSetTensionForceAsString()
-	 * @see #unsetTensionForceAsString()
-	 * @see #getTensionForceAsString()
-	 * @generated
-	 */
-	void setTensionForceAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getTensionForceAsString <em>Tension Force As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetTensionForceAsString()
-	 * @see #getTensionForceAsString()
-	 * @see #setTensionForceAsString(String)
-	 * @generated
-	 */
-	void unsetTensionForceAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getTensionForceAsString <em>Tension Force As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Tension Force As String</em>' attribute is set.
-	 * @see #unsetTensionForceAsString()
-	 * @see #getTensionForceAsString()
-	 * @see #setTensionForceAsString(String)
-	 * @generated
-	 */
-	boolean isSetTensionForceAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Pre Stress</b></em>' attribute.
+	 * Returns the value of the '<em><b>Pre Stress</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Pre Stress</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Pre Stress</em>' attribute.
+	 * @return the value of the '<em>Pre Stress</em>' reference.
 	 * @see #isSetPreStress()
 	 * @see #unsetPreStress()
-	 * @see #setPreStress(float)
+	 * @see #setPreStress(IfcPressureMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTendon_PreStress()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getPreStress();
+	IfcPressureMeasure getPreStress();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getPreStress <em>Pre Stress</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getPreStress <em>Pre Stress</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Pre Stress</em>' attribute.
+	 * @param value the new value of the '<em>Pre Stress</em>' reference.
 	 * @see #isSetPreStress()
 	 * @see #unsetPreStress()
 	 * @see #getPreStress()
 	 * @generated
 	 */
-	void setPreStress(float value);
+	void setPreStress(IfcPressureMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getPreStress <em>Pre Stress</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getPreStress <em>Pre Stress</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetPreStress()
 	 * @see #getPreStress()
-	 * @see #setPreStress(float)
+	 * @see #setPreStress(IfcPressureMeasure)
 	 * @generated
 	 */
 	void unsetPreStress();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getPreStress <em>Pre Stress</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getPreStress <em>Pre Stress</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Pre Stress</em>' attribute is set.
+	 * @return whether the value of the '<em>Pre Stress</em>' reference is set.
 	 * @see #unsetPreStress()
 	 * @see #getPreStress()
-	 * @see #setPreStress(float)
+	 * @see #setPreStress(IfcPressureMeasure)
 	 * @generated
 	 */
 	boolean isSetPreStress();
 
 	/**
-	 * Returns the value of the '<em><b>Pre Stress As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Pre Stress As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Pre Stress As String</em>' attribute.
-	 * @see #isSetPreStressAsString()
-	 * @see #unsetPreStressAsString()
-	 * @see #setPreStressAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTendon_PreStressAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getPreStressAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getPreStressAsString <em>Pre Stress As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Pre Stress As String</em>' attribute.
-	 * @see #isSetPreStressAsString()
-	 * @see #unsetPreStressAsString()
-	 * @see #getPreStressAsString()
-	 * @generated
-	 */
-	void setPreStressAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getPreStressAsString <em>Pre Stress As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetPreStressAsString()
-	 * @see #getPreStressAsString()
-	 * @see #setPreStressAsString(String)
-	 * @generated
-	 */
-	void unsetPreStressAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getPreStressAsString <em>Pre Stress As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Pre Stress As String</em>' attribute is set.
-	 * @see #unsetPreStressAsString()
-	 * @see #getPreStressAsString()
-	 * @see #setPreStressAsString(String)
-	 * @generated
-	 */
-	boolean isSetPreStressAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Friction Coefficient</b></em>' attribute.
+	 * Returns the value of the '<em><b>Friction Coefficient</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Friction Coefficient</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Friction Coefficient</em>' attribute.
+	 * @return the value of the '<em>Friction Coefficient</em>' reference.
 	 * @see #isSetFrictionCoefficient()
 	 * @see #unsetFrictionCoefficient()
-	 * @see #setFrictionCoefficient(float)
+	 * @see #setFrictionCoefficient(IfcNormalisedRatioMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTendon_FrictionCoefficient()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getFrictionCoefficient();
+	IfcNormalisedRatioMeasure getFrictionCoefficient();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getFrictionCoefficient <em>Friction Coefficient</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getFrictionCoefficient <em>Friction Coefficient</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Friction Coefficient</em>' attribute.
+	 * @param value the new value of the '<em>Friction Coefficient</em>' reference.
 	 * @see #isSetFrictionCoefficient()
 	 * @see #unsetFrictionCoefficient()
 	 * @see #getFrictionCoefficient()
 	 * @generated
 	 */
-	void setFrictionCoefficient(float value);
+	void setFrictionCoefficient(IfcNormalisedRatioMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getFrictionCoefficient <em>Friction Coefficient</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getFrictionCoefficient <em>Friction Coefficient</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetFrictionCoefficient()
 	 * @see #getFrictionCoefficient()
-	 * @see #setFrictionCoefficient(float)
+	 * @see #setFrictionCoefficient(IfcNormalisedRatioMeasure)
 	 * @generated
 	 */
 	void unsetFrictionCoefficient();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getFrictionCoefficient <em>Friction Coefficient</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getFrictionCoefficient <em>Friction Coefficient</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Friction Coefficient</em>' attribute is set.
+	 * @return whether the value of the '<em>Friction Coefficient</em>' reference is set.
 	 * @see #unsetFrictionCoefficient()
 	 * @see #getFrictionCoefficient()
-	 * @see #setFrictionCoefficient(float)
+	 * @see #setFrictionCoefficient(IfcNormalisedRatioMeasure)
 	 * @generated
 	 */
 	boolean isSetFrictionCoefficient();
 
 	/**
-	 * Returns the value of the '<em><b>Friction Coefficient As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Friction Coefficient As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Friction Coefficient As String</em>' attribute.
-	 * @see #isSetFrictionCoefficientAsString()
-	 * @see #unsetFrictionCoefficientAsString()
-	 * @see #setFrictionCoefficientAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTendon_FrictionCoefficientAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getFrictionCoefficientAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getFrictionCoefficientAsString <em>Friction Coefficient As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Friction Coefficient As String</em>' attribute.
-	 * @see #isSetFrictionCoefficientAsString()
-	 * @see #unsetFrictionCoefficientAsString()
-	 * @see #getFrictionCoefficientAsString()
-	 * @generated
-	 */
-	void setFrictionCoefficientAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getFrictionCoefficientAsString <em>Friction Coefficient As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetFrictionCoefficientAsString()
-	 * @see #getFrictionCoefficientAsString()
-	 * @see #setFrictionCoefficientAsString(String)
-	 * @generated
-	 */
-	void unsetFrictionCoefficientAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getFrictionCoefficientAsString <em>Friction Coefficient As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Friction Coefficient As String</em>' attribute is set.
-	 * @see #unsetFrictionCoefficientAsString()
-	 * @see #getFrictionCoefficientAsString()
-	 * @see #setFrictionCoefficientAsString(String)
-	 * @generated
-	 */
-	boolean isSetFrictionCoefficientAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Anchorage Slip</b></em>' attribute.
+	 * Returns the value of the '<em><b>Anchorage Slip</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Anchorage Slip</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Anchorage Slip</em>' attribute.
+	 * @return the value of the '<em>Anchorage Slip</em>' reference.
 	 * @see #isSetAnchorageSlip()
 	 * @see #unsetAnchorageSlip()
-	 * @see #setAnchorageSlip(float)
+	 * @see #setAnchorageSlip(IfcPositiveLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTendon_AnchorageSlip()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getAnchorageSlip();
+	IfcPositiveLengthMeasure getAnchorageSlip();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getAnchorageSlip <em>Anchorage Slip</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getAnchorageSlip <em>Anchorage Slip</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Anchorage Slip</em>' attribute.
+	 * @param value the new value of the '<em>Anchorage Slip</em>' reference.
 	 * @see #isSetAnchorageSlip()
 	 * @see #unsetAnchorageSlip()
 	 * @see #getAnchorageSlip()
 	 * @generated
 	 */
-	void setAnchorageSlip(float value);
+	void setAnchorageSlip(IfcPositiveLengthMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getAnchorageSlip <em>Anchorage Slip</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getAnchorageSlip <em>Anchorage Slip</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetAnchorageSlip()
 	 * @see #getAnchorageSlip()
-	 * @see #setAnchorageSlip(float)
+	 * @see #setAnchorageSlip(IfcPositiveLengthMeasure)
 	 * @generated
 	 */
 	void unsetAnchorageSlip();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getAnchorageSlip <em>Anchorage Slip</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getAnchorageSlip <em>Anchorage Slip</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Anchorage Slip</em>' attribute is set.
+	 * @return whether the value of the '<em>Anchorage Slip</em>' reference is set.
 	 * @see #unsetAnchorageSlip()
 	 * @see #getAnchorageSlip()
-	 * @see #setAnchorageSlip(float)
+	 * @see #setAnchorageSlip(IfcPositiveLengthMeasure)
 	 * @generated
 	 */
 	boolean isSetAnchorageSlip();
 
 	/**
-	 * Returns the value of the '<em><b>Anchorage Slip As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Anchorage Slip As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Anchorage Slip As String</em>' attribute.
-	 * @see #isSetAnchorageSlipAsString()
-	 * @see #unsetAnchorageSlipAsString()
-	 * @see #setAnchorageSlipAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTendon_AnchorageSlipAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getAnchorageSlipAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getAnchorageSlipAsString <em>Anchorage Slip As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Anchorage Slip As String</em>' attribute.
-	 * @see #isSetAnchorageSlipAsString()
-	 * @see #unsetAnchorageSlipAsString()
-	 * @see #getAnchorageSlipAsString()
-	 * @generated
-	 */
-	void setAnchorageSlipAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getAnchorageSlipAsString <em>Anchorage Slip As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetAnchorageSlipAsString()
-	 * @see #getAnchorageSlipAsString()
-	 * @see #setAnchorageSlipAsString(String)
-	 * @generated
-	 */
-	void unsetAnchorageSlipAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getAnchorageSlipAsString <em>Anchorage Slip As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Anchorage Slip As String</em>' attribute is set.
-	 * @see #unsetAnchorageSlipAsString()
-	 * @see #getAnchorageSlipAsString()
-	 * @see #setAnchorageSlipAsString(String)
-	 * @generated
-	 */
-	boolean isSetAnchorageSlipAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Min Curvature Radius</b></em>' attribute.
+	 * Returns the value of the '<em><b>Min Curvature Radius</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Min Curvature Radius</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Min Curvature Radius</em>' attribute.
+	 * @return the value of the '<em>Min Curvature Radius</em>' reference.
 	 * @see #isSetMinCurvatureRadius()
 	 * @see #unsetMinCurvatureRadius()
-	 * @see #setMinCurvatureRadius(float)
+	 * @see #setMinCurvatureRadius(IfcPositiveLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTendon_MinCurvatureRadius()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getMinCurvatureRadius();
+	IfcPositiveLengthMeasure getMinCurvatureRadius();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getMinCurvatureRadius <em>Min Curvature Radius</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getMinCurvatureRadius <em>Min Curvature Radius</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Min Curvature Radius</em>' attribute.
+	 * @param value the new value of the '<em>Min Curvature Radius</em>' reference.
 	 * @see #isSetMinCurvatureRadius()
 	 * @see #unsetMinCurvatureRadius()
 	 * @see #getMinCurvatureRadius()
 	 * @generated
 	 */
-	void setMinCurvatureRadius(float value);
+	void setMinCurvatureRadius(IfcPositiveLengthMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getMinCurvatureRadius <em>Min Curvature Radius</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getMinCurvatureRadius <em>Min Curvature Radius</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetMinCurvatureRadius()
 	 * @see #getMinCurvatureRadius()
-	 * @see #setMinCurvatureRadius(float)
+	 * @see #setMinCurvatureRadius(IfcPositiveLengthMeasure)
 	 * @generated
 	 */
 	void unsetMinCurvatureRadius();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getMinCurvatureRadius <em>Min Curvature Radius</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getMinCurvatureRadius <em>Min Curvature Radius</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Min Curvature Radius</em>' attribute is set.
+	 * @return whether the value of the '<em>Min Curvature Radius</em>' reference is set.
 	 * @see #unsetMinCurvatureRadius()
 	 * @see #getMinCurvatureRadius()
-	 * @see #setMinCurvatureRadius(float)
+	 * @see #setMinCurvatureRadius(IfcPositiveLengthMeasure)
 	 * @generated
 	 */
 	boolean isSetMinCurvatureRadius();
-
-	/**
-	 * Returns the value of the '<em><b>Min Curvature Radius As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Min Curvature Radius As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Min Curvature Radius As String</em>' attribute.
-	 * @see #isSetMinCurvatureRadiusAsString()
-	 * @see #unsetMinCurvatureRadiusAsString()
-	 * @see #setMinCurvatureRadiusAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTendon_MinCurvatureRadiusAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getMinCurvatureRadiusAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getMinCurvatureRadiusAsString <em>Min Curvature Radius As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Min Curvature Radius As String</em>' attribute.
-	 * @see #isSetMinCurvatureRadiusAsString()
-	 * @see #unsetMinCurvatureRadiusAsString()
-	 * @see #getMinCurvatureRadiusAsString()
-	 * @generated
-	 */
-	void setMinCurvatureRadiusAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getMinCurvatureRadiusAsString <em>Min Curvature Radius As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetMinCurvatureRadiusAsString()
-	 * @see #getMinCurvatureRadiusAsString()
-	 * @see #setMinCurvatureRadiusAsString(String)
-	 * @generated
-	 */
-	void unsetMinCurvatureRadiusAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTendon#getMinCurvatureRadiusAsString <em>Min Curvature Radius As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Min Curvature Radius As String</em>' attribute is set.
-	 * @see #unsetMinCurvatureRadiusAsString()
-	 * @see #getMinCurvatureRadiusAsString()
-	 * @see #setMinCurvatureRadiusAsString(String)
-	 * @generated
-	 */
-	boolean isSetMinCurvatureRadiusAsString();
 
 } // IfcTendon

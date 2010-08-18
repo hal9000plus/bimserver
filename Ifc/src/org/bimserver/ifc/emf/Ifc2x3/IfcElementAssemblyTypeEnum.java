@@ -344,8 +344,8 @@ public enum IfcElementAssemblyTypeEnum implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final IfcElementAssemblyTypeEnum[] VALUES_ARRAY = new IfcElementAssemblyTypeEnum[] { NULL, SLAB_FIELD, BEAM_GRID, ARCH, NOTDEFINED, REINFORCEMENT_UNIT,
-			BRACED_FRAME, GIRDER, RIGID_FRAME, TRUSS, USERDEFINED, ACCESSORY_ASSEMBLY, };
+	private static final IfcElementAssemblyTypeEnum[] VALUES_ARRAY = new IfcElementAssemblyTypeEnum[] { NULL, SLAB_FIELD, BEAM_GRID, ARCH, NOTDEFINED,
+			REINFORCEMENT_UNIT, BRACED_FRAME, GIRDER, RIGID_FRAME, TRUSS, USERDEFINED, ACCESSORY_ASSEMBLY, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Ifc Element Assembly Type Enum</b></em>' enumerators.

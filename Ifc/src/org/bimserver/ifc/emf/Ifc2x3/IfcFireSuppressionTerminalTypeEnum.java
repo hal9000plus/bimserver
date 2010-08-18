@@ -244,8 +244,8 @@ public enum IfcFireSuppressionTerminalTypeEnum implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final IfcFireSuppressionTerminalTypeEnum[] VALUES_ARRAY = new IfcFireSuppressionTerminalTypeEnum[] { NULL, NOTDEFINED, HOSEREEL, USERDEFINED,
-			SPRINKLERDEFLECTOR, BREECHINGINLET, SPRINKLER, FIREHYDRANT, };
+	private static final IfcFireSuppressionTerminalTypeEnum[] VALUES_ARRAY = new IfcFireSuppressionTerminalTypeEnum[] { NULL, NOTDEFINED, HOSEREEL,
+			USERDEFINED, SPRINKLERDEFLECTOR, BREECHINGINLET, SPRINKLER, FIREHYDRANT, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Ifc Fire Suppression Terminal Type Enum</b></em>' enumerators.

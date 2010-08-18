@@ -294,8 +294,8 @@ public enum IfcGeometricProjectionEnum implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final IfcGeometricProjectionEnum[] VALUES_ARRAY = new IfcGeometricProjectionEnum[] { NULL, ELEVATION_VIEW, SKETCH_VIEW, REFLECTED_PLAN_VIEW, PLAN_VIEW,
-			NOTDEFINED, GRAPH_VIEW, USERDEFINED, SECTION_VIEW, MODEL_VIEW, };
+	private static final IfcGeometricProjectionEnum[] VALUES_ARRAY = new IfcGeometricProjectionEnum[] { NULL, ELEVATION_VIEW, SKETCH_VIEW, REFLECTED_PLAN_VIEW,
+			PLAN_VIEW, NOTDEFINED, GRAPH_VIEW, USERDEFINED, SECTION_VIEW, MODEL_VIEW, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Ifc Geometric Projection Enum</b></em>' enumerators.

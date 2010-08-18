@@ -32,8 +32,7 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcOffsetCurve2D#getBasisCurve <em>Basis Curve</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcOffsetCurve2D#getDistance <em>Distance</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcOffsetCurve2D#getDistanceAsString <em>Distance As String</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcOffsetCurve2D#isSelfIntersect <em>Self Intersect</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcOffsetCurve2D#getSelfIntersect <em>Self Intersect</em>}</li>
  * </ul>
  * </p>
  *
@@ -69,81 +68,55 @@ public interface IfcOffsetCurve2D extends IfcCurve {
 	void setBasisCurve(IfcCurve value);
 
 	/**
-	 * Returns the value of the '<em><b>Distance</b></em>' attribute.
+	 * Returns the value of the '<em><b>Distance</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Distance</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Distance</em>' attribute.
-	 * @see #setDistance(float)
+	 * @return the value of the '<em>Distance</em>' reference.
+	 * @see #setDistance(IfcLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcOffsetCurve2D_Distance()
 	 * @model
 	 * @generated
 	 */
-	float getDistance();
+	IfcLengthMeasure getDistance();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOffsetCurve2D#getDistance <em>Distance</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOffsetCurve2D#getDistance <em>Distance</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Distance</em>' attribute.
+	 * @param value the new value of the '<em>Distance</em>' reference.
 	 * @see #getDistance()
 	 * @generated
 	 */
-	void setDistance(float value);
+	void setDistance(IfcLengthMeasure value);
 
 	/**
-	 * Returns the value of the '<em><b>Distance As String</b></em>' attribute.
+	 * Returns the value of the '<em><b>Self Intersect</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Distance As String</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Self Intersect</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Distance As String</em>' attribute.
-	 * @see #setDistanceAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcOffsetCurve2D_DistanceAsString()
-	 * @model
-	 * @generated
-	 */
-	String getDistanceAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOffsetCurve2D#getDistanceAsString <em>Distance As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Distance As String</em>' attribute.
-	 * @see #getDistanceAsString()
-	 * @generated
-	 */
-	void setDistanceAsString(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Self Intersect</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Self Intersect</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Self Intersect</em>' attribute.
-	 * @see #setSelfIntersect(boolean)
+	 * @return the value of the '<em>Self Intersect</em>' reference.
+	 * @see #setSelfIntersect(IfcLogical)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcOffsetCurve2D_SelfIntersect()
 	 * @model
 	 * @generated
 	 */
-	boolean isSelfIntersect();
+	IfcLogical getSelfIntersect();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOffsetCurve2D#isSelfIntersect <em>Self Intersect</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOffsetCurve2D#getSelfIntersect <em>Self Intersect</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Self Intersect</em>' attribute.
-	 * @see #isSelfIntersect()
+	 * @param value the new value of the '<em>Self Intersect</em>' reference.
+	 * @see #getSelfIntersect()
 	 * @generated
 	 */
-	void setSelfIntersect(boolean value);
+	void setSelfIntersect(IfcLogical value);
 
 } // IfcOffsetCurve2D

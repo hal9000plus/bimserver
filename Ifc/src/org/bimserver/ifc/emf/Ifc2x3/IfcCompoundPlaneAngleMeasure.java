@@ -22,6 +22,8 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3;
 
+import org.eclipse.emf.ecore.EObject;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Ifc Compound Plane Angle Measure</b></em>'.
@@ -38,7 +40,7 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * @model
  * @generated
  */
-public interface IfcCompoundPlaneAngleMeasure extends WrappedValue {
+public interface IfcCompoundPlaneAngleMeasure extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Wrapped Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->

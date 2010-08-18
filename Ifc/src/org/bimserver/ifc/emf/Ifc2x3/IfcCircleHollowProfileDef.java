@@ -31,7 +31,6 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcCircleHollowProfileDef#getWallThickness <em>Wall Thickness</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcCircleHollowProfileDef#getWallThicknessAsString <em>Wall Thickness As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -41,55 +40,29 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcCircleHollowProfileDef extends IfcCircleProfileDef {
 	/**
-	 * Returns the value of the '<em><b>Wall Thickness</b></em>' attribute.
+	 * Returns the value of the '<em><b>Wall Thickness</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Wall Thickness</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Wall Thickness</em>' attribute.
-	 * @see #setWallThickness(float)
+	 * @return the value of the '<em>Wall Thickness</em>' reference.
+	 * @see #setWallThickness(IfcPositiveLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcCircleHollowProfileDef_WallThickness()
 	 * @model
 	 * @generated
 	 */
-	float getWallThickness();
+	IfcPositiveLengthMeasure getWallThickness();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCircleHollowProfileDef#getWallThickness <em>Wall Thickness</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCircleHollowProfileDef#getWallThickness <em>Wall Thickness</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Wall Thickness</em>' attribute.
+	 * @param value the new value of the '<em>Wall Thickness</em>' reference.
 	 * @see #getWallThickness()
 	 * @generated
 	 */
-	void setWallThickness(float value);
-
-	/**
-	 * Returns the value of the '<em><b>Wall Thickness As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Wall Thickness As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Wall Thickness As String</em>' attribute.
-	 * @see #setWallThicknessAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcCircleHollowProfileDef_WallThicknessAsString()
-	 * @model
-	 * @generated
-	 */
-	String getWallThicknessAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCircleHollowProfileDef#getWallThicknessAsString <em>Wall Thickness As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Wall Thickness As String</em>' attribute.
-	 * @see #getWallThicknessAsString()
-	 * @generated
-	 */
-	void setWallThicknessAsString(String value);
+	void setWallThickness(IfcPositiveLengthMeasure value);
 
 } // IfcCircleHollowProfileDef

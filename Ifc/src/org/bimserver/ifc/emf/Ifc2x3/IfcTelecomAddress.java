@@ -46,25 +46,25 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface IfcTelecomAddress extends IfcAddress {
 	/**
-	 * Returns the value of the '<em><b>Telephone Numbers</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
+	 * Returns the value of the '<em><b>Telephone Numbers</b></em>' reference list.
+	 * The list contents are of type {@link org.bimserver.ifc.emf.Ifc2x3.IfcLabel}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Telephone Numbers</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Telephone Numbers</em>' attribute list.
+	 * @return the value of the '<em>Telephone Numbers</em>' reference list.
 	 * @see #isSetTelephoneNumbers()
 	 * @see #unsetTelephoneNumbers()
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTelecomAddress_TelephoneNumbers()
-	 * @model unique="false" unsettable="true"
+	 * @model unsettable="true"
 	 * @generated
 	 */
-	EList<String> getTelephoneNumbers();
+	EList<IfcLabel> getTelephoneNumbers();
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTelecomAddress#getTelephoneNumbers <em>Telephone Numbers</em>}' attribute list.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTelecomAddress#getTelephoneNumbers <em>Telephone Numbers</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetTelephoneNumbers()
@@ -74,10 +74,10 @@ public interface IfcTelecomAddress extends IfcAddress {
 	void unsetTelephoneNumbers();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTelecomAddress#getTelephoneNumbers <em>Telephone Numbers</em>}' attribute list is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTelecomAddress#getTelephoneNumbers <em>Telephone Numbers</em>}' reference list is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Telephone Numbers</em>' attribute list is set.
+	 * @return whether the value of the '<em>Telephone Numbers</em>' reference list is set.
 	 * @see #unsetTelephoneNumbers()
 	 * @see #getTelephoneNumbers()
 	 * @generated
@@ -85,25 +85,25 @@ public interface IfcTelecomAddress extends IfcAddress {
 	boolean isSetTelephoneNumbers();
 
 	/**
-	 * Returns the value of the '<em><b>Facsimile Numbers</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
+	 * Returns the value of the '<em><b>Facsimile Numbers</b></em>' reference list.
+	 * The list contents are of type {@link org.bimserver.ifc.emf.Ifc2x3.IfcLabel}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Facsimile Numbers</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Facsimile Numbers</em>' attribute list.
+	 * @return the value of the '<em>Facsimile Numbers</em>' reference list.
 	 * @see #isSetFacsimileNumbers()
 	 * @see #unsetFacsimileNumbers()
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTelecomAddress_FacsimileNumbers()
-	 * @model unique="false" unsettable="true"
+	 * @model unsettable="true"
 	 * @generated
 	 */
-	EList<String> getFacsimileNumbers();
+	EList<IfcLabel> getFacsimileNumbers();
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTelecomAddress#getFacsimileNumbers <em>Facsimile Numbers</em>}' attribute list.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTelecomAddress#getFacsimileNumbers <em>Facsimile Numbers</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetFacsimileNumbers()
@@ -113,10 +113,10 @@ public interface IfcTelecomAddress extends IfcAddress {
 	void unsetFacsimileNumbers();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTelecomAddress#getFacsimileNumbers <em>Facsimile Numbers</em>}' attribute list is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTelecomAddress#getFacsimileNumbers <em>Facsimile Numbers</em>}' reference list is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Facsimile Numbers</em>' attribute list is set.
+	 * @return whether the value of the '<em>Facsimile Numbers</em>' reference list is set.
 	 * @see #unsetFacsimileNumbers()
 	 * @see #getFacsimileNumbers()
 	 * @generated
@@ -124,78 +124,78 @@ public interface IfcTelecomAddress extends IfcAddress {
 	boolean isSetFacsimileNumbers();
 
 	/**
-	 * Returns the value of the '<em><b>Pager Number</b></em>' attribute.
+	 * Returns the value of the '<em><b>Pager Number</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Pager Number</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Pager Number</em>' attribute.
+	 * @return the value of the '<em>Pager Number</em>' reference.
 	 * @see #isSetPagerNumber()
 	 * @see #unsetPagerNumber()
-	 * @see #setPagerNumber(String)
+	 * @see #setPagerNumber(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTelecomAddress_PagerNumber()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getPagerNumber();
+	IfcLabel getPagerNumber();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTelecomAddress#getPagerNumber <em>Pager Number</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTelecomAddress#getPagerNumber <em>Pager Number</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Pager Number</em>' attribute.
+	 * @param value the new value of the '<em>Pager Number</em>' reference.
 	 * @see #isSetPagerNumber()
 	 * @see #unsetPagerNumber()
 	 * @see #getPagerNumber()
 	 * @generated
 	 */
-	void setPagerNumber(String value);
+	void setPagerNumber(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTelecomAddress#getPagerNumber <em>Pager Number</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTelecomAddress#getPagerNumber <em>Pager Number</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetPagerNumber()
 	 * @see #getPagerNumber()
-	 * @see #setPagerNumber(String)
+	 * @see #setPagerNumber(IfcLabel)
 	 * @generated
 	 */
 	void unsetPagerNumber();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTelecomAddress#getPagerNumber <em>Pager Number</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTelecomAddress#getPagerNumber <em>Pager Number</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Pager Number</em>' attribute is set.
+	 * @return whether the value of the '<em>Pager Number</em>' reference is set.
 	 * @see #unsetPagerNumber()
 	 * @see #getPagerNumber()
-	 * @see #setPagerNumber(String)
+	 * @see #setPagerNumber(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetPagerNumber();
 
 	/**
-	 * Returns the value of the '<em><b>Electronic Mail Addresses</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
+	 * Returns the value of the '<em><b>Electronic Mail Addresses</b></em>' reference list.
+	 * The list contents are of type {@link org.bimserver.ifc.emf.Ifc2x3.IfcLabel}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Electronic Mail Addresses</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Electronic Mail Addresses</em>' attribute list.
+	 * @return the value of the '<em>Electronic Mail Addresses</em>' reference list.
 	 * @see #isSetElectronicMailAddresses()
 	 * @see #unsetElectronicMailAddresses()
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTelecomAddress_ElectronicMailAddresses()
-	 * @model unique="false" unsettable="true"
+	 * @model unsettable="true"
 	 * @generated
 	 */
-	EList<String> getElectronicMailAddresses();
+	EList<IfcLabel> getElectronicMailAddresses();
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTelecomAddress#getElectronicMailAddresses <em>Electronic Mail Addresses</em>}' attribute list.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTelecomAddress#getElectronicMailAddresses <em>Electronic Mail Addresses</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetElectronicMailAddresses()
@@ -205,10 +205,10 @@ public interface IfcTelecomAddress extends IfcAddress {
 	void unsetElectronicMailAddresses();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTelecomAddress#getElectronicMailAddresses <em>Electronic Mail Addresses</em>}' attribute list is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTelecomAddress#getElectronicMailAddresses <em>Electronic Mail Addresses</em>}' reference list is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Electronic Mail Addresses</em>' attribute list is set.
+	 * @return whether the value of the '<em>Electronic Mail Addresses</em>' reference list is set.
 	 * @see #unsetElectronicMailAddresses()
 	 * @see #getElectronicMailAddresses()
 	 * @generated
@@ -216,54 +216,54 @@ public interface IfcTelecomAddress extends IfcAddress {
 	boolean isSetElectronicMailAddresses();
 
 	/**
-	 * Returns the value of the '<em><b>WWW Home Page URL</b></em>' attribute.
+	 * Returns the value of the '<em><b>WWW Home Page URL</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>WWW Home Page URL</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>WWW Home Page URL</em>' attribute.
+	 * @return the value of the '<em>WWW Home Page URL</em>' reference.
 	 * @see #isSetWWWHomePageURL()
 	 * @see #unsetWWWHomePageURL()
-	 * @see #setWWWHomePageURL(String)
+	 * @see #setWWWHomePageURL(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTelecomAddress_WWWHomePageURL()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getWWWHomePageURL();
+	IfcLabel getWWWHomePageURL();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTelecomAddress#getWWWHomePageURL <em>WWW Home Page URL</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTelecomAddress#getWWWHomePageURL <em>WWW Home Page URL</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>WWW Home Page URL</em>' attribute.
+	 * @param value the new value of the '<em>WWW Home Page URL</em>' reference.
 	 * @see #isSetWWWHomePageURL()
 	 * @see #unsetWWWHomePageURL()
 	 * @see #getWWWHomePageURL()
 	 * @generated
 	 */
-	void setWWWHomePageURL(String value);
+	void setWWWHomePageURL(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTelecomAddress#getWWWHomePageURL <em>WWW Home Page URL</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTelecomAddress#getWWWHomePageURL <em>WWW Home Page URL</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetWWWHomePageURL()
 	 * @see #getWWWHomePageURL()
-	 * @see #setWWWHomePageURL(String)
+	 * @see #setWWWHomePageURL(IfcLabel)
 	 * @generated
 	 */
 	void unsetWWWHomePageURL();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTelecomAddress#getWWWHomePageURL <em>WWW Home Page URL</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTelecomAddress#getWWWHomePageURL <em>WWW Home Page URL</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>WWW Home Page URL</em>' attribute is set.
+	 * @return whether the value of the '<em>WWW Home Page URL</em>' reference is set.
 	 * @see #unsetWWWHomePageURL()
 	 * @see #getWWWHomePageURL()
-	 * @see #setWWWHomePageURL(String)
+	 * @see #setWWWHomePageURL(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetWWWHomePageURL();

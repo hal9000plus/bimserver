@@ -22,12 +22,15 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
-import org.bimserver.emf.IdEObjectImpl;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcAnnotationSurface;
 import org.bimserver.ifc.emf.Ifc2x3.IfcTextureCoordinate;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -42,7 +45,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class IfcTextureCoordinateImpl extends IdEObjectImpl implements IfcTextureCoordinate {
+public class IfcTextureCoordinateImpl extends EObjectImpl implements IfcTextureCoordinate {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

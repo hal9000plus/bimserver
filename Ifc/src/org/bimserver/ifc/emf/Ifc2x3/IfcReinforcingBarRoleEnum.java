@@ -294,8 +294,8 @@ public enum IfcReinforcingBarRoleEnum implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final IfcReinforcingBarRoleEnum[] VALUES_ARRAY = new IfcReinforcingBarRoleEnum[] { NULL, RING, MAIN, NOTDEFINED, LIGATURE, PUNCHING, SHEAR, USERDEFINED, STUD,
-			EDGE, };
+	private static final IfcReinforcingBarRoleEnum[] VALUES_ARRAY = new IfcReinforcingBarRoleEnum[] { NULL, RING, MAIN, NOTDEFINED, LIGATURE, PUNCHING, SHEAR,
+			USERDEFINED, STUD, EDGE, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Ifc Reinforcing Bar Role Enum</b></em>' enumerators.

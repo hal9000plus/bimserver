@@ -31,11 +31,8 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadTemperature#getDeltaT_Constant <em>Delta TConstant</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadTemperature#getDeltaT_ConstantAsString <em>Delta TConstant As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadTemperature#getDeltaT_Y <em>Delta TY</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadTemperature#getDeltaT_YAsString <em>Delta TYAs String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadTemperature#getDeltaT_Z <em>Delta TZ</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadTemperature#getDeltaT_ZAsString <em>Delta TZAs String</em>}</li>
  * </ul>
  * </p>
  *
@@ -45,321 +42,162 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcStructuralLoadTemperature extends IfcStructuralLoadStatic {
 	/**
-	 * Returns the value of the '<em><b>Delta TConstant</b></em>' attribute.
+	 * Returns the value of the '<em><b>Delta TConstant</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Delta TConstant</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Delta TConstant</em>' attribute.
+	 * @return the value of the '<em>Delta TConstant</em>' reference.
 	 * @see #isSetDeltaT_Constant()
 	 * @see #unsetDeltaT_Constant()
-	 * @see #setDeltaT_Constant(float)
+	 * @see #setDeltaT_Constant(IfcThermodynamicTemperatureMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoadTemperature_DeltaT_Constant()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getDeltaT_Constant();
+	IfcThermodynamicTemperatureMeasure getDeltaT_Constant();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadTemperature#getDeltaT_Constant <em>Delta TConstant</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadTemperature#getDeltaT_Constant <em>Delta TConstant</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Delta TConstant</em>' attribute.
+	 * @param value the new value of the '<em>Delta TConstant</em>' reference.
 	 * @see #isSetDeltaT_Constant()
 	 * @see #unsetDeltaT_Constant()
 	 * @see #getDeltaT_Constant()
 	 * @generated
 	 */
-	void setDeltaT_Constant(float value);
+	void setDeltaT_Constant(IfcThermodynamicTemperatureMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadTemperature#getDeltaT_Constant <em>Delta TConstant</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadTemperature#getDeltaT_Constant <em>Delta TConstant</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetDeltaT_Constant()
 	 * @see #getDeltaT_Constant()
-	 * @see #setDeltaT_Constant(float)
+	 * @see #setDeltaT_Constant(IfcThermodynamicTemperatureMeasure)
 	 * @generated
 	 */
 	void unsetDeltaT_Constant();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadTemperature#getDeltaT_Constant <em>Delta TConstant</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadTemperature#getDeltaT_Constant <em>Delta TConstant</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Delta TConstant</em>' attribute is set.
+	 * @return whether the value of the '<em>Delta TConstant</em>' reference is set.
 	 * @see #unsetDeltaT_Constant()
 	 * @see #getDeltaT_Constant()
-	 * @see #setDeltaT_Constant(float)
+	 * @see #setDeltaT_Constant(IfcThermodynamicTemperatureMeasure)
 	 * @generated
 	 */
 	boolean isSetDeltaT_Constant();
 
 	/**
-	 * Returns the value of the '<em><b>Delta TConstant As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Delta TConstant As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Delta TConstant As String</em>' attribute.
-	 * @see #isSetDeltaT_ConstantAsString()
-	 * @see #unsetDeltaT_ConstantAsString()
-	 * @see #setDeltaT_ConstantAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoadTemperature_DeltaT_ConstantAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getDeltaT_ConstantAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadTemperature#getDeltaT_ConstantAsString <em>Delta TConstant As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Delta TConstant As String</em>' attribute.
-	 * @see #isSetDeltaT_ConstantAsString()
-	 * @see #unsetDeltaT_ConstantAsString()
-	 * @see #getDeltaT_ConstantAsString()
-	 * @generated
-	 */
-	void setDeltaT_ConstantAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadTemperature#getDeltaT_ConstantAsString <em>Delta TConstant As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetDeltaT_ConstantAsString()
-	 * @see #getDeltaT_ConstantAsString()
-	 * @see #setDeltaT_ConstantAsString(String)
-	 * @generated
-	 */
-	void unsetDeltaT_ConstantAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadTemperature#getDeltaT_ConstantAsString <em>Delta TConstant As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Delta TConstant As String</em>' attribute is set.
-	 * @see #unsetDeltaT_ConstantAsString()
-	 * @see #getDeltaT_ConstantAsString()
-	 * @see #setDeltaT_ConstantAsString(String)
-	 * @generated
-	 */
-	boolean isSetDeltaT_ConstantAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Delta TY</b></em>' attribute.
+	 * Returns the value of the '<em><b>Delta TY</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Delta TY</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Delta TY</em>' attribute.
+	 * @return the value of the '<em>Delta TY</em>' reference.
 	 * @see #isSetDeltaT_Y()
 	 * @see #unsetDeltaT_Y()
-	 * @see #setDeltaT_Y(float)
+	 * @see #setDeltaT_Y(IfcThermodynamicTemperatureMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoadTemperature_DeltaT_Y()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getDeltaT_Y();
+	IfcThermodynamicTemperatureMeasure getDeltaT_Y();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadTemperature#getDeltaT_Y <em>Delta TY</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadTemperature#getDeltaT_Y <em>Delta TY</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Delta TY</em>' attribute.
+	 * @param value the new value of the '<em>Delta TY</em>' reference.
 	 * @see #isSetDeltaT_Y()
 	 * @see #unsetDeltaT_Y()
 	 * @see #getDeltaT_Y()
 	 * @generated
 	 */
-	void setDeltaT_Y(float value);
+	void setDeltaT_Y(IfcThermodynamicTemperatureMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadTemperature#getDeltaT_Y <em>Delta TY</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadTemperature#getDeltaT_Y <em>Delta TY</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetDeltaT_Y()
 	 * @see #getDeltaT_Y()
-	 * @see #setDeltaT_Y(float)
+	 * @see #setDeltaT_Y(IfcThermodynamicTemperatureMeasure)
 	 * @generated
 	 */
 	void unsetDeltaT_Y();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadTemperature#getDeltaT_Y <em>Delta TY</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadTemperature#getDeltaT_Y <em>Delta TY</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Delta TY</em>' attribute is set.
+	 * @return whether the value of the '<em>Delta TY</em>' reference is set.
 	 * @see #unsetDeltaT_Y()
 	 * @see #getDeltaT_Y()
-	 * @see #setDeltaT_Y(float)
+	 * @see #setDeltaT_Y(IfcThermodynamicTemperatureMeasure)
 	 * @generated
 	 */
 	boolean isSetDeltaT_Y();
 
 	/**
-	 * Returns the value of the '<em><b>Delta TYAs String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Delta TYAs String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Delta TYAs String</em>' attribute.
-	 * @see #isSetDeltaT_YAsString()
-	 * @see #unsetDeltaT_YAsString()
-	 * @see #setDeltaT_YAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoadTemperature_DeltaT_YAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getDeltaT_YAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadTemperature#getDeltaT_YAsString <em>Delta TYAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Delta TYAs String</em>' attribute.
-	 * @see #isSetDeltaT_YAsString()
-	 * @see #unsetDeltaT_YAsString()
-	 * @see #getDeltaT_YAsString()
-	 * @generated
-	 */
-	void setDeltaT_YAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadTemperature#getDeltaT_YAsString <em>Delta TYAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetDeltaT_YAsString()
-	 * @see #getDeltaT_YAsString()
-	 * @see #setDeltaT_YAsString(String)
-	 * @generated
-	 */
-	void unsetDeltaT_YAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadTemperature#getDeltaT_YAsString <em>Delta TYAs String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Delta TYAs String</em>' attribute is set.
-	 * @see #unsetDeltaT_YAsString()
-	 * @see #getDeltaT_YAsString()
-	 * @see #setDeltaT_YAsString(String)
-	 * @generated
-	 */
-	boolean isSetDeltaT_YAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Delta TZ</b></em>' attribute.
+	 * Returns the value of the '<em><b>Delta TZ</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Delta TZ</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Delta TZ</em>' attribute.
+	 * @return the value of the '<em>Delta TZ</em>' reference.
 	 * @see #isSetDeltaT_Z()
 	 * @see #unsetDeltaT_Z()
-	 * @see #setDeltaT_Z(float)
+	 * @see #setDeltaT_Z(IfcThermodynamicTemperatureMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoadTemperature_DeltaT_Z()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getDeltaT_Z();
+	IfcThermodynamicTemperatureMeasure getDeltaT_Z();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadTemperature#getDeltaT_Z <em>Delta TZ</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadTemperature#getDeltaT_Z <em>Delta TZ</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Delta TZ</em>' attribute.
+	 * @param value the new value of the '<em>Delta TZ</em>' reference.
 	 * @see #isSetDeltaT_Z()
 	 * @see #unsetDeltaT_Z()
 	 * @see #getDeltaT_Z()
 	 * @generated
 	 */
-	void setDeltaT_Z(float value);
+	void setDeltaT_Z(IfcThermodynamicTemperatureMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadTemperature#getDeltaT_Z <em>Delta TZ</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadTemperature#getDeltaT_Z <em>Delta TZ</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetDeltaT_Z()
 	 * @see #getDeltaT_Z()
-	 * @see #setDeltaT_Z(float)
+	 * @see #setDeltaT_Z(IfcThermodynamicTemperatureMeasure)
 	 * @generated
 	 */
 	void unsetDeltaT_Z();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadTemperature#getDeltaT_Z <em>Delta TZ</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadTemperature#getDeltaT_Z <em>Delta TZ</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Delta TZ</em>' attribute is set.
+	 * @return whether the value of the '<em>Delta TZ</em>' reference is set.
 	 * @see #unsetDeltaT_Z()
 	 * @see #getDeltaT_Z()
-	 * @see #setDeltaT_Z(float)
+	 * @see #setDeltaT_Z(IfcThermodynamicTemperatureMeasure)
 	 * @generated
 	 */
 	boolean isSetDeltaT_Z();
-
-	/**
-	 * Returns the value of the '<em><b>Delta TZAs String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Delta TZAs String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Delta TZAs String</em>' attribute.
-	 * @see #isSetDeltaT_ZAsString()
-	 * @see #unsetDeltaT_ZAsString()
-	 * @see #setDeltaT_ZAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoadTemperature_DeltaT_ZAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getDeltaT_ZAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadTemperature#getDeltaT_ZAsString <em>Delta TZAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Delta TZAs String</em>' attribute.
-	 * @see #isSetDeltaT_ZAsString()
-	 * @see #unsetDeltaT_ZAsString()
-	 * @see #getDeltaT_ZAsString()
-	 * @generated
-	 */
-	void setDeltaT_ZAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadTemperature#getDeltaT_ZAsString <em>Delta TZAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetDeltaT_ZAsString()
-	 * @see #getDeltaT_ZAsString()
-	 * @see #setDeltaT_ZAsString(String)
-	 * @generated
-	 */
-	void unsetDeltaT_ZAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadTemperature#getDeltaT_ZAsString <em>Delta TZAs String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Delta TZAs String</em>' attribute is set.
-	 * @see #unsetDeltaT_ZAsString()
-	 * @see #getDeltaT_ZAsString()
-	 * @see #setDeltaT_ZAsString(String)
-	 * @generated
-	 */
-	boolean isSetDeltaT_ZAsString();
 
 } // IfcStructuralLoadTemperature

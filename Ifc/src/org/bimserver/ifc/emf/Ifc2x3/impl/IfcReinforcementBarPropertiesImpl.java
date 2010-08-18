@@ -22,11 +22,18 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
-import org.bimserver.emf.IdEObjectImpl;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcAreaMeasure;
+import org.bimserver.ifc.emf.Ifc2x3.IfcCountMeasure;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLengthMeasure;
+import org.bimserver.ifc.emf.Ifc2x3.IfcPositiveLengthMeasure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcReinforcementBarProperties;
 import org.bimserver.ifc.emf.Ifc2x3.IfcReinforcingBarSurfaceEnum;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,21 +43,17 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcReinforcementBarPropertiesImpl#getTotalCrossSectionArea <em>Total Cross Section Area</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcReinforcementBarPropertiesImpl#getTotalCrossSectionAreaAsString <em>Total Cross Section Area As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcReinforcementBarPropertiesImpl#getSteelGrade <em>Steel Grade</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcReinforcementBarPropertiesImpl#getBarSurface <em>Bar Surface</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcReinforcementBarPropertiesImpl#getEffectiveDepth <em>Effective Depth</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcReinforcementBarPropertiesImpl#getEffectiveDepthAsString <em>Effective Depth As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcReinforcementBarPropertiesImpl#getNominalBarDiameter <em>Nominal Bar Diameter</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcReinforcementBarPropertiesImpl#getNominalBarDiameterAsString <em>Nominal Bar Diameter As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcReinforcementBarPropertiesImpl#getBarCount <em>Bar Count</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcReinforcementBarPropertiesImpl#getBarCountAsString <em>Bar Count As String</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class IfcReinforcementBarPropertiesImpl extends IdEObjectImpl implements IfcReinforcementBarProperties {
+public class IfcReinforcementBarPropertiesImpl extends EObjectImpl implements IfcReinforcementBarProperties {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -85,8 +88,8 @@ public class IfcReinforcementBarPropertiesImpl extends IdEObjectImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getTotalCrossSectionArea() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcReinforcementBarProperties_TotalCrossSectionArea(), true);
+	public IfcAreaMeasure getTotalCrossSectionArea() {
+		return (IfcAreaMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcReinforcementBarProperties_TotalCrossSectionArea(), true);
 	}
 
 	/**
@@ -94,7 +97,7 @@ public class IfcReinforcementBarPropertiesImpl extends IdEObjectImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTotalCrossSectionArea(float newTotalCrossSectionArea) {
+	public void setTotalCrossSectionArea(IfcAreaMeasure newTotalCrossSectionArea) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcReinforcementBarProperties_TotalCrossSectionArea(), newTotalCrossSectionArea);
 	}
 
@@ -103,8 +106,8 @@ public class IfcReinforcementBarPropertiesImpl extends IdEObjectImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getTotalCrossSectionAreaAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcReinforcementBarProperties_TotalCrossSectionAreaAsString(), true);
+	public IfcLabel getSteelGrade() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcReinforcementBarProperties_SteelGrade(), true);
 	}
 
 	/**
@@ -112,25 +115,7 @@ public class IfcReinforcementBarPropertiesImpl extends IdEObjectImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTotalCrossSectionAreaAsString(String newTotalCrossSectionAreaAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcReinforcementBarProperties_TotalCrossSectionAreaAsString(), newTotalCrossSectionAreaAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getSteelGrade() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcReinforcementBarProperties_SteelGrade(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSteelGrade(String newSteelGrade) {
+	public void setSteelGrade(IfcLabel newSteelGrade) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcReinforcementBarProperties_SteelGrade(), newSteelGrade);
 	}
 
@@ -157,8 +142,8 @@ public class IfcReinforcementBarPropertiesImpl extends IdEObjectImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getEffectiveDepth() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcReinforcementBarProperties_EffectiveDepth(), true);
+	public IfcLengthMeasure getEffectiveDepth() {
+		return (IfcLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcReinforcementBarProperties_EffectiveDepth(), true);
 	}
 
 	/**
@@ -166,7 +151,7 @@ public class IfcReinforcementBarPropertiesImpl extends IdEObjectImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setEffectiveDepth(float newEffectiveDepth) {
+	public void setEffectiveDepth(IfcLengthMeasure newEffectiveDepth) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcReinforcementBarProperties_EffectiveDepth(), newEffectiveDepth);
 	}
 
@@ -193,8 +178,8 @@ public class IfcReinforcementBarPropertiesImpl extends IdEObjectImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getEffectiveDepthAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcReinforcementBarProperties_EffectiveDepthAsString(), true);
+	public IfcPositiveLengthMeasure getNominalBarDiameter() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcReinforcementBarProperties_NominalBarDiameter(), true);
 	}
 
 	/**
@@ -202,43 +187,7 @@ public class IfcReinforcementBarPropertiesImpl extends IdEObjectImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setEffectiveDepthAsString(String newEffectiveDepthAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcReinforcementBarProperties_EffectiveDepthAsString(), newEffectiveDepthAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetEffectiveDepthAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcReinforcementBarProperties_EffectiveDepthAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetEffectiveDepthAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcReinforcementBarProperties_EffectiveDepthAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getNominalBarDiameter() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcReinforcementBarProperties_NominalBarDiameter(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setNominalBarDiameter(float newNominalBarDiameter) {
+	public void setNominalBarDiameter(IfcPositiveLengthMeasure newNominalBarDiameter) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcReinforcementBarProperties_NominalBarDiameter(), newNominalBarDiameter);
 	}
 
@@ -265,8 +214,8 @@ public class IfcReinforcementBarPropertiesImpl extends IdEObjectImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getNominalBarDiameterAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcReinforcementBarProperties_NominalBarDiameterAsString(), true);
+	public IfcCountMeasure getBarCount() {
+		return (IfcCountMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcReinforcementBarProperties_BarCount(), true);
 	}
 
 	/**
@@ -274,43 +223,7 @@ public class IfcReinforcementBarPropertiesImpl extends IdEObjectImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNominalBarDiameterAsString(String newNominalBarDiameterAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcReinforcementBarProperties_NominalBarDiameterAsString(), newNominalBarDiameterAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetNominalBarDiameterAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcReinforcementBarProperties_NominalBarDiameterAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetNominalBarDiameterAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcReinforcementBarProperties_NominalBarDiameterAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getBarCount() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcReinforcementBarProperties_BarCount(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setBarCount(float newBarCount) {
+	public void setBarCount(IfcCountMeasure newBarCount) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcReinforcementBarProperties_BarCount(), newBarCount);
 	}
 
@@ -330,42 +243,6 @@ public class IfcReinforcementBarPropertiesImpl extends IdEObjectImpl implements 
 	 */
 	public boolean isSetBarCount() {
 		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcReinforcementBarProperties_BarCount());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getBarCountAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcReinforcementBarProperties_BarCountAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setBarCountAsString(String newBarCountAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcReinforcementBarProperties_BarCountAsString(), newBarCountAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetBarCountAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcReinforcementBarProperties_BarCountAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetBarCountAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcReinforcementBarProperties_BarCountAsString());
 	}
 
 } //IfcReinforcementBarPropertiesImpl

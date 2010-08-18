@@ -22,8 +22,9 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3;
 
-import org.bimserver.emf.IdEObject;
 import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -41,10 +42,9 @@ import org.eclipse.emf.common.util.EList;
  *
  * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcDocumentInformationRelationship()
  * @model
- * @extends IdEObject
  * @generated
  */
-public interface IfcDocumentInformationRelationship extends IdEObject {
+public interface IfcDocumentInformationRelationship extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Relating Document</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentInformation#getIsPointer <em>Is Pointer</em>}'.
@@ -92,54 +92,54 @@ public interface IfcDocumentInformationRelationship extends IdEObject {
 	EList<IfcDocumentInformation> getRelatedDocuments();
 
 	/**
-	 * Returns the value of the '<em><b>Relationship Type</b></em>' attribute.
+	 * Returns the value of the '<em><b>Relationship Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Relationship Type</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Relationship Type</em>' attribute.
+	 * @return the value of the '<em>Relationship Type</em>' reference.
 	 * @see #isSetRelationshipType()
 	 * @see #unsetRelationshipType()
-	 * @see #setRelationshipType(String)
+	 * @see #setRelationshipType(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcDocumentInformationRelationship_RelationshipType()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getRelationshipType();
+	IfcLabel getRelationshipType();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentInformationRelationship#getRelationshipType <em>Relationship Type</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentInformationRelationship#getRelationshipType <em>Relationship Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Relationship Type</em>' attribute.
+	 * @param value the new value of the '<em>Relationship Type</em>' reference.
 	 * @see #isSetRelationshipType()
 	 * @see #unsetRelationshipType()
 	 * @see #getRelationshipType()
 	 * @generated
 	 */
-	void setRelationshipType(String value);
+	void setRelationshipType(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentInformationRelationship#getRelationshipType <em>Relationship Type</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentInformationRelationship#getRelationshipType <em>Relationship Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetRelationshipType()
 	 * @see #getRelationshipType()
-	 * @see #setRelationshipType(String)
+	 * @see #setRelationshipType(IfcLabel)
 	 * @generated
 	 */
 	void unsetRelationshipType();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentInformationRelationship#getRelationshipType <em>Relationship Type</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDocumentInformationRelationship#getRelationshipType <em>Relationship Type</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Relationship Type</em>' attribute is set.
+	 * @return whether the value of the '<em>Relationship Type</em>' reference is set.
 	 * @see #unsetRelationshipType()
 	 * @see #getRelationshipType()
-	 * @see #setRelationshipType(String)
+	 * @see #setRelationshipType(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetRelationshipType();

@@ -43,30 +43,30 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface IfcTextureCoordinateGenerator extends IfcTextureCoordinate {
 	/**
-	 * Returns the value of the '<em><b>Mode</b></em>' attribute.
+	 * Returns the value of the '<em><b>Mode</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Mode</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Mode</em>' attribute.
-	 * @see #setMode(String)
+	 * @return the value of the '<em>Mode</em>' reference.
+	 * @see #setMode(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTextureCoordinateGenerator_Mode()
 	 * @model
 	 * @generated
 	 */
-	String getMode();
+	IfcLabel getMode();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextureCoordinateGenerator#getMode <em>Mode</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextureCoordinateGenerator#getMode <em>Mode</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Mode</em>' attribute.
+	 * @param value the new value of the '<em>Mode</em>' reference.
 	 * @see #getMode()
 	 * @generated
 	 */
-	void setMode(String value);
+	void setMode(IfcLabel value);
 
 	/**
 	 * Returns the value of the '<em><b>Parameter</b></em>' reference list.

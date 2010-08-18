@@ -24,7 +24,10 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcDirection;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLengthMeasure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceOfLinearExtrusion;
+import org.bimserver.ifc.emf.Ifc2x3.IfcVector;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -36,7 +39,7 @@ import org.eclipse.emf.ecore.EClass;
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSurfaceOfLinearExtrusionImpl#getExtrudedDirection <em>Extruded Direction</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSurfaceOfLinearExtrusionImpl#getDepth <em>Depth</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSurfaceOfLinearExtrusionImpl#getDepthAsString <em>Depth As String</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSurfaceOfLinearExtrusionImpl#getExtrusionAxis <em>Extrusion Axis</em>}</li>
  * </ul>
  * </p>
  *
@@ -85,8 +88,8 @@ public class IfcSurfaceOfLinearExtrusionImpl extends IfcSweptSurfaceImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getDepth() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcSurfaceOfLinearExtrusion_Depth(), true);
+	public IfcLengthMeasure getDepth() {
+		return (IfcLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcSurfaceOfLinearExtrusion_Depth(), true);
 	}
 
 	/**
@@ -94,7 +97,7 @@ public class IfcSurfaceOfLinearExtrusionImpl extends IfcSweptSurfaceImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDepth(float newDepth) {
+	public void setDepth(IfcLengthMeasure newDepth) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcSurfaceOfLinearExtrusion_Depth(), newDepth);
 	}
 
@@ -103,8 +106,8 @@ public class IfcSurfaceOfLinearExtrusionImpl extends IfcSweptSurfaceImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getDepthAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcSurfaceOfLinearExtrusion_DepthAsString(), true);
+	public IfcVector getExtrusionAxis() {
+		return (IfcVector) eGet(Ifc2x3Package.eINSTANCE.getIfcSurfaceOfLinearExtrusion_ExtrusionAxis(), true);
 	}
 
 	/**
@@ -112,8 +115,8 @@ public class IfcSurfaceOfLinearExtrusionImpl extends IfcSweptSurfaceImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDepthAsString(String newDepthAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcSurfaceOfLinearExtrusion_DepthAsString(), newDepthAsString);
+	public void setExtrusionAxis(IfcVector newExtrusionAxis) {
+		eSet(Ifc2x3Package.eINSTANCE.getIfcSurfaceOfLinearExtrusion_ExtrusionAxis(), newExtrusionAxis);
 	}
 
 } //IfcSurfaceOfLinearExtrusionImpl

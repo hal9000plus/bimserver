@@ -269,8 +269,8 @@ public enum IfcEnvironmentalImpactCategoryEnum implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final IfcEnvironmentalImpactCategoryEnum[] VALUES_ARRAY = new IfcEnvironmentalImpactCategoryEnum[] { NULL, COMBINEDVALUE, NOTDEFINED, MANUFACTURE, INSTALLATION,
-			EXTRACTION, DISPOSAL, USERDEFINED, TRANSPORTATION, };
+	private static final IfcEnvironmentalImpactCategoryEnum[] VALUES_ARRAY = new IfcEnvironmentalImpactCategoryEnum[] { NULL, COMBINEDVALUE, NOTDEFINED,
+			MANUFACTURE, INSTALLATION, EXTRACTION, DISPOSAL, USERDEFINED, TRANSPORTATION, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Ifc Environmental Impact Category Enum</b></em>' enumerators.

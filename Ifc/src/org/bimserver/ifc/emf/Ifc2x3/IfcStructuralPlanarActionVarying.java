@@ -34,6 +34,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralPlanarActionVarying#getVaryingAppliedLoadLocation <em>Varying Applied Load Location</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralPlanarActionVarying#getSubsequentAppliedLoads <em>Subsequent Applied Loads</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralPlanarActionVarying#getVaryingAppliedLoads <em>Varying Applied Loads</em>}</li>
  * </ul>
  * </p>
  *
@@ -83,5 +84,22 @@ public interface IfcStructuralPlanarActionVarying extends IfcStructuralPlanarAct
 	 * @generated
 	 */
 	EList<IfcStructuralLoad> getSubsequentAppliedLoads();
+
+	/**
+	 * Returns the value of the '<em><b>Varying Applied Loads</b></em>' reference list.
+	 * The list contents are of type {@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoad}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Varying Applied Loads</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Varying Applied Loads</em>' reference list.
+	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralPlanarActionVarying_VaryingAppliedLoads()
+	 * @model transient="true" volatile="true" derived="true"
+	 *        annotation="http://www.iso.org/iso10303-11/EXPRESS code=' IfcAddToBeginOfList(SELF\\IfcStructuralActivity.AppliedLoad, SubsequentAppliedLoads);'"
+	 * @generated
+	 */
+	EList<IfcStructuralLoad> getVaryingAppliedLoads();
 
 } // IfcStructuralPlanarActionVarying

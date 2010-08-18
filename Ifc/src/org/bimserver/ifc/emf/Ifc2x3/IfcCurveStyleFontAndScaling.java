@@ -33,7 +33,6 @@ package org.bimserver.ifc.emf.Ifc2x3;
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcCurveStyleFontAndScaling#getName <em>Name</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcCurveStyleFontAndScaling#getCurveFont <em>Curve Font</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcCurveStyleFontAndScaling#getCurveFontScaling <em>Curve Font Scaling</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcCurveStyleFontAndScaling#getCurveFontScalingAsString <em>Curve Font Scaling As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -43,54 +42,54 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcCurveStyleFontAndScaling extends IfcCurveFontOrScaledCurveFontSelect {
 	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * Returns the value of the '<em><b>Name</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Name</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
+	 * @return the value of the '<em>Name</em>' reference.
 	 * @see #isSetName()
 	 * @see #unsetName()
-	 * @see #setName(String)
+	 * @see #setName(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcCurveStyleFontAndScaling_Name()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getName();
+	IfcLabel getName();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCurveStyleFontAndScaling#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCurveStyleFontAndScaling#getName <em>Name</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @param value the new value of the '<em>Name</em>' reference.
 	 * @see #isSetName()
 	 * @see #unsetName()
 	 * @see #getName()
 	 * @generated
 	 */
-	void setName(String value);
+	void setName(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCurveStyleFontAndScaling#getName <em>Name</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCurveStyleFontAndScaling#getName <em>Name</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetName()
 	 * @see #getName()
-	 * @see #setName(String)
+	 * @see #setName(IfcLabel)
 	 * @generated
 	 */
 	void unsetName();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCurveStyleFontAndScaling#getName <em>Name</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCurveStyleFontAndScaling#getName <em>Name</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Name</em>' attribute is set.
+	 * @return whether the value of the '<em>Name</em>' reference is set.
 	 * @see #unsetName()
 	 * @see #getName()
-	 * @see #setName(String)
+	 * @see #setName(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetName();
@@ -122,55 +121,29 @@ public interface IfcCurveStyleFontAndScaling extends IfcCurveFontOrScaledCurveFo
 	void setCurveFont(IfcCurveStyleFontSelect value);
 
 	/**
-	 * Returns the value of the '<em><b>Curve Font Scaling</b></em>' attribute.
+	 * Returns the value of the '<em><b>Curve Font Scaling</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Curve Font Scaling</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Curve Font Scaling</em>' attribute.
-	 * @see #setCurveFontScaling(float)
+	 * @return the value of the '<em>Curve Font Scaling</em>' reference.
+	 * @see #setCurveFontScaling(IfcPositiveRatioMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcCurveStyleFontAndScaling_CurveFontScaling()
 	 * @model
 	 * @generated
 	 */
-	float getCurveFontScaling();
+	IfcPositiveRatioMeasure getCurveFontScaling();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCurveStyleFontAndScaling#getCurveFontScaling <em>Curve Font Scaling</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCurveStyleFontAndScaling#getCurveFontScaling <em>Curve Font Scaling</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Curve Font Scaling</em>' attribute.
+	 * @param value the new value of the '<em>Curve Font Scaling</em>' reference.
 	 * @see #getCurveFontScaling()
 	 * @generated
 	 */
-	void setCurveFontScaling(float value);
-
-	/**
-	 * Returns the value of the '<em><b>Curve Font Scaling As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Curve Font Scaling As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Curve Font Scaling As String</em>' attribute.
-	 * @see #setCurveFontScalingAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcCurveStyleFontAndScaling_CurveFontScalingAsString()
-	 * @model
-	 * @generated
-	 */
-	String getCurveFontScalingAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCurveStyleFontAndScaling#getCurveFontScalingAsString <em>Curve Font Scaling As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Curve Font Scaling As String</em>' attribute.
-	 * @see #getCurveFontScalingAsString()
-	 * @generated
-	 */
-	void setCurveFontScalingAsString(String value);
+	void setCurveFontScaling(IfcPositiveRatioMeasure value);
 
 } // IfcCurveStyleFontAndScaling

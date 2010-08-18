@@ -23,7 +23,9 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcIdentifier;
 import org.bimserver.ifc.emf.Ifc2x3.IfcPermit;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -64,8 +66,8 @@ public class IfcPermitImpl extends IfcControlImpl implements IfcPermit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getPermitID() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcPermit_PermitID(), true);
+	public IfcIdentifier getPermitID() {
+		return (IfcIdentifier) eGet(Ifc2x3Package.eINSTANCE.getIfcPermit_PermitID(), true);
 	}
 
 	/**
@@ -73,7 +75,7 @@ public class IfcPermitImpl extends IfcControlImpl implements IfcPermit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPermitID(String newPermitID) {
+	public void setPermitID(IfcIdentifier newPermitID) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcPermit_PermitID(), newPermitID);
 	}
 

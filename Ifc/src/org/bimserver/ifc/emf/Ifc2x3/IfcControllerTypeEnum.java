@@ -269,8 +269,8 @@ public enum IfcControllerTypeEnum implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final IfcControllerTypeEnum[] VALUES_ARRAY = new IfcControllerTypeEnum[] { NULL, TWOPOSITION, PROPORTIONALINTEGRALDERIVATIVE, NOTDEFINED, FLOATING,
-			PROPORTIONAL, USERDEFINED, TIMEDTWOPOSITION, PROPORTIONALINTEGRAL, };
+	private static final IfcControllerTypeEnum[] VALUES_ARRAY = new IfcControllerTypeEnum[] { NULL, TWOPOSITION, PROPORTIONALINTEGRALDERIVATIVE, NOTDEFINED,
+			FLOATING, PROPORTIONAL, USERDEFINED, TIMEDTWOPOSITION, PROPORTIONALINTEGRAL, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Ifc Controller Type Enum</b></em>' enumerators.

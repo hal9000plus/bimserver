@@ -24,8 +24,11 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcComplexProperty;
+import org.bimserver.ifc.emf.Ifc2x3.IfcIdentifier;
 import org.bimserver.ifc.emf.Ifc2x3.IfcProperty;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -67,8 +70,8 @@ public class IfcComplexPropertyImpl extends IfcPropertyImpl implements IfcComple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getUsageName() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcComplexProperty_UsageName(), true);
+	public IfcIdentifier getUsageName() {
+		return (IfcIdentifier) eGet(Ifc2x3Package.eINSTANCE.getIfcComplexProperty_UsageName(), true);
 	}
 
 	/**
@@ -76,7 +79,7 @@ public class IfcComplexPropertyImpl extends IfcPropertyImpl implements IfcComple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUsageName(String newUsageName) {
+	public void setUsageName(IfcIdentifier newUsageName) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcComplexProperty_UsageName(), newUsageName);
 	}
 

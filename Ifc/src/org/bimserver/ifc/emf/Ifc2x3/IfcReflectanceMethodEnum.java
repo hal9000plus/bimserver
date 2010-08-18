@@ -319,8 +319,8 @@ public enum IfcReflectanceMethodEnum implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final IfcReflectanceMethodEnum[] VALUES_ARRAY = new IfcReflectanceMethodEnum[] { NULL, METAL, MATT, MIRROR, NOTDEFINED, FLAT, STRAUSS, BLINN, PLASTIC, GLASS,
-			PHONG, };
+	private static final IfcReflectanceMethodEnum[] VALUES_ARRAY = new IfcReflectanceMethodEnum[] { NULL, METAL, MATT, MIRROR, NOTDEFINED, FLAT, STRAUSS,
+			BLINN, PLASTIC, GLASS, PHONG, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Ifc Reflectance Method Enum</b></em>' enumerators.

@@ -69,13 +69,9 @@
 	<xsd:complexType name="RailingType">
 		<xsd:complexContent>
 			<xsd:extension base="VisualElementType">
-				<element>
-					<xsd:sequence>
-						<xsd:element name="PredefinedType"
-							type="RailingTypeEnum">
-						</xsd:element>
-					</xsd:sequence>
-				</element>
+				<xsd:sequence>
+					<xsd:element name="PredefinedType" type="RailingTypeEnum"></xsd:element>
+				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>

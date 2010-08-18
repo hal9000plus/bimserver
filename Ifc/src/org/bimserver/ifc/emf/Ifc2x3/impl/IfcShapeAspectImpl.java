@@ -22,14 +22,19 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
-import org.bimserver.emf.IdEObjectImpl;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
 import org.bimserver.ifc.emf.Ifc2x3.IfcLogical;
 import org.bimserver.ifc.emf.Ifc2x3.IfcProductDefinitionShape;
 import org.bimserver.ifc.emf.Ifc2x3.IfcShapeAspect;
 import org.bimserver.ifc.emf.Ifc2x3.IfcShapeModel;
+import org.bimserver.ifc.emf.Ifc2x3.IfcText;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -41,14 +46,14 @@ import org.eclipse.emf.ecore.EClass;
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcShapeAspectImpl#getShapeRepresentations <em>Shape Representations</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcShapeAspectImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcShapeAspectImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcShapeAspectImpl#isProductDefinitional <em>Product Definitional</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcShapeAspectImpl#getProductDefinitional <em>Product Definitional</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcShapeAspectImpl#getPartOfProductDefinitionShape <em>Part Of Product Definition Shape</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class IfcShapeAspectImpl extends IdEObjectImpl implements IfcShapeAspect {
+public class IfcShapeAspectImpl extends EObjectImpl implements IfcShapeAspect {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -93,8 +98,8 @@ public class IfcShapeAspectImpl extends IdEObjectImpl implements IfcShapeAspect 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcShapeAspect_Name(), true);
+	public IfcLabel getName() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcShapeAspect_Name(), true);
 	}
 
 	/**
@@ -102,7 +107,7 @@ public class IfcShapeAspectImpl extends IdEObjectImpl implements IfcShapeAspect 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(String newName) {
+	public void setName(IfcLabel newName) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcShapeAspect_Name(), newName);
 	}
 
@@ -129,8 +134,8 @@ public class IfcShapeAspectImpl extends IdEObjectImpl implements IfcShapeAspect 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getDescription() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcShapeAspect_Description(), true);
+	public IfcText getDescription() {
+		return (IfcText) eGet(Ifc2x3Package.eINSTANCE.getIfcShapeAspect_Description(), true);
 	}
 
 	/**
@@ -138,7 +143,7 @@ public class IfcShapeAspectImpl extends IdEObjectImpl implements IfcShapeAspect 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDescription(String newDescription) {
+	public void setDescription(IfcText newDescription) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcShapeAspect_Description(), newDescription);
 	}
 
@@ -165,8 +170,8 @@ public class IfcShapeAspectImpl extends IdEObjectImpl implements IfcShapeAspect 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isProductDefinitional() {
-		return (Boolean) eGet(Ifc2x3Package.eINSTANCE.getIfcShapeAspect_ProductDefinitional(), true);
+	public IfcLogical getProductDefinitional() {
+		return (IfcLogical) eGet(Ifc2x3Package.eINSTANCE.getIfcShapeAspect_ProductDefinitional(), true);
 	}
 
 	/**
@@ -174,7 +179,7 @@ public class IfcShapeAspectImpl extends IdEObjectImpl implements IfcShapeAspect 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setProductDefinitional(boolean newProductDefinitional) {
+	public void setProductDefinitional(IfcLogical newProductDefinitional) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcShapeAspect_ProductDefinitional(), newProductDefinitional);
 	}
 

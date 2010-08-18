@@ -71,54 +71,54 @@ public interface IfcMetric extends IfcConstraint {
 	void setBenchmark(IfcBenchmarkEnum value);
 
 	/**
-	 * Returns the value of the '<em><b>Value Source</b></em>' attribute.
+	 * Returns the value of the '<em><b>Value Source</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Value Source</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Value Source</em>' attribute.
+	 * @return the value of the '<em>Value Source</em>' reference.
 	 * @see #isSetValueSource()
 	 * @see #unsetValueSource()
-	 * @see #setValueSource(String)
+	 * @see #setValueSource(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcMetric_ValueSource()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getValueSource();
+	IfcLabel getValueSource();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMetric#getValueSource <em>Value Source</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMetric#getValueSource <em>Value Source</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Value Source</em>' attribute.
+	 * @param value the new value of the '<em>Value Source</em>' reference.
 	 * @see #isSetValueSource()
 	 * @see #unsetValueSource()
 	 * @see #getValueSource()
 	 * @generated
 	 */
-	void setValueSource(String value);
+	void setValueSource(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMetric#getValueSource <em>Value Source</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMetric#getValueSource <em>Value Source</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetValueSource()
 	 * @see #getValueSource()
-	 * @see #setValueSource(String)
+	 * @see #setValueSource(IfcLabel)
 	 * @generated
 	 */
 	void unsetValueSource();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMetric#getValueSource <em>Value Source</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMetric#getValueSource <em>Value Source</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Value Source</em>' attribute is set.
+	 * @return whether the value of the '<em>Value Source</em>' reference is set.
 	 * @see #unsetValueSource()
 	 * @see #getValueSource()
-	 * @see #setValueSource(String)
+	 * @see #setValueSource(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetValueSource();

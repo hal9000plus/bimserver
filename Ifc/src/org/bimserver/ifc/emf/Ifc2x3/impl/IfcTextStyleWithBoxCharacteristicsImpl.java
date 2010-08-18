@@ -22,11 +22,15 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
-import org.bimserver.emf.IdEObjectImpl;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcPlaneAngleMeasure;
+import org.bimserver.ifc.emf.Ifc2x3.IfcPositiveLengthMeasure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcSizeSelect;
 import org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleWithBoxCharacteristics;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,20 +40,16 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcTextStyleWithBoxCharacteristicsImpl#getBoxHeight <em>Box Height</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcTextStyleWithBoxCharacteristicsImpl#getBoxHeightAsString <em>Box Height As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcTextStyleWithBoxCharacteristicsImpl#getBoxWidth <em>Box Width</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcTextStyleWithBoxCharacteristicsImpl#getBoxWidthAsString <em>Box Width As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcTextStyleWithBoxCharacteristicsImpl#getBoxSlantAngle <em>Box Slant Angle</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcTextStyleWithBoxCharacteristicsImpl#getBoxSlantAngleAsString <em>Box Slant Angle As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcTextStyleWithBoxCharacteristicsImpl#getBoxRotateAngle <em>Box Rotate Angle</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcTextStyleWithBoxCharacteristicsImpl#getBoxRotateAngleAsString <em>Box Rotate Angle As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcTextStyleWithBoxCharacteristicsImpl#getCharacterSpacing <em>Character Spacing</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class IfcTextStyleWithBoxCharacteristicsImpl extends IdEObjectImpl implements IfcTextStyleWithBoxCharacteristics {
+public class IfcTextStyleWithBoxCharacteristicsImpl extends EObjectImpl implements IfcTextStyleWithBoxCharacteristics {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -84,8 +84,8 @@ public class IfcTextStyleWithBoxCharacteristicsImpl extends IdEObjectImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getBoxHeight() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcTextStyleWithBoxCharacteristics_BoxHeight(), true);
+	public IfcPositiveLengthMeasure getBoxHeight() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcTextStyleWithBoxCharacteristics_BoxHeight(), true);
 	}
 
 	/**
@@ -93,7 +93,7 @@ public class IfcTextStyleWithBoxCharacteristicsImpl extends IdEObjectImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setBoxHeight(float newBoxHeight) {
+	public void setBoxHeight(IfcPositiveLengthMeasure newBoxHeight) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcTextStyleWithBoxCharacteristics_BoxHeight(), newBoxHeight);
 	}
 
@@ -120,8 +120,8 @@ public class IfcTextStyleWithBoxCharacteristicsImpl extends IdEObjectImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getBoxHeightAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcTextStyleWithBoxCharacteristics_BoxHeightAsString(), true);
+	public IfcPositiveLengthMeasure getBoxWidth() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcTextStyleWithBoxCharacteristics_BoxWidth(), true);
 	}
 
 	/**
@@ -129,43 +129,7 @@ public class IfcTextStyleWithBoxCharacteristicsImpl extends IdEObjectImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setBoxHeightAsString(String newBoxHeightAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcTextStyleWithBoxCharacteristics_BoxHeightAsString(), newBoxHeightAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetBoxHeightAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcTextStyleWithBoxCharacteristics_BoxHeightAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetBoxHeightAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcTextStyleWithBoxCharacteristics_BoxHeightAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getBoxWidth() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcTextStyleWithBoxCharacteristics_BoxWidth(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setBoxWidth(float newBoxWidth) {
+	public void setBoxWidth(IfcPositiveLengthMeasure newBoxWidth) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcTextStyleWithBoxCharacteristics_BoxWidth(), newBoxWidth);
 	}
 
@@ -192,8 +156,8 @@ public class IfcTextStyleWithBoxCharacteristicsImpl extends IdEObjectImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getBoxWidthAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcTextStyleWithBoxCharacteristics_BoxWidthAsString(), true);
+	public IfcPlaneAngleMeasure getBoxSlantAngle() {
+		return (IfcPlaneAngleMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcTextStyleWithBoxCharacteristics_BoxSlantAngle(), true);
 	}
 
 	/**
@@ -201,43 +165,7 @@ public class IfcTextStyleWithBoxCharacteristicsImpl extends IdEObjectImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setBoxWidthAsString(String newBoxWidthAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcTextStyleWithBoxCharacteristics_BoxWidthAsString(), newBoxWidthAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetBoxWidthAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcTextStyleWithBoxCharacteristics_BoxWidthAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetBoxWidthAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcTextStyleWithBoxCharacteristics_BoxWidthAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getBoxSlantAngle() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcTextStyleWithBoxCharacteristics_BoxSlantAngle(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setBoxSlantAngle(float newBoxSlantAngle) {
+	public void setBoxSlantAngle(IfcPlaneAngleMeasure newBoxSlantAngle) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcTextStyleWithBoxCharacteristics_BoxSlantAngle(), newBoxSlantAngle);
 	}
 
@@ -264,8 +192,8 @@ public class IfcTextStyleWithBoxCharacteristicsImpl extends IdEObjectImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getBoxSlantAngleAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcTextStyleWithBoxCharacteristics_BoxSlantAngleAsString(), true);
+	public IfcPlaneAngleMeasure getBoxRotateAngle() {
+		return (IfcPlaneAngleMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcTextStyleWithBoxCharacteristics_BoxRotateAngle(), true);
 	}
 
 	/**
@@ -273,43 +201,7 @@ public class IfcTextStyleWithBoxCharacteristicsImpl extends IdEObjectImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setBoxSlantAngleAsString(String newBoxSlantAngleAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcTextStyleWithBoxCharacteristics_BoxSlantAngleAsString(), newBoxSlantAngleAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetBoxSlantAngleAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcTextStyleWithBoxCharacteristics_BoxSlantAngleAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetBoxSlantAngleAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcTextStyleWithBoxCharacteristics_BoxSlantAngleAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getBoxRotateAngle() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcTextStyleWithBoxCharacteristics_BoxRotateAngle(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setBoxRotateAngle(float newBoxRotateAngle) {
+	public void setBoxRotateAngle(IfcPlaneAngleMeasure newBoxRotateAngle) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcTextStyleWithBoxCharacteristics_BoxRotateAngle(), newBoxRotateAngle);
 	}
 
@@ -329,42 +221,6 @@ public class IfcTextStyleWithBoxCharacteristicsImpl extends IdEObjectImpl implem
 	 */
 	public boolean isSetBoxRotateAngle() {
 		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcTextStyleWithBoxCharacteristics_BoxRotateAngle());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getBoxRotateAngleAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcTextStyleWithBoxCharacteristics_BoxRotateAngleAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setBoxRotateAngleAsString(String newBoxRotateAngleAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcTextStyleWithBoxCharacteristics_BoxRotateAngleAsString(), newBoxRotateAngleAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetBoxRotateAngleAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcTextStyleWithBoxCharacteristics_BoxRotateAngleAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetBoxRotateAngleAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcTextStyleWithBoxCharacteristics_BoxRotateAngleAsString());
 	}
 
 	/**

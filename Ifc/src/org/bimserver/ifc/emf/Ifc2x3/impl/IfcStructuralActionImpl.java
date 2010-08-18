@@ -26,7 +26,7 @@ import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcLogical;
 import org.bimserver.ifc.emf.Ifc2x3.IfcStructuralAction;
 import org.bimserver.ifc.emf.Ifc2x3.IfcStructuralReaction;
-import org.bimserver.ifc.emf.Ifc2x3.Tristate;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -68,8 +68,8 @@ public class IfcStructuralActionImpl extends IfcStructuralActivityImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Tristate getDestabilizingLoad() {
-		return (Tristate) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralAction_DestabilizingLoad(), true);
+	public IfcLogical getDestabilizingLoad() {
+		return (IfcLogical) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralAction_DestabilizingLoad(), true);
 	}
 
 	/**
@@ -77,7 +77,7 @@ public class IfcStructuralActionImpl extends IfcStructuralActivityImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDestabilizingLoad(Tristate newDestabilizingLoad) {
+	public void setDestabilizingLoad(IfcLogical newDestabilizingLoad) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcStructuralAction_DestabilizingLoad(), newDestabilizingLoad);
 	}
 

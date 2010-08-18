@@ -31,9 +31,7 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRightCircularCone#getHeight <em>Height</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRightCircularCone#getHeightAsString <em>Height As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRightCircularCone#getBottomRadius <em>Bottom Radius</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRightCircularCone#getBottomRadiusAsString <em>Bottom Radius As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -43,107 +41,55 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcRightCircularCone extends IfcCsgPrimitive3D {
 	/**
-	 * Returns the value of the '<em><b>Height</b></em>' attribute.
+	 * Returns the value of the '<em><b>Height</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Height</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Height</em>' attribute.
-	 * @see #setHeight(float)
+	 * @return the value of the '<em>Height</em>' reference.
+	 * @see #setHeight(IfcPositiveLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRightCircularCone_Height()
 	 * @model
 	 * @generated
 	 */
-	float getHeight();
+	IfcPositiveLengthMeasure getHeight();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRightCircularCone#getHeight <em>Height</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRightCircularCone#getHeight <em>Height</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Height</em>' attribute.
+	 * @param value the new value of the '<em>Height</em>' reference.
 	 * @see #getHeight()
 	 * @generated
 	 */
-	void setHeight(float value);
+	void setHeight(IfcPositiveLengthMeasure value);
 
 	/**
-	 * Returns the value of the '<em><b>Height As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Height As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Height As String</em>' attribute.
-	 * @see #setHeightAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRightCircularCone_HeightAsString()
-	 * @model
-	 * @generated
-	 */
-	String getHeightAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRightCircularCone#getHeightAsString <em>Height As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Height As String</em>' attribute.
-	 * @see #getHeightAsString()
-	 * @generated
-	 */
-	void setHeightAsString(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Bottom Radius</b></em>' attribute.
+	 * Returns the value of the '<em><b>Bottom Radius</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Bottom Radius</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Bottom Radius</em>' attribute.
-	 * @see #setBottomRadius(float)
+	 * @return the value of the '<em>Bottom Radius</em>' reference.
+	 * @see #setBottomRadius(IfcPositiveLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRightCircularCone_BottomRadius()
 	 * @model
 	 * @generated
 	 */
-	float getBottomRadius();
+	IfcPositiveLengthMeasure getBottomRadius();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRightCircularCone#getBottomRadius <em>Bottom Radius</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRightCircularCone#getBottomRadius <em>Bottom Radius</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Bottom Radius</em>' attribute.
+	 * @param value the new value of the '<em>Bottom Radius</em>' reference.
 	 * @see #getBottomRadius()
 	 * @generated
 	 */
-	void setBottomRadius(float value);
-
-	/**
-	 * Returns the value of the '<em><b>Bottom Radius As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Bottom Radius As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Bottom Radius As String</em>' attribute.
-	 * @see #setBottomRadiusAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRightCircularCone_BottomRadiusAsString()
-	 * @model
-	 * @generated
-	 */
-	String getBottomRadiusAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRightCircularCone#getBottomRadiusAsString <em>Bottom Radius As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Bottom Radius As String</em>' attribute.
-	 * @see #getBottomRadiusAsString()
-	 * @generated
-	 */
-	void setBottomRadiusAsString(String value);
+	void setBottomRadius(IfcPositiveLengthMeasure value);
 
 } // IfcRightCircularCone

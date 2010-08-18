@@ -24,6 +24,8 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcBoundaryNodeConditionWarping;
+import org.bimserver.ifc.emf.Ifc2x3.IfcWarpingMomentMeasure;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -34,7 +36,6 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcBoundaryNodeConditionWarpingImpl#getWarpingStiffness <em>Warping Stiffness</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcBoundaryNodeConditionWarpingImpl#getWarpingStiffnessAsString <em>Warping Stiffness As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -65,8 +66,8 @@ public class IfcBoundaryNodeConditionWarpingImpl extends IfcBoundaryNodeConditio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getWarpingStiffness() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcBoundaryNodeConditionWarping_WarpingStiffness(), true);
+	public IfcWarpingMomentMeasure getWarpingStiffness() {
+		return (IfcWarpingMomentMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcBoundaryNodeConditionWarping_WarpingStiffness(), true);
 	}
 
 	/**
@@ -74,7 +75,7 @@ public class IfcBoundaryNodeConditionWarpingImpl extends IfcBoundaryNodeConditio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setWarpingStiffness(float newWarpingStiffness) {
+	public void setWarpingStiffness(IfcWarpingMomentMeasure newWarpingStiffness) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcBoundaryNodeConditionWarping_WarpingStiffness(), newWarpingStiffness);
 	}
 
@@ -94,42 +95,6 @@ public class IfcBoundaryNodeConditionWarpingImpl extends IfcBoundaryNodeConditio
 	 */
 	public boolean isSetWarpingStiffness() {
 		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcBoundaryNodeConditionWarping_WarpingStiffness());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getWarpingStiffnessAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcBoundaryNodeConditionWarping_WarpingStiffnessAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setWarpingStiffnessAsString(String newWarpingStiffnessAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcBoundaryNodeConditionWarping_WarpingStiffnessAsString(), newWarpingStiffnessAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetWarpingStiffnessAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcBoundaryNodeConditionWarping_WarpingStiffnessAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetWarpingStiffnessAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcBoundaryNodeConditionWarping_WarpingStiffnessAsString());
 	}
 
 } //IfcBoundaryNodeConditionWarpingImpl

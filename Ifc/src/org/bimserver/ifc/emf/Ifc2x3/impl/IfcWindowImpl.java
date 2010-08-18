@@ -23,7 +23,9 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcPositiveLengthMeasure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcWindow;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -34,9 +36,7 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcWindowImpl#getOverallHeight <em>Overall Height</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcWindowImpl#getOverallHeightAsString <em>Overall Height As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcWindowImpl#getOverallWidth <em>Overall Width</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcWindowImpl#getOverallWidthAsString <em>Overall Width As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -67,8 +67,8 @@ public class IfcWindowImpl extends IfcBuildingElementImpl implements IfcWindow {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getOverallHeight() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcWindow_OverallHeight(), true);
+	public IfcPositiveLengthMeasure getOverallHeight() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcWindow_OverallHeight(), true);
 	}
 
 	/**
@@ -76,7 +76,7 @@ public class IfcWindowImpl extends IfcBuildingElementImpl implements IfcWindow {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setOverallHeight(float newOverallHeight) {
+	public void setOverallHeight(IfcPositiveLengthMeasure newOverallHeight) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcWindow_OverallHeight(), newOverallHeight);
 	}
 
@@ -103,8 +103,8 @@ public class IfcWindowImpl extends IfcBuildingElementImpl implements IfcWindow {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getOverallHeightAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcWindow_OverallHeightAsString(), true);
+	public IfcPositiveLengthMeasure getOverallWidth() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcWindow_OverallWidth(), true);
 	}
 
 	/**
@@ -112,43 +112,7 @@ public class IfcWindowImpl extends IfcBuildingElementImpl implements IfcWindow {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setOverallHeightAsString(String newOverallHeightAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcWindow_OverallHeightAsString(), newOverallHeightAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetOverallHeightAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcWindow_OverallHeightAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetOverallHeightAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcWindow_OverallHeightAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getOverallWidth() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcWindow_OverallWidth(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setOverallWidth(float newOverallWidth) {
+	public void setOverallWidth(IfcPositiveLengthMeasure newOverallWidth) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcWindow_OverallWidth(), newOverallWidth);
 	}
 
@@ -168,42 +132,6 @@ public class IfcWindowImpl extends IfcBuildingElementImpl implements IfcWindow {
 	 */
 	public boolean isSetOverallWidth() {
 		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcWindow_OverallWidth());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getOverallWidthAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcWindow_OverallWidthAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setOverallWidthAsString(String newOverallWidthAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcWindow_OverallWidthAsString(), newOverallWidthAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetOverallWidthAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcWindow_OverallWidthAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetOverallWidthAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcWindow_OverallWidthAsString());
 	}
 
 } //IfcWindowImpl

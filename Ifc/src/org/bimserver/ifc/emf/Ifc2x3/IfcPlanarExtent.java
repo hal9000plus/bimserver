@@ -31,9 +31,7 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcPlanarExtent#getSizeInX <em>Size In X</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcPlanarExtent#getSizeInXAsString <em>Size In XAs String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcPlanarExtent#getSizeInY <em>Size In Y</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcPlanarExtent#getSizeInYAsString <em>Size In YAs String</em>}</li>
  * </ul>
  * </p>
  *
@@ -43,107 +41,55 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcPlanarExtent extends IfcGeometricRepresentationItem {
 	/**
-	 * Returns the value of the '<em><b>Size In X</b></em>' attribute.
+	 * Returns the value of the '<em><b>Size In X</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Size In X</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Size In X</em>' attribute.
-	 * @see #setSizeInX(float)
+	 * @return the value of the '<em>Size In X</em>' reference.
+	 * @see #setSizeInX(IfcLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcPlanarExtent_SizeInX()
 	 * @model
 	 * @generated
 	 */
-	float getSizeInX();
+	IfcLengthMeasure getSizeInX();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPlanarExtent#getSizeInX <em>Size In X</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPlanarExtent#getSizeInX <em>Size In X</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Size In X</em>' attribute.
+	 * @param value the new value of the '<em>Size In X</em>' reference.
 	 * @see #getSizeInX()
 	 * @generated
 	 */
-	void setSizeInX(float value);
+	void setSizeInX(IfcLengthMeasure value);
 
 	/**
-	 * Returns the value of the '<em><b>Size In XAs String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Size In XAs String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Size In XAs String</em>' attribute.
-	 * @see #setSizeInXAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcPlanarExtent_SizeInXAsString()
-	 * @model
-	 * @generated
-	 */
-	String getSizeInXAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPlanarExtent#getSizeInXAsString <em>Size In XAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Size In XAs String</em>' attribute.
-	 * @see #getSizeInXAsString()
-	 * @generated
-	 */
-	void setSizeInXAsString(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Size In Y</b></em>' attribute.
+	 * Returns the value of the '<em><b>Size In Y</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Size In Y</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Size In Y</em>' attribute.
-	 * @see #setSizeInY(float)
+	 * @return the value of the '<em>Size In Y</em>' reference.
+	 * @see #setSizeInY(IfcLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcPlanarExtent_SizeInY()
 	 * @model
 	 * @generated
 	 */
-	float getSizeInY();
+	IfcLengthMeasure getSizeInY();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPlanarExtent#getSizeInY <em>Size In Y</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPlanarExtent#getSizeInY <em>Size In Y</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Size In Y</em>' attribute.
+	 * @param value the new value of the '<em>Size In Y</em>' reference.
 	 * @see #getSizeInY()
 	 * @generated
 	 */
-	void setSizeInY(float value);
-
-	/**
-	 * Returns the value of the '<em><b>Size In YAs String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Size In YAs String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Size In YAs String</em>' attribute.
-	 * @see #setSizeInYAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcPlanarExtent_SizeInYAsString()
-	 * @model
-	 * @generated
-	 */
-	String getSizeInYAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPlanarExtent#getSizeInYAsString <em>Size In YAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Size In YAs String</em>' attribute.
-	 * @see #getSizeInYAsString()
-	 * @generated
-	 */
-	void setSizeInYAsString(String value);
+	void setSizeInY(IfcLengthMeasure value);
 
 } // IfcPlanarExtent

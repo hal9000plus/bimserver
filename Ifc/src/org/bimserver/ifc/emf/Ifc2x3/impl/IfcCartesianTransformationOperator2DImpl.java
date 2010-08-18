@@ -24,6 +24,10 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcCartesianTransformationOperator2D;
+import org.bimserver.ifc.emf.Ifc2x3.IfcDirection;
+
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -31,6 +35,10 @@ import org.eclipse.emf.ecore.EClass;
  * An implementation of the model object '<em><b>Ifc Cartesian Transformation Operator2 D</b></em>'.
  * <!-- end-user-doc -->
  * <p>
+ * The following features are implemented:
+ * <ul>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcCartesianTransformationOperator2DImpl#getU <em>U</em>}</li>
+ * </ul>
  * </p>
  *
  * @generated
@@ -53,6 +61,16 @@ public class IfcCartesianTransformationOperator2DImpl extends IfcCartesianTransf
 	@Override
 	protected EClass eStaticClass() {
 		return Ifc2x3Package.eINSTANCE.getIfcCartesianTransformationOperator2D();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<IfcDirection> getU() {
+		return (EList<IfcDirection>) eGet(Ifc2x3Package.eINSTANCE.getIfcCartesianTransformationOperator2D_U(), true);
 	}
 
 } //IfcCartesianTransformationOperator2DImpl

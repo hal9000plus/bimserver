@@ -1,6 +1,7 @@
 package org.bimserver.tests;
 
 import java.io.FileNotFoundException;
+import java.net.URL;
 
 import nl.tue.buildingsmart.emf.DerivedReader;
 import nl.tue.buildingsmart.express.dictionary.SchemaDefinition;
@@ -11,7 +12,6 @@ import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.file.reader.FastIfcFileReader;
 import org.bimserver.ifc.file.reader.IfcFileReader;
 import org.bimserver.ifc.file.reader.IncorrectIfcFileException;
-import org.bimserver.shared.LocalDevelopmentResourceFetcher;
 import org.bimserver.shared.ResourceFetcher;
 import org.bimserver.utils.CollectionUtils;
 
@@ -30,7 +30,12 @@ public class O3dTest {
 			e1.printStackTrace();
 		}
 
-		ResourceFetcher resourceFetcher = new LocalDevelopmentResourceFetcher();
+		ResourceFetcher resourceFetcher = new ResourceFetcher() {
+			@Override
+			public URL getResource(String name) {
+				return getClass().getResource(name);
+			}
+		};
 		new FileFieldIgnoreMap(CollectionUtils.singleSet(Ifc2x3Package.eINSTANCE), resourceFetcher);
 		
 		TestFile testFile = TestFile.MERGE_TEST_SOURCE_FILE;

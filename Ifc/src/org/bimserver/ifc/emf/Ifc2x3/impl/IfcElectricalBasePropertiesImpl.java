@@ -24,8 +24,13 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcElectricCurrentEnum;
+import org.bimserver.ifc.emf.Ifc2x3.IfcElectricCurrentMeasure;
+import org.bimserver.ifc.emf.Ifc2x3.IfcElectricVoltageMeasure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcElectricalBaseProperties;
+import org.bimserver.ifc.emf.Ifc2x3.IfcFrequencyMeasure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcInteger;
+import org.bimserver.ifc.emf.Ifc2x3.IfcPowerMeasure;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -37,17 +42,11 @@ import org.eclipse.emf.ecore.EClass;
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcElectricalBasePropertiesImpl#getElectricCurrentType <em>Electric Current Type</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcElectricalBasePropertiesImpl#getInputVoltage <em>Input Voltage</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcElectricalBasePropertiesImpl#getInputVoltageAsString <em>Input Voltage As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcElectricalBasePropertiesImpl#getInputFrequency <em>Input Frequency</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcElectricalBasePropertiesImpl#getInputFrequencyAsString <em>Input Frequency As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcElectricalBasePropertiesImpl#getFullLoadCurrent <em>Full Load Current</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcElectricalBasePropertiesImpl#getFullLoadCurrentAsString <em>Full Load Current As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcElectricalBasePropertiesImpl#getMinimumCircuitCurrent <em>Minimum Circuit Current</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcElectricalBasePropertiesImpl#getMinimumCircuitCurrentAsString <em>Minimum Circuit Current As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcElectricalBasePropertiesImpl#getMaximumPowerInput <em>Maximum Power Input</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcElectricalBasePropertiesImpl#getMaximumPowerInputAsString <em>Maximum Power Input As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcElectricalBasePropertiesImpl#getRatedPowerInput <em>Rated Power Input</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcElectricalBasePropertiesImpl#getRatedPowerInputAsString <em>Rated Power Input As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcElectricalBasePropertiesImpl#getInputPhase <em>Input Phase</em>}</li>
  * </ul>
  * </p>
@@ -97,8 +96,8 @@ public class IfcElectricalBasePropertiesImpl extends IfcEnergyPropertiesImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getInputVoltage() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcElectricalBaseProperties_InputVoltage(), true);
+	public IfcElectricVoltageMeasure getInputVoltage() {
+		return (IfcElectricVoltageMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcElectricalBaseProperties_InputVoltage(), true);
 	}
 
 	/**
@@ -106,7 +105,7 @@ public class IfcElectricalBasePropertiesImpl extends IfcEnergyPropertiesImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setInputVoltage(float newInputVoltage) {
+	public void setInputVoltage(IfcElectricVoltageMeasure newInputVoltage) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcElectricalBaseProperties_InputVoltage(), newInputVoltage);
 	}
 
@@ -115,8 +114,8 @@ public class IfcElectricalBasePropertiesImpl extends IfcEnergyPropertiesImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getInputVoltageAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcElectricalBaseProperties_InputVoltageAsString(), true);
+	public IfcFrequencyMeasure getInputFrequency() {
+		return (IfcFrequencyMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcElectricalBaseProperties_InputFrequency(), true);
 	}
 
 	/**
@@ -124,25 +123,7 @@ public class IfcElectricalBasePropertiesImpl extends IfcEnergyPropertiesImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setInputVoltageAsString(String newInputVoltageAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcElectricalBaseProperties_InputVoltageAsString(), newInputVoltageAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getInputFrequency() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcElectricalBaseProperties_InputFrequency(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setInputFrequency(float newInputFrequency) {
+	public void setInputFrequency(IfcFrequencyMeasure newInputFrequency) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcElectricalBaseProperties_InputFrequency(), newInputFrequency);
 	}
 
@@ -151,8 +132,8 @@ public class IfcElectricalBasePropertiesImpl extends IfcEnergyPropertiesImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getInputFrequencyAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcElectricalBaseProperties_InputFrequencyAsString(), true);
+	public IfcElectricCurrentMeasure getFullLoadCurrent() {
+		return (IfcElectricCurrentMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcElectricalBaseProperties_FullLoadCurrent(), true);
 	}
 
 	/**
@@ -160,25 +141,7 @@ public class IfcElectricalBasePropertiesImpl extends IfcEnergyPropertiesImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setInputFrequencyAsString(String newInputFrequencyAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcElectricalBaseProperties_InputFrequencyAsString(), newInputFrequencyAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getFullLoadCurrent() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcElectricalBaseProperties_FullLoadCurrent(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setFullLoadCurrent(float newFullLoadCurrent) {
+	public void setFullLoadCurrent(IfcElectricCurrentMeasure newFullLoadCurrent) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcElectricalBaseProperties_FullLoadCurrent(), newFullLoadCurrent);
 	}
 
@@ -205,8 +168,8 @@ public class IfcElectricalBasePropertiesImpl extends IfcEnergyPropertiesImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getFullLoadCurrentAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcElectricalBaseProperties_FullLoadCurrentAsString(), true);
+	public IfcElectricCurrentMeasure getMinimumCircuitCurrent() {
+		return (IfcElectricCurrentMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcElectricalBaseProperties_MinimumCircuitCurrent(), true);
 	}
 
 	/**
@@ -214,43 +177,7 @@ public class IfcElectricalBasePropertiesImpl extends IfcEnergyPropertiesImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFullLoadCurrentAsString(String newFullLoadCurrentAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcElectricalBaseProperties_FullLoadCurrentAsString(), newFullLoadCurrentAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetFullLoadCurrentAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcElectricalBaseProperties_FullLoadCurrentAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetFullLoadCurrentAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcElectricalBaseProperties_FullLoadCurrentAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getMinimumCircuitCurrent() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcElectricalBaseProperties_MinimumCircuitCurrent(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setMinimumCircuitCurrent(float newMinimumCircuitCurrent) {
+	public void setMinimumCircuitCurrent(IfcElectricCurrentMeasure newMinimumCircuitCurrent) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcElectricalBaseProperties_MinimumCircuitCurrent(), newMinimumCircuitCurrent);
 	}
 
@@ -277,8 +204,8 @@ public class IfcElectricalBasePropertiesImpl extends IfcEnergyPropertiesImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getMinimumCircuitCurrentAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcElectricalBaseProperties_MinimumCircuitCurrentAsString(), true);
+	public IfcPowerMeasure getMaximumPowerInput() {
+		return (IfcPowerMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcElectricalBaseProperties_MaximumPowerInput(), true);
 	}
 
 	/**
@@ -286,43 +213,7 @@ public class IfcElectricalBasePropertiesImpl extends IfcEnergyPropertiesImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMinimumCircuitCurrentAsString(String newMinimumCircuitCurrentAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcElectricalBaseProperties_MinimumCircuitCurrentAsString(), newMinimumCircuitCurrentAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetMinimumCircuitCurrentAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcElectricalBaseProperties_MinimumCircuitCurrentAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetMinimumCircuitCurrentAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcElectricalBaseProperties_MinimumCircuitCurrentAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getMaximumPowerInput() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcElectricalBaseProperties_MaximumPowerInput(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setMaximumPowerInput(float newMaximumPowerInput) {
+	public void setMaximumPowerInput(IfcPowerMeasure newMaximumPowerInput) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcElectricalBaseProperties_MaximumPowerInput(), newMaximumPowerInput);
 	}
 
@@ -349,8 +240,8 @@ public class IfcElectricalBasePropertiesImpl extends IfcEnergyPropertiesImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getMaximumPowerInputAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcElectricalBaseProperties_MaximumPowerInputAsString(), true);
+	public IfcPowerMeasure getRatedPowerInput() {
+		return (IfcPowerMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcElectricalBaseProperties_RatedPowerInput(), true);
 	}
 
 	/**
@@ -358,43 +249,7 @@ public class IfcElectricalBasePropertiesImpl extends IfcEnergyPropertiesImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMaximumPowerInputAsString(String newMaximumPowerInputAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcElectricalBaseProperties_MaximumPowerInputAsString(), newMaximumPowerInputAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetMaximumPowerInputAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcElectricalBaseProperties_MaximumPowerInputAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetMaximumPowerInputAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcElectricalBaseProperties_MaximumPowerInputAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getRatedPowerInput() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcElectricalBaseProperties_RatedPowerInput(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRatedPowerInput(float newRatedPowerInput) {
+	public void setRatedPowerInput(IfcPowerMeasure newRatedPowerInput) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcElectricalBaseProperties_RatedPowerInput(), newRatedPowerInput);
 	}
 
@@ -421,8 +276,8 @@ public class IfcElectricalBasePropertiesImpl extends IfcEnergyPropertiesImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getRatedPowerInputAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcElectricalBaseProperties_RatedPowerInputAsString(), true);
+	public IfcInteger getInputPhase() {
+		return (IfcInteger) eGet(Ifc2x3Package.eINSTANCE.getIfcElectricalBaseProperties_InputPhase(), true);
 	}
 
 	/**
@@ -430,43 +285,7 @@ public class IfcElectricalBasePropertiesImpl extends IfcEnergyPropertiesImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRatedPowerInputAsString(String newRatedPowerInputAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcElectricalBaseProperties_RatedPowerInputAsString(), newRatedPowerInputAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetRatedPowerInputAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcElectricalBaseProperties_RatedPowerInputAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetRatedPowerInputAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcElectricalBaseProperties_RatedPowerInputAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int getInputPhase() {
-		return (Integer) eGet(Ifc2x3Package.eINSTANCE.getIfcElectricalBaseProperties_InputPhase(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setInputPhase(int newInputPhase) {
+	public void setInputPhase(IfcInteger newInputPhase) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcElectricalBaseProperties_InputPhase(), newInputPhase);
 	}
 

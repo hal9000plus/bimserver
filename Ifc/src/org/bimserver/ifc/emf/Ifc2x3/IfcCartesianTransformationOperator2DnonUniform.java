@@ -31,7 +31,7 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcCartesianTransformationOperator2DnonUniform#getScale2 <em>Scale2</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcCartesianTransformationOperator2DnonUniform#getScale2AsString <em>Scale2 As String</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcCartesianTransformationOperator2DnonUniform#getScl2 <em>Scl2</em>}</li>
  * </ul>
  * </p>
  *
@@ -41,55 +41,56 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcCartesianTransformationOperator2DnonUniform extends IfcCartesianTransformationOperator2D {
 	/**
-	 * Returns the value of the '<em><b>Scale2</b></em>' attribute.
+	 * Returns the value of the '<em><b>Scale2</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Scale2</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Scale2</em>' attribute.
-	 * @see #setScale2(float)
+	 * @return the value of the '<em>Scale2</em>' reference.
+	 * @see #setScale2(IfcReal)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcCartesianTransformationOperator2DnonUniform_Scale2()
 	 * @model
 	 * @generated
 	 */
-	float getScale2();
+	IfcReal getScale2();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCartesianTransformationOperator2DnonUniform#getScale2 <em>Scale2</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCartesianTransformationOperator2DnonUniform#getScale2 <em>Scale2</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Scale2</em>' attribute.
+	 * @param value the new value of the '<em>Scale2</em>' reference.
 	 * @see #getScale2()
 	 * @generated
 	 */
-	void setScale2(float value);
+	void setScale2(IfcReal value);
 
 	/**
-	 * Returns the value of the '<em><b>Scale2 As String</b></em>' attribute.
+	 * Returns the value of the '<em><b>Scl2</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Scale2 As String</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Scl2</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Scale2 As String</em>' attribute.
-	 * @see #setScale2AsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcCartesianTransformationOperator2DnonUniform_Scale2AsString()
-	 * @model
+	 * @return the value of the '<em>Scl2</em>' reference.
+	 * @see #setScl2(IfcReal)
+	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcCartesianTransformationOperator2DnonUniform_Scl2()
+	 * @model transient="true" volatile="true" derived="true"
+	 *        annotation="http://www.iso.org/iso10303-11/EXPRESS code=' NVL(Scale2, SELF\\IfcCartesianTransformationOperator.Scl);'"
 	 * @generated
 	 */
-	String getScale2AsString();
+	IfcReal getScl2();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCartesianTransformationOperator2DnonUniform#getScale2AsString <em>Scale2 As String</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCartesianTransformationOperator2DnonUniform#getScl2 <em>Scl2</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Scale2 As String</em>' attribute.
-	 * @see #getScale2AsString()
+	 * @param value the new value of the '<em>Scl2</em>' reference.
+	 * @see #getScl2()
 	 * @generated
 	 */
-	void setScale2AsString(String value);
+	void setScl2(IfcReal value);
 
 } // IfcCartesianTransformationOperator2DnonUniform

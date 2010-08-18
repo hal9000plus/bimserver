@@ -22,14 +22,17 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
-import org.bimserver.emf.IdEObjectImpl;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcAxis2Placement;
 import org.bimserver.ifc.emf.Ifc2x3.IfcMappedItem;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRepresentation;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRepresentationMap;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -46,7 +49,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class IfcRepresentationMapImpl extends IdEObjectImpl implements IfcRepresentationMap {
+public class IfcRepresentationMapImpl extends EObjectImpl implements IfcRepresentationMap {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

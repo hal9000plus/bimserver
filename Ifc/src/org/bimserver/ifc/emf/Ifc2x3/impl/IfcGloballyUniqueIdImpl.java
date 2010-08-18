@@ -25,7 +25,10 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcGloballyUniqueId;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRoot;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -41,7 +44,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class IfcGloballyUniqueIdImpl extends WrappedValueImpl implements IfcGloballyUniqueId {
+public class IfcGloballyUniqueIdImpl extends EObjectImpl implements IfcGloballyUniqueId {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -59,6 +62,16 @@ public class IfcGloballyUniqueIdImpl extends WrappedValueImpl implements IfcGlob
 	@Override
 	protected EClass eStaticClass() {
 		return Ifc2x3Package.eINSTANCE.getIfcGloballyUniqueId();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected int eStaticFeatureCount() {
+		return 0;
 	}
 
 	/**

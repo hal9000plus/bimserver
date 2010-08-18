@@ -26,6 +26,7 @@ import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcPropertyBoundedValue;
 import org.bimserver.ifc.emf.Ifc2x3.IfcUnit;
 import org.bimserver.ifc.emf.Ifc2x3.IfcValue;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

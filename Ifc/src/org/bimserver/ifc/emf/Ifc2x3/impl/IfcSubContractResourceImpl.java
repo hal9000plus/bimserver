@@ -25,6 +25,8 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcActorSelect;
 import org.bimserver.ifc.emf.Ifc2x3.IfcSubContractResource;
+import org.bimserver.ifc.emf.Ifc2x3.IfcText;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -102,8 +104,8 @@ public class IfcSubContractResourceImpl extends IfcConstructionResourceImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getJobDescription() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcSubContractResource_JobDescription(), true);
+	public IfcText getJobDescription() {
+		return (IfcText) eGet(Ifc2x3Package.eINSTANCE.getIfcSubContractResource_JobDescription(), true);
 	}
 
 	/**
@@ -111,7 +113,7 @@ public class IfcSubContractResourceImpl extends IfcConstructionResourceImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setJobDescription(String newJobDescription) {
+	public void setJobDescription(IfcText newJobDescription) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcSubContractResource_JobDescription(), newJobDescription);
 	}
 

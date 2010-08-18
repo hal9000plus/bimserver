@@ -67,32 +67,29 @@ public interface IfcOrientedEdge extends IfcEdge {
 	void setEdgeElement(IfcEdge value);
 
 	/**
-	 * Returns the value of the '<em><b>Orientation</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.bimserver.ifc.emf.Ifc2x3.Tristate}.
+	 * Returns the value of the '<em><b>Orientation</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Orientation</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Orientation</em>' attribute.
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Tristate
-	 * @see #setOrientation(Tristate)
+	 * @return the value of the '<em>Orientation</em>' reference.
+	 * @see #setOrientation(IfcLogical)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcOrientedEdge_Orientation()
 	 * @model
 	 * @generated
 	 */
-	Tristate getOrientation();
+	IfcLogical getOrientation();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOrientedEdge#getOrientation <em>Orientation</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOrientedEdge#getOrientation <em>Orientation</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Orientation</em>' attribute.
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Tristate
+	 * @param value the new value of the '<em>Orientation</em>' reference.
 	 * @see #getOrientation()
 	 * @generated
 	 */
-	void setOrientation(Tristate value);
+	void setOrientation(IfcLogical value);
 
 } // IfcOrientedEdge

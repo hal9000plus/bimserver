@@ -23,7 +23,9 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
 import org.bimserver.ifc.emf.Ifc2x3.IfcReinforcingElement;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -64,8 +66,8 @@ public class IfcReinforcingElementImpl extends IfcBuildingElementComponentImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getSteelGrade() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcReinforcingElement_SteelGrade(), true);
+	public IfcLabel getSteelGrade() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcReinforcingElement_SteelGrade(), true);
 	}
 
 	/**
@@ -73,7 +75,7 @@ public class IfcReinforcingElementImpl extends IfcBuildingElementComponentImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSteelGrade(String newSteelGrade) {
+	public void setSteelGrade(IfcLabel newSteelGrade) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcReinforcingElement_SteelGrade(), newSteelGrade);
 	}
 

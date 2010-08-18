@@ -35,7 +35,6 @@ package org.bimserver.ifc.emf.Ifc2x3;
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelConnectsStructuralMember#getAppliedCondition <em>Applied Condition</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelConnectsStructuralMember#getAdditionalConditions <em>Additional Conditions</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelConnectsStructuralMember#getSupportedLength <em>Supported Length</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelConnectsStructuralMember#getSupportedLengthAsString <em>Supported Length As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelConnectsStructuralMember#getConditionCoordinateSystem <em>Condition Coordinate System</em>}</li>
  * </ul>
  * </p>
@@ -208,110 +207,57 @@ public interface IfcRelConnectsStructuralMember extends IfcRelConnects {
 	boolean isSetAdditionalConditions();
 
 	/**
-	 * Returns the value of the '<em><b>Supported Length</b></em>' attribute.
+	 * Returns the value of the '<em><b>Supported Length</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Supported Length</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Supported Length</em>' attribute.
+	 * @return the value of the '<em>Supported Length</em>' reference.
 	 * @see #isSetSupportedLength()
 	 * @see #unsetSupportedLength()
-	 * @see #setSupportedLength(float)
+	 * @see #setSupportedLength(IfcLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRelConnectsStructuralMember_SupportedLength()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getSupportedLength();
+	IfcLengthMeasure getSupportedLength();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelConnectsStructuralMember#getSupportedLength <em>Supported Length</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelConnectsStructuralMember#getSupportedLength <em>Supported Length</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Supported Length</em>' attribute.
+	 * @param value the new value of the '<em>Supported Length</em>' reference.
 	 * @see #isSetSupportedLength()
 	 * @see #unsetSupportedLength()
 	 * @see #getSupportedLength()
 	 * @generated
 	 */
-	void setSupportedLength(float value);
+	void setSupportedLength(IfcLengthMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelConnectsStructuralMember#getSupportedLength <em>Supported Length</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelConnectsStructuralMember#getSupportedLength <em>Supported Length</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetSupportedLength()
 	 * @see #getSupportedLength()
-	 * @see #setSupportedLength(float)
+	 * @see #setSupportedLength(IfcLengthMeasure)
 	 * @generated
 	 */
 	void unsetSupportedLength();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelConnectsStructuralMember#getSupportedLength <em>Supported Length</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelConnectsStructuralMember#getSupportedLength <em>Supported Length</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Supported Length</em>' attribute is set.
+	 * @return whether the value of the '<em>Supported Length</em>' reference is set.
 	 * @see #unsetSupportedLength()
 	 * @see #getSupportedLength()
-	 * @see #setSupportedLength(float)
+	 * @see #setSupportedLength(IfcLengthMeasure)
 	 * @generated
 	 */
 	boolean isSetSupportedLength();
-
-	/**
-	 * Returns the value of the '<em><b>Supported Length As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Supported Length As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Supported Length As String</em>' attribute.
-	 * @see #isSetSupportedLengthAsString()
-	 * @see #unsetSupportedLengthAsString()
-	 * @see #setSupportedLengthAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRelConnectsStructuralMember_SupportedLengthAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getSupportedLengthAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelConnectsStructuralMember#getSupportedLengthAsString <em>Supported Length As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Supported Length As String</em>' attribute.
-	 * @see #isSetSupportedLengthAsString()
-	 * @see #unsetSupportedLengthAsString()
-	 * @see #getSupportedLengthAsString()
-	 * @generated
-	 */
-	void setSupportedLengthAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelConnectsStructuralMember#getSupportedLengthAsString <em>Supported Length As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetSupportedLengthAsString()
-	 * @see #getSupportedLengthAsString()
-	 * @see #setSupportedLengthAsString(String)
-	 * @generated
-	 */
-	void unsetSupportedLengthAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelConnectsStructuralMember#getSupportedLengthAsString <em>Supported Length As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Supported Length As String</em>' attribute is set.
-	 * @see #unsetSupportedLengthAsString()
-	 * @see #getSupportedLengthAsString()
-	 * @see #setSupportedLengthAsString(String)
-	 * @generated
-	 */
-	boolean isSetSupportedLengthAsString();
 
 	/**
 	 * Returns the value of the '<em><b>Condition Coordinate System</b></em>' reference.

@@ -26,7 +26,9 @@ import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcObjectDefinition;
 import org.bimserver.ifc.emf.Ifc2x3.IfcObjectTypeEnum;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRelAssigns;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

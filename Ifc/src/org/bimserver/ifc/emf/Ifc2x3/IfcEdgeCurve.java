@@ -67,32 +67,29 @@ public interface IfcEdgeCurve extends IfcEdge, IfcCurveOrEdgeCurve {
 	void setEdgeGeometry(IfcCurve value);
 
 	/**
-	 * Returns the value of the '<em><b>Same Sense</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.bimserver.ifc.emf.Ifc2x3.Tristate}.
+	 * Returns the value of the '<em><b>Same Sense</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Same Sense</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Same Sense</em>' attribute.
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Tristate
-	 * @see #setSameSense(Tristate)
+	 * @return the value of the '<em>Same Sense</em>' reference.
+	 * @see #setSameSense(IfcLogical)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcEdgeCurve_SameSense()
 	 * @model
 	 * @generated
 	 */
-	Tristate getSameSense();
+	IfcLogical getSameSense();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcEdgeCurve#getSameSense <em>Same Sense</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcEdgeCurve#getSameSense <em>Same Sense</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Same Sense</em>' attribute.
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Tristate
+	 * @param value the new value of the '<em>Same Sense</em>' reference.
 	 * @see #getSameSense()
 	 * @generated
 	 */
-	void setSameSense(Tristate value);
+	void setSameSense(IfcLogical value);
 
 } // IfcEdgeCurve

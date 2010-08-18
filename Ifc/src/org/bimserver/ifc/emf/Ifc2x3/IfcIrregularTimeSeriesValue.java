@@ -22,8 +22,9 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3;
 
-import org.bimserver.emf.IdEObject;
 import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -40,10 +41,9 @@ import org.eclipse.emf.common.util.EList;
  *
  * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcIrregularTimeSeriesValue()
  * @model
- * @extends IdEObject
  * @generated
  */
-public interface IfcIrregularTimeSeriesValue extends IdEObject {
+public interface IfcIrregularTimeSeriesValue extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Time Stamp</b></em>' reference.
 	 * <!-- begin-user-doc -->

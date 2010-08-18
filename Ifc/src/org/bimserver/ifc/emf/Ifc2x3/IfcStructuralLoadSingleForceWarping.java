@@ -31,7 +31,6 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForceWarping#getWarpingMoment <em>Warping Moment</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForceWarping#getWarpingMomentAsString <em>Warping Moment As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -41,109 +40,56 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcStructuralLoadSingleForceWarping extends IfcStructuralLoadSingleForce {
 	/**
-	 * Returns the value of the '<em><b>Warping Moment</b></em>' attribute.
+	 * Returns the value of the '<em><b>Warping Moment</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Warping Moment</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Warping Moment</em>' attribute.
+	 * @return the value of the '<em>Warping Moment</em>' reference.
 	 * @see #isSetWarpingMoment()
 	 * @see #unsetWarpingMoment()
-	 * @see #setWarpingMoment(float)
+	 * @see #setWarpingMoment(IfcWarpingMomentMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoadSingleForceWarping_WarpingMoment()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getWarpingMoment();
+	IfcWarpingMomentMeasure getWarpingMoment();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForceWarping#getWarpingMoment <em>Warping Moment</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForceWarping#getWarpingMoment <em>Warping Moment</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Warping Moment</em>' attribute.
+	 * @param value the new value of the '<em>Warping Moment</em>' reference.
 	 * @see #isSetWarpingMoment()
 	 * @see #unsetWarpingMoment()
 	 * @see #getWarpingMoment()
 	 * @generated
 	 */
-	void setWarpingMoment(float value);
+	void setWarpingMoment(IfcWarpingMomentMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForceWarping#getWarpingMoment <em>Warping Moment</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForceWarping#getWarpingMoment <em>Warping Moment</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetWarpingMoment()
 	 * @see #getWarpingMoment()
-	 * @see #setWarpingMoment(float)
+	 * @see #setWarpingMoment(IfcWarpingMomentMeasure)
 	 * @generated
 	 */
 	void unsetWarpingMoment();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForceWarping#getWarpingMoment <em>Warping Moment</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForceWarping#getWarpingMoment <em>Warping Moment</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Warping Moment</em>' attribute is set.
+	 * @return whether the value of the '<em>Warping Moment</em>' reference is set.
 	 * @see #unsetWarpingMoment()
 	 * @see #getWarpingMoment()
-	 * @see #setWarpingMoment(float)
+	 * @see #setWarpingMoment(IfcWarpingMomentMeasure)
 	 * @generated
 	 */
 	boolean isSetWarpingMoment();
-
-	/**
-	 * Returns the value of the '<em><b>Warping Moment As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Warping Moment As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Warping Moment As String</em>' attribute.
-	 * @see #isSetWarpingMomentAsString()
-	 * @see #unsetWarpingMomentAsString()
-	 * @see #setWarpingMomentAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoadSingleForceWarping_WarpingMomentAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getWarpingMomentAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForceWarping#getWarpingMomentAsString <em>Warping Moment As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Warping Moment As String</em>' attribute.
-	 * @see #isSetWarpingMomentAsString()
-	 * @see #unsetWarpingMomentAsString()
-	 * @see #getWarpingMomentAsString()
-	 * @generated
-	 */
-	void setWarpingMomentAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForceWarping#getWarpingMomentAsString <em>Warping Moment As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetWarpingMomentAsString()
-	 * @see #getWarpingMomentAsString()
-	 * @see #setWarpingMomentAsString(String)
-	 * @generated
-	 */
-	void unsetWarpingMomentAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForceWarping#getWarpingMomentAsString <em>Warping Moment As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Warping Moment As String</em>' attribute is set.
-	 * @see #unsetWarpingMomentAsString()
-	 * @see #getWarpingMomentAsString()
-	 * @see #setWarpingMomentAsString(String)
-	 * @generated
-	 */
-	boolean isSetWarpingMomentAsString();
 
 } // IfcStructuralLoadSingleForceWarping

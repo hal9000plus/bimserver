@@ -219,8 +219,8 @@ public enum IfcUnitaryEquipmentTypeEnum implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final IfcUnitaryEquipmentTypeEnum[] VALUES_ARRAY = new IfcUnitaryEquipmentTypeEnum[] { NULL, SPLITSYSTEM, NOTDEFINED, ROOFTOPUNIT, USERDEFINED,
-			AIRCONDITIONINGUNIT, AIRHANDLER, };
+	private static final IfcUnitaryEquipmentTypeEnum[] VALUES_ARRAY = new IfcUnitaryEquipmentTypeEnum[] { NULL, SPLITSYSTEM, NOTDEFINED, ROOFTOPUNIT,
+			USERDEFINED, AIRCONDITIONINGUNIT, AIRHANDLER, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Ifc Unitary Equipment Type Enum</b></em>' enumerators.

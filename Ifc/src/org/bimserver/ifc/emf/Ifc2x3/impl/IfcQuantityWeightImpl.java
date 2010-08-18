@@ -23,7 +23,9 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcMassMeasure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcQuantityWeight;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -34,7 +36,6 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcQuantityWeightImpl#getWeightValue <em>Weight Value</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcQuantityWeightImpl#getWeightValueAsString <em>Weight Value As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -65,8 +66,8 @@ public class IfcQuantityWeightImpl extends IfcPhysicalSimpleQuantityImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getWeightValue() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcQuantityWeight_WeightValue(), true);
+	public IfcMassMeasure getWeightValue() {
+		return (IfcMassMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcQuantityWeight_WeightValue(), true);
 	}
 
 	/**
@@ -74,26 +75,8 @@ public class IfcQuantityWeightImpl extends IfcPhysicalSimpleQuantityImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setWeightValue(float newWeightValue) {
+	public void setWeightValue(IfcMassMeasure newWeightValue) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcQuantityWeight_WeightValue(), newWeightValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getWeightValueAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcQuantityWeight_WeightValueAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setWeightValueAsString(String newWeightValueAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcQuantityWeight_WeightValueAsString(), newWeightValueAsString);
 	}
 
 } //IfcQuantityWeightImpl

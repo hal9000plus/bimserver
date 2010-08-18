@@ -194,8 +194,8 @@ public enum IfcCoolingTowerTypeEnum implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final IfcCoolingTowerTypeEnum[] VALUES_ARRAY = new IfcCoolingTowerTypeEnum[] { NULL, NATURALDRAFT, NOTDEFINED, MECHANICALINDUCEDDRAFT, MECHANICALFORCEDDRAFT,
-			USERDEFINED, };
+	private static final IfcCoolingTowerTypeEnum[] VALUES_ARRAY = new IfcCoolingTowerTypeEnum[] { NULL, NATURALDRAFT, NOTDEFINED, MECHANICALINDUCEDDRAFT,
+			MECHANICALFORCEDDRAFT, USERDEFINED, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Ifc Cooling Tower Type Enum</b></em>' enumerators.

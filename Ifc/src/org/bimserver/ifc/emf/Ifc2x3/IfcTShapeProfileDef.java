@@ -31,25 +31,15 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getDepth <em>Depth</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getDepthAsString <em>Depth As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getFlangeWidth <em>Flange Width</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getFlangeWidthAsString <em>Flange Width As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getWebThickness <em>Web Thickness</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getWebThicknessAsString <em>Web Thickness As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getFlangeThickness <em>Flange Thickness</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getFlangeThicknessAsString <em>Flange Thickness As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getFilletRadius <em>Fillet Radius</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getFilletRadiusAsString <em>Fillet Radius As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getFlangeEdgeRadius <em>Flange Edge Radius</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getFlangeEdgeRadiusAsString <em>Flange Edge Radius As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getWebEdgeRadius <em>Web Edge Radius</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getWebEdgeRadiusAsString <em>Web Edge Radius As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getWebSlope <em>Web Slope</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getWebSlopeAsString <em>Web Slope As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getFlangeSlope <em>Flange Slope</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getFlangeSlopeAsString <em>Flange Slope As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getCentreOfGravityInY <em>Centre Of Gravity In Y</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getCentreOfGravityInYAsString <em>Centre Of Gravity In YAs String</em>}</li>
  * </ul>
  * </p>
  *
@@ -59,847 +49,425 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcTShapeProfileDef extends IfcParameterizedProfileDef {
 	/**
-	 * Returns the value of the '<em><b>Depth</b></em>' attribute.
+	 * Returns the value of the '<em><b>Depth</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Depth</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Depth</em>' attribute.
-	 * @see #setDepth(float)
+	 * @return the value of the '<em>Depth</em>' reference.
+	 * @see #setDepth(IfcPositiveLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTShapeProfileDef_Depth()
 	 * @model
 	 * @generated
 	 */
-	float getDepth();
+	IfcPositiveLengthMeasure getDepth();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getDepth <em>Depth</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getDepth <em>Depth</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Depth</em>' attribute.
+	 * @param value the new value of the '<em>Depth</em>' reference.
 	 * @see #getDepth()
 	 * @generated
 	 */
-	void setDepth(float value);
+	void setDepth(IfcPositiveLengthMeasure value);
 
 	/**
-	 * Returns the value of the '<em><b>Depth As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Depth As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Depth As String</em>' attribute.
-	 * @see #setDepthAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTShapeProfileDef_DepthAsString()
-	 * @model
-	 * @generated
-	 */
-	String getDepthAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getDepthAsString <em>Depth As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Depth As String</em>' attribute.
-	 * @see #getDepthAsString()
-	 * @generated
-	 */
-	void setDepthAsString(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Flange Width</b></em>' attribute.
+	 * Returns the value of the '<em><b>Flange Width</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Flange Width</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Flange Width</em>' attribute.
-	 * @see #setFlangeWidth(float)
+	 * @return the value of the '<em>Flange Width</em>' reference.
+	 * @see #setFlangeWidth(IfcPositiveLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTShapeProfileDef_FlangeWidth()
 	 * @model
 	 * @generated
 	 */
-	float getFlangeWidth();
+	IfcPositiveLengthMeasure getFlangeWidth();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getFlangeWidth <em>Flange Width</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getFlangeWidth <em>Flange Width</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Flange Width</em>' attribute.
+	 * @param value the new value of the '<em>Flange Width</em>' reference.
 	 * @see #getFlangeWidth()
 	 * @generated
 	 */
-	void setFlangeWidth(float value);
+	void setFlangeWidth(IfcPositiveLengthMeasure value);
 
 	/**
-	 * Returns the value of the '<em><b>Flange Width As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Flange Width As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Flange Width As String</em>' attribute.
-	 * @see #setFlangeWidthAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTShapeProfileDef_FlangeWidthAsString()
-	 * @model
-	 * @generated
-	 */
-	String getFlangeWidthAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getFlangeWidthAsString <em>Flange Width As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Flange Width As String</em>' attribute.
-	 * @see #getFlangeWidthAsString()
-	 * @generated
-	 */
-	void setFlangeWidthAsString(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Web Thickness</b></em>' attribute.
+	 * Returns the value of the '<em><b>Web Thickness</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Web Thickness</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Web Thickness</em>' attribute.
-	 * @see #setWebThickness(float)
+	 * @return the value of the '<em>Web Thickness</em>' reference.
+	 * @see #setWebThickness(IfcPositiveLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTShapeProfileDef_WebThickness()
 	 * @model
 	 * @generated
 	 */
-	float getWebThickness();
+	IfcPositiveLengthMeasure getWebThickness();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getWebThickness <em>Web Thickness</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getWebThickness <em>Web Thickness</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Web Thickness</em>' attribute.
+	 * @param value the new value of the '<em>Web Thickness</em>' reference.
 	 * @see #getWebThickness()
 	 * @generated
 	 */
-	void setWebThickness(float value);
+	void setWebThickness(IfcPositiveLengthMeasure value);
 
 	/**
-	 * Returns the value of the '<em><b>Web Thickness As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Web Thickness As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Web Thickness As String</em>' attribute.
-	 * @see #setWebThicknessAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTShapeProfileDef_WebThicknessAsString()
-	 * @model
-	 * @generated
-	 */
-	String getWebThicknessAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getWebThicknessAsString <em>Web Thickness As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Web Thickness As String</em>' attribute.
-	 * @see #getWebThicknessAsString()
-	 * @generated
-	 */
-	void setWebThicknessAsString(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Flange Thickness</b></em>' attribute.
+	 * Returns the value of the '<em><b>Flange Thickness</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Flange Thickness</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Flange Thickness</em>' attribute.
-	 * @see #setFlangeThickness(float)
+	 * @return the value of the '<em>Flange Thickness</em>' reference.
+	 * @see #setFlangeThickness(IfcPositiveLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTShapeProfileDef_FlangeThickness()
 	 * @model
 	 * @generated
 	 */
-	float getFlangeThickness();
+	IfcPositiveLengthMeasure getFlangeThickness();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getFlangeThickness <em>Flange Thickness</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getFlangeThickness <em>Flange Thickness</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Flange Thickness</em>' attribute.
+	 * @param value the new value of the '<em>Flange Thickness</em>' reference.
 	 * @see #getFlangeThickness()
 	 * @generated
 	 */
-	void setFlangeThickness(float value);
+	void setFlangeThickness(IfcPositiveLengthMeasure value);
 
 	/**
-	 * Returns the value of the '<em><b>Flange Thickness As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Flange Thickness As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Flange Thickness As String</em>' attribute.
-	 * @see #setFlangeThicknessAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTShapeProfileDef_FlangeThicknessAsString()
-	 * @model
-	 * @generated
-	 */
-	String getFlangeThicknessAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getFlangeThicknessAsString <em>Flange Thickness As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Flange Thickness As String</em>' attribute.
-	 * @see #getFlangeThicknessAsString()
-	 * @generated
-	 */
-	void setFlangeThicknessAsString(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Fillet Radius</b></em>' attribute.
+	 * Returns the value of the '<em><b>Fillet Radius</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Fillet Radius</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Fillet Radius</em>' attribute.
+	 * @return the value of the '<em>Fillet Radius</em>' reference.
 	 * @see #isSetFilletRadius()
 	 * @see #unsetFilletRadius()
-	 * @see #setFilletRadius(float)
+	 * @see #setFilletRadius(IfcPositiveLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTShapeProfileDef_FilletRadius()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getFilletRadius();
+	IfcPositiveLengthMeasure getFilletRadius();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getFilletRadius <em>Fillet Radius</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getFilletRadius <em>Fillet Radius</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Fillet Radius</em>' attribute.
+	 * @param value the new value of the '<em>Fillet Radius</em>' reference.
 	 * @see #isSetFilletRadius()
 	 * @see #unsetFilletRadius()
 	 * @see #getFilletRadius()
 	 * @generated
 	 */
-	void setFilletRadius(float value);
+	void setFilletRadius(IfcPositiveLengthMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getFilletRadius <em>Fillet Radius</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getFilletRadius <em>Fillet Radius</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetFilletRadius()
 	 * @see #getFilletRadius()
-	 * @see #setFilletRadius(float)
+	 * @see #setFilletRadius(IfcPositiveLengthMeasure)
 	 * @generated
 	 */
 	void unsetFilletRadius();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getFilletRadius <em>Fillet Radius</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getFilletRadius <em>Fillet Radius</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Fillet Radius</em>' attribute is set.
+	 * @return whether the value of the '<em>Fillet Radius</em>' reference is set.
 	 * @see #unsetFilletRadius()
 	 * @see #getFilletRadius()
-	 * @see #setFilletRadius(float)
+	 * @see #setFilletRadius(IfcPositiveLengthMeasure)
 	 * @generated
 	 */
 	boolean isSetFilletRadius();
 
 	/**
-	 * Returns the value of the '<em><b>Fillet Radius As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Fillet Radius As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Fillet Radius As String</em>' attribute.
-	 * @see #isSetFilletRadiusAsString()
-	 * @see #unsetFilletRadiusAsString()
-	 * @see #setFilletRadiusAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTShapeProfileDef_FilletRadiusAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getFilletRadiusAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getFilletRadiusAsString <em>Fillet Radius As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Fillet Radius As String</em>' attribute.
-	 * @see #isSetFilletRadiusAsString()
-	 * @see #unsetFilletRadiusAsString()
-	 * @see #getFilletRadiusAsString()
-	 * @generated
-	 */
-	void setFilletRadiusAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getFilletRadiusAsString <em>Fillet Radius As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetFilletRadiusAsString()
-	 * @see #getFilletRadiusAsString()
-	 * @see #setFilletRadiusAsString(String)
-	 * @generated
-	 */
-	void unsetFilletRadiusAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getFilletRadiusAsString <em>Fillet Radius As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Fillet Radius As String</em>' attribute is set.
-	 * @see #unsetFilletRadiusAsString()
-	 * @see #getFilletRadiusAsString()
-	 * @see #setFilletRadiusAsString(String)
-	 * @generated
-	 */
-	boolean isSetFilletRadiusAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Flange Edge Radius</b></em>' attribute.
+	 * Returns the value of the '<em><b>Flange Edge Radius</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Flange Edge Radius</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Flange Edge Radius</em>' attribute.
+	 * @return the value of the '<em>Flange Edge Radius</em>' reference.
 	 * @see #isSetFlangeEdgeRadius()
 	 * @see #unsetFlangeEdgeRadius()
-	 * @see #setFlangeEdgeRadius(float)
+	 * @see #setFlangeEdgeRadius(IfcPositiveLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTShapeProfileDef_FlangeEdgeRadius()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getFlangeEdgeRadius();
+	IfcPositiveLengthMeasure getFlangeEdgeRadius();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getFlangeEdgeRadius <em>Flange Edge Radius</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getFlangeEdgeRadius <em>Flange Edge Radius</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Flange Edge Radius</em>' attribute.
+	 * @param value the new value of the '<em>Flange Edge Radius</em>' reference.
 	 * @see #isSetFlangeEdgeRadius()
 	 * @see #unsetFlangeEdgeRadius()
 	 * @see #getFlangeEdgeRadius()
 	 * @generated
 	 */
-	void setFlangeEdgeRadius(float value);
+	void setFlangeEdgeRadius(IfcPositiveLengthMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getFlangeEdgeRadius <em>Flange Edge Radius</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getFlangeEdgeRadius <em>Flange Edge Radius</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetFlangeEdgeRadius()
 	 * @see #getFlangeEdgeRadius()
-	 * @see #setFlangeEdgeRadius(float)
+	 * @see #setFlangeEdgeRadius(IfcPositiveLengthMeasure)
 	 * @generated
 	 */
 	void unsetFlangeEdgeRadius();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getFlangeEdgeRadius <em>Flange Edge Radius</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getFlangeEdgeRadius <em>Flange Edge Radius</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Flange Edge Radius</em>' attribute is set.
+	 * @return whether the value of the '<em>Flange Edge Radius</em>' reference is set.
 	 * @see #unsetFlangeEdgeRadius()
 	 * @see #getFlangeEdgeRadius()
-	 * @see #setFlangeEdgeRadius(float)
+	 * @see #setFlangeEdgeRadius(IfcPositiveLengthMeasure)
 	 * @generated
 	 */
 	boolean isSetFlangeEdgeRadius();
 
 	/**
-	 * Returns the value of the '<em><b>Flange Edge Radius As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Flange Edge Radius As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Flange Edge Radius As String</em>' attribute.
-	 * @see #isSetFlangeEdgeRadiusAsString()
-	 * @see #unsetFlangeEdgeRadiusAsString()
-	 * @see #setFlangeEdgeRadiusAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTShapeProfileDef_FlangeEdgeRadiusAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getFlangeEdgeRadiusAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getFlangeEdgeRadiusAsString <em>Flange Edge Radius As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Flange Edge Radius As String</em>' attribute.
-	 * @see #isSetFlangeEdgeRadiusAsString()
-	 * @see #unsetFlangeEdgeRadiusAsString()
-	 * @see #getFlangeEdgeRadiusAsString()
-	 * @generated
-	 */
-	void setFlangeEdgeRadiusAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getFlangeEdgeRadiusAsString <em>Flange Edge Radius As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetFlangeEdgeRadiusAsString()
-	 * @see #getFlangeEdgeRadiusAsString()
-	 * @see #setFlangeEdgeRadiusAsString(String)
-	 * @generated
-	 */
-	void unsetFlangeEdgeRadiusAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getFlangeEdgeRadiusAsString <em>Flange Edge Radius As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Flange Edge Radius As String</em>' attribute is set.
-	 * @see #unsetFlangeEdgeRadiusAsString()
-	 * @see #getFlangeEdgeRadiusAsString()
-	 * @see #setFlangeEdgeRadiusAsString(String)
-	 * @generated
-	 */
-	boolean isSetFlangeEdgeRadiusAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Web Edge Radius</b></em>' attribute.
+	 * Returns the value of the '<em><b>Web Edge Radius</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Web Edge Radius</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Web Edge Radius</em>' attribute.
+	 * @return the value of the '<em>Web Edge Radius</em>' reference.
 	 * @see #isSetWebEdgeRadius()
 	 * @see #unsetWebEdgeRadius()
-	 * @see #setWebEdgeRadius(float)
+	 * @see #setWebEdgeRadius(IfcPositiveLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTShapeProfileDef_WebEdgeRadius()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getWebEdgeRadius();
+	IfcPositiveLengthMeasure getWebEdgeRadius();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getWebEdgeRadius <em>Web Edge Radius</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getWebEdgeRadius <em>Web Edge Radius</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Web Edge Radius</em>' attribute.
+	 * @param value the new value of the '<em>Web Edge Radius</em>' reference.
 	 * @see #isSetWebEdgeRadius()
 	 * @see #unsetWebEdgeRadius()
 	 * @see #getWebEdgeRadius()
 	 * @generated
 	 */
-	void setWebEdgeRadius(float value);
+	void setWebEdgeRadius(IfcPositiveLengthMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getWebEdgeRadius <em>Web Edge Radius</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getWebEdgeRadius <em>Web Edge Radius</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetWebEdgeRadius()
 	 * @see #getWebEdgeRadius()
-	 * @see #setWebEdgeRadius(float)
+	 * @see #setWebEdgeRadius(IfcPositiveLengthMeasure)
 	 * @generated
 	 */
 	void unsetWebEdgeRadius();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getWebEdgeRadius <em>Web Edge Radius</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getWebEdgeRadius <em>Web Edge Radius</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Web Edge Radius</em>' attribute is set.
+	 * @return whether the value of the '<em>Web Edge Radius</em>' reference is set.
 	 * @see #unsetWebEdgeRadius()
 	 * @see #getWebEdgeRadius()
-	 * @see #setWebEdgeRadius(float)
+	 * @see #setWebEdgeRadius(IfcPositiveLengthMeasure)
 	 * @generated
 	 */
 	boolean isSetWebEdgeRadius();
 
 	/**
-	 * Returns the value of the '<em><b>Web Edge Radius As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Web Edge Radius As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Web Edge Radius As String</em>' attribute.
-	 * @see #isSetWebEdgeRadiusAsString()
-	 * @see #unsetWebEdgeRadiusAsString()
-	 * @see #setWebEdgeRadiusAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTShapeProfileDef_WebEdgeRadiusAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getWebEdgeRadiusAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getWebEdgeRadiusAsString <em>Web Edge Radius As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Web Edge Radius As String</em>' attribute.
-	 * @see #isSetWebEdgeRadiusAsString()
-	 * @see #unsetWebEdgeRadiusAsString()
-	 * @see #getWebEdgeRadiusAsString()
-	 * @generated
-	 */
-	void setWebEdgeRadiusAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getWebEdgeRadiusAsString <em>Web Edge Radius As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetWebEdgeRadiusAsString()
-	 * @see #getWebEdgeRadiusAsString()
-	 * @see #setWebEdgeRadiusAsString(String)
-	 * @generated
-	 */
-	void unsetWebEdgeRadiusAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getWebEdgeRadiusAsString <em>Web Edge Radius As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Web Edge Radius As String</em>' attribute is set.
-	 * @see #unsetWebEdgeRadiusAsString()
-	 * @see #getWebEdgeRadiusAsString()
-	 * @see #setWebEdgeRadiusAsString(String)
-	 * @generated
-	 */
-	boolean isSetWebEdgeRadiusAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Web Slope</b></em>' attribute.
+	 * Returns the value of the '<em><b>Web Slope</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Web Slope</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Web Slope</em>' attribute.
+	 * @return the value of the '<em>Web Slope</em>' reference.
 	 * @see #isSetWebSlope()
 	 * @see #unsetWebSlope()
-	 * @see #setWebSlope(float)
+	 * @see #setWebSlope(IfcPlaneAngleMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTShapeProfileDef_WebSlope()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getWebSlope();
+	IfcPlaneAngleMeasure getWebSlope();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getWebSlope <em>Web Slope</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getWebSlope <em>Web Slope</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Web Slope</em>' attribute.
+	 * @param value the new value of the '<em>Web Slope</em>' reference.
 	 * @see #isSetWebSlope()
 	 * @see #unsetWebSlope()
 	 * @see #getWebSlope()
 	 * @generated
 	 */
-	void setWebSlope(float value);
+	void setWebSlope(IfcPlaneAngleMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getWebSlope <em>Web Slope</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getWebSlope <em>Web Slope</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetWebSlope()
 	 * @see #getWebSlope()
-	 * @see #setWebSlope(float)
+	 * @see #setWebSlope(IfcPlaneAngleMeasure)
 	 * @generated
 	 */
 	void unsetWebSlope();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getWebSlope <em>Web Slope</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getWebSlope <em>Web Slope</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Web Slope</em>' attribute is set.
+	 * @return whether the value of the '<em>Web Slope</em>' reference is set.
 	 * @see #unsetWebSlope()
 	 * @see #getWebSlope()
-	 * @see #setWebSlope(float)
+	 * @see #setWebSlope(IfcPlaneAngleMeasure)
 	 * @generated
 	 */
 	boolean isSetWebSlope();
 
 	/**
-	 * Returns the value of the '<em><b>Web Slope As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Web Slope As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Web Slope As String</em>' attribute.
-	 * @see #isSetWebSlopeAsString()
-	 * @see #unsetWebSlopeAsString()
-	 * @see #setWebSlopeAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTShapeProfileDef_WebSlopeAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getWebSlopeAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getWebSlopeAsString <em>Web Slope As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Web Slope As String</em>' attribute.
-	 * @see #isSetWebSlopeAsString()
-	 * @see #unsetWebSlopeAsString()
-	 * @see #getWebSlopeAsString()
-	 * @generated
-	 */
-	void setWebSlopeAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getWebSlopeAsString <em>Web Slope As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetWebSlopeAsString()
-	 * @see #getWebSlopeAsString()
-	 * @see #setWebSlopeAsString(String)
-	 * @generated
-	 */
-	void unsetWebSlopeAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getWebSlopeAsString <em>Web Slope As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Web Slope As String</em>' attribute is set.
-	 * @see #unsetWebSlopeAsString()
-	 * @see #getWebSlopeAsString()
-	 * @see #setWebSlopeAsString(String)
-	 * @generated
-	 */
-	boolean isSetWebSlopeAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Flange Slope</b></em>' attribute.
+	 * Returns the value of the '<em><b>Flange Slope</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Flange Slope</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Flange Slope</em>' attribute.
+	 * @return the value of the '<em>Flange Slope</em>' reference.
 	 * @see #isSetFlangeSlope()
 	 * @see #unsetFlangeSlope()
-	 * @see #setFlangeSlope(float)
+	 * @see #setFlangeSlope(IfcPlaneAngleMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTShapeProfileDef_FlangeSlope()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getFlangeSlope();
+	IfcPlaneAngleMeasure getFlangeSlope();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getFlangeSlope <em>Flange Slope</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getFlangeSlope <em>Flange Slope</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Flange Slope</em>' attribute.
+	 * @param value the new value of the '<em>Flange Slope</em>' reference.
 	 * @see #isSetFlangeSlope()
 	 * @see #unsetFlangeSlope()
 	 * @see #getFlangeSlope()
 	 * @generated
 	 */
-	void setFlangeSlope(float value);
+	void setFlangeSlope(IfcPlaneAngleMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getFlangeSlope <em>Flange Slope</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getFlangeSlope <em>Flange Slope</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetFlangeSlope()
 	 * @see #getFlangeSlope()
-	 * @see #setFlangeSlope(float)
+	 * @see #setFlangeSlope(IfcPlaneAngleMeasure)
 	 * @generated
 	 */
 	void unsetFlangeSlope();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getFlangeSlope <em>Flange Slope</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getFlangeSlope <em>Flange Slope</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Flange Slope</em>' attribute is set.
+	 * @return whether the value of the '<em>Flange Slope</em>' reference is set.
 	 * @see #unsetFlangeSlope()
 	 * @see #getFlangeSlope()
-	 * @see #setFlangeSlope(float)
+	 * @see #setFlangeSlope(IfcPlaneAngleMeasure)
 	 * @generated
 	 */
 	boolean isSetFlangeSlope();
 
 	/**
-	 * Returns the value of the '<em><b>Flange Slope As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Flange Slope As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Flange Slope As String</em>' attribute.
-	 * @see #isSetFlangeSlopeAsString()
-	 * @see #unsetFlangeSlopeAsString()
-	 * @see #setFlangeSlopeAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTShapeProfileDef_FlangeSlopeAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getFlangeSlopeAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getFlangeSlopeAsString <em>Flange Slope As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Flange Slope As String</em>' attribute.
-	 * @see #isSetFlangeSlopeAsString()
-	 * @see #unsetFlangeSlopeAsString()
-	 * @see #getFlangeSlopeAsString()
-	 * @generated
-	 */
-	void setFlangeSlopeAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getFlangeSlopeAsString <em>Flange Slope As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetFlangeSlopeAsString()
-	 * @see #getFlangeSlopeAsString()
-	 * @see #setFlangeSlopeAsString(String)
-	 * @generated
-	 */
-	void unsetFlangeSlopeAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getFlangeSlopeAsString <em>Flange Slope As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Flange Slope As String</em>' attribute is set.
-	 * @see #unsetFlangeSlopeAsString()
-	 * @see #getFlangeSlopeAsString()
-	 * @see #setFlangeSlopeAsString(String)
-	 * @generated
-	 */
-	boolean isSetFlangeSlopeAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Centre Of Gravity In Y</b></em>' attribute.
+	 * Returns the value of the '<em><b>Centre Of Gravity In Y</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Centre Of Gravity In Y</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Centre Of Gravity In Y</em>' attribute.
+	 * @return the value of the '<em>Centre Of Gravity In Y</em>' reference.
 	 * @see #isSetCentreOfGravityInY()
 	 * @see #unsetCentreOfGravityInY()
-	 * @see #setCentreOfGravityInY(float)
+	 * @see #setCentreOfGravityInY(IfcPositiveLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTShapeProfileDef_CentreOfGravityInY()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getCentreOfGravityInY();
+	IfcPositiveLengthMeasure getCentreOfGravityInY();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getCentreOfGravityInY <em>Centre Of Gravity In Y</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getCentreOfGravityInY <em>Centre Of Gravity In Y</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Centre Of Gravity In Y</em>' attribute.
+	 * @param value the new value of the '<em>Centre Of Gravity In Y</em>' reference.
 	 * @see #isSetCentreOfGravityInY()
 	 * @see #unsetCentreOfGravityInY()
 	 * @see #getCentreOfGravityInY()
 	 * @generated
 	 */
-	void setCentreOfGravityInY(float value);
+	void setCentreOfGravityInY(IfcPositiveLengthMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getCentreOfGravityInY <em>Centre Of Gravity In Y</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getCentreOfGravityInY <em>Centre Of Gravity In Y</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetCentreOfGravityInY()
 	 * @see #getCentreOfGravityInY()
-	 * @see #setCentreOfGravityInY(float)
+	 * @see #setCentreOfGravityInY(IfcPositiveLengthMeasure)
 	 * @generated
 	 */
 	void unsetCentreOfGravityInY();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getCentreOfGravityInY <em>Centre Of Gravity In Y</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getCentreOfGravityInY <em>Centre Of Gravity In Y</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Centre Of Gravity In Y</em>' attribute is set.
+	 * @return whether the value of the '<em>Centre Of Gravity In Y</em>' reference is set.
 	 * @see #unsetCentreOfGravityInY()
 	 * @see #getCentreOfGravityInY()
-	 * @see #setCentreOfGravityInY(float)
+	 * @see #setCentreOfGravityInY(IfcPositiveLengthMeasure)
 	 * @generated
 	 */
 	boolean isSetCentreOfGravityInY();
-
-	/**
-	 * Returns the value of the '<em><b>Centre Of Gravity In YAs String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Centre Of Gravity In YAs String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Centre Of Gravity In YAs String</em>' attribute.
-	 * @see #isSetCentreOfGravityInYAsString()
-	 * @see #unsetCentreOfGravityInYAsString()
-	 * @see #setCentreOfGravityInYAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTShapeProfileDef_CentreOfGravityInYAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getCentreOfGravityInYAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getCentreOfGravityInYAsString <em>Centre Of Gravity In YAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Centre Of Gravity In YAs String</em>' attribute.
-	 * @see #isSetCentreOfGravityInYAsString()
-	 * @see #unsetCentreOfGravityInYAsString()
-	 * @see #getCentreOfGravityInYAsString()
-	 * @generated
-	 */
-	void setCentreOfGravityInYAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getCentreOfGravityInYAsString <em>Centre Of Gravity In YAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetCentreOfGravityInYAsString()
-	 * @see #getCentreOfGravityInYAsString()
-	 * @see #setCentreOfGravityInYAsString(String)
-	 * @generated
-	 */
-	void unsetCentreOfGravityInYAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef#getCentreOfGravityInYAsString <em>Centre Of Gravity In YAs String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Centre Of Gravity In YAs String</em>' attribute is set.
-	 * @see #unsetCentreOfGravityInYAsString()
-	 * @see #getCentreOfGravityInYAsString()
-	 * @see #setCentreOfGravityInYAsString(String)
-	 * @generated
-	 */
-	boolean isSetCentreOfGravityInYAsString();
 
 } // IfcTShapeProfileDef

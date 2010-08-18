@@ -24,6 +24,7 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcThermalExpansionCoefficientMeasure;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -34,7 +35,7 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcThermalExpansionCoefficientMeasureImpl#getWrappedValue <em>Wrapped Value</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcThermalExpansionCoefficientMeasureImpl#getWrappedValueAsString <em>Wrapped Value As String</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcThermalExpansionCoefficientMeasureImpl#getStringValuewrappedValue <em>String Valuewrapped Value</em>}</li>
  * </ul>
  * </p>
  *
@@ -83,8 +84,8 @@ public class IfcThermalExpansionCoefficientMeasureImpl extends WrappedValueImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getWrappedValueAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcThermalExpansionCoefficientMeasure_WrappedValueAsString(), true);
+	public String getStringValuewrappedValue() {
+		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcThermalExpansionCoefficientMeasure_StringValuewrappedValue(), true);
 	}
 
 	/**
@@ -92,8 +93,8 @@ public class IfcThermalExpansionCoefficientMeasureImpl extends WrappedValueImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setWrappedValueAsString(String newWrappedValueAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcThermalExpansionCoefficientMeasure_WrappedValueAsString(), newWrappedValueAsString);
+	public void setStringValuewrappedValue(String newStringValuewrappedValue) {
+		eSet(Ifc2x3Package.eINSTANCE.getIfcThermalExpansionCoefficientMeasure_StringValuewrappedValue(), newStringValuewrappedValue);
 	}
 
 } //IfcThermalExpansionCoefficientMeasureImpl

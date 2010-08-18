@@ -31,13 +31,9 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcProductsOfCombustionProperties#getSpecificHeatCapacity <em>Specific Heat Capacity</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcProductsOfCombustionProperties#getSpecificHeatCapacityAsString <em>Specific Heat Capacity As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcProductsOfCombustionProperties#getN20Content <em>N20 Content</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcProductsOfCombustionProperties#getN20ContentAsString <em>N20 Content As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcProductsOfCombustionProperties#getCOContent <em>CO Content</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcProductsOfCombustionProperties#getCOContentAsString <em>CO Content As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcProductsOfCombustionProperties#getCO2Content <em>CO2 Content</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcProductsOfCombustionProperties#getCO2ContentAsString <em>CO2 Content As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -47,427 +43,215 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcProductsOfCombustionProperties extends IfcMaterialProperties {
 	/**
-	 * Returns the value of the '<em><b>Specific Heat Capacity</b></em>' attribute.
+	 * Returns the value of the '<em><b>Specific Heat Capacity</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Specific Heat Capacity</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Specific Heat Capacity</em>' attribute.
+	 * @return the value of the '<em>Specific Heat Capacity</em>' reference.
 	 * @see #isSetSpecificHeatCapacity()
 	 * @see #unsetSpecificHeatCapacity()
-	 * @see #setSpecificHeatCapacity(float)
+	 * @see #setSpecificHeatCapacity(IfcSpecificHeatCapacityMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcProductsOfCombustionProperties_SpecificHeatCapacity()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getSpecificHeatCapacity();
+	IfcSpecificHeatCapacityMeasure getSpecificHeatCapacity();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProductsOfCombustionProperties#getSpecificHeatCapacity <em>Specific Heat Capacity</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProductsOfCombustionProperties#getSpecificHeatCapacity <em>Specific Heat Capacity</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Specific Heat Capacity</em>' attribute.
+	 * @param value the new value of the '<em>Specific Heat Capacity</em>' reference.
 	 * @see #isSetSpecificHeatCapacity()
 	 * @see #unsetSpecificHeatCapacity()
 	 * @see #getSpecificHeatCapacity()
 	 * @generated
 	 */
-	void setSpecificHeatCapacity(float value);
+	void setSpecificHeatCapacity(IfcSpecificHeatCapacityMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProductsOfCombustionProperties#getSpecificHeatCapacity <em>Specific Heat Capacity</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProductsOfCombustionProperties#getSpecificHeatCapacity <em>Specific Heat Capacity</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetSpecificHeatCapacity()
 	 * @see #getSpecificHeatCapacity()
-	 * @see #setSpecificHeatCapacity(float)
+	 * @see #setSpecificHeatCapacity(IfcSpecificHeatCapacityMeasure)
 	 * @generated
 	 */
 	void unsetSpecificHeatCapacity();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProductsOfCombustionProperties#getSpecificHeatCapacity <em>Specific Heat Capacity</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProductsOfCombustionProperties#getSpecificHeatCapacity <em>Specific Heat Capacity</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Specific Heat Capacity</em>' attribute is set.
+	 * @return whether the value of the '<em>Specific Heat Capacity</em>' reference is set.
 	 * @see #unsetSpecificHeatCapacity()
 	 * @see #getSpecificHeatCapacity()
-	 * @see #setSpecificHeatCapacity(float)
+	 * @see #setSpecificHeatCapacity(IfcSpecificHeatCapacityMeasure)
 	 * @generated
 	 */
 	boolean isSetSpecificHeatCapacity();
 
 	/**
-	 * Returns the value of the '<em><b>Specific Heat Capacity As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Specific Heat Capacity As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Specific Heat Capacity As String</em>' attribute.
-	 * @see #isSetSpecificHeatCapacityAsString()
-	 * @see #unsetSpecificHeatCapacityAsString()
-	 * @see #setSpecificHeatCapacityAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcProductsOfCombustionProperties_SpecificHeatCapacityAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getSpecificHeatCapacityAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProductsOfCombustionProperties#getSpecificHeatCapacityAsString <em>Specific Heat Capacity As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Specific Heat Capacity As String</em>' attribute.
-	 * @see #isSetSpecificHeatCapacityAsString()
-	 * @see #unsetSpecificHeatCapacityAsString()
-	 * @see #getSpecificHeatCapacityAsString()
-	 * @generated
-	 */
-	void setSpecificHeatCapacityAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProductsOfCombustionProperties#getSpecificHeatCapacityAsString <em>Specific Heat Capacity As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetSpecificHeatCapacityAsString()
-	 * @see #getSpecificHeatCapacityAsString()
-	 * @see #setSpecificHeatCapacityAsString(String)
-	 * @generated
-	 */
-	void unsetSpecificHeatCapacityAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProductsOfCombustionProperties#getSpecificHeatCapacityAsString <em>Specific Heat Capacity As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Specific Heat Capacity As String</em>' attribute is set.
-	 * @see #unsetSpecificHeatCapacityAsString()
-	 * @see #getSpecificHeatCapacityAsString()
-	 * @see #setSpecificHeatCapacityAsString(String)
-	 * @generated
-	 */
-	boolean isSetSpecificHeatCapacityAsString();
-
-	/**
-	 * Returns the value of the '<em><b>N20 Content</b></em>' attribute.
+	 * Returns the value of the '<em><b>N20 Content</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>N20 Content</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>N20 Content</em>' attribute.
+	 * @return the value of the '<em>N20 Content</em>' reference.
 	 * @see #isSetN20Content()
 	 * @see #unsetN20Content()
-	 * @see #setN20Content(float)
+	 * @see #setN20Content(IfcPositiveRatioMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcProductsOfCombustionProperties_N20Content()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getN20Content();
+	IfcPositiveRatioMeasure getN20Content();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProductsOfCombustionProperties#getN20Content <em>N20 Content</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProductsOfCombustionProperties#getN20Content <em>N20 Content</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>N20 Content</em>' attribute.
+	 * @param value the new value of the '<em>N20 Content</em>' reference.
 	 * @see #isSetN20Content()
 	 * @see #unsetN20Content()
 	 * @see #getN20Content()
 	 * @generated
 	 */
-	void setN20Content(float value);
+	void setN20Content(IfcPositiveRatioMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProductsOfCombustionProperties#getN20Content <em>N20 Content</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProductsOfCombustionProperties#getN20Content <em>N20 Content</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetN20Content()
 	 * @see #getN20Content()
-	 * @see #setN20Content(float)
+	 * @see #setN20Content(IfcPositiveRatioMeasure)
 	 * @generated
 	 */
 	void unsetN20Content();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProductsOfCombustionProperties#getN20Content <em>N20 Content</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProductsOfCombustionProperties#getN20Content <em>N20 Content</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>N20 Content</em>' attribute is set.
+	 * @return whether the value of the '<em>N20 Content</em>' reference is set.
 	 * @see #unsetN20Content()
 	 * @see #getN20Content()
-	 * @see #setN20Content(float)
+	 * @see #setN20Content(IfcPositiveRatioMeasure)
 	 * @generated
 	 */
 	boolean isSetN20Content();
 
 	/**
-	 * Returns the value of the '<em><b>N20 Content As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>N20 Content As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>N20 Content As String</em>' attribute.
-	 * @see #isSetN20ContentAsString()
-	 * @see #unsetN20ContentAsString()
-	 * @see #setN20ContentAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcProductsOfCombustionProperties_N20ContentAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getN20ContentAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProductsOfCombustionProperties#getN20ContentAsString <em>N20 Content As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>N20 Content As String</em>' attribute.
-	 * @see #isSetN20ContentAsString()
-	 * @see #unsetN20ContentAsString()
-	 * @see #getN20ContentAsString()
-	 * @generated
-	 */
-	void setN20ContentAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProductsOfCombustionProperties#getN20ContentAsString <em>N20 Content As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetN20ContentAsString()
-	 * @see #getN20ContentAsString()
-	 * @see #setN20ContentAsString(String)
-	 * @generated
-	 */
-	void unsetN20ContentAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProductsOfCombustionProperties#getN20ContentAsString <em>N20 Content As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>N20 Content As String</em>' attribute is set.
-	 * @see #unsetN20ContentAsString()
-	 * @see #getN20ContentAsString()
-	 * @see #setN20ContentAsString(String)
-	 * @generated
-	 */
-	boolean isSetN20ContentAsString();
-
-	/**
-	 * Returns the value of the '<em><b>CO Content</b></em>' attribute.
+	 * Returns the value of the '<em><b>CO Content</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>CO Content</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>CO Content</em>' attribute.
+	 * @return the value of the '<em>CO Content</em>' reference.
 	 * @see #isSetCOContent()
 	 * @see #unsetCOContent()
-	 * @see #setCOContent(float)
+	 * @see #setCOContent(IfcPositiveRatioMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcProductsOfCombustionProperties_COContent()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getCOContent();
+	IfcPositiveRatioMeasure getCOContent();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProductsOfCombustionProperties#getCOContent <em>CO Content</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProductsOfCombustionProperties#getCOContent <em>CO Content</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>CO Content</em>' attribute.
+	 * @param value the new value of the '<em>CO Content</em>' reference.
 	 * @see #isSetCOContent()
 	 * @see #unsetCOContent()
 	 * @see #getCOContent()
 	 * @generated
 	 */
-	void setCOContent(float value);
+	void setCOContent(IfcPositiveRatioMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProductsOfCombustionProperties#getCOContent <em>CO Content</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProductsOfCombustionProperties#getCOContent <em>CO Content</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetCOContent()
 	 * @see #getCOContent()
-	 * @see #setCOContent(float)
+	 * @see #setCOContent(IfcPositiveRatioMeasure)
 	 * @generated
 	 */
 	void unsetCOContent();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProductsOfCombustionProperties#getCOContent <em>CO Content</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProductsOfCombustionProperties#getCOContent <em>CO Content</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>CO Content</em>' attribute is set.
+	 * @return whether the value of the '<em>CO Content</em>' reference is set.
 	 * @see #unsetCOContent()
 	 * @see #getCOContent()
-	 * @see #setCOContent(float)
+	 * @see #setCOContent(IfcPositiveRatioMeasure)
 	 * @generated
 	 */
 	boolean isSetCOContent();
 
 	/**
-	 * Returns the value of the '<em><b>CO Content As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>CO Content As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>CO Content As String</em>' attribute.
-	 * @see #isSetCOContentAsString()
-	 * @see #unsetCOContentAsString()
-	 * @see #setCOContentAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcProductsOfCombustionProperties_COContentAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getCOContentAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProductsOfCombustionProperties#getCOContentAsString <em>CO Content As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>CO Content As String</em>' attribute.
-	 * @see #isSetCOContentAsString()
-	 * @see #unsetCOContentAsString()
-	 * @see #getCOContentAsString()
-	 * @generated
-	 */
-	void setCOContentAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProductsOfCombustionProperties#getCOContentAsString <em>CO Content As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetCOContentAsString()
-	 * @see #getCOContentAsString()
-	 * @see #setCOContentAsString(String)
-	 * @generated
-	 */
-	void unsetCOContentAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProductsOfCombustionProperties#getCOContentAsString <em>CO Content As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>CO Content As String</em>' attribute is set.
-	 * @see #unsetCOContentAsString()
-	 * @see #getCOContentAsString()
-	 * @see #setCOContentAsString(String)
-	 * @generated
-	 */
-	boolean isSetCOContentAsString();
-
-	/**
-	 * Returns the value of the '<em><b>CO2 Content</b></em>' attribute.
+	 * Returns the value of the '<em><b>CO2 Content</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>CO2 Content</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>CO2 Content</em>' attribute.
+	 * @return the value of the '<em>CO2 Content</em>' reference.
 	 * @see #isSetCO2Content()
 	 * @see #unsetCO2Content()
-	 * @see #setCO2Content(float)
+	 * @see #setCO2Content(IfcPositiveRatioMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcProductsOfCombustionProperties_CO2Content()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getCO2Content();
+	IfcPositiveRatioMeasure getCO2Content();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProductsOfCombustionProperties#getCO2Content <em>CO2 Content</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProductsOfCombustionProperties#getCO2Content <em>CO2 Content</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>CO2 Content</em>' attribute.
+	 * @param value the new value of the '<em>CO2 Content</em>' reference.
 	 * @see #isSetCO2Content()
 	 * @see #unsetCO2Content()
 	 * @see #getCO2Content()
 	 * @generated
 	 */
-	void setCO2Content(float value);
+	void setCO2Content(IfcPositiveRatioMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProductsOfCombustionProperties#getCO2Content <em>CO2 Content</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProductsOfCombustionProperties#getCO2Content <em>CO2 Content</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetCO2Content()
 	 * @see #getCO2Content()
-	 * @see #setCO2Content(float)
+	 * @see #setCO2Content(IfcPositiveRatioMeasure)
 	 * @generated
 	 */
 	void unsetCO2Content();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProductsOfCombustionProperties#getCO2Content <em>CO2 Content</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProductsOfCombustionProperties#getCO2Content <em>CO2 Content</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>CO2 Content</em>' attribute is set.
+	 * @return whether the value of the '<em>CO2 Content</em>' reference is set.
 	 * @see #unsetCO2Content()
 	 * @see #getCO2Content()
-	 * @see #setCO2Content(float)
+	 * @see #setCO2Content(IfcPositiveRatioMeasure)
 	 * @generated
 	 */
 	boolean isSetCO2Content();
-
-	/**
-	 * Returns the value of the '<em><b>CO2 Content As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>CO2 Content As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>CO2 Content As String</em>' attribute.
-	 * @see #isSetCO2ContentAsString()
-	 * @see #unsetCO2ContentAsString()
-	 * @see #setCO2ContentAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcProductsOfCombustionProperties_CO2ContentAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getCO2ContentAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProductsOfCombustionProperties#getCO2ContentAsString <em>CO2 Content As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>CO2 Content As String</em>' attribute.
-	 * @see #isSetCO2ContentAsString()
-	 * @see #unsetCO2ContentAsString()
-	 * @see #getCO2ContentAsString()
-	 * @generated
-	 */
-	void setCO2ContentAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProductsOfCombustionProperties#getCO2ContentAsString <em>CO2 Content As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetCO2ContentAsString()
-	 * @see #getCO2ContentAsString()
-	 * @see #setCO2ContentAsString(String)
-	 * @generated
-	 */
-	void unsetCO2ContentAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProductsOfCombustionProperties#getCO2ContentAsString <em>CO2 Content As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>CO2 Content As String</em>' attribute is set.
-	 * @see #unsetCO2ContentAsString()
-	 * @see #getCO2ContentAsString()
-	 * @see #setCO2ContentAsString(String)
-	 * @generated
-	 */
-	boolean isSetCO2ContentAsString();
 
 } // IfcProductsOfCombustionProperties

@@ -23,7 +23,9 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcPositiveLengthMeasure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRoundedRectangleProfileDef;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -34,7 +36,6 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRoundedRectangleProfileDefImpl#getRoundingRadius <em>Rounding Radius</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRoundedRectangleProfileDefImpl#getRoundingRadiusAsString <em>Rounding Radius As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -65,8 +66,8 @@ public class IfcRoundedRectangleProfileDefImpl extends IfcRectangleProfileDefImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getRoundingRadius() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcRoundedRectangleProfileDef_RoundingRadius(), true);
+	public IfcPositiveLengthMeasure getRoundingRadius() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcRoundedRectangleProfileDef_RoundingRadius(), true);
 	}
 
 	/**
@@ -74,26 +75,8 @@ public class IfcRoundedRectangleProfileDefImpl extends IfcRectangleProfileDefImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRoundingRadius(float newRoundingRadius) {
+	public void setRoundingRadius(IfcPositiveLengthMeasure newRoundingRadius) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcRoundedRectangleProfileDef_RoundingRadius(), newRoundingRadius);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getRoundingRadiusAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcRoundedRectangleProfileDef_RoundingRadiusAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRoundingRadiusAsString(String newRoundingRadiusAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcRoundedRectangleProfileDef_RoundingRadiusAsString(), newRoundingRadiusAsString);
 	}
 
 } //IfcRoundedRectangleProfileDefImpl

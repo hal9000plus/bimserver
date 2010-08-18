@@ -31,11 +31,8 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundaryFaceCondition#getLinearStiffnessByAreaX <em>Linear Stiffness By Area X</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundaryFaceCondition#getLinearStiffnessByAreaXAsString <em>Linear Stiffness By Area XAs String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundaryFaceCondition#getLinearStiffnessByAreaY <em>Linear Stiffness By Area Y</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundaryFaceCondition#getLinearStiffnessByAreaYAsString <em>Linear Stiffness By Area YAs String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundaryFaceCondition#getLinearStiffnessByAreaZ <em>Linear Stiffness By Area Z</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundaryFaceCondition#getLinearStiffnessByAreaZAsString <em>Linear Stiffness By Area ZAs String</em>}</li>
  * </ul>
  * </p>
  *
@@ -45,321 +42,162 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcBoundaryFaceCondition extends IfcBoundaryCondition {
 	/**
-	 * Returns the value of the '<em><b>Linear Stiffness By Area X</b></em>' attribute.
+	 * Returns the value of the '<em><b>Linear Stiffness By Area X</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Linear Stiffness By Area X</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Linear Stiffness By Area X</em>' attribute.
+	 * @return the value of the '<em>Linear Stiffness By Area X</em>' reference.
 	 * @see #isSetLinearStiffnessByAreaX()
 	 * @see #unsetLinearStiffnessByAreaX()
-	 * @see #setLinearStiffnessByAreaX(float)
+	 * @see #setLinearStiffnessByAreaX(IfcModulusOfSubgradeReactionMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcBoundaryFaceCondition_LinearStiffnessByAreaX()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getLinearStiffnessByAreaX();
+	IfcModulusOfSubgradeReactionMeasure getLinearStiffnessByAreaX();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundaryFaceCondition#getLinearStiffnessByAreaX <em>Linear Stiffness By Area X</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundaryFaceCondition#getLinearStiffnessByAreaX <em>Linear Stiffness By Area X</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Linear Stiffness By Area X</em>' attribute.
+	 * @param value the new value of the '<em>Linear Stiffness By Area X</em>' reference.
 	 * @see #isSetLinearStiffnessByAreaX()
 	 * @see #unsetLinearStiffnessByAreaX()
 	 * @see #getLinearStiffnessByAreaX()
 	 * @generated
 	 */
-	void setLinearStiffnessByAreaX(float value);
+	void setLinearStiffnessByAreaX(IfcModulusOfSubgradeReactionMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundaryFaceCondition#getLinearStiffnessByAreaX <em>Linear Stiffness By Area X</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundaryFaceCondition#getLinearStiffnessByAreaX <em>Linear Stiffness By Area X</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetLinearStiffnessByAreaX()
 	 * @see #getLinearStiffnessByAreaX()
-	 * @see #setLinearStiffnessByAreaX(float)
+	 * @see #setLinearStiffnessByAreaX(IfcModulusOfSubgradeReactionMeasure)
 	 * @generated
 	 */
 	void unsetLinearStiffnessByAreaX();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundaryFaceCondition#getLinearStiffnessByAreaX <em>Linear Stiffness By Area X</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundaryFaceCondition#getLinearStiffnessByAreaX <em>Linear Stiffness By Area X</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Linear Stiffness By Area X</em>' attribute is set.
+	 * @return whether the value of the '<em>Linear Stiffness By Area X</em>' reference is set.
 	 * @see #unsetLinearStiffnessByAreaX()
 	 * @see #getLinearStiffnessByAreaX()
-	 * @see #setLinearStiffnessByAreaX(float)
+	 * @see #setLinearStiffnessByAreaX(IfcModulusOfSubgradeReactionMeasure)
 	 * @generated
 	 */
 	boolean isSetLinearStiffnessByAreaX();
 
 	/**
-	 * Returns the value of the '<em><b>Linear Stiffness By Area XAs String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Linear Stiffness By Area XAs String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Linear Stiffness By Area XAs String</em>' attribute.
-	 * @see #isSetLinearStiffnessByAreaXAsString()
-	 * @see #unsetLinearStiffnessByAreaXAsString()
-	 * @see #setLinearStiffnessByAreaXAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcBoundaryFaceCondition_LinearStiffnessByAreaXAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getLinearStiffnessByAreaXAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundaryFaceCondition#getLinearStiffnessByAreaXAsString <em>Linear Stiffness By Area XAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Linear Stiffness By Area XAs String</em>' attribute.
-	 * @see #isSetLinearStiffnessByAreaXAsString()
-	 * @see #unsetLinearStiffnessByAreaXAsString()
-	 * @see #getLinearStiffnessByAreaXAsString()
-	 * @generated
-	 */
-	void setLinearStiffnessByAreaXAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundaryFaceCondition#getLinearStiffnessByAreaXAsString <em>Linear Stiffness By Area XAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetLinearStiffnessByAreaXAsString()
-	 * @see #getLinearStiffnessByAreaXAsString()
-	 * @see #setLinearStiffnessByAreaXAsString(String)
-	 * @generated
-	 */
-	void unsetLinearStiffnessByAreaXAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundaryFaceCondition#getLinearStiffnessByAreaXAsString <em>Linear Stiffness By Area XAs String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Linear Stiffness By Area XAs String</em>' attribute is set.
-	 * @see #unsetLinearStiffnessByAreaXAsString()
-	 * @see #getLinearStiffnessByAreaXAsString()
-	 * @see #setLinearStiffnessByAreaXAsString(String)
-	 * @generated
-	 */
-	boolean isSetLinearStiffnessByAreaXAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Linear Stiffness By Area Y</b></em>' attribute.
+	 * Returns the value of the '<em><b>Linear Stiffness By Area Y</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Linear Stiffness By Area Y</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Linear Stiffness By Area Y</em>' attribute.
+	 * @return the value of the '<em>Linear Stiffness By Area Y</em>' reference.
 	 * @see #isSetLinearStiffnessByAreaY()
 	 * @see #unsetLinearStiffnessByAreaY()
-	 * @see #setLinearStiffnessByAreaY(float)
+	 * @see #setLinearStiffnessByAreaY(IfcModulusOfSubgradeReactionMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcBoundaryFaceCondition_LinearStiffnessByAreaY()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getLinearStiffnessByAreaY();
+	IfcModulusOfSubgradeReactionMeasure getLinearStiffnessByAreaY();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundaryFaceCondition#getLinearStiffnessByAreaY <em>Linear Stiffness By Area Y</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundaryFaceCondition#getLinearStiffnessByAreaY <em>Linear Stiffness By Area Y</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Linear Stiffness By Area Y</em>' attribute.
+	 * @param value the new value of the '<em>Linear Stiffness By Area Y</em>' reference.
 	 * @see #isSetLinearStiffnessByAreaY()
 	 * @see #unsetLinearStiffnessByAreaY()
 	 * @see #getLinearStiffnessByAreaY()
 	 * @generated
 	 */
-	void setLinearStiffnessByAreaY(float value);
+	void setLinearStiffnessByAreaY(IfcModulusOfSubgradeReactionMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundaryFaceCondition#getLinearStiffnessByAreaY <em>Linear Stiffness By Area Y</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundaryFaceCondition#getLinearStiffnessByAreaY <em>Linear Stiffness By Area Y</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetLinearStiffnessByAreaY()
 	 * @see #getLinearStiffnessByAreaY()
-	 * @see #setLinearStiffnessByAreaY(float)
+	 * @see #setLinearStiffnessByAreaY(IfcModulusOfSubgradeReactionMeasure)
 	 * @generated
 	 */
 	void unsetLinearStiffnessByAreaY();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundaryFaceCondition#getLinearStiffnessByAreaY <em>Linear Stiffness By Area Y</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundaryFaceCondition#getLinearStiffnessByAreaY <em>Linear Stiffness By Area Y</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Linear Stiffness By Area Y</em>' attribute is set.
+	 * @return whether the value of the '<em>Linear Stiffness By Area Y</em>' reference is set.
 	 * @see #unsetLinearStiffnessByAreaY()
 	 * @see #getLinearStiffnessByAreaY()
-	 * @see #setLinearStiffnessByAreaY(float)
+	 * @see #setLinearStiffnessByAreaY(IfcModulusOfSubgradeReactionMeasure)
 	 * @generated
 	 */
 	boolean isSetLinearStiffnessByAreaY();
 
 	/**
-	 * Returns the value of the '<em><b>Linear Stiffness By Area YAs String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Linear Stiffness By Area YAs String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Linear Stiffness By Area YAs String</em>' attribute.
-	 * @see #isSetLinearStiffnessByAreaYAsString()
-	 * @see #unsetLinearStiffnessByAreaYAsString()
-	 * @see #setLinearStiffnessByAreaYAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcBoundaryFaceCondition_LinearStiffnessByAreaYAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getLinearStiffnessByAreaYAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundaryFaceCondition#getLinearStiffnessByAreaYAsString <em>Linear Stiffness By Area YAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Linear Stiffness By Area YAs String</em>' attribute.
-	 * @see #isSetLinearStiffnessByAreaYAsString()
-	 * @see #unsetLinearStiffnessByAreaYAsString()
-	 * @see #getLinearStiffnessByAreaYAsString()
-	 * @generated
-	 */
-	void setLinearStiffnessByAreaYAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundaryFaceCondition#getLinearStiffnessByAreaYAsString <em>Linear Stiffness By Area YAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetLinearStiffnessByAreaYAsString()
-	 * @see #getLinearStiffnessByAreaYAsString()
-	 * @see #setLinearStiffnessByAreaYAsString(String)
-	 * @generated
-	 */
-	void unsetLinearStiffnessByAreaYAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundaryFaceCondition#getLinearStiffnessByAreaYAsString <em>Linear Stiffness By Area YAs String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Linear Stiffness By Area YAs String</em>' attribute is set.
-	 * @see #unsetLinearStiffnessByAreaYAsString()
-	 * @see #getLinearStiffnessByAreaYAsString()
-	 * @see #setLinearStiffnessByAreaYAsString(String)
-	 * @generated
-	 */
-	boolean isSetLinearStiffnessByAreaYAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Linear Stiffness By Area Z</b></em>' attribute.
+	 * Returns the value of the '<em><b>Linear Stiffness By Area Z</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Linear Stiffness By Area Z</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Linear Stiffness By Area Z</em>' attribute.
+	 * @return the value of the '<em>Linear Stiffness By Area Z</em>' reference.
 	 * @see #isSetLinearStiffnessByAreaZ()
 	 * @see #unsetLinearStiffnessByAreaZ()
-	 * @see #setLinearStiffnessByAreaZ(float)
+	 * @see #setLinearStiffnessByAreaZ(IfcModulusOfSubgradeReactionMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcBoundaryFaceCondition_LinearStiffnessByAreaZ()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getLinearStiffnessByAreaZ();
+	IfcModulusOfSubgradeReactionMeasure getLinearStiffnessByAreaZ();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundaryFaceCondition#getLinearStiffnessByAreaZ <em>Linear Stiffness By Area Z</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundaryFaceCondition#getLinearStiffnessByAreaZ <em>Linear Stiffness By Area Z</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Linear Stiffness By Area Z</em>' attribute.
+	 * @param value the new value of the '<em>Linear Stiffness By Area Z</em>' reference.
 	 * @see #isSetLinearStiffnessByAreaZ()
 	 * @see #unsetLinearStiffnessByAreaZ()
 	 * @see #getLinearStiffnessByAreaZ()
 	 * @generated
 	 */
-	void setLinearStiffnessByAreaZ(float value);
+	void setLinearStiffnessByAreaZ(IfcModulusOfSubgradeReactionMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundaryFaceCondition#getLinearStiffnessByAreaZ <em>Linear Stiffness By Area Z</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundaryFaceCondition#getLinearStiffnessByAreaZ <em>Linear Stiffness By Area Z</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetLinearStiffnessByAreaZ()
 	 * @see #getLinearStiffnessByAreaZ()
-	 * @see #setLinearStiffnessByAreaZ(float)
+	 * @see #setLinearStiffnessByAreaZ(IfcModulusOfSubgradeReactionMeasure)
 	 * @generated
 	 */
 	void unsetLinearStiffnessByAreaZ();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundaryFaceCondition#getLinearStiffnessByAreaZ <em>Linear Stiffness By Area Z</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundaryFaceCondition#getLinearStiffnessByAreaZ <em>Linear Stiffness By Area Z</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Linear Stiffness By Area Z</em>' attribute is set.
+	 * @return whether the value of the '<em>Linear Stiffness By Area Z</em>' reference is set.
 	 * @see #unsetLinearStiffnessByAreaZ()
 	 * @see #getLinearStiffnessByAreaZ()
-	 * @see #setLinearStiffnessByAreaZ(float)
+	 * @see #setLinearStiffnessByAreaZ(IfcModulusOfSubgradeReactionMeasure)
 	 * @generated
 	 */
 	boolean isSetLinearStiffnessByAreaZ();
-
-	/**
-	 * Returns the value of the '<em><b>Linear Stiffness By Area ZAs String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Linear Stiffness By Area ZAs String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Linear Stiffness By Area ZAs String</em>' attribute.
-	 * @see #isSetLinearStiffnessByAreaZAsString()
-	 * @see #unsetLinearStiffnessByAreaZAsString()
-	 * @see #setLinearStiffnessByAreaZAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcBoundaryFaceCondition_LinearStiffnessByAreaZAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getLinearStiffnessByAreaZAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundaryFaceCondition#getLinearStiffnessByAreaZAsString <em>Linear Stiffness By Area ZAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Linear Stiffness By Area ZAs String</em>' attribute.
-	 * @see #isSetLinearStiffnessByAreaZAsString()
-	 * @see #unsetLinearStiffnessByAreaZAsString()
-	 * @see #getLinearStiffnessByAreaZAsString()
-	 * @generated
-	 */
-	void setLinearStiffnessByAreaZAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundaryFaceCondition#getLinearStiffnessByAreaZAsString <em>Linear Stiffness By Area ZAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetLinearStiffnessByAreaZAsString()
-	 * @see #getLinearStiffnessByAreaZAsString()
-	 * @see #setLinearStiffnessByAreaZAsString(String)
-	 * @generated
-	 */
-	void unsetLinearStiffnessByAreaZAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundaryFaceCondition#getLinearStiffnessByAreaZAsString <em>Linear Stiffness By Area ZAs String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Linear Stiffness By Area ZAs String</em>' attribute is set.
-	 * @see #unsetLinearStiffnessByAreaZAsString()
-	 * @see #getLinearStiffnessByAreaZAsString()
-	 * @see #setLinearStiffnessByAreaZAsString(String)
-	 * @generated
-	 */
-	boolean isSetLinearStiffnessByAreaZAsString();
 
 } // IfcBoundaryFaceCondition

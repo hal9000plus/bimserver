@@ -32,7 +32,6 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeometricRepresentationSubContext#getParentContext <em>Parent Context</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeometricRepresentationSubContext#getTargetScale <em>Target Scale</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeometricRepresentationSubContext#getTargetScaleAsString <em>Target Scale As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeometricRepresentationSubContext#getTargetView <em>Target View</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeometricRepresentationSubContext#getUserDefinedTargetView <em>User Defined Target View</em>}</li>
  * </ul>
@@ -72,110 +71,57 @@ public interface IfcGeometricRepresentationSubContext extends IfcGeometricRepres
 	void setParentContext(IfcGeometricRepresentationContext value);
 
 	/**
-	 * Returns the value of the '<em><b>Target Scale</b></em>' attribute.
+	 * Returns the value of the '<em><b>Target Scale</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Target Scale</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Target Scale</em>' attribute.
+	 * @return the value of the '<em>Target Scale</em>' reference.
 	 * @see #isSetTargetScale()
 	 * @see #unsetTargetScale()
-	 * @see #setTargetScale(float)
+	 * @see #setTargetScale(IfcPositiveRatioMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcGeometricRepresentationSubContext_TargetScale()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getTargetScale();
+	IfcPositiveRatioMeasure getTargetScale();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeometricRepresentationSubContext#getTargetScale <em>Target Scale</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeometricRepresentationSubContext#getTargetScale <em>Target Scale</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Target Scale</em>' attribute.
+	 * @param value the new value of the '<em>Target Scale</em>' reference.
 	 * @see #isSetTargetScale()
 	 * @see #unsetTargetScale()
 	 * @see #getTargetScale()
 	 * @generated
 	 */
-	void setTargetScale(float value);
+	void setTargetScale(IfcPositiveRatioMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeometricRepresentationSubContext#getTargetScale <em>Target Scale</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeometricRepresentationSubContext#getTargetScale <em>Target Scale</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetTargetScale()
 	 * @see #getTargetScale()
-	 * @see #setTargetScale(float)
+	 * @see #setTargetScale(IfcPositiveRatioMeasure)
 	 * @generated
 	 */
 	void unsetTargetScale();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeometricRepresentationSubContext#getTargetScale <em>Target Scale</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeometricRepresentationSubContext#getTargetScale <em>Target Scale</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Target Scale</em>' attribute is set.
+	 * @return whether the value of the '<em>Target Scale</em>' reference is set.
 	 * @see #unsetTargetScale()
 	 * @see #getTargetScale()
-	 * @see #setTargetScale(float)
+	 * @see #setTargetScale(IfcPositiveRatioMeasure)
 	 * @generated
 	 */
 	boolean isSetTargetScale();
-
-	/**
-	 * Returns the value of the '<em><b>Target Scale As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Target Scale As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Target Scale As String</em>' attribute.
-	 * @see #isSetTargetScaleAsString()
-	 * @see #unsetTargetScaleAsString()
-	 * @see #setTargetScaleAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcGeometricRepresentationSubContext_TargetScaleAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getTargetScaleAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeometricRepresentationSubContext#getTargetScaleAsString <em>Target Scale As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Target Scale As String</em>' attribute.
-	 * @see #isSetTargetScaleAsString()
-	 * @see #unsetTargetScaleAsString()
-	 * @see #getTargetScaleAsString()
-	 * @generated
-	 */
-	void setTargetScaleAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeometricRepresentationSubContext#getTargetScaleAsString <em>Target Scale As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetTargetScaleAsString()
-	 * @see #getTargetScaleAsString()
-	 * @see #setTargetScaleAsString(String)
-	 * @generated
-	 */
-	void unsetTargetScaleAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeometricRepresentationSubContext#getTargetScaleAsString <em>Target Scale As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Target Scale As String</em>' attribute is set.
-	 * @see #unsetTargetScaleAsString()
-	 * @see #getTargetScaleAsString()
-	 * @see #setTargetScaleAsString(String)
-	 * @generated
-	 */
-	boolean isSetTargetScaleAsString();
 
 	/**
 	 * Returns the value of the '<em><b>Target View</b></em>' attribute.
@@ -207,54 +153,54 @@ public interface IfcGeometricRepresentationSubContext extends IfcGeometricRepres
 	void setTargetView(IfcGeometricProjectionEnum value);
 
 	/**
-	 * Returns the value of the '<em><b>User Defined Target View</b></em>' attribute.
+	 * Returns the value of the '<em><b>User Defined Target View</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>User Defined Target View</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>User Defined Target View</em>' attribute.
+	 * @return the value of the '<em>User Defined Target View</em>' reference.
 	 * @see #isSetUserDefinedTargetView()
 	 * @see #unsetUserDefinedTargetView()
-	 * @see #setUserDefinedTargetView(String)
+	 * @see #setUserDefinedTargetView(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcGeometricRepresentationSubContext_UserDefinedTargetView()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getUserDefinedTargetView();
+	IfcLabel getUserDefinedTargetView();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeometricRepresentationSubContext#getUserDefinedTargetView <em>User Defined Target View</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeometricRepresentationSubContext#getUserDefinedTargetView <em>User Defined Target View</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>User Defined Target View</em>' attribute.
+	 * @param value the new value of the '<em>User Defined Target View</em>' reference.
 	 * @see #isSetUserDefinedTargetView()
 	 * @see #unsetUserDefinedTargetView()
 	 * @see #getUserDefinedTargetView()
 	 * @generated
 	 */
-	void setUserDefinedTargetView(String value);
+	void setUserDefinedTargetView(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeometricRepresentationSubContext#getUserDefinedTargetView <em>User Defined Target View</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeometricRepresentationSubContext#getUserDefinedTargetView <em>User Defined Target View</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetUserDefinedTargetView()
 	 * @see #getUserDefinedTargetView()
-	 * @see #setUserDefinedTargetView(String)
+	 * @see #setUserDefinedTargetView(IfcLabel)
 	 * @generated
 	 */
 	void unsetUserDefinedTargetView();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeometricRepresentationSubContext#getUserDefinedTargetView <em>User Defined Target View</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeometricRepresentationSubContext#getUserDefinedTargetView <em>User Defined Target View</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>User Defined Target View</em>' attribute is set.
+	 * @return whether the value of the '<em>User Defined Target View</em>' reference is set.
 	 * @see #unsetUserDefinedTargetView()
 	 * @see #getUserDefinedTargetView()
-	 * @see #setUserDefinedTargetView(String)
+	 * @see #setUserDefinedTargetView(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetUserDefinedTargetView();

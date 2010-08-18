@@ -24,6 +24,8 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcCenterLineProfileDef;
+import org.bimserver.ifc.emf.Ifc2x3.IfcPositiveLengthMeasure;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -34,7 +36,6 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcCenterLineProfileDefImpl#getThickness <em>Thickness</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcCenterLineProfileDefImpl#getThicknessAsString <em>Thickness As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -65,8 +66,8 @@ public class IfcCenterLineProfileDefImpl extends IfcArbitraryOpenProfileDefImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getThickness() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcCenterLineProfileDef_Thickness(), true);
+	public IfcPositiveLengthMeasure getThickness() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcCenterLineProfileDef_Thickness(), true);
 	}
 
 	/**
@@ -74,26 +75,8 @@ public class IfcCenterLineProfileDefImpl extends IfcArbitraryOpenProfileDefImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setThickness(float newThickness) {
+	public void setThickness(IfcPositiveLengthMeasure newThickness) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcCenterLineProfileDef_Thickness(), newThickness);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getThicknessAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcCenterLineProfileDef_ThicknessAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setThicknessAsString(String newThicknessAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcCenterLineProfileDef_ThicknessAsString(), newThicknessAsString);
 	}
 
 } //IfcCenterLineProfileDefImpl

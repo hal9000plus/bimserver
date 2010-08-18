@@ -33,7 +33,6 @@ package org.bimserver.ifc.emf.Ifc2x3;
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcLocalTime#getHourComponent <em>Hour Component</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcLocalTime#getMinuteComponent <em>Minute Component</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcLocalTime#getSecondComponent <em>Second Component</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcLocalTime#getSecondComponentAsString <em>Second Component As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcLocalTime#getZone <em>Zone</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcLocalTime#getDaylightSavingOffset <em>Daylight Saving Offset</em>}</li>
  * </ul>
@@ -45,189 +44,136 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcLocalTime extends IfcDateTimeSelect, IfcObjectReferenceSelect {
 	/**
-	 * Returns the value of the '<em><b>Hour Component</b></em>' attribute.
+	 * Returns the value of the '<em><b>Hour Component</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Hour Component</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Hour Component</em>' attribute.
-	 * @see #setHourComponent(int)
+	 * @return the value of the '<em>Hour Component</em>' reference.
+	 * @see #setHourComponent(IfcHourInDay)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcLocalTime_HourComponent()
 	 * @model
 	 * @generated
 	 */
-	int getHourComponent();
+	IfcHourInDay getHourComponent();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLocalTime#getHourComponent <em>Hour Component</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLocalTime#getHourComponent <em>Hour Component</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Hour Component</em>' attribute.
+	 * @param value the new value of the '<em>Hour Component</em>' reference.
 	 * @see #getHourComponent()
 	 * @generated
 	 */
-	void setHourComponent(int value);
+	void setHourComponent(IfcHourInDay value);
 
 	/**
-	 * Returns the value of the '<em><b>Minute Component</b></em>' attribute.
+	 * Returns the value of the '<em><b>Minute Component</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Minute Component</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Minute Component</em>' attribute.
+	 * @return the value of the '<em>Minute Component</em>' reference.
 	 * @see #isSetMinuteComponent()
 	 * @see #unsetMinuteComponent()
-	 * @see #setMinuteComponent(int)
+	 * @see #setMinuteComponent(IfcMinuteInHour)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcLocalTime_MinuteComponent()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	int getMinuteComponent();
+	IfcMinuteInHour getMinuteComponent();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLocalTime#getMinuteComponent <em>Minute Component</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLocalTime#getMinuteComponent <em>Minute Component</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Minute Component</em>' attribute.
+	 * @param value the new value of the '<em>Minute Component</em>' reference.
 	 * @see #isSetMinuteComponent()
 	 * @see #unsetMinuteComponent()
 	 * @see #getMinuteComponent()
 	 * @generated
 	 */
-	void setMinuteComponent(int value);
+	void setMinuteComponent(IfcMinuteInHour value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLocalTime#getMinuteComponent <em>Minute Component</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLocalTime#getMinuteComponent <em>Minute Component</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetMinuteComponent()
 	 * @see #getMinuteComponent()
-	 * @see #setMinuteComponent(int)
+	 * @see #setMinuteComponent(IfcMinuteInHour)
 	 * @generated
 	 */
 	void unsetMinuteComponent();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLocalTime#getMinuteComponent <em>Minute Component</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLocalTime#getMinuteComponent <em>Minute Component</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Minute Component</em>' attribute is set.
+	 * @return whether the value of the '<em>Minute Component</em>' reference is set.
 	 * @see #unsetMinuteComponent()
 	 * @see #getMinuteComponent()
-	 * @see #setMinuteComponent(int)
+	 * @see #setMinuteComponent(IfcMinuteInHour)
 	 * @generated
 	 */
 	boolean isSetMinuteComponent();
 
 	/**
-	 * Returns the value of the '<em><b>Second Component</b></em>' attribute.
+	 * Returns the value of the '<em><b>Second Component</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Second Component</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Second Component</em>' attribute.
+	 * @return the value of the '<em>Second Component</em>' reference.
 	 * @see #isSetSecondComponent()
 	 * @see #unsetSecondComponent()
-	 * @see #setSecondComponent(float)
+	 * @see #setSecondComponent(IfcSecondInMinute)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcLocalTime_SecondComponent()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getSecondComponent();
+	IfcSecondInMinute getSecondComponent();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLocalTime#getSecondComponent <em>Second Component</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLocalTime#getSecondComponent <em>Second Component</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Second Component</em>' attribute.
+	 * @param value the new value of the '<em>Second Component</em>' reference.
 	 * @see #isSetSecondComponent()
 	 * @see #unsetSecondComponent()
 	 * @see #getSecondComponent()
 	 * @generated
 	 */
-	void setSecondComponent(float value);
+	void setSecondComponent(IfcSecondInMinute value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLocalTime#getSecondComponent <em>Second Component</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLocalTime#getSecondComponent <em>Second Component</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetSecondComponent()
 	 * @see #getSecondComponent()
-	 * @see #setSecondComponent(float)
+	 * @see #setSecondComponent(IfcSecondInMinute)
 	 * @generated
 	 */
 	void unsetSecondComponent();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLocalTime#getSecondComponent <em>Second Component</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLocalTime#getSecondComponent <em>Second Component</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Second Component</em>' attribute is set.
+	 * @return whether the value of the '<em>Second Component</em>' reference is set.
 	 * @see #unsetSecondComponent()
 	 * @see #getSecondComponent()
-	 * @see #setSecondComponent(float)
+	 * @see #setSecondComponent(IfcSecondInMinute)
 	 * @generated
 	 */
 	boolean isSetSecondComponent();
-
-	/**
-	 * Returns the value of the '<em><b>Second Component As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Second Component As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Second Component As String</em>' attribute.
-	 * @see #isSetSecondComponentAsString()
-	 * @see #unsetSecondComponentAsString()
-	 * @see #setSecondComponentAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcLocalTime_SecondComponentAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getSecondComponentAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLocalTime#getSecondComponentAsString <em>Second Component As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Second Component As String</em>' attribute.
-	 * @see #isSetSecondComponentAsString()
-	 * @see #unsetSecondComponentAsString()
-	 * @see #getSecondComponentAsString()
-	 * @generated
-	 */
-	void setSecondComponentAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLocalTime#getSecondComponentAsString <em>Second Component As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetSecondComponentAsString()
-	 * @see #getSecondComponentAsString()
-	 * @see #setSecondComponentAsString(String)
-	 * @generated
-	 */
-	void unsetSecondComponentAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLocalTime#getSecondComponentAsString <em>Second Component As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Second Component As String</em>' attribute is set.
-	 * @see #unsetSecondComponentAsString()
-	 * @see #getSecondComponentAsString()
-	 * @see #setSecondComponentAsString(String)
-	 * @generated
-	 */
-	boolean isSetSecondComponentAsString();
 
 	/**
 	 * Returns the value of the '<em><b>Zone</b></em>' reference.
@@ -283,54 +229,54 @@ public interface IfcLocalTime extends IfcDateTimeSelect, IfcObjectReferenceSelec
 	boolean isSetZone();
 
 	/**
-	 * Returns the value of the '<em><b>Daylight Saving Offset</b></em>' attribute.
+	 * Returns the value of the '<em><b>Daylight Saving Offset</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Daylight Saving Offset</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Daylight Saving Offset</em>' attribute.
+	 * @return the value of the '<em>Daylight Saving Offset</em>' reference.
 	 * @see #isSetDaylightSavingOffset()
 	 * @see #unsetDaylightSavingOffset()
-	 * @see #setDaylightSavingOffset(int)
+	 * @see #setDaylightSavingOffset(IfcDaylightSavingHour)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcLocalTime_DaylightSavingOffset()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	int getDaylightSavingOffset();
+	IfcDaylightSavingHour getDaylightSavingOffset();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLocalTime#getDaylightSavingOffset <em>Daylight Saving Offset</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLocalTime#getDaylightSavingOffset <em>Daylight Saving Offset</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Daylight Saving Offset</em>' attribute.
+	 * @param value the new value of the '<em>Daylight Saving Offset</em>' reference.
 	 * @see #isSetDaylightSavingOffset()
 	 * @see #unsetDaylightSavingOffset()
 	 * @see #getDaylightSavingOffset()
 	 * @generated
 	 */
-	void setDaylightSavingOffset(int value);
+	void setDaylightSavingOffset(IfcDaylightSavingHour value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLocalTime#getDaylightSavingOffset <em>Daylight Saving Offset</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLocalTime#getDaylightSavingOffset <em>Daylight Saving Offset</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetDaylightSavingOffset()
 	 * @see #getDaylightSavingOffset()
-	 * @see #setDaylightSavingOffset(int)
+	 * @see #setDaylightSavingOffset(IfcDaylightSavingHour)
 	 * @generated
 	 */
 	void unsetDaylightSavingOffset();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLocalTime#getDaylightSavingOffset <em>Daylight Saving Offset</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLocalTime#getDaylightSavingOffset <em>Daylight Saving Offset</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Daylight Saving Offset</em>' attribute is set.
+	 * @return whether the value of the '<em>Daylight Saving Offset</em>' reference is set.
 	 * @see #unsetDaylightSavingOffset()
 	 * @see #getDaylightSavingOffset()
-	 * @see #setDaylightSavingOffset(int)
+	 * @see #setDaylightSavingOffset(IfcDaylightSavingHour)
 	 * @generated
 	 */
 	boolean isSetDaylightSavingOffset();

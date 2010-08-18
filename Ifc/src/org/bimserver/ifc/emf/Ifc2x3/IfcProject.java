@@ -45,107 +45,107 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface IfcProject extends IfcObject {
 	/**
-	 * Returns the value of the '<em><b>Long Name</b></em>' attribute.
+	 * Returns the value of the '<em><b>Long Name</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Long Name</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Long Name</em>' attribute.
+	 * @return the value of the '<em>Long Name</em>' reference.
 	 * @see #isSetLongName()
 	 * @see #unsetLongName()
-	 * @see #setLongName(String)
+	 * @see #setLongName(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcProject_LongName()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getLongName();
+	IfcLabel getLongName();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProject#getLongName <em>Long Name</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProject#getLongName <em>Long Name</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Long Name</em>' attribute.
+	 * @param value the new value of the '<em>Long Name</em>' reference.
 	 * @see #isSetLongName()
 	 * @see #unsetLongName()
 	 * @see #getLongName()
 	 * @generated
 	 */
-	void setLongName(String value);
+	void setLongName(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProject#getLongName <em>Long Name</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProject#getLongName <em>Long Name</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetLongName()
 	 * @see #getLongName()
-	 * @see #setLongName(String)
+	 * @see #setLongName(IfcLabel)
 	 * @generated
 	 */
 	void unsetLongName();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProject#getLongName <em>Long Name</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProject#getLongName <em>Long Name</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Long Name</em>' attribute is set.
+	 * @return whether the value of the '<em>Long Name</em>' reference is set.
 	 * @see #unsetLongName()
 	 * @see #getLongName()
-	 * @see #setLongName(String)
+	 * @see #setLongName(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetLongName();
 
 	/**
-	 * Returns the value of the '<em><b>Phase</b></em>' attribute.
+	 * Returns the value of the '<em><b>Phase</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Phase</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Phase</em>' attribute.
+	 * @return the value of the '<em>Phase</em>' reference.
 	 * @see #isSetPhase()
 	 * @see #unsetPhase()
-	 * @see #setPhase(String)
+	 * @see #setPhase(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcProject_Phase()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getPhase();
+	IfcLabel getPhase();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProject#getPhase <em>Phase</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProject#getPhase <em>Phase</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Phase</em>' attribute.
+	 * @param value the new value of the '<em>Phase</em>' reference.
 	 * @see #isSetPhase()
 	 * @see #unsetPhase()
 	 * @see #getPhase()
 	 * @generated
 	 */
-	void setPhase(String value);
+	void setPhase(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProject#getPhase <em>Phase</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProject#getPhase <em>Phase</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetPhase()
 	 * @see #getPhase()
-	 * @see #setPhase(String)
+	 * @see #setPhase(IfcLabel)
 	 * @generated
 	 */
 	void unsetPhase();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProject#getPhase <em>Phase</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProject#getPhase <em>Phase</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Phase</em>' attribute is set.
+	 * @return whether the value of the '<em>Phase</em>' reference is set.
 	 * @see #unsetPhase()
 	 * @see #getPhase()
-	 * @see #setPhase(String)
+	 * @see #setPhase(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetPhase();

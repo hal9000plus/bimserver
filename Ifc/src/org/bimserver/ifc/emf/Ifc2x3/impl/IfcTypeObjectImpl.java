@@ -23,10 +23,13 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
 import org.bimserver.ifc.emf.Ifc2x3.IfcPropertySetDefinition;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRelDefinesByType;
 import org.bimserver.ifc.emf.Ifc2x3.IfcTypeObject;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -69,8 +72,8 @@ public class IfcTypeObjectImpl extends IfcObjectDefinitionImpl implements IfcTyp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getApplicableOccurrence() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcTypeObject_ApplicableOccurrence(), true);
+	public IfcLabel getApplicableOccurrence() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcTypeObject_ApplicableOccurrence(), true);
 	}
 
 	/**
@@ -78,7 +81,7 @@ public class IfcTypeObjectImpl extends IfcObjectDefinitionImpl implements IfcTyp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setApplicableOccurrence(String newApplicableOccurrence) {
+	public void setApplicableOccurrence(IfcLabel newApplicableOccurrence) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcTypeObject_ApplicableOccurrence(), newApplicableOccurrence);
 	}
 

@@ -40,54 +40,54 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcElementType extends IfcTypeProduct {
 	/**
-	 * Returns the value of the '<em><b>Element Type</b></em>' attribute.
+	 * Returns the value of the '<em><b>Element Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Element Type</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Element Type</em>' attribute.
+	 * @return the value of the '<em>Element Type</em>' reference.
 	 * @see #isSetElementType()
 	 * @see #unsetElementType()
-	 * @see #setElementType(String)
+	 * @see #setElementType(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcElementType_ElementType()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getElementType();
+	IfcLabel getElementType();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElementType#getElementType <em>Element Type</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElementType#getElementType <em>Element Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Element Type</em>' attribute.
+	 * @param value the new value of the '<em>Element Type</em>' reference.
 	 * @see #isSetElementType()
 	 * @see #unsetElementType()
 	 * @see #getElementType()
 	 * @generated
 	 */
-	void setElementType(String value);
+	void setElementType(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElementType#getElementType <em>Element Type</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElementType#getElementType <em>Element Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetElementType()
 	 * @see #getElementType()
-	 * @see #setElementType(String)
+	 * @see #setElementType(IfcLabel)
 	 * @generated
 	 */
 	void unsetElementType();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElementType#getElementType <em>Element Type</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElementType#getElementType <em>Element Type</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Element Type</em>' attribute is set.
+	 * @return whether the value of the '<em>Element Type</em>' reference is set.
 	 * @see #unsetElementType()
 	 * @see #getElementType()
-	 * @see #setElementType(String)
+	 * @see #setElementType(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetElementType();

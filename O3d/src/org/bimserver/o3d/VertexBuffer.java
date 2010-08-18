@@ -1,5 +1,6 @@
 package org.bimserver.o3d;
 
+
 import org.codehaus.jettison.json.JSONArray;
 import org.codehaus.jettison.json.JSONException;
 import org.codehaus.jettison.json.JSONObject;
@@ -19,10 +20,10 @@ public class VertexBuffer extends SceneJsonObject {
 		custom.put("binaryRange", binaryRange);
 		fields.put(fieldId1);
 		fields.put(fieldId2);
+		binaryRange.put(0);
 	}
 
-	public void setBinaryRange(int start, int end) throws JSONException {
-		getJSONObject("custom").getJSONArray("binaryRange").put(start);
-		getJSONObject("custom").getJSONArray("binaryRange").put(end);
+	public void addBinaryRange(int binaryRange) throws JSONException {
+		getJSONObject("custom").getJSONArray("binaryRange").put(binaryRange);
 	}
 }

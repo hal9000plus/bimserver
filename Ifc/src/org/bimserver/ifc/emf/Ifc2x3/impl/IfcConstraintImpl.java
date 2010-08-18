@@ -22,7 +22,6 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
-import org.bimserver.emf.IdEObjectImpl;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcActorSelect;
 import org.bimserver.ifc.emf.Ifc2x3.IfcConstraint;
@@ -31,9 +30,15 @@ import org.bimserver.ifc.emf.Ifc2x3.IfcConstraintClassificationRelationship;
 import org.bimserver.ifc.emf.Ifc2x3.IfcConstraintEnum;
 import org.bimserver.ifc.emf.Ifc2x3.IfcConstraintRelationship;
 import org.bimserver.ifc.emf.Ifc2x3.IfcDateTimeSelect;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
 import org.bimserver.ifc.emf.Ifc2x3.IfcPropertyConstraintRelationship;
+import org.bimserver.ifc.emf.Ifc2x3.IfcText;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -60,7 +65,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class IfcConstraintImpl extends IdEObjectImpl implements IfcConstraint {
+public class IfcConstraintImpl extends EObjectImpl implements IfcConstraint {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -95,8 +100,8 @@ public class IfcConstraintImpl extends IdEObjectImpl implements IfcConstraint {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcConstraint_Name(), true);
+	public IfcLabel getName() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcConstraint_Name(), true);
 	}
 
 	/**
@@ -104,7 +109,7 @@ public class IfcConstraintImpl extends IdEObjectImpl implements IfcConstraint {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(String newName) {
+	public void setName(IfcLabel newName) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcConstraint_Name(), newName);
 	}
 
@@ -113,8 +118,8 @@ public class IfcConstraintImpl extends IdEObjectImpl implements IfcConstraint {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getDescription() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcConstraint_Description(), true);
+	public IfcText getDescription() {
+		return (IfcText) eGet(Ifc2x3Package.eINSTANCE.getIfcConstraint_Description(), true);
 	}
 
 	/**
@@ -122,7 +127,7 @@ public class IfcConstraintImpl extends IdEObjectImpl implements IfcConstraint {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDescription(String newDescription) {
+	public void setDescription(IfcText newDescription) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcConstraint_Description(), newDescription);
 	}
 
@@ -167,8 +172,8 @@ public class IfcConstraintImpl extends IdEObjectImpl implements IfcConstraint {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getConstraintSource() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcConstraint_ConstraintSource(), true);
+	public IfcLabel getConstraintSource() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcConstraint_ConstraintSource(), true);
 	}
 
 	/**
@@ -176,7 +181,7 @@ public class IfcConstraintImpl extends IdEObjectImpl implements IfcConstraint {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setConstraintSource(String newConstraintSource) {
+	public void setConstraintSource(IfcLabel newConstraintSource) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcConstraint_ConstraintSource(), newConstraintSource);
 	}
 
@@ -275,8 +280,8 @@ public class IfcConstraintImpl extends IdEObjectImpl implements IfcConstraint {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getUserDefinedGrade() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcConstraint_UserDefinedGrade(), true);
+	public IfcLabel getUserDefinedGrade() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcConstraint_UserDefinedGrade(), true);
 	}
 
 	/**
@@ -284,7 +289,7 @@ public class IfcConstraintImpl extends IdEObjectImpl implements IfcConstraint {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUserDefinedGrade(String newUserDefinedGrade) {
+	public void setUserDefinedGrade(IfcLabel newUserDefinedGrade) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcConstraint_UserDefinedGrade(), newUserDefinedGrade);
 	}
 

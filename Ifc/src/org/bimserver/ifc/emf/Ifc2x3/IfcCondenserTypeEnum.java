@@ -269,8 +269,8 @@ public enum IfcCondenserTypeEnum implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final IfcCondenserTypeEnum[] VALUES_ARRAY = new IfcCondenserTypeEnum[] { NULL, EVAPORATIVECOOLED, NOTDEFINED, USERDEFINED, WATERCOOLEDSHELLTUBE,
-			WATERCOOLEDTUBEINTUBE, WATERCOOLEDBRAZEDPLATE, WATERCOOLEDSHELLCOIL, AIRCOOLED, };
+	private static final IfcCondenserTypeEnum[] VALUES_ARRAY = new IfcCondenserTypeEnum[] { NULL, EVAPORATIVECOOLED, NOTDEFINED, USERDEFINED,
+			WATERCOOLEDSHELLTUBE, WATERCOOLEDTUBEINTUBE, WATERCOOLEDBRAZEDPLATE, WATERCOOLEDSHELLCOIL, AIRCOOLED, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Ifc Condenser Type Enum</b></em>' enumerators.

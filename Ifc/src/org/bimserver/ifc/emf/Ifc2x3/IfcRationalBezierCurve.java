@@ -33,6 +33,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRationalBezierCurve#getWeightsData <em>Weights Data</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRationalBezierCurve#getWeights <em>Weights</em>}</li>
  * </ul>
  * </p>
  *
@@ -41,21 +42,37 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface IfcRationalBezierCurve extends IfcBezierCurve {
-
 	/**
-	 * Returns the value of the '<em><b>Weights Data</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.Float}.
+	 * Returns the value of the '<em><b>Weights Data</b></em>' reference list.
+	 * The list contents are of type {@link org.bimserver.ifc.emf.Ifc2x3.IfcReal}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Weights Data</em>' attribute list isn't clear,
+	 * If the meaning of the '<em>Weights Data</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Weights Data</em>' attribute list.
+	 * @return the value of the '<em>Weights Data</em>' reference list.
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRationalBezierCurve_WeightsData()
-	 * @model unique="false"
+	 * @model
 	 * @generated
 	 */
-	EList<Float> getWeightsData();
+	EList<IfcReal> getWeightsData();
+
+	/**
+	 * Returns the value of the '<em><b>Weights</b></em>' reference list.
+	 * The list contents are of type {@link org.bimserver.ifc.emf.Ifc2x3.IfcReal}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Weights</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Weights</em>' reference list.
+	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRationalBezierCurve_Weights()
+	 * @model transient="true" volatile="true" derived="true"
+	 *        annotation="http://www.iso.org/iso10303-11/EXPRESS code=' IfcListToArray(WeightsData,0,SELF\\IfcBSplineCurve.UpperIndexOnControlPoints);'"
+	 * @generated
+	 */
+	EList<IfcReal> getWeights();
 
 } // IfcRationalBezierCurve

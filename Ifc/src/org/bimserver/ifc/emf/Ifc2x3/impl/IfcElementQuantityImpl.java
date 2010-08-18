@@ -24,8 +24,11 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcElementQuantity;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
 import org.bimserver.ifc.emf.Ifc2x3.IfcPhysicalQuantity;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -67,8 +70,8 @@ public class IfcElementQuantityImpl extends IfcPropertySetDefinitionImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getMethodOfMeasurement() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcElementQuantity_MethodOfMeasurement(), true);
+	public IfcLabel getMethodOfMeasurement() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcElementQuantity_MethodOfMeasurement(), true);
 	}
 
 	/**
@@ -76,7 +79,7 @@ public class IfcElementQuantityImpl extends IfcPropertySetDefinitionImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMethodOfMeasurement(String newMethodOfMeasurement) {
+	public void setMethodOfMeasurement(IfcLabel newMethodOfMeasurement) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcElementQuantity_MethodOfMeasurement(), newMethodOfMeasurement);
 	}
 

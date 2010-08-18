@@ -23,7 +23,10 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcPlaneAngleMeasure;
+import org.bimserver.ifc.emf.Ifc2x3.IfcPositiveLengthMeasure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcTShapeProfileDef;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -34,25 +37,15 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcTShapeProfileDefImpl#getDepth <em>Depth</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcTShapeProfileDefImpl#getDepthAsString <em>Depth As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcTShapeProfileDefImpl#getFlangeWidth <em>Flange Width</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcTShapeProfileDefImpl#getFlangeWidthAsString <em>Flange Width As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcTShapeProfileDefImpl#getWebThickness <em>Web Thickness</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcTShapeProfileDefImpl#getWebThicknessAsString <em>Web Thickness As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcTShapeProfileDefImpl#getFlangeThickness <em>Flange Thickness</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcTShapeProfileDefImpl#getFlangeThicknessAsString <em>Flange Thickness As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcTShapeProfileDefImpl#getFilletRadius <em>Fillet Radius</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcTShapeProfileDefImpl#getFilletRadiusAsString <em>Fillet Radius As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcTShapeProfileDefImpl#getFlangeEdgeRadius <em>Flange Edge Radius</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcTShapeProfileDefImpl#getFlangeEdgeRadiusAsString <em>Flange Edge Radius As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcTShapeProfileDefImpl#getWebEdgeRadius <em>Web Edge Radius</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcTShapeProfileDefImpl#getWebEdgeRadiusAsString <em>Web Edge Radius As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcTShapeProfileDefImpl#getWebSlope <em>Web Slope</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcTShapeProfileDefImpl#getWebSlopeAsString <em>Web Slope As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcTShapeProfileDefImpl#getFlangeSlope <em>Flange Slope</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcTShapeProfileDefImpl#getFlangeSlopeAsString <em>Flange Slope As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcTShapeProfileDefImpl#getCentreOfGravityInY <em>Centre Of Gravity In Y</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcTShapeProfileDefImpl#getCentreOfGravityInYAsString <em>Centre Of Gravity In YAs String</em>}</li>
  * </ul>
  * </p>
  *
@@ -83,8 +76,8 @@ public class IfcTShapeProfileDefImpl extends IfcParameterizedProfileDefImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getDepth() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_Depth(), true);
+	public IfcPositiveLengthMeasure getDepth() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_Depth(), true);
 	}
 
 	/**
@@ -92,7 +85,7 @@ public class IfcTShapeProfileDefImpl extends IfcParameterizedProfileDefImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDepth(float newDepth) {
+	public void setDepth(IfcPositiveLengthMeasure newDepth) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_Depth(), newDepth);
 	}
 
@@ -101,8 +94,8 @@ public class IfcTShapeProfileDefImpl extends IfcParameterizedProfileDefImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getDepthAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_DepthAsString(), true);
+	public IfcPositiveLengthMeasure getFlangeWidth() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_FlangeWidth(), true);
 	}
 
 	/**
@@ -110,25 +103,7 @@ public class IfcTShapeProfileDefImpl extends IfcParameterizedProfileDefImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDepthAsString(String newDepthAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_DepthAsString(), newDepthAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getFlangeWidth() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_FlangeWidth(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setFlangeWidth(float newFlangeWidth) {
+	public void setFlangeWidth(IfcPositiveLengthMeasure newFlangeWidth) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_FlangeWidth(), newFlangeWidth);
 	}
 
@@ -137,8 +112,8 @@ public class IfcTShapeProfileDefImpl extends IfcParameterizedProfileDefImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getFlangeWidthAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_FlangeWidthAsString(), true);
+	public IfcPositiveLengthMeasure getWebThickness() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_WebThickness(), true);
 	}
 
 	/**
@@ -146,25 +121,7 @@ public class IfcTShapeProfileDefImpl extends IfcParameterizedProfileDefImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFlangeWidthAsString(String newFlangeWidthAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_FlangeWidthAsString(), newFlangeWidthAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getWebThickness() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_WebThickness(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setWebThickness(float newWebThickness) {
+	public void setWebThickness(IfcPositiveLengthMeasure newWebThickness) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_WebThickness(), newWebThickness);
 	}
 
@@ -173,8 +130,8 @@ public class IfcTShapeProfileDefImpl extends IfcParameterizedProfileDefImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getWebThicknessAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_WebThicknessAsString(), true);
+	public IfcPositiveLengthMeasure getFlangeThickness() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_FlangeThickness(), true);
 	}
 
 	/**
@@ -182,25 +139,7 @@ public class IfcTShapeProfileDefImpl extends IfcParameterizedProfileDefImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setWebThicknessAsString(String newWebThicknessAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_WebThicknessAsString(), newWebThicknessAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getFlangeThickness() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_FlangeThickness(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setFlangeThickness(float newFlangeThickness) {
+	public void setFlangeThickness(IfcPositiveLengthMeasure newFlangeThickness) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_FlangeThickness(), newFlangeThickness);
 	}
 
@@ -209,8 +148,8 @@ public class IfcTShapeProfileDefImpl extends IfcParameterizedProfileDefImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getFlangeThicknessAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_FlangeThicknessAsString(), true);
+	public IfcPositiveLengthMeasure getFilletRadius() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_FilletRadius(), true);
 	}
 
 	/**
@@ -218,25 +157,7 @@ public class IfcTShapeProfileDefImpl extends IfcParameterizedProfileDefImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFlangeThicknessAsString(String newFlangeThicknessAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_FlangeThicknessAsString(), newFlangeThicknessAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getFilletRadius() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_FilletRadius(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setFilletRadius(float newFilletRadius) {
+	public void setFilletRadius(IfcPositiveLengthMeasure newFilletRadius) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_FilletRadius(), newFilletRadius);
 	}
 
@@ -263,8 +184,8 @@ public class IfcTShapeProfileDefImpl extends IfcParameterizedProfileDefImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getFilletRadiusAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_FilletRadiusAsString(), true);
+	public IfcPositiveLengthMeasure getFlangeEdgeRadius() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_FlangeEdgeRadius(), true);
 	}
 
 	/**
@@ -272,43 +193,7 @@ public class IfcTShapeProfileDefImpl extends IfcParameterizedProfileDefImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFilletRadiusAsString(String newFilletRadiusAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_FilletRadiusAsString(), newFilletRadiusAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetFilletRadiusAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_FilletRadiusAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetFilletRadiusAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_FilletRadiusAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getFlangeEdgeRadius() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_FlangeEdgeRadius(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setFlangeEdgeRadius(float newFlangeEdgeRadius) {
+	public void setFlangeEdgeRadius(IfcPositiveLengthMeasure newFlangeEdgeRadius) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_FlangeEdgeRadius(), newFlangeEdgeRadius);
 	}
 
@@ -335,8 +220,8 @@ public class IfcTShapeProfileDefImpl extends IfcParameterizedProfileDefImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getFlangeEdgeRadiusAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_FlangeEdgeRadiusAsString(), true);
+	public IfcPositiveLengthMeasure getWebEdgeRadius() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_WebEdgeRadius(), true);
 	}
 
 	/**
@@ -344,43 +229,7 @@ public class IfcTShapeProfileDefImpl extends IfcParameterizedProfileDefImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFlangeEdgeRadiusAsString(String newFlangeEdgeRadiusAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_FlangeEdgeRadiusAsString(), newFlangeEdgeRadiusAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetFlangeEdgeRadiusAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_FlangeEdgeRadiusAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetFlangeEdgeRadiusAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_FlangeEdgeRadiusAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getWebEdgeRadius() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_WebEdgeRadius(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setWebEdgeRadius(float newWebEdgeRadius) {
+	public void setWebEdgeRadius(IfcPositiveLengthMeasure newWebEdgeRadius) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_WebEdgeRadius(), newWebEdgeRadius);
 	}
 
@@ -407,8 +256,8 @@ public class IfcTShapeProfileDefImpl extends IfcParameterizedProfileDefImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getWebEdgeRadiusAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_WebEdgeRadiusAsString(), true);
+	public IfcPlaneAngleMeasure getWebSlope() {
+		return (IfcPlaneAngleMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_WebSlope(), true);
 	}
 
 	/**
@@ -416,43 +265,7 @@ public class IfcTShapeProfileDefImpl extends IfcParameterizedProfileDefImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setWebEdgeRadiusAsString(String newWebEdgeRadiusAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_WebEdgeRadiusAsString(), newWebEdgeRadiusAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetWebEdgeRadiusAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_WebEdgeRadiusAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetWebEdgeRadiusAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_WebEdgeRadiusAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getWebSlope() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_WebSlope(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setWebSlope(float newWebSlope) {
+	public void setWebSlope(IfcPlaneAngleMeasure newWebSlope) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_WebSlope(), newWebSlope);
 	}
 
@@ -479,8 +292,8 @@ public class IfcTShapeProfileDefImpl extends IfcParameterizedProfileDefImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getWebSlopeAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_WebSlopeAsString(), true);
+	public IfcPlaneAngleMeasure getFlangeSlope() {
+		return (IfcPlaneAngleMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_FlangeSlope(), true);
 	}
 
 	/**
@@ -488,43 +301,7 @@ public class IfcTShapeProfileDefImpl extends IfcParameterizedProfileDefImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setWebSlopeAsString(String newWebSlopeAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_WebSlopeAsString(), newWebSlopeAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetWebSlopeAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_WebSlopeAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetWebSlopeAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_WebSlopeAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getFlangeSlope() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_FlangeSlope(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setFlangeSlope(float newFlangeSlope) {
+	public void setFlangeSlope(IfcPlaneAngleMeasure newFlangeSlope) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_FlangeSlope(), newFlangeSlope);
 	}
 
@@ -551,8 +328,8 @@ public class IfcTShapeProfileDefImpl extends IfcParameterizedProfileDefImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getFlangeSlopeAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_FlangeSlopeAsString(), true);
+	public IfcPositiveLengthMeasure getCentreOfGravityInY() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_CentreOfGravityInY(), true);
 	}
 
 	/**
@@ -560,43 +337,7 @@ public class IfcTShapeProfileDefImpl extends IfcParameterizedProfileDefImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFlangeSlopeAsString(String newFlangeSlopeAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_FlangeSlopeAsString(), newFlangeSlopeAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetFlangeSlopeAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_FlangeSlopeAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetFlangeSlopeAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_FlangeSlopeAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getCentreOfGravityInY() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_CentreOfGravityInY(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCentreOfGravityInY(float newCentreOfGravityInY) {
+	public void setCentreOfGravityInY(IfcPositiveLengthMeasure newCentreOfGravityInY) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_CentreOfGravityInY(), newCentreOfGravityInY);
 	}
 
@@ -616,42 +357,6 @@ public class IfcTShapeProfileDefImpl extends IfcParameterizedProfileDefImpl impl
 	 */
 	public boolean isSetCentreOfGravityInY() {
 		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_CentreOfGravityInY());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getCentreOfGravityInYAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_CentreOfGravityInYAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCentreOfGravityInYAsString(String newCentreOfGravityInYAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_CentreOfGravityInYAsString(), newCentreOfGravityInYAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetCentreOfGravityInYAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_CentreOfGravityInYAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetCentreOfGravityInYAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcTShapeProfileDef_CentreOfGravityInYAsString());
 	}
 
 } //IfcTShapeProfileDefImpl

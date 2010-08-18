@@ -22,12 +22,14 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
-import org.bimserver.emf.IdEObjectImpl;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcCalendarDate;
 import org.bimserver.ifc.emf.Ifc2x3.IfcDateAndTime;
 import org.bimserver.ifc.emf.Ifc2x3.IfcLocalTime;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -43,7 +45,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class IfcDateAndTimeImpl extends IdEObjectImpl implements IfcDateAndTime {
+public class IfcDateAndTimeImpl extends EObjectImpl implements IfcDateAndTime {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

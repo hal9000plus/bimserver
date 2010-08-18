@@ -24,8 +24,11 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcCompositeProfileDef;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
 import org.bimserver.ifc.emf.Ifc2x3.IfcProfileDef;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -77,8 +80,8 @@ public class IfcCompositeProfileDefImpl extends IfcProfileDefImpl implements Ifc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getLabel() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcCompositeProfileDef_Label(), true);
+	public IfcLabel getLabel() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcCompositeProfileDef_Label(), true);
 	}
 
 	/**
@@ -86,7 +89,7 @@ public class IfcCompositeProfileDefImpl extends IfcProfileDefImpl implements Ifc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLabel(String newLabel) {
+	public void setLabel(IfcLabel newLabel) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcCompositeProfileDef_Label(), newLabel);
 	}
 

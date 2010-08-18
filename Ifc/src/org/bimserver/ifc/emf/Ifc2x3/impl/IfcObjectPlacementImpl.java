@@ -22,13 +22,16 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
-import org.bimserver.emf.IdEObjectImpl;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcLocalPlacement;
 import org.bimserver.ifc.emf.Ifc2x3.IfcObjectPlacement;
 import org.bimserver.ifc.emf.Ifc2x3.IfcProduct;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -44,7 +47,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class IfcObjectPlacementImpl extends IdEObjectImpl implements IfcObjectPlacement {
+public class IfcObjectPlacementImpl extends EObjectImpl implements IfcObjectPlacement {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -70,54 +70,54 @@ public interface IfcElectricDistributionPoint extends IfcFlowController {
 	void setDistributionPointFunction(IfcElectricDistributionPointFunctionEnum value);
 
 	/**
-	 * Returns the value of the '<em><b>User Defined Function</b></em>' attribute.
+	 * Returns the value of the '<em><b>User Defined Function</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>User Defined Function</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>User Defined Function</em>' attribute.
+	 * @return the value of the '<em>User Defined Function</em>' reference.
 	 * @see #isSetUserDefinedFunction()
 	 * @see #unsetUserDefinedFunction()
-	 * @see #setUserDefinedFunction(String)
+	 * @see #setUserDefinedFunction(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcElectricDistributionPoint_UserDefinedFunction()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getUserDefinedFunction();
+	IfcLabel getUserDefinedFunction();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricDistributionPoint#getUserDefinedFunction <em>User Defined Function</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricDistributionPoint#getUserDefinedFunction <em>User Defined Function</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>User Defined Function</em>' attribute.
+	 * @param value the new value of the '<em>User Defined Function</em>' reference.
 	 * @see #isSetUserDefinedFunction()
 	 * @see #unsetUserDefinedFunction()
 	 * @see #getUserDefinedFunction()
 	 * @generated
 	 */
-	void setUserDefinedFunction(String value);
+	void setUserDefinedFunction(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricDistributionPoint#getUserDefinedFunction <em>User Defined Function</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricDistributionPoint#getUserDefinedFunction <em>User Defined Function</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetUserDefinedFunction()
 	 * @see #getUserDefinedFunction()
-	 * @see #setUserDefinedFunction(String)
+	 * @see #setUserDefinedFunction(IfcLabel)
 	 * @generated
 	 */
 	void unsetUserDefinedFunction();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricDistributionPoint#getUserDefinedFunction <em>User Defined Function</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcElectricDistributionPoint#getUserDefinedFunction <em>User Defined Function</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>User Defined Function</em>' attribute is set.
+	 * @return whether the value of the '<em>User Defined Function</em>' reference is set.
 	 * @see #unsetUserDefinedFunction()
 	 * @see #getUserDefinedFunction()
-	 * @see #setUserDefinedFunction(String)
+	 * @see #setUserDefinedFunction(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetUserDefinedFunction();

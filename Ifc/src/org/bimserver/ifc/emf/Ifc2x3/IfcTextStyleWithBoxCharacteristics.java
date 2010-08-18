@@ -31,13 +31,9 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleWithBoxCharacteristics#getBoxHeight <em>Box Height</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleWithBoxCharacteristics#getBoxHeightAsString <em>Box Height As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleWithBoxCharacteristics#getBoxWidth <em>Box Width</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleWithBoxCharacteristics#getBoxWidthAsString <em>Box Width As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleWithBoxCharacteristics#getBoxSlantAngle <em>Box Slant Angle</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleWithBoxCharacteristics#getBoxSlantAngleAsString <em>Box Slant Angle As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleWithBoxCharacteristics#getBoxRotateAngle <em>Box Rotate Angle</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleWithBoxCharacteristics#getBoxRotateAngleAsString <em>Box Rotate Angle As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleWithBoxCharacteristics#getCharacterSpacing <em>Character Spacing</em>}</li>
  * </ul>
  * </p>
@@ -48,428 +44,216 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcTextStyleWithBoxCharacteristics extends IfcTextStyleSelect {
 	/**
-	 * Returns the value of the '<em><b>Box Height</b></em>' attribute.
+	 * Returns the value of the '<em><b>Box Height</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Box Height</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Box Height</em>' attribute.
+	 * @return the value of the '<em>Box Height</em>' reference.
 	 * @see #isSetBoxHeight()
 	 * @see #unsetBoxHeight()
-	 * @see #setBoxHeight(float)
+	 * @see #setBoxHeight(IfcPositiveLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTextStyleWithBoxCharacteristics_BoxHeight()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getBoxHeight();
+	IfcPositiveLengthMeasure getBoxHeight();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleWithBoxCharacteristics#getBoxHeight <em>Box Height</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleWithBoxCharacteristics#getBoxHeight <em>Box Height</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Box Height</em>' attribute.
+	 * @param value the new value of the '<em>Box Height</em>' reference.
 	 * @see #isSetBoxHeight()
 	 * @see #unsetBoxHeight()
 	 * @see #getBoxHeight()
 	 * @generated
 	 */
-	void setBoxHeight(float value);
+	void setBoxHeight(IfcPositiveLengthMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleWithBoxCharacteristics#getBoxHeight <em>Box Height</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleWithBoxCharacteristics#getBoxHeight <em>Box Height</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetBoxHeight()
 	 * @see #getBoxHeight()
-	 * @see #setBoxHeight(float)
+	 * @see #setBoxHeight(IfcPositiveLengthMeasure)
 	 * @generated
 	 */
 	void unsetBoxHeight();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleWithBoxCharacteristics#getBoxHeight <em>Box Height</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleWithBoxCharacteristics#getBoxHeight <em>Box Height</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Box Height</em>' attribute is set.
+	 * @return whether the value of the '<em>Box Height</em>' reference is set.
 	 * @see #unsetBoxHeight()
 	 * @see #getBoxHeight()
-	 * @see #setBoxHeight(float)
+	 * @see #setBoxHeight(IfcPositiveLengthMeasure)
 	 * @generated
 	 */
 	boolean isSetBoxHeight();
 
 	/**
-	 * Returns the value of the '<em><b>Box Height As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Box Height As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Box Height As String</em>' attribute.
-	 * @see #isSetBoxHeightAsString()
-	 * @see #unsetBoxHeightAsString()
-	 * @see #setBoxHeightAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTextStyleWithBoxCharacteristics_BoxHeightAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getBoxHeightAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleWithBoxCharacteristics#getBoxHeightAsString <em>Box Height As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Box Height As String</em>' attribute.
-	 * @see #isSetBoxHeightAsString()
-	 * @see #unsetBoxHeightAsString()
-	 * @see #getBoxHeightAsString()
-	 * @generated
-	 */
-	void setBoxHeightAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleWithBoxCharacteristics#getBoxHeightAsString <em>Box Height As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetBoxHeightAsString()
-	 * @see #getBoxHeightAsString()
-	 * @see #setBoxHeightAsString(String)
-	 * @generated
-	 */
-	void unsetBoxHeightAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleWithBoxCharacteristics#getBoxHeightAsString <em>Box Height As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Box Height As String</em>' attribute is set.
-	 * @see #unsetBoxHeightAsString()
-	 * @see #getBoxHeightAsString()
-	 * @see #setBoxHeightAsString(String)
-	 * @generated
-	 */
-	boolean isSetBoxHeightAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Box Width</b></em>' attribute.
+	 * Returns the value of the '<em><b>Box Width</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Box Width</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Box Width</em>' attribute.
+	 * @return the value of the '<em>Box Width</em>' reference.
 	 * @see #isSetBoxWidth()
 	 * @see #unsetBoxWidth()
-	 * @see #setBoxWidth(float)
+	 * @see #setBoxWidth(IfcPositiveLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTextStyleWithBoxCharacteristics_BoxWidth()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getBoxWidth();
+	IfcPositiveLengthMeasure getBoxWidth();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleWithBoxCharacteristics#getBoxWidth <em>Box Width</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleWithBoxCharacteristics#getBoxWidth <em>Box Width</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Box Width</em>' attribute.
+	 * @param value the new value of the '<em>Box Width</em>' reference.
 	 * @see #isSetBoxWidth()
 	 * @see #unsetBoxWidth()
 	 * @see #getBoxWidth()
 	 * @generated
 	 */
-	void setBoxWidth(float value);
+	void setBoxWidth(IfcPositiveLengthMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleWithBoxCharacteristics#getBoxWidth <em>Box Width</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleWithBoxCharacteristics#getBoxWidth <em>Box Width</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetBoxWidth()
 	 * @see #getBoxWidth()
-	 * @see #setBoxWidth(float)
+	 * @see #setBoxWidth(IfcPositiveLengthMeasure)
 	 * @generated
 	 */
 	void unsetBoxWidth();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleWithBoxCharacteristics#getBoxWidth <em>Box Width</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleWithBoxCharacteristics#getBoxWidth <em>Box Width</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Box Width</em>' attribute is set.
+	 * @return whether the value of the '<em>Box Width</em>' reference is set.
 	 * @see #unsetBoxWidth()
 	 * @see #getBoxWidth()
-	 * @see #setBoxWidth(float)
+	 * @see #setBoxWidth(IfcPositiveLengthMeasure)
 	 * @generated
 	 */
 	boolean isSetBoxWidth();
 
 	/**
-	 * Returns the value of the '<em><b>Box Width As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Box Width As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Box Width As String</em>' attribute.
-	 * @see #isSetBoxWidthAsString()
-	 * @see #unsetBoxWidthAsString()
-	 * @see #setBoxWidthAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTextStyleWithBoxCharacteristics_BoxWidthAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getBoxWidthAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleWithBoxCharacteristics#getBoxWidthAsString <em>Box Width As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Box Width As String</em>' attribute.
-	 * @see #isSetBoxWidthAsString()
-	 * @see #unsetBoxWidthAsString()
-	 * @see #getBoxWidthAsString()
-	 * @generated
-	 */
-	void setBoxWidthAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleWithBoxCharacteristics#getBoxWidthAsString <em>Box Width As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetBoxWidthAsString()
-	 * @see #getBoxWidthAsString()
-	 * @see #setBoxWidthAsString(String)
-	 * @generated
-	 */
-	void unsetBoxWidthAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleWithBoxCharacteristics#getBoxWidthAsString <em>Box Width As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Box Width As String</em>' attribute is set.
-	 * @see #unsetBoxWidthAsString()
-	 * @see #getBoxWidthAsString()
-	 * @see #setBoxWidthAsString(String)
-	 * @generated
-	 */
-	boolean isSetBoxWidthAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Box Slant Angle</b></em>' attribute.
+	 * Returns the value of the '<em><b>Box Slant Angle</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Box Slant Angle</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Box Slant Angle</em>' attribute.
+	 * @return the value of the '<em>Box Slant Angle</em>' reference.
 	 * @see #isSetBoxSlantAngle()
 	 * @see #unsetBoxSlantAngle()
-	 * @see #setBoxSlantAngle(float)
+	 * @see #setBoxSlantAngle(IfcPlaneAngleMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTextStyleWithBoxCharacteristics_BoxSlantAngle()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getBoxSlantAngle();
+	IfcPlaneAngleMeasure getBoxSlantAngle();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleWithBoxCharacteristics#getBoxSlantAngle <em>Box Slant Angle</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleWithBoxCharacteristics#getBoxSlantAngle <em>Box Slant Angle</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Box Slant Angle</em>' attribute.
+	 * @param value the new value of the '<em>Box Slant Angle</em>' reference.
 	 * @see #isSetBoxSlantAngle()
 	 * @see #unsetBoxSlantAngle()
 	 * @see #getBoxSlantAngle()
 	 * @generated
 	 */
-	void setBoxSlantAngle(float value);
+	void setBoxSlantAngle(IfcPlaneAngleMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleWithBoxCharacteristics#getBoxSlantAngle <em>Box Slant Angle</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleWithBoxCharacteristics#getBoxSlantAngle <em>Box Slant Angle</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetBoxSlantAngle()
 	 * @see #getBoxSlantAngle()
-	 * @see #setBoxSlantAngle(float)
+	 * @see #setBoxSlantAngle(IfcPlaneAngleMeasure)
 	 * @generated
 	 */
 	void unsetBoxSlantAngle();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleWithBoxCharacteristics#getBoxSlantAngle <em>Box Slant Angle</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleWithBoxCharacteristics#getBoxSlantAngle <em>Box Slant Angle</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Box Slant Angle</em>' attribute is set.
+	 * @return whether the value of the '<em>Box Slant Angle</em>' reference is set.
 	 * @see #unsetBoxSlantAngle()
 	 * @see #getBoxSlantAngle()
-	 * @see #setBoxSlantAngle(float)
+	 * @see #setBoxSlantAngle(IfcPlaneAngleMeasure)
 	 * @generated
 	 */
 	boolean isSetBoxSlantAngle();
 
 	/**
-	 * Returns the value of the '<em><b>Box Slant Angle As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Box Slant Angle As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Box Slant Angle As String</em>' attribute.
-	 * @see #isSetBoxSlantAngleAsString()
-	 * @see #unsetBoxSlantAngleAsString()
-	 * @see #setBoxSlantAngleAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTextStyleWithBoxCharacteristics_BoxSlantAngleAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getBoxSlantAngleAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleWithBoxCharacteristics#getBoxSlantAngleAsString <em>Box Slant Angle As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Box Slant Angle As String</em>' attribute.
-	 * @see #isSetBoxSlantAngleAsString()
-	 * @see #unsetBoxSlantAngleAsString()
-	 * @see #getBoxSlantAngleAsString()
-	 * @generated
-	 */
-	void setBoxSlantAngleAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleWithBoxCharacteristics#getBoxSlantAngleAsString <em>Box Slant Angle As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetBoxSlantAngleAsString()
-	 * @see #getBoxSlantAngleAsString()
-	 * @see #setBoxSlantAngleAsString(String)
-	 * @generated
-	 */
-	void unsetBoxSlantAngleAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleWithBoxCharacteristics#getBoxSlantAngleAsString <em>Box Slant Angle As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Box Slant Angle As String</em>' attribute is set.
-	 * @see #unsetBoxSlantAngleAsString()
-	 * @see #getBoxSlantAngleAsString()
-	 * @see #setBoxSlantAngleAsString(String)
-	 * @generated
-	 */
-	boolean isSetBoxSlantAngleAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Box Rotate Angle</b></em>' attribute.
+	 * Returns the value of the '<em><b>Box Rotate Angle</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Box Rotate Angle</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Box Rotate Angle</em>' attribute.
+	 * @return the value of the '<em>Box Rotate Angle</em>' reference.
 	 * @see #isSetBoxRotateAngle()
 	 * @see #unsetBoxRotateAngle()
-	 * @see #setBoxRotateAngle(float)
+	 * @see #setBoxRotateAngle(IfcPlaneAngleMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTextStyleWithBoxCharacteristics_BoxRotateAngle()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getBoxRotateAngle();
+	IfcPlaneAngleMeasure getBoxRotateAngle();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleWithBoxCharacteristics#getBoxRotateAngle <em>Box Rotate Angle</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleWithBoxCharacteristics#getBoxRotateAngle <em>Box Rotate Angle</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Box Rotate Angle</em>' attribute.
+	 * @param value the new value of the '<em>Box Rotate Angle</em>' reference.
 	 * @see #isSetBoxRotateAngle()
 	 * @see #unsetBoxRotateAngle()
 	 * @see #getBoxRotateAngle()
 	 * @generated
 	 */
-	void setBoxRotateAngle(float value);
+	void setBoxRotateAngle(IfcPlaneAngleMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleWithBoxCharacteristics#getBoxRotateAngle <em>Box Rotate Angle</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleWithBoxCharacteristics#getBoxRotateAngle <em>Box Rotate Angle</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetBoxRotateAngle()
 	 * @see #getBoxRotateAngle()
-	 * @see #setBoxRotateAngle(float)
+	 * @see #setBoxRotateAngle(IfcPlaneAngleMeasure)
 	 * @generated
 	 */
 	void unsetBoxRotateAngle();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleWithBoxCharacteristics#getBoxRotateAngle <em>Box Rotate Angle</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleWithBoxCharacteristics#getBoxRotateAngle <em>Box Rotate Angle</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Box Rotate Angle</em>' attribute is set.
+	 * @return whether the value of the '<em>Box Rotate Angle</em>' reference is set.
 	 * @see #unsetBoxRotateAngle()
 	 * @see #getBoxRotateAngle()
-	 * @see #setBoxRotateAngle(float)
+	 * @see #setBoxRotateAngle(IfcPlaneAngleMeasure)
 	 * @generated
 	 */
 	boolean isSetBoxRotateAngle();
-
-	/**
-	 * Returns the value of the '<em><b>Box Rotate Angle As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Box Rotate Angle As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Box Rotate Angle As String</em>' attribute.
-	 * @see #isSetBoxRotateAngleAsString()
-	 * @see #unsetBoxRotateAngleAsString()
-	 * @see #setBoxRotateAngleAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTextStyleWithBoxCharacteristics_BoxRotateAngleAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getBoxRotateAngleAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleWithBoxCharacteristics#getBoxRotateAngleAsString <em>Box Rotate Angle As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Box Rotate Angle As String</em>' attribute.
-	 * @see #isSetBoxRotateAngleAsString()
-	 * @see #unsetBoxRotateAngleAsString()
-	 * @see #getBoxRotateAngleAsString()
-	 * @generated
-	 */
-	void setBoxRotateAngleAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleWithBoxCharacteristics#getBoxRotateAngleAsString <em>Box Rotate Angle As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetBoxRotateAngleAsString()
-	 * @see #getBoxRotateAngleAsString()
-	 * @see #setBoxRotateAngleAsString(String)
-	 * @generated
-	 */
-	void unsetBoxRotateAngleAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleWithBoxCharacteristics#getBoxRotateAngleAsString <em>Box Rotate Angle As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Box Rotate Angle As String</em>' attribute is set.
-	 * @see #unsetBoxRotateAngleAsString()
-	 * @see #getBoxRotateAngleAsString()
-	 * @see #setBoxRotateAngleAsString(String)
-	 * @generated
-	 */
-	boolean isSetBoxRotateAngleAsString();
 
 	/**
 	 * Returns the value of the '<em><b>Character Spacing</b></em>' reference.

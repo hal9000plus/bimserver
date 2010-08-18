@@ -28,8 +28,9 @@ import org.bimserver.ifc.emf.Ifc2x3.IfcLogical;
 import org.bimserver.ifc.emf.Ifc2x3.IfcTrimmedCurve;
 import org.bimserver.ifc.emf.Ifc2x3.IfcTrimmingPreference;
 import org.bimserver.ifc.emf.Ifc2x3.IfcTrimmingSelect;
-import org.bimserver.ifc.emf.Ifc2x3.Tristate;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -112,8 +113,8 @@ public class IfcTrimmedCurveImpl extends IfcBoundedCurveImpl implements IfcTrimm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Tristate getSenseAgreement() {
-		return (Tristate) eGet(Ifc2x3Package.eINSTANCE.getIfcTrimmedCurve_SenseAgreement(), true);
+	public IfcLogical getSenseAgreement() {
+		return (IfcLogical) eGet(Ifc2x3Package.eINSTANCE.getIfcTrimmedCurve_SenseAgreement(), true);
 	}
 
 	/**
@@ -121,7 +122,7 @@ public class IfcTrimmedCurveImpl extends IfcBoundedCurveImpl implements IfcTrimm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSenseAgreement(Tristate newSenseAgreement) {
+	public void setSenseAgreement(IfcLogical newSenseAgreement) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcTrimmedCurve_SenseAgreement(), newSenseAgreement);
 	}
 

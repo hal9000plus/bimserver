@@ -31,7 +31,7 @@
 //import org.apache.cxf.helpers.FileUtils;
 //import org.bimserver.ModelConverter;
 //import org.bimserver.emf2codb.Database;
-//import org.bimserver.emf2codb.IfcModel;
+//import org.bimserver.emf2codb.EmfModel;
 //import org.bimserver.emf2codb.FieldIgnoreMap;
 //import org.bimserver.emf2codb.Session;
 //import org.bimserver.emf2codb.berkeley.BerkeleyColumnDatabase;
@@ -79,19 +79,19 @@
 //		// Revision revision4 =
 //		// checkInModel(readModelFromFile(TestFile.HAUS_SOURCE_FILE.getFile()),
 //		// pid, uid, TestFile.HAUS_SOURCE_FILE.getFile().getName());
-//		// IfcModel newModel1 = downloadModel(revision1.getProject().getId(),
+//		// EmfModel newModel1 = downloadModel(revision1.getProject().getId(),
 //		// revision1.getId());
 //		// writeToFile(newModel1, new File("files" + File.separator + "test." +
 //		// TestFile.HAUS_SOURCE_FILE.getFile().getName()));
-//		// IfcModel newModel2 = downloadModel(revision2.getProject().getId(),
+//		// EmfModel newModel2 = downloadModel(revision2.getProject().getId(),
 //		// revision2.getId());
 //		// writeToFile(newModel2, new File("files" + File.separator + "test." +
 //		// TestFile.MERGE_TEST_SOURCE_FILE.getFile().getName()));
-//		// IfcModel newModel3 = downloadModel(revision3.getProject().getId(),
+//		// EmfModel newModel3 = downloadModel(revision3.getProject().getId(),
 //		// revision3.getId());
 //		// writeToFile(newModel3, new File("files" + File.separator + "test." +
 //		// TestFile.NIEDRI.getFile().getName()));
-//		// IfcModel newModel4 = downloadModel(revision4.getProject().getId(),
+//		// EmfModel newModel4 = downloadModel(revision4.getProject().getId(),
 //		// revision4.getId());
 //		// writeToFile(newModel4, new File("files" + File.separator + "test." +
 //		// TestFile.HAUS_SOURCE_FILE.getFile().getName()));
@@ -109,11 +109,11 @@
 //		// Revision revision4 =
 //		// checkInModel(readModelFromFile(TestFile.EMPTY_TEST.getFile()), pid,
 //		// uid, TestFile.EMPTY_TEST.getFile().getName());
-//		// IfcModel newModel1 = downloadModel(revision1.getProject().getId(),
+//		// EmfModel newModel1 = downloadModel(revision1.getProject().getId(),
 //		// revision1.getId());
 //		// writeToFile(newModel1, new File("files" + File.separator + "test." +
 //		// TestFile.NIEDRI.getFile().getName()));
-//		// IfcModel newModel2 = downloadModel(revision2.getProject().getId(),
+//		// EmfModel newModel2 = downloadModel(revision2.getProject().getId(),
 //		// revision2.getId());
 //		// writeToFile(newModel2, new File("files" + File.separator + "test." +
 //		// TestFile.EMPTY_TEST.getFile().getName()));
@@ -126,10 +126,10 @@
 //				TestFile testFile = TestFile.values()[(random.nextInt(TestFile.values().length))];
 //				System.out.println(testFile.getFile());
 //				IfcModel model = readModelFromFile(testFile.getFile());
-//				Revision revision = checkInModel(ModelConverter.newIfcModel(model), pid, uid, testFile.getFile().getName());
+//				Revision revision = checkInModel(ModelConverter.newEmfModel(model), pid, uid, testFile.getFile().getName());
 //				model = null;
 //				System.gc();
-//				IfcModel newModel = downloadModel(revision.getProject().getId(), revision.getId());
+//				EmfModel newModel = downloadModel(revision.getProject().getId(), revision.getId());
 //				writeToFile(ModelConverter.newIfcModel(newModel), new File("files" + File.separator + "test." + testFile.getFile().getName()));
 //			}
 //		}
@@ -148,7 +148,7 @@
 //		File dataDir = new File("../BimServer/database");
 //		BerkeleyColumnDatabase columnDatabase = new BerkeleyColumnDatabase(dataDir);
 //		database = new Database(packages, columnDatabase, new FieldIgnoreMap(packages));
-//		IfcModel newModel2 = downloadModel(revision.getProject().getId(), revision.getId());
+//		EmfModel newModel2 = downloadModel(revision.getProject().getId(), revision.getId());
 //		writeToFile(ModelConverter.newIfcModel(newModel2), new File("files" + File.separator + "test." + revision.getId() + "."
 //				+ TestFile.EMPTY_TEST.getFile().getName()));
 //		database.close();
@@ -182,14 +182,14 @@
 //		}
 //	}
 //
-//	private IfcModel downloadModel(int pid, int rid) {
+//	private EmfModel downloadModel(int pid, int rid) {
 //		Session session = new Session(database, "admin");
-//		IfcModel newModel = session.download(pid, rid);
+//		EmfModel newModel = session.download(pid, rid);
 //		session.close();
 //		return newModel;
 //	}
 //
-//	private Revision checkInModel(IfcModel model, int pid, int uid, String comment) {
+//	private Revision checkInModel(EmfModel model, int pid, int uid, String comment) {
 //		Session session = new Session(database, "admin");
 //		Revision revision = session.checkin(model, pid, uid, comment);
 //		session.close();

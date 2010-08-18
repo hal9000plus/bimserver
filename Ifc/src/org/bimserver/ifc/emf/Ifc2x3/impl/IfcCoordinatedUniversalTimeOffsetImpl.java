@@ -22,11 +22,15 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
-import org.bimserver.emf.IdEObjectImpl;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcAheadOrBehind;
 import org.bimserver.ifc.emf.Ifc2x3.IfcCoordinatedUniversalTimeOffset;
+import org.bimserver.ifc.emf.Ifc2x3.IfcHourInDay;
+import org.bimserver.ifc.emf.Ifc2x3.IfcMinuteInHour;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -43,7 +47,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class IfcCoordinatedUniversalTimeOffsetImpl extends IdEObjectImpl implements IfcCoordinatedUniversalTimeOffset {
+public class IfcCoordinatedUniversalTimeOffsetImpl extends EObjectImpl implements IfcCoordinatedUniversalTimeOffset {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -78,8 +82,8 @@ public class IfcCoordinatedUniversalTimeOffsetImpl extends IdEObjectImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getHourOffset() {
-		return (Integer) eGet(Ifc2x3Package.eINSTANCE.getIfcCoordinatedUniversalTimeOffset_HourOffset(), true);
+	public IfcHourInDay getHourOffset() {
+		return (IfcHourInDay) eGet(Ifc2x3Package.eINSTANCE.getIfcCoordinatedUniversalTimeOffset_HourOffset(), true);
 	}
 
 	/**
@@ -87,7 +91,7 @@ public class IfcCoordinatedUniversalTimeOffsetImpl extends IdEObjectImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setHourOffset(int newHourOffset) {
+	public void setHourOffset(IfcHourInDay newHourOffset) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcCoordinatedUniversalTimeOffset_HourOffset(), newHourOffset);
 	}
 
@@ -96,8 +100,8 @@ public class IfcCoordinatedUniversalTimeOffsetImpl extends IdEObjectImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getMinuteOffset() {
-		return (Integer) eGet(Ifc2x3Package.eINSTANCE.getIfcCoordinatedUniversalTimeOffset_MinuteOffset(), true);
+	public IfcMinuteInHour getMinuteOffset() {
+		return (IfcMinuteInHour) eGet(Ifc2x3Package.eINSTANCE.getIfcCoordinatedUniversalTimeOffset_MinuteOffset(), true);
 	}
 
 	/**
@@ -105,7 +109,7 @@ public class IfcCoordinatedUniversalTimeOffsetImpl extends IdEObjectImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMinuteOffset(int newMinuteOffset) {
+	public void setMinuteOffset(IfcMinuteInHour newMinuteOffset) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcCoordinatedUniversalTimeOffset_MinuteOffset(), newMinuteOffset);
 	}
 

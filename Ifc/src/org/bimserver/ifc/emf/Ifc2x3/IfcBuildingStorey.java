@@ -31,7 +31,6 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcBuildingStorey#getElevation <em>Elevation</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcBuildingStorey#getElevationAsString <em>Elevation As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -41,109 +40,56 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcBuildingStorey extends IfcSpatialStructureElement {
 	/**
-	 * Returns the value of the '<em><b>Elevation</b></em>' attribute.
+	 * Returns the value of the '<em><b>Elevation</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Elevation</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Elevation</em>' attribute.
+	 * @return the value of the '<em>Elevation</em>' reference.
 	 * @see #isSetElevation()
 	 * @see #unsetElevation()
-	 * @see #setElevation(float)
+	 * @see #setElevation(IfcLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcBuildingStorey_Elevation()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getElevation();
+	IfcLengthMeasure getElevation();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBuildingStorey#getElevation <em>Elevation</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBuildingStorey#getElevation <em>Elevation</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Elevation</em>' attribute.
+	 * @param value the new value of the '<em>Elevation</em>' reference.
 	 * @see #isSetElevation()
 	 * @see #unsetElevation()
 	 * @see #getElevation()
 	 * @generated
 	 */
-	void setElevation(float value);
+	void setElevation(IfcLengthMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBuildingStorey#getElevation <em>Elevation</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBuildingStorey#getElevation <em>Elevation</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetElevation()
 	 * @see #getElevation()
-	 * @see #setElevation(float)
+	 * @see #setElevation(IfcLengthMeasure)
 	 * @generated
 	 */
 	void unsetElevation();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBuildingStorey#getElevation <em>Elevation</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBuildingStorey#getElevation <em>Elevation</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Elevation</em>' attribute is set.
+	 * @return whether the value of the '<em>Elevation</em>' reference is set.
 	 * @see #unsetElevation()
 	 * @see #getElevation()
-	 * @see #setElevation(float)
+	 * @see #setElevation(IfcLengthMeasure)
 	 * @generated
 	 */
 	boolean isSetElevation();
-
-	/**
-	 * Returns the value of the '<em><b>Elevation As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Elevation As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Elevation As String</em>' attribute.
-	 * @see #isSetElevationAsString()
-	 * @see #unsetElevationAsString()
-	 * @see #setElevationAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcBuildingStorey_ElevationAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getElevationAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBuildingStorey#getElevationAsString <em>Elevation As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Elevation As String</em>' attribute.
-	 * @see #isSetElevationAsString()
-	 * @see #unsetElevationAsString()
-	 * @see #getElevationAsString()
-	 * @generated
-	 */
-	void setElevationAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBuildingStorey#getElevationAsString <em>Elevation As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetElevationAsString()
-	 * @see #getElevationAsString()
-	 * @see #setElevationAsString(String)
-	 * @generated
-	 */
-	void unsetElevationAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBuildingStorey#getElevationAsString <em>Elevation As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Elevation As String</em>' attribute is set.
-	 * @see #unsetElevationAsString()
-	 * @see #getElevationAsString()
-	 * @see #setElevationAsString(String)
-	 * @generated
-	 */
-	boolean isSetElevationAsString();
 
 } // IfcBuildingStorey

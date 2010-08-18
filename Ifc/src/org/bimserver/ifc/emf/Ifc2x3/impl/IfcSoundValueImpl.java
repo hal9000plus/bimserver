@@ -24,8 +24,10 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcDerivedMeasureValue;
+import org.bimserver.ifc.emf.Ifc2x3.IfcFrequencyMeasure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcSoundValue;
 import org.bimserver.ifc.emf.Ifc2x3.IfcTimeSeries;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -37,7 +39,6 @@ import org.eclipse.emf.ecore.EClass;
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSoundValueImpl#getSoundLevelTimeSeries <em>Sound Level Time Series</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSoundValueImpl#getFrequency <em>Frequency</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSoundValueImpl#getFrequencyAsString <em>Frequency As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSoundValueImpl#getSoundLevelSingleValue <em>Sound Level Single Value</em>}</li>
  * </ul>
  * </p>
@@ -105,8 +106,8 @@ public class IfcSoundValueImpl extends IfcPropertySetDefinitionImpl implements I
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getFrequency() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcSoundValue_Frequency(), true);
+	public IfcFrequencyMeasure getFrequency() {
+		return (IfcFrequencyMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcSoundValue_Frequency(), true);
 	}
 
 	/**
@@ -114,26 +115,8 @@ public class IfcSoundValueImpl extends IfcPropertySetDefinitionImpl implements I
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFrequency(float newFrequency) {
+	public void setFrequency(IfcFrequencyMeasure newFrequency) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcSoundValue_Frequency(), newFrequency);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getFrequencyAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcSoundValue_FrequencyAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setFrequencyAsString(String newFrequencyAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcSoundValue_FrequencyAsString(), newFrequencyAsString);
 	}
 
 	/**

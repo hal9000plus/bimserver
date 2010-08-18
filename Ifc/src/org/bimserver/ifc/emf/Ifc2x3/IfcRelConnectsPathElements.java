@@ -36,6 +36,8 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelConnectsPathElements#getRelatedPriorities <em>Related Priorities</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelConnectsPathElements#getRelatedConnectionType <em>Related Connection Type</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelConnectsPathElements#getRelatingConnectionType <em>Relating Connection Type</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelConnectsPathElements#getRelatingLayerCount <em>Relating Layer Count</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelConnectsPathElements#getRelatedLayerCount <em>Related Layer Count</em>}</li>
  * </ul>
  * </p>
  *
@@ -45,36 +47,36 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface IfcRelConnectsPathElements extends IfcRelConnectsElements {
 	/**
-	 * Returns the value of the '<em><b>Relating Priorities</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.Integer}.
+	 * Returns the value of the '<em><b>Relating Priorities</b></em>' reference list.
+	 * The list contents are of type {@link org.bimserver.ifc.emf.Ifc2x3.IfcInteger}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Relating Priorities</em>' attribute list isn't clear,
+	 * If the meaning of the '<em>Relating Priorities</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Relating Priorities</em>' attribute list.
+	 * @return the value of the '<em>Relating Priorities</em>' reference list.
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRelConnectsPathElements_RelatingPriorities()
-	 * @model unique="false"
+	 * @model
 	 * @generated
 	 */
-	EList<Integer> getRelatingPriorities();
+	EList<IfcInteger> getRelatingPriorities();
 
 	/**
-	 * Returns the value of the '<em><b>Related Priorities</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.Integer}.
+	 * Returns the value of the '<em><b>Related Priorities</b></em>' reference list.
+	 * The list contents are of type {@link org.bimserver.ifc.emf.Ifc2x3.IfcInteger}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Related Priorities</em>' attribute list isn't clear,
+	 * If the meaning of the '<em>Related Priorities</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Related Priorities</em>' attribute list.
+	 * @return the value of the '<em>Related Priorities</em>' reference list.
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRelConnectsPathElements_RelatedPriorities()
-	 * @model unique="false"
+	 * @model
 	 * @generated
 	 */
-	EList<Integer> getRelatedPriorities();
+	EList<IfcInteger> getRelatedPriorities();
 
 	/**
 	 * Returns the value of the '<em><b>Related Connection Type</b></em>' attribute.
@@ -133,5 +135,59 @@ public interface IfcRelConnectsPathElements extends IfcRelConnectsElements {
 	 * @generated
 	 */
 	void setRelatingConnectionType(IfcConnectionTypeEnum value);
+
+	/**
+	 * Returns the value of the '<em><b>Relating Layer Count</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Relating Layer Count</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Relating Layer Count</em>' reference.
+	 * @see #setRelatingLayerCount(IfcInteger)
+	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRelConnectsPathElements_RelatingLayerCount()
+	 * @model transient="true" volatile="true" derived="true"
+	 *        annotation="http://www.iso.org/iso10303-11/EXPRESS code=' IfcNoOfLayers(SELF\\IfcRelConnectsElements.RelatingElement);'"
+	 * @generated
+	 */
+	IfcInteger getRelatingLayerCount();
+
+	/**
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelConnectsPathElements#getRelatingLayerCount <em>Relating Layer Count</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Relating Layer Count</em>' reference.
+	 * @see #getRelatingLayerCount()
+	 * @generated
+	 */
+	void setRelatingLayerCount(IfcInteger value);
+
+	/**
+	 * Returns the value of the '<em><b>Related Layer Count</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Related Layer Count</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Related Layer Count</em>' reference.
+	 * @see #setRelatedLayerCount(IfcInteger)
+	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRelConnectsPathElements_RelatedLayerCount()
+	 * @model transient="true" volatile="true" derived="true"
+	 *        annotation="http://www.iso.org/iso10303-11/EXPRESS code=' IfcNoOfLayers(SELF\\IfcRelConnectsElements.RelatedElement);'"
+	 * @generated
+	 */
+	IfcInteger getRelatedLayerCount();
+
+	/**
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelConnectsPathElements#getRelatedLayerCount <em>Related Layer Count</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Related Layer Count</em>' reference.
+	 * @see #getRelatedLayerCount()
+	 * @generated
+	 */
+	void setRelatedLayerCount(IfcInteger value);
 
 } // IfcRelConnectsPathElements

@@ -46,10 +46,9 @@ import javax.swing.JTable;
 import javax.swing.ListSelectionModel;
 import javax.swing.TransferHandler;
 
-import org.bimserver.interfaces.objects.SProject;
-import org.bimserver.interfaces.objects.SRevision;
-import org.bimserver.interfaces.objects.SUser;
-import org.bimserver.shared.UserException;
+import org.bimserver.shared.SProject;
+import org.bimserver.shared.SRevision;
+import org.bimserver.shared.SUser;
 
 public class RevisionPanel extends JPanel {
 
@@ -59,7 +58,7 @@ public class RevisionPanel extends JPanel {
 	private JPopupMenu revisionMenu;
 	private JTable revisionTable;
 
-	public RevisionPanel(final ServiceHolder serviceHolder, final Client testWindow) {
+	public RevisionPanel(ServiceHolder serviceHolder, final Client testWindow) {
 		setLayout(new BorderLayout());
 		JLabel label = new JLabel("Revisions");
 		add(label, BorderLayout.NORTH);
@@ -76,7 +75,7 @@ public class RevisionPanel extends JPanel {
 				testWindow.checkout(revision);
 			}
 		});
-		JMenuItem downloadItem = new JMenuItem("Download...");
+		JMenuItem downloadItem = new JMenuItem("Download...");	
 		downloadItem.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -84,13 +83,13 @@ public class RevisionPanel extends JPanel {
 				testWindow.download(revision);
 			}
 		});
-
-		// JMenuItem editAsTree = new JMenuItem("Edit as tree...");
-		// revisionMenu.add(editAsTree);
+		
+//		JMenuItem editAsTree = new JMenuItem("Edit as tree...");
+//		revisionMenu.add(editAsTree);
 		revisionMenu.add(checkoutItem);
 		revisionMenu.add(downloadItem);
 
-		revisionTable.addMouseListener(new MouseAdapter() {
+		revisionTable.addMouseListener(new MouseAdapter(){
 			@Override
 			public void mouseClicked(MouseEvent mouseEvent) {
 				if (mouseEvent.getClickCount() == 2 && mouseEvent.getButton() == MouseEvent.BUTTON1) {
@@ -99,20 +98,14 @@ public class RevisionPanel extends JPanel {
 					if (!tmp.isDirectory()) {
 						tmp.mkdir();
 					}
-					SProject project;
+					File file = new File(tmp, revision.getProjectName() + "." + revision.getId() + ".ifc");
 					try {
-						project = serviceHolder.getService().getProjectByPoid(revision.getProjectId());
-						File file = new File(tmp, project.getName() + "." + revision.getId() + ".ifc");
-						try {
-							testWindow.download(revision.getId(), new FileOutputStream(file), false);
-							Desktop.getDesktop().open(file);
-						} catch (FileNotFoundException e1) {
-							e1.printStackTrace();
-						} catch (IOException e) {
-							e.printStackTrace();
-						}
-					} catch (UserException e2) {
-						e2.printStackTrace();
+						testWindow.download(revision.getProjectId(), revision.getId(), new FileOutputStream(file), false);
+						Desktop.getDesktop().open(file);
+					} catch (FileNotFoundException e1) {
+						e1.printStackTrace();
+					} catch (IOException e) {
+						e.printStackTrace();
 					}
 				}
 			}
@@ -126,7 +119,7 @@ public class RevisionPanel extends JPanel {
 			protected Transferable createTransferable(JComponent c) {
 				final SRevision revision = revisionTableModel.getRevision(revisionTable.getSelectedRow());
 				final List<File> list = new ArrayList<File>();
-				return new Transferable() {
+				return new Transferable(){
 
 					@Override
 					public Object getTransferData(DataFlavor flavor) throws UnsupportedFlavorException, IOException {
@@ -135,18 +128,12 @@ public class RevisionPanel extends JPanel {
 							if (!tmp.isDirectory()) {
 								tmp.mkdir();
 							}
-							SProject sProject;
+							File file = new File(tmp, revision.getProjectName() + "-" + revision.getId() + ".ifc");
+							list.add(file);
 							try {
-								sProject = serviceHolder.getService().getProjectByPoid(revision.getProjectId());
-								File file = new File(tmp, sProject.getName() + "-" + revision.getId() + ".ifc");
-								list.add(file);
-								try {
-									testWindow.checkout(revision, new FileOutputStream(file), false);
-								} catch (FileNotFoundException e) {
-									e.printStackTrace();
-								}
-							} catch (UserException e1) {
-								e1.printStackTrace();
+								testWindow.checkout(revision, new FileOutputStream(file), false);
+							} catch (FileNotFoundException e) {
+								e.printStackTrace();
 							}
 						}
 						return list;
@@ -154,7 +141,7 @@ public class RevisionPanel extends JPanel {
 
 					@Override
 					public DataFlavor[] getTransferDataFlavors() {
-						return new DataFlavor[] { DataFlavor.javaFileListFlavor };
+						return new DataFlavor[]{DataFlavor.javaFileListFlavor};
 					}
 
 					@Override

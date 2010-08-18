@@ -23,9 +23,12 @@
 package org.bimserver.ifc.emf.Ifc2x3.util;
 
 import org.bimserver.ifc.emf.Ifc2x3.*;
+
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
+
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -134,8 +137,23 @@ public class Ifc2x3AdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseIfcDayInMonthNumber(IfcDayInMonthNumber object) {
+			return createIfcDayInMonthNumberAdapter();
+		}
+
+		@Override
+		public Adapter caseIfcDaylightSavingHour(IfcDaylightSavingHour object) {
+			return createIfcDaylightSavingHourAdapter();
+		}
+
+		@Override
 		public Adapter caseIfcDescriptiveMeasure(IfcDescriptiveMeasure object) {
 			return createIfcDescriptiveMeasureAdapter();
+		}
+
+		@Override
+		public Adapter caseIfcDimensionCount(IfcDimensionCount object) {
+			return createIfcDimensionCountAdapter();
 		}
 
 		@Override
@@ -184,6 +202,21 @@ public class Ifc2x3AdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseIfcFontStyle(IfcFontStyle object) {
+			return createIfcFontStyleAdapter();
+		}
+
+		@Override
+		public Adapter caseIfcFontVariant(IfcFontVariant object) {
+			return createIfcFontVariantAdapter();
+		}
+
+		@Override
+		public Adapter caseIfcFontWeight(IfcFontWeight object) {
+			return createIfcFontWeightAdapter();
+		}
+
+		@Override
 		public Adapter caseIfcForceMeasure(IfcForceMeasure object) {
 			return createIfcForceMeasureAdapter();
 		}
@@ -206,6 +239,11 @@ public class Ifc2x3AdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseIfcHeatingValueMeasure(IfcHeatingValueMeasure object) {
 			return createIfcHeatingValueMeasureAdapter();
+		}
+
+		@Override
+		public Adapter caseIfcHourInDay(IfcHourInDay object) {
+			return createIfcHourInDayAdapter();
 		}
 
 		@Override
@@ -329,6 +367,11 @@ public class Ifc2x3AdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseIfcMinuteInHour(IfcMinuteInHour object) {
+			return createIfcMinuteInHourAdapter();
+		}
+
+		@Override
 		public Adapter caseIfcModulusOfElasticityMeasure(IfcModulusOfElasticityMeasure object) {
 			return createIfcModulusOfElasticityMeasureAdapter();
 		}
@@ -369,6 +412,11 @@ public class Ifc2x3AdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseIfcMonthInYearNumber(IfcMonthInYearNumber object) {
+			return createIfcMonthInYearNumberAdapter();
+		}
+
+		@Override
 		public Adapter caseIfcNumericMeasure(IfcNumericMeasure object) {
 			return createIfcNumericMeasureAdapter();
 		}
@@ -396,6 +444,11 @@ public class Ifc2x3AdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseIfcPowerMeasure(IfcPowerMeasure object) {
 			return createIfcPowerMeasureAdapter();
+		}
+
+		@Override
+		public Adapter caseIfcPresentableText(IfcPresentableText object) {
+			return createIfcPresentableTextAdapter();
 		}
 
 		@Override
@@ -431,6 +484,11 @@ public class Ifc2x3AdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseIfcRotationalStiffnessMeasure(IfcRotationalStiffnessMeasure object) {
 			return createIfcRotationalStiffnessMeasureAdapter();
+		}
+
+		@Override
+		public Adapter caseIfcSecondInMinute(IfcSecondInMinute object) {
+			return createIfcSecondInMinuteAdapter();
 		}
 
 		@Override
@@ -486,6 +544,26 @@ public class Ifc2x3AdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseIfcText(IfcText object) {
 			return createIfcTextAdapter();
+		}
+
+		@Override
+		public Adapter caseIfcTextAlignment(IfcTextAlignment object) {
+			return createIfcTextAlignmentAdapter();
+		}
+
+		@Override
+		public Adapter caseIfcTextDecoration(IfcTextDecoration object) {
+			return createIfcTextDecorationAdapter();
+		}
+
+		@Override
+		public Adapter caseIfcTextFontName(IfcTextFontName object) {
+			return createIfcTextFontNameAdapter();
+		}
+
+		@Override
+		public Adapter caseIfcTextTransformation(IfcTextTransformation object) {
+			return createIfcTextTransformationAdapter();
 		}
 
 		@Override
@@ -556,6 +634,21 @@ public class Ifc2x3AdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseIfcWarpingMomentMeasure(IfcWarpingMomentMeasure object) {
 			return createIfcWarpingMomentMeasureAdapter();
+		}
+
+		@Override
+		public Adapter caseIfcYearNumber(IfcYearNumber object) {
+			return createIfcYearNumberAdapter();
+		}
+
+		@Override
+		public Adapter caseIfcBoxAlignment(IfcBoxAlignment object) {
+			return createIfcBoxAlignmentAdapter();
+		}
+
+		@Override
+		public Adapter caseIfcCompoundPlaneAngleMeasure(IfcCompoundPlaneAngleMeasure object) {
+			return createIfcCompoundPlaneAngleMeasureAdapter();
 		}
 
 		@Override
@@ -4233,6 +4326,34 @@ public class Ifc2x3AdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDayInMonthNumber <em>Ifc Day In Month Number</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.bimserver.ifc.emf.Ifc2x3.IfcDayInMonthNumber
+	 * @generated
+	 */
+	public Adapter createIfcDayInMonthNumberAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDaylightSavingHour <em>Ifc Daylight Saving Hour</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.bimserver.ifc.emf.Ifc2x3.IfcDaylightSavingHour
+	 * @generated
+	 */
+	public Adapter createIfcDaylightSavingHourAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDescriptiveMeasure <em>Ifc Descriptive Measure</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -4243,6 +4364,20 @@ public class Ifc2x3AdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createIfcDescriptiveMeasureAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDimensionCount <em>Ifc Dimension Count</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.bimserver.ifc.emf.Ifc2x3.IfcDimensionCount
+	 * @generated
+	 */
+	public Adapter createIfcDimensionCountAdapter() {
 		return null;
 	}
 
@@ -4373,6 +4508,48 @@ public class Ifc2x3AdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFontStyle <em>Ifc Font Style</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.bimserver.ifc.emf.Ifc2x3.IfcFontStyle
+	 * @generated
+	 */
+	public Adapter createIfcFontStyleAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFontVariant <em>Ifc Font Variant</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.bimserver.ifc.emf.Ifc2x3.IfcFontVariant
+	 * @generated
+	 */
+	public Adapter createIfcFontVariantAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFontWeight <em>Ifc Font Weight</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.bimserver.ifc.emf.Ifc2x3.IfcFontWeight
+	 * @generated
+	 */
+	public Adapter createIfcFontWeightAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.bimserver.ifc.emf.Ifc2x3.IfcForceMeasure <em>Ifc Force Measure</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -4439,6 +4616,20 @@ public class Ifc2x3AdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createIfcHeatingValueMeasureAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHourInDay <em>Ifc Hour In Day</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.bimserver.ifc.emf.Ifc2x3.IfcHourInDay
+	 * @generated
+	 */
+	public Adapter createIfcHourInDayAdapter() {
 		return null;
 	}
 
@@ -4779,6 +4970,20 @@ public class Ifc2x3AdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMinuteInHour <em>Ifc Minute In Hour</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.bimserver.ifc.emf.Ifc2x3.IfcMinuteInHour
+	 * @generated
+	 */
+	public Adapter createIfcMinuteInHourAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.bimserver.ifc.emf.Ifc2x3.IfcModulusOfElasticityMeasure <em>Ifc Modulus Of Elasticity Measure</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -4891,6 +5096,20 @@ public class Ifc2x3AdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMonthInYearNumber <em>Ifc Month In Year Number</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.bimserver.ifc.emf.Ifc2x3.IfcMonthInYearNumber
+	 * @generated
+	 */
+	public Adapter createIfcMonthInYearNumberAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.bimserver.ifc.emf.Ifc2x3.IfcNumericMeasure <em>Ifc Numeric Measure</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -4971,6 +5190,20 @@ public class Ifc2x3AdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createIfcPowerMeasureAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPresentableText <em>Ifc Presentable Text</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.bimserver.ifc.emf.Ifc2x3.IfcPresentableText
+	 * @generated
+	 */
+	public Adapter createIfcPresentableTextAdapter() {
 		return null;
 	}
 
@@ -5069,6 +5302,20 @@ public class Ifc2x3AdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createIfcRotationalStiffnessMeasureAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSecondInMinute <em>Ifc Second In Minute</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.bimserver.ifc.emf.Ifc2x3.IfcSecondInMinute
+	 * @generated
+	 */
+	public Adapter createIfcSecondInMinuteAdapter() {
 		return null;
 	}
 
@@ -5223,6 +5470,62 @@ public class Ifc2x3AdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createIfcTextAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextAlignment <em>Ifc Text Alignment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.bimserver.ifc.emf.Ifc2x3.IfcTextAlignment
+	 * @generated
+	 */
+	public Adapter createIfcTextAlignmentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextDecoration <em>Ifc Text Decoration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.bimserver.ifc.emf.Ifc2x3.IfcTextDecoration
+	 * @generated
+	 */
+	public Adapter createIfcTextDecorationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextFontName <em>Ifc Text Font Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.bimserver.ifc.emf.Ifc2x3.IfcTextFontName
+	 * @generated
+	 */
+	public Adapter createIfcTextFontNameAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextTransformation <em>Ifc Text Transformation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.bimserver.ifc.emf.Ifc2x3.IfcTextTransformation
+	 * @generated
+	 */
+	public Adapter createIfcTextTransformationAdapter() {
 		return null;
 	}
 
@@ -5419,6 +5722,48 @@ public class Ifc2x3AdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createIfcWarpingMomentMeasureAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.bimserver.ifc.emf.Ifc2x3.IfcYearNumber <em>Ifc Year Number</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.bimserver.ifc.emf.Ifc2x3.IfcYearNumber
+	 * @generated
+	 */
+	public Adapter createIfcYearNumberAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoxAlignment <em>Ifc Box Alignment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.bimserver.ifc.emf.Ifc2x3.IfcBoxAlignment
+	 * @generated
+	 */
+	public Adapter createIfcBoxAlignmentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCompoundPlaneAngleMeasure <em>Ifc Compound Plane Angle Measure</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.bimserver.ifc.emf.Ifc2x3.IfcCompoundPlaneAngleMeasure
+	 * @generated
+	 */
+	public Adapter createIfcCompoundPlaneAngleMeasureAdapter() {
 		return null;
 	}
 

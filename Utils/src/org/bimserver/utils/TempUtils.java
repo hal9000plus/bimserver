@@ -17,7 +17,7 @@ public class TempUtils {
 		return subDir;
 	}
 
-	public static File makeTempFile(File baseDir, String name) {
-		return new File(baseDir, name);
+	public static File makeTempFile(String name) {
+		return new File(tmpDirName + File.separator + name);
 	}
 }

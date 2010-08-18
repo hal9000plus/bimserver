@@ -32,8 +32,10 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTable#getName <em>Name</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTable#getRows <em>Rows</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTable#getNumberOfHeadings <em>Number Of Headings</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTable#getNumberOfDataRows <em>Number Of Data Rows</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTable#getNumberOfCellsInRow <em>Number Of Cells In Row</em>}</li>
  * </ul>
  * </p>
  *
@@ -42,32 +44,6 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface IfcTable extends IfcMetricValueSelect {
-	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTable_Name()
-	 * @model
-	 * @generated
-	 */
-	String getName();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTable#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
-	void setName(String value);
-
 	/**
 	 * Returns the value of the '<em><b>Rows</b></em>' reference list.
 	 * The list contents are of type {@link org.bimserver.ifc.emf.Ifc2x3.IfcTableRow}.
@@ -85,5 +61,86 @@ public interface IfcTable extends IfcMetricValueSelect {
 	 * @generated
 	 */
 	EList<IfcTableRow> getRows();
+
+	/**
+	 * Returns the value of the '<em><b>Number Of Headings</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Number Of Headings</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Number Of Headings</em>' reference.
+	 * @see #setNumberOfHeadings(IfcInteger)
+	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTable_NumberOfHeadings()
+	 * @model transient="true" volatile="true" derived="true"
+	 *        annotation="http://www.iso.org/iso10303-11/EXPRESS code=' SIZEOF(QUERY( Temp <* Rows | Temp.IsHeading));'"
+	 * @generated
+	 */
+	IfcInteger getNumberOfHeadings();
+
+	/**
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTable#getNumberOfHeadings <em>Number Of Headings</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Number Of Headings</em>' reference.
+	 * @see #getNumberOfHeadings()
+	 * @generated
+	 */
+	void setNumberOfHeadings(IfcInteger value);
+
+	/**
+	 * Returns the value of the '<em><b>Number Of Data Rows</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Number Of Data Rows</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Number Of Data Rows</em>' reference.
+	 * @see #setNumberOfDataRows(IfcInteger)
+	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTable_NumberOfDataRows()
+	 * @model transient="true" volatile="true" derived="true"
+	 *        annotation="http://www.iso.org/iso10303-11/EXPRESS code=' SIZEOF(QUERY( Temp <* Rows | NOT(Temp.IsHeading)));'"
+	 * @generated
+	 */
+	IfcInteger getNumberOfDataRows();
+
+	/**
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTable#getNumberOfDataRows <em>Number Of Data Rows</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Number Of Data Rows</em>' reference.
+	 * @see #getNumberOfDataRows()
+	 * @generated
+	 */
+	void setNumberOfDataRows(IfcInteger value);
+
+	/**
+	 * Returns the value of the '<em><b>Number Of Cells In Row</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Number Of Cells In Row</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Number Of Cells In Row</em>' reference.
+	 * @see #setNumberOfCellsInRow(IfcInteger)
+	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTable_NumberOfCellsInRow()
+	 * @model transient="true" volatile="true" derived="true"
+	 *        annotation="http://www.iso.org/iso10303-11/EXPRESS code=' HIINDEX(Rows[1].RowCells);'"
+	 * @generated
+	 */
+	IfcInteger getNumberOfCellsInRow();
+
+	/**
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTable#getNumberOfCellsInRow <em>Number Of Cells In Row</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Number Of Cells In Row</em>' reference.
+	 * @see #getNumberOfCellsInRow()
+	 * @generated
+	 */
+	void setNumberOfCellsInRow(IfcInteger value);
 
 } // IfcTable

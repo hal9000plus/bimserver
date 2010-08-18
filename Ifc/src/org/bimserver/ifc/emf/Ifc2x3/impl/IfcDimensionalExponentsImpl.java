@@ -22,11 +22,13 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
-import org.bimserver.emf.IdEObjectImpl;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcDimensionalExponents;
 import org.bimserver.ifc.emf.Ifc2x3.IfcInteger;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -47,7 +49,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class IfcDimensionalExponentsImpl extends IdEObjectImpl implements IfcDimensionalExponents {
+public class IfcDimensionalExponentsImpl extends EObjectImpl implements IfcDimensionalExponents {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -82,8 +84,8 @@ public class IfcDimensionalExponentsImpl extends IdEObjectImpl implements IfcDim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getLengthExponent() {
-		return (Integer) eGet(Ifc2x3Package.eINSTANCE.getIfcDimensionalExponents_LengthExponent(), true);
+	public IfcInteger getLengthExponent() {
+		return (IfcInteger) eGet(Ifc2x3Package.eINSTANCE.getIfcDimensionalExponents_LengthExponent(), true);
 	}
 
 	/**
@@ -91,7 +93,7 @@ public class IfcDimensionalExponentsImpl extends IdEObjectImpl implements IfcDim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLengthExponent(int newLengthExponent) {
+	public void setLengthExponent(IfcInteger newLengthExponent) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcDimensionalExponents_LengthExponent(), newLengthExponent);
 	}
 
@@ -100,8 +102,8 @@ public class IfcDimensionalExponentsImpl extends IdEObjectImpl implements IfcDim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getMassExponent() {
-		return (Integer) eGet(Ifc2x3Package.eINSTANCE.getIfcDimensionalExponents_MassExponent(), true);
+	public IfcInteger getMassExponent() {
+		return (IfcInteger) eGet(Ifc2x3Package.eINSTANCE.getIfcDimensionalExponents_MassExponent(), true);
 	}
 
 	/**
@@ -109,7 +111,7 @@ public class IfcDimensionalExponentsImpl extends IdEObjectImpl implements IfcDim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMassExponent(int newMassExponent) {
+	public void setMassExponent(IfcInteger newMassExponent) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcDimensionalExponents_MassExponent(), newMassExponent);
 	}
 
@@ -118,8 +120,8 @@ public class IfcDimensionalExponentsImpl extends IdEObjectImpl implements IfcDim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getTimeExponent() {
-		return (Integer) eGet(Ifc2x3Package.eINSTANCE.getIfcDimensionalExponents_TimeExponent(), true);
+	public IfcInteger getTimeExponent() {
+		return (IfcInteger) eGet(Ifc2x3Package.eINSTANCE.getIfcDimensionalExponents_TimeExponent(), true);
 	}
 
 	/**
@@ -127,7 +129,7 @@ public class IfcDimensionalExponentsImpl extends IdEObjectImpl implements IfcDim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTimeExponent(int newTimeExponent) {
+	public void setTimeExponent(IfcInteger newTimeExponent) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcDimensionalExponents_TimeExponent(), newTimeExponent);
 	}
 
@@ -136,8 +138,8 @@ public class IfcDimensionalExponentsImpl extends IdEObjectImpl implements IfcDim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getElectricCurrentExponent() {
-		return (Integer) eGet(Ifc2x3Package.eINSTANCE.getIfcDimensionalExponents_ElectricCurrentExponent(), true);
+	public IfcInteger getElectricCurrentExponent() {
+		return (IfcInteger) eGet(Ifc2x3Package.eINSTANCE.getIfcDimensionalExponents_ElectricCurrentExponent(), true);
 	}
 
 	/**
@@ -145,7 +147,7 @@ public class IfcDimensionalExponentsImpl extends IdEObjectImpl implements IfcDim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setElectricCurrentExponent(int newElectricCurrentExponent) {
+	public void setElectricCurrentExponent(IfcInteger newElectricCurrentExponent) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcDimensionalExponents_ElectricCurrentExponent(), newElectricCurrentExponent);
 	}
 
@@ -154,8 +156,8 @@ public class IfcDimensionalExponentsImpl extends IdEObjectImpl implements IfcDim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getThermodynamicTemperatureExponent() {
-		return (Integer) eGet(Ifc2x3Package.eINSTANCE.getIfcDimensionalExponents_ThermodynamicTemperatureExponent(), true);
+	public IfcInteger getThermodynamicTemperatureExponent() {
+		return (IfcInteger) eGet(Ifc2x3Package.eINSTANCE.getIfcDimensionalExponents_ThermodynamicTemperatureExponent(), true);
 	}
 
 	/**
@@ -163,7 +165,7 @@ public class IfcDimensionalExponentsImpl extends IdEObjectImpl implements IfcDim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setThermodynamicTemperatureExponent(int newThermodynamicTemperatureExponent) {
+	public void setThermodynamicTemperatureExponent(IfcInteger newThermodynamicTemperatureExponent) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcDimensionalExponents_ThermodynamicTemperatureExponent(), newThermodynamicTemperatureExponent);
 	}
 
@@ -172,8 +174,8 @@ public class IfcDimensionalExponentsImpl extends IdEObjectImpl implements IfcDim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getAmountOfSubstanceExponent() {
-		return (Integer) eGet(Ifc2x3Package.eINSTANCE.getIfcDimensionalExponents_AmountOfSubstanceExponent(), true);
+	public IfcInteger getAmountOfSubstanceExponent() {
+		return (IfcInteger) eGet(Ifc2x3Package.eINSTANCE.getIfcDimensionalExponents_AmountOfSubstanceExponent(), true);
 	}
 
 	/**
@@ -181,7 +183,7 @@ public class IfcDimensionalExponentsImpl extends IdEObjectImpl implements IfcDim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAmountOfSubstanceExponent(int newAmountOfSubstanceExponent) {
+	public void setAmountOfSubstanceExponent(IfcInteger newAmountOfSubstanceExponent) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcDimensionalExponents_AmountOfSubstanceExponent(), newAmountOfSubstanceExponent);
 	}
 
@@ -190,8 +192,8 @@ public class IfcDimensionalExponentsImpl extends IdEObjectImpl implements IfcDim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getLuminousIntensityExponent() {
-		return (Integer) eGet(Ifc2x3Package.eINSTANCE.getIfcDimensionalExponents_LuminousIntensityExponent(), true);
+	public IfcInteger getLuminousIntensityExponent() {
+		return (IfcInteger) eGet(Ifc2x3Package.eINSTANCE.getIfcDimensionalExponents_LuminousIntensityExponent(), true);
 	}
 
 	/**
@@ -199,7 +201,7 @@ public class IfcDimensionalExponentsImpl extends IdEObjectImpl implements IfcDim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLuminousIntensityExponent(int newLuminousIntensityExponent) {
+	public void setLuminousIntensityExponent(IfcInteger newLuminousIntensityExponent) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcDimensionalExponents_LuminousIntensityExponent(), newLuminousIntensityExponent);
 	}
 

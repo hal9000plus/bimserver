@@ -22,7 +22,7 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3;
 
-import org.bimserver.emf.IdEObject;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,8 +32,7 @@ import org.bimserver.emf.IdEObject;
  *
  * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcGeometricSetSelect()
  * @model interface="true" abstract="true"
- * @extends IdEObject
  * @generated
  */
-public interface IfcGeometricSetSelect extends IdEObject {
+public interface IfcGeometricSetSelect extends EObject {
 } // IfcGeometricSetSelect

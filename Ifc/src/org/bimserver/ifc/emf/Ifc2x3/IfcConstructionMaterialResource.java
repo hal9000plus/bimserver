@@ -34,7 +34,6 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcConstructionMaterialResource#getSuppliers <em>Suppliers</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcConstructionMaterialResource#getUsageRatio <em>Usage Ratio</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcConstructionMaterialResource#getUsageRatioAsString <em>Usage Ratio As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -83,109 +82,56 @@ public interface IfcConstructionMaterialResource extends IfcConstructionResource
 	boolean isSetSuppliers();
 
 	/**
-	 * Returns the value of the '<em><b>Usage Ratio</b></em>' attribute.
+	 * Returns the value of the '<em><b>Usage Ratio</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Usage Ratio</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Usage Ratio</em>' attribute.
+	 * @return the value of the '<em>Usage Ratio</em>' reference.
 	 * @see #isSetUsageRatio()
 	 * @see #unsetUsageRatio()
-	 * @see #setUsageRatio(float)
+	 * @see #setUsageRatio(IfcRatioMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcConstructionMaterialResource_UsageRatio()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getUsageRatio();
+	IfcRatioMeasure getUsageRatio();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConstructionMaterialResource#getUsageRatio <em>Usage Ratio</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConstructionMaterialResource#getUsageRatio <em>Usage Ratio</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Usage Ratio</em>' attribute.
+	 * @param value the new value of the '<em>Usage Ratio</em>' reference.
 	 * @see #isSetUsageRatio()
 	 * @see #unsetUsageRatio()
 	 * @see #getUsageRatio()
 	 * @generated
 	 */
-	void setUsageRatio(float value);
+	void setUsageRatio(IfcRatioMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConstructionMaterialResource#getUsageRatio <em>Usage Ratio</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConstructionMaterialResource#getUsageRatio <em>Usage Ratio</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetUsageRatio()
 	 * @see #getUsageRatio()
-	 * @see #setUsageRatio(float)
+	 * @see #setUsageRatio(IfcRatioMeasure)
 	 * @generated
 	 */
 	void unsetUsageRatio();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConstructionMaterialResource#getUsageRatio <em>Usage Ratio</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConstructionMaterialResource#getUsageRatio <em>Usage Ratio</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Usage Ratio</em>' attribute is set.
+	 * @return whether the value of the '<em>Usage Ratio</em>' reference is set.
 	 * @see #unsetUsageRatio()
 	 * @see #getUsageRatio()
-	 * @see #setUsageRatio(float)
+	 * @see #setUsageRatio(IfcRatioMeasure)
 	 * @generated
 	 */
 	boolean isSetUsageRatio();
-
-	/**
-	 * Returns the value of the '<em><b>Usage Ratio As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Usage Ratio As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Usage Ratio As String</em>' attribute.
-	 * @see #isSetUsageRatioAsString()
-	 * @see #unsetUsageRatioAsString()
-	 * @see #setUsageRatioAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcConstructionMaterialResource_UsageRatioAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getUsageRatioAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConstructionMaterialResource#getUsageRatioAsString <em>Usage Ratio As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Usage Ratio As String</em>' attribute.
-	 * @see #isSetUsageRatioAsString()
-	 * @see #unsetUsageRatioAsString()
-	 * @see #getUsageRatioAsString()
-	 * @generated
-	 */
-	void setUsageRatioAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConstructionMaterialResource#getUsageRatioAsString <em>Usage Ratio As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetUsageRatioAsString()
-	 * @see #getUsageRatioAsString()
-	 * @see #setUsageRatioAsString(String)
-	 * @generated
-	 */
-	void unsetUsageRatioAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConstructionMaterialResource#getUsageRatioAsString <em>Usage Ratio As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Usage Ratio As String</em>' attribute is set.
-	 * @see #unsetUsageRatioAsString()
-	 * @see #getUsageRatioAsString()
-	 * @see #setUsageRatioAsString(String)
-	 * @generated
-	 */
-	boolean isSetUsageRatioAsString();
 
 } // IfcConstructionMaterialResource

@@ -40,29 +40,29 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcPermit extends IfcControl {
 	/**
-	 * Returns the value of the '<em><b>Permit ID</b></em>' attribute.
+	 * Returns the value of the '<em><b>Permit ID</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Permit ID</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Permit ID</em>' attribute.
-	 * @see #setPermitID(String)
+	 * @return the value of the '<em>Permit ID</em>' reference.
+	 * @see #setPermitID(IfcIdentifier)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcPermit_PermitID()
 	 * @model
 	 * @generated
 	 */
-	String getPermitID();
+	IfcIdentifier getPermitID();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPermit#getPermitID <em>Permit ID</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPermit#getPermitID <em>Permit ID</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Permit ID</em>' attribute.
+	 * @param value the new value of the '<em>Permit ID</em>' reference.
 	 * @see #getPermitID()
 	 * @generated
 	 */
-	void setPermitID(String value);
+	void setPermitID(IfcIdentifier value);
 
 } // IfcPermit

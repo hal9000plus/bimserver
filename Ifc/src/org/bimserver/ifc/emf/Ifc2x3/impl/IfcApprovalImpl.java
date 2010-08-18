@@ -22,14 +22,20 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
-import org.bimserver.emf.IdEObjectImpl;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcApproval;
 import org.bimserver.ifc.emf.Ifc2x3.IfcApprovalActorRelationship;
 import org.bimserver.ifc.emf.Ifc2x3.IfcApprovalRelationship;
 import org.bimserver.ifc.emf.Ifc2x3.IfcDateTimeSelect;
+import org.bimserver.ifc.emf.Ifc2x3.IfcIdentifier;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
+import org.bimserver.ifc.emf.Ifc2x3.IfcText;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -53,7 +59,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class IfcApprovalImpl extends IdEObjectImpl implements IfcApproval {
+public class IfcApprovalImpl extends EObjectImpl implements IfcApproval {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -88,8 +94,8 @@ public class IfcApprovalImpl extends IdEObjectImpl implements IfcApproval {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getDescription() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcApproval_Description(), true);
+	public IfcText getDescription() {
+		return (IfcText) eGet(Ifc2x3Package.eINSTANCE.getIfcApproval_Description(), true);
 	}
 
 	/**
@@ -97,7 +103,7 @@ public class IfcApprovalImpl extends IdEObjectImpl implements IfcApproval {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDescription(String newDescription) {
+	public void setDescription(IfcText newDescription) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcApproval_Description(), newDescription);
 	}
 
@@ -142,8 +148,8 @@ public class IfcApprovalImpl extends IdEObjectImpl implements IfcApproval {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getApprovalStatus() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcApproval_ApprovalStatus(), true);
+	public IfcLabel getApprovalStatus() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcApproval_ApprovalStatus(), true);
 	}
 
 	/**
@@ -151,7 +157,7 @@ public class IfcApprovalImpl extends IdEObjectImpl implements IfcApproval {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setApprovalStatus(String newApprovalStatus) {
+	public void setApprovalStatus(IfcLabel newApprovalStatus) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcApproval_ApprovalStatus(), newApprovalStatus);
 	}
 
@@ -178,8 +184,8 @@ public class IfcApprovalImpl extends IdEObjectImpl implements IfcApproval {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getApprovalLevel() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcApproval_ApprovalLevel(), true);
+	public IfcLabel getApprovalLevel() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcApproval_ApprovalLevel(), true);
 	}
 
 	/**
@@ -187,7 +193,7 @@ public class IfcApprovalImpl extends IdEObjectImpl implements IfcApproval {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setApprovalLevel(String newApprovalLevel) {
+	public void setApprovalLevel(IfcLabel newApprovalLevel) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcApproval_ApprovalLevel(), newApprovalLevel);
 	}
 
@@ -214,8 +220,8 @@ public class IfcApprovalImpl extends IdEObjectImpl implements IfcApproval {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getApprovalQualifier() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcApproval_ApprovalQualifier(), true);
+	public IfcText getApprovalQualifier() {
+		return (IfcText) eGet(Ifc2x3Package.eINSTANCE.getIfcApproval_ApprovalQualifier(), true);
 	}
 
 	/**
@@ -223,7 +229,7 @@ public class IfcApprovalImpl extends IdEObjectImpl implements IfcApproval {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setApprovalQualifier(String newApprovalQualifier) {
+	public void setApprovalQualifier(IfcText newApprovalQualifier) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcApproval_ApprovalQualifier(), newApprovalQualifier);
 	}
 
@@ -250,8 +256,8 @@ public class IfcApprovalImpl extends IdEObjectImpl implements IfcApproval {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcApproval_Name(), true);
+	public IfcLabel getName() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcApproval_Name(), true);
 	}
 
 	/**
@@ -259,7 +265,7 @@ public class IfcApprovalImpl extends IdEObjectImpl implements IfcApproval {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(String newName) {
+	public void setName(IfcLabel newName) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcApproval_Name(), newName);
 	}
 
@@ -268,8 +274,8 @@ public class IfcApprovalImpl extends IdEObjectImpl implements IfcApproval {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getIdentifier() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcApproval_Identifier(), true);
+	public IfcIdentifier getIdentifier() {
+		return (IfcIdentifier) eGet(Ifc2x3Package.eINSTANCE.getIfcApproval_Identifier(), true);
 	}
 
 	/**
@@ -277,7 +283,7 @@ public class IfcApprovalImpl extends IdEObjectImpl implements IfcApproval {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIdentifier(String newIdentifier) {
+	public void setIdentifier(IfcIdentifier newIdentifier) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcApproval_Identifier(), newIdentifier);
 	}
 

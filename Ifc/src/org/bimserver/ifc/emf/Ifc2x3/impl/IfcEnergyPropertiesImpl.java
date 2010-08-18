@@ -25,6 +25,8 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcEnergyProperties;
 import org.bimserver.ifc.emf.Ifc2x3.IfcEnergySequenceEnum;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -84,8 +86,8 @@ public class IfcEnergyPropertiesImpl extends IfcPropertySetDefinitionImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getUserDefinedEnergySequence() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcEnergyProperties_UserDefinedEnergySequence(), true);
+	public IfcLabel getUserDefinedEnergySequence() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcEnergyProperties_UserDefinedEnergySequence(), true);
 	}
 
 	/**
@@ -93,7 +95,7 @@ public class IfcEnergyPropertiesImpl extends IfcPropertySetDefinitionImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUserDefinedEnergySequence(String newUserDefinedEnergySequence) {
+	public void setUserDefinedEnergySequence(IfcLabel newUserDefinedEnergySequence) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcEnergyProperties_UserDefinedEnergySequence(), newUserDefinedEnergySequence);
 	}
 

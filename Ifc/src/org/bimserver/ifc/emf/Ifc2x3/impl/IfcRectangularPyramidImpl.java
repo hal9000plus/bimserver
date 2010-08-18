@@ -23,7 +23,9 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcPositiveLengthMeasure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRectangularPyramid;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -34,11 +36,8 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRectangularPyramidImpl#getXLength <em>XLength</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRectangularPyramidImpl#getXLengthAsString <em>XLength As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRectangularPyramidImpl#getYLength <em>YLength</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRectangularPyramidImpl#getYLengthAsString <em>YLength As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRectangularPyramidImpl#getHeight <em>Height</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRectangularPyramidImpl#getHeightAsString <em>Height As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -69,8 +68,8 @@ public class IfcRectangularPyramidImpl extends IfcCsgPrimitive3DImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getXLength() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcRectangularPyramid_XLength(), true);
+	public IfcPositiveLengthMeasure getXLength() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcRectangularPyramid_XLength(), true);
 	}
 
 	/**
@@ -78,7 +77,7 @@ public class IfcRectangularPyramidImpl extends IfcCsgPrimitive3DImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setXLength(float newXLength) {
+	public void setXLength(IfcPositiveLengthMeasure newXLength) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcRectangularPyramid_XLength(), newXLength);
 	}
 
@@ -87,8 +86,8 @@ public class IfcRectangularPyramidImpl extends IfcCsgPrimitive3DImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getXLengthAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcRectangularPyramid_XLengthAsString(), true);
+	public IfcPositiveLengthMeasure getYLength() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcRectangularPyramid_YLength(), true);
 	}
 
 	/**
@@ -96,25 +95,7 @@ public class IfcRectangularPyramidImpl extends IfcCsgPrimitive3DImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setXLengthAsString(String newXLengthAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcRectangularPyramid_XLengthAsString(), newXLengthAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getYLength() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcRectangularPyramid_YLength(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setYLength(float newYLength) {
+	public void setYLength(IfcPositiveLengthMeasure newYLength) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcRectangularPyramid_YLength(), newYLength);
 	}
 
@@ -123,8 +104,8 @@ public class IfcRectangularPyramidImpl extends IfcCsgPrimitive3DImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getYLengthAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcRectangularPyramid_YLengthAsString(), true);
+	public IfcPositiveLengthMeasure getHeight() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcRectangularPyramid_Height(), true);
 	}
 
 	/**
@@ -132,44 +113,8 @@ public class IfcRectangularPyramidImpl extends IfcCsgPrimitive3DImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setYLengthAsString(String newYLengthAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcRectangularPyramid_YLengthAsString(), newYLengthAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getHeight() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcRectangularPyramid_Height(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setHeight(float newHeight) {
+	public void setHeight(IfcPositiveLengthMeasure newHeight) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcRectangularPyramid_Height(), newHeight);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getHeightAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcRectangularPyramid_HeightAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setHeightAsString(String newHeightAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcRectangularPyramid_HeightAsString(), newHeightAsString);
 	}
 
 } //IfcRectangularPyramidImpl

@@ -32,7 +32,7 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceOfLinearExtrusion#getExtrudedDirection <em>Extruded Direction</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceOfLinearExtrusion#getDepth <em>Depth</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceOfLinearExtrusion#getDepthAsString <em>Depth As String</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceOfLinearExtrusion#getExtrusionAxis <em>Extrusion Axis</em>}</li>
  * </ul>
  * </p>
  *
@@ -68,55 +68,56 @@ public interface IfcSurfaceOfLinearExtrusion extends IfcSweptSurface {
 	void setExtrudedDirection(IfcDirection value);
 
 	/**
-	 * Returns the value of the '<em><b>Depth</b></em>' attribute.
+	 * Returns the value of the '<em><b>Depth</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Depth</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Depth</em>' attribute.
-	 * @see #setDepth(float)
+	 * @return the value of the '<em>Depth</em>' reference.
+	 * @see #setDepth(IfcLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSurfaceOfLinearExtrusion_Depth()
 	 * @model
 	 * @generated
 	 */
-	float getDepth();
+	IfcLengthMeasure getDepth();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceOfLinearExtrusion#getDepth <em>Depth</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceOfLinearExtrusion#getDepth <em>Depth</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Depth</em>' attribute.
+	 * @param value the new value of the '<em>Depth</em>' reference.
 	 * @see #getDepth()
 	 * @generated
 	 */
-	void setDepth(float value);
+	void setDepth(IfcLengthMeasure value);
 
 	/**
-	 * Returns the value of the '<em><b>Depth As String</b></em>' attribute.
+	 * Returns the value of the '<em><b>Extrusion Axis</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Depth As String</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Extrusion Axis</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Depth As String</em>' attribute.
-	 * @see #setDepthAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSurfaceOfLinearExtrusion_DepthAsString()
-	 * @model
+	 * @return the value of the '<em>Extrusion Axis</em>' reference.
+	 * @see #setExtrusionAxis(IfcVector)
+	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSurfaceOfLinearExtrusion_ExtrusionAxis()
+	 * @model transient="true" volatile="true" derived="true"
+	 *        annotation="http://www.iso.org/iso10303-11/EXPRESS code=' IfcRepresentationItem() || IfcGeometricRepresentationItem () || IfcVector (ExtrudedDirection, Depth);'"
 	 * @generated
 	 */
-	String getDepthAsString();
+	IfcVector getExtrusionAxis();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceOfLinearExtrusion#getDepthAsString <em>Depth As String</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceOfLinearExtrusion#getExtrusionAxis <em>Extrusion Axis</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Depth As String</em>' attribute.
-	 * @see #getDepthAsString()
+	 * @param value the new value of the '<em>Extrusion Axis</em>' reference.
+	 * @see #getExtrusionAxis()
 	 * @generated
 	 */
-	void setDepthAsString(String value);
+	void setExtrusionAxis(IfcVector value);
 
 } // IfcSurfaceOfLinearExtrusion

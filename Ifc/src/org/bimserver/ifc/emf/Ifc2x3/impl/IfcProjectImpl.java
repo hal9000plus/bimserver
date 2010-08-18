@@ -23,10 +23,13 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
 import org.bimserver.ifc.emf.Ifc2x3.IfcProject;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRepresentationContext;
 import org.bimserver.ifc.emf.Ifc2x3.IfcUnitAssignment;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -70,8 +73,8 @@ public class IfcProjectImpl extends IfcObjectImpl implements IfcProject {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getLongName() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcProject_LongName(), true);
+	public IfcLabel getLongName() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcProject_LongName(), true);
 	}
 
 	/**
@@ -79,7 +82,7 @@ public class IfcProjectImpl extends IfcObjectImpl implements IfcProject {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLongName(String newLongName) {
+	public void setLongName(IfcLabel newLongName) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcProject_LongName(), newLongName);
 	}
 
@@ -106,8 +109,8 @@ public class IfcProjectImpl extends IfcObjectImpl implements IfcProject {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getPhase() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcProject_Phase(), true);
+	public IfcLabel getPhase() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcProject_Phase(), true);
 	}
 
 	/**
@@ -115,7 +118,7 @@ public class IfcProjectImpl extends IfcObjectImpl implements IfcProject {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPhase(String newPhase) {
+	public void setPhase(IfcLabel newPhase) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcProject_Phase(), newPhase);
 	}
 
