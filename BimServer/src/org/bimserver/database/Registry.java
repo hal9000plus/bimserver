@@ -1,7 +1,6 @@
 package org.bimserver.database;
 
 import java.io.UnsupportedEncodingException;
-import java.util.Date;
 
 import org.bimserver.utils.BinUtils;
 
@@ -77,17 +76,5 @@ public class Registry {
 
 	public void ensureExists(DatabaseSession databaseSession) {
 		columnDatabase.createTableIfNotExists(REGISTRY_TABLE, databaseSession);
-	}
-
-	public Date readDate(String key, DatabaseSession databaseSession) throws BimDeadlockException {
-		long readLong = readLong(key, databaseSession);
-		if (readLong == -1) {
-			return null;
-		}
-		return new Date(readLong);
-	}
-
-	public void save(String key, Date date, DatabaseSession databaseSession) throws BimDeadlockException {
-		save(key, date.getTime(), databaseSession);
 	}
 }

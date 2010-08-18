@@ -22,13 +22,17 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
-import org.bimserver.emf.IdEObjectImpl;
+import org.bimserver.ifc.IfcRootObject;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcClassificationNotationSelect;
 import org.bimserver.ifc.emf.Ifc2x3.IfcMaterial;
 import org.bimserver.ifc.emf.Ifc2x3.IfcMaterialClassificationRelationship;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -44,7 +48,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class IfcMaterialClassificationRelationshipImpl extends IdEObjectImpl implements IfcMaterialClassificationRelationship {
+public class IfcMaterialClassificationRelationshipImpl extends IfcRootObject implements IfcMaterialClassificationRelationship {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

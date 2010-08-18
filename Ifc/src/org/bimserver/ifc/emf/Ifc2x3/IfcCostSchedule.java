@@ -208,54 +208,54 @@ public interface IfcCostSchedule extends IfcControl {
 	boolean isSetSubmittedOn();
 
 	/**
-	 * Returns the value of the '<em><b>Status</b></em>' attribute.
+	 * Returns the value of the '<em><b>Status</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Status</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Status</em>' attribute.
+	 * @return the value of the '<em>Status</em>' reference.
 	 * @see #isSetStatus()
 	 * @see #unsetStatus()
-	 * @see #setStatus(String)
+	 * @see #setStatus(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcCostSchedule_Status()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getStatus();
+	IfcLabel getStatus();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCostSchedule#getStatus <em>Status</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCostSchedule#getStatus <em>Status</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Status</em>' attribute.
+	 * @param value the new value of the '<em>Status</em>' reference.
 	 * @see #isSetStatus()
 	 * @see #unsetStatus()
 	 * @see #getStatus()
 	 * @generated
 	 */
-	void setStatus(String value);
+	void setStatus(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCostSchedule#getStatus <em>Status</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCostSchedule#getStatus <em>Status</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetStatus()
 	 * @see #getStatus()
-	 * @see #setStatus(String)
+	 * @see #setStatus(IfcLabel)
 	 * @generated
 	 */
 	void unsetStatus();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCostSchedule#getStatus <em>Status</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCostSchedule#getStatus <em>Status</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Status</em>' attribute is set.
+	 * @return whether the value of the '<em>Status</em>' reference is set.
 	 * @see #unsetStatus()
 	 * @see #getStatus()
-	 * @see #setStatus(String)
+	 * @see #setStatus(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetStatus();
@@ -353,30 +353,30 @@ public interface IfcCostSchedule extends IfcControl {
 	boolean isSetUpdateDate();
 
 	/**
-	 * Returns the value of the '<em><b>ID</b></em>' attribute.
+	 * Returns the value of the '<em><b>ID</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>ID</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>ID</em>' attribute.
-	 * @see #setID(String)
+	 * @return the value of the '<em>ID</em>' reference.
+	 * @see #setID(IfcIdentifier)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcCostSchedule_ID()
 	 * @model
 	 * @generated
 	 */
-	String getID();
+	IfcIdentifier getID();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCostSchedule#getID <em>ID</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCostSchedule#getID <em>ID</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>ID</em>' attribute.
+	 * @param value the new value of the '<em>ID</em>' reference.
 	 * @see #getID()
 	 * @generated
 	 */
-	void setID(String value);
+	void setID(IfcIdentifier value);
 
 	/**
 	 * Returns the value of the '<em><b>Predefined Type</b></em>' attribute.

@@ -35,7 +35,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSite#getRefLatitude <em>Ref Latitude</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSite#getRefLongitude <em>Ref Longitude</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSite#getRefElevation <em>Ref Elevation</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSite#getRefElevationAsString <em>Ref Elevation As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSite#getLandTitleNumber <em>Land Title Number</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSite#getSiteAddress <em>Site Address</em>}</li>
  * </ul>
@@ -47,25 +46,25 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface IfcSite extends IfcSpatialStructureElement {
 	/**
-	 * Returns the value of the '<em><b>Ref Latitude</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.Integer}.
+	 * Returns the value of the '<em><b>Ref Latitude</b></em>' reference list.
+	 * The list contents are of type {@link org.bimserver.ifc.emf.Ifc2x3.IfcCompoundPlaneAngleMeasure}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Ref Latitude</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Ref Latitude</em>' attribute list.
+	 * @return the value of the '<em>Ref Latitude</em>' reference list.
 	 * @see #isSetRefLatitude()
 	 * @see #unsetRefLatitude()
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSite_RefLatitude()
-	 * @model unique="false" unsettable="true" upper="3"
+	 * @model unsettable="true" upper="3"
 	 * @generated
 	 */
-	EList<Integer> getRefLatitude();
+	EList<IfcCompoundPlaneAngleMeasure> getRefLatitude();
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSite#getRefLatitude <em>Ref Latitude</em>}' attribute list.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSite#getRefLatitude <em>Ref Latitude</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetRefLatitude()
@@ -75,10 +74,10 @@ public interface IfcSite extends IfcSpatialStructureElement {
 	void unsetRefLatitude();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSite#getRefLatitude <em>Ref Latitude</em>}' attribute list is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSite#getRefLatitude <em>Ref Latitude</em>}' reference list is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Ref Latitude</em>' attribute list is set.
+	 * @return whether the value of the '<em>Ref Latitude</em>' reference list is set.
 	 * @see #unsetRefLatitude()
 	 * @see #getRefLatitude()
 	 * @generated
@@ -86,25 +85,25 @@ public interface IfcSite extends IfcSpatialStructureElement {
 	boolean isSetRefLatitude();
 
 	/**
-	 * Returns the value of the '<em><b>Ref Longitude</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.Integer}.
+	 * Returns the value of the '<em><b>Ref Longitude</b></em>' reference list.
+	 * The list contents are of type {@link org.bimserver.ifc.emf.Ifc2x3.IfcCompoundPlaneAngleMeasure}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Ref Longitude</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Ref Longitude</em>' attribute list.
+	 * @return the value of the '<em>Ref Longitude</em>' reference list.
 	 * @see #isSetRefLongitude()
 	 * @see #unsetRefLongitude()
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSite_RefLongitude()
-	 * @model unique="false" unsettable="true" upper="3"
+	 * @model unsettable="true" upper="3"
 	 * @generated
 	 */
-	EList<Integer> getRefLongitude();
+	EList<IfcCompoundPlaneAngleMeasure> getRefLongitude();
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSite#getRefLongitude <em>Ref Longitude</em>}' attribute list.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSite#getRefLongitude <em>Ref Longitude</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetRefLongitude()
@@ -114,10 +113,10 @@ public interface IfcSite extends IfcSpatialStructureElement {
 	void unsetRefLongitude();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSite#getRefLongitude <em>Ref Longitude</em>}' attribute list is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSite#getRefLongitude <em>Ref Longitude</em>}' reference list is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Ref Longitude</em>' attribute list is set.
+	 * @return whether the value of the '<em>Ref Longitude</em>' reference list is set.
 	 * @see #unsetRefLongitude()
 	 * @see #getRefLongitude()
 	 * @generated
@@ -125,160 +124,107 @@ public interface IfcSite extends IfcSpatialStructureElement {
 	boolean isSetRefLongitude();
 
 	/**
-	 * Returns the value of the '<em><b>Ref Elevation</b></em>' attribute.
+	 * Returns the value of the '<em><b>Ref Elevation</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Ref Elevation</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Ref Elevation</em>' attribute.
+	 * @return the value of the '<em>Ref Elevation</em>' reference.
 	 * @see #isSetRefElevation()
 	 * @see #unsetRefElevation()
-	 * @see #setRefElevation(float)
+	 * @see #setRefElevation(IfcLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSite_RefElevation()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getRefElevation();
+	IfcLengthMeasure getRefElevation();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSite#getRefElevation <em>Ref Elevation</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSite#getRefElevation <em>Ref Elevation</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Ref Elevation</em>' attribute.
+	 * @param value the new value of the '<em>Ref Elevation</em>' reference.
 	 * @see #isSetRefElevation()
 	 * @see #unsetRefElevation()
 	 * @see #getRefElevation()
 	 * @generated
 	 */
-	void setRefElevation(float value);
+	void setRefElevation(IfcLengthMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSite#getRefElevation <em>Ref Elevation</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSite#getRefElevation <em>Ref Elevation</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetRefElevation()
 	 * @see #getRefElevation()
-	 * @see #setRefElevation(float)
+	 * @see #setRefElevation(IfcLengthMeasure)
 	 * @generated
 	 */
 	void unsetRefElevation();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSite#getRefElevation <em>Ref Elevation</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSite#getRefElevation <em>Ref Elevation</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Ref Elevation</em>' attribute is set.
+	 * @return whether the value of the '<em>Ref Elevation</em>' reference is set.
 	 * @see #unsetRefElevation()
 	 * @see #getRefElevation()
-	 * @see #setRefElevation(float)
+	 * @see #setRefElevation(IfcLengthMeasure)
 	 * @generated
 	 */
 	boolean isSetRefElevation();
 
 	/**
-	 * Returns the value of the '<em><b>Ref Elevation As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Ref Elevation As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Ref Elevation As String</em>' attribute.
-	 * @see #isSetRefElevationAsString()
-	 * @see #unsetRefElevationAsString()
-	 * @see #setRefElevationAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSite_RefElevationAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getRefElevationAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSite#getRefElevationAsString <em>Ref Elevation As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Ref Elevation As String</em>' attribute.
-	 * @see #isSetRefElevationAsString()
-	 * @see #unsetRefElevationAsString()
-	 * @see #getRefElevationAsString()
-	 * @generated
-	 */
-	void setRefElevationAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSite#getRefElevationAsString <em>Ref Elevation As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetRefElevationAsString()
-	 * @see #getRefElevationAsString()
-	 * @see #setRefElevationAsString(String)
-	 * @generated
-	 */
-	void unsetRefElevationAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSite#getRefElevationAsString <em>Ref Elevation As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Ref Elevation As String</em>' attribute is set.
-	 * @see #unsetRefElevationAsString()
-	 * @see #getRefElevationAsString()
-	 * @see #setRefElevationAsString(String)
-	 * @generated
-	 */
-	boolean isSetRefElevationAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Land Title Number</b></em>' attribute.
+	 * Returns the value of the '<em><b>Land Title Number</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Land Title Number</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Land Title Number</em>' attribute.
+	 * @return the value of the '<em>Land Title Number</em>' reference.
 	 * @see #isSetLandTitleNumber()
 	 * @see #unsetLandTitleNumber()
-	 * @see #setLandTitleNumber(String)
+	 * @see #setLandTitleNumber(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSite_LandTitleNumber()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getLandTitleNumber();
+	IfcLabel getLandTitleNumber();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSite#getLandTitleNumber <em>Land Title Number</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSite#getLandTitleNumber <em>Land Title Number</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Land Title Number</em>' attribute.
+	 * @param value the new value of the '<em>Land Title Number</em>' reference.
 	 * @see #isSetLandTitleNumber()
 	 * @see #unsetLandTitleNumber()
 	 * @see #getLandTitleNumber()
 	 * @generated
 	 */
-	void setLandTitleNumber(String value);
+	void setLandTitleNumber(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSite#getLandTitleNumber <em>Land Title Number</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSite#getLandTitleNumber <em>Land Title Number</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetLandTitleNumber()
 	 * @see #getLandTitleNumber()
-	 * @see #setLandTitleNumber(String)
+	 * @see #setLandTitleNumber(IfcLabel)
 	 * @generated
 	 */
 	void unsetLandTitleNumber();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSite#getLandTitleNumber <em>Land Title Number</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSite#getLandTitleNumber <em>Land Title Number</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Land Title Number</em>' attribute is set.
+	 * @return whether the value of the '<em>Land Title Number</em>' reference is set.
 	 * @see #unsetLandTitleNumber()
 	 * @see #getLandTitleNumber()
-	 * @see #setLandTitleNumber(String)
+	 * @see #setLandTitleNumber(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetLandTitleNumber();

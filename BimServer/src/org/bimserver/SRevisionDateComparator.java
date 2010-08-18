@@ -2,7 +2,7 @@ package org.bimserver;
 
 import java.util.Comparator;
 
-import org.bimserver.interfaces.objects.SRevision;
+import org.bimserver.shared.SRevision;
 
 /******************************************************************************
  * (c) Copyright bimserver.org 2009

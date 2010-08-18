@@ -36,16 +36,7 @@
 		<servlet-name>UploadServlet</servlet-name>
 		<url-pattern>/upload/*</url-pattern>
 	</servlet-mapping>
-
-	<servlet>
-		<servlet-name>SettingsServlet</servlet-name>
-		<servlet-class>org.bimserver.servlets.SettingsServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>SettingsServlet</servlet-name>
-		<url-pattern>/settings/*</url-pattern>
-	</servlet-mapping>
-
+	
 	<servlet>
 		<servlet-name>WebServiceServlet</servlet-name>
 		<servlet-class>org.bimserver.servlets.WebServiceServlet</servlet-class>
@@ -62,14 +53,5 @@
 	<servlet-mapping>
 		<servlet-name>SyndicationServlet</servlet-name>
 		<url-pattern>/syndication/*</url-pattern>
-	</servlet-mapping>
-
-	<servlet>
-		<servlet-name>CompileServlet</servlet-name>
-		<servlet-class>org.bimserver.servlets.CompileServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>CompileServlet</servlet-name>
-		<url-pattern>/compile/*</url-pattern>
 	</servlet-mapping>
 </web-app>

@@ -3,16 +3,16 @@
 <%
 	if (loginManager.isLoggedIn()) {
 		try {
-			long poid = Long.parseLong(request.getParameter("poid"));
-			long uoid = Long.parseLong(request.getParameter("uoid"));
-			loginManager.getService().removeUserFromProject(uoid, poid);
+			int pid = Integer.parseInt(request.getParameter("pid"));
+			int uid = Integer.parseInt(request.getParameter("uid"));
+			loginManager.getService().removeUserFromProject(uid, pid);
 			if (request.getParameter("type").equals("project")) {
-				response.sendRedirect("project.jsp?poid=" + poid);
+				response.sendRedirect("project.jsp?id=" + pid);
 			} else if (request.getParameter("type").equals("user")) {
-				response.sendRedirect("user.jsp?uoid=" + uoid);
+				response.sendRedirect("user.jsp?id=" + uid);
 			}
 		} catch (UserException e) {
-			out.println("<div class=\"error\">" + e.getUserMessage() + "</div>");
+			out.println("<div class=\"errormessage\">" + e.getUserMessage() + "</div>");
 		}
 	}
 %>

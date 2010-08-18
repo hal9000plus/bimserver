@@ -4,6 +4,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import org.bimserver.BimDatabaseAction;
 import org.bimserver.database.BimDatabaseException;
 import org.bimserver.database.BimDatabaseSession;
 import org.bimserver.database.BimDeadlockException;
@@ -11,37 +12,37 @@ import org.bimserver.database.CommitSet;
 import org.bimserver.database.Database;
 import org.bimserver.database.store.Checkout;
 import org.bimserver.database.store.Project;
-import org.bimserver.database.store.Revision;
 import org.bimserver.database.store.StoreFactory;
 import org.bimserver.database.store.User;
-import org.bimserver.database.store.log.AccessMethod;
-import org.bimserver.ifc.IfcModel;
+import org.bimserver.database.store.VirtualRevision;
+import org.bimserver.emf.BasicEmfModel;
+import org.bimserver.emf.EmfModel;
 import org.bimserver.shared.UserException;
 
-public class CheckoutDatabaseAction extends BimDatabaseAction<IfcModel> {
+public class CheckoutDatabaseAction extends BimDatabaseAction<EmfModel<Long>> {
 
-	private final long uoid;
-	private final long roid;
+	private final int rid;
+	private final int pid;
+	private final int uid;
 
-	public CheckoutDatabaseAction(AccessMethod accessMethod, long uoid, long roid) {
-		super(accessMethod);
-		this.uoid = uoid;
-		this.roid = roid;
+	public CheckoutDatabaseAction(int pid, int uid, int rid) {
+		this.pid = pid;
+		this.uid = uid;
+		this.rid = rid;
 	}
 
 	@Override
-	public IfcModel execute(BimDatabaseSession bimDatabaseSession) throws UserException, BimDatabaseException, BimDeadlockException {
+	public EmfModel<Long> execute(BimDatabaseSession bimDatabaseSession) throws UserException, BimDatabaseException, BimDeadlockException {
 		DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm");
-		User user = bimDatabaseSession.getUserByUoid(uoid);
-		Revision revision = bimDatabaseSession.getVirtualRevision(roid);
-		Project project = revision.getProject();
+		User user = bimDatabaseSession.getUserById(uid);
+		Project project = bimDatabaseSession.getProjectById(pid);
 		if (user.getHasRightsOn().contains(project)) {
+			VirtualRevision revision = bimDatabaseSession.getVirtualRevision(pid, rid);
 			for (Checkout checkout : revision.getCheckouts()) {
 				if (checkout.getRevision() == revision && checkout.getUser() == user && checkout.isActive()) {
 					throw new UserException("This revision has already been checked out by you on " + dateFormat.format(checkout.getDate()));
 				}
 			}
-			CommitSet commitSet = new CommitSet(Database.STORE_PROJECT_ID, -1);
 			for (Checkout checkout : project.getCheckouts()) {
 				if (checkout.getUser() == user && checkout.isActive()) {
 					checkout.setActive(false);
@@ -51,8 +52,8 @@ public class CheckoutDatabaseAction extends BimDatabaseAction<IfcModel> {
 					newCheckout.setUser(user);
 					newCheckout.setProject(project);
 					newCheckout.setRevision(revision);
-					bimDatabaseSession.store(checkout, commitSet);
-					bimDatabaseSession.store(newCheckout, commitSet);
+					bimDatabaseSession.store(checkout, new CommitSet(Database.STORE_PROJECT_ID, -1));
+					bimDatabaseSession.store(newCheckout, new CommitSet(Database.STORE_PROJECT_ID, -1));
 					bimDatabaseSession.saveOidCounter();
 					return realCheckout(project, revision, bimDatabaseSession, user);
 				}
@@ -63,7 +64,7 @@ public class CheckoutDatabaseAction extends BimDatabaseAction<IfcModel> {
 			checkout.setUser(user);
 			checkout.setProject(project);
 			checkout.setRevision(revision);
-			bimDatabaseSession.store(checkout, commitSet);
+			bimDatabaseSession.store(checkout, new CommitSet(Database.STORE_PROJECT_ID, -1));
 			bimDatabaseSession.saveOidCounter();
 			return realCheckout(project, revision, bimDatabaseSession, user);
 		} else {
@@ -71,11 +72,14 @@ public class CheckoutDatabaseAction extends BimDatabaseAction<IfcModel> {
 		}
 	}
 
-	private IfcModel realCheckout(Project project, Revision revision, BimDatabaseSession bimDatabaseSession, User user) throws BimDeadlockException, BimDatabaseException {
-		IfcModel IfcModel = new IfcModel(bimDatabaseSession.getMap(project.getId(), revision.getLastConcreteRevision().getId()).getMap());
-		IfcModel.setRevisionNr(project.getRevisions().indexOf(revision) + 1);
-		IfcModel.setAuthorizedUser(user.getName());
-		IfcModel.setDate(new Date());
-		return IfcModel;
+	private EmfModel<Long> realCheckout(Project project, VirtualRevision revision, BimDatabaseSession bimDatabaseSession, User user) throws BimDeadlockException, BimDatabaseException {
+		EmfModel<Long> emfModel = new BasicEmfModel<Long>(bimDatabaseSession.getMap(pid, rid));
+		emfModel.setProjectName(project.getName());
+		emfModel.setRevisionNr(revision.getId());
+		emfModel.setAuthor(revision.getLastRevision().getUser().getName());
+		emfModel.setAuthorizedUser(user.getName());
+		emfModel.setDate(new Date());
+		emfModel.setDescription(project.getDescription());
+		return emfModel;
 	}
 }

@@ -38,18 +38,13 @@ package org.bimserver.ifc.emf.Ifc2x3;
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getPressureTimeSeries <em>Pressure Time Series</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getUserDefinedPropertySource <em>User Defined Property Source</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getTemperatureSingleValue <em>Temperature Single Value</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getTemperatureSingleValueAsString <em>Temperature Single Value As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getWetBulbTemperatureSingleValue <em>Wet Bulb Temperature Single Value</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getWetBulbTemperatureSingleValueAsString <em>Wet Bulb Temperature Single Value As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getWetBulbTemperatureTimeSeries <em>Wet Bulb Temperature Time Series</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getTemperatureTimeSeries <em>Temperature Time Series</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getFlowrateSingleValue <em>Flowrate Single Value</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getFlowConditionSingleValue <em>Flow Condition Single Value</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getFlowConditionSingleValueAsString <em>Flow Condition Single Value As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getVelocitySingleValue <em>Velocity Single Value</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getVelocitySingleValueAsString <em>Velocity Single Value As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getPressureSingleValue <em>Pressure Single Value</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getPressureSingleValueAsString <em>Pressure Single Value As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -326,269 +321,163 @@ public interface IfcFluidFlowProperties extends IfcPropertySetDefinition {
 	boolean isSetPressureTimeSeries();
 
 	/**
-	 * Returns the value of the '<em><b>User Defined Property Source</b></em>' attribute.
+	 * Returns the value of the '<em><b>User Defined Property Source</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>User Defined Property Source</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>User Defined Property Source</em>' attribute.
+	 * @return the value of the '<em>User Defined Property Source</em>' reference.
 	 * @see #isSetUserDefinedPropertySource()
 	 * @see #unsetUserDefinedPropertySource()
-	 * @see #setUserDefinedPropertySource(String)
+	 * @see #setUserDefinedPropertySource(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcFluidFlowProperties_UserDefinedPropertySource()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getUserDefinedPropertySource();
+	IfcLabel getUserDefinedPropertySource();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getUserDefinedPropertySource <em>User Defined Property Source</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getUserDefinedPropertySource <em>User Defined Property Source</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>User Defined Property Source</em>' attribute.
+	 * @param value the new value of the '<em>User Defined Property Source</em>' reference.
 	 * @see #isSetUserDefinedPropertySource()
 	 * @see #unsetUserDefinedPropertySource()
 	 * @see #getUserDefinedPropertySource()
 	 * @generated
 	 */
-	void setUserDefinedPropertySource(String value);
+	void setUserDefinedPropertySource(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getUserDefinedPropertySource <em>User Defined Property Source</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getUserDefinedPropertySource <em>User Defined Property Source</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetUserDefinedPropertySource()
 	 * @see #getUserDefinedPropertySource()
-	 * @see #setUserDefinedPropertySource(String)
+	 * @see #setUserDefinedPropertySource(IfcLabel)
 	 * @generated
 	 */
 	void unsetUserDefinedPropertySource();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getUserDefinedPropertySource <em>User Defined Property Source</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getUserDefinedPropertySource <em>User Defined Property Source</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>User Defined Property Source</em>' attribute is set.
+	 * @return whether the value of the '<em>User Defined Property Source</em>' reference is set.
 	 * @see #unsetUserDefinedPropertySource()
 	 * @see #getUserDefinedPropertySource()
-	 * @see #setUserDefinedPropertySource(String)
+	 * @see #setUserDefinedPropertySource(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetUserDefinedPropertySource();
 
 	/**
-	 * Returns the value of the '<em><b>Temperature Single Value</b></em>' attribute.
+	 * Returns the value of the '<em><b>Temperature Single Value</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Temperature Single Value</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Temperature Single Value</em>' attribute.
+	 * @return the value of the '<em>Temperature Single Value</em>' reference.
 	 * @see #isSetTemperatureSingleValue()
 	 * @see #unsetTemperatureSingleValue()
-	 * @see #setTemperatureSingleValue(float)
+	 * @see #setTemperatureSingleValue(IfcThermodynamicTemperatureMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcFluidFlowProperties_TemperatureSingleValue()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getTemperatureSingleValue();
+	IfcThermodynamicTemperatureMeasure getTemperatureSingleValue();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getTemperatureSingleValue <em>Temperature Single Value</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getTemperatureSingleValue <em>Temperature Single Value</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Temperature Single Value</em>' attribute.
+	 * @param value the new value of the '<em>Temperature Single Value</em>' reference.
 	 * @see #isSetTemperatureSingleValue()
 	 * @see #unsetTemperatureSingleValue()
 	 * @see #getTemperatureSingleValue()
 	 * @generated
 	 */
-	void setTemperatureSingleValue(float value);
+	void setTemperatureSingleValue(IfcThermodynamicTemperatureMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getTemperatureSingleValue <em>Temperature Single Value</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getTemperatureSingleValue <em>Temperature Single Value</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetTemperatureSingleValue()
 	 * @see #getTemperatureSingleValue()
-	 * @see #setTemperatureSingleValue(float)
+	 * @see #setTemperatureSingleValue(IfcThermodynamicTemperatureMeasure)
 	 * @generated
 	 */
 	void unsetTemperatureSingleValue();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getTemperatureSingleValue <em>Temperature Single Value</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getTemperatureSingleValue <em>Temperature Single Value</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Temperature Single Value</em>' attribute is set.
+	 * @return whether the value of the '<em>Temperature Single Value</em>' reference is set.
 	 * @see #unsetTemperatureSingleValue()
 	 * @see #getTemperatureSingleValue()
-	 * @see #setTemperatureSingleValue(float)
+	 * @see #setTemperatureSingleValue(IfcThermodynamicTemperatureMeasure)
 	 * @generated
 	 */
 	boolean isSetTemperatureSingleValue();
 
 	/**
-	 * Returns the value of the '<em><b>Temperature Single Value As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Temperature Single Value As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Temperature Single Value As String</em>' attribute.
-	 * @see #isSetTemperatureSingleValueAsString()
-	 * @see #unsetTemperatureSingleValueAsString()
-	 * @see #setTemperatureSingleValueAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcFluidFlowProperties_TemperatureSingleValueAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getTemperatureSingleValueAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getTemperatureSingleValueAsString <em>Temperature Single Value As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Temperature Single Value As String</em>' attribute.
-	 * @see #isSetTemperatureSingleValueAsString()
-	 * @see #unsetTemperatureSingleValueAsString()
-	 * @see #getTemperatureSingleValueAsString()
-	 * @generated
-	 */
-	void setTemperatureSingleValueAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getTemperatureSingleValueAsString <em>Temperature Single Value As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetTemperatureSingleValueAsString()
-	 * @see #getTemperatureSingleValueAsString()
-	 * @see #setTemperatureSingleValueAsString(String)
-	 * @generated
-	 */
-	void unsetTemperatureSingleValueAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getTemperatureSingleValueAsString <em>Temperature Single Value As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Temperature Single Value As String</em>' attribute is set.
-	 * @see #unsetTemperatureSingleValueAsString()
-	 * @see #getTemperatureSingleValueAsString()
-	 * @see #setTemperatureSingleValueAsString(String)
-	 * @generated
-	 */
-	boolean isSetTemperatureSingleValueAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Wet Bulb Temperature Single Value</b></em>' attribute.
+	 * Returns the value of the '<em><b>Wet Bulb Temperature Single Value</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Wet Bulb Temperature Single Value</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Wet Bulb Temperature Single Value</em>' attribute.
+	 * @return the value of the '<em>Wet Bulb Temperature Single Value</em>' reference.
 	 * @see #isSetWetBulbTemperatureSingleValue()
 	 * @see #unsetWetBulbTemperatureSingleValue()
-	 * @see #setWetBulbTemperatureSingleValue(float)
+	 * @see #setWetBulbTemperatureSingleValue(IfcThermodynamicTemperatureMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcFluidFlowProperties_WetBulbTemperatureSingleValue()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getWetBulbTemperatureSingleValue();
+	IfcThermodynamicTemperatureMeasure getWetBulbTemperatureSingleValue();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getWetBulbTemperatureSingleValue <em>Wet Bulb Temperature Single Value</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getWetBulbTemperatureSingleValue <em>Wet Bulb Temperature Single Value</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Wet Bulb Temperature Single Value</em>' attribute.
+	 * @param value the new value of the '<em>Wet Bulb Temperature Single Value</em>' reference.
 	 * @see #isSetWetBulbTemperatureSingleValue()
 	 * @see #unsetWetBulbTemperatureSingleValue()
 	 * @see #getWetBulbTemperatureSingleValue()
 	 * @generated
 	 */
-	void setWetBulbTemperatureSingleValue(float value);
+	void setWetBulbTemperatureSingleValue(IfcThermodynamicTemperatureMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getWetBulbTemperatureSingleValue <em>Wet Bulb Temperature Single Value</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getWetBulbTemperatureSingleValue <em>Wet Bulb Temperature Single Value</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetWetBulbTemperatureSingleValue()
 	 * @see #getWetBulbTemperatureSingleValue()
-	 * @see #setWetBulbTemperatureSingleValue(float)
+	 * @see #setWetBulbTemperatureSingleValue(IfcThermodynamicTemperatureMeasure)
 	 * @generated
 	 */
 	void unsetWetBulbTemperatureSingleValue();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getWetBulbTemperatureSingleValue <em>Wet Bulb Temperature Single Value</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getWetBulbTemperatureSingleValue <em>Wet Bulb Temperature Single Value</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Wet Bulb Temperature Single Value</em>' attribute is set.
+	 * @return whether the value of the '<em>Wet Bulb Temperature Single Value</em>' reference is set.
 	 * @see #unsetWetBulbTemperatureSingleValue()
 	 * @see #getWetBulbTemperatureSingleValue()
-	 * @see #setWetBulbTemperatureSingleValue(float)
+	 * @see #setWetBulbTemperatureSingleValue(IfcThermodynamicTemperatureMeasure)
 	 * @generated
 	 */
 	boolean isSetWetBulbTemperatureSingleValue();
-
-	/**
-	 * Returns the value of the '<em><b>Wet Bulb Temperature Single Value As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Wet Bulb Temperature Single Value As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Wet Bulb Temperature Single Value As String</em>' attribute.
-	 * @see #isSetWetBulbTemperatureSingleValueAsString()
-	 * @see #unsetWetBulbTemperatureSingleValueAsString()
-	 * @see #setWetBulbTemperatureSingleValueAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcFluidFlowProperties_WetBulbTemperatureSingleValueAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getWetBulbTemperatureSingleValueAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getWetBulbTemperatureSingleValueAsString <em>Wet Bulb Temperature Single Value As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Wet Bulb Temperature Single Value As String</em>' attribute.
-	 * @see #isSetWetBulbTemperatureSingleValueAsString()
-	 * @see #unsetWetBulbTemperatureSingleValueAsString()
-	 * @see #getWetBulbTemperatureSingleValueAsString()
-	 * @generated
-	 */
-	void setWetBulbTemperatureSingleValueAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getWetBulbTemperatureSingleValueAsString <em>Wet Bulb Temperature Single Value As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetWetBulbTemperatureSingleValueAsString()
-	 * @see #getWetBulbTemperatureSingleValueAsString()
-	 * @see #setWetBulbTemperatureSingleValueAsString(String)
-	 * @generated
-	 */
-	void unsetWetBulbTemperatureSingleValueAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getWetBulbTemperatureSingleValueAsString <em>Wet Bulb Temperature Single Value As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Wet Bulb Temperature Single Value As String</em>' attribute is set.
-	 * @see #unsetWetBulbTemperatureSingleValueAsString()
-	 * @see #getWetBulbTemperatureSingleValueAsString()
-	 * @see #setWetBulbTemperatureSingleValueAsString(String)
-	 * @generated
-	 */
-	boolean isSetWetBulbTemperatureSingleValueAsString();
 
 	/**
 	 * Returns the value of the '<em><b>Wet Bulb Temperature Time Series</b></em>' reference.
@@ -750,321 +639,162 @@ public interface IfcFluidFlowProperties extends IfcPropertySetDefinition {
 	boolean isSetFlowrateSingleValue();
 
 	/**
-	 * Returns the value of the '<em><b>Flow Condition Single Value</b></em>' attribute.
+	 * Returns the value of the '<em><b>Flow Condition Single Value</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Flow Condition Single Value</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Flow Condition Single Value</em>' attribute.
+	 * @return the value of the '<em>Flow Condition Single Value</em>' reference.
 	 * @see #isSetFlowConditionSingleValue()
 	 * @see #unsetFlowConditionSingleValue()
-	 * @see #setFlowConditionSingleValue(float)
+	 * @see #setFlowConditionSingleValue(IfcPositiveRatioMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcFluidFlowProperties_FlowConditionSingleValue()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getFlowConditionSingleValue();
+	IfcPositiveRatioMeasure getFlowConditionSingleValue();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getFlowConditionSingleValue <em>Flow Condition Single Value</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getFlowConditionSingleValue <em>Flow Condition Single Value</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Flow Condition Single Value</em>' attribute.
+	 * @param value the new value of the '<em>Flow Condition Single Value</em>' reference.
 	 * @see #isSetFlowConditionSingleValue()
 	 * @see #unsetFlowConditionSingleValue()
 	 * @see #getFlowConditionSingleValue()
 	 * @generated
 	 */
-	void setFlowConditionSingleValue(float value);
+	void setFlowConditionSingleValue(IfcPositiveRatioMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getFlowConditionSingleValue <em>Flow Condition Single Value</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getFlowConditionSingleValue <em>Flow Condition Single Value</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetFlowConditionSingleValue()
 	 * @see #getFlowConditionSingleValue()
-	 * @see #setFlowConditionSingleValue(float)
+	 * @see #setFlowConditionSingleValue(IfcPositiveRatioMeasure)
 	 * @generated
 	 */
 	void unsetFlowConditionSingleValue();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getFlowConditionSingleValue <em>Flow Condition Single Value</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getFlowConditionSingleValue <em>Flow Condition Single Value</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Flow Condition Single Value</em>' attribute is set.
+	 * @return whether the value of the '<em>Flow Condition Single Value</em>' reference is set.
 	 * @see #unsetFlowConditionSingleValue()
 	 * @see #getFlowConditionSingleValue()
-	 * @see #setFlowConditionSingleValue(float)
+	 * @see #setFlowConditionSingleValue(IfcPositiveRatioMeasure)
 	 * @generated
 	 */
 	boolean isSetFlowConditionSingleValue();
 
 	/**
-	 * Returns the value of the '<em><b>Flow Condition Single Value As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Flow Condition Single Value As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Flow Condition Single Value As String</em>' attribute.
-	 * @see #isSetFlowConditionSingleValueAsString()
-	 * @see #unsetFlowConditionSingleValueAsString()
-	 * @see #setFlowConditionSingleValueAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcFluidFlowProperties_FlowConditionSingleValueAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getFlowConditionSingleValueAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getFlowConditionSingleValueAsString <em>Flow Condition Single Value As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Flow Condition Single Value As String</em>' attribute.
-	 * @see #isSetFlowConditionSingleValueAsString()
-	 * @see #unsetFlowConditionSingleValueAsString()
-	 * @see #getFlowConditionSingleValueAsString()
-	 * @generated
-	 */
-	void setFlowConditionSingleValueAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getFlowConditionSingleValueAsString <em>Flow Condition Single Value As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetFlowConditionSingleValueAsString()
-	 * @see #getFlowConditionSingleValueAsString()
-	 * @see #setFlowConditionSingleValueAsString(String)
-	 * @generated
-	 */
-	void unsetFlowConditionSingleValueAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getFlowConditionSingleValueAsString <em>Flow Condition Single Value As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Flow Condition Single Value As String</em>' attribute is set.
-	 * @see #unsetFlowConditionSingleValueAsString()
-	 * @see #getFlowConditionSingleValueAsString()
-	 * @see #setFlowConditionSingleValueAsString(String)
-	 * @generated
-	 */
-	boolean isSetFlowConditionSingleValueAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Velocity Single Value</b></em>' attribute.
+	 * Returns the value of the '<em><b>Velocity Single Value</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Velocity Single Value</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Velocity Single Value</em>' attribute.
+	 * @return the value of the '<em>Velocity Single Value</em>' reference.
 	 * @see #isSetVelocitySingleValue()
 	 * @see #unsetVelocitySingleValue()
-	 * @see #setVelocitySingleValue(float)
+	 * @see #setVelocitySingleValue(IfcLinearVelocityMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcFluidFlowProperties_VelocitySingleValue()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getVelocitySingleValue();
+	IfcLinearVelocityMeasure getVelocitySingleValue();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getVelocitySingleValue <em>Velocity Single Value</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getVelocitySingleValue <em>Velocity Single Value</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Velocity Single Value</em>' attribute.
+	 * @param value the new value of the '<em>Velocity Single Value</em>' reference.
 	 * @see #isSetVelocitySingleValue()
 	 * @see #unsetVelocitySingleValue()
 	 * @see #getVelocitySingleValue()
 	 * @generated
 	 */
-	void setVelocitySingleValue(float value);
+	void setVelocitySingleValue(IfcLinearVelocityMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getVelocitySingleValue <em>Velocity Single Value</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getVelocitySingleValue <em>Velocity Single Value</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetVelocitySingleValue()
 	 * @see #getVelocitySingleValue()
-	 * @see #setVelocitySingleValue(float)
+	 * @see #setVelocitySingleValue(IfcLinearVelocityMeasure)
 	 * @generated
 	 */
 	void unsetVelocitySingleValue();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getVelocitySingleValue <em>Velocity Single Value</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getVelocitySingleValue <em>Velocity Single Value</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Velocity Single Value</em>' attribute is set.
+	 * @return whether the value of the '<em>Velocity Single Value</em>' reference is set.
 	 * @see #unsetVelocitySingleValue()
 	 * @see #getVelocitySingleValue()
-	 * @see #setVelocitySingleValue(float)
+	 * @see #setVelocitySingleValue(IfcLinearVelocityMeasure)
 	 * @generated
 	 */
 	boolean isSetVelocitySingleValue();
 
 	/**
-	 * Returns the value of the '<em><b>Velocity Single Value As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Velocity Single Value As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Velocity Single Value As String</em>' attribute.
-	 * @see #isSetVelocitySingleValueAsString()
-	 * @see #unsetVelocitySingleValueAsString()
-	 * @see #setVelocitySingleValueAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcFluidFlowProperties_VelocitySingleValueAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getVelocitySingleValueAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getVelocitySingleValueAsString <em>Velocity Single Value As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Velocity Single Value As String</em>' attribute.
-	 * @see #isSetVelocitySingleValueAsString()
-	 * @see #unsetVelocitySingleValueAsString()
-	 * @see #getVelocitySingleValueAsString()
-	 * @generated
-	 */
-	void setVelocitySingleValueAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getVelocitySingleValueAsString <em>Velocity Single Value As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetVelocitySingleValueAsString()
-	 * @see #getVelocitySingleValueAsString()
-	 * @see #setVelocitySingleValueAsString(String)
-	 * @generated
-	 */
-	void unsetVelocitySingleValueAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getVelocitySingleValueAsString <em>Velocity Single Value As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Velocity Single Value As String</em>' attribute is set.
-	 * @see #unsetVelocitySingleValueAsString()
-	 * @see #getVelocitySingleValueAsString()
-	 * @see #setVelocitySingleValueAsString(String)
-	 * @generated
-	 */
-	boolean isSetVelocitySingleValueAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Pressure Single Value</b></em>' attribute.
+	 * Returns the value of the '<em><b>Pressure Single Value</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Pressure Single Value</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Pressure Single Value</em>' attribute.
+	 * @return the value of the '<em>Pressure Single Value</em>' reference.
 	 * @see #isSetPressureSingleValue()
 	 * @see #unsetPressureSingleValue()
-	 * @see #setPressureSingleValue(float)
+	 * @see #setPressureSingleValue(IfcPressureMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcFluidFlowProperties_PressureSingleValue()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getPressureSingleValue();
+	IfcPressureMeasure getPressureSingleValue();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getPressureSingleValue <em>Pressure Single Value</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getPressureSingleValue <em>Pressure Single Value</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Pressure Single Value</em>' attribute.
+	 * @param value the new value of the '<em>Pressure Single Value</em>' reference.
 	 * @see #isSetPressureSingleValue()
 	 * @see #unsetPressureSingleValue()
 	 * @see #getPressureSingleValue()
 	 * @generated
 	 */
-	void setPressureSingleValue(float value);
+	void setPressureSingleValue(IfcPressureMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getPressureSingleValue <em>Pressure Single Value</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getPressureSingleValue <em>Pressure Single Value</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetPressureSingleValue()
 	 * @see #getPressureSingleValue()
-	 * @see #setPressureSingleValue(float)
+	 * @see #setPressureSingleValue(IfcPressureMeasure)
 	 * @generated
 	 */
 	void unsetPressureSingleValue();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getPressureSingleValue <em>Pressure Single Value</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getPressureSingleValue <em>Pressure Single Value</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Pressure Single Value</em>' attribute is set.
+	 * @return whether the value of the '<em>Pressure Single Value</em>' reference is set.
 	 * @see #unsetPressureSingleValue()
 	 * @see #getPressureSingleValue()
-	 * @see #setPressureSingleValue(float)
+	 * @see #setPressureSingleValue(IfcPressureMeasure)
 	 * @generated
 	 */
 	boolean isSetPressureSingleValue();
-
-	/**
-	 * Returns the value of the '<em><b>Pressure Single Value As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Pressure Single Value As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Pressure Single Value As String</em>' attribute.
-	 * @see #isSetPressureSingleValueAsString()
-	 * @see #unsetPressureSingleValueAsString()
-	 * @see #setPressureSingleValueAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcFluidFlowProperties_PressureSingleValueAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getPressureSingleValueAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getPressureSingleValueAsString <em>Pressure Single Value As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Pressure Single Value As String</em>' attribute.
-	 * @see #isSetPressureSingleValueAsString()
-	 * @see #unsetPressureSingleValueAsString()
-	 * @see #getPressureSingleValueAsString()
-	 * @generated
-	 */
-	void setPressureSingleValueAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getPressureSingleValueAsString <em>Pressure Single Value As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetPressureSingleValueAsString()
-	 * @see #getPressureSingleValueAsString()
-	 * @see #setPressureSingleValueAsString(String)
-	 * @generated
-	 */
-	void unsetPressureSingleValueAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcFluidFlowProperties#getPressureSingleValueAsString <em>Pressure Single Value As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Pressure Single Value As String</em>' attribute is set.
-	 * @see #unsetPressureSingleValueAsString()
-	 * @see #getPressureSingleValueAsString()
-	 * @see #setPressureSingleValueAsString(String)
-	 * @generated
-	 */
-	boolean isSetPressureSingleValueAsString();
 
 } // IfcFluidFlowProperties

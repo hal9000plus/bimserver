@@ -1,32 +1,25 @@
 <%@page import="java.util.List" %>
+<%@page import="org.bimserver.shared.SProject" %>
+<%@page import="org.bimserver.shared.SRevision" %>
 <%@page import="java.util.Collections"%>
 <%@page import="org.bimserver.LoginManager"%>
-<%@page import="org.bimserver.JspHelper"%>
-<%@page import="org.bimserver.interfaces.objects.SProject"%>
-<%@page import="org.bimserver.shared.SProjectNameComparator"%>
 <%@ include file="header.jsp" %>
 <%
 if (serverInfo.isAvailable()) {
 	if (loginManager.isLoggedIn()) { %>
 
-<div class="sidebar">
- <h4>Submenu</h4>
- <a href="addproject.jsp">Add project</a><br/><br/>
-</div>
-
-<div class="content">
-
-<h1>Projects</h1>
+<%@page import="org.bimserver.JspHelper"%><h1>Projects</h1>
 <fieldset>
-<table class="formatted maintable">
+<a href="addproject.jsp">Add project</a><br/><br/>
 <%
-	List<SProject> projects = loginManager.getService().getAllProjects();
-	Collections.sort(projects, new SProjectNameComparator());
+	List<SProject> projects = loginManager.getService().getAllProjects().getProjects();
+	Collections.sort(projects);
 	if (projects.size() > 0) {
 
 	for (SProject project : projects) {
 		if (project.getParentId() == -1) {
 			%>
+			<table class="formatted">
 			<tr>
 				<th>Name</th>
 				<th>Last revision</th>
@@ -37,19 +30,14 @@ if (serverInfo.isAvailable()) {
 			</tr>
 			<%
 			out.write(JspHelper.writeProjectTree(project, loginManager, 0));
-			%>
-			<tr><td colspan="6" class="seperator"></td></tr>
-			<%
 		}
+	%>
+	</table>
+	<%
 	}
-%>
-</table>
-<%
 	} else {
 %>
-</table>
 No projects<br/><br/>
-
 <%
 	}
 %>
@@ -59,5 +47,4 @@ No projects<br/><br/>
 }
 %>
 </fieldset>
-</div>
 <%@ include file="footer.jsp" %>

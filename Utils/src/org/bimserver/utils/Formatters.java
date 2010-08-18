@@ -21,17 +21,8 @@ package org.bimserver.utils;
  *****************************************************************************/
 
 import java.util.Formatter;
-import java.util.GregorianCalendar;
-
-import org.joda.time.DateTime;
-import org.joda.time.Interval;
-import org.joda.time.format.PeriodFormatter;
-import org.joda.time.format.PeriodFormatterBuilder;
 
 public class Formatters {
-	private Formatters() {
-	}
-
 	public static String bytesToString(long bytes) {
 		Formatter formatter = new Formatter();
 		if (bytes > 1024) {
@@ -53,24 +44,6 @@ public class Formatters {
 		}
 	}
 
-	public static final String timeSpanToString(GregorianCalendar startGc, GregorianCalendar stopGc) {
-		PeriodFormatter yearsAndMonths = new PeriodFormatterBuilder()
-	     .printZeroAlways()
-	     .appendDays()
-	     .appendSuffix(" day", " days")
-	     .appendSeparator(", ")
-	     .appendHours()
-	     .appendSuffix(" hour", " hours")
-	     .appendSeparator(" and ")
-	     .appendMinutes()
-	     .appendSuffix(" minute", " minutes")
-	     .toFormatter();
-		DateTime start = new DateTime(startGc.getTimeInMillis());
-		DateTime end = new DateTime(stopGc.getTimeInMillis());
-		Interval interval = new Interval(start, end);
-		return yearsAndMonths.print(interval.toPeriod());
-	}
-	
 	public static final String millisecondsToString(long millis) {
 		if (millis < 1000) {
 			return millis + "ms";

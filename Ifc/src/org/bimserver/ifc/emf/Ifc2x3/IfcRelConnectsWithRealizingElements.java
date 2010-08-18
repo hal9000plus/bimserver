@@ -61,54 +61,54 @@ public interface IfcRelConnectsWithRealizingElements extends IfcRelConnectsEleme
 	EList<IfcElement> getRealizingElements();
 
 	/**
-	 * Returns the value of the '<em><b>Connection Type</b></em>' attribute.
+	 * Returns the value of the '<em><b>Connection Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Connection Type</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Connection Type</em>' attribute.
+	 * @return the value of the '<em>Connection Type</em>' reference.
 	 * @see #isSetConnectionType()
 	 * @see #unsetConnectionType()
-	 * @see #setConnectionType(String)
+	 * @see #setConnectionType(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRelConnectsWithRealizingElements_ConnectionType()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getConnectionType();
+	IfcLabel getConnectionType();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelConnectsWithRealizingElements#getConnectionType <em>Connection Type</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelConnectsWithRealizingElements#getConnectionType <em>Connection Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Connection Type</em>' attribute.
+	 * @param value the new value of the '<em>Connection Type</em>' reference.
 	 * @see #isSetConnectionType()
 	 * @see #unsetConnectionType()
 	 * @see #getConnectionType()
 	 * @generated
 	 */
-	void setConnectionType(String value);
+	void setConnectionType(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelConnectsWithRealizingElements#getConnectionType <em>Connection Type</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelConnectsWithRealizingElements#getConnectionType <em>Connection Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetConnectionType()
 	 * @see #getConnectionType()
-	 * @see #setConnectionType(String)
+	 * @see #setConnectionType(IfcLabel)
 	 * @generated
 	 */
 	void unsetConnectionType();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelConnectsWithRealizingElements#getConnectionType <em>Connection Type</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelConnectsWithRealizingElements#getConnectionType <em>Connection Type</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Connection Type</em>' attribute is set.
+	 * @return whether the value of the '<em>Connection Type</em>' reference is set.
 	 * @see #unsetConnectionType()
 	 * @see #getConnectionType()
-	 * @see #setConnectionType(String)
+	 * @see #setConnectionType(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetConnectionType();

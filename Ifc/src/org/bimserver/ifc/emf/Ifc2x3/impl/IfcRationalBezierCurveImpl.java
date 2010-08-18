@@ -24,7 +24,10 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRationalBezierCurve;
+import org.bimserver.ifc.emf.Ifc2x3.IfcReal;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -35,6 +38,7 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRationalBezierCurveImpl#getWeightsData <em>Weights Data</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRationalBezierCurveImpl#getWeights <em>Weights</em>}</li>
  * </ul>
  * </p>
  *
@@ -66,8 +70,18 @@ public class IfcRationalBezierCurveImpl extends IfcBezierCurveImpl implements If
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<Float> getWeightsData() {
-		return (EList<Float>) eGet(Ifc2x3Package.eINSTANCE.getIfcRationalBezierCurve_WeightsData(), true);
+	public EList<IfcReal> getWeightsData() {
+		return (EList<IfcReal>) eGet(Ifc2x3Package.eINSTANCE.getIfcRationalBezierCurve_WeightsData(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<IfcReal> getWeights() {
+		return (EList<IfcReal>) eGet(Ifc2x3Package.eINSTANCE.getIfcRationalBezierCurve_Weights(), true);
 	}
 
 } //IfcRationalBezierCurveImpl

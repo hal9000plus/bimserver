@@ -29,8 +29,6 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
-import org.bimserver.shared.ResourceFetcher;
-import org.bimserver.utils.StringUtils;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EPackage;
@@ -45,7 +43,7 @@ public class FileFieldIgnoreMap extends FieldIgnoreMap {
 	public FileFieldIgnoreMap(Set<? extends EPackage> packages, ResourceFetcher resourceFetcher) {
 		super(packages);
 		URL ignoreFile = resourceFetcher.getResource("ignore.xml");
-		logger.info("Reading general ignore list from \"" + StringUtils.getPrettyFileUrl(ignoreFile) + "\"");
+		logger.info("Reading general ignore list from " + ignoreFile);
 		try {
 			jaxbContext = JAXBContext.newInstance(PackageDefinition.class);
 			Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
@@ -74,7 +72,7 @@ public class FileFieldIgnoreMap extends FieldIgnoreMap {
 		PackageDefinition packageDefinition = (PackageDefinition) unmarshaller.unmarshal(resource);
 		HashSet<StructuralFeatureIdentifier> hashSet = new HashSet<StructuralFeatureIdentifier>();
 		specificMap.put(eClass, hashSet);
-		logger.info("Reading specific non-ignore list for " + eClass.getName() + " from \"" + StringUtils.getPrettyFileUrl(resource) + "\"");
+		logger.info("Reading specific non-ignore list for " + eClass.getName() + " from " + resource);
 		for (ClassDefinition classDefinition : packageDefinition.getClassDefinitions()) {
 			for (FieldDefinition fieldDefinition : classDefinition.getFieldDefinitions()) {
 				hashSet.add(new StructuralFeatureIdentifier(classDefinition.getName(), fieldDefinition.getName()));

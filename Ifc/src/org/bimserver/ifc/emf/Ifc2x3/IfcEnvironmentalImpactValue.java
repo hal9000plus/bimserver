@@ -42,30 +42,30 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcEnvironmentalImpactValue extends IfcAppliedValue {
 	/**
-	 * Returns the value of the '<em><b>Impact Type</b></em>' attribute.
+	 * Returns the value of the '<em><b>Impact Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Impact Type</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Impact Type</em>' attribute.
-	 * @see #setImpactType(String)
+	 * @return the value of the '<em>Impact Type</em>' reference.
+	 * @see #setImpactType(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcEnvironmentalImpactValue_ImpactType()
 	 * @model
 	 * @generated
 	 */
-	String getImpactType();
+	IfcLabel getImpactType();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcEnvironmentalImpactValue#getImpactType <em>Impact Type</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcEnvironmentalImpactValue#getImpactType <em>Impact Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Impact Type</em>' attribute.
+	 * @param value the new value of the '<em>Impact Type</em>' reference.
 	 * @see #getImpactType()
 	 * @generated
 	 */
-	void setImpactType(String value);
+	void setImpactType(IfcLabel value);
 
 	/**
 	 * Returns the value of the '<em><b>Category</b></em>' attribute.
@@ -97,54 +97,54 @@ public interface IfcEnvironmentalImpactValue extends IfcAppliedValue {
 	void setCategory(IfcEnvironmentalImpactCategoryEnum value);
 
 	/**
-	 * Returns the value of the '<em><b>User Defined Category</b></em>' attribute.
+	 * Returns the value of the '<em><b>User Defined Category</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>User Defined Category</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>User Defined Category</em>' attribute.
+	 * @return the value of the '<em>User Defined Category</em>' reference.
 	 * @see #isSetUserDefinedCategory()
 	 * @see #unsetUserDefinedCategory()
-	 * @see #setUserDefinedCategory(String)
+	 * @see #setUserDefinedCategory(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcEnvironmentalImpactValue_UserDefinedCategory()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getUserDefinedCategory();
+	IfcLabel getUserDefinedCategory();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcEnvironmentalImpactValue#getUserDefinedCategory <em>User Defined Category</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcEnvironmentalImpactValue#getUserDefinedCategory <em>User Defined Category</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>User Defined Category</em>' attribute.
+	 * @param value the new value of the '<em>User Defined Category</em>' reference.
 	 * @see #isSetUserDefinedCategory()
 	 * @see #unsetUserDefinedCategory()
 	 * @see #getUserDefinedCategory()
 	 * @generated
 	 */
-	void setUserDefinedCategory(String value);
+	void setUserDefinedCategory(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcEnvironmentalImpactValue#getUserDefinedCategory <em>User Defined Category</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcEnvironmentalImpactValue#getUserDefinedCategory <em>User Defined Category</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetUserDefinedCategory()
 	 * @see #getUserDefinedCategory()
-	 * @see #setUserDefinedCategory(String)
+	 * @see #setUserDefinedCategory(IfcLabel)
 	 * @generated
 	 */
 	void unsetUserDefinedCategory();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcEnvironmentalImpactValue#getUserDefinedCategory <em>User Defined Category</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcEnvironmentalImpactValue#getUserDefinedCategory <em>User Defined Category</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>User Defined Category</em>' attribute is set.
+	 * @return whether the value of the '<em>User Defined Category</em>' reference is set.
 	 * @see #unsetUserDefinedCategory()
 	 * @see #getUserDefinedCategory()
-	 * @see #setUserDefinedCategory(String)
+	 * @see #setUserDefinedCategory(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetUserDefinedCategory();

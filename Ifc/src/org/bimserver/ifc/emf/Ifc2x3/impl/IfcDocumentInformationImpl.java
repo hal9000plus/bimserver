@@ -22,7 +22,7 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
-import org.bimserver.emf.IdEObjectImpl;
+import org.bimserver.ifc.IfcRootObject;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcActorSelect;
 import org.bimserver.ifc.emf.Ifc2x3.IfcCalendarDate;
@@ -33,8 +33,15 @@ import org.bimserver.ifc.emf.Ifc2x3.IfcDocumentInformation;
 import org.bimserver.ifc.emf.Ifc2x3.IfcDocumentInformationRelationship;
 import org.bimserver.ifc.emf.Ifc2x3.IfcDocumentReference;
 import org.bimserver.ifc.emf.Ifc2x3.IfcDocumentStatusEnum;
+import org.bimserver.ifc.emf.Ifc2x3.IfcIdentifier;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
+import org.bimserver.ifc.emf.Ifc2x3.IfcText;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -67,7 +74,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class IfcDocumentInformationImpl extends IdEObjectImpl implements IfcDocumentInformation {
+public class IfcDocumentInformationImpl extends IfcRootObject implements IfcDocumentInformation {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -102,8 +109,8 @@ public class IfcDocumentInformationImpl extends IdEObjectImpl implements IfcDocu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getDocumentId() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcDocumentInformation_DocumentId(), true);
+	public IfcIdentifier getDocumentId() {
+		return (IfcIdentifier) eGet(Ifc2x3Package.eINSTANCE.getIfcDocumentInformation_DocumentId(), true);
 	}
 
 	/**
@@ -111,7 +118,7 @@ public class IfcDocumentInformationImpl extends IdEObjectImpl implements IfcDocu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDocumentId(String newDocumentId) {
+	public void setDocumentId(IfcIdentifier newDocumentId) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcDocumentInformation_DocumentId(), newDocumentId);
 	}
 
@@ -120,8 +127,8 @@ public class IfcDocumentInformationImpl extends IdEObjectImpl implements IfcDocu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcDocumentInformation_Name(), true);
+	public IfcLabel getName() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcDocumentInformation_Name(), true);
 	}
 
 	/**
@@ -129,7 +136,7 @@ public class IfcDocumentInformationImpl extends IdEObjectImpl implements IfcDocu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(String newName) {
+	public void setName(IfcLabel newName) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcDocumentInformation_Name(), newName);
 	}
 
@@ -138,8 +145,8 @@ public class IfcDocumentInformationImpl extends IdEObjectImpl implements IfcDocu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getDescription() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcDocumentInformation_Description(), true);
+	public IfcText getDescription() {
+		return (IfcText) eGet(Ifc2x3Package.eINSTANCE.getIfcDocumentInformation_Description(), true);
 	}
 
 	/**
@@ -147,7 +154,7 @@ public class IfcDocumentInformationImpl extends IdEObjectImpl implements IfcDocu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDescription(String newDescription) {
+	public void setDescription(IfcText newDescription) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcDocumentInformation_Description(), newDescription);
 	}
 
@@ -202,8 +209,8 @@ public class IfcDocumentInformationImpl extends IdEObjectImpl implements IfcDocu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getPurpose() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcDocumentInformation_Purpose(), true);
+	public IfcText getPurpose() {
+		return (IfcText) eGet(Ifc2x3Package.eINSTANCE.getIfcDocumentInformation_Purpose(), true);
 	}
 
 	/**
@@ -211,7 +218,7 @@ public class IfcDocumentInformationImpl extends IdEObjectImpl implements IfcDocu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPurpose(String newPurpose) {
+	public void setPurpose(IfcText newPurpose) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcDocumentInformation_Purpose(), newPurpose);
 	}
 
@@ -238,8 +245,8 @@ public class IfcDocumentInformationImpl extends IdEObjectImpl implements IfcDocu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getIntendedUse() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcDocumentInformation_IntendedUse(), true);
+	public IfcText getIntendedUse() {
+		return (IfcText) eGet(Ifc2x3Package.eINSTANCE.getIfcDocumentInformation_IntendedUse(), true);
 	}
 
 	/**
@@ -247,7 +254,7 @@ public class IfcDocumentInformationImpl extends IdEObjectImpl implements IfcDocu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIntendedUse(String newIntendedUse) {
+	public void setIntendedUse(IfcText newIntendedUse) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcDocumentInformation_IntendedUse(), newIntendedUse);
 	}
 
@@ -274,8 +281,8 @@ public class IfcDocumentInformationImpl extends IdEObjectImpl implements IfcDocu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getScope() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcDocumentInformation_Scope(), true);
+	public IfcText getScope() {
+		return (IfcText) eGet(Ifc2x3Package.eINSTANCE.getIfcDocumentInformation_Scope(), true);
 	}
 
 	/**
@@ -283,7 +290,7 @@ public class IfcDocumentInformationImpl extends IdEObjectImpl implements IfcDocu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setScope(String newScope) {
+	public void setScope(IfcText newScope) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcDocumentInformation_Scope(), newScope);
 	}
 
@@ -310,8 +317,8 @@ public class IfcDocumentInformationImpl extends IdEObjectImpl implements IfcDocu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getRevision() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcDocumentInformation_Revision(), true);
+	public IfcLabel getRevision() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcDocumentInformation_Revision(), true);
 	}
 
 	/**
@@ -319,7 +326,7 @@ public class IfcDocumentInformationImpl extends IdEObjectImpl implements IfcDocu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRevision(String newRevision) {
+	public void setRevision(IfcLabel newRevision) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcDocumentInformation_Revision(), newRevision);
 	}
 

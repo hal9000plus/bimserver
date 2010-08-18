@@ -22,7 +22,7 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3;
 
-import org.bimserver.emf.IdEObject;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -45,10 +45,9 @@ import org.bimserver.emf.IdEObject;
  *
  * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcOwnerHistory()
  * @model
- * @extends IdEObject
  * @generated
  */
-public interface IfcOwnerHistory extends IdEObject {
+public interface IfcOwnerHistory extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Owning User</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -160,54 +159,54 @@ public interface IfcOwnerHistory extends IdEObject {
 	void setChangeAction(IfcChangeActionEnum value);
 
 	/**
-	 * Returns the value of the '<em><b>Last Modified Date</b></em>' attribute.
+	 * Returns the value of the '<em><b>Last Modified Date</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Last Modified Date</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Last Modified Date</em>' attribute.
+	 * @return the value of the '<em>Last Modified Date</em>' reference.
 	 * @see #isSetLastModifiedDate()
 	 * @see #unsetLastModifiedDate()
-	 * @see #setLastModifiedDate(int)
+	 * @see #setLastModifiedDate(IfcTimeStamp)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcOwnerHistory_LastModifiedDate()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	int getLastModifiedDate();
+	IfcTimeStamp getLastModifiedDate();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOwnerHistory#getLastModifiedDate <em>Last Modified Date</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOwnerHistory#getLastModifiedDate <em>Last Modified Date</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Last Modified Date</em>' attribute.
+	 * @param value the new value of the '<em>Last Modified Date</em>' reference.
 	 * @see #isSetLastModifiedDate()
 	 * @see #unsetLastModifiedDate()
 	 * @see #getLastModifiedDate()
 	 * @generated
 	 */
-	void setLastModifiedDate(int value);
+	void setLastModifiedDate(IfcTimeStamp value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOwnerHistory#getLastModifiedDate <em>Last Modified Date</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOwnerHistory#getLastModifiedDate <em>Last Modified Date</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetLastModifiedDate()
 	 * @see #getLastModifiedDate()
-	 * @see #setLastModifiedDate(int)
+	 * @see #setLastModifiedDate(IfcTimeStamp)
 	 * @generated
 	 */
 	void unsetLastModifiedDate();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOwnerHistory#getLastModifiedDate <em>Last Modified Date</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOwnerHistory#getLastModifiedDate <em>Last Modified Date</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Last Modified Date</em>' attribute is set.
+	 * @return whether the value of the '<em>Last Modified Date</em>' reference is set.
 	 * @see #unsetLastModifiedDate()
 	 * @see #getLastModifiedDate()
-	 * @see #setLastModifiedDate(int)
+	 * @see #setLastModifiedDate(IfcTimeStamp)
 	 * @generated
 	 */
 	boolean isSetLastModifiedDate();
@@ -319,29 +318,29 @@ public interface IfcOwnerHistory extends IdEObject {
 	boolean isSetLastModifyingApplication();
 
 	/**
-	 * Returns the value of the '<em><b>Creation Date</b></em>' attribute.
+	 * Returns the value of the '<em><b>Creation Date</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Creation Date</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Creation Date</em>' attribute.
-	 * @see #setCreationDate(int)
+	 * @return the value of the '<em>Creation Date</em>' reference.
+	 * @see #setCreationDate(IfcTimeStamp)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcOwnerHistory_CreationDate()
 	 * @model
 	 * @generated
 	 */
-	int getCreationDate();
+	IfcTimeStamp getCreationDate();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOwnerHistory#getCreationDate <em>Creation Date</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOwnerHistory#getCreationDate <em>Creation Date</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Creation Date</em>' attribute.
+	 * @param value the new value of the '<em>Creation Date</em>' reference.
 	 * @see #getCreationDate()
 	 * @generated
 	 */
-	void setCreationDate(int value);
+	void setCreationDate(IfcTimeStamp value);
 
 } // IfcOwnerHistory

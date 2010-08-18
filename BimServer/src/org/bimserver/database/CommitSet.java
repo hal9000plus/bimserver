@@ -30,13 +30,13 @@ public class CommitSet {
 	private final int rid;
 	private final Map<EObject, Long> storing = new HashMap<EObject, Long>();
 
+	public int getRid() {
+		return rid;
+	}
+
 	public CommitSet(int pid, int rid) {
 		this.pid = pid;
 		this.rid = rid;
-	}
-	
-	public int getRid() {
-		return rid;
 	}
 
 	public long getOid(EObject object) {

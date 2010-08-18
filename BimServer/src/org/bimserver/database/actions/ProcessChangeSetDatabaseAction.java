@@ -3,6 +3,7 @@ package org.bimserver.database.actions;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.bimserver.BimDatabaseAction;
 import org.bimserver.database.BimDatabaseException;
 import org.bimserver.database.BimDatabaseSession;
 import org.bimserver.database.BimDeadlockException;
@@ -12,8 +13,6 @@ import org.bimserver.database.ReadSet;
 import org.bimserver.database.RecordIdentifier;
 import org.bimserver.database.store.ConcreteRevision;
 import org.bimserver.database.store.Project;
-import org.bimserver.database.store.log.AccessMethod;
-import org.bimserver.emf.IdEObject;
 import org.bimserver.shared.AbstractAttributeValuePair;
 import org.bimserver.shared.Addition;
 import org.bimserver.shared.AttributeNewReferencePair;
@@ -32,15 +31,14 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 public class ProcessChangeSetDatabaseAction extends BimDatabaseAction<ChangeSetResult> {
 
 	private final ChangeSet changeSet;
+	private final int pid;
+	private final int uid;
 	private final String comment;
-	private final long actingUoid;
-	private final long poid;
 
-	public ProcessChangeSetDatabaseAction(AccessMethod accessMethod, ChangeSet changeSet, long poid, long actingUoid, String comment) {
-		super(accessMethod);
+	public ProcessChangeSetDatabaseAction(ChangeSet changeSet, int pid, int uid, String comment) {
 		this.changeSet = changeSet;
-		this.poid = poid;
-		this.actingUoid = actingUoid;
+		this.pid = pid;
+		this.uid = uid;
 		this.comment = comment;
 	}
 
@@ -48,41 +46,41 @@ public class ProcessChangeSetDatabaseAction extends BimDatabaseAction<ChangeSetR
 	@Override
 	public ChangeSetResult execute(BimDatabaseSession bimDatabaseSession) throws UserException, BimDatabaseException, BimDeadlockException {
 		final ChangeSetResult changeSetResult = new ChangeSetResult();
-		final Project project = bimDatabaseSession.getProjectByPoid(poid);
+		final Project project = bimDatabaseSession.getProjectById(pid);
 		if (project.getLastConcreteRevision() == null) {
 			throw new UserException("There must be at least 1 revision to use changesets");
 		}
 		ConcreteRevision oldRevision = project.getLastConcreteRevision();
-		ConcreteRevision newRevision = bimDatabaseSession.createNewConcreteRevision(0, poid, actingUoid, comment);
+		ConcreteRevision newRevision = bimDatabaseSession.createNewRevision(0, pid, uid, comment);
 		changeSetResult.setNewRevisionNr(newRevision.getId());
-		final CommitSet commitSet = new CommitSet(project.getId(), newRevision.getId());
-		ReadSet map = bimDatabaseSession.getMap(project.getId(), oldRevision.getId());
-		Map<Long, IdEObject> processedAdditions = new HashMap<Long, IdEObject>();
-		long newSize = 0;//oldRevision.getSize();
+		final CommitSet commitSet = new CommitSet(pid, newRevision.getId());
+		Map<Long, EObject> map = bimDatabaseSession.getMap(pid, oldRevision.getId());
+		Map<Long, EObject> processedAdditions = new HashMap<Long, EObject>();
+		long newSize = oldRevision.getSize();
 		for (Addition addition : changeSet.getAdditions()) {
 			EClass classForName = bimDatabaseSession.getEClassForName(addition.getClassName());
-			IdEObject object = (IdEObject) classForName.getEPackage().getEFactoryInstance().create(classForName);
+			EObject object = classForName.getEPackage().getEFactoryInstance().create(classForName);
 			processedAdditions.put(addition.getOid(), object);
 		}
 		for (Addition addition : changeSet.getAdditions()) {
-			bimDatabaseSession.convertAdditionToEObject(processedAdditions.get(addition.getOid()), addition, processedAdditions, map.getMap());
+			bimDatabaseSession.convertAdditionToEObject(processedAdditions.get(addition.getOid()), addition, processedAdditions, map);
 			newSize++;
 		}
 		for (Long key : processedAdditions.keySet()) {
 			bimDatabaseSession.store(processedAdditions.get(key), commitSet);
 		}
 		if (project.getLastConcreteRevision() != null) {
-			ReadSet readSet = new ReadSet(project.getId(), oldRevision.getId());
+			ReadSet readSet = new ReadSet(pid, oldRevision.getId());
 			for (Modification modification : changeSet.getModifications()) {
 				String className = modification.getClassName();
 				long oid = modification.getOid();
-				IdEObject originalObject = bimDatabaseSession.get(bimDatabaseSession.getCidForClassName(className), oid, readSet);
-				IdEObject object = (IdEObject) EcoreUtil.copy(originalObject);
+				EObject originalObject = bimDatabaseSession.get(className, oid, readSet, new HashMap<Long, EObject>());
+				EObject object = EcoreUtil.copy(originalObject);
 				// Put this copy in the cache, so saving it later on
 				// won't
 				// create a
 				// new oid
-				bimDatabaseSession.putInCache(new RecordIdentifier(commitSet.getPid(), bimDatabaseSession.getOid(originalObject), commitSet.getRid()), object);
+				bimDatabaseSession.put(new RecordIdentifier(commitSet.getPid(), bimDatabaseSession.getOid(originalObject), commitSet.getRid()), object);
 				for (AbstractAttributeValuePair aavp : modification.getAttributes()) {
 					EStructuralFeature feature = object.eClass().getEStructuralFeature(aavp.getName());
 					if (aavp instanceof AttributeValuePair) {
@@ -107,14 +105,14 @@ public class ProcessChangeSetDatabaseAction extends BimDatabaseAction<ChangeSetR
 						}
 					} else if (aavp instanceof AttributeReferencePair) {
 						AttributeReferencePair attributeReferencePair = (AttributeReferencePair) aavp;
-						ReadSet mapWithOid = bimDatabaseSession.getMapWithOid(project.getId(), project.getLastConcreteRevision().getId(), attributeReferencePair.getOid());
+						Map<Long, EObject> mapWithOid = bimDatabaseSession.getMapWithOid(pid, project.getLastConcreteRevision().getId(), attributeReferencePair.getOid());
 						object.eSet(feature, mapWithOid.get(attributeReferencePair.getOid()));
 					}
 				}
 				bimDatabaseSession.store(object, commitSet);
 			}
 		}
-//		newRevision.setSize(newSize);
+		newRevision.setSize(newSize);
 		bimDatabaseSession.store(newRevision, new CommitSet(Database.STORE_PROJECT_ID, -1));
 		return changeSetResult;
 	}

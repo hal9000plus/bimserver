@@ -23,7 +23,6 @@ package org.bimserver.database.berkeley;
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.TimeUnit;
 
 import org.bimserver.database.BimDatabaseException;
 import org.bimserver.database.BimDeadlockException;
@@ -42,11 +41,11 @@ import com.sleepycat.je.Database;
 import com.sleepycat.je.DatabaseConfig;
 import com.sleepycat.je.DatabaseEntry;
 import com.sleepycat.je.DatabaseException;
+import com.sleepycat.je.DeadlockException;
 import com.sleepycat.je.Environment;
 import com.sleepycat.je.EnvironmentConfig;
 import com.sleepycat.je.EnvironmentLockedException;
 import com.sleepycat.je.JEVersion;
-import com.sleepycat.je.LockConflictException;
 import com.sleepycat.je.LockMode;
 import com.sleepycat.je.OperationStatus;
 import com.sleepycat.je.Transaction;
@@ -54,10 +53,10 @@ import com.sleepycat.je.TransactionConfig;
 
 public class BerkeleyColumnDatabase implements ColumnDatabase {
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(BerkeleyColumnDatabase.class);
 	private Environment environment;
 	private int writes;
 	private int reads;
+	private static final Logger LOGGER = LoggerFactory.getLogger(BerkeleyColumnDatabase.class);
 	private final DatabaseConfig dbConfig;
 	private final Map<String, Database> tables = new HashMap<String, Database>();
 	private boolean isNew;
@@ -88,17 +87,20 @@ public class BerkeleyColumnDatabase implements ColumnDatabase {
 		envConfig.setCachePercent(25);
 		envConfig.setAllowCreate(true);
 		envConfig.setTransactional(transactional);
-		envConfig.setTxnTimeout(60, TimeUnit.SECONDS);
-		envConfig.setLockTimeout(60, TimeUnit.SECONDS);
-		envConfig.setTxnSerializableIsolation(true);
+		envConfig.setTxnTimeout(500000);
+		envConfig.setLockTimeout(500000);
 		dbConfig = new DatabaseConfig();
 		try {
 			environment = new Environment(dataDir, envConfig);
 		} catch (EnvironmentLockedException e) {
-			String message = "Environment locked exception. Another process is using the same database, or the current user has no write access (database location: \"" + dataDir.getAbsolutePath() + "\")";
+			String message = "Environment locked exception. Another process is using the same database, or the current user has no write access (database location: " + dataDir.getAbsolutePath() + ")";
+			LOGGER.error(message);
+			LOGGER.error("", e);
 			throw new DatabaseInitException(message);
 		} catch (DatabaseException e) {
 			String message = "A database initialisation error has occured (" + e.getMessage() + ")";
+			LOGGER.error(message);
+			LOGGER.error("", e);
 			throw new DatabaseInitException(message);
 		}
 		dbConfig.setAllowCreate(true);
@@ -108,10 +110,10 @@ public class BerkeleyColumnDatabase implements ColumnDatabase {
 		long e = System.nanoTime();
 
 		transactionConfig = new TransactionConfig();
-//		transactionConfig.setReadCommitted(true);
+		transactionConfig.setReadCommitted(true);
 
 		cursorConfig = new CursorConfig();
-//		cursorConfig.setReadCommitted(true);
+		cursorConfig.setReadCommitted(true);
 
 		LOGGER.info("Berkeley Database Init done " + ((e - s) / 1000000) + " ms");
 	}
@@ -170,7 +172,7 @@ public class BerkeleyColumnDatabase implements ColumnDatabase {
 		DatabaseEntry value = new DatabaseEntry();
 		try {
 			OperationStatus operationStatus = getDatabase(tableName, databaseSession, false).get(
-					transactional ? ((BerkeleyTransaction) databaseSession.getBimTransaction()).getTransaction() : null, key, value, LockMode.DEFAULT);
+					transactional ? ((BerkeleyTransaction) databaseSession.getBimTransaction()).getTransaction() : null, key, value, LockMode.READ_COMMITTED);
 			if (operationStatus == OperationStatus.SUCCESS) {
 				increaseReads();
 				return value.getData();
@@ -285,7 +287,7 @@ public class BerkeleyColumnDatabase implements ColumnDatabase {
 			getDatabase(tableName, databaseSession, false).delete(
 					transactional ? ((BerkeleyTransaction) databaseSession.getBimTransaction()).getTransaction() : null, entry);
 			increaseWrites();
-		} catch (LockConflictException e) {
+		} catch (DeadlockException e) {
 			throw new BimDeadlockException(e);
 		} catch (DatabaseException e) {
 			e.printStackTrace();
@@ -324,7 +326,7 @@ public class BerkeleyColumnDatabase implements ColumnDatabase {
 		Transaction bdbTransaction = ((BerkeleyTransaction) databaseSession.getBimTransaction()).getTransaction();
 		try {
 			bdbTransaction.commit();
-		} catch (LockConflictException e) {
+		} catch (DeadlockException e) {
 			e.printStackTrace();
 			throw new BimDeadlockException(e);
 		} catch (DatabaseException e) {
@@ -343,7 +345,7 @@ public class BerkeleyColumnDatabase implements ColumnDatabase {
 				getDatabase(tableName, databaseSession, false).put(null, dbKey, data);
 			}
 			increaseWrites();
-		} catch (LockConflictException e) {
+		} catch (DeadlockException e) {
 			throw new BimDeadlockException(e);
 		} catch (DatabaseException e) {
 			throw new BimDatabaseException("", e);

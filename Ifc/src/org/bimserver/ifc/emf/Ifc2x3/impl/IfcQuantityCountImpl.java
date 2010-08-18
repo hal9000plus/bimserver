@@ -23,7 +23,9 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcCountMeasure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcQuantityCount;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -34,7 +36,6 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcQuantityCountImpl#getCountValue <em>Count Value</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcQuantityCountImpl#getCountValueAsString <em>Count Value As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -65,8 +66,8 @@ public class IfcQuantityCountImpl extends IfcPhysicalSimpleQuantityImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getCountValue() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcQuantityCount_CountValue(), true);
+	public IfcCountMeasure getCountValue() {
+		return (IfcCountMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcQuantityCount_CountValue(), true);
 	}
 
 	/**
@@ -74,26 +75,8 @@ public class IfcQuantityCountImpl extends IfcPhysicalSimpleQuantityImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCountValue(float newCountValue) {
+	public void setCountValue(IfcCountMeasure newCountValue) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcQuantityCount_CountValue(), newCountValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getCountValueAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcQuantityCount_CountValueAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCountValueAsString(String newCountValueAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcQuantityCount_CountValueAsString(), newCountValueAsString);
 	}
 
 } //IfcQuantityCountImpl

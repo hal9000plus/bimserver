@@ -31,7 +31,6 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcQuantityCount#getCountValue <em>Count Value</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcQuantityCount#getCountValueAsString <em>Count Value As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -41,55 +40,29 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcQuantityCount extends IfcPhysicalSimpleQuantity {
 	/**
-	 * Returns the value of the '<em><b>Count Value</b></em>' attribute.
+	 * Returns the value of the '<em><b>Count Value</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Count Value</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Count Value</em>' attribute.
-	 * @see #setCountValue(float)
+	 * @return the value of the '<em>Count Value</em>' reference.
+	 * @see #setCountValue(IfcCountMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcQuantityCount_CountValue()
 	 * @model
 	 * @generated
 	 */
-	float getCountValue();
+	IfcCountMeasure getCountValue();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcQuantityCount#getCountValue <em>Count Value</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcQuantityCount#getCountValue <em>Count Value</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Count Value</em>' attribute.
+	 * @param value the new value of the '<em>Count Value</em>' reference.
 	 * @see #getCountValue()
 	 * @generated
 	 */
-	void setCountValue(float value);
-
-	/**
-	 * Returns the value of the '<em><b>Count Value As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Count Value As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Count Value As String</em>' attribute.
-	 * @see #setCountValueAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcQuantityCount_CountValueAsString()
-	 * @model
-	 * @generated
-	 */
-	String getCountValueAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcQuantityCount#getCountValueAsString <em>Count Value As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Count Value As String</em>' attribute.
-	 * @see #getCountValueAsString()
-	 * @generated
-	 */
-	void setCountValueAsString(String value);
+	void setCountValue(IfcCountMeasure value);
 
 } // IfcQuantityCount

@@ -25,6 +25,7 @@ package org.bimserver.ifc.emf.Ifc2x3.util;
 import java.util.List;
 
 import org.bimserver.ifc.emf.Ifc2x3.*;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 
@@ -220,6 +221,24 @@ public class Ifc2x3Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case Ifc2x3Package.IFC_DAY_IN_MONTH_NUMBER: {
+			IfcDayInMonthNumber ifcDayInMonthNumber = (IfcDayInMonthNumber) theEObject;
+			T result = caseIfcDayInMonthNumber(ifcDayInMonthNumber);
+			if (result == null)
+				result = caseWrappedValue(ifcDayInMonthNumber);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Ifc2x3Package.IFC_DAYLIGHT_SAVING_HOUR: {
+			IfcDaylightSavingHour ifcDaylightSavingHour = (IfcDaylightSavingHour) theEObject;
+			T result = caseIfcDaylightSavingHour(ifcDaylightSavingHour);
+			if (result == null)
+				result = caseWrappedValue(ifcDaylightSavingHour);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		case Ifc2x3Package.IFC_DESCRIPTIVE_MEASURE: {
 			IfcDescriptiveMeasure ifcDescriptiveMeasure = (IfcDescriptiveMeasure) theEObject;
 			T result = caseIfcDescriptiveMeasure(ifcDescriptiveMeasure);
@@ -231,6 +250,15 @@ public class Ifc2x3Switch<T> {
 				result = caseIfcSizeSelect(ifcDescriptiveMeasure);
 			if (result == null)
 				result = caseIfcValue(ifcDescriptiveMeasure);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Ifc2x3Package.IFC_DIMENSION_COUNT: {
+			IfcDimensionCount ifcDimensionCount = (IfcDimensionCount) theEObject;
+			T result = caseIfcDimensionCount(ifcDimensionCount);
+			if (result == null)
+				result = caseWrappedValue(ifcDimensionCount);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -352,6 +380,33 @@ public class Ifc2x3Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case Ifc2x3Package.IFC_FONT_STYLE: {
+			IfcFontStyle ifcFontStyle = (IfcFontStyle) theEObject;
+			T result = caseIfcFontStyle(ifcFontStyle);
+			if (result == null)
+				result = caseWrappedValue(ifcFontStyle);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Ifc2x3Package.IFC_FONT_VARIANT: {
+			IfcFontVariant ifcFontVariant = (IfcFontVariant) theEObject;
+			T result = caseIfcFontVariant(ifcFontVariant);
+			if (result == null)
+				result = caseWrappedValue(ifcFontVariant);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Ifc2x3Package.IFC_FONT_WEIGHT: {
+			IfcFontWeight ifcFontWeight = (IfcFontWeight) theEObject;
+			T result = caseIfcFontWeight(ifcFontWeight);
+			if (result == null)
+				result = caseWrappedValue(ifcFontWeight);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		case Ifc2x3Package.IFC_FORCE_MEASURE: {
 			IfcForceMeasure ifcForceMeasure = (IfcForceMeasure) theEObject;
 			T result = caseIfcForceMeasure(ifcForceMeasure);
@@ -409,6 +464,15 @@ public class Ifc2x3Switch<T> {
 				result = caseIfcDerivedMeasureValue(ifcHeatingValueMeasure);
 			if (result == null)
 				result = caseIfcValue(ifcHeatingValueMeasure);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Ifc2x3Package.IFC_HOUR_IN_DAY: {
+			IfcHourInDay ifcHourInDay = (IfcHourInDay) theEObject;
+			T result = caseIfcHourInDay(ifcHourInDay);
+			if (result == null)
+				result = caseWrappedValue(ifcHourInDay);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -729,6 +793,15 @@ public class Ifc2x3Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case Ifc2x3Package.IFC_MINUTE_IN_HOUR: {
+			IfcMinuteInHour ifcMinuteInHour = (IfcMinuteInHour) theEObject;
+			T result = caseIfcMinuteInHour(ifcMinuteInHour);
+			if (result == null)
+				result = caseWrappedValue(ifcMinuteInHour);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		case Ifc2x3Package.IFC_MODULUS_OF_ELASTICITY_MEASURE: {
 			IfcModulusOfElasticityMeasure ifcModulusOfElasticityMeasure = (IfcModulusOfElasticityMeasure) theEObject;
 			T result = caseIfcModulusOfElasticityMeasure(ifcModulusOfElasticityMeasure);
@@ -835,6 +908,15 @@ public class Ifc2x3Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case Ifc2x3Package.IFC_MONTH_IN_YEAR_NUMBER: {
+			IfcMonthInYearNumber ifcMonthInYearNumber = (IfcMonthInYearNumber) theEObject;
+			T result = caseIfcMonthInYearNumber(ifcMonthInYearNumber);
+			if (result == null)
+				result = caseWrappedValue(ifcMonthInYearNumber);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		case Ifc2x3Package.IFC_NUMERIC_MEASURE: {
 			IfcNumericMeasure ifcNumericMeasure = (IfcNumericMeasure) theEObject;
 			T result = caseIfcNumericMeasure(ifcNumericMeasure);
@@ -913,6 +995,15 @@ public class Ifc2x3Switch<T> {
 				result = caseIfcDerivedMeasureValue(ifcPowerMeasure);
 			if (result == null)
 				result = caseIfcValue(ifcPowerMeasure);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Ifc2x3Package.IFC_PRESENTABLE_TEXT: {
+			IfcPresentableText ifcPresentableText = (IfcPresentableText) theEObject;
+			T result = caseIfcPresentableText(ifcPresentableText);
+			if (result == null)
+				result = caseWrappedValue(ifcPresentableText);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -1008,6 +1099,15 @@ public class Ifc2x3Switch<T> {
 				result = caseIfcDerivedMeasureValue(ifcRotationalStiffnessMeasure);
 			if (result == null)
 				result = caseIfcValue(ifcRotationalStiffnessMeasure);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Ifc2x3Package.IFC_SECOND_IN_MINUTE: {
+			IfcSecondInMinute ifcSecondInMinute = (IfcSecondInMinute) theEObject;
+			T result = caseIfcSecondInMinute(ifcSecondInMinute);
+			if (result == null)
+				result = caseWrappedValue(ifcSecondInMinute);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -1149,6 +1249,42 @@ public class Ifc2x3Switch<T> {
 				result = caseIfcSimpleValue(ifcText);
 			if (result == null)
 				result = caseIfcValue(ifcText);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Ifc2x3Package.IFC_TEXT_ALIGNMENT: {
+			IfcTextAlignment ifcTextAlignment = (IfcTextAlignment) theEObject;
+			T result = caseIfcTextAlignment(ifcTextAlignment);
+			if (result == null)
+				result = caseWrappedValue(ifcTextAlignment);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Ifc2x3Package.IFC_TEXT_DECORATION: {
+			IfcTextDecoration ifcTextDecoration = (IfcTextDecoration) theEObject;
+			T result = caseIfcTextDecoration(ifcTextDecoration);
+			if (result == null)
+				result = caseWrappedValue(ifcTextDecoration);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Ifc2x3Package.IFC_TEXT_FONT_NAME: {
+			IfcTextFontName ifcTextFontName = (IfcTextFontName) theEObject;
+			T result = caseIfcTextFontName(ifcTextFontName);
+			if (result == null)
+				result = caseWrappedValue(ifcTextFontName);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Ifc2x3Package.IFC_TEXT_TRANSFORMATION: {
+			IfcTextTransformation ifcTextTransformation = (IfcTextTransformation) theEObject;
+			T result = caseIfcTextTransformation(ifcTextTransformation);
+			if (result == null)
+				result = caseWrappedValue(ifcTextTransformation);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -1331,6 +1467,39 @@ public class Ifc2x3Switch<T> {
 				result = caseIfcDerivedMeasureValue(ifcWarpingMomentMeasure);
 			if (result == null)
 				result = caseIfcValue(ifcWarpingMomentMeasure);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Ifc2x3Package.IFC_YEAR_NUMBER: {
+			IfcYearNumber ifcYearNumber = (IfcYearNumber) theEObject;
+			T result = caseIfcYearNumber(ifcYearNumber);
+			if (result == null)
+				result = caseWrappedValue(ifcYearNumber);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Ifc2x3Package.IFC_BOX_ALIGNMENT: {
+			IfcBoxAlignment ifcBoxAlignment = (IfcBoxAlignment) theEObject;
+			T result = caseIfcBoxAlignment(ifcBoxAlignment);
+			if (result == null)
+				result = caseIfcLabel(ifcBoxAlignment);
+			if (result == null)
+				result = caseWrappedValue(ifcBoxAlignment);
+			if (result == null)
+				result = caseIfcConditionCriterionSelect(ifcBoxAlignment);
+			if (result == null)
+				result = caseIfcSimpleValue(ifcBoxAlignment);
+			if (result == null)
+				result = caseIfcValue(ifcBoxAlignment);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Ifc2x3Package.IFC_COMPOUND_PLANE_ANGLE_MEASURE: {
+			IfcCompoundPlaneAngleMeasure ifcCompoundPlaneAngleMeasure = (IfcCompoundPlaneAngleMeasure) theEObject;
+			T result = caseIfcCompoundPlaneAngleMeasure(ifcCompoundPlaneAngleMeasure);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -11614,6 +11783,36 @@ public class Ifc2x3Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Ifc Day In Month Number</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Ifc Day In Month Number</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIfcDayInMonthNumber(IfcDayInMonthNumber object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Ifc Daylight Saving Hour</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Ifc Daylight Saving Hour</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIfcDaylightSavingHour(IfcDaylightSavingHour object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Ifc Descriptive Measure</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -11625,6 +11824,21 @@ public class Ifc2x3Switch<T> {
 	 * @generated
 	 */
 	public T caseIfcDescriptiveMeasure(IfcDescriptiveMeasure object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Ifc Dimension Count</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Ifc Dimension Count</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIfcDimensionCount(IfcDimensionCount object) {
 		return null;
 	}
 
@@ -11764,6 +11978,51 @@ public class Ifc2x3Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Ifc Font Style</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Ifc Font Style</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIfcFontStyle(IfcFontStyle object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Ifc Font Variant</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Ifc Font Variant</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIfcFontVariant(IfcFontVariant object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Ifc Font Weight</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Ifc Font Weight</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIfcFontWeight(IfcFontWeight object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Ifc Force Measure</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -11835,6 +12094,21 @@ public class Ifc2x3Switch<T> {
 	 * @generated
 	 */
 	public T caseIfcHeatingValueMeasure(IfcHeatingValueMeasure object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Ifc Hour In Day</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Ifc Hour In Day</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIfcHourInDay(IfcHourInDay object) {
 		return null;
 	}
 
@@ -12199,6 +12473,21 @@ public class Ifc2x3Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Ifc Minute In Hour</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Ifc Minute In Hour</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIfcMinuteInHour(IfcMinuteInHour object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Ifc Modulus Of Elasticity Measure</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -12319,6 +12608,21 @@ public class Ifc2x3Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Ifc Month In Year Number</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Ifc Month In Year Number</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIfcMonthInYearNumber(IfcMonthInYearNumber object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Ifc Numeric Measure</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -12405,6 +12709,21 @@ public class Ifc2x3Switch<T> {
 	 * @generated
 	 */
 	public T caseIfcPowerMeasure(IfcPowerMeasure object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Ifc Presentable Text</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Ifc Presentable Text</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIfcPresentableText(IfcPresentableText object) {
 		return null;
 	}
 
@@ -12510,6 +12829,21 @@ public class Ifc2x3Switch<T> {
 	 * @generated
 	 */
 	public T caseIfcRotationalStiffnessMeasure(IfcRotationalStiffnessMeasure object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Ifc Second In Minute</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Ifc Second In Minute</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIfcSecondInMinute(IfcSecondInMinute object) {
 		return null;
 	}
 
@@ -12675,6 +13009,66 @@ public class Ifc2x3Switch<T> {
 	 * @generated
 	 */
 	public T caseIfcText(IfcText object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Ifc Text Alignment</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Ifc Text Alignment</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIfcTextAlignment(IfcTextAlignment object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Ifc Text Decoration</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Ifc Text Decoration</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIfcTextDecoration(IfcTextDecoration object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Ifc Text Font Name</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Ifc Text Font Name</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIfcTextFontName(IfcTextFontName object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Ifc Text Transformation</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Ifc Text Transformation</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIfcTextTransformation(IfcTextTransformation object) {
 		return null;
 	}
 
@@ -12885,6 +13279,51 @@ public class Ifc2x3Switch<T> {
 	 * @generated
 	 */
 	public T caseIfcWarpingMomentMeasure(IfcWarpingMomentMeasure object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Ifc Year Number</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Ifc Year Number</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIfcYearNumber(IfcYearNumber object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Ifc Box Alignment</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Ifc Box Alignment</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIfcBoxAlignment(IfcBoxAlignment object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Ifc Compound Plane Angle Measure</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Ifc Compound Plane Angle Measure</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIfcCompoundPlaneAngleMeasure(IfcCompoundPlaneAngleMeasure object) {
 		return null;
 	}
 

@@ -31,7 +31,6 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacementDistortion#getDistortion <em>Distortion</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacementDistortion#getDistortionAsString <em>Distortion As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -41,109 +40,56 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcStructuralLoadSingleDisplacementDistortion extends IfcStructuralLoadSingleDisplacement {
 	/**
-	 * Returns the value of the '<em><b>Distortion</b></em>' attribute.
+	 * Returns the value of the '<em><b>Distortion</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Distortion</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Distortion</em>' attribute.
+	 * @return the value of the '<em>Distortion</em>' reference.
 	 * @see #isSetDistortion()
 	 * @see #unsetDistortion()
-	 * @see #setDistortion(float)
+	 * @see #setDistortion(IfcCurvatureMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoadSingleDisplacementDistortion_Distortion()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getDistortion();
+	IfcCurvatureMeasure getDistortion();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacementDistortion#getDistortion <em>Distortion</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacementDistortion#getDistortion <em>Distortion</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Distortion</em>' attribute.
+	 * @param value the new value of the '<em>Distortion</em>' reference.
 	 * @see #isSetDistortion()
 	 * @see #unsetDistortion()
 	 * @see #getDistortion()
 	 * @generated
 	 */
-	void setDistortion(float value);
+	void setDistortion(IfcCurvatureMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacementDistortion#getDistortion <em>Distortion</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacementDistortion#getDistortion <em>Distortion</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetDistortion()
 	 * @see #getDistortion()
-	 * @see #setDistortion(float)
+	 * @see #setDistortion(IfcCurvatureMeasure)
 	 * @generated
 	 */
 	void unsetDistortion();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacementDistortion#getDistortion <em>Distortion</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacementDistortion#getDistortion <em>Distortion</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Distortion</em>' attribute is set.
+	 * @return whether the value of the '<em>Distortion</em>' reference is set.
 	 * @see #unsetDistortion()
 	 * @see #getDistortion()
-	 * @see #setDistortion(float)
+	 * @see #setDistortion(IfcCurvatureMeasure)
 	 * @generated
 	 */
 	boolean isSetDistortion();
-
-	/**
-	 * Returns the value of the '<em><b>Distortion As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Distortion As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Distortion As String</em>' attribute.
-	 * @see #isSetDistortionAsString()
-	 * @see #unsetDistortionAsString()
-	 * @see #setDistortionAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoadSingleDisplacementDistortion_DistortionAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getDistortionAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacementDistortion#getDistortionAsString <em>Distortion As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Distortion As String</em>' attribute.
-	 * @see #isSetDistortionAsString()
-	 * @see #unsetDistortionAsString()
-	 * @see #getDistortionAsString()
-	 * @generated
-	 */
-	void setDistortionAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacementDistortion#getDistortionAsString <em>Distortion As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetDistortionAsString()
-	 * @see #getDistortionAsString()
-	 * @see #setDistortionAsString(String)
-	 * @generated
-	 */
-	void unsetDistortionAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacementDistortion#getDistortionAsString <em>Distortion As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Distortion As String</em>' attribute is set.
-	 * @see #unsetDistortionAsString()
-	 * @see #getDistortionAsString()
-	 * @see #setDistortionAsString(String)
-	 * @generated
-	 */
-	boolean isSetDistortionAsString();
 
 } // IfcStructuralLoadSingleDisplacementDistortion

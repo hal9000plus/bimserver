@@ -20,16 +20,13 @@ package org.bimserver;
  * long with Bimserver.org . If not, see <http://www.gnu.org/licenses/>.
  *****************************************************************************/
 
-import java.util.Random;
-
-import org.eclipse.jetty.server.bio.SocketConnector;
-import org.eclipse.jetty.server.session.HashSessionIdManager;
-import org.eclipse.jetty.webapp.WebAppContext;
+import org.mortbay.jetty.bio.SocketConnector;
+import org.mortbay.jetty.webapp.WebAppContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class Server {
-	private org.eclipse.jetty.server.Server server;
+	private org.mortbay.jetty.Server server;
 	private static final Logger LOGGER = LoggerFactory.getLogger(Server.class);
 
 	public static void main(String[] args) {
@@ -43,10 +40,13 @@ public class Server {
 			}
 		}
 		final Server server = new Server();
-		server.start(address, Integer.parseInt(port));
-		// The CommandLine seems to disrupt the database initialisation proces
-		CommandLine commandLine = new CommandLine(server);
-		commandLine.start();
+		Runtime.getRuntime().addShutdownHook(new Thread(){
+			@Override
+			public void run() {
+				server.stop();
+			}
+		});
+		server.start(address, port);
 	}
 
 	protected void stop() {
@@ -59,26 +59,25 @@ public class Server {
 		LOGGER.info("Server stopped succesfully");
 	}
 
-	public void start(String address, int port) {
-		LOGGER.info("Starting server..." + address + " " + port);
+	private void start(String address, String port) {
+		LOGGER.info("Starting server...");
 		System.setProperty("org.apache.cxf.Logger", "org.apache.cxf.common.logging.Log4jLogger");
-		server = new org.eclipse.jetty.server.Server();
-		server.setSessionIdManager(new HashSessionIdManager(new Random()));
+		server = new org.mortbay.jetty.Server();
 		SocketConnector socketConnector = new SocketConnector();
-		socketConnector.setPort(port);
+		socketConnector.setPort(Integer.parseInt(port));
 		socketConnector.setHost(address);
 		server.addConnector(socketConnector);
 
-		WebAppContext context = new WebAppContext(server, "", "/");
+		WebAppContext context = new WebAppContext(server, "", "/bimserver");
 		context.setResourceBase("www");
-
+		
+		WebAppContext root = new WebAppContext(server, "", "/");
+		root.setResourceBase("root");
 		try {
-			LOGGER.info("Starting web server...");
 			server.start();
-			LOGGER.info("Webserver succesfully started");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		LOGGER.info("Server started succesfully, click on the \"launch webbrowser\" button, or go to: http://" + address + ":" + port);
+		LOGGER.info("Server started succesfully");
 	}
 }

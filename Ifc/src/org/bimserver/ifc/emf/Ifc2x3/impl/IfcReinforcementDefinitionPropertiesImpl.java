@@ -23,9 +23,12 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
 import org.bimserver.ifc.emf.Ifc2x3.IfcReinforcementDefinitionProperties;
 import org.bimserver.ifc.emf.Ifc2x3.IfcSectionReinforcementProperties;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -67,8 +70,8 @@ public class IfcReinforcementDefinitionPropertiesImpl extends IfcPropertySetDefi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getDefinitionType() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcReinforcementDefinitionProperties_DefinitionType(), true);
+	public IfcLabel getDefinitionType() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcReinforcementDefinitionProperties_DefinitionType(), true);
 	}
 
 	/**
@@ -76,7 +79,7 @@ public class IfcReinforcementDefinitionPropertiesImpl extends IfcPropertySetDefi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDefinitionType(String newDefinitionType) {
+	public void setDefinitionType(IfcLabel newDefinitionType) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcReinforcementDefinitionProperties_DefinitionType(), newDefinitionType);
 	}
 

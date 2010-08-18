@@ -22,6 +22,8 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3;
 
+import org.eclipse.emf.common.util.EList;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Ifc Cartesian Transformation Operator3 D</b></em>'.
@@ -31,6 +33,7 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcCartesianTransformationOperator3D#getAxis3 <em>Axis3</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcCartesianTransformationOperator3D#getU <em>U</em>}</li>
  * </ul>
  * </p>
  *
@@ -91,5 +94,22 @@ public interface IfcCartesianTransformationOperator3D extends IfcCartesianTransf
 	 * @generated
 	 */
 	boolean isSetAxis3();
+
+	/**
+	 * Returns the value of the '<em><b>U</b></em>' reference list.
+	 * The list contents are of type {@link org.bimserver.ifc.emf.Ifc2x3.IfcDirection}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>U</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>U</em>' reference list.
+	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcCartesianTransformationOperator3D_U()
+	 * @model transient="true" volatile="true" derived="true"
+	 *        annotation="http://www.iso.org/iso10303-11/EXPRESS code=' IfcBaseAxis(3,SELF\\IfcCartesianTransformationOperator.Axis1,              SELF\\IfcCartesianTransformationOperator.Axis2,Axis3);'"
+	 * @generated
+	 */
+	EList<IfcDirection> getU();
 
 } // IfcCartesianTransformationOperator3D

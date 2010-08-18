@@ -25,11 +25,15 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcActionSourceTypeEnum;
 import org.bimserver.ifc.emf.Ifc2x3.IfcActionTypeEnum;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
 import org.bimserver.ifc.emf.Ifc2x3.IfcLoadGroupTypeEnum;
+import org.bimserver.ifc.emf.Ifc2x3.IfcPositiveRatioMeasure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcStructuralAnalysisModel;
 import org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadGroup;
 import org.bimserver.ifc.emf.Ifc2x3.IfcStructuralResultGroup;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -43,7 +47,6 @@ import org.eclipse.emf.ecore.EClass;
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcStructuralLoadGroupImpl#getActionType <em>Action Type</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcStructuralLoadGroupImpl#getActionSource <em>Action Source</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcStructuralLoadGroupImpl#getCoefficient <em>Coefficient</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcStructuralLoadGroupImpl#getCoefficientAsString <em>Coefficient As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcStructuralLoadGroupImpl#getPurpose <em>Purpose</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcStructuralLoadGroupImpl#getSourceOfResultGroup <em>Source Of Result Group</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcStructuralLoadGroupImpl#getLoadGroupFor <em>Load Group For</em>}</li>
@@ -131,8 +134,8 @@ public class IfcStructuralLoadGroupImpl extends IfcGroupImpl implements IfcStruc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getCoefficient() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadGroup_Coefficient(), true);
+	public IfcPositiveRatioMeasure getCoefficient() {
+		return (IfcPositiveRatioMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadGroup_Coefficient(), true);
 	}
 
 	/**
@@ -140,7 +143,7 @@ public class IfcStructuralLoadGroupImpl extends IfcGroupImpl implements IfcStruc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCoefficient(float newCoefficient) {
+	public void setCoefficient(IfcPositiveRatioMeasure newCoefficient) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadGroup_Coefficient(), newCoefficient);
 	}
 
@@ -167,8 +170,8 @@ public class IfcStructuralLoadGroupImpl extends IfcGroupImpl implements IfcStruc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getCoefficientAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadGroup_CoefficientAsString(), true);
+	public IfcLabel getPurpose() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadGroup_Purpose(), true);
 	}
 
 	/**
@@ -176,43 +179,7 @@ public class IfcStructuralLoadGroupImpl extends IfcGroupImpl implements IfcStruc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCoefficientAsString(String newCoefficientAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadGroup_CoefficientAsString(), newCoefficientAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetCoefficientAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadGroup_CoefficientAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetCoefficientAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadGroup_CoefficientAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getPurpose() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadGroup_Purpose(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPurpose(String newPurpose) {
+	public void setPurpose(IfcLabel newPurpose) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadGroup_Purpose(), newPurpose);
 	}
 

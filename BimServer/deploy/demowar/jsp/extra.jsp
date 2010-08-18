@@ -2,10 +2,12 @@
 <%
 	if (loginManager.getService().getCurrentUser().getUsername().contains("@")) {
 %>
-<div class="info">
-Think this userinterface is bad?<br/>
-We think so too... Please donate so we can improve it!<br/>
-Get info on sponsor packages on <a href="mailto:info@bimserver.org">info@bimserver.org</a>
+<div>
+Tell a friend<br/>
+<form action="tellafriend.jsp" method="post">
+<label for="email">E-mail address</label> <input id="email" type="text" name="email"/>
+<input type="submit" value="Send"/>
+</form>
 </div>
 <%
 }

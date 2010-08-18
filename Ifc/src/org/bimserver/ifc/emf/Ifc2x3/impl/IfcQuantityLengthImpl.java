@@ -23,7 +23,9 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLengthMeasure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcQuantityLength;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -34,7 +36,6 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcQuantityLengthImpl#getLengthValue <em>Length Value</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcQuantityLengthImpl#getLengthValueAsString <em>Length Value As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -65,8 +66,8 @@ public class IfcQuantityLengthImpl extends IfcPhysicalSimpleQuantityImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getLengthValue() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcQuantityLength_LengthValue(), true);
+	public IfcLengthMeasure getLengthValue() {
+		return (IfcLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcQuantityLength_LengthValue(), true);
 	}
 
 	/**
@@ -74,26 +75,8 @@ public class IfcQuantityLengthImpl extends IfcPhysicalSimpleQuantityImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLengthValue(float newLengthValue) {
+	public void setLengthValue(IfcLengthMeasure newLengthValue) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcQuantityLength_LengthValue(), newLengthValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getLengthValueAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcQuantityLength_LengthValueAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setLengthValueAsString(String newLengthValueAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcQuantityLength_LengthValueAsString(), newLengthValueAsString);
 	}
 
 } //IfcQuantityLengthImpl

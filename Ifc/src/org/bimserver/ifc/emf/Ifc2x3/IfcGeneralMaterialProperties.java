@@ -31,11 +31,8 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeneralMaterialProperties#getMolecularWeight <em>Molecular Weight</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeneralMaterialProperties#getMolecularWeightAsString <em>Molecular Weight As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeneralMaterialProperties#getPorosity <em>Porosity</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeneralMaterialProperties#getPorosityAsString <em>Porosity As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeneralMaterialProperties#getMassDensity <em>Mass Density</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeneralMaterialProperties#getMassDensityAsString <em>Mass Density As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -45,321 +42,162 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcGeneralMaterialProperties extends IfcMaterialProperties {
 	/**
-	 * Returns the value of the '<em><b>Molecular Weight</b></em>' attribute.
+	 * Returns the value of the '<em><b>Molecular Weight</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Molecular Weight</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Molecular Weight</em>' attribute.
+	 * @return the value of the '<em>Molecular Weight</em>' reference.
 	 * @see #isSetMolecularWeight()
 	 * @see #unsetMolecularWeight()
-	 * @see #setMolecularWeight(float)
+	 * @see #setMolecularWeight(IfcMolecularWeightMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcGeneralMaterialProperties_MolecularWeight()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getMolecularWeight();
+	IfcMolecularWeightMeasure getMolecularWeight();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeneralMaterialProperties#getMolecularWeight <em>Molecular Weight</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeneralMaterialProperties#getMolecularWeight <em>Molecular Weight</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Molecular Weight</em>' attribute.
+	 * @param value the new value of the '<em>Molecular Weight</em>' reference.
 	 * @see #isSetMolecularWeight()
 	 * @see #unsetMolecularWeight()
 	 * @see #getMolecularWeight()
 	 * @generated
 	 */
-	void setMolecularWeight(float value);
+	void setMolecularWeight(IfcMolecularWeightMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeneralMaterialProperties#getMolecularWeight <em>Molecular Weight</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeneralMaterialProperties#getMolecularWeight <em>Molecular Weight</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetMolecularWeight()
 	 * @see #getMolecularWeight()
-	 * @see #setMolecularWeight(float)
+	 * @see #setMolecularWeight(IfcMolecularWeightMeasure)
 	 * @generated
 	 */
 	void unsetMolecularWeight();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeneralMaterialProperties#getMolecularWeight <em>Molecular Weight</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeneralMaterialProperties#getMolecularWeight <em>Molecular Weight</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Molecular Weight</em>' attribute is set.
+	 * @return whether the value of the '<em>Molecular Weight</em>' reference is set.
 	 * @see #unsetMolecularWeight()
 	 * @see #getMolecularWeight()
-	 * @see #setMolecularWeight(float)
+	 * @see #setMolecularWeight(IfcMolecularWeightMeasure)
 	 * @generated
 	 */
 	boolean isSetMolecularWeight();
 
 	/**
-	 * Returns the value of the '<em><b>Molecular Weight As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Molecular Weight As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Molecular Weight As String</em>' attribute.
-	 * @see #isSetMolecularWeightAsString()
-	 * @see #unsetMolecularWeightAsString()
-	 * @see #setMolecularWeightAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcGeneralMaterialProperties_MolecularWeightAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getMolecularWeightAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeneralMaterialProperties#getMolecularWeightAsString <em>Molecular Weight As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Molecular Weight As String</em>' attribute.
-	 * @see #isSetMolecularWeightAsString()
-	 * @see #unsetMolecularWeightAsString()
-	 * @see #getMolecularWeightAsString()
-	 * @generated
-	 */
-	void setMolecularWeightAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeneralMaterialProperties#getMolecularWeightAsString <em>Molecular Weight As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetMolecularWeightAsString()
-	 * @see #getMolecularWeightAsString()
-	 * @see #setMolecularWeightAsString(String)
-	 * @generated
-	 */
-	void unsetMolecularWeightAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeneralMaterialProperties#getMolecularWeightAsString <em>Molecular Weight As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Molecular Weight As String</em>' attribute is set.
-	 * @see #unsetMolecularWeightAsString()
-	 * @see #getMolecularWeightAsString()
-	 * @see #setMolecularWeightAsString(String)
-	 * @generated
-	 */
-	boolean isSetMolecularWeightAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Porosity</b></em>' attribute.
+	 * Returns the value of the '<em><b>Porosity</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Porosity</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Porosity</em>' attribute.
+	 * @return the value of the '<em>Porosity</em>' reference.
 	 * @see #isSetPorosity()
 	 * @see #unsetPorosity()
-	 * @see #setPorosity(float)
+	 * @see #setPorosity(IfcNormalisedRatioMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcGeneralMaterialProperties_Porosity()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getPorosity();
+	IfcNormalisedRatioMeasure getPorosity();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeneralMaterialProperties#getPorosity <em>Porosity</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeneralMaterialProperties#getPorosity <em>Porosity</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Porosity</em>' attribute.
+	 * @param value the new value of the '<em>Porosity</em>' reference.
 	 * @see #isSetPorosity()
 	 * @see #unsetPorosity()
 	 * @see #getPorosity()
 	 * @generated
 	 */
-	void setPorosity(float value);
+	void setPorosity(IfcNormalisedRatioMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeneralMaterialProperties#getPorosity <em>Porosity</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeneralMaterialProperties#getPorosity <em>Porosity</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetPorosity()
 	 * @see #getPorosity()
-	 * @see #setPorosity(float)
+	 * @see #setPorosity(IfcNormalisedRatioMeasure)
 	 * @generated
 	 */
 	void unsetPorosity();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeneralMaterialProperties#getPorosity <em>Porosity</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeneralMaterialProperties#getPorosity <em>Porosity</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Porosity</em>' attribute is set.
+	 * @return whether the value of the '<em>Porosity</em>' reference is set.
 	 * @see #unsetPorosity()
 	 * @see #getPorosity()
-	 * @see #setPorosity(float)
+	 * @see #setPorosity(IfcNormalisedRatioMeasure)
 	 * @generated
 	 */
 	boolean isSetPorosity();
 
 	/**
-	 * Returns the value of the '<em><b>Porosity As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Porosity As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Porosity As String</em>' attribute.
-	 * @see #isSetPorosityAsString()
-	 * @see #unsetPorosityAsString()
-	 * @see #setPorosityAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcGeneralMaterialProperties_PorosityAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getPorosityAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeneralMaterialProperties#getPorosityAsString <em>Porosity As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Porosity As String</em>' attribute.
-	 * @see #isSetPorosityAsString()
-	 * @see #unsetPorosityAsString()
-	 * @see #getPorosityAsString()
-	 * @generated
-	 */
-	void setPorosityAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeneralMaterialProperties#getPorosityAsString <em>Porosity As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetPorosityAsString()
-	 * @see #getPorosityAsString()
-	 * @see #setPorosityAsString(String)
-	 * @generated
-	 */
-	void unsetPorosityAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeneralMaterialProperties#getPorosityAsString <em>Porosity As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Porosity As String</em>' attribute is set.
-	 * @see #unsetPorosityAsString()
-	 * @see #getPorosityAsString()
-	 * @see #setPorosityAsString(String)
-	 * @generated
-	 */
-	boolean isSetPorosityAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Mass Density</b></em>' attribute.
+	 * Returns the value of the '<em><b>Mass Density</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Mass Density</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Mass Density</em>' attribute.
+	 * @return the value of the '<em>Mass Density</em>' reference.
 	 * @see #isSetMassDensity()
 	 * @see #unsetMassDensity()
-	 * @see #setMassDensity(float)
+	 * @see #setMassDensity(IfcMassDensityMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcGeneralMaterialProperties_MassDensity()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getMassDensity();
+	IfcMassDensityMeasure getMassDensity();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeneralMaterialProperties#getMassDensity <em>Mass Density</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeneralMaterialProperties#getMassDensity <em>Mass Density</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Mass Density</em>' attribute.
+	 * @param value the new value of the '<em>Mass Density</em>' reference.
 	 * @see #isSetMassDensity()
 	 * @see #unsetMassDensity()
 	 * @see #getMassDensity()
 	 * @generated
 	 */
-	void setMassDensity(float value);
+	void setMassDensity(IfcMassDensityMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeneralMaterialProperties#getMassDensity <em>Mass Density</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeneralMaterialProperties#getMassDensity <em>Mass Density</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetMassDensity()
 	 * @see #getMassDensity()
-	 * @see #setMassDensity(float)
+	 * @see #setMassDensity(IfcMassDensityMeasure)
 	 * @generated
 	 */
 	void unsetMassDensity();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeneralMaterialProperties#getMassDensity <em>Mass Density</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeneralMaterialProperties#getMassDensity <em>Mass Density</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Mass Density</em>' attribute is set.
+	 * @return whether the value of the '<em>Mass Density</em>' reference is set.
 	 * @see #unsetMassDensity()
 	 * @see #getMassDensity()
-	 * @see #setMassDensity(float)
+	 * @see #setMassDensity(IfcMassDensityMeasure)
 	 * @generated
 	 */
 	boolean isSetMassDensity();
-
-	/**
-	 * Returns the value of the '<em><b>Mass Density As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Mass Density As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Mass Density As String</em>' attribute.
-	 * @see #isSetMassDensityAsString()
-	 * @see #unsetMassDensityAsString()
-	 * @see #setMassDensityAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcGeneralMaterialProperties_MassDensityAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getMassDensityAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeneralMaterialProperties#getMassDensityAsString <em>Mass Density As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Mass Density As String</em>' attribute.
-	 * @see #isSetMassDensityAsString()
-	 * @see #unsetMassDensityAsString()
-	 * @see #getMassDensityAsString()
-	 * @generated
-	 */
-	void setMassDensityAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeneralMaterialProperties#getMassDensityAsString <em>Mass Density As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetMassDensityAsString()
-	 * @see #getMassDensityAsString()
-	 * @see #setMassDensityAsString(String)
-	 * @generated
-	 */
-	void unsetMassDensityAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeneralMaterialProperties#getMassDensityAsString <em>Mass Density As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Mass Density As String</em>' attribute is set.
-	 * @see #unsetMassDensityAsString()
-	 * @see #getMassDensityAsString()
-	 * @see #setMassDensityAsString(String)
-	 * @generated
-	 */
-	boolean isSetMassDensityAsString();
 
 } // IfcGeneralMaterialProperties

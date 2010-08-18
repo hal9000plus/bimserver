@@ -44,20 +44,17 @@ public class HasReferenceToCondition extends Condition {
 
 	@Override
 	public boolean matches(EObject object) {
-		if (object.eClass().isSuperTypeOf(reference.getEContainingClass())) {
-			Object other = object.eGet(reference);
-			if (other instanceof EList<?>) {
-				EList<?> list = (EList<?>)other;
-				for (Object eObject : list) {
-					if (eObject == referencingObject) {
-						return true;
-					}
+		Object other = object.eGet(reference);
+		if (other instanceof EList<?>) {
+			EList<?> list = (EList<?>)other;
+			for (Object eObject : list) {
+				if (eObject == referencingObject) {
+					return true;
 				}
-				return false;
-			} else {
-				return other == referencingObject;
 			}
+			return false;
+		} else {
+			return other == referencingObject;
 		}
-		return false;
 	}
 }

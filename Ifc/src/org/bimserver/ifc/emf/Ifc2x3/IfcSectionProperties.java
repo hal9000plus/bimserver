@@ -22,7 +22,7 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3;
 
-import org.bimserver.emf.IdEObject;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -40,10 +40,9 @@ import org.bimserver.emf.IdEObject;
  *
  * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSectionProperties()
  * @model
- * @extends IdEObject
  * @generated
  */
-public interface IfcSectionProperties extends IdEObject {
+public interface IfcSectionProperties extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Section Type</b></em>' attribute.
 	 * The literals are from the enumeration {@link org.bimserver.ifc.emf.Ifc2x3.IfcSectionTypeEnum}.

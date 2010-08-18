@@ -25,7 +25,10 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcMove;
 import org.bimserver.ifc.emf.Ifc2x3.IfcSpatialStructureElement;
+import org.bimserver.ifc.emf.Ifc2x3.IfcText;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -105,8 +108,8 @@ public class IfcMoveImpl extends IfcTaskImpl implements IfcMove {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<String> getPunchList() {
-		return (EList<String>) eGet(Ifc2x3Package.eINSTANCE.getIfcMove_PunchList(), true);
+	public EList<IfcText> getPunchList() {
+		return (EList<IfcText>) eGet(Ifc2x3Package.eINSTANCE.getIfcMove_PunchList(), true);
 	}
 
 	/**

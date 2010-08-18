@@ -33,9 +33,7 @@ package org.bimserver.ifc.emf.Ifc2x3;
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourceGoniometric#getPosition <em>Position</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourceGoniometric#getColourAppearance <em>Colour Appearance</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourceGoniometric#getColourTemperature <em>Colour Temperature</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourceGoniometric#getColourTemperatureAsString <em>Colour Temperature As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourceGoniometric#getLuminousFlux <em>Luminous Flux</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourceGoniometric#getLuminousFluxAsString <em>Luminous Flux As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourceGoniometric#getLightEmissionSource <em>Light Emission Source</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourceGoniometric#getLightDistributionDataSource <em>Light Distribution Data Source</em>}</li>
  * </ul>
@@ -126,108 +124,56 @@ public interface IfcLightSourceGoniometric extends IfcLightSource {
 	boolean isSetColourAppearance();
 
 	/**
-	 * Returns the value of the '<em><b>Colour Temperature</b></em>' attribute.
+	 * Returns the value of the '<em><b>Colour Temperature</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Colour Temperature</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Colour Temperature</em>' attribute.
-	 * @see #setColourTemperature(float)
+	 * @return the value of the '<em>Colour Temperature</em>' reference.
+	 * @see #setColourTemperature(IfcThermodynamicTemperatureMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcLightSourceGoniometric_ColourTemperature()
 	 * @model
 	 * @generated
 	 */
-	float getColourTemperature();
+	IfcThermodynamicTemperatureMeasure getColourTemperature();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourceGoniometric#getColourTemperature <em>Colour Temperature</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourceGoniometric#getColourTemperature <em>Colour Temperature</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Colour Temperature</em>' attribute.
+	 * @param value the new value of the '<em>Colour Temperature</em>' reference.
 	 * @see #getColourTemperature()
 	 * @generated
 	 */
-	void setColourTemperature(float value);
+	void setColourTemperature(IfcThermodynamicTemperatureMeasure value);
 
 	/**
-	 * Returns the value of the '<em><b>Colour Temperature As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Colour Temperature As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Colour Temperature As String</em>' attribute.
-	 * @see #setColourTemperatureAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcLightSourceGoniometric_ColourTemperatureAsString()
-	 * @model
-	 * @generated
-	 */
-	String getColourTemperatureAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourceGoniometric#getColourTemperatureAsString <em>Colour Temperature As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Colour Temperature As String</em>' attribute.
-	 * @see #getColourTemperatureAsString()
-	 * @generated
-	 */
-	void setColourTemperatureAsString(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Luminous Flux</b></em>' attribute.
+	 * Returns the value of the '<em><b>Luminous Flux</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Luminous Flux</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Luminous Flux</em>' attribute.
-	 * @see #setLuminousFlux(float)
+	 * @return the value of the '<em>Luminous Flux</em>' reference.
+	 * @see #setLuminousFlux(IfcLuminousFluxMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcLightSourceGoniometric_LuminousFlux()
 	 * @model
 	 * @generated
 	 */
-	float getLuminousFlux();
+	IfcLuminousFluxMeasure getLuminousFlux();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourceGoniometric#getLuminousFlux <em>Luminous Flux</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourceGoniometric#getLuminousFlux <em>Luminous Flux</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Luminous Flux</em>' attribute.
+	 * @param value the new value of the '<em>Luminous Flux</em>' reference.
 	 * @see #getLuminousFlux()
 	 * @generated
 	 */
-	void setLuminousFlux(float value);
-
-	/**
-	 * Returns the value of the '<em><b>Luminous Flux As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Luminous Flux As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Luminous Flux As String</em>' attribute.
-	 * @see #setLuminousFluxAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcLightSourceGoniometric_LuminousFluxAsString()
-	 * @model
-	 * @generated
-	 */
-	String getLuminousFluxAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourceGoniometric#getLuminousFluxAsString <em>Luminous Flux As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Luminous Flux As String</em>' attribute.
-	 * @see #getLuminousFluxAsString()
-	 * @generated
-	 */
-	void setLuminousFluxAsString(String value);
+	void setLuminousFlux(IfcLuminousFluxMeasure value);
 
 	/**
 	 * Returns the value of the '<em><b>Light Emission Source</b></em>' attribute.

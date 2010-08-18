@@ -23,7 +23,9 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLengthMeasure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcSlippageConnectionCondition;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -34,11 +36,8 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSlippageConnectionConditionImpl#getSlippageX <em>Slippage X</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSlippageConnectionConditionImpl#getSlippageXAsString <em>Slippage XAs String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSlippageConnectionConditionImpl#getSlippageY <em>Slippage Y</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSlippageConnectionConditionImpl#getSlippageYAsString <em>Slippage YAs String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSlippageConnectionConditionImpl#getSlippageZ <em>Slippage Z</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSlippageConnectionConditionImpl#getSlippageZAsString <em>Slippage ZAs String</em>}</li>
  * </ul>
  * </p>
  *
@@ -69,8 +68,8 @@ public class IfcSlippageConnectionConditionImpl extends IfcStructuralConnectionC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getSlippageX() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcSlippageConnectionCondition_SlippageX(), true);
+	public IfcLengthMeasure getSlippageX() {
+		return (IfcLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcSlippageConnectionCondition_SlippageX(), true);
 	}
 
 	/**
@@ -78,7 +77,7 @@ public class IfcSlippageConnectionConditionImpl extends IfcStructuralConnectionC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSlippageX(float newSlippageX) {
+	public void setSlippageX(IfcLengthMeasure newSlippageX) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcSlippageConnectionCondition_SlippageX(), newSlippageX);
 	}
 
@@ -105,8 +104,8 @@ public class IfcSlippageConnectionConditionImpl extends IfcStructuralConnectionC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getSlippageXAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcSlippageConnectionCondition_SlippageXAsString(), true);
+	public IfcLengthMeasure getSlippageY() {
+		return (IfcLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcSlippageConnectionCondition_SlippageY(), true);
 	}
 
 	/**
@@ -114,43 +113,7 @@ public class IfcSlippageConnectionConditionImpl extends IfcStructuralConnectionC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSlippageXAsString(String newSlippageXAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcSlippageConnectionCondition_SlippageXAsString(), newSlippageXAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetSlippageXAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcSlippageConnectionCondition_SlippageXAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetSlippageXAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcSlippageConnectionCondition_SlippageXAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getSlippageY() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcSlippageConnectionCondition_SlippageY(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSlippageY(float newSlippageY) {
+	public void setSlippageY(IfcLengthMeasure newSlippageY) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcSlippageConnectionCondition_SlippageY(), newSlippageY);
 	}
 
@@ -177,8 +140,8 @@ public class IfcSlippageConnectionConditionImpl extends IfcStructuralConnectionC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getSlippageYAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcSlippageConnectionCondition_SlippageYAsString(), true);
+	public IfcLengthMeasure getSlippageZ() {
+		return (IfcLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcSlippageConnectionCondition_SlippageZ(), true);
 	}
 
 	/**
@@ -186,43 +149,7 @@ public class IfcSlippageConnectionConditionImpl extends IfcStructuralConnectionC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSlippageYAsString(String newSlippageYAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcSlippageConnectionCondition_SlippageYAsString(), newSlippageYAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetSlippageYAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcSlippageConnectionCondition_SlippageYAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetSlippageYAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcSlippageConnectionCondition_SlippageYAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getSlippageZ() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcSlippageConnectionCondition_SlippageZ(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSlippageZ(float newSlippageZ) {
+	public void setSlippageZ(IfcLengthMeasure newSlippageZ) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcSlippageConnectionCondition_SlippageZ(), newSlippageZ);
 	}
 
@@ -242,42 +169,6 @@ public class IfcSlippageConnectionConditionImpl extends IfcStructuralConnectionC
 	 */
 	public boolean isSetSlippageZ() {
 		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcSlippageConnectionCondition_SlippageZ());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getSlippageZAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcSlippageConnectionCondition_SlippageZAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSlippageZAsString(String newSlippageZAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcSlippageConnectionCondition_SlippageZAsString(), newSlippageZAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetSlippageZAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcSlippageConnectionCondition_SlippageZAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetSlippageZAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcSlippageConnectionCondition_SlippageZAsString());
 	}
 
 } //IfcSlippageConnectionConditionImpl

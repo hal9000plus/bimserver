@@ -6,9 +6,5 @@
 	<emailSenderAddress>no-reply@bimserver.org</emailSenderAddress>
 	<sendConfirmationEmailAfterRegistration>true</sendConfirmationEmailAfterRegistration>
 	<databaseLocation>/opt/databases/demo.bimserver.org</databaseLocation>
-	<enabledExportTypes>IFC, IFCXML, CITYGML, COLLADA, KML, KMZ</enabledExportTypes>
-	<allowSelfRegistration>true</allowSelfRegistration>
-	<autoTestClashes>false</autoTestClashes>
-	<useSecondEngineJvm>true</useSecondEngineJvm>
-	<intelligentMerging>true</intelligentMerging>
+	<enabledExportTypes>IFC, IFCXML, CITYGML, COLLADA, KMZ</enabledExportTypes>
 </settings>

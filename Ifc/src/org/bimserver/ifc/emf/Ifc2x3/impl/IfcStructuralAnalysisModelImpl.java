@@ -28,7 +28,9 @@ import org.bimserver.ifc.emf.Ifc2x3.IfcAxis2Placement3D;
 import org.bimserver.ifc.emf.Ifc2x3.IfcStructuralAnalysisModel;
 import org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadGroup;
 import org.bimserver.ifc.emf.Ifc2x3.IfcStructuralResultGroup;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

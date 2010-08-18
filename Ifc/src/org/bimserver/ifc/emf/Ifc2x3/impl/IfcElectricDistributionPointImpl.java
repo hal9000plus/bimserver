@@ -25,6 +25,8 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcElectricDistributionPoint;
 import org.bimserver.ifc.emf.Ifc2x3.IfcElectricDistributionPointFunctionEnum;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -84,8 +86,8 @@ public class IfcElectricDistributionPointImpl extends IfcFlowControllerImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getUserDefinedFunction() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcElectricDistributionPoint_UserDefinedFunction(), true);
+	public IfcLabel getUserDefinedFunction() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcElectricDistributionPoint_UserDefinedFunction(), true);
 	}
 
 	/**
@@ -93,7 +95,7 @@ public class IfcElectricDistributionPointImpl extends IfcFlowControllerImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUserDefinedFunction(String newUserDefinedFunction) {
+	public void setUserDefinedFunction(IfcLabel newUserDefinedFunction) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcElectricDistributionPoint_UserDefinedFunction(), newUserDefinedFunction);
 	}
 

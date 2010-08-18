@@ -68,58 +68,56 @@ public interface IfcHalfSpaceSolid extends IfcGeometricRepresentationItem, IfcBo
 	void setBaseSurface(IfcSurface value);
 
 	/**
-	 * Returns the value of the '<em><b>Agreement Flag</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.bimserver.ifc.emf.Ifc2x3.Tristate}.
+	 * Returns the value of the '<em><b>Agreement Flag</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Agreement Flag</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Agreement Flag</em>' attribute.
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Tristate
-	 * @see #setAgreementFlag(Tristate)
+	 * @return the value of the '<em>Agreement Flag</em>' reference.
+	 * @see #setAgreementFlag(IfcLogical)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcHalfSpaceSolid_AgreementFlag()
 	 * @model
 	 * @generated
 	 */
-	Tristate getAgreementFlag();
+	IfcLogical getAgreementFlag();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHalfSpaceSolid#getAgreementFlag <em>Agreement Flag</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHalfSpaceSolid#getAgreementFlag <em>Agreement Flag</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Agreement Flag</em>' attribute.
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Tristate
+	 * @param value the new value of the '<em>Agreement Flag</em>' reference.
 	 * @see #getAgreementFlag()
 	 * @generated
 	 */
-	void setAgreementFlag(Tristate value);
+	void setAgreementFlag(IfcLogical value);
 
 	/**
-	 * Returns the value of the '<em><b>Dim</b></em>' attribute.
+	 * Returns the value of the '<em><b>Dim</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Dim</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Dim</em>' attribute.
-	 * @see #setDim(int)
+	 * @return the value of the '<em>Dim</em>' reference.
+	 * @see #setDim(IfcDimensionCount)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcHalfSpaceSolid_Dim()
-	 * @model derived="true"
+	 * @model transient="true" volatile="true" derived="true"
+	 *        annotation="http://www.iso.org/iso10303-11/EXPRESS code=' 3;'"
 	 * @generated
 	 */
-	int getDim();
+	IfcDimensionCount getDim();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHalfSpaceSolid#getDim <em>Dim</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcHalfSpaceSolid#getDim <em>Dim</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Dim</em>' attribute.
+	 * @param value the new value of the '<em>Dim</em>' reference.
 	 * @see #getDim()
 	 * @generated
 	 */
-	void setDim(int value);
+	void setDim(IfcDimensionCount value);
 
 } // IfcHalfSpaceSolid

@@ -32,13 +32,9 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangularTrimmedSurface#getBasisSurface <em>Basis Surface</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangularTrimmedSurface#getU1 <em>U1</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangularTrimmedSurface#getU1AsString <em>U1 As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangularTrimmedSurface#getV1 <em>V1</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangularTrimmedSurface#getV1AsString <em>V1 As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangularTrimmedSurface#getU2 <em>U2</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangularTrimmedSurface#getU2AsString <em>U2 As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangularTrimmedSurface#getV2 <em>V2</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangularTrimmedSurface#getV2AsString <em>V2 As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangularTrimmedSurface#getUsense <em>Usense</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangularTrimmedSurface#getVsense <em>Vsense</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangularTrimmedSurface#getDim <em>Dim</em>}</li>
@@ -77,295 +73,186 @@ public interface IfcRectangularTrimmedSurface extends IfcBoundedSurface {
 	void setBasisSurface(IfcSurface value);
 
 	/**
-	 * Returns the value of the '<em><b>U1</b></em>' attribute.
+	 * Returns the value of the '<em><b>U1</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>U1</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>U1</em>' attribute.
-	 * @see #setU1(float)
+	 * @return the value of the '<em>U1</em>' reference.
+	 * @see #setU1(IfcParameterValue)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRectangularTrimmedSurface_U1()
 	 * @model
 	 * @generated
 	 */
-	float getU1();
+	IfcParameterValue getU1();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangularTrimmedSurface#getU1 <em>U1</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangularTrimmedSurface#getU1 <em>U1</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>U1</em>' attribute.
+	 * @param value the new value of the '<em>U1</em>' reference.
 	 * @see #getU1()
 	 * @generated
 	 */
-	void setU1(float value);
+	void setU1(IfcParameterValue value);
 
 	/**
-	 * Returns the value of the '<em><b>U1 As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>U1 As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>U1 As String</em>' attribute.
-	 * @see #setU1AsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRectangularTrimmedSurface_U1AsString()
-	 * @model
-	 * @generated
-	 */
-	String getU1AsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangularTrimmedSurface#getU1AsString <em>U1 As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>U1 As String</em>' attribute.
-	 * @see #getU1AsString()
-	 * @generated
-	 */
-	void setU1AsString(String value);
-
-	/**
-	 * Returns the value of the '<em><b>V1</b></em>' attribute.
+	 * Returns the value of the '<em><b>V1</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>V1</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>V1</em>' attribute.
-	 * @see #setV1(float)
+	 * @return the value of the '<em>V1</em>' reference.
+	 * @see #setV1(IfcParameterValue)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRectangularTrimmedSurface_V1()
 	 * @model
 	 * @generated
 	 */
-	float getV1();
+	IfcParameterValue getV1();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangularTrimmedSurface#getV1 <em>V1</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangularTrimmedSurface#getV1 <em>V1</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>V1</em>' attribute.
+	 * @param value the new value of the '<em>V1</em>' reference.
 	 * @see #getV1()
 	 * @generated
 	 */
-	void setV1(float value);
+	void setV1(IfcParameterValue value);
 
 	/**
-	 * Returns the value of the '<em><b>V1 As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>V1 As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>V1 As String</em>' attribute.
-	 * @see #setV1AsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRectangularTrimmedSurface_V1AsString()
-	 * @model
-	 * @generated
-	 */
-	String getV1AsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangularTrimmedSurface#getV1AsString <em>V1 As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>V1 As String</em>' attribute.
-	 * @see #getV1AsString()
-	 * @generated
-	 */
-	void setV1AsString(String value);
-
-	/**
-	 * Returns the value of the '<em><b>U2</b></em>' attribute.
+	 * Returns the value of the '<em><b>U2</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>U2</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>U2</em>' attribute.
-	 * @see #setU2(float)
+	 * @return the value of the '<em>U2</em>' reference.
+	 * @see #setU2(IfcParameterValue)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRectangularTrimmedSurface_U2()
 	 * @model
 	 * @generated
 	 */
-	float getU2();
+	IfcParameterValue getU2();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangularTrimmedSurface#getU2 <em>U2</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangularTrimmedSurface#getU2 <em>U2</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>U2</em>' attribute.
+	 * @param value the new value of the '<em>U2</em>' reference.
 	 * @see #getU2()
 	 * @generated
 	 */
-	void setU2(float value);
+	void setU2(IfcParameterValue value);
 
 	/**
-	 * Returns the value of the '<em><b>U2 As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>U2 As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>U2 As String</em>' attribute.
-	 * @see #setU2AsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRectangularTrimmedSurface_U2AsString()
-	 * @model
-	 * @generated
-	 */
-	String getU2AsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangularTrimmedSurface#getU2AsString <em>U2 As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>U2 As String</em>' attribute.
-	 * @see #getU2AsString()
-	 * @generated
-	 */
-	void setU2AsString(String value);
-
-	/**
-	 * Returns the value of the '<em><b>V2</b></em>' attribute.
+	 * Returns the value of the '<em><b>V2</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>V2</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>V2</em>' attribute.
-	 * @see #setV2(float)
+	 * @return the value of the '<em>V2</em>' reference.
+	 * @see #setV2(IfcParameterValue)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRectangularTrimmedSurface_V2()
 	 * @model
 	 * @generated
 	 */
-	float getV2();
+	IfcParameterValue getV2();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangularTrimmedSurface#getV2 <em>V2</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangularTrimmedSurface#getV2 <em>V2</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>V2</em>' attribute.
+	 * @param value the new value of the '<em>V2</em>' reference.
 	 * @see #getV2()
 	 * @generated
 	 */
-	void setV2(float value);
+	void setV2(IfcParameterValue value);
 
 	/**
-	 * Returns the value of the '<em><b>V2 As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>V2 As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>V2 As String</em>' attribute.
-	 * @see #setV2AsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRectangularTrimmedSurface_V2AsString()
-	 * @model
-	 * @generated
-	 */
-	String getV2AsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangularTrimmedSurface#getV2AsString <em>V2 As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>V2 As String</em>' attribute.
-	 * @see #getV2AsString()
-	 * @generated
-	 */
-	void setV2AsString(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Usense</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.bimserver.ifc.emf.Ifc2x3.Tristate}.
+	 * Returns the value of the '<em><b>Usense</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Usense</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Usense</em>' attribute.
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Tristate
-	 * @see #setUsense(Tristate)
+	 * @return the value of the '<em>Usense</em>' reference.
+	 * @see #setUsense(IfcLogical)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRectangularTrimmedSurface_Usense()
 	 * @model
 	 * @generated
 	 */
-	Tristate getUsense();
+	IfcLogical getUsense();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangularTrimmedSurface#getUsense <em>Usense</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangularTrimmedSurface#getUsense <em>Usense</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Usense</em>' attribute.
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Tristate
+	 * @param value the new value of the '<em>Usense</em>' reference.
 	 * @see #getUsense()
 	 * @generated
 	 */
-	void setUsense(Tristate value);
+	void setUsense(IfcLogical value);
 
 	/**
-	 * Returns the value of the '<em><b>Vsense</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.bimserver.ifc.emf.Ifc2x3.Tristate}.
+	 * Returns the value of the '<em><b>Vsense</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Vsense</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Vsense</em>' attribute.
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Tristate
-	 * @see #setVsense(Tristate)
+	 * @return the value of the '<em>Vsense</em>' reference.
+	 * @see #setVsense(IfcLogical)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRectangularTrimmedSurface_Vsense()
 	 * @model
 	 * @generated
 	 */
-	Tristate getVsense();
+	IfcLogical getVsense();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangularTrimmedSurface#getVsense <em>Vsense</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangularTrimmedSurface#getVsense <em>Vsense</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Vsense</em>' attribute.
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Tristate
+	 * @param value the new value of the '<em>Vsense</em>' reference.
 	 * @see #getVsense()
 	 * @generated
 	 */
-	void setVsense(Tristate value);
+	void setVsense(IfcLogical value);
 
 	/**
-	 * Returns the value of the '<em><b>Dim</b></em>' attribute.
+	 * Returns the value of the '<em><b>Dim</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Dim</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Dim</em>' attribute.
-	 * @see #setDim(int)
+	 * @return the value of the '<em>Dim</em>' reference.
+	 * @see #setDim(IfcDimensionCount)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRectangularTrimmedSurface_Dim()
-	 * @model derived="true"
+	 * @model transient="true" volatile="true" derived="true"
+	 *        annotation="http://www.iso.org/iso10303-11/EXPRESS code=' BasisSurface.Dim;'"
 	 * @generated
 	 */
-	int getDim();
+	IfcDimensionCount getDim();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangularTrimmedSurface#getDim <em>Dim</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangularTrimmedSurface#getDim <em>Dim</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Dim</em>' attribute.
+	 * @param value the new value of the '<em>Dim</em>' reference.
 	 * @see #getDim()
 	 * @generated
 	 */
-	void setDim(int value);
+	void setDim(IfcDimensionCount value);
 
 } // IfcRectangularTrimmedSurface

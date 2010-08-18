@@ -24,6 +24,8 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcChamferEdgeFeature;
+import org.bimserver.ifc.emf.Ifc2x3.IfcPositiveLengthMeasure;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -34,9 +36,7 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcChamferEdgeFeatureImpl#getWidth <em>Width</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcChamferEdgeFeatureImpl#getWidthAsString <em>Width As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcChamferEdgeFeatureImpl#getHeight <em>Height</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcChamferEdgeFeatureImpl#getHeightAsString <em>Height As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -67,8 +67,8 @@ public class IfcChamferEdgeFeatureImpl extends IfcEdgeFeatureImpl implements Ifc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getWidth() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcChamferEdgeFeature_Width(), true);
+	public IfcPositiveLengthMeasure getWidth() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcChamferEdgeFeature_Width(), true);
 	}
 
 	/**
@@ -76,7 +76,7 @@ public class IfcChamferEdgeFeatureImpl extends IfcEdgeFeatureImpl implements Ifc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setWidth(float newWidth) {
+	public void setWidth(IfcPositiveLengthMeasure newWidth) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcChamferEdgeFeature_Width(), newWidth);
 	}
 
@@ -103,8 +103,8 @@ public class IfcChamferEdgeFeatureImpl extends IfcEdgeFeatureImpl implements Ifc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getWidthAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcChamferEdgeFeature_WidthAsString(), true);
+	public IfcPositiveLengthMeasure getHeight() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcChamferEdgeFeature_Height(), true);
 	}
 
 	/**
@@ -112,43 +112,7 @@ public class IfcChamferEdgeFeatureImpl extends IfcEdgeFeatureImpl implements Ifc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setWidthAsString(String newWidthAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcChamferEdgeFeature_WidthAsString(), newWidthAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetWidthAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcChamferEdgeFeature_WidthAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetWidthAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcChamferEdgeFeature_WidthAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getHeight() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcChamferEdgeFeature_Height(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setHeight(float newHeight) {
+	public void setHeight(IfcPositiveLengthMeasure newHeight) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcChamferEdgeFeature_Height(), newHeight);
 	}
 
@@ -168,42 +132,6 @@ public class IfcChamferEdgeFeatureImpl extends IfcEdgeFeatureImpl implements Ifc
 	 */
 	public boolean isSetHeight() {
 		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcChamferEdgeFeature_Height());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getHeightAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcChamferEdgeFeature_HeightAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setHeightAsString(String newHeightAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcChamferEdgeFeature_HeightAsString(), newHeightAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetHeightAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcChamferEdgeFeature_HeightAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetHeightAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcChamferEdgeFeature_HeightAsString());
 	}
 
 } //IfcChamferEdgeFeatureImpl

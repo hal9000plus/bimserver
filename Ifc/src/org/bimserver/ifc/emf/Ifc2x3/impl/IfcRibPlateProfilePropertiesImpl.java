@@ -23,8 +23,10 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcPositiveLengthMeasure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRibPlateDirectionEnum;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRibPlateProfileProperties;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -35,13 +37,9 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRibPlateProfilePropertiesImpl#getThickness <em>Thickness</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRibPlateProfilePropertiesImpl#getThicknessAsString <em>Thickness As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRibPlateProfilePropertiesImpl#getRibHeight <em>Rib Height</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRibPlateProfilePropertiesImpl#getRibHeightAsString <em>Rib Height As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRibPlateProfilePropertiesImpl#getRibWidth <em>Rib Width</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRibPlateProfilePropertiesImpl#getRibWidthAsString <em>Rib Width As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRibPlateProfilePropertiesImpl#getRibSpacing <em>Rib Spacing</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRibPlateProfilePropertiesImpl#getRibSpacingAsString <em>Rib Spacing As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRibPlateProfilePropertiesImpl#getDirection <em>Direction</em>}</li>
  * </ul>
  * </p>
@@ -73,8 +71,8 @@ public class IfcRibPlateProfilePropertiesImpl extends IfcProfilePropertiesImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getThickness() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcRibPlateProfileProperties_Thickness(), true);
+	public IfcPositiveLengthMeasure getThickness() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcRibPlateProfileProperties_Thickness(), true);
 	}
 
 	/**
@@ -82,7 +80,7 @@ public class IfcRibPlateProfilePropertiesImpl extends IfcProfilePropertiesImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setThickness(float newThickness) {
+	public void setThickness(IfcPositiveLengthMeasure newThickness) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcRibPlateProfileProperties_Thickness(), newThickness);
 	}
 
@@ -109,8 +107,8 @@ public class IfcRibPlateProfilePropertiesImpl extends IfcProfilePropertiesImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getThicknessAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcRibPlateProfileProperties_ThicknessAsString(), true);
+	public IfcPositiveLengthMeasure getRibHeight() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcRibPlateProfileProperties_RibHeight(), true);
 	}
 
 	/**
@@ -118,43 +116,7 @@ public class IfcRibPlateProfilePropertiesImpl extends IfcProfilePropertiesImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setThicknessAsString(String newThicknessAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcRibPlateProfileProperties_ThicknessAsString(), newThicknessAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetThicknessAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcRibPlateProfileProperties_ThicknessAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetThicknessAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcRibPlateProfileProperties_ThicknessAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getRibHeight() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcRibPlateProfileProperties_RibHeight(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRibHeight(float newRibHeight) {
+	public void setRibHeight(IfcPositiveLengthMeasure newRibHeight) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcRibPlateProfileProperties_RibHeight(), newRibHeight);
 	}
 
@@ -181,8 +143,8 @@ public class IfcRibPlateProfilePropertiesImpl extends IfcProfilePropertiesImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getRibHeightAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcRibPlateProfileProperties_RibHeightAsString(), true);
+	public IfcPositiveLengthMeasure getRibWidth() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcRibPlateProfileProperties_RibWidth(), true);
 	}
 
 	/**
@@ -190,43 +152,7 @@ public class IfcRibPlateProfilePropertiesImpl extends IfcProfilePropertiesImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRibHeightAsString(String newRibHeightAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcRibPlateProfileProperties_RibHeightAsString(), newRibHeightAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetRibHeightAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcRibPlateProfileProperties_RibHeightAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetRibHeightAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcRibPlateProfileProperties_RibHeightAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getRibWidth() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcRibPlateProfileProperties_RibWidth(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRibWidth(float newRibWidth) {
+	public void setRibWidth(IfcPositiveLengthMeasure newRibWidth) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcRibPlateProfileProperties_RibWidth(), newRibWidth);
 	}
 
@@ -253,8 +179,8 @@ public class IfcRibPlateProfilePropertiesImpl extends IfcProfilePropertiesImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getRibWidthAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcRibPlateProfileProperties_RibWidthAsString(), true);
+	public IfcPositiveLengthMeasure getRibSpacing() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcRibPlateProfileProperties_RibSpacing(), true);
 	}
 
 	/**
@@ -262,43 +188,7 @@ public class IfcRibPlateProfilePropertiesImpl extends IfcProfilePropertiesImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRibWidthAsString(String newRibWidthAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcRibPlateProfileProperties_RibWidthAsString(), newRibWidthAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetRibWidthAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcRibPlateProfileProperties_RibWidthAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetRibWidthAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcRibPlateProfileProperties_RibWidthAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getRibSpacing() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcRibPlateProfileProperties_RibSpacing(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRibSpacing(float newRibSpacing) {
+	public void setRibSpacing(IfcPositiveLengthMeasure newRibSpacing) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcRibPlateProfileProperties_RibSpacing(), newRibSpacing);
 	}
 
@@ -318,42 +208,6 @@ public class IfcRibPlateProfilePropertiesImpl extends IfcProfilePropertiesImpl i
 	 */
 	public boolean isSetRibSpacing() {
 		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcRibPlateProfileProperties_RibSpacing());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getRibSpacingAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcRibPlateProfileProperties_RibSpacingAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRibSpacingAsString(String newRibSpacingAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcRibPlateProfileProperties_RibSpacingAsString(), newRibSpacingAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetRibSpacingAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcRibPlateProfileProperties_RibSpacingAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetRibSpacingAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcRibPlateProfileProperties_RibSpacingAsString());
 	}
 
 	/**

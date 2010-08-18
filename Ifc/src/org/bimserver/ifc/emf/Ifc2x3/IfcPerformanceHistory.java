@@ -40,29 +40,29 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcPerformanceHistory extends IfcControl {
 	/**
-	 * Returns the value of the '<em><b>Life Cycle Phase</b></em>' attribute.
+	 * Returns the value of the '<em><b>Life Cycle Phase</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Life Cycle Phase</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Life Cycle Phase</em>' attribute.
-	 * @see #setLifeCyclePhase(String)
+	 * @return the value of the '<em>Life Cycle Phase</em>' reference.
+	 * @see #setLifeCyclePhase(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcPerformanceHistory_LifeCyclePhase()
 	 * @model
 	 * @generated
 	 */
-	String getLifeCyclePhase();
+	IfcLabel getLifeCyclePhase();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPerformanceHistory#getLifeCyclePhase <em>Life Cycle Phase</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPerformanceHistory#getLifeCyclePhase <em>Life Cycle Phase</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Life Cycle Phase</em>' attribute.
+	 * @param value the new value of the '<em>Life Cycle Phase</em>' reference.
 	 * @see #getLifeCyclePhase()
 	 * @generated
 	 */
-	void setLifeCyclePhase(String value);
+	void setLifeCyclePhase(IfcLabel value);
 
 } // IfcPerformanceHistory

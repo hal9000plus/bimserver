@@ -26,10 +26,12 @@ import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcCompositeCurve;
 import org.bimserver.ifc.emf.Ifc2x3.IfcCompositeCurveSegment;
 import org.bimserver.ifc.emf.Ifc2x3.IfcCurve;
+import org.bimserver.ifc.emf.Ifc2x3.IfcDimensionCount;
 import org.bimserver.ifc.emf.Ifc2x3.IfcLogical;
 import org.bimserver.ifc.emf.Ifc2x3.IfcTransitionCode;
-import org.bimserver.ifc.emf.Ifc2x3.Tristate;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -92,8 +94,8 @@ public class IfcCompositeCurveSegmentImpl extends IfcGeometricRepresentationItem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Tristate getSameSense() {
-		return (Tristate) eGet(Ifc2x3Package.eINSTANCE.getIfcCompositeCurveSegment_SameSense(), true);
+	public IfcLogical getSameSense() {
+		return (IfcLogical) eGet(Ifc2x3Package.eINSTANCE.getIfcCompositeCurveSegment_SameSense(), true);
 	}
 
 	/**
@@ -101,7 +103,7 @@ public class IfcCompositeCurveSegmentImpl extends IfcGeometricRepresentationItem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSameSense(Tristate newSameSense) {
+	public void setSameSense(IfcLogical newSameSense) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcCompositeCurveSegment_SameSense(), newSameSense);
 	}
 
@@ -138,8 +140,8 @@ public class IfcCompositeCurveSegmentImpl extends IfcGeometricRepresentationItem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getDim() {
-		return (Integer) eGet(Ifc2x3Package.eINSTANCE.getIfcCompositeCurveSegment_Dim(), true);
+	public IfcDimensionCount getDim() {
+		return (IfcDimensionCount) eGet(Ifc2x3Package.eINSTANCE.getIfcCompositeCurveSegment_Dim(), true);
 	}
 
 	/**
@@ -147,7 +149,7 @@ public class IfcCompositeCurveSegmentImpl extends IfcGeometricRepresentationItem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDim(int newDim) {
+	public void setDim(IfcDimensionCount newDim) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcCompositeCurveSegment_Dim(), newDim);
 	}
 

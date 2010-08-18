@@ -178,54 +178,54 @@ public interface IfcObjective extends IfcConstraint {
 	void setObjectiveQualifier(IfcObjectiveEnum value);
 
 	/**
-	 * Returns the value of the '<em><b>User Defined Qualifier</b></em>' attribute.
+	 * Returns the value of the '<em><b>User Defined Qualifier</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>User Defined Qualifier</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>User Defined Qualifier</em>' attribute.
+	 * @return the value of the '<em>User Defined Qualifier</em>' reference.
 	 * @see #isSetUserDefinedQualifier()
 	 * @see #unsetUserDefinedQualifier()
-	 * @see #setUserDefinedQualifier(String)
+	 * @see #setUserDefinedQualifier(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcObjective_UserDefinedQualifier()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getUserDefinedQualifier();
+	IfcLabel getUserDefinedQualifier();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcObjective#getUserDefinedQualifier <em>User Defined Qualifier</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcObjective#getUserDefinedQualifier <em>User Defined Qualifier</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>User Defined Qualifier</em>' attribute.
+	 * @param value the new value of the '<em>User Defined Qualifier</em>' reference.
 	 * @see #isSetUserDefinedQualifier()
 	 * @see #unsetUserDefinedQualifier()
 	 * @see #getUserDefinedQualifier()
 	 * @generated
 	 */
-	void setUserDefinedQualifier(String value);
+	void setUserDefinedQualifier(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcObjective#getUserDefinedQualifier <em>User Defined Qualifier</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcObjective#getUserDefinedQualifier <em>User Defined Qualifier</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetUserDefinedQualifier()
 	 * @see #getUserDefinedQualifier()
-	 * @see #setUserDefinedQualifier(String)
+	 * @see #setUserDefinedQualifier(IfcLabel)
 	 * @generated
 	 */
 	void unsetUserDefinedQualifier();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcObjective#getUserDefinedQualifier <em>User Defined Qualifier</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcObjective#getUserDefinedQualifier <em>User Defined Qualifier</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>User Defined Qualifier</em>' attribute is set.
+	 * @return whether the value of the '<em>User Defined Qualifier</em>' reference is set.
 	 * @see #unsetUserDefinedQualifier()
 	 * @see #getUserDefinedQualifier()
-	 * @see #setUserDefinedQualifier(String)
+	 * @see #setUserDefinedQualifier(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetUserDefinedQualifier();

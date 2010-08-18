@@ -32,7 +32,6 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcVector#getOrientation <em>Orientation</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcVector#getMagnitude <em>Magnitude</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcVector#getMagnitudeAsString <em>Magnitude As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcVector#getDim <em>Dim</em>}</li>
  * </ul>
  * </p>
@@ -69,81 +68,56 @@ public interface IfcVector extends IfcGeometricRepresentationItem, IfcVectorOrDi
 	void setOrientation(IfcDirection value);
 
 	/**
-	 * Returns the value of the '<em><b>Magnitude</b></em>' attribute.
+	 * Returns the value of the '<em><b>Magnitude</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Magnitude</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Magnitude</em>' attribute.
-	 * @see #setMagnitude(float)
+	 * @return the value of the '<em>Magnitude</em>' reference.
+	 * @see #setMagnitude(IfcLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcVector_Magnitude()
 	 * @model
 	 * @generated
 	 */
-	float getMagnitude();
+	IfcLengthMeasure getMagnitude();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcVector#getMagnitude <em>Magnitude</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcVector#getMagnitude <em>Magnitude</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Magnitude</em>' attribute.
+	 * @param value the new value of the '<em>Magnitude</em>' reference.
 	 * @see #getMagnitude()
 	 * @generated
 	 */
-	void setMagnitude(float value);
+	void setMagnitude(IfcLengthMeasure value);
 
 	/**
-	 * Returns the value of the '<em><b>Magnitude As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Magnitude As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Magnitude As String</em>' attribute.
-	 * @see #setMagnitudeAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcVector_MagnitudeAsString()
-	 * @model
-	 * @generated
-	 */
-	String getMagnitudeAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcVector#getMagnitudeAsString <em>Magnitude As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Magnitude As String</em>' attribute.
-	 * @see #getMagnitudeAsString()
-	 * @generated
-	 */
-	void setMagnitudeAsString(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Dim</b></em>' attribute.
+	 * Returns the value of the '<em><b>Dim</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Dim</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Dim</em>' attribute.
-	 * @see #setDim(int)
+	 * @return the value of the '<em>Dim</em>' reference.
+	 * @see #setDim(IfcDimensionCount)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcVector_Dim()
-	 * @model derived="true"
+	 * @model transient="true" volatile="true" derived="true"
+	 *        annotation="http://www.iso.org/iso10303-11/EXPRESS code=' Orientation.Dim;'"
 	 * @generated
 	 */
-	int getDim();
+	IfcDimensionCount getDim();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcVector#getDim <em>Dim</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcVector#getDim <em>Dim</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Dim</em>' attribute.
+	 * @param value the new value of the '<em>Dim</em>' reference.
 	 * @see #getDim()
 	 * @generated
 	 */
-	void setDim(int value);
+	void setDim(IfcDimensionCount value);
 
 } // IfcVector

@@ -23,8 +23,11 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcDimensionCount;
 import org.bimserver.ifc.emf.Ifc2x3.IfcDirection;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLengthMeasure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcVector;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -36,7 +39,6 @@ import org.eclipse.emf.ecore.EClass;
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcVectorImpl#getOrientation <em>Orientation</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcVectorImpl#getMagnitude <em>Magnitude</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcVectorImpl#getMagnitudeAsString <em>Magnitude As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcVectorImpl#getDim <em>Dim</em>}</li>
  * </ul>
  * </p>
@@ -86,8 +88,8 @@ public class IfcVectorImpl extends IfcGeometricRepresentationItemImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getMagnitude() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcVector_Magnitude(), true);
+	public IfcLengthMeasure getMagnitude() {
+		return (IfcLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcVector_Magnitude(), true);
 	}
 
 	/**
@@ -95,7 +97,7 @@ public class IfcVectorImpl extends IfcGeometricRepresentationItemImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMagnitude(float newMagnitude) {
+	public void setMagnitude(IfcLengthMeasure newMagnitude) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcVector_Magnitude(), newMagnitude);
 	}
 
@@ -104,8 +106,8 @@ public class IfcVectorImpl extends IfcGeometricRepresentationItemImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getMagnitudeAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcVector_MagnitudeAsString(), true);
+	public IfcDimensionCount getDim() {
+		return (IfcDimensionCount) eGet(Ifc2x3Package.eINSTANCE.getIfcVector_Dim(), true);
 	}
 
 	/**
@@ -113,25 +115,7 @@ public class IfcVectorImpl extends IfcGeometricRepresentationItemImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMagnitudeAsString(String newMagnitudeAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcVector_MagnitudeAsString(), newMagnitudeAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int getDim() {
-		return (Integer) eGet(Ifc2x3Package.eINSTANCE.getIfcVector_Dim(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDim(int newDim) {
+	public void setDim(IfcDimensionCount newDim) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcVector_Dim(), newDim);
 	}
 

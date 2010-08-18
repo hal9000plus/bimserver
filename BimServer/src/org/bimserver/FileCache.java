@@ -7,8 +7,7 @@ import java.io.IOException;
 import javax.activation.DataHandler;
 import javax.activation.FileDataSource;
 
-import org.bimserver.ifc.EmfSerializer;
-import org.bimserver.ifc.SerializerException;
+import org.bimserver.emf.EmfSerializer;
 import org.bimserver.shared.CheckoutResult;
 import org.bimserver.shared.ResultType;
 
@@ -19,13 +18,9 @@ public class FileCache {
 		try {
 			String fileName = pid + "." + rid + "." + resultType.getDefaultExtension();
 			File file = new File(cacheDir, fileName);
-			EmfSerializer emfSerializer = (EmfSerializer) checkoutResult.getFile().getDataSource();
-			FileOutputStream out = new FileOutputStream(file);
-			emfSerializer.writeToOutputStream(out);
-			out.close();
+			EmfSerializer emfSerializer = (EmfSerializer)checkoutResult.getFile().getDataSource();
+			emfSerializer.write(new FileOutputStream(file));
 		} catch (IOException e) {
-			e.printStackTrace();
-		} catch (SerializerException e) {
 			e.printStackTrace();
 		}
 	}

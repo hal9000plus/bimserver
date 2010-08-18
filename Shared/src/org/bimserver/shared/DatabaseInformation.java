@@ -1,6 +1,5 @@
 package org.bimserver.shared;
 
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
@@ -32,7 +31,6 @@ public class DatabaseInformation {
 	private int numberOfCheckouts;
 	private long databaseSizeInBytes;
 	private String type;
-	private Date created;
 	private final Map<String, Map<String, String>> genericLines = new TreeMap<String, Map<String, String>>();
 	private String location;
 	private int schemaVersion;
@@ -110,13 +108,5 @@ public class DatabaseInformation {
 
 	public int getSchemaVersion() {
 		return schemaVersion;
-	}
-
-	public void setCreated(Date created) {
-		this.created = created;
-	}
-
-	public Date getCreated() {
-		return created;
 	}
 }

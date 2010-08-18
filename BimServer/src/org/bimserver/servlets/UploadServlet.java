@@ -22,10 +22,12 @@ package org.bimserver.servlets;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.Iterator;
 import java.util.List;
 
 import javax.activation.DataHandler;
+import javax.activation.DataSource;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -39,46 +41,41 @@ import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import org.bimserver.LoginManager;
-import org.bimserver.ServerInfo;
 import org.bimserver.shared.ChangeSet;
 import org.bimserver.shared.UserException;
-import org.bimserver.utils.InputStreamDataSource;
 
 public class UploadServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 7852327471215749104L;
-	private DiskFileItemFactory factory;
 
 	public UploadServlet() {
-		factory = new DiskFileItemFactory();
 	}
-
+	
 	@SuppressWarnings("unchecked")
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		LoginManager loginManager = (LoginManager) request.getSession().getAttribute("loginManager");
+		LoginManager loginManager = (LoginManager)request.getSession().getAttribute("loginManager");
 		if (loginManager == null) {
 			response.sendRedirect("login.jsp");
 			return;
 		}
 		boolean isMultipart = ServletFileUpload.isMultipartContent(request);
-		long poid = -1;
+		int pid = -1;
 		String comment = null;
 		String type = null;
 		if (isMultipart) {
-			factory.setSizeThreshold(1024 * 1024 * 100); // 100 MB
+			DiskFileItemFactory factory = new DiskFileItemFactory();
 			ServletFileUpload upload = new ServletFileUpload(factory);
 			try {
-				List<FileItem> items = (List<FileItem>) upload.parseRequest(request);
+				List<FileItem> items = (List<FileItem>)upload.parseRequest(request);
 				Iterator<FileItem> iter = items.iterator();
 				InputStream in = null;
 				long size = 0;
-				String name = "";
 				while (iter.hasNext()) {
 					FileItem item = iter.next();
 					if (item.isFormField()) {
-						if ("poid".equals(item.getFieldName())) {
-							poid = Long.parseLong(item.getString());
+						if ("pid".equals(item.getFieldName())) {
+							pid = Integer.parseInt(item.getString());
 						}
 						if ("comment".equals(item.getFieldName())) {
 							comment = item.getString();
@@ -88,41 +85,48 @@ public class UploadServlet extends HttpServlet {
 						}
 					} else {
 						size = item.getSize();
-						name = item.getName();
 						in = item.getInputStream();
 					}
 				}
-				if (poid != -1) {
+				if (pid != -1) {
 					if (size == 0) {
-						response.sendRedirect("project.jsp?poid=" + poid + "&message=Uploaded file empty, or no file uploaded at all");
+						response.sendRedirect("project.jsp?id=" + pid + "&message=Uploaded file empty, or no file uploaded at all");
 					} else {
 						final InputStream realStream = in;
 						if (type.equals("ifc")) {
 							try {
-								InputStreamDataSource inputStreamDataSource = new InputStreamDataSource(realStream);
-								inputStreamDataSource.setName(name);
-								DataHandler ifcFile = new DataHandler(inputStreamDataSource);
-								loginManager.getService().checkinAsync(poid, comment, size, ifcFile);
-								response.sendRedirect("project.jsp?poid=" + poid);
+								loginManager.getService().checkin(pid, comment, size, new DataHandler(new DataSource(){
+									
+									@Override
+									public String getContentType() {
+										return null;
+									}
+									
+									@Override
+									public InputStream getInputStream() throws IOException {
+										return realStream;
+									}
+									
+									@Override
+									public String getName() {
+										return null;
+									}
+									
+									@Override
+									public OutputStream getOutputStream() throws IOException {
+										return null;
+									}}));
+								response.sendRedirect("project.jsp?id=" + pid);
 							} catch (UserException e) {
-								if (e.getCause() instanceof OutOfMemoryError) {
-									ServerInfo.setOutOfMemory();
-									response.sendRedirect(getServletContext().getContextPath());
-									return;
-								}
-								if (e.getCause() != null) {
-									response.sendRedirect("project.jsp?poid=" + poid + "&message=" + e.getCause().getMessage());
-								} else {
-									response.sendRedirect("project.jsp?poid=" + poid + "&message=" + e.getUserMessage());
-								}
+								response.sendRedirect("project.jsp?id=" + pid + "&message=" + e.getCause().getMessage());
 							}
 						} else if (type.equals("changeset")) {
 							try {
 								JAXBContext context = JAXBContext.newInstance(ChangeSet.class);
 								Unmarshaller unmarshaller = context.createUnmarshaller();
-								ChangeSet changeSet = (ChangeSet) unmarshaller.unmarshal(realStream);
-								loginManager.getService().processChangeSet(poid, comment, changeSet);
-								response.sendRedirect("project.jsp?poid=" + poid);
+								ChangeSet changeSet = (ChangeSet)unmarshaller.unmarshal(realStream);
+								loginManager.getService().processChangeSet(pid, comment, changeSet);
+								response.sendRedirect("project.jsp?id=" + pid);
 							} catch (JAXBException e) {
 								e.printStackTrace();
 							} catch (UserException e) {
@@ -131,7 +135,7 @@ public class UploadServlet extends HttpServlet {
 						}
 					}
 				} else {
-					response.getWriter().println("ERROR no poid");
+					response.getWriter().println("ERROR no pid");
 				}
 			} catch (FileUploadException e) {
 				e.printStackTrace();

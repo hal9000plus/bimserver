@@ -31,9 +31,7 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcChamferEdgeFeature#getWidth <em>Width</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcChamferEdgeFeature#getWidthAsString <em>Width As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcChamferEdgeFeature#getHeight <em>Height</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcChamferEdgeFeature#getHeightAsString <em>Height As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -43,215 +41,109 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcChamferEdgeFeature extends IfcEdgeFeature {
 	/**
-	 * Returns the value of the '<em><b>Width</b></em>' attribute.
+	 * Returns the value of the '<em><b>Width</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Width</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Width</em>' attribute.
+	 * @return the value of the '<em>Width</em>' reference.
 	 * @see #isSetWidth()
 	 * @see #unsetWidth()
-	 * @see #setWidth(float)
+	 * @see #setWidth(IfcPositiveLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcChamferEdgeFeature_Width()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getWidth();
+	IfcPositiveLengthMeasure getWidth();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcChamferEdgeFeature#getWidth <em>Width</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcChamferEdgeFeature#getWidth <em>Width</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Width</em>' attribute.
+	 * @param value the new value of the '<em>Width</em>' reference.
 	 * @see #isSetWidth()
 	 * @see #unsetWidth()
 	 * @see #getWidth()
 	 * @generated
 	 */
-	void setWidth(float value);
+	void setWidth(IfcPositiveLengthMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcChamferEdgeFeature#getWidth <em>Width</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcChamferEdgeFeature#getWidth <em>Width</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetWidth()
 	 * @see #getWidth()
-	 * @see #setWidth(float)
+	 * @see #setWidth(IfcPositiveLengthMeasure)
 	 * @generated
 	 */
 	void unsetWidth();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcChamferEdgeFeature#getWidth <em>Width</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcChamferEdgeFeature#getWidth <em>Width</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Width</em>' attribute is set.
+	 * @return whether the value of the '<em>Width</em>' reference is set.
 	 * @see #unsetWidth()
 	 * @see #getWidth()
-	 * @see #setWidth(float)
+	 * @see #setWidth(IfcPositiveLengthMeasure)
 	 * @generated
 	 */
 	boolean isSetWidth();
 
 	/**
-	 * Returns the value of the '<em><b>Width As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Width As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Width As String</em>' attribute.
-	 * @see #isSetWidthAsString()
-	 * @see #unsetWidthAsString()
-	 * @see #setWidthAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcChamferEdgeFeature_WidthAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getWidthAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcChamferEdgeFeature#getWidthAsString <em>Width As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Width As String</em>' attribute.
-	 * @see #isSetWidthAsString()
-	 * @see #unsetWidthAsString()
-	 * @see #getWidthAsString()
-	 * @generated
-	 */
-	void setWidthAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcChamferEdgeFeature#getWidthAsString <em>Width As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetWidthAsString()
-	 * @see #getWidthAsString()
-	 * @see #setWidthAsString(String)
-	 * @generated
-	 */
-	void unsetWidthAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcChamferEdgeFeature#getWidthAsString <em>Width As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Width As String</em>' attribute is set.
-	 * @see #unsetWidthAsString()
-	 * @see #getWidthAsString()
-	 * @see #setWidthAsString(String)
-	 * @generated
-	 */
-	boolean isSetWidthAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Height</b></em>' attribute.
+	 * Returns the value of the '<em><b>Height</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Height</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Height</em>' attribute.
+	 * @return the value of the '<em>Height</em>' reference.
 	 * @see #isSetHeight()
 	 * @see #unsetHeight()
-	 * @see #setHeight(float)
+	 * @see #setHeight(IfcPositiveLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcChamferEdgeFeature_Height()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getHeight();
+	IfcPositiveLengthMeasure getHeight();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcChamferEdgeFeature#getHeight <em>Height</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcChamferEdgeFeature#getHeight <em>Height</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Height</em>' attribute.
+	 * @param value the new value of the '<em>Height</em>' reference.
 	 * @see #isSetHeight()
 	 * @see #unsetHeight()
 	 * @see #getHeight()
 	 * @generated
 	 */
-	void setHeight(float value);
+	void setHeight(IfcPositiveLengthMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcChamferEdgeFeature#getHeight <em>Height</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcChamferEdgeFeature#getHeight <em>Height</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetHeight()
 	 * @see #getHeight()
-	 * @see #setHeight(float)
+	 * @see #setHeight(IfcPositiveLengthMeasure)
 	 * @generated
 	 */
 	void unsetHeight();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcChamferEdgeFeature#getHeight <em>Height</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcChamferEdgeFeature#getHeight <em>Height</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Height</em>' attribute is set.
+	 * @return whether the value of the '<em>Height</em>' reference is set.
 	 * @see #unsetHeight()
 	 * @see #getHeight()
-	 * @see #setHeight(float)
+	 * @see #setHeight(IfcPositiveLengthMeasure)
 	 * @generated
 	 */
 	boolean isSetHeight();
-
-	/**
-	 * Returns the value of the '<em><b>Height As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Height As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Height As String</em>' attribute.
-	 * @see #isSetHeightAsString()
-	 * @see #unsetHeightAsString()
-	 * @see #setHeightAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcChamferEdgeFeature_HeightAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getHeightAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcChamferEdgeFeature#getHeightAsString <em>Height As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Height As String</em>' attribute.
-	 * @see #isSetHeightAsString()
-	 * @see #unsetHeightAsString()
-	 * @see #getHeightAsString()
-	 * @generated
-	 */
-	void setHeightAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcChamferEdgeFeature#getHeightAsString <em>Height As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetHeightAsString()
-	 * @see #getHeightAsString()
-	 * @see #setHeightAsString(String)
-	 * @generated
-	 */
-	void unsetHeightAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcChamferEdgeFeature#getHeightAsString <em>Height As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Height As String</em>' attribute is set.
-	 * @see #unsetHeightAsString()
-	 * @see #getHeightAsString()
-	 * @see #setHeightAsString(String)
-	 * @generated
-	 */
-	boolean isSetHeightAsString();
 
 } // IfcChamferEdgeFeature

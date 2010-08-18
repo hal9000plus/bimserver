@@ -31,9 +31,7 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceStyleRefraction#getRefractionIndex <em>Refraction Index</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceStyleRefraction#getRefractionIndexAsString <em>Refraction Index As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceStyleRefraction#getDispersionFactor <em>Dispersion Factor</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceStyleRefraction#getDispersionFactorAsString <em>Dispersion Factor As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -43,215 +41,109 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcSurfaceStyleRefraction extends IfcSurfaceStyleElementSelect {
 	/**
-	 * Returns the value of the '<em><b>Refraction Index</b></em>' attribute.
+	 * Returns the value of the '<em><b>Refraction Index</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Refraction Index</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Refraction Index</em>' attribute.
+	 * @return the value of the '<em>Refraction Index</em>' reference.
 	 * @see #isSetRefractionIndex()
 	 * @see #unsetRefractionIndex()
-	 * @see #setRefractionIndex(float)
+	 * @see #setRefractionIndex(IfcReal)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSurfaceStyleRefraction_RefractionIndex()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getRefractionIndex();
+	IfcReal getRefractionIndex();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceStyleRefraction#getRefractionIndex <em>Refraction Index</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceStyleRefraction#getRefractionIndex <em>Refraction Index</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Refraction Index</em>' attribute.
+	 * @param value the new value of the '<em>Refraction Index</em>' reference.
 	 * @see #isSetRefractionIndex()
 	 * @see #unsetRefractionIndex()
 	 * @see #getRefractionIndex()
 	 * @generated
 	 */
-	void setRefractionIndex(float value);
+	void setRefractionIndex(IfcReal value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceStyleRefraction#getRefractionIndex <em>Refraction Index</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceStyleRefraction#getRefractionIndex <em>Refraction Index</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetRefractionIndex()
 	 * @see #getRefractionIndex()
-	 * @see #setRefractionIndex(float)
+	 * @see #setRefractionIndex(IfcReal)
 	 * @generated
 	 */
 	void unsetRefractionIndex();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceStyleRefraction#getRefractionIndex <em>Refraction Index</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceStyleRefraction#getRefractionIndex <em>Refraction Index</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Refraction Index</em>' attribute is set.
+	 * @return whether the value of the '<em>Refraction Index</em>' reference is set.
 	 * @see #unsetRefractionIndex()
 	 * @see #getRefractionIndex()
-	 * @see #setRefractionIndex(float)
+	 * @see #setRefractionIndex(IfcReal)
 	 * @generated
 	 */
 	boolean isSetRefractionIndex();
 
 	/**
-	 * Returns the value of the '<em><b>Refraction Index As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Refraction Index As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Refraction Index As String</em>' attribute.
-	 * @see #isSetRefractionIndexAsString()
-	 * @see #unsetRefractionIndexAsString()
-	 * @see #setRefractionIndexAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSurfaceStyleRefraction_RefractionIndexAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getRefractionIndexAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceStyleRefraction#getRefractionIndexAsString <em>Refraction Index As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Refraction Index As String</em>' attribute.
-	 * @see #isSetRefractionIndexAsString()
-	 * @see #unsetRefractionIndexAsString()
-	 * @see #getRefractionIndexAsString()
-	 * @generated
-	 */
-	void setRefractionIndexAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceStyleRefraction#getRefractionIndexAsString <em>Refraction Index As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetRefractionIndexAsString()
-	 * @see #getRefractionIndexAsString()
-	 * @see #setRefractionIndexAsString(String)
-	 * @generated
-	 */
-	void unsetRefractionIndexAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceStyleRefraction#getRefractionIndexAsString <em>Refraction Index As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Refraction Index As String</em>' attribute is set.
-	 * @see #unsetRefractionIndexAsString()
-	 * @see #getRefractionIndexAsString()
-	 * @see #setRefractionIndexAsString(String)
-	 * @generated
-	 */
-	boolean isSetRefractionIndexAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Dispersion Factor</b></em>' attribute.
+	 * Returns the value of the '<em><b>Dispersion Factor</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Dispersion Factor</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Dispersion Factor</em>' attribute.
+	 * @return the value of the '<em>Dispersion Factor</em>' reference.
 	 * @see #isSetDispersionFactor()
 	 * @see #unsetDispersionFactor()
-	 * @see #setDispersionFactor(float)
+	 * @see #setDispersionFactor(IfcReal)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSurfaceStyleRefraction_DispersionFactor()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getDispersionFactor();
+	IfcReal getDispersionFactor();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceStyleRefraction#getDispersionFactor <em>Dispersion Factor</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceStyleRefraction#getDispersionFactor <em>Dispersion Factor</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Dispersion Factor</em>' attribute.
+	 * @param value the new value of the '<em>Dispersion Factor</em>' reference.
 	 * @see #isSetDispersionFactor()
 	 * @see #unsetDispersionFactor()
 	 * @see #getDispersionFactor()
 	 * @generated
 	 */
-	void setDispersionFactor(float value);
+	void setDispersionFactor(IfcReal value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceStyleRefraction#getDispersionFactor <em>Dispersion Factor</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceStyleRefraction#getDispersionFactor <em>Dispersion Factor</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetDispersionFactor()
 	 * @see #getDispersionFactor()
-	 * @see #setDispersionFactor(float)
+	 * @see #setDispersionFactor(IfcReal)
 	 * @generated
 	 */
 	void unsetDispersionFactor();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceStyleRefraction#getDispersionFactor <em>Dispersion Factor</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceStyleRefraction#getDispersionFactor <em>Dispersion Factor</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Dispersion Factor</em>' attribute is set.
+	 * @return whether the value of the '<em>Dispersion Factor</em>' reference is set.
 	 * @see #unsetDispersionFactor()
 	 * @see #getDispersionFactor()
-	 * @see #setDispersionFactor(float)
+	 * @see #setDispersionFactor(IfcReal)
 	 * @generated
 	 */
 	boolean isSetDispersionFactor();
-
-	/**
-	 * Returns the value of the '<em><b>Dispersion Factor As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Dispersion Factor As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Dispersion Factor As String</em>' attribute.
-	 * @see #isSetDispersionFactorAsString()
-	 * @see #unsetDispersionFactorAsString()
-	 * @see #setDispersionFactorAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSurfaceStyleRefraction_DispersionFactorAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getDispersionFactorAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceStyleRefraction#getDispersionFactorAsString <em>Dispersion Factor As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Dispersion Factor As String</em>' attribute.
-	 * @see #isSetDispersionFactorAsString()
-	 * @see #unsetDispersionFactorAsString()
-	 * @see #getDispersionFactorAsString()
-	 * @generated
-	 */
-	void setDispersionFactorAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceStyleRefraction#getDispersionFactorAsString <em>Dispersion Factor As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetDispersionFactorAsString()
-	 * @see #getDispersionFactorAsString()
-	 * @see #setDispersionFactorAsString(String)
-	 * @generated
-	 */
-	void unsetDispersionFactorAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceStyleRefraction#getDispersionFactorAsString <em>Dispersion Factor As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Dispersion Factor As String</em>' attribute is set.
-	 * @see #unsetDispersionFactorAsString()
-	 * @see #getDispersionFactorAsString()
-	 * @see #setDispersionFactorAsString(String)
-	 * @generated
-	 */
-	boolean isSetDispersionFactorAsString();
 
 } // IfcSurfaceStyleRefraction

@@ -42,81 +42,81 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcPixelTexture extends IfcSurfaceTexture {
 	/**
-	 * Returns the value of the '<em><b>Width</b></em>' attribute.
+	 * Returns the value of the '<em><b>Width</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Width</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Width</em>' attribute.
-	 * @see #setWidth(int)
+	 * @return the value of the '<em>Width</em>' reference.
+	 * @see #setWidth(IfcInteger)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcPixelTexture_Width()
 	 * @model
 	 * @generated
 	 */
-	int getWidth();
+	IfcInteger getWidth();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPixelTexture#getWidth <em>Width</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPixelTexture#getWidth <em>Width</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Width</em>' attribute.
+	 * @param value the new value of the '<em>Width</em>' reference.
 	 * @see #getWidth()
 	 * @generated
 	 */
-	void setWidth(int value);
+	void setWidth(IfcInteger value);
 
 	/**
-	 * Returns the value of the '<em><b>Height</b></em>' attribute.
+	 * Returns the value of the '<em><b>Height</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Height</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Height</em>' attribute.
-	 * @see #setHeight(int)
+	 * @return the value of the '<em>Height</em>' reference.
+	 * @see #setHeight(IfcInteger)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcPixelTexture_Height()
 	 * @model
 	 * @generated
 	 */
-	int getHeight();
+	IfcInteger getHeight();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPixelTexture#getHeight <em>Height</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPixelTexture#getHeight <em>Height</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Height</em>' attribute.
+	 * @param value the new value of the '<em>Height</em>' reference.
 	 * @see #getHeight()
 	 * @generated
 	 */
-	void setHeight(int value);
+	void setHeight(IfcInteger value);
 
 	/**
-	 * Returns the value of the '<em><b>Colour Components</b></em>' attribute.
+	 * Returns the value of the '<em><b>Colour Components</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Colour Components</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Colour Components</em>' attribute.
-	 * @see #setColourComponents(int)
+	 * @return the value of the '<em>Colour Components</em>' reference.
+	 * @see #setColourComponents(IfcInteger)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcPixelTexture_ColourComponents()
 	 * @model
 	 * @generated
 	 */
-	int getColourComponents();
+	IfcInteger getColourComponents();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPixelTexture#getColourComponents <em>Colour Components</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPixelTexture#getColourComponents <em>Colour Components</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Colour Components</em>' attribute.
+	 * @param value the new value of the '<em>Colour Components</em>' reference.
 	 * @see #getColourComponents()
 	 * @generated
 	 */
-	void setColourComponents(int value);
+	void setColourComponents(IfcInteger value);
 
 } // IfcPixelTexture

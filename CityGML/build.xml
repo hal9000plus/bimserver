@@ -1,0 +1,46 @@
+<project name="build" default="enginetest">
+	<mkdir dir="BuildStandalone"/>
+	<mkdir dir="BuildStandalone/classes"/>
+	<target name="enginetest">
+		<javac srcdir="src" destdir="BuildStandalone/classes" debug="on" fork="true" memorymaximumsize="256m">
+			<src path="../buildingSMARTLibrary/src" />
+			<src path="../Ifc/src" />
+			<src path="../Utils/src" />
+			<src path="../Emf/src" />
+			<src path="../Shared/src" />
+			<src path="../CityGML/src" />
+			<src path="../CityGML/src-gen" />
+			<src path="../TestData/src" />
+			<classpath>
+				<fileset dir="lib">
+					<include name="*.jar" />
+				</fileset>
+				<fileset dir="../buildingSMARTLibrary/lib">
+					<include name="*.jar" />
+				</fileset>
+				<fileset dir="../Utils/lib">
+					<include name="*.jar" />
+				</fileset>
+				<fileset dir="../CityGML/lib">
+					<include name="*.jar" />
+				</fileset>
+				<fileset dir="../BimServer/warlibs">
+					<include name="*.jar" />
+				</fileset>
+			</classpath>
+		</javac>
+		<jar destfile="test.jar" manifest="MANIFEST.MF">
+			<fileset dir="BuildStandalone/classes"/>
+		</jar>
+		<delete dir="BuildStandalone/classes"/>
+	</target>
+	<target name="run">
+		<java jar="test.jar" fork="true">
+			<classpath>
+				<fileset dir="lib">
+					<include name="*.jar" />
+				</fileset>
+			</classpath>
+		</java>
+	</target>
+</project>

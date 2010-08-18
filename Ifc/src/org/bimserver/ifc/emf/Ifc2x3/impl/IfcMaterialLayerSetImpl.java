@@ -22,12 +22,18 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
-import org.bimserver.emf.IdEObjectImpl;
+import org.bimserver.ifc.IfcRootObject;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLengthMeasure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcMaterialLayer;
 import org.bimserver.ifc.emf.Ifc2x3.IfcMaterialLayerSet;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -39,13 +45,12 @@ import org.eclipse.emf.ecore.EClass;
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcMaterialLayerSetImpl#getMaterialLayers <em>Material Layers</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcMaterialLayerSetImpl#getLayerSetName <em>Layer Set Name</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcMaterialLayerSetImpl#getTotalThickness <em>Total Thickness</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcMaterialLayerSetImpl#getTotalThicknessAsString <em>Total Thickness As String</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class IfcMaterialLayerSetImpl extends IdEObjectImpl implements IfcMaterialLayerSet {
+public class IfcMaterialLayerSetImpl extends IfcRootObject implements IfcMaterialLayerSet {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -90,8 +95,8 @@ public class IfcMaterialLayerSetImpl extends IdEObjectImpl implements IfcMateria
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getLayerSetName() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcMaterialLayerSet_LayerSetName(), true);
+	public IfcLabel getLayerSetName() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcMaterialLayerSet_LayerSetName(), true);
 	}
 
 	/**
@@ -99,7 +104,7 @@ public class IfcMaterialLayerSetImpl extends IdEObjectImpl implements IfcMateria
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLayerSetName(String newLayerSetName) {
+	public void setLayerSetName(IfcLabel newLayerSetName) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcMaterialLayerSet_LayerSetName(), newLayerSetName);
 	}
 
@@ -126,8 +131,8 @@ public class IfcMaterialLayerSetImpl extends IdEObjectImpl implements IfcMateria
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getTotalThickness() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcMaterialLayerSet_TotalThickness(), true);
+	public IfcLengthMeasure getTotalThickness() {
+		return (IfcLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcMaterialLayerSet_TotalThickness(), true);
 	}
 
 	/**
@@ -135,26 +140,8 @@ public class IfcMaterialLayerSetImpl extends IdEObjectImpl implements IfcMateria
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTotalThickness(float newTotalThickness) {
+	public void setTotalThickness(IfcLengthMeasure newTotalThickness) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcMaterialLayerSet_TotalThickness(), newTotalThickness);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getTotalThicknessAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcMaterialLayerSet_TotalThicknessAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTotalThicknessAsString(String newTotalThicknessAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcMaterialLayerSet_TotalThicknessAsString(), newTotalThicknessAsString);
 	}
 
 } //IfcMaterialLayerSetImpl

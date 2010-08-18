@@ -24,6 +24,8 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadTemperature;
+import org.bimserver.ifc.emf.Ifc2x3.IfcThermodynamicTemperatureMeasure;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -34,11 +36,8 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcStructuralLoadTemperatureImpl#getDeltaT_Constant <em>Delta TConstant</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcStructuralLoadTemperatureImpl#getDeltaT_ConstantAsString <em>Delta TConstant As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcStructuralLoadTemperatureImpl#getDeltaT_Y <em>Delta TY</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcStructuralLoadTemperatureImpl#getDeltaT_YAsString <em>Delta TYAs String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcStructuralLoadTemperatureImpl#getDeltaT_Z <em>Delta TZ</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcStructuralLoadTemperatureImpl#getDeltaT_ZAsString <em>Delta TZAs String</em>}</li>
  * </ul>
  * </p>
  *
@@ -69,8 +68,8 @@ public class IfcStructuralLoadTemperatureImpl extends IfcStructuralLoadStaticImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getDeltaT_Constant() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadTemperature_DeltaT_Constant(), true);
+	public IfcThermodynamicTemperatureMeasure getDeltaT_Constant() {
+		return (IfcThermodynamicTemperatureMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadTemperature_DeltaT_Constant(), true);
 	}
 
 	/**
@@ -78,7 +77,7 @@ public class IfcStructuralLoadTemperatureImpl extends IfcStructuralLoadStaticImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDeltaT_Constant(float newDeltaT_Constant) {
+	public void setDeltaT_Constant(IfcThermodynamicTemperatureMeasure newDeltaT_Constant) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadTemperature_DeltaT_Constant(), newDeltaT_Constant);
 	}
 
@@ -105,8 +104,8 @@ public class IfcStructuralLoadTemperatureImpl extends IfcStructuralLoadStaticImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getDeltaT_ConstantAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadTemperature_DeltaT_ConstantAsString(), true);
+	public IfcThermodynamicTemperatureMeasure getDeltaT_Y() {
+		return (IfcThermodynamicTemperatureMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadTemperature_DeltaT_Y(), true);
 	}
 
 	/**
@@ -114,43 +113,7 @@ public class IfcStructuralLoadTemperatureImpl extends IfcStructuralLoadStaticImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDeltaT_ConstantAsString(String newDeltaT_ConstantAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadTemperature_DeltaT_ConstantAsString(), newDeltaT_ConstantAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetDeltaT_ConstantAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadTemperature_DeltaT_ConstantAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetDeltaT_ConstantAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadTemperature_DeltaT_ConstantAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getDeltaT_Y() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadTemperature_DeltaT_Y(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDeltaT_Y(float newDeltaT_Y) {
+	public void setDeltaT_Y(IfcThermodynamicTemperatureMeasure newDeltaT_Y) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadTemperature_DeltaT_Y(), newDeltaT_Y);
 	}
 
@@ -177,8 +140,8 @@ public class IfcStructuralLoadTemperatureImpl extends IfcStructuralLoadStaticImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getDeltaT_YAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadTemperature_DeltaT_YAsString(), true);
+	public IfcThermodynamicTemperatureMeasure getDeltaT_Z() {
+		return (IfcThermodynamicTemperatureMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadTemperature_DeltaT_Z(), true);
 	}
 
 	/**
@@ -186,43 +149,7 @@ public class IfcStructuralLoadTemperatureImpl extends IfcStructuralLoadStaticImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDeltaT_YAsString(String newDeltaT_YAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadTemperature_DeltaT_YAsString(), newDeltaT_YAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetDeltaT_YAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadTemperature_DeltaT_YAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetDeltaT_YAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadTemperature_DeltaT_YAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getDeltaT_Z() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadTemperature_DeltaT_Z(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDeltaT_Z(float newDeltaT_Z) {
+	public void setDeltaT_Z(IfcThermodynamicTemperatureMeasure newDeltaT_Z) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadTemperature_DeltaT_Z(), newDeltaT_Z);
 	}
 
@@ -242,42 +169,6 @@ public class IfcStructuralLoadTemperatureImpl extends IfcStructuralLoadStaticImp
 	 */
 	public boolean isSetDeltaT_Z() {
 		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadTemperature_DeltaT_Z());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getDeltaT_ZAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadTemperature_DeltaT_ZAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDeltaT_ZAsString(String newDeltaT_ZAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadTemperature_DeltaT_ZAsString(), newDeltaT_ZAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetDeltaT_ZAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadTemperature_DeltaT_ZAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetDeltaT_ZAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadTemperature_DeltaT_ZAsString());
 	}
 
 } //IfcStructuralLoadTemperatureImpl

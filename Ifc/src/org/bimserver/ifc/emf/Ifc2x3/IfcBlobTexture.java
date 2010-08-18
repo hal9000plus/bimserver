@@ -41,58 +41,55 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcBlobTexture extends IfcSurfaceTexture {
 	/**
-	 * Returns the value of the '<em><b>Raster Format</b></em>' attribute.
+	 * Returns the value of the '<em><b>Raster Format</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Raster Format</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Raster Format</em>' attribute.
-	 * @see #setRasterFormat(String)
+	 * @return the value of the '<em>Raster Format</em>' reference.
+	 * @see #setRasterFormat(IfcIdentifier)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcBlobTexture_RasterFormat()
 	 * @model
 	 * @generated
 	 */
-	String getRasterFormat();
+	IfcIdentifier getRasterFormat();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBlobTexture#getRasterFormat <em>Raster Format</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBlobTexture#getRasterFormat <em>Raster Format</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Raster Format</em>' attribute.
+	 * @param value the new value of the '<em>Raster Format</em>' reference.
 	 * @see #getRasterFormat()
 	 * @generated
 	 */
-	void setRasterFormat(String value);
+	void setRasterFormat(IfcIdentifier value);
 
 	/**
-	 * Returns the value of the '<em><b>Raster Code</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.bimserver.ifc.emf.Ifc2x3.Tristate}.
+	 * Returns the value of the '<em><b>Raster Code</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Raster Code</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Raster Code</em>' attribute.
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Tristate
-	 * @see #setRasterCode(Tristate)
+	 * @return the value of the '<em>Raster Code</em>' reference.
+	 * @see #setRasterCode(IfcLogical)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcBlobTexture_RasterCode()
 	 * @model
 	 * @generated
 	 */
-	Tristate getRasterCode();
+	IfcLogical getRasterCode();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBlobTexture#getRasterCode <em>Raster Code</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBlobTexture#getRasterCode <em>Raster Code</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Raster Code</em>' attribute.
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Tristate
+	 * @param value the new value of the '<em>Raster Code</em>' reference.
 	 * @see #getRasterCode()
 	 * @generated
 	 */
-	void setRasterCode(Tristate value);
+	void setRasterCode(IfcLogical value);
 
 } // IfcBlobTexture

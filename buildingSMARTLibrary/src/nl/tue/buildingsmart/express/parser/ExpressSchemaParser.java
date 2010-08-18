@@ -3,15 +3,14 @@ package nl.tue.buildingsmart.express.parser;
 import gnu.getopt.Getopt;
 
 import java.io.BufferedInputStream;
-import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.io.PrintStream;
-import java.io.UnsupportedEncodingException;
 import java.net.URL;
 import java.util.Iterator;
 
@@ -66,10 +65,14 @@ public class ExpressSchemaParser {
 	}
 
 	public void parse() {
-		ByteArrayOutputStream log = new ByteArrayOutputStream();
 		try {
 			PrintStream stdErrOld = System.err;
 			PrintStream stdOutOld = System.out;
+			OutputStream log = new OutputStream(){
+				@Override
+				public void write(int b) throws IOException {
+					// void
+				}};
 			PrintStream myErr = new PrintStream(log);
 			System.setErr(myErr);
 			System.setOut(myErr);
@@ -95,20 +98,12 @@ public class ExpressSchemaParser {
 			// myErr.close();
 			walker.schema.constructHirarchyMap();
 		} catch (Exception e) {
-			LOGGER.error("", e);
-			try {
-				LOGGER.error(log.toString("UTF-8"));
-			} catch (UnsupportedEncodingException e1) {
-				e1.printStackTrace();
-			}
+			e.printStackTrace();
 		}
 	}
 
 	public SchemaDefinition getSchema() {
-		if (walker != null) {
-			return walker.getSchema();
-		}
-		return null;
+		return walker.getSchema();
 	}
 
 	public static void main(String[] argv) {

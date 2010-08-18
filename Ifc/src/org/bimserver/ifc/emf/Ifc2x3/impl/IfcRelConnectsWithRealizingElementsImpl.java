@@ -24,8 +24,11 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcElement;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRelConnectsWithRealizingElements;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -77,8 +80,8 @@ public class IfcRelConnectsWithRealizingElementsImpl extends IfcRelConnectsEleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getConnectionType() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcRelConnectsWithRealizingElements_ConnectionType(), true);
+	public IfcLabel getConnectionType() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcRelConnectsWithRealizingElements_ConnectionType(), true);
 	}
 
 	/**
@@ -86,7 +89,7 @@ public class IfcRelConnectsWithRealizingElementsImpl extends IfcRelConnectsEleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setConnectionType(String newConnectionType) {
+	public void setConnectionType(IfcLabel newConnectionType) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcRelConnectsWithRealizingElements_ConnectionType(), newConnectionType);
 	}
 

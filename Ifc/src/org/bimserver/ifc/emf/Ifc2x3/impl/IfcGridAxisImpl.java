@@ -22,15 +22,20 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
-import org.bimserver.emf.IdEObjectImpl;
+import org.bimserver.ifc.IfcRootObject;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcBoolean;
 import org.bimserver.ifc.emf.Ifc2x3.IfcCurve;
 import org.bimserver.ifc.emf.Ifc2x3.IfcGrid;
 import org.bimserver.ifc.emf.Ifc2x3.IfcGridAxis;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
 import org.bimserver.ifc.emf.Ifc2x3.IfcVirtualGridIntersection;
-import org.bimserver.ifc.emf.Ifc2x3.Tristate;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -51,7 +56,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class IfcGridAxisImpl extends IdEObjectImpl implements IfcGridAxis {
+public class IfcGridAxisImpl extends IfcRootObject implements IfcGridAxis {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -86,8 +91,8 @@ public class IfcGridAxisImpl extends IdEObjectImpl implements IfcGridAxis {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getAxisTag() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcGridAxis_AxisTag(), true);
+	public IfcLabel getAxisTag() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcGridAxis_AxisTag(), true);
 	}
 
 	/**
@@ -95,7 +100,7 @@ public class IfcGridAxisImpl extends IdEObjectImpl implements IfcGridAxis {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAxisTag(String newAxisTag) {
+	public void setAxisTag(IfcLabel newAxisTag) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcGridAxis_AxisTag(), newAxisTag);
 	}
 
@@ -140,8 +145,8 @@ public class IfcGridAxisImpl extends IdEObjectImpl implements IfcGridAxis {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Tristate getSameSense() {
-		return (Tristate) eGet(Ifc2x3Package.eINSTANCE.getIfcGridAxis_SameSense(), true);
+	public IfcBoolean getSameSense() {
+		return (IfcBoolean) eGet(Ifc2x3Package.eINSTANCE.getIfcGridAxis_SameSense(), true);
 	}
 
 	/**
@@ -149,7 +154,7 @@ public class IfcGridAxisImpl extends IdEObjectImpl implements IfcGridAxis {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSameSense(Tristate newSameSense) {
+	public void setSameSense(IfcBoolean newSameSense) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcGridAxis_SameSense(), newSameSense);
 	}
 

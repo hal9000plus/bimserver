@@ -22,11 +22,17 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
-import org.bimserver.emf.IdEObjectImpl;
+import org.bimserver.ifc.IfcRootObject;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcSizeSelect;
+import org.bimserver.ifc.emf.Ifc2x3.IfcTextAlignment;
+import org.bimserver.ifc.emf.Ifc2x3.IfcTextDecoration;
 import org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleTextModel;
+import org.bimserver.ifc.emf.Ifc2x3.IfcTextTransformation;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -47,7 +53,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class IfcTextStyleTextModelImpl extends IdEObjectImpl implements IfcTextStyleTextModel {
+public class IfcTextStyleTextModelImpl extends IfcRootObject implements IfcTextStyleTextModel {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -118,8 +124,8 @@ public class IfcTextStyleTextModelImpl extends IdEObjectImpl implements IfcTextS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getTextAlign() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcTextStyleTextModel_TextAlign(), true);
+	public IfcTextAlignment getTextAlign() {
+		return (IfcTextAlignment) eGet(Ifc2x3Package.eINSTANCE.getIfcTextStyleTextModel_TextAlign(), true);
 	}
 
 	/**
@@ -127,7 +133,7 @@ public class IfcTextStyleTextModelImpl extends IdEObjectImpl implements IfcTextS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTextAlign(String newTextAlign) {
+	public void setTextAlign(IfcTextAlignment newTextAlign) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcTextStyleTextModel_TextAlign(), newTextAlign);
 	}
 
@@ -154,8 +160,8 @@ public class IfcTextStyleTextModelImpl extends IdEObjectImpl implements IfcTextS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getTextDecoration() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcTextStyleTextModel_TextDecoration(), true);
+	public IfcTextDecoration getTextDecoration() {
+		return (IfcTextDecoration) eGet(Ifc2x3Package.eINSTANCE.getIfcTextStyleTextModel_TextDecoration(), true);
 	}
 
 	/**
@@ -163,7 +169,7 @@ public class IfcTextStyleTextModelImpl extends IdEObjectImpl implements IfcTextS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTextDecoration(String newTextDecoration) {
+	public void setTextDecoration(IfcTextDecoration newTextDecoration) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcTextStyleTextModel_TextDecoration(), newTextDecoration);
 	}
 
@@ -262,8 +268,8 @@ public class IfcTextStyleTextModelImpl extends IdEObjectImpl implements IfcTextS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getTextTransform() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcTextStyleTextModel_TextTransform(), true);
+	public IfcTextTransformation getTextTransform() {
+		return (IfcTextTransformation) eGet(Ifc2x3Package.eINSTANCE.getIfcTextStyleTextModel_TextTransform(), true);
 	}
 
 	/**
@@ -271,7 +277,7 @@ public class IfcTextStyleTextModelImpl extends IdEObjectImpl implements IfcTextS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTextTransform(String newTextTransform) {
+	public void setTextTransform(IfcTextTransformation newTextTransform) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcTextStyleTextModel_TextTransform(), newTextTransform);
 	}
 

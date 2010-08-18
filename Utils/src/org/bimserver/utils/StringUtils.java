@@ -1,10 +1,5 @@
 package org.bimserver.utils;
 
-import java.io.File;
-import java.io.UnsupportedEncodingException;
-import java.net.URL;
-import java.net.URLDecoder;
-
 /******************************************************************************
  * (c) Copyright bimserver.org 2009
  * Licensed under GNU GPLv3
@@ -87,22 +82,5 @@ public class StringUtils {
 			}
 		}
 		return length + 1;
-	}
-	
-	public static String getPrettyFileUrl(URL url) {
-		try {
-			String result = URLDecoder.decode(url.toString(), "UTF-8");
-			if (result.startsWith("file:/")) {
-				result = result.substring(6);
-			}
-			if (result.startsWith("jndi:/")) {
-				result = result.substring(6);
-			}
-			result = result.replace("/", File.separator).replace("\\", File.separator);
-			return result;
-		} catch (UnsupportedEncodingException e) {
-			e.printStackTrace();
-		}
-		return url.toString();
 	}
 }

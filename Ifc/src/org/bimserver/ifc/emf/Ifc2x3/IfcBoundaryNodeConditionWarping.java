@@ -31,7 +31,6 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundaryNodeConditionWarping#getWarpingStiffness <em>Warping Stiffness</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundaryNodeConditionWarping#getWarpingStiffnessAsString <em>Warping Stiffness As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -41,109 +40,56 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcBoundaryNodeConditionWarping extends IfcBoundaryNodeCondition {
 	/**
-	 * Returns the value of the '<em><b>Warping Stiffness</b></em>' attribute.
+	 * Returns the value of the '<em><b>Warping Stiffness</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Warping Stiffness</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Warping Stiffness</em>' attribute.
+	 * @return the value of the '<em>Warping Stiffness</em>' reference.
 	 * @see #isSetWarpingStiffness()
 	 * @see #unsetWarpingStiffness()
-	 * @see #setWarpingStiffness(float)
+	 * @see #setWarpingStiffness(IfcWarpingMomentMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcBoundaryNodeConditionWarping_WarpingStiffness()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getWarpingStiffness();
+	IfcWarpingMomentMeasure getWarpingStiffness();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundaryNodeConditionWarping#getWarpingStiffness <em>Warping Stiffness</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundaryNodeConditionWarping#getWarpingStiffness <em>Warping Stiffness</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Warping Stiffness</em>' attribute.
+	 * @param value the new value of the '<em>Warping Stiffness</em>' reference.
 	 * @see #isSetWarpingStiffness()
 	 * @see #unsetWarpingStiffness()
 	 * @see #getWarpingStiffness()
 	 * @generated
 	 */
-	void setWarpingStiffness(float value);
+	void setWarpingStiffness(IfcWarpingMomentMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundaryNodeConditionWarping#getWarpingStiffness <em>Warping Stiffness</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundaryNodeConditionWarping#getWarpingStiffness <em>Warping Stiffness</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetWarpingStiffness()
 	 * @see #getWarpingStiffness()
-	 * @see #setWarpingStiffness(float)
+	 * @see #setWarpingStiffness(IfcWarpingMomentMeasure)
 	 * @generated
 	 */
 	void unsetWarpingStiffness();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundaryNodeConditionWarping#getWarpingStiffness <em>Warping Stiffness</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundaryNodeConditionWarping#getWarpingStiffness <em>Warping Stiffness</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Warping Stiffness</em>' attribute is set.
+	 * @return whether the value of the '<em>Warping Stiffness</em>' reference is set.
 	 * @see #unsetWarpingStiffness()
 	 * @see #getWarpingStiffness()
-	 * @see #setWarpingStiffness(float)
+	 * @see #setWarpingStiffness(IfcWarpingMomentMeasure)
 	 * @generated
 	 */
 	boolean isSetWarpingStiffness();
-
-	/**
-	 * Returns the value of the '<em><b>Warping Stiffness As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Warping Stiffness As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Warping Stiffness As String</em>' attribute.
-	 * @see #isSetWarpingStiffnessAsString()
-	 * @see #unsetWarpingStiffnessAsString()
-	 * @see #setWarpingStiffnessAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcBoundaryNodeConditionWarping_WarpingStiffnessAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getWarpingStiffnessAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundaryNodeConditionWarping#getWarpingStiffnessAsString <em>Warping Stiffness As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Warping Stiffness As String</em>' attribute.
-	 * @see #isSetWarpingStiffnessAsString()
-	 * @see #unsetWarpingStiffnessAsString()
-	 * @see #getWarpingStiffnessAsString()
-	 * @generated
-	 */
-	void setWarpingStiffnessAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundaryNodeConditionWarping#getWarpingStiffnessAsString <em>Warping Stiffness As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetWarpingStiffnessAsString()
-	 * @see #getWarpingStiffnessAsString()
-	 * @see #setWarpingStiffnessAsString(String)
-	 * @generated
-	 */
-	void unsetWarpingStiffnessAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBoundaryNodeConditionWarping#getWarpingStiffnessAsString <em>Warping Stiffness As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Warping Stiffness As String</em>' attribute is set.
-	 * @see #unsetWarpingStiffnessAsString()
-	 * @see #getWarpingStiffnessAsString()
-	 * @see #setWarpingStiffnessAsString(String)
-	 * @generated
-	 */
-	boolean isSetWarpingStiffnessAsString();
 
 } // IfcBoundaryNodeConditionWarping

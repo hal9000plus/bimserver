@@ -31,23 +31,14 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getVisibleTransmittance <em>Visible Transmittance</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getVisibleTransmittanceAsString <em>Visible Transmittance As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getSolarTransmittance <em>Solar Transmittance</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getSolarTransmittanceAsString <em>Solar Transmittance As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getThermalIrTransmittance <em>Thermal Ir Transmittance</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getThermalIrTransmittanceAsString <em>Thermal Ir Transmittance As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getThermalIrEmissivityBack <em>Thermal Ir Emissivity Back</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getThermalIrEmissivityBackAsString <em>Thermal Ir Emissivity Back As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getThermalIrEmissivityFront <em>Thermal Ir Emissivity Front</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getThermalIrEmissivityFrontAsString <em>Thermal Ir Emissivity Front As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getVisibleReflectanceBack <em>Visible Reflectance Back</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getVisibleReflectanceBackAsString <em>Visible Reflectance Back As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getVisibleReflectanceFront <em>Visible Reflectance Front</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getVisibleReflectanceFrontAsString <em>Visible Reflectance Front As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getSolarReflectanceFront <em>Solar Reflectance Front</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getSolarReflectanceFrontAsString <em>Solar Reflectance Front As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getSolarReflectanceBack <em>Solar Reflectance Back</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getSolarReflectanceBackAsString <em>Solar Reflectance Back As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -57,957 +48,480 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcOpticalMaterialProperties extends IfcMaterialProperties {
 	/**
-	 * Returns the value of the '<em><b>Visible Transmittance</b></em>' attribute.
+	 * Returns the value of the '<em><b>Visible Transmittance</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Visible Transmittance</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Visible Transmittance</em>' attribute.
+	 * @return the value of the '<em>Visible Transmittance</em>' reference.
 	 * @see #isSetVisibleTransmittance()
 	 * @see #unsetVisibleTransmittance()
-	 * @see #setVisibleTransmittance(float)
+	 * @see #setVisibleTransmittance(IfcPositiveRatioMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcOpticalMaterialProperties_VisibleTransmittance()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getVisibleTransmittance();
+	IfcPositiveRatioMeasure getVisibleTransmittance();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getVisibleTransmittance <em>Visible Transmittance</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getVisibleTransmittance <em>Visible Transmittance</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Visible Transmittance</em>' attribute.
+	 * @param value the new value of the '<em>Visible Transmittance</em>' reference.
 	 * @see #isSetVisibleTransmittance()
 	 * @see #unsetVisibleTransmittance()
 	 * @see #getVisibleTransmittance()
 	 * @generated
 	 */
-	void setVisibleTransmittance(float value);
+	void setVisibleTransmittance(IfcPositiveRatioMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getVisibleTransmittance <em>Visible Transmittance</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getVisibleTransmittance <em>Visible Transmittance</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetVisibleTransmittance()
 	 * @see #getVisibleTransmittance()
-	 * @see #setVisibleTransmittance(float)
+	 * @see #setVisibleTransmittance(IfcPositiveRatioMeasure)
 	 * @generated
 	 */
 	void unsetVisibleTransmittance();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getVisibleTransmittance <em>Visible Transmittance</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getVisibleTransmittance <em>Visible Transmittance</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Visible Transmittance</em>' attribute is set.
+	 * @return whether the value of the '<em>Visible Transmittance</em>' reference is set.
 	 * @see #unsetVisibleTransmittance()
 	 * @see #getVisibleTransmittance()
-	 * @see #setVisibleTransmittance(float)
+	 * @see #setVisibleTransmittance(IfcPositiveRatioMeasure)
 	 * @generated
 	 */
 	boolean isSetVisibleTransmittance();
 
 	/**
-	 * Returns the value of the '<em><b>Visible Transmittance As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Visible Transmittance As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Visible Transmittance As String</em>' attribute.
-	 * @see #isSetVisibleTransmittanceAsString()
-	 * @see #unsetVisibleTransmittanceAsString()
-	 * @see #setVisibleTransmittanceAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcOpticalMaterialProperties_VisibleTransmittanceAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getVisibleTransmittanceAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getVisibleTransmittanceAsString <em>Visible Transmittance As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Visible Transmittance As String</em>' attribute.
-	 * @see #isSetVisibleTransmittanceAsString()
-	 * @see #unsetVisibleTransmittanceAsString()
-	 * @see #getVisibleTransmittanceAsString()
-	 * @generated
-	 */
-	void setVisibleTransmittanceAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getVisibleTransmittanceAsString <em>Visible Transmittance As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetVisibleTransmittanceAsString()
-	 * @see #getVisibleTransmittanceAsString()
-	 * @see #setVisibleTransmittanceAsString(String)
-	 * @generated
-	 */
-	void unsetVisibleTransmittanceAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getVisibleTransmittanceAsString <em>Visible Transmittance As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Visible Transmittance As String</em>' attribute is set.
-	 * @see #unsetVisibleTransmittanceAsString()
-	 * @see #getVisibleTransmittanceAsString()
-	 * @see #setVisibleTransmittanceAsString(String)
-	 * @generated
-	 */
-	boolean isSetVisibleTransmittanceAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Solar Transmittance</b></em>' attribute.
+	 * Returns the value of the '<em><b>Solar Transmittance</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Solar Transmittance</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Solar Transmittance</em>' attribute.
+	 * @return the value of the '<em>Solar Transmittance</em>' reference.
 	 * @see #isSetSolarTransmittance()
 	 * @see #unsetSolarTransmittance()
-	 * @see #setSolarTransmittance(float)
+	 * @see #setSolarTransmittance(IfcPositiveRatioMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcOpticalMaterialProperties_SolarTransmittance()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getSolarTransmittance();
+	IfcPositiveRatioMeasure getSolarTransmittance();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getSolarTransmittance <em>Solar Transmittance</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getSolarTransmittance <em>Solar Transmittance</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Solar Transmittance</em>' attribute.
+	 * @param value the new value of the '<em>Solar Transmittance</em>' reference.
 	 * @see #isSetSolarTransmittance()
 	 * @see #unsetSolarTransmittance()
 	 * @see #getSolarTransmittance()
 	 * @generated
 	 */
-	void setSolarTransmittance(float value);
+	void setSolarTransmittance(IfcPositiveRatioMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getSolarTransmittance <em>Solar Transmittance</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getSolarTransmittance <em>Solar Transmittance</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetSolarTransmittance()
 	 * @see #getSolarTransmittance()
-	 * @see #setSolarTransmittance(float)
+	 * @see #setSolarTransmittance(IfcPositiveRatioMeasure)
 	 * @generated
 	 */
 	void unsetSolarTransmittance();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getSolarTransmittance <em>Solar Transmittance</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getSolarTransmittance <em>Solar Transmittance</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Solar Transmittance</em>' attribute is set.
+	 * @return whether the value of the '<em>Solar Transmittance</em>' reference is set.
 	 * @see #unsetSolarTransmittance()
 	 * @see #getSolarTransmittance()
-	 * @see #setSolarTransmittance(float)
+	 * @see #setSolarTransmittance(IfcPositiveRatioMeasure)
 	 * @generated
 	 */
 	boolean isSetSolarTransmittance();
 
 	/**
-	 * Returns the value of the '<em><b>Solar Transmittance As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Solar Transmittance As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Solar Transmittance As String</em>' attribute.
-	 * @see #isSetSolarTransmittanceAsString()
-	 * @see #unsetSolarTransmittanceAsString()
-	 * @see #setSolarTransmittanceAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcOpticalMaterialProperties_SolarTransmittanceAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getSolarTransmittanceAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getSolarTransmittanceAsString <em>Solar Transmittance As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Solar Transmittance As String</em>' attribute.
-	 * @see #isSetSolarTransmittanceAsString()
-	 * @see #unsetSolarTransmittanceAsString()
-	 * @see #getSolarTransmittanceAsString()
-	 * @generated
-	 */
-	void setSolarTransmittanceAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getSolarTransmittanceAsString <em>Solar Transmittance As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetSolarTransmittanceAsString()
-	 * @see #getSolarTransmittanceAsString()
-	 * @see #setSolarTransmittanceAsString(String)
-	 * @generated
-	 */
-	void unsetSolarTransmittanceAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getSolarTransmittanceAsString <em>Solar Transmittance As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Solar Transmittance As String</em>' attribute is set.
-	 * @see #unsetSolarTransmittanceAsString()
-	 * @see #getSolarTransmittanceAsString()
-	 * @see #setSolarTransmittanceAsString(String)
-	 * @generated
-	 */
-	boolean isSetSolarTransmittanceAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Thermal Ir Transmittance</b></em>' attribute.
+	 * Returns the value of the '<em><b>Thermal Ir Transmittance</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Thermal Ir Transmittance</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Thermal Ir Transmittance</em>' attribute.
+	 * @return the value of the '<em>Thermal Ir Transmittance</em>' reference.
 	 * @see #isSetThermalIrTransmittance()
 	 * @see #unsetThermalIrTransmittance()
-	 * @see #setThermalIrTransmittance(float)
+	 * @see #setThermalIrTransmittance(IfcPositiveRatioMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcOpticalMaterialProperties_ThermalIrTransmittance()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getThermalIrTransmittance();
+	IfcPositiveRatioMeasure getThermalIrTransmittance();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getThermalIrTransmittance <em>Thermal Ir Transmittance</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getThermalIrTransmittance <em>Thermal Ir Transmittance</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Thermal Ir Transmittance</em>' attribute.
+	 * @param value the new value of the '<em>Thermal Ir Transmittance</em>' reference.
 	 * @see #isSetThermalIrTransmittance()
 	 * @see #unsetThermalIrTransmittance()
 	 * @see #getThermalIrTransmittance()
 	 * @generated
 	 */
-	void setThermalIrTransmittance(float value);
+	void setThermalIrTransmittance(IfcPositiveRatioMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getThermalIrTransmittance <em>Thermal Ir Transmittance</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getThermalIrTransmittance <em>Thermal Ir Transmittance</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetThermalIrTransmittance()
 	 * @see #getThermalIrTransmittance()
-	 * @see #setThermalIrTransmittance(float)
+	 * @see #setThermalIrTransmittance(IfcPositiveRatioMeasure)
 	 * @generated
 	 */
 	void unsetThermalIrTransmittance();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getThermalIrTransmittance <em>Thermal Ir Transmittance</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getThermalIrTransmittance <em>Thermal Ir Transmittance</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Thermal Ir Transmittance</em>' attribute is set.
+	 * @return whether the value of the '<em>Thermal Ir Transmittance</em>' reference is set.
 	 * @see #unsetThermalIrTransmittance()
 	 * @see #getThermalIrTransmittance()
-	 * @see #setThermalIrTransmittance(float)
+	 * @see #setThermalIrTransmittance(IfcPositiveRatioMeasure)
 	 * @generated
 	 */
 	boolean isSetThermalIrTransmittance();
 
 	/**
-	 * Returns the value of the '<em><b>Thermal Ir Transmittance As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Thermal Ir Transmittance As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Thermal Ir Transmittance As String</em>' attribute.
-	 * @see #isSetThermalIrTransmittanceAsString()
-	 * @see #unsetThermalIrTransmittanceAsString()
-	 * @see #setThermalIrTransmittanceAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcOpticalMaterialProperties_ThermalIrTransmittanceAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getThermalIrTransmittanceAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getThermalIrTransmittanceAsString <em>Thermal Ir Transmittance As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Thermal Ir Transmittance As String</em>' attribute.
-	 * @see #isSetThermalIrTransmittanceAsString()
-	 * @see #unsetThermalIrTransmittanceAsString()
-	 * @see #getThermalIrTransmittanceAsString()
-	 * @generated
-	 */
-	void setThermalIrTransmittanceAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getThermalIrTransmittanceAsString <em>Thermal Ir Transmittance As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetThermalIrTransmittanceAsString()
-	 * @see #getThermalIrTransmittanceAsString()
-	 * @see #setThermalIrTransmittanceAsString(String)
-	 * @generated
-	 */
-	void unsetThermalIrTransmittanceAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getThermalIrTransmittanceAsString <em>Thermal Ir Transmittance As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Thermal Ir Transmittance As String</em>' attribute is set.
-	 * @see #unsetThermalIrTransmittanceAsString()
-	 * @see #getThermalIrTransmittanceAsString()
-	 * @see #setThermalIrTransmittanceAsString(String)
-	 * @generated
-	 */
-	boolean isSetThermalIrTransmittanceAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Thermal Ir Emissivity Back</b></em>' attribute.
+	 * Returns the value of the '<em><b>Thermal Ir Emissivity Back</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Thermal Ir Emissivity Back</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Thermal Ir Emissivity Back</em>' attribute.
+	 * @return the value of the '<em>Thermal Ir Emissivity Back</em>' reference.
 	 * @see #isSetThermalIrEmissivityBack()
 	 * @see #unsetThermalIrEmissivityBack()
-	 * @see #setThermalIrEmissivityBack(float)
+	 * @see #setThermalIrEmissivityBack(IfcPositiveRatioMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcOpticalMaterialProperties_ThermalIrEmissivityBack()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getThermalIrEmissivityBack();
+	IfcPositiveRatioMeasure getThermalIrEmissivityBack();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getThermalIrEmissivityBack <em>Thermal Ir Emissivity Back</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getThermalIrEmissivityBack <em>Thermal Ir Emissivity Back</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Thermal Ir Emissivity Back</em>' attribute.
+	 * @param value the new value of the '<em>Thermal Ir Emissivity Back</em>' reference.
 	 * @see #isSetThermalIrEmissivityBack()
 	 * @see #unsetThermalIrEmissivityBack()
 	 * @see #getThermalIrEmissivityBack()
 	 * @generated
 	 */
-	void setThermalIrEmissivityBack(float value);
+	void setThermalIrEmissivityBack(IfcPositiveRatioMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getThermalIrEmissivityBack <em>Thermal Ir Emissivity Back</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getThermalIrEmissivityBack <em>Thermal Ir Emissivity Back</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetThermalIrEmissivityBack()
 	 * @see #getThermalIrEmissivityBack()
-	 * @see #setThermalIrEmissivityBack(float)
+	 * @see #setThermalIrEmissivityBack(IfcPositiveRatioMeasure)
 	 * @generated
 	 */
 	void unsetThermalIrEmissivityBack();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getThermalIrEmissivityBack <em>Thermal Ir Emissivity Back</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getThermalIrEmissivityBack <em>Thermal Ir Emissivity Back</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Thermal Ir Emissivity Back</em>' attribute is set.
+	 * @return whether the value of the '<em>Thermal Ir Emissivity Back</em>' reference is set.
 	 * @see #unsetThermalIrEmissivityBack()
 	 * @see #getThermalIrEmissivityBack()
-	 * @see #setThermalIrEmissivityBack(float)
+	 * @see #setThermalIrEmissivityBack(IfcPositiveRatioMeasure)
 	 * @generated
 	 */
 	boolean isSetThermalIrEmissivityBack();
 
 	/**
-	 * Returns the value of the '<em><b>Thermal Ir Emissivity Back As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Thermal Ir Emissivity Back As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Thermal Ir Emissivity Back As String</em>' attribute.
-	 * @see #isSetThermalIrEmissivityBackAsString()
-	 * @see #unsetThermalIrEmissivityBackAsString()
-	 * @see #setThermalIrEmissivityBackAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcOpticalMaterialProperties_ThermalIrEmissivityBackAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getThermalIrEmissivityBackAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getThermalIrEmissivityBackAsString <em>Thermal Ir Emissivity Back As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Thermal Ir Emissivity Back As String</em>' attribute.
-	 * @see #isSetThermalIrEmissivityBackAsString()
-	 * @see #unsetThermalIrEmissivityBackAsString()
-	 * @see #getThermalIrEmissivityBackAsString()
-	 * @generated
-	 */
-	void setThermalIrEmissivityBackAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getThermalIrEmissivityBackAsString <em>Thermal Ir Emissivity Back As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetThermalIrEmissivityBackAsString()
-	 * @see #getThermalIrEmissivityBackAsString()
-	 * @see #setThermalIrEmissivityBackAsString(String)
-	 * @generated
-	 */
-	void unsetThermalIrEmissivityBackAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getThermalIrEmissivityBackAsString <em>Thermal Ir Emissivity Back As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Thermal Ir Emissivity Back As String</em>' attribute is set.
-	 * @see #unsetThermalIrEmissivityBackAsString()
-	 * @see #getThermalIrEmissivityBackAsString()
-	 * @see #setThermalIrEmissivityBackAsString(String)
-	 * @generated
-	 */
-	boolean isSetThermalIrEmissivityBackAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Thermal Ir Emissivity Front</b></em>' attribute.
+	 * Returns the value of the '<em><b>Thermal Ir Emissivity Front</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Thermal Ir Emissivity Front</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Thermal Ir Emissivity Front</em>' attribute.
+	 * @return the value of the '<em>Thermal Ir Emissivity Front</em>' reference.
 	 * @see #isSetThermalIrEmissivityFront()
 	 * @see #unsetThermalIrEmissivityFront()
-	 * @see #setThermalIrEmissivityFront(float)
+	 * @see #setThermalIrEmissivityFront(IfcPositiveRatioMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcOpticalMaterialProperties_ThermalIrEmissivityFront()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getThermalIrEmissivityFront();
+	IfcPositiveRatioMeasure getThermalIrEmissivityFront();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getThermalIrEmissivityFront <em>Thermal Ir Emissivity Front</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getThermalIrEmissivityFront <em>Thermal Ir Emissivity Front</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Thermal Ir Emissivity Front</em>' attribute.
+	 * @param value the new value of the '<em>Thermal Ir Emissivity Front</em>' reference.
 	 * @see #isSetThermalIrEmissivityFront()
 	 * @see #unsetThermalIrEmissivityFront()
 	 * @see #getThermalIrEmissivityFront()
 	 * @generated
 	 */
-	void setThermalIrEmissivityFront(float value);
+	void setThermalIrEmissivityFront(IfcPositiveRatioMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getThermalIrEmissivityFront <em>Thermal Ir Emissivity Front</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getThermalIrEmissivityFront <em>Thermal Ir Emissivity Front</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetThermalIrEmissivityFront()
 	 * @see #getThermalIrEmissivityFront()
-	 * @see #setThermalIrEmissivityFront(float)
+	 * @see #setThermalIrEmissivityFront(IfcPositiveRatioMeasure)
 	 * @generated
 	 */
 	void unsetThermalIrEmissivityFront();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getThermalIrEmissivityFront <em>Thermal Ir Emissivity Front</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getThermalIrEmissivityFront <em>Thermal Ir Emissivity Front</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Thermal Ir Emissivity Front</em>' attribute is set.
+	 * @return whether the value of the '<em>Thermal Ir Emissivity Front</em>' reference is set.
 	 * @see #unsetThermalIrEmissivityFront()
 	 * @see #getThermalIrEmissivityFront()
-	 * @see #setThermalIrEmissivityFront(float)
+	 * @see #setThermalIrEmissivityFront(IfcPositiveRatioMeasure)
 	 * @generated
 	 */
 	boolean isSetThermalIrEmissivityFront();
 
 	/**
-	 * Returns the value of the '<em><b>Thermal Ir Emissivity Front As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Thermal Ir Emissivity Front As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Thermal Ir Emissivity Front As String</em>' attribute.
-	 * @see #isSetThermalIrEmissivityFrontAsString()
-	 * @see #unsetThermalIrEmissivityFrontAsString()
-	 * @see #setThermalIrEmissivityFrontAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcOpticalMaterialProperties_ThermalIrEmissivityFrontAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getThermalIrEmissivityFrontAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getThermalIrEmissivityFrontAsString <em>Thermal Ir Emissivity Front As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Thermal Ir Emissivity Front As String</em>' attribute.
-	 * @see #isSetThermalIrEmissivityFrontAsString()
-	 * @see #unsetThermalIrEmissivityFrontAsString()
-	 * @see #getThermalIrEmissivityFrontAsString()
-	 * @generated
-	 */
-	void setThermalIrEmissivityFrontAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getThermalIrEmissivityFrontAsString <em>Thermal Ir Emissivity Front As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetThermalIrEmissivityFrontAsString()
-	 * @see #getThermalIrEmissivityFrontAsString()
-	 * @see #setThermalIrEmissivityFrontAsString(String)
-	 * @generated
-	 */
-	void unsetThermalIrEmissivityFrontAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getThermalIrEmissivityFrontAsString <em>Thermal Ir Emissivity Front As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Thermal Ir Emissivity Front As String</em>' attribute is set.
-	 * @see #unsetThermalIrEmissivityFrontAsString()
-	 * @see #getThermalIrEmissivityFrontAsString()
-	 * @see #setThermalIrEmissivityFrontAsString(String)
-	 * @generated
-	 */
-	boolean isSetThermalIrEmissivityFrontAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Visible Reflectance Back</b></em>' attribute.
+	 * Returns the value of the '<em><b>Visible Reflectance Back</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Visible Reflectance Back</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Visible Reflectance Back</em>' attribute.
+	 * @return the value of the '<em>Visible Reflectance Back</em>' reference.
 	 * @see #isSetVisibleReflectanceBack()
 	 * @see #unsetVisibleReflectanceBack()
-	 * @see #setVisibleReflectanceBack(float)
+	 * @see #setVisibleReflectanceBack(IfcPositiveRatioMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcOpticalMaterialProperties_VisibleReflectanceBack()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getVisibleReflectanceBack();
+	IfcPositiveRatioMeasure getVisibleReflectanceBack();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getVisibleReflectanceBack <em>Visible Reflectance Back</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getVisibleReflectanceBack <em>Visible Reflectance Back</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Visible Reflectance Back</em>' attribute.
+	 * @param value the new value of the '<em>Visible Reflectance Back</em>' reference.
 	 * @see #isSetVisibleReflectanceBack()
 	 * @see #unsetVisibleReflectanceBack()
 	 * @see #getVisibleReflectanceBack()
 	 * @generated
 	 */
-	void setVisibleReflectanceBack(float value);
+	void setVisibleReflectanceBack(IfcPositiveRatioMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getVisibleReflectanceBack <em>Visible Reflectance Back</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getVisibleReflectanceBack <em>Visible Reflectance Back</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetVisibleReflectanceBack()
 	 * @see #getVisibleReflectanceBack()
-	 * @see #setVisibleReflectanceBack(float)
+	 * @see #setVisibleReflectanceBack(IfcPositiveRatioMeasure)
 	 * @generated
 	 */
 	void unsetVisibleReflectanceBack();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getVisibleReflectanceBack <em>Visible Reflectance Back</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getVisibleReflectanceBack <em>Visible Reflectance Back</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Visible Reflectance Back</em>' attribute is set.
+	 * @return whether the value of the '<em>Visible Reflectance Back</em>' reference is set.
 	 * @see #unsetVisibleReflectanceBack()
 	 * @see #getVisibleReflectanceBack()
-	 * @see #setVisibleReflectanceBack(float)
+	 * @see #setVisibleReflectanceBack(IfcPositiveRatioMeasure)
 	 * @generated
 	 */
 	boolean isSetVisibleReflectanceBack();
 
 	/**
-	 * Returns the value of the '<em><b>Visible Reflectance Back As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Visible Reflectance Back As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Visible Reflectance Back As String</em>' attribute.
-	 * @see #isSetVisibleReflectanceBackAsString()
-	 * @see #unsetVisibleReflectanceBackAsString()
-	 * @see #setVisibleReflectanceBackAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcOpticalMaterialProperties_VisibleReflectanceBackAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getVisibleReflectanceBackAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getVisibleReflectanceBackAsString <em>Visible Reflectance Back As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Visible Reflectance Back As String</em>' attribute.
-	 * @see #isSetVisibleReflectanceBackAsString()
-	 * @see #unsetVisibleReflectanceBackAsString()
-	 * @see #getVisibleReflectanceBackAsString()
-	 * @generated
-	 */
-	void setVisibleReflectanceBackAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getVisibleReflectanceBackAsString <em>Visible Reflectance Back As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetVisibleReflectanceBackAsString()
-	 * @see #getVisibleReflectanceBackAsString()
-	 * @see #setVisibleReflectanceBackAsString(String)
-	 * @generated
-	 */
-	void unsetVisibleReflectanceBackAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getVisibleReflectanceBackAsString <em>Visible Reflectance Back As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Visible Reflectance Back As String</em>' attribute is set.
-	 * @see #unsetVisibleReflectanceBackAsString()
-	 * @see #getVisibleReflectanceBackAsString()
-	 * @see #setVisibleReflectanceBackAsString(String)
-	 * @generated
-	 */
-	boolean isSetVisibleReflectanceBackAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Visible Reflectance Front</b></em>' attribute.
+	 * Returns the value of the '<em><b>Visible Reflectance Front</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Visible Reflectance Front</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Visible Reflectance Front</em>' attribute.
+	 * @return the value of the '<em>Visible Reflectance Front</em>' reference.
 	 * @see #isSetVisibleReflectanceFront()
 	 * @see #unsetVisibleReflectanceFront()
-	 * @see #setVisibleReflectanceFront(float)
+	 * @see #setVisibleReflectanceFront(IfcPositiveRatioMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcOpticalMaterialProperties_VisibleReflectanceFront()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getVisibleReflectanceFront();
+	IfcPositiveRatioMeasure getVisibleReflectanceFront();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getVisibleReflectanceFront <em>Visible Reflectance Front</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getVisibleReflectanceFront <em>Visible Reflectance Front</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Visible Reflectance Front</em>' attribute.
+	 * @param value the new value of the '<em>Visible Reflectance Front</em>' reference.
 	 * @see #isSetVisibleReflectanceFront()
 	 * @see #unsetVisibleReflectanceFront()
 	 * @see #getVisibleReflectanceFront()
 	 * @generated
 	 */
-	void setVisibleReflectanceFront(float value);
+	void setVisibleReflectanceFront(IfcPositiveRatioMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getVisibleReflectanceFront <em>Visible Reflectance Front</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getVisibleReflectanceFront <em>Visible Reflectance Front</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetVisibleReflectanceFront()
 	 * @see #getVisibleReflectanceFront()
-	 * @see #setVisibleReflectanceFront(float)
+	 * @see #setVisibleReflectanceFront(IfcPositiveRatioMeasure)
 	 * @generated
 	 */
 	void unsetVisibleReflectanceFront();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getVisibleReflectanceFront <em>Visible Reflectance Front</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getVisibleReflectanceFront <em>Visible Reflectance Front</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Visible Reflectance Front</em>' attribute is set.
+	 * @return whether the value of the '<em>Visible Reflectance Front</em>' reference is set.
 	 * @see #unsetVisibleReflectanceFront()
 	 * @see #getVisibleReflectanceFront()
-	 * @see #setVisibleReflectanceFront(float)
+	 * @see #setVisibleReflectanceFront(IfcPositiveRatioMeasure)
 	 * @generated
 	 */
 	boolean isSetVisibleReflectanceFront();
 
 	/**
-	 * Returns the value of the '<em><b>Visible Reflectance Front As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Visible Reflectance Front As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Visible Reflectance Front As String</em>' attribute.
-	 * @see #isSetVisibleReflectanceFrontAsString()
-	 * @see #unsetVisibleReflectanceFrontAsString()
-	 * @see #setVisibleReflectanceFrontAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcOpticalMaterialProperties_VisibleReflectanceFrontAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getVisibleReflectanceFrontAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getVisibleReflectanceFrontAsString <em>Visible Reflectance Front As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Visible Reflectance Front As String</em>' attribute.
-	 * @see #isSetVisibleReflectanceFrontAsString()
-	 * @see #unsetVisibleReflectanceFrontAsString()
-	 * @see #getVisibleReflectanceFrontAsString()
-	 * @generated
-	 */
-	void setVisibleReflectanceFrontAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getVisibleReflectanceFrontAsString <em>Visible Reflectance Front As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetVisibleReflectanceFrontAsString()
-	 * @see #getVisibleReflectanceFrontAsString()
-	 * @see #setVisibleReflectanceFrontAsString(String)
-	 * @generated
-	 */
-	void unsetVisibleReflectanceFrontAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getVisibleReflectanceFrontAsString <em>Visible Reflectance Front As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Visible Reflectance Front As String</em>' attribute is set.
-	 * @see #unsetVisibleReflectanceFrontAsString()
-	 * @see #getVisibleReflectanceFrontAsString()
-	 * @see #setVisibleReflectanceFrontAsString(String)
-	 * @generated
-	 */
-	boolean isSetVisibleReflectanceFrontAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Solar Reflectance Front</b></em>' attribute.
+	 * Returns the value of the '<em><b>Solar Reflectance Front</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Solar Reflectance Front</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Solar Reflectance Front</em>' attribute.
+	 * @return the value of the '<em>Solar Reflectance Front</em>' reference.
 	 * @see #isSetSolarReflectanceFront()
 	 * @see #unsetSolarReflectanceFront()
-	 * @see #setSolarReflectanceFront(float)
+	 * @see #setSolarReflectanceFront(IfcPositiveRatioMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcOpticalMaterialProperties_SolarReflectanceFront()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getSolarReflectanceFront();
+	IfcPositiveRatioMeasure getSolarReflectanceFront();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getSolarReflectanceFront <em>Solar Reflectance Front</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getSolarReflectanceFront <em>Solar Reflectance Front</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Solar Reflectance Front</em>' attribute.
+	 * @param value the new value of the '<em>Solar Reflectance Front</em>' reference.
 	 * @see #isSetSolarReflectanceFront()
 	 * @see #unsetSolarReflectanceFront()
 	 * @see #getSolarReflectanceFront()
 	 * @generated
 	 */
-	void setSolarReflectanceFront(float value);
+	void setSolarReflectanceFront(IfcPositiveRatioMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getSolarReflectanceFront <em>Solar Reflectance Front</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getSolarReflectanceFront <em>Solar Reflectance Front</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetSolarReflectanceFront()
 	 * @see #getSolarReflectanceFront()
-	 * @see #setSolarReflectanceFront(float)
+	 * @see #setSolarReflectanceFront(IfcPositiveRatioMeasure)
 	 * @generated
 	 */
 	void unsetSolarReflectanceFront();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getSolarReflectanceFront <em>Solar Reflectance Front</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getSolarReflectanceFront <em>Solar Reflectance Front</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Solar Reflectance Front</em>' attribute is set.
+	 * @return whether the value of the '<em>Solar Reflectance Front</em>' reference is set.
 	 * @see #unsetSolarReflectanceFront()
 	 * @see #getSolarReflectanceFront()
-	 * @see #setSolarReflectanceFront(float)
+	 * @see #setSolarReflectanceFront(IfcPositiveRatioMeasure)
 	 * @generated
 	 */
 	boolean isSetSolarReflectanceFront();
 
 	/**
-	 * Returns the value of the '<em><b>Solar Reflectance Front As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Solar Reflectance Front As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Solar Reflectance Front As String</em>' attribute.
-	 * @see #isSetSolarReflectanceFrontAsString()
-	 * @see #unsetSolarReflectanceFrontAsString()
-	 * @see #setSolarReflectanceFrontAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcOpticalMaterialProperties_SolarReflectanceFrontAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getSolarReflectanceFrontAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getSolarReflectanceFrontAsString <em>Solar Reflectance Front As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Solar Reflectance Front As String</em>' attribute.
-	 * @see #isSetSolarReflectanceFrontAsString()
-	 * @see #unsetSolarReflectanceFrontAsString()
-	 * @see #getSolarReflectanceFrontAsString()
-	 * @generated
-	 */
-	void setSolarReflectanceFrontAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getSolarReflectanceFrontAsString <em>Solar Reflectance Front As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetSolarReflectanceFrontAsString()
-	 * @see #getSolarReflectanceFrontAsString()
-	 * @see #setSolarReflectanceFrontAsString(String)
-	 * @generated
-	 */
-	void unsetSolarReflectanceFrontAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getSolarReflectanceFrontAsString <em>Solar Reflectance Front As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Solar Reflectance Front As String</em>' attribute is set.
-	 * @see #unsetSolarReflectanceFrontAsString()
-	 * @see #getSolarReflectanceFrontAsString()
-	 * @see #setSolarReflectanceFrontAsString(String)
-	 * @generated
-	 */
-	boolean isSetSolarReflectanceFrontAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Solar Reflectance Back</b></em>' attribute.
+	 * Returns the value of the '<em><b>Solar Reflectance Back</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Solar Reflectance Back</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Solar Reflectance Back</em>' attribute.
+	 * @return the value of the '<em>Solar Reflectance Back</em>' reference.
 	 * @see #isSetSolarReflectanceBack()
 	 * @see #unsetSolarReflectanceBack()
-	 * @see #setSolarReflectanceBack(float)
+	 * @see #setSolarReflectanceBack(IfcPositiveRatioMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcOpticalMaterialProperties_SolarReflectanceBack()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getSolarReflectanceBack();
+	IfcPositiveRatioMeasure getSolarReflectanceBack();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getSolarReflectanceBack <em>Solar Reflectance Back</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getSolarReflectanceBack <em>Solar Reflectance Back</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Solar Reflectance Back</em>' attribute.
+	 * @param value the new value of the '<em>Solar Reflectance Back</em>' reference.
 	 * @see #isSetSolarReflectanceBack()
 	 * @see #unsetSolarReflectanceBack()
 	 * @see #getSolarReflectanceBack()
 	 * @generated
 	 */
-	void setSolarReflectanceBack(float value);
+	void setSolarReflectanceBack(IfcPositiveRatioMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getSolarReflectanceBack <em>Solar Reflectance Back</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getSolarReflectanceBack <em>Solar Reflectance Back</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetSolarReflectanceBack()
 	 * @see #getSolarReflectanceBack()
-	 * @see #setSolarReflectanceBack(float)
+	 * @see #setSolarReflectanceBack(IfcPositiveRatioMeasure)
 	 * @generated
 	 */
 	void unsetSolarReflectanceBack();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getSolarReflectanceBack <em>Solar Reflectance Back</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getSolarReflectanceBack <em>Solar Reflectance Back</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Solar Reflectance Back</em>' attribute is set.
+	 * @return whether the value of the '<em>Solar Reflectance Back</em>' reference is set.
 	 * @see #unsetSolarReflectanceBack()
 	 * @see #getSolarReflectanceBack()
-	 * @see #setSolarReflectanceBack(float)
+	 * @see #setSolarReflectanceBack(IfcPositiveRatioMeasure)
 	 * @generated
 	 */
 	boolean isSetSolarReflectanceBack();
-
-	/**
-	 * Returns the value of the '<em><b>Solar Reflectance Back As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Solar Reflectance Back As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Solar Reflectance Back As String</em>' attribute.
-	 * @see #isSetSolarReflectanceBackAsString()
-	 * @see #unsetSolarReflectanceBackAsString()
-	 * @see #setSolarReflectanceBackAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcOpticalMaterialProperties_SolarReflectanceBackAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getSolarReflectanceBackAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getSolarReflectanceBackAsString <em>Solar Reflectance Back As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Solar Reflectance Back As String</em>' attribute.
-	 * @see #isSetSolarReflectanceBackAsString()
-	 * @see #unsetSolarReflectanceBackAsString()
-	 * @see #getSolarReflectanceBackAsString()
-	 * @generated
-	 */
-	void setSolarReflectanceBackAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getSolarReflectanceBackAsString <em>Solar Reflectance Back As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetSolarReflectanceBackAsString()
-	 * @see #getSolarReflectanceBackAsString()
-	 * @see #setSolarReflectanceBackAsString(String)
-	 * @generated
-	 */
-	void unsetSolarReflectanceBackAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcOpticalMaterialProperties#getSolarReflectanceBackAsString <em>Solar Reflectance Back As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Solar Reflectance Back As String</em>' attribute is set.
-	 * @see #unsetSolarReflectanceBackAsString()
-	 * @see #getSolarReflectanceBackAsString()
-	 * @see #setSolarReflectanceBackAsString(String)
-	 * @generated
-	 */
-	boolean isSetSolarReflectanceBackAsString();
 
 } // IfcOpticalMaterialProperties

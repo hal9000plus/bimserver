@@ -75,33 +75,30 @@ public interface IfcCompositeCurveSegment extends IfcGeometricRepresentationItem
 	void setTransition(IfcTransitionCode value);
 
 	/**
-	 * Returns the value of the '<em><b>Same Sense</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.bimserver.ifc.emf.Ifc2x3.Tristate}.
+	 * Returns the value of the '<em><b>Same Sense</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Same Sense</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Same Sense</em>' attribute.
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Tristate
-	 * @see #setSameSense(Tristate)
+	 * @return the value of the '<em>Same Sense</em>' reference.
+	 * @see #setSameSense(IfcLogical)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcCompositeCurveSegment_SameSense()
 	 * @model
 	 * @generated
 	 */
-	Tristate getSameSense();
+	IfcLogical getSameSense();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCompositeCurveSegment#getSameSense <em>Same Sense</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCompositeCurveSegment#getSameSense <em>Same Sense</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Same Sense</em>' attribute.
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Tristate
+	 * @param value the new value of the '<em>Same Sense</em>' reference.
 	 * @see #getSameSense()
 	 * @generated
 	 */
-	void setSameSense(Tristate value);
+	void setSameSense(IfcLogical value);
 
 	/**
 	 * Returns the value of the '<em><b>Parent Curve</b></em>' reference.
@@ -148,29 +145,30 @@ public interface IfcCompositeCurveSegment extends IfcGeometricRepresentationItem
 	EList<IfcCompositeCurve> getUsingCurves();
 
 	/**
-	 * Returns the value of the '<em><b>Dim</b></em>' attribute.
+	 * Returns the value of the '<em><b>Dim</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Dim</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Dim</em>' attribute.
-	 * @see #setDim(int)
+	 * @return the value of the '<em>Dim</em>' reference.
+	 * @see #setDim(IfcDimensionCount)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcCompositeCurveSegment_Dim()
-	 * @model derived="true"
+	 * @model transient="true" volatile="true" derived="true"
+	 *        annotation="http://www.iso.org/iso10303-11/EXPRESS code=' ParentCurve.Dim;'"
 	 * @generated
 	 */
-	int getDim();
+	IfcDimensionCount getDim();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCompositeCurveSegment#getDim <em>Dim</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCompositeCurveSegment#getDim <em>Dim</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Dim</em>' attribute.
+	 * @param value the new value of the '<em>Dim</em>' reference.
 	 * @see #getDim()
 	 * @generated
 	 */
-	void setDim(int value);
+	void setDim(IfcDimensionCount value);
 
 } // IfcCompositeCurveSegment

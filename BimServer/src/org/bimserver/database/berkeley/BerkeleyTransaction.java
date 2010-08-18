@@ -5,7 +5,7 @@ import org.bimserver.database.BimDeadlockException;
 import org.bimserver.database.BimTransaction;
 
 import com.sleepycat.je.DatabaseException;
-import com.sleepycat.je.LockConflictException;
+import com.sleepycat.je.DeadlockException;
 import com.sleepycat.je.Transaction;
 
 public class BerkeleyTransaction implements BimTransaction {
@@ -48,7 +48,7 @@ public class BerkeleyTransaction implements BimTransaction {
 		try {
 			transaction.commit();
 			transactionAlive = false;
-		} catch (LockConflictException e) {
+		} catch (DeadlockException e) {
 			throw new BimDeadlockException(e);
 		} catch (DatabaseException e) {
 			throw new BimDatabaseException(e);

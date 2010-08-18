@@ -43,54 +43,54 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface IfcObject extends IfcObjectDefinition {
 	/**
-	 * Returns the value of the '<em><b>Object Type</b></em>' attribute.
+	 * Returns the value of the '<em><b>Object Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Object Type</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Object Type</em>' attribute.
+	 * @return the value of the '<em>Object Type</em>' reference.
 	 * @see #isSetObjectType()
 	 * @see #unsetObjectType()
-	 * @see #setObjectType(String)
+	 * @see #setObjectType(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcObject_ObjectType()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getObjectType();
+	IfcLabel getObjectType();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcObject#getObjectType <em>Object Type</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcObject#getObjectType <em>Object Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Object Type</em>' attribute.
+	 * @param value the new value of the '<em>Object Type</em>' reference.
 	 * @see #isSetObjectType()
 	 * @see #unsetObjectType()
 	 * @see #getObjectType()
 	 * @generated
 	 */
-	void setObjectType(String value);
+	void setObjectType(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcObject#getObjectType <em>Object Type</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcObject#getObjectType <em>Object Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetObjectType()
 	 * @see #getObjectType()
-	 * @see #setObjectType(String)
+	 * @see #setObjectType(IfcLabel)
 	 * @generated
 	 */
 	void unsetObjectType();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcObject#getObjectType <em>Object Type</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcObject#getObjectType <em>Object Type</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Object Type</em>' attribute is set.
+	 * @return whether the value of the '<em>Object Type</em>' reference is set.
 	 * @see #unsetObjectType()
 	 * @see #getObjectType()
-	 * @see #setObjectType(String)
+	 * @see #setObjectType(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetObjectType();

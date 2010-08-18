@@ -31,9 +31,7 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangleProfileDef#getXDim <em>XDim</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangleProfileDef#getXDimAsString <em>XDim As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangleProfileDef#getYDim <em>YDim</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangleProfileDef#getYDimAsString <em>YDim As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -43,107 +41,55 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcRectangleProfileDef extends IfcParameterizedProfileDef {
 	/**
-	 * Returns the value of the '<em><b>XDim</b></em>' attribute.
+	 * Returns the value of the '<em><b>XDim</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>XDim</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>XDim</em>' attribute.
-	 * @see #setXDim(float)
+	 * @return the value of the '<em>XDim</em>' reference.
+	 * @see #setXDim(IfcPositiveLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRectangleProfileDef_XDim()
 	 * @model
 	 * @generated
 	 */
-	float getXDim();
+	IfcPositiveLengthMeasure getXDim();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangleProfileDef#getXDim <em>XDim</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangleProfileDef#getXDim <em>XDim</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>XDim</em>' attribute.
+	 * @param value the new value of the '<em>XDim</em>' reference.
 	 * @see #getXDim()
 	 * @generated
 	 */
-	void setXDim(float value);
+	void setXDim(IfcPositiveLengthMeasure value);
 
 	/**
-	 * Returns the value of the '<em><b>XDim As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>XDim As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>XDim As String</em>' attribute.
-	 * @see #setXDimAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRectangleProfileDef_XDimAsString()
-	 * @model
-	 * @generated
-	 */
-	String getXDimAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangleProfileDef#getXDimAsString <em>XDim As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>XDim As String</em>' attribute.
-	 * @see #getXDimAsString()
-	 * @generated
-	 */
-	void setXDimAsString(String value);
-
-	/**
-	 * Returns the value of the '<em><b>YDim</b></em>' attribute.
+	 * Returns the value of the '<em><b>YDim</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>YDim</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>YDim</em>' attribute.
-	 * @see #setYDim(float)
+	 * @return the value of the '<em>YDim</em>' reference.
+	 * @see #setYDim(IfcPositiveLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRectangleProfileDef_YDim()
 	 * @model
 	 * @generated
 	 */
-	float getYDim();
+	IfcPositiveLengthMeasure getYDim();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangleProfileDef#getYDim <em>YDim</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangleProfileDef#getYDim <em>YDim</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>YDim</em>' attribute.
+	 * @param value the new value of the '<em>YDim</em>' reference.
 	 * @see #getYDim()
 	 * @generated
 	 */
-	void setYDim(float value);
-
-	/**
-	 * Returns the value of the '<em><b>YDim As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>YDim As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>YDim As String</em>' attribute.
-	 * @see #setYDimAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRectangleProfileDef_YDimAsString()
-	 * @model
-	 * @generated
-	 */
-	String getYDimAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangleProfileDef#getYDimAsString <em>YDim As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>YDim As String</em>' attribute.
-	 * @see #getYDimAsString()
-	 * @generated
-	 */
-	void setYDimAsString(String value);
+	void setYDim(IfcPositiveLengthMeasure value);
 
 } // IfcRectangleProfileDef

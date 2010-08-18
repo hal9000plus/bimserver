@@ -22,7 +22,7 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3;
 
-import org.bimserver.emf.IdEObject;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -40,85 +40,84 @@ import org.bimserver.emf.IdEObject;
  *
  * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcCoordinatedUniversalTimeOffset()
  * @model
- * @extends IdEObject
  * @generated
  */
-public interface IfcCoordinatedUniversalTimeOffset extends IdEObject {
+public interface IfcCoordinatedUniversalTimeOffset extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Hour Offset</b></em>' attribute.
+	 * Returns the value of the '<em><b>Hour Offset</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Hour Offset</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Hour Offset</em>' attribute.
-	 * @see #setHourOffset(int)
+	 * @return the value of the '<em>Hour Offset</em>' reference.
+	 * @see #setHourOffset(IfcHourInDay)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcCoordinatedUniversalTimeOffset_HourOffset()
 	 * @model
 	 * @generated
 	 */
-	int getHourOffset();
+	IfcHourInDay getHourOffset();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCoordinatedUniversalTimeOffset#getHourOffset <em>Hour Offset</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCoordinatedUniversalTimeOffset#getHourOffset <em>Hour Offset</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Hour Offset</em>' attribute.
+	 * @param value the new value of the '<em>Hour Offset</em>' reference.
 	 * @see #getHourOffset()
 	 * @generated
 	 */
-	void setHourOffset(int value);
+	void setHourOffset(IfcHourInDay value);
 
 	/**
-	 * Returns the value of the '<em><b>Minute Offset</b></em>' attribute.
+	 * Returns the value of the '<em><b>Minute Offset</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Minute Offset</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Minute Offset</em>' attribute.
+	 * @return the value of the '<em>Minute Offset</em>' reference.
 	 * @see #isSetMinuteOffset()
 	 * @see #unsetMinuteOffset()
-	 * @see #setMinuteOffset(int)
+	 * @see #setMinuteOffset(IfcMinuteInHour)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcCoordinatedUniversalTimeOffset_MinuteOffset()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	int getMinuteOffset();
+	IfcMinuteInHour getMinuteOffset();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCoordinatedUniversalTimeOffset#getMinuteOffset <em>Minute Offset</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCoordinatedUniversalTimeOffset#getMinuteOffset <em>Minute Offset</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Minute Offset</em>' attribute.
+	 * @param value the new value of the '<em>Minute Offset</em>' reference.
 	 * @see #isSetMinuteOffset()
 	 * @see #unsetMinuteOffset()
 	 * @see #getMinuteOffset()
 	 * @generated
 	 */
-	void setMinuteOffset(int value);
+	void setMinuteOffset(IfcMinuteInHour value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCoordinatedUniversalTimeOffset#getMinuteOffset <em>Minute Offset</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCoordinatedUniversalTimeOffset#getMinuteOffset <em>Minute Offset</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetMinuteOffset()
 	 * @see #getMinuteOffset()
-	 * @see #setMinuteOffset(int)
+	 * @see #setMinuteOffset(IfcMinuteInHour)
 	 * @generated
 	 */
 	void unsetMinuteOffset();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCoordinatedUniversalTimeOffset#getMinuteOffset <em>Minute Offset</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCoordinatedUniversalTimeOffset#getMinuteOffset <em>Minute Offset</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Minute Offset</em>' attribute is set.
+	 * @return whether the value of the '<em>Minute Offset</em>' reference is set.
 	 * @see #unsetMinuteOffset()
 	 * @see #getMinuteOffset()
-	 * @see #setMinuteOffset(int)
+	 * @see #setMinuteOffset(IfcMinuteInHour)
 	 * @generated
 	 */
 	boolean isSetMinuteOffset();

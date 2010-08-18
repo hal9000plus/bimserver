@@ -96,25 +96,25 @@ public interface IfcMove extends IfcTask {
 	void setMoveTo(IfcSpatialStructureElement value);
 
 	/**
-	 * Returns the value of the '<em><b>Punch List</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
+	 * Returns the value of the '<em><b>Punch List</b></em>' reference list.
+	 * The list contents are of type {@link org.bimserver.ifc.emf.Ifc2x3.IfcText}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Punch List</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Punch List</em>' attribute list.
+	 * @return the value of the '<em>Punch List</em>' reference list.
 	 * @see #isSetPunchList()
 	 * @see #unsetPunchList()
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcMove_PunchList()
-	 * @model unique="false" unsettable="true"
+	 * @model unsettable="true"
 	 * @generated
 	 */
-	EList<String> getPunchList();
+	EList<IfcText> getPunchList();
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMove#getPunchList <em>Punch List</em>}' attribute list.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMove#getPunchList <em>Punch List</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetPunchList()
@@ -124,10 +124,10 @@ public interface IfcMove extends IfcTask {
 	void unsetPunchList();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMove#getPunchList <em>Punch List</em>}' attribute list is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMove#getPunchList <em>Punch List</em>}' reference list is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Punch List</em>' attribute list is set.
+	 * @return whether the value of the '<em>Punch List</em>' reference list is set.
 	 * @see #unsetPunchList()
 	 * @see #getPunchList()
 	 * @generated

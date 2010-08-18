@@ -31,7 +31,6 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcQuantityLength#getLengthValue <em>Length Value</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcQuantityLength#getLengthValueAsString <em>Length Value As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -41,55 +40,29 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcQuantityLength extends IfcPhysicalSimpleQuantity {
 	/**
-	 * Returns the value of the '<em><b>Length Value</b></em>' attribute.
+	 * Returns the value of the '<em><b>Length Value</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Length Value</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Length Value</em>' attribute.
-	 * @see #setLengthValue(float)
+	 * @return the value of the '<em>Length Value</em>' reference.
+	 * @see #setLengthValue(IfcLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcQuantityLength_LengthValue()
 	 * @model
 	 * @generated
 	 */
-	float getLengthValue();
+	IfcLengthMeasure getLengthValue();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcQuantityLength#getLengthValue <em>Length Value</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcQuantityLength#getLengthValue <em>Length Value</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Length Value</em>' attribute.
+	 * @param value the new value of the '<em>Length Value</em>' reference.
 	 * @see #getLengthValue()
 	 * @generated
 	 */
-	void setLengthValue(float value);
-
-	/**
-	 * Returns the value of the '<em><b>Length Value As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Length Value As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Length Value As String</em>' attribute.
-	 * @see #setLengthValueAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcQuantityLength_LengthValueAsString()
-	 * @model
-	 * @generated
-	 */
-	String getLengthValueAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcQuantityLength#getLengthValueAsString <em>Length Value As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Length Value As String</em>' attribute.
-	 * @see #getLengthValueAsString()
-	 * @generated
-	 */
-	void setLengthValueAsString(String value);
+	void setLengthValue(IfcLengthMeasure value);
 
 } // IfcQuantityLength

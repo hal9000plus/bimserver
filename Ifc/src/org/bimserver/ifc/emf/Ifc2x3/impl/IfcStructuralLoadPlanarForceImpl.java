@@ -23,7 +23,9 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcPlanarForceMeasure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadPlanarForce;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -34,11 +36,8 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcStructuralLoadPlanarForceImpl#getPlanarForceX <em>Planar Force X</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcStructuralLoadPlanarForceImpl#getPlanarForceXAsString <em>Planar Force XAs String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcStructuralLoadPlanarForceImpl#getPlanarForceY <em>Planar Force Y</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcStructuralLoadPlanarForceImpl#getPlanarForceYAsString <em>Planar Force YAs String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcStructuralLoadPlanarForceImpl#getPlanarForceZ <em>Planar Force Z</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcStructuralLoadPlanarForceImpl#getPlanarForceZAsString <em>Planar Force ZAs String</em>}</li>
  * </ul>
  * </p>
  *
@@ -69,8 +68,8 @@ public class IfcStructuralLoadPlanarForceImpl extends IfcStructuralLoadStaticImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getPlanarForceX() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadPlanarForce_PlanarForceX(), true);
+	public IfcPlanarForceMeasure getPlanarForceX() {
+		return (IfcPlanarForceMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadPlanarForce_PlanarForceX(), true);
 	}
 
 	/**
@@ -78,7 +77,7 @@ public class IfcStructuralLoadPlanarForceImpl extends IfcStructuralLoadStaticImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPlanarForceX(float newPlanarForceX) {
+	public void setPlanarForceX(IfcPlanarForceMeasure newPlanarForceX) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadPlanarForce_PlanarForceX(), newPlanarForceX);
 	}
 
@@ -105,8 +104,8 @@ public class IfcStructuralLoadPlanarForceImpl extends IfcStructuralLoadStaticImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getPlanarForceXAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadPlanarForce_PlanarForceXAsString(), true);
+	public IfcPlanarForceMeasure getPlanarForceY() {
+		return (IfcPlanarForceMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadPlanarForce_PlanarForceY(), true);
 	}
 
 	/**
@@ -114,43 +113,7 @@ public class IfcStructuralLoadPlanarForceImpl extends IfcStructuralLoadStaticImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPlanarForceXAsString(String newPlanarForceXAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadPlanarForce_PlanarForceXAsString(), newPlanarForceXAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetPlanarForceXAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadPlanarForce_PlanarForceXAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetPlanarForceXAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadPlanarForce_PlanarForceXAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getPlanarForceY() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadPlanarForce_PlanarForceY(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPlanarForceY(float newPlanarForceY) {
+	public void setPlanarForceY(IfcPlanarForceMeasure newPlanarForceY) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadPlanarForce_PlanarForceY(), newPlanarForceY);
 	}
 
@@ -177,8 +140,8 @@ public class IfcStructuralLoadPlanarForceImpl extends IfcStructuralLoadStaticImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getPlanarForceYAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadPlanarForce_PlanarForceYAsString(), true);
+	public IfcPlanarForceMeasure getPlanarForceZ() {
+		return (IfcPlanarForceMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadPlanarForce_PlanarForceZ(), true);
 	}
 
 	/**
@@ -186,43 +149,7 @@ public class IfcStructuralLoadPlanarForceImpl extends IfcStructuralLoadStaticImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPlanarForceYAsString(String newPlanarForceYAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadPlanarForce_PlanarForceYAsString(), newPlanarForceYAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetPlanarForceYAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadPlanarForce_PlanarForceYAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetPlanarForceYAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadPlanarForce_PlanarForceYAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getPlanarForceZ() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadPlanarForce_PlanarForceZ(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPlanarForceZ(float newPlanarForceZ) {
+	public void setPlanarForceZ(IfcPlanarForceMeasure newPlanarForceZ) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadPlanarForce_PlanarForceZ(), newPlanarForceZ);
 	}
 
@@ -242,42 +169,6 @@ public class IfcStructuralLoadPlanarForceImpl extends IfcStructuralLoadStaticImp
 	 */
 	public boolean isSetPlanarForceZ() {
 		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadPlanarForce_PlanarForceZ());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getPlanarForceZAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadPlanarForce_PlanarForceZAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPlanarForceZAsString(String newPlanarForceZAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadPlanarForce_PlanarForceZAsString(), newPlanarForceZAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetPlanarForceZAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadPlanarForce_PlanarForceZAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetPlanarForceZAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcStructuralLoadPlanarForce_PlanarForceZAsString());
 	}
 
 } //IfcStructuralLoadPlanarForceImpl

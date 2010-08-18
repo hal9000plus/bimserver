@@ -22,11 +22,16 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
-import org.bimserver.emf.IdEObjectImpl;
+import org.bimserver.ifc.IfcRootObject;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcActorRole;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRoleEnum;
+import org.bimserver.ifc.emf.Ifc2x3.IfcText;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -43,7 +48,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class IfcActorRoleImpl extends IdEObjectImpl implements IfcActorRole {
+public class IfcActorRoleImpl extends IfcRootObject implements IfcActorRole {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -96,8 +101,8 @@ public class IfcActorRoleImpl extends IdEObjectImpl implements IfcActorRole {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getUserDefinedRole() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcActorRole_UserDefinedRole(), true);
+	public IfcLabel getUserDefinedRole() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcActorRole_UserDefinedRole(), true);
 	}
 
 	/**
@@ -105,7 +110,7 @@ public class IfcActorRoleImpl extends IdEObjectImpl implements IfcActorRole {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUserDefinedRole(String newUserDefinedRole) {
+	public void setUserDefinedRole(IfcLabel newUserDefinedRole) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcActorRole_UserDefinedRole(), newUserDefinedRole);
 	}
 
@@ -132,8 +137,8 @@ public class IfcActorRoleImpl extends IdEObjectImpl implements IfcActorRole {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getDescription() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcActorRole_Description(), true);
+	public IfcText getDescription() {
+		return (IfcText) eGet(Ifc2x3Package.eINSTANCE.getIfcActorRole_Description(), true);
 	}
 
 	/**
@@ -141,7 +146,7 @@ public class IfcActorRoleImpl extends IdEObjectImpl implements IfcActorRole {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDescription(String newDescription) {
+	public void setDescription(IfcText newDescription) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcActorRole_Description(), newDescription);
 	}
 

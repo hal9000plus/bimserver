@@ -31,6 +31,7 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceOfRevolution#getAxisPosition <em>Axis Position</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceOfRevolution#getAxisLine <em>Axis Line</em>}</li>
  * </ul>
  * </p>
  *
@@ -64,5 +65,32 @@ public interface IfcSurfaceOfRevolution extends IfcSweptSurface {
 	 * @generated
 	 */
 	void setAxisPosition(IfcAxis1Placement value);
+
+	/**
+	 * Returns the value of the '<em><b>Axis Line</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Axis Line</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Axis Line</em>' reference.
+	 * @see #setAxisLine(IfcLine)
+	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSurfaceOfRevolution_AxisLine()
+	 * @model transient="true" volatile="true" derived="true"
+	 *        annotation="http://www.iso.org/iso10303-11/EXPRESS code=' IfcRepresentationItem() || IfcGeometricRepresentationItem () || IfcCurve() || IfcLine(AxisPosition.Location,                        IfcRepresentationItem() || IfcGeometricRepresentationItem () || IfcVector(AxisPosition.Z,1.0));'"
+	 * @generated
+	 */
+	IfcLine getAxisLine();
+
+	/**
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceOfRevolution#getAxisLine <em>Axis Line</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Axis Line</em>' reference.
+	 * @see #getAxisLine()
+	 * @generated
+	 */
+	void setAxisLine(IfcLine value);
 
 } // IfcSurfaceOfRevolution

@@ -32,7 +32,6 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcPointOnCurve#getBasisCurve <em>Basis Curve</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcPointOnCurve#getPointParameter <em>Point Parameter</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcPointOnCurve#getPointParameterAsString <em>Point Parameter As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcPointOnCurve#getDim <em>Dim</em>}</li>
  * </ul>
  * </p>
@@ -69,81 +68,56 @@ public interface IfcPointOnCurve extends IfcPoint {
 	void setBasisCurve(IfcCurve value);
 
 	/**
-	 * Returns the value of the '<em><b>Point Parameter</b></em>' attribute.
+	 * Returns the value of the '<em><b>Point Parameter</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Point Parameter</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Point Parameter</em>' attribute.
-	 * @see #setPointParameter(float)
+	 * @return the value of the '<em>Point Parameter</em>' reference.
+	 * @see #setPointParameter(IfcParameterValue)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcPointOnCurve_PointParameter()
 	 * @model
 	 * @generated
 	 */
-	float getPointParameter();
+	IfcParameterValue getPointParameter();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPointOnCurve#getPointParameter <em>Point Parameter</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPointOnCurve#getPointParameter <em>Point Parameter</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Point Parameter</em>' attribute.
+	 * @param value the new value of the '<em>Point Parameter</em>' reference.
 	 * @see #getPointParameter()
 	 * @generated
 	 */
-	void setPointParameter(float value);
+	void setPointParameter(IfcParameterValue value);
 
 	/**
-	 * Returns the value of the '<em><b>Point Parameter As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Point Parameter As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Point Parameter As String</em>' attribute.
-	 * @see #setPointParameterAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcPointOnCurve_PointParameterAsString()
-	 * @model
-	 * @generated
-	 */
-	String getPointParameterAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPointOnCurve#getPointParameterAsString <em>Point Parameter As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Point Parameter As String</em>' attribute.
-	 * @see #getPointParameterAsString()
-	 * @generated
-	 */
-	void setPointParameterAsString(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Dim</b></em>' attribute.
+	 * Returns the value of the '<em><b>Dim</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Dim</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Dim</em>' attribute.
-	 * @see #setDim(int)
+	 * @return the value of the '<em>Dim</em>' reference.
+	 * @see #setDim(IfcDimensionCount)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcPointOnCurve_Dim()
-	 * @model derived="true"
+	 * @model transient="true" volatile="true" derived="true"
+	 *        annotation="http://www.iso.org/iso10303-11/EXPRESS code=' BasisCurve.Dim;'"
 	 * @generated
 	 */
-	int getDim();
+	IfcDimensionCount getDim();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPointOnCurve#getDim <em>Dim</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPointOnCurve#getDim <em>Dim</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Dim</em>' attribute.
+	 * @param value the new value of the '<em>Dim</em>' reference.
 	 * @see #getDim()
 	 * @generated
 	 */
-	void setDim(int value);
+	void setDim(IfcDimensionCount value);
 
 } // IfcPointOnCurve

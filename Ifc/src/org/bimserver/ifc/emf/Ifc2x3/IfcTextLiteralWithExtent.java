@@ -67,29 +67,29 @@ public interface IfcTextLiteralWithExtent extends IfcTextLiteral {
 	void setExtent(IfcPlanarExtent value);
 
 	/**
-	 * Returns the value of the '<em><b>Box Alignment</b></em>' attribute.
+	 * Returns the value of the '<em><b>Box Alignment</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Box Alignment</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Box Alignment</em>' attribute.
-	 * @see #setBoxAlignment(String)
+	 * @return the value of the '<em>Box Alignment</em>' reference.
+	 * @see #setBoxAlignment(IfcBoxAlignment)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTextLiteralWithExtent_BoxAlignment()
 	 * @model
 	 * @generated
 	 */
-	String getBoxAlignment();
+	IfcBoxAlignment getBoxAlignment();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextLiteralWithExtent#getBoxAlignment <em>Box Alignment</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextLiteralWithExtent#getBoxAlignment <em>Box Alignment</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Box Alignment</em>' attribute.
+	 * @param value the new value of the '<em>Box Alignment</em>' reference.
 	 * @see #getBoxAlignment()
 	 * @generated
 	 */
-	void setBoxAlignment(String value);
+	void setBoxAlignment(IfcBoxAlignment value);
 
 } // IfcTextLiteralWithExtent

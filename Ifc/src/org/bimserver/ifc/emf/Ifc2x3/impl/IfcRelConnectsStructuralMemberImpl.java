@@ -25,10 +25,12 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcAxis2Placement3D;
 import org.bimserver.ifc.emf.Ifc2x3.IfcBoundaryCondition;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLengthMeasure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRelConnectsStructuralMember;
 import org.bimserver.ifc.emf.Ifc2x3.IfcStructuralConnection;
 import org.bimserver.ifc.emf.Ifc2x3.IfcStructuralConnectionCondition;
 import org.bimserver.ifc.emf.Ifc2x3.IfcStructuralMember;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -43,7 +45,6 @@ import org.eclipse.emf.ecore.EClass;
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRelConnectsStructuralMemberImpl#getAppliedCondition <em>Applied Condition</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRelConnectsStructuralMemberImpl#getAdditionalConditions <em>Additional Conditions</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRelConnectsStructuralMemberImpl#getSupportedLength <em>Supported Length</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRelConnectsStructuralMemberImpl#getSupportedLengthAsString <em>Supported Length As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRelConnectsStructuralMemberImpl#getConditionCoordinateSystem <em>Condition Coordinate System</em>}</li>
  * </ul>
  * </p>
@@ -183,8 +184,8 @@ public class IfcRelConnectsStructuralMemberImpl extends IfcRelConnectsImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getSupportedLength() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcRelConnectsStructuralMember_SupportedLength(), true);
+	public IfcLengthMeasure getSupportedLength() {
+		return (IfcLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcRelConnectsStructuralMember_SupportedLength(), true);
 	}
 
 	/**
@@ -192,7 +193,7 @@ public class IfcRelConnectsStructuralMemberImpl extends IfcRelConnectsImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSupportedLength(float newSupportedLength) {
+	public void setSupportedLength(IfcLengthMeasure newSupportedLength) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcRelConnectsStructuralMember_SupportedLength(), newSupportedLength);
 	}
 
@@ -212,42 +213,6 @@ public class IfcRelConnectsStructuralMemberImpl extends IfcRelConnectsImpl imple
 	 */
 	public boolean isSetSupportedLength() {
 		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcRelConnectsStructuralMember_SupportedLength());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getSupportedLengthAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcRelConnectsStructuralMember_SupportedLengthAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSupportedLengthAsString(String newSupportedLengthAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcRelConnectsStructuralMember_SupportedLengthAsString(), newSupportedLengthAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetSupportedLengthAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcRelConnectsStructuralMember_SupportedLengthAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetSupportedLengthAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcRelConnectsStructuralMember_SupportedLengthAsString());
 	}
 
 	/**

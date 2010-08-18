@@ -1,5 +1,7 @@
 package org.bimserver.collada;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintWriter;
@@ -8,81 +10,71 @@ import java.util.zip.ZipOutputStream;
 
 import nl.tue.buildingsmart.express.dictionary.SchemaDefinition;
 
-import org.bimserver.database.store.Project;
-import org.bimserver.database.store.User;
-import org.bimserver.ifc.BimModelSerializer;
-import org.bimserver.ifc.FieldIgnoreMap;
-import org.bimserver.ifc.IfcModel;
-import org.bimserver.ifcengine.IfcEngineFactory;
-import org.bimserver.shared.ResultType;
+import org.bimserver.emf.EmfModel;
+import org.bimserver.emf.EmfSerializer;
+import org.bimserver.ifc.FileFieldIgnoreMap;
 
-public class KmzSerializer extends BimModelSerializer {
+public class KmzSerializer extends EmfSerializer {
 
-	private final ColladaSerializer ifcToCollada;
-	private SimpleMode mode = SimpleMode.BUSY;
-	private final Project project;
+	private final IfcToCollada ifcToCollada;
 
-	public KmzSerializer(Project project, User user, String fileName, IfcModel model, SchemaDefinition schemaDefinition, FieldIgnoreMap fieldIgnoreMap, IfcEngineFactory ifcEngineFactory) {
-		super(fileName, model, fieldIgnoreMap);
-		this.project = project;
-		ifcToCollada = new ColladaSerializer(project, user, fileName, model, schemaDefinition, fieldIgnoreMap, ifcEngineFactory);
+	public KmzSerializer(EmfModel<Long> model, SchemaDefinition schemaDefinition, File schemaFile, FileFieldIgnoreMap ignoreMap) {
+		super(model);
+		ifcToCollada = new IfcToCollada(model, schemaDefinition, schemaFile, ignoreMap);
 	}
 
 	@Override
-	public int write(OutputStream out) {
-		if (mode == SimpleMode.BUSY) {
+	public void write(OutputStream out) {
+		try {
+			ZipOutputStream zipOutputStream = new ZipOutputStream(out);
+			zipOutputStream.putNextEntry(new ZipEntry("doc.kml"));
 			try {
-				ZipOutputStream zipOutputStream = new ZipOutputStream(out);
-				zipOutputStream.putNextEntry(new ZipEntry("doc.kml"));
 				writeKmlFile(zipOutputStream);
-				zipOutputStream.closeEntry();
-				zipOutputStream.putNextEntry(new ZipEntry("files/collada.dae"));
-				ifcToCollada.write(zipOutputStream);
-				zipOutputStream.closeEntry();
-				zipOutputStream.finish();
-				zipOutputStream.flush();
-			} catch (IOException e2) {
-				e2.printStackTrace();
+			} catch (FileNotFoundException e1) {
+				e1.printStackTrace();
 			}
-			mode = SimpleMode.DONE;
-			return 1;
-		} else if (mode == SimpleMode.DONE) {
-			return -1;
+			zipOutputStream.closeEntry();
+			zipOutputStream.putNextEntry(new ZipEntry("files/collada.dae"));
+			ifcToCollada.write(zipOutputStream);
+			zipOutputStream.closeEntry();
+			zipOutputStream.finish();
+			zipOutputStream.flush();
+		} catch (IOException e2) {
+			e2.printStackTrace();
 		}
-		return -1;
 	}
 
-	private void writeKmlFile(OutputStream out) {
+	private void writeKmlFile(OutputStream out) throws FileNotFoundException {
 		PrintWriter writer = new PrintWriter(out);
 		writer.println("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
 		writer.println("<kml xmlns=\"http://earth.google.com/kml/2.1\">");
 		writer.println("<Placemark>");
-		writer.println("	<name>" + project.getName() + "</name>");
-		writer.println("	<description>" + project.getDescription() + "</description>");
+		writer.println("	<name>" + model.getProjectName() + "</name>");
+		writer.println("	<description>" + model.getDescription() + "</description>");
 		writer.println("	<LookAt>");
-		writer.println("		<longitude>" + project.getGeoTag().getX() + "</longitude>");
-		writer.println("		<latitude>" + project.getGeoTag().getY() + "</latitude>");
+		writer.println("		<longitude>" + model.getLon() + "</longitude>");
+		writer.println("		<latitude>" + model.getLat() + "</latitude>");
 		writer.println("		<altitude>0</altitude>");
-		writer.println("		<heading>-27.70337734057933</heading>");
-		writer.println("		<tilt>65.74454495876547</tilt>");
 		writer.println("		<range>127.2393107680517</range>");
+		writer.println("		<tilt>65.74454495876547</tilt>");
+		writer.println("		<heading>-27.70337734057933</heading>");
 		writer.println("	</LookAt>");
 		writer.println("	<Model id=\"model_4\">");
 		writer.println("		<altitudeMode>relativeToGround</altitudeMode>");
 		writer.println("		<Location>");
-		writer.println("			<longitude>" + project.getGeoTag().getX() + "</longitude>");
-		writer.println("			<latitude>" + project.getGeoTag().getY() + "</latitude>");
-		writer.println("			<altitude>" + project.getGeoTag().getZ() + "</altitude>");
+		writer.println("			<longitude>" + model.getLon() + "</longitude>");
+		writer.println("			<latitude>" + model.getLat() + "</latitude>");
+		writer.println("			<altitude>" + model.getAltitude() + "</altitude>");
 		writer.println("		</Location>");
 		writer.println("		<Orientation>");
-		writer.println("			<heading>" + project.getGeoTag().getDirectionAngle() + "</heading>");
+		writer.println("			<heading>0</heading>");
 		writer.println("			<tilt>0</tilt>");
 		writer.println("			<roll>0</roll>");
 		writer.println("		</Orientation>");
 		writer.println("		<Scale>");
-		writer.println("			<x>1</x>");
-		writer.println("			<y>1</y>");
-		writer.println("			<z>1</z>");
+		writer.println("			<x>100</x>");
+		writer.println("			<y>100</y>");
+		writer.println("			<z>100</z>");
 		writer.println("		</Scale>");
 		writer.println("		<Link>");
 		writer.println("			<href>files/collada.dae</href>");
@@ -92,10 +84,4 @@ public class KmzSerializer extends BimModelSerializer {
 		writer.println("</kml>");
 		writer.flush();
 	}
-
-	@Override
-	public String getContentType() {
-		return ResultType.KMZ.getContentType();
-	}
-
 }

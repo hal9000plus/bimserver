@@ -22,11 +22,16 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
-import org.bimserver.emf.IdEObjectImpl;
+import org.bimserver.ifc.IfcRootObject;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcCurveStyleFontAndScaling;
 import org.bimserver.ifc.emf.Ifc2x3.IfcCurveStyleFontSelect;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
+import org.bimserver.ifc.emf.Ifc2x3.IfcPositiveRatioMeasure;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,13 +43,12 @@ import org.eclipse.emf.ecore.EClass;
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcCurveStyleFontAndScalingImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcCurveStyleFontAndScalingImpl#getCurveFont <em>Curve Font</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcCurveStyleFontAndScalingImpl#getCurveFontScaling <em>Curve Font Scaling</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcCurveStyleFontAndScalingImpl#getCurveFontScalingAsString <em>Curve Font Scaling As String</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class IfcCurveStyleFontAndScalingImpl extends IdEObjectImpl implements IfcCurveStyleFontAndScaling {
+public class IfcCurveStyleFontAndScalingImpl extends IfcRootObject implements IfcCurveStyleFontAndScaling {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -79,8 +83,8 @@ public class IfcCurveStyleFontAndScalingImpl extends IdEObjectImpl implements If
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcCurveStyleFontAndScaling_Name(), true);
+	public IfcLabel getName() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcCurveStyleFontAndScaling_Name(), true);
 	}
 
 	/**
@@ -88,7 +92,7 @@ public class IfcCurveStyleFontAndScalingImpl extends IdEObjectImpl implements If
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(String newName) {
+	public void setName(IfcLabel newName) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcCurveStyleFontAndScaling_Name(), newName);
 	}
 
@@ -133,8 +137,8 @@ public class IfcCurveStyleFontAndScalingImpl extends IdEObjectImpl implements If
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getCurveFontScaling() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcCurveStyleFontAndScaling_CurveFontScaling(), true);
+	public IfcPositiveRatioMeasure getCurveFontScaling() {
+		return (IfcPositiveRatioMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcCurveStyleFontAndScaling_CurveFontScaling(), true);
 	}
 
 	/**
@@ -142,26 +146,8 @@ public class IfcCurveStyleFontAndScalingImpl extends IdEObjectImpl implements If
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCurveFontScaling(float newCurveFontScaling) {
+	public void setCurveFontScaling(IfcPositiveRatioMeasure newCurveFontScaling) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcCurveStyleFontAndScaling_CurveFontScaling(), newCurveFontScaling);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getCurveFontScalingAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcCurveStyleFontAndScaling_CurveFontScalingAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCurveFontScalingAsString(String newCurveFontScalingAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcCurveStyleFontAndScaling_CurveFontScalingAsString(), newCurveFontScalingAsString);
 	}
 
 } //IfcCurveStyleFontAndScalingImpl

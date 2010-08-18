@@ -44,33 +44,30 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface IfcSoundProperties extends IfcPropertySetDefinition {
 	/**
-	 * Returns the value of the '<em><b>Is Attenuating</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.bimserver.ifc.emf.Ifc2x3.Tristate}.
+	 * Returns the value of the '<em><b>Is Attenuating</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Is Attenuating</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Is Attenuating</em>' attribute.
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Tristate
-	 * @see #setIsAttenuating(Tristate)
+	 * @return the value of the '<em>Is Attenuating</em>' reference.
+	 * @see #setIsAttenuating(IfcBoolean)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSoundProperties_IsAttenuating()
 	 * @model
 	 * @generated
 	 */
-	Tristate getIsAttenuating();
+	IfcBoolean getIsAttenuating();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSoundProperties#getIsAttenuating <em>Is Attenuating</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSoundProperties#getIsAttenuating <em>Is Attenuating</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Is Attenuating</em>' attribute.
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Tristate
+	 * @param value the new value of the '<em>Is Attenuating</em>' reference.
 	 * @see #getIsAttenuating()
 	 * @generated
 	 */
-	void setIsAttenuating(Tristate value);
+	void setIsAttenuating(IfcBoolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Sound Scale</b></em>' attribute.

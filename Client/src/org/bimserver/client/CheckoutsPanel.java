@@ -34,10 +34,9 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 
-import org.bimserver.interfaces.objects.SCheckout;
-import org.bimserver.interfaces.objects.SProject;
-import org.bimserver.interfaces.objects.SUser;
-import org.bimserver.shared.UserException;
+import org.bimserver.shared.SCheckout;
+import org.bimserver.shared.SProject;
+import org.bimserver.shared.SUser;
 
 public class CheckoutsPanel extends JPanel {
 
@@ -46,7 +45,7 @@ public class CheckoutsPanel extends JPanel {
 	private CheckoutTableModel checkoutTableModel;
 	private JTable checkoutTable;
 
-	public CheckoutsPanel(final ServiceHolder serviceHolder, final Client testWindow) {
+	public CheckoutsPanel(ServiceHolder serviceHolder, final Client testWindow) {
 		setLayout(new BorderLayout());
 		JLabel label = new JLabel("Checkouts");
 		add(label, BorderLayout.NORTH);
@@ -55,6 +54,7 @@ public class CheckoutsPanel extends JPanel {
 		checkoutTable = new JTable();
 
 		checkoutTable.setModel(checkoutTableModel);
+
 		checkoutTable.addMouseListener(new MouseAdapter(){
 			@Override
 			public void mouseClicked(MouseEvent mouseEvent) {
@@ -64,20 +64,14 @@ public class CheckoutsPanel extends JPanel {
 					if (!tmp.isDirectory()) {
 						tmp.mkdir();
 					}
-					SProject sProject;
+					File file = new File(tmp, checkout.getProjectName() + "." + checkout.getRevisionId() + ".ifc");
 					try {
-						sProject = serviceHolder.getService().getProjectByPoid(checkout.getProjectId());
-						File file = new File(tmp, sProject.getName() + "." + checkout.getRevisionId() + ".ifc");
-						try {
-							testWindow.download(checkout.getRevisionId(), new FileOutputStream(file), false);
-							Desktop.getDesktop().open(file);
-						} catch (FileNotFoundException e1) {
-							e1.printStackTrace();
-						} catch (IOException e) {
-							e.printStackTrace();
-						}
-					} catch (UserException e2) {
-						e2.printStackTrace();
+						testWindow.download(checkout.getProjectId(), checkout.getRevisionId(), new FileOutputStream(file), false);
+						Desktop.getDesktop().open(file);
+					} catch (FileNotFoundException e1) {
+						e1.printStackTrace();
+					} catch (IOException e) {
+						e.printStackTrace();
 					}
 				}
 			}

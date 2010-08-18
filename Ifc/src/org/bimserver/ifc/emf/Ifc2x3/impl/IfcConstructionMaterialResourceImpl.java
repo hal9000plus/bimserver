@@ -25,7 +25,10 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcActorSelect;
 import org.bimserver.ifc.emf.Ifc2x3.IfcConstructionMaterialResource;
+import org.bimserver.ifc.emf.Ifc2x3.IfcRatioMeasure;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -37,7 +40,6 @@ import org.eclipse.emf.ecore.EClass;
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcConstructionMaterialResourceImpl#getSuppliers <em>Suppliers</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcConstructionMaterialResourceImpl#getUsageRatio <em>Usage Ratio</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcConstructionMaterialResourceImpl#getUsageRatioAsString <em>Usage Ratio As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -96,8 +98,8 @@ public class IfcConstructionMaterialResourceImpl extends IfcConstructionResource
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getUsageRatio() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcConstructionMaterialResource_UsageRatio(), true);
+	public IfcRatioMeasure getUsageRatio() {
+		return (IfcRatioMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcConstructionMaterialResource_UsageRatio(), true);
 	}
 
 	/**
@@ -105,7 +107,7 @@ public class IfcConstructionMaterialResourceImpl extends IfcConstructionResource
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUsageRatio(float newUsageRatio) {
+	public void setUsageRatio(IfcRatioMeasure newUsageRatio) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcConstructionMaterialResource_UsageRatio(), newUsageRatio);
 	}
 
@@ -125,42 +127,6 @@ public class IfcConstructionMaterialResourceImpl extends IfcConstructionResource
 	 */
 	public boolean isSetUsageRatio() {
 		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcConstructionMaterialResource_UsageRatio());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getUsageRatioAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcConstructionMaterialResource_UsageRatioAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setUsageRatioAsString(String newUsageRatioAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcConstructionMaterialResource_UsageRatioAsString(), newUsageRatioAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetUsageRatioAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcConstructionMaterialResource_UsageRatioAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetUsageRatioAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcConstructionMaterialResource_UsageRatioAsString());
 	}
 
 } //IfcConstructionMaterialResourceImpl

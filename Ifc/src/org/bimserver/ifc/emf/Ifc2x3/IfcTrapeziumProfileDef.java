@@ -31,13 +31,9 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTrapeziumProfileDef#getBottomXDim <em>Bottom XDim</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTrapeziumProfileDef#getBottomXDimAsString <em>Bottom XDim As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTrapeziumProfileDef#getTopXDim <em>Top XDim</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTrapeziumProfileDef#getTopXDimAsString <em>Top XDim As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTrapeziumProfileDef#getYDim <em>YDim</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTrapeziumProfileDef#getYDimAsString <em>YDim As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTrapeziumProfileDef#getTopXOffset <em>Top XOffset</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcTrapeziumProfileDef#getTopXOffsetAsString <em>Top XOffset As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -47,211 +43,107 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcTrapeziumProfileDef extends IfcParameterizedProfileDef {
 	/**
-	 * Returns the value of the '<em><b>Bottom XDim</b></em>' attribute.
+	 * Returns the value of the '<em><b>Bottom XDim</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Bottom XDim</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Bottom XDim</em>' attribute.
-	 * @see #setBottomXDim(float)
+	 * @return the value of the '<em>Bottom XDim</em>' reference.
+	 * @see #setBottomXDim(IfcPositiveLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTrapeziumProfileDef_BottomXDim()
 	 * @model
 	 * @generated
 	 */
-	float getBottomXDim();
+	IfcPositiveLengthMeasure getBottomXDim();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTrapeziumProfileDef#getBottomXDim <em>Bottom XDim</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTrapeziumProfileDef#getBottomXDim <em>Bottom XDim</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Bottom XDim</em>' attribute.
+	 * @param value the new value of the '<em>Bottom XDim</em>' reference.
 	 * @see #getBottomXDim()
 	 * @generated
 	 */
-	void setBottomXDim(float value);
+	void setBottomXDim(IfcPositiveLengthMeasure value);
 
 	/**
-	 * Returns the value of the '<em><b>Bottom XDim As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Bottom XDim As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Bottom XDim As String</em>' attribute.
-	 * @see #setBottomXDimAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTrapeziumProfileDef_BottomXDimAsString()
-	 * @model
-	 * @generated
-	 */
-	String getBottomXDimAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTrapeziumProfileDef#getBottomXDimAsString <em>Bottom XDim As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Bottom XDim As String</em>' attribute.
-	 * @see #getBottomXDimAsString()
-	 * @generated
-	 */
-	void setBottomXDimAsString(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Top XDim</b></em>' attribute.
+	 * Returns the value of the '<em><b>Top XDim</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Top XDim</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Top XDim</em>' attribute.
-	 * @see #setTopXDim(float)
+	 * @return the value of the '<em>Top XDim</em>' reference.
+	 * @see #setTopXDim(IfcPositiveLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTrapeziumProfileDef_TopXDim()
 	 * @model
 	 * @generated
 	 */
-	float getTopXDim();
+	IfcPositiveLengthMeasure getTopXDim();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTrapeziumProfileDef#getTopXDim <em>Top XDim</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTrapeziumProfileDef#getTopXDim <em>Top XDim</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Top XDim</em>' attribute.
+	 * @param value the new value of the '<em>Top XDim</em>' reference.
 	 * @see #getTopXDim()
 	 * @generated
 	 */
-	void setTopXDim(float value);
+	void setTopXDim(IfcPositiveLengthMeasure value);
 
 	/**
-	 * Returns the value of the '<em><b>Top XDim As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Top XDim As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Top XDim As String</em>' attribute.
-	 * @see #setTopXDimAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTrapeziumProfileDef_TopXDimAsString()
-	 * @model
-	 * @generated
-	 */
-	String getTopXDimAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTrapeziumProfileDef#getTopXDimAsString <em>Top XDim As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Top XDim As String</em>' attribute.
-	 * @see #getTopXDimAsString()
-	 * @generated
-	 */
-	void setTopXDimAsString(String value);
-
-	/**
-	 * Returns the value of the '<em><b>YDim</b></em>' attribute.
+	 * Returns the value of the '<em><b>YDim</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>YDim</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>YDim</em>' attribute.
-	 * @see #setYDim(float)
+	 * @return the value of the '<em>YDim</em>' reference.
+	 * @see #setYDim(IfcPositiveLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTrapeziumProfileDef_YDim()
 	 * @model
 	 * @generated
 	 */
-	float getYDim();
+	IfcPositiveLengthMeasure getYDim();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTrapeziumProfileDef#getYDim <em>YDim</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTrapeziumProfileDef#getYDim <em>YDim</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>YDim</em>' attribute.
+	 * @param value the new value of the '<em>YDim</em>' reference.
 	 * @see #getYDim()
 	 * @generated
 	 */
-	void setYDim(float value);
+	void setYDim(IfcPositiveLengthMeasure value);
 
 	/**
-	 * Returns the value of the '<em><b>YDim As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>YDim As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>YDim As String</em>' attribute.
-	 * @see #setYDimAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTrapeziumProfileDef_YDimAsString()
-	 * @model
-	 * @generated
-	 */
-	String getYDimAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTrapeziumProfileDef#getYDimAsString <em>YDim As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>YDim As String</em>' attribute.
-	 * @see #getYDimAsString()
-	 * @generated
-	 */
-	void setYDimAsString(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Top XOffset</b></em>' attribute.
+	 * Returns the value of the '<em><b>Top XOffset</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Top XOffset</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Top XOffset</em>' attribute.
-	 * @see #setTopXOffset(float)
+	 * @return the value of the '<em>Top XOffset</em>' reference.
+	 * @see #setTopXOffset(IfcLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTrapeziumProfileDef_TopXOffset()
 	 * @model
 	 * @generated
 	 */
-	float getTopXOffset();
+	IfcLengthMeasure getTopXOffset();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTrapeziumProfileDef#getTopXOffset <em>Top XOffset</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTrapeziumProfileDef#getTopXOffset <em>Top XOffset</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Top XOffset</em>' attribute.
+	 * @param value the new value of the '<em>Top XOffset</em>' reference.
 	 * @see #getTopXOffset()
 	 * @generated
 	 */
-	void setTopXOffset(float value);
-
-	/**
-	 * Returns the value of the '<em><b>Top XOffset As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Top XOffset As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Top XOffset As String</em>' attribute.
-	 * @see #setTopXOffsetAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTrapeziumProfileDef_TopXOffsetAsString()
-	 * @model
-	 * @generated
-	 */
-	String getTopXOffsetAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTrapeziumProfileDef#getTopXOffsetAsString <em>Top XOffset As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Top XOffset As String</em>' attribute.
-	 * @see #getTopXOffsetAsString()
-	 * @generated
-	 */
-	void setTopXOffsetAsString(String value);
+	void setTopXOffset(IfcLengthMeasure value);
 
 } // IfcTrapeziumProfileDef

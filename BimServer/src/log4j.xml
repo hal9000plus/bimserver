@@ -11,18 +11,6 @@
 		<level value="error" />
 		<appender-ref ref="Console" />
 	</logger>
-	<logger name="org.apache.cxf">
-		<level value="error" />
-		<appender-ref ref="Console" />
-	</logger>
-	<logger name="org.mortbay">
-		<level value="error" />
-		<appender-ref ref="Console" />
-	</logger>
-	<logger name="org.springframework">
-		<level value="error" />
-		<appender-ref ref="Console" />
-	</logger>
 	<root>
 		<priority value="INFO" />
 		<appender-ref ref="Console" />

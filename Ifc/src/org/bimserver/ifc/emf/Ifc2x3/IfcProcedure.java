@@ -42,30 +42,30 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcProcedure extends IfcProcess {
 	/**
-	 * Returns the value of the '<em><b>Procedure ID</b></em>' attribute.
+	 * Returns the value of the '<em><b>Procedure ID</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Procedure ID</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Procedure ID</em>' attribute.
-	 * @see #setProcedureID(String)
+	 * @return the value of the '<em>Procedure ID</em>' reference.
+	 * @see #setProcedureID(IfcIdentifier)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcProcedure_ProcedureID()
 	 * @model
 	 * @generated
 	 */
-	String getProcedureID();
+	IfcIdentifier getProcedureID();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProcedure#getProcedureID <em>Procedure ID</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProcedure#getProcedureID <em>Procedure ID</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Procedure ID</em>' attribute.
+	 * @param value the new value of the '<em>Procedure ID</em>' reference.
 	 * @see #getProcedureID()
 	 * @generated
 	 */
-	void setProcedureID(String value);
+	void setProcedureID(IfcIdentifier value);
 
 	/**
 	 * Returns the value of the '<em><b>Procedure Type</b></em>' attribute.
@@ -97,54 +97,54 @@ public interface IfcProcedure extends IfcProcess {
 	void setProcedureType(IfcProcedureTypeEnum value);
 
 	/**
-	 * Returns the value of the '<em><b>User Defined Procedure Type</b></em>' attribute.
+	 * Returns the value of the '<em><b>User Defined Procedure Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>User Defined Procedure Type</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>User Defined Procedure Type</em>' attribute.
+	 * @return the value of the '<em>User Defined Procedure Type</em>' reference.
 	 * @see #isSetUserDefinedProcedureType()
 	 * @see #unsetUserDefinedProcedureType()
-	 * @see #setUserDefinedProcedureType(String)
+	 * @see #setUserDefinedProcedureType(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcProcedure_UserDefinedProcedureType()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getUserDefinedProcedureType();
+	IfcLabel getUserDefinedProcedureType();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProcedure#getUserDefinedProcedureType <em>User Defined Procedure Type</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProcedure#getUserDefinedProcedureType <em>User Defined Procedure Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>User Defined Procedure Type</em>' attribute.
+	 * @param value the new value of the '<em>User Defined Procedure Type</em>' reference.
 	 * @see #isSetUserDefinedProcedureType()
 	 * @see #unsetUserDefinedProcedureType()
 	 * @see #getUserDefinedProcedureType()
 	 * @generated
 	 */
-	void setUserDefinedProcedureType(String value);
+	void setUserDefinedProcedureType(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProcedure#getUserDefinedProcedureType <em>User Defined Procedure Type</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProcedure#getUserDefinedProcedureType <em>User Defined Procedure Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetUserDefinedProcedureType()
 	 * @see #getUserDefinedProcedureType()
-	 * @see #setUserDefinedProcedureType(String)
+	 * @see #setUserDefinedProcedureType(IfcLabel)
 	 * @generated
 	 */
 	void unsetUserDefinedProcedureType();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProcedure#getUserDefinedProcedureType <em>User Defined Procedure Type</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProcedure#getUserDefinedProcedureType <em>User Defined Procedure Type</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>User Defined Procedure Type</em>' attribute is set.
+	 * @return whether the value of the '<em>User Defined Procedure Type</em>' reference is set.
 	 * @see #unsetUserDefinedProcedureType()
 	 * @see #getUserDefinedProcedureType()
-	 * @see #setUserDefinedProcedureType(String)
+	 * @see #setUserDefinedProcedureType(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetUserDefinedProcedureType();

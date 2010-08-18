@@ -6,7 +6,7 @@
 <%@ include file="header.jsp" %>
 <%
 	if (loginManager.isLoggedIn()) {
-		long uoid = Long.parseLong(request.getParameter("uoid"));
+		int uid = Integer.parseInt(request.getParameter("uid"));
 		if (request.getParameter("save") != null) {
 			try {
 				String oldPassword = request.getParameter("oldpassword");
@@ -14,29 +14,24 @@
 				String newPassword2 = request.getParameter("newpassword2");
 				String errorMessage = "";
 				if (!newPassword1.equals(newPassword2)) {
-					out.println("<div class=\"error\">Password and password check did not match</div>");
+					out.println("<div class=\"errormessage\">Password and password check did not match</div>");
 				} else {
-					loginManager.getService().changePassword(uoid, oldPassword, newPassword1);
-					response.sendRedirect("user.jsp?uoid=" + uoid + "&mid=" + Message.PASSWORD_SUCCESFULLY_CHANGED.ordinal());
+					loginManager.getService().changePassword(uid, oldPassword, newPassword1);
+					response.sendRedirect("user.jsp?id=" + uid + "&mid=" + Message.PASSWORD_SUCCESFULLY_CHANGED.ordinal());
 				}
 			} catch (UserException e) {
-				out.println("<div class=\"error\">" + e.getUserMessage() + "</div>");
+				out.println("<div class=\"errormessage\">" + e.getUserMessage() + "</div>");
 			}
 		}
 %>
 
-<%@page import="org.bimserver.Message"%>
-<div class="sidebar">
-</div>
-
-<div class="content">
-<%@page import="org.bimserver.interfaces.objects.SUserType"%><h1>Change password</h1>
+<%@page import="org.bimserver.Message"%><h1>Change password</h1>
 <fieldset>
 <form name="form" method="post" action="changepassword.jsp">
-<input type="hidden" name="uoid" value="<%=request.getParameter("uoid")%>">
+<input type="hidden" name="uid" value="<%=request.getParameter("uid")%>">
 <table class="formtable">
 <%
-	if (loginManager.getUserType() != SUserType.ADMIN || loginManager.getUoid() == uoid) {
+	if (!loginManager.getUserType().equals("ADMIN") || loginManager.getUid() == uid) {
 %>
 <tr><td class="first">Old password</td><td><input type="password" name="oldpassword" /></td></tr>
 <%		
@@ -56,5 +51,4 @@ if (document.form.oldpassword) {
 </script>
 <% } %>
 </fieldset>
-</div>
 <%@ include file="footer.jsp" %>

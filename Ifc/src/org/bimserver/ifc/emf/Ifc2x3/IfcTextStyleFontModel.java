@@ -46,25 +46,25 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface IfcTextStyleFontModel extends IfcPreDefinedTextFont {
 	/**
-	 * Returns the value of the '<em><b>Font Family</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
+	 * Returns the value of the '<em><b>Font Family</b></em>' reference list.
+	 * The list contents are of type {@link org.bimserver.ifc.emf.Ifc2x3.IfcTextFontName}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Font Family</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Font Family</em>' attribute list.
+	 * @return the value of the '<em>Font Family</em>' reference list.
 	 * @see #isSetFontFamily()
 	 * @see #unsetFontFamily()
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTextStyleFontModel_FontFamily()
-	 * @model unique="false" unsettable="true"
+	 * @model unsettable="true"
 	 * @generated
 	 */
-	EList<String> getFontFamily();
+	EList<IfcTextFontName> getFontFamily();
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleFontModel#getFontFamily <em>Font Family</em>}' attribute list.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleFontModel#getFontFamily <em>Font Family</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetFontFamily()
@@ -74,10 +74,10 @@ public interface IfcTextStyleFontModel extends IfcPreDefinedTextFont {
 	void unsetFontFamily();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleFontModel#getFontFamily <em>Font Family</em>}' attribute list is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleFontModel#getFontFamily <em>Font Family</em>}' reference list is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Font Family</em>' attribute list is set.
+	 * @return whether the value of the '<em>Font Family</em>' reference list is set.
 	 * @see #unsetFontFamily()
 	 * @see #getFontFamily()
 	 * @generated
@@ -85,160 +85,160 @@ public interface IfcTextStyleFontModel extends IfcPreDefinedTextFont {
 	boolean isSetFontFamily();
 
 	/**
-	 * Returns the value of the '<em><b>Font Style</b></em>' attribute.
+	 * Returns the value of the '<em><b>Font Style</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Font Style</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Font Style</em>' attribute.
+	 * @return the value of the '<em>Font Style</em>' reference.
 	 * @see #isSetFontStyle()
 	 * @see #unsetFontStyle()
-	 * @see #setFontStyle(String)
+	 * @see #setFontStyle(IfcFontStyle)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTextStyleFontModel_FontStyle()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getFontStyle();
+	IfcFontStyle getFontStyle();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleFontModel#getFontStyle <em>Font Style</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleFontModel#getFontStyle <em>Font Style</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Font Style</em>' attribute.
+	 * @param value the new value of the '<em>Font Style</em>' reference.
 	 * @see #isSetFontStyle()
 	 * @see #unsetFontStyle()
 	 * @see #getFontStyle()
 	 * @generated
 	 */
-	void setFontStyle(String value);
+	void setFontStyle(IfcFontStyle value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleFontModel#getFontStyle <em>Font Style</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleFontModel#getFontStyle <em>Font Style</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetFontStyle()
 	 * @see #getFontStyle()
-	 * @see #setFontStyle(String)
+	 * @see #setFontStyle(IfcFontStyle)
 	 * @generated
 	 */
 	void unsetFontStyle();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleFontModel#getFontStyle <em>Font Style</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleFontModel#getFontStyle <em>Font Style</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Font Style</em>' attribute is set.
+	 * @return whether the value of the '<em>Font Style</em>' reference is set.
 	 * @see #unsetFontStyle()
 	 * @see #getFontStyle()
-	 * @see #setFontStyle(String)
+	 * @see #setFontStyle(IfcFontStyle)
 	 * @generated
 	 */
 	boolean isSetFontStyle();
 
 	/**
-	 * Returns the value of the '<em><b>Font Variant</b></em>' attribute.
+	 * Returns the value of the '<em><b>Font Variant</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Font Variant</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Font Variant</em>' attribute.
+	 * @return the value of the '<em>Font Variant</em>' reference.
 	 * @see #isSetFontVariant()
 	 * @see #unsetFontVariant()
-	 * @see #setFontVariant(String)
+	 * @see #setFontVariant(IfcFontVariant)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTextStyleFontModel_FontVariant()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getFontVariant();
+	IfcFontVariant getFontVariant();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleFontModel#getFontVariant <em>Font Variant</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleFontModel#getFontVariant <em>Font Variant</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Font Variant</em>' attribute.
+	 * @param value the new value of the '<em>Font Variant</em>' reference.
 	 * @see #isSetFontVariant()
 	 * @see #unsetFontVariant()
 	 * @see #getFontVariant()
 	 * @generated
 	 */
-	void setFontVariant(String value);
+	void setFontVariant(IfcFontVariant value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleFontModel#getFontVariant <em>Font Variant</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleFontModel#getFontVariant <em>Font Variant</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetFontVariant()
 	 * @see #getFontVariant()
-	 * @see #setFontVariant(String)
+	 * @see #setFontVariant(IfcFontVariant)
 	 * @generated
 	 */
 	void unsetFontVariant();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleFontModel#getFontVariant <em>Font Variant</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleFontModel#getFontVariant <em>Font Variant</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Font Variant</em>' attribute is set.
+	 * @return whether the value of the '<em>Font Variant</em>' reference is set.
 	 * @see #unsetFontVariant()
 	 * @see #getFontVariant()
-	 * @see #setFontVariant(String)
+	 * @see #setFontVariant(IfcFontVariant)
 	 * @generated
 	 */
 	boolean isSetFontVariant();
 
 	/**
-	 * Returns the value of the '<em><b>Font Weight</b></em>' attribute.
+	 * Returns the value of the '<em><b>Font Weight</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Font Weight</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Font Weight</em>' attribute.
+	 * @return the value of the '<em>Font Weight</em>' reference.
 	 * @see #isSetFontWeight()
 	 * @see #unsetFontWeight()
-	 * @see #setFontWeight(String)
+	 * @see #setFontWeight(IfcFontWeight)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTextStyleFontModel_FontWeight()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getFontWeight();
+	IfcFontWeight getFontWeight();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleFontModel#getFontWeight <em>Font Weight</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleFontModel#getFontWeight <em>Font Weight</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Font Weight</em>' attribute.
+	 * @param value the new value of the '<em>Font Weight</em>' reference.
 	 * @see #isSetFontWeight()
 	 * @see #unsetFontWeight()
 	 * @see #getFontWeight()
 	 * @generated
 	 */
-	void setFontWeight(String value);
+	void setFontWeight(IfcFontWeight value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleFontModel#getFontWeight <em>Font Weight</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleFontModel#getFontWeight <em>Font Weight</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetFontWeight()
 	 * @see #getFontWeight()
-	 * @see #setFontWeight(String)
+	 * @see #setFontWeight(IfcFontWeight)
 	 * @generated
 	 */
 	void unsetFontWeight();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleFontModel#getFontWeight <em>Font Weight</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleFontModel#getFontWeight <em>Font Weight</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Font Weight</em>' attribute is set.
+	 * @return whether the value of the '<em>Font Weight</em>' reference is set.
 	 * @see #unsetFontWeight()
 	 * @see #getFontWeight()
-	 * @see #setFontWeight(String)
+	 * @see #setFontWeight(IfcFontWeight)
 	 * @generated
 	 */
 	boolean isSetFontWeight();

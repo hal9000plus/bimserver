@@ -22,15 +22,20 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
-import org.bimserver.emf.IdEObjectImpl;
+import org.bimserver.ifc.IfcRootObject;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
 import org.bimserver.ifc.emf.Ifc2x3.IfcProductRepresentation;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRepresentation;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRepresentationContext;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRepresentationItem;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRepresentationMap;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -50,7 +55,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class IfcRepresentationImpl extends IdEObjectImpl implements IfcRepresentation {
+public class IfcRepresentationImpl extends IfcRootObject implements IfcRepresentation {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -103,8 +108,8 @@ public class IfcRepresentationImpl extends IdEObjectImpl implements IfcRepresent
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getRepresentationIdentifier() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcRepresentation_RepresentationIdentifier(), true);
+	public IfcLabel getRepresentationIdentifier() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcRepresentation_RepresentationIdentifier(), true);
 	}
 
 	/**
@@ -112,7 +117,7 @@ public class IfcRepresentationImpl extends IdEObjectImpl implements IfcRepresent
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRepresentationIdentifier(String newRepresentationIdentifier) {
+	public void setRepresentationIdentifier(IfcLabel newRepresentationIdentifier) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcRepresentation_RepresentationIdentifier(), newRepresentationIdentifier);
 	}
 
@@ -139,8 +144,8 @@ public class IfcRepresentationImpl extends IdEObjectImpl implements IfcRepresent
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getRepresentationType() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcRepresentation_RepresentationType(), true);
+	public IfcLabel getRepresentationType() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcRepresentation_RepresentationType(), true);
 	}
 
 	/**
@@ -148,7 +153,7 @@ public class IfcRepresentationImpl extends IdEObjectImpl implements IfcRepresent
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRepresentationType(String newRepresentationType) {
+	public void setRepresentationType(IfcLabel newRepresentationType) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcRepresentation_RepresentationType(), newRepresentationType);
 	}
 

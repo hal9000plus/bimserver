@@ -39,23 +39,15 @@ package org.bimserver.ifc.emf.Ifc2x3;
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getLateFinish <em>Late Finish</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getScheduleFinish <em>Schedule Finish</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getScheduleDuration <em>Schedule Duration</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getScheduleDurationAsString <em>Schedule Duration As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getActualDuration <em>Actual Duration</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getActualDurationAsString <em>Actual Duration As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getRemainingTime <em>Remaining Time</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getRemainingTimeAsString <em>Remaining Time As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getFreeFloat <em>Free Float</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getFreeFloatAsString <em>Free Float As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getTotalFloat <em>Total Float</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getTotalFloatAsString <em>Total Float As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getIsCritical <em>Is Critical</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getStatusTime <em>Status Time</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getStartFloat <em>Start Float</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getStartFloatAsString <em>Start Float As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getFinishFloat <em>Finish Float</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getFinishFloatAsString <em>Finish Float As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getCompletion <em>Completion</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getCompletionAsString <em>Completion As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getScheduleTimeControlAssigned <em>Schedule Time Control Assigned</em>}</li>
  * </ul>
  * </p>
@@ -490,563 +482,295 @@ public interface IfcScheduleTimeControl extends IfcControl {
 	boolean isSetScheduleFinish();
 
 	/**
-	 * Returns the value of the '<em><b>Schedule Duration</b></em>' attribute.
+	 * Returns the value of the '<em><b>Schedule Duration</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Schedule Duration</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Schedule Duration</em>' attribute.
+	 * @return the value of the '<em>Schedule Duration</em>' reference.
 	 * @see #isSetScheduleDuration()
 	 * @see #unsetScheduleDuration()
-	 * @see #setScheduleDuration(float)
+	 * @see #setScheduleDuration(IfcTimeMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcScheduleTimeControl_ScheduleDuration()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getScheduleDuration();
+	IfcTimeMeasure getScheduleDuration();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getScheduleDuration <em>Schedule Duration</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getScheduleDuration <em>Schedule Duration</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Schedule Duration</em>' attribute.
+	 * @param value the new value of the '<em>Schedule Duration</em>' reference.
 	 * @see #isSetScheduleDuration()
 	 * @see #unsetScheduleDuration()
 	 * @see #getScheduleDuration()
 	 * @generated
 	 */
-	void setScheduleDuration(float value);
+	void setScheduleDuration(IfcTimeMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getScheduleDuration <em>Schedule Duration</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getScheduleDuration <em>Schedule Duration</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetScheduleDuration()
 	 * @see #getScheduleDuration()
-	 * @see #setScheduleDuration(float)
+	 * @see #setScheduleDuration(IfcTimeMeasure)
 	 * @generated
 	 */
 	void unsetScheduleDuration();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getScheduleDuration <em>Schedule Duration</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getScheduleDuration <em>Schedule Duration</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Schedule Duration</em>' attribute is set.
+	 * @return whether the value of the '<em>Schedule Duration</em>' reference is set.
 	 * @see #unsetScheduleDuration()
 	 * @see #getScheduleDuration()
-	 * @see #setScheduleDuration(float)
+	 * @see #setScheduleDuration(IfcTimeMeasure)
 	 * @generated
 	 */
 	boolean isSetScheduleDuration();
 
 	/**
-	 * Returns the value of the '<em><b>Schedule Duration As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Schedule Duration As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Schedule Duration As String</em>' attribute.
-	 * @see #isSetScheduleDurationAsString()
-	 * @see #unsetScheduleDurationAsString()
-	 * @see #setScheduleDurationAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcScheduleTimeControl_ScheduleDurationAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getScheduleDurationAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getScheduleDurationAsString <em>Schedule Duration As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Schedule Duration As String</em>' attribute.
-	 * @see #isSetScheduleDurationAsString()
-	 * @see #unsetScheduleDurationAsString()
-	 * @see #getScheduleDurationAsString()
-	 * @generated
-	 */
-	void setScheduleDurationAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getScheduleDurationAsString <em>Schedule Duration As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetScheduleDurationAsString()
-	 * @see #getScheduleDurationAsString()
-	 * @see #setScheduleDurationAsString(String)
-	 * @generated
-	 */
-	void unsetScheduleDurationAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getScheduleDurationAsString <em>Schedule Duration As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Schedule Duration As String</em>' attribute is set.
-	 * @see #unsetScheduleDurationAsString()
-	 * @see #getScheduleDurationAsString()
-	 * @see #setScheduleDurationAsString(String)
-	 * @generated
-	 */
-	boolean isSetScheduleDurationAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Actual Duration</b></em>' attribute.
+	 * Returns the value of the '<em><b>Actual Duration</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Actual Duration</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Actual Duration</em>' attribute.
+	 * @return the value of the '<em>Actual Duration</em>' reference.
 	 * @see #isSetActualDuration()
 	 * @see #unsetActualDuration()
-	 * @see #setActualDuration(float)
+	 * @see #setActualDuration(IfcTimeMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcScheduleTimeControl_ActualDuration()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getActualDuration();
+	IfcTimeMeasure getActualDuration();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getActualDuration <em>Actual Duration</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getActualDuration <em>Actual Duration</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Actual Duration</em>' attribute.
+	 * @param value the new value of the '<em>Actual Duration</em>' reference.
 	 * @see #isSetActualDuration()
 	 * @see #unsetActualDuration()
 	 * @see #getActualDuration()
 	 * @generated
 	 */
-	void setActualDuration(float value);
+	void setActualDuration(IfcTimeMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getActualDuration <em>Actual Duration</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getActualDuration <em>Actual Duration</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetActualDuration()
 	 * @see #getActualDuration()
-	 * @see #setActualDuration(float)
+	 * @see #setActualDuration(IfcTimeMeasure)
 	 * @generated
 	 */
 	void unsetActualDuration();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getActualDuration <em>Actual Duration</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getActualDuration <em>Actual Duration</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Actual Duration</em>' attribute is set.
+	 * @return whether the value of the '<em>Actual Duration</em>' reference is set.
 	 * @see #unsetActualDuration()
 	 * @see #getActualDuration()
-	 * @see #setActualDuration(float)
+	 * @see #setActualDuration(IfcTimeMeasure)
 	 * @generated
 	 */
 	boolean isSetActualDuration();
 
 	/**
-	 * Returns the value of the '<em><b>Actual Duration As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Actual Duration As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Actual Duration As String</em>' attribute.
-	 * @see #isSetActualDurationAsString()
-	 * @see #unsetActualDurationAsString()
-	 * @see #setActualDurationAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcScheduleTimeControl_ActualDurationAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getActualDurationAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getActualDurationAsString <em>Actual Duration As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Actual Duration As String</em>' attribute.
-	 * @see #isSetActualDurationAsString()
-	 * @see #unsetActualDurationAsString()
-	 * @see #getActualDurationAsString()
-	 * @generated
-	 */
-	void setActualDurationAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getActualDurationAsString <em>Actual Duration As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetActualDurationAsString()
-	 * @see #getActualDurationAsString()
-	 * @see #setActualDurationAsString(String)
-	 * @generated
-	 */
-	void unsetActualDurationAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getActualDurationAsString <em>Actual Duration As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Actual Duration As String</em>' attribute is set.
-	 * @see #unsetActualDurationAsString()
-	 * @see #getActualDurationAsString()
-	 * @see #setActualDurationAsString(String)
-	 * @generated
-	 */
-	boolean isSetActualDurationAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Remaining Time</b></em>' attribute.
+	 * Returns the value of the '<em><b>Remaining Time</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Remaining Time</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Remaining Time</em>' attribute.
+	 * @return the value of the '<em>Remaining Time</em>' reference.
 	 * @see #isSetRemainingTime()
 	 * @see #unsetRemainingTime()
-	 * @see #setRemainingTime(float)
+	 * @see #setRemainingTime(IfcTimeMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcScheduleTimeControl_RemainingTime()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getRemainingTime();
+	IfcTimeMeasure getRemainingTime();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getRemainingTime <em>Remaining Time</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getRemainingTime <em>Remaining Time</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Remaining Time</em>' attribute.
+	 * @param value the new value of the '<em>Remaining Time</em>' reference.
 	 * @see #isSetRemainingTime()
 	 * @see #unsetRemainingTime()
 	 * @see #getRemainingTime()
 	 * @generated
 	 */
-	void setRemainingTime(float value);
+	void setRemainingTime(IfcTimeMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getRemainingTime <em>Remaining Time</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getRemainingTime <em>Remaining Time</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetRemainingTime()
 	 * @see #getRemainingTime()
-	 * @see #setRemainingTime(float)
+	 * @see #setRemainingTime(IfcTimeMeasure)
 	 * @generated
 	 */
 	void unsetRemainingTime();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getRemainingTime <em>Remaining Time</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getRemainingTime <em>Remaining Time</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Remaining Time</em>' attribute is set.
+	 * @return whether the value of the '<em>Remaining Time</em>' reference is set.
 	 * @see #unsetRemainingTime()
 	 * @see #getRemainingTime()
-	 * @see #setRemainingTime(float)
+	 * @see #setRemainingTime(IfcTimeMeasure)
 	 * @generated
 	 */
 	boolean isSetRemainingTime();
 
 	/**
-	 * Returns the value of the '<em><b>Remaining Time As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Remaining Time As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Remaining Time As String</em>' attribute.
-	 * @see #isSetRemainingTimeAsString()
-	 * @see #unsetRemainingTimeAsString()
-	 * @see #setRemainingTimeAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcScheduleTimeControl_RemainingTimeAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getRemainingTimeAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getRemainingTimeAsString <em>Remaining Time As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Remaining Time As String</em>' attribute.
-	 * @see #isSetRemainingTimeAsString()
-	 * @see #unsetRemainingTimeAsString()
-	 * @see #getRemainingTimeAsString()
-	 * @generated
-	 */
-	void setRemainingTimeAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getRemainingTimeAsString <em>Remaining Time As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetRemainingTimeAsString()
-	 * @see #getRemainingTimeAsString()
-	 * @see #setRemainingTimeAsString(String)
-	 * @generated
-	 */
-	void unsetRemainingTimeAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getRemainingTimeAsString <em>Remaining Time As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Remaining Time As String</em>' attribute is set.
-	 * @see #unsetRemainingTimeAsString()
-	 * @see #getRemainingTimeAsString()
-	 * @see #setRemainingTimeAsString(String)
-	 * @generated
-	 */
-	boolean isSetRemainingTimeAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Free Float</b></em>' attribute.
+	 * Returns the value of the '<em><b>Free Float</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Free Float</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Free Float</em>' attribute.
+	 * @return the value of the '<em>Free Float</em>' reference.
 	 * @see #isSetFreeFloat()
 	 * @see #unsetFreeFloat()
-	 * @see #setFreeFloat(float)
+	 * @see #setFreeFloat(IfcTimeMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcScheduleTimeControl_FreeFloat()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getFreeFloat();
+	IfcTimeMeasure getFreeFloat();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getFreeFloat <em>Free Float</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getFreeFloat <em>Free Float</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Free Float</em>' attribute.
+	 * @param value the new value of the '<em>Free Float</em>' reference.
 	 * @see #isSetFreeFloat()
 	 * @see #unsetFreeFloat()
 	 * @see #getFreeFloat()
 	 * @generated
 	 */
-	void setFreeFloat(float value);
+	void setFreeFloat(IfcTimeMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getFreeFloat <em>Free Float</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getFreeFloat <em>Free Float</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetFreeFloat()
 	 * @see #getFreeFloat()
-	 * @see #setFreeFloat(float)
+	 * @see #setFreeFloat(IfcTimeMeasure)
 	 * @generated
 	 */
 	void unsetFreeFloat();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getFreeFloat <em>Free Float</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getFreeFloat <em>Free Float</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Free Float</em>' attribute is set.
+	 * @return whether the value of the '<em>Free Float</em>' reference is set.
 	 * @see #unsetFreeFloat()
 	 * @see #getFreeFloat()
-	 * @see #setFreeFloat(float)
+	 * @see #setFreeFloat(IfcTimeMeasure)
 	 * @generated
 	 */
 	boolean isSetFreeFloat();
 
 	/**
-	 * Returns the value of the '<em><b>Free Float As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Free Float As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Free Float As String</em>' attribute.
-	 * @see #isSetFreeFloatAsString()
-	 * @see #unsetFreeFloatAsString()
-	 * @see #setFreeFloatAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcScheduleTimeControl_FreeFloatAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getFreeFloatAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getFreeFloatAsString <em>Free Float As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Free Float As String</em>' attribute.
-	 * @see #isSetFreeFloatAsString()
-	 * @see #unsetFreeFloatAsString()
-	 * @see #getFreeFloatAsString()
-	 * @generated
-	 */
-	void setFreeFloatAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getFreeFloatAsString <em>Free Float As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetFreeFloatAsString()
-	 * @see #getFreeFloatAsString()
-	 * @see #setFreeFloatAsString(String)
-	 * @generated
-	 */
-	void unsetFreeFloatAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getFreeFloatAsString <em>Free Float As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Free Float As String</em>' attribute is set.
-	 * @see #unsetFreeFloatAsString()
-	 * @see #getFreeFloatAsString()
-	 * @see #setFreeFloatAsString(String)
-	 * @generated
-	 */
-	boolean isSetFreeFloatAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Total Float</b></em>' attribute.
+	 * Returns the value of the '<em><b>Total Float</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Total Float</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Total Float</em>' attribute.
+	 * @return the value of the '<em>Total Float</em>' reference.
 	 * @see #isSetTotalFloat()
 	 * @see #unsetTotalFloat()
-	 * @see #setTotalFloat(float)
+	 * @see #setTotalFloat(IfcTimeMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcScheduleTimeControl_TotalFloat()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getTotalFloat();
+	IfcTimeMeasure getTotalFloat();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getTotalFloat <em>Total Float</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getTotalFloat <em>Total Float</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Total Float</em>' attribute.
+	 * @param value the new value of the '<em>Total Float</em>' reference.
 	 * @see #isSetTotalFloat()
 	 * @see #unsetTotalFloat()
 	 * @see #getTotalFloat()
 	 * @generated
 	 */
-	void setTotalFloat(float value);
+	void setTotalFloat(IfcTimeMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getTotalFloat <em>Total Float</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getTotalFloat <em>Total Float</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetTotalFloat()
 	 * @see #getTotalFloat()
-	 * @see #setTotalFloat(float)
+	 * @see #setTotalFloat(IfcTimeMeasure)
 	 * @generated
 	 */
 	void unsetTotalFloat();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getTotalFloat <em>Total Float</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getTotalFloat <em>Total Float</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Total Float</em>' attribute is set.
+	 * @return whether the value of the '<em>Total Float</em>' reference is set.
 	 * @see #unsetTotalFloat()
 	 * @see #getTotalFloat()
-	 * @see #setTotalFloat(float)
+	 * @see #setTotalFloat(IfcTimeMeasure)
 	 * @generated
 	 */
 	boolean isSetTotalFloat();
 
 	/**
-	 * Returns the value of the '<em><b>Total Float As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Total Float As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Total Float As String</em>' attribute.
-	 * @see #isSetTotalFloatAsString()
-	 * @see #unsetTotalFloatAsString()
-	 * @see #setTotalFloatAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcScheduleTimeControl_TotalFloatAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getTotalFloatAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getTotalFloatAsString <em>Total Float As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Total Float As String</em>' attribute.
-	 * @see #isSetTotalFloatAsString()
-	 * @see #unsetTotalFloatAsString()
-	 * @see #getTotalFloatAsString()
-	 * @generated
-	 */
-	void setTotalFloatAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getTotalFloatAsString <em>Total Float As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetTotalFloatAsString()
-	 * @see #getTotalFloatAsString()
-	 * @see #setTotalFloatAsString(String)
-	 * @generated
-	 */
-	void unsetTotalFloatAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getTotalFloatAsString <em>Total Float As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Total Float As String</em>' attribute is set.
-	 * @see #unsetTotalFloatAsString()
-	 * @see #getTotalFloatAsString()
-	 * @see #setTotalFloatAsString(String)
-	 * @generated
-	 */
-	boolean isSetTotalFloatAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Is Critical</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.bimserver.ifc.emf.Ifc2x3.Tristate}.
+	 * Returns the value of the '<em><b>Is Critical</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Is Critical</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Is Critical</em>' attribute.
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Tristate
-	 * @see #setIsCritical(Tristate)
+	 * @return the value of the '<em>Is Critical</em>' reference.
+	 * @see #setIsCritical(IfcLogical)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcScheduleTimeControl_IsCritical()
 	 * @model
 	 * @generated
 	 */
-	Tristate getIsCritical();
+	IfcLogical getIsCritical();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getIsCritical <em>Is Critical</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getIsCritical <em>Is Critical</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Is Critical</em>' attribute.
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Tristate
+	 * @param value the new value of the '<em>Is Critical</em>' reference.
 	 * @see #getIsCritical()
 	 * @generated
 	 */
-	void setIsCritical(Tristate value);
+	void setIsCritical(IfcLogical value);
 
 	/**
 	 * Returns the value of the '<em><b>Status Time</b></em>' reference.
@@ -1102,322 +826,163 @@ public interface IfcScheduleTimeControl extends IfcControl {
 	boolean isSetStatusTime();
 
 	/**
-	 * Returns the value of the '<em><b>Start Float</b></em>' attribute.
+	 * Returns the value of the '<em><b>Start Float</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Start Float</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Start Float</em>' attribute.
+	 * @return the value of the '<em>Start Float</em>' reference.
 	 * @see #isSetStartFloat()
 	 * @see #unsetStartFloat()
-	 * @see #setStartFloat(float)
+	 * @see #setStartFloat(IfcTimeMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcScheduleTimeControl_StartFloat()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getStartFloat();
+	IfcTimeMeasure getStartFloat();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getStartFloat <em>Start Float</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getStartFloat <em>Start Float</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Start Float</em>' attribute.
+	 * @param value the new value of the '<em>Start Float</em>' reference.
 	 * @see #isSetStartFloat()
 	 * @see #unsetStartFloat()
 	 * @see #getStartFloat()
 	 * @generated
 	 */
-	void setStartFloat(float value);
+	void setStartFloat(IfcTimeMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getStartFloat <em>Start Float</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getStartFloat <em>Start Float</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetStartFloat()
 	 * @see #getStartFloat()
-	 * @see #setStartFloat(float)
+	 * @see #setStartFloat(IfcTimeMeasure)
 	 * @generated
 	 */
 	void unsetStartFloat();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getStartFloat <em>Start Float</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getStartFloat <em>Start Float</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Start Float</em>' attribute is set.
+	 * @return whether the value of the '<em>Start Float</em>' reference is set.
 	 * @see #unsetStartFloat()
 	 * @see #getStartFloat()
-	 * @see #setStartFloat(float)
+	 * @see #setStartFloat(IfcTimeMeasure)
 	 * @generated
 	 */
 	boolean isSetStartFloat();
 
 	/**
-	 * Returns the value of the '<em><b>Start Float As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Start Float As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Start Float As String</em>' attribute.
-	 * @see #isSetStartFloatAsString()
-	 * @see #unsetStartFloatAsString()
-	 * @see #setStartFloatAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcScheduleTimeControl_StartFloatAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getStartFloatAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getStartFloatAsString <em>Start Float As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Start Float As String</em>' attribute.
-	 * @see #isSetStartFloatAsString()
-	 * @see #unsetStartFloatAsString()
-	 * @see #getStartFloatAsString()
-	 * @generated
-	 */
-	void setStartFloatAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getStartFloatAsString <em>Start Float As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetStartFloatAsString()
-	 * @see #getStartFloatAsString()
-	 * @see #setStartFloatAsString(String)
-	 * @generated
-	 */
-	void unsetStartFloatAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getStartFloatAsString <em>Start Float As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Start Float As String</em>' attribute is set.
-	 * @see #unsetStartFloatAsString()
-	 * @see #getStartFloatAsString()
-	 * @see #setStartFloatAsString(String)
-	 * @generated
-	 */
-	boolean isSetStartFloatAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Finish Float</b></em>' attribute.
+	 * Returns the value of the '<em><b>Finish Float</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Finish Float</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Finish Float</em>' attribute.
+	 * @return the value of the '<em>Finish Float</em>' reference.
 	 * @see #isSetFinishFloat()
 	 * @see #unsetFinishFloat()
-	 * @see #setFinishFloat(float)
+	 * @see #setFinishFloat(IfcTimeMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcScheduleTimeControl_FinishFloat()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getFinishFloat();
+	IfcTimeMeasure getFinishFloat();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getFinishFloat <em>Finish Float</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getFinishFloat <em>Finish Float</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Finish Float</em>' attribute.
+	 * @param value the new value of the '<em>Finish Float</em>' reference.
 	 * @see #isSetFinishFloat()
 	 * @see #unsetFinishFloat()
 	 * @see #getFinishFloat()
 	 * @generated
 	 */
-	void setFinishFloat(float value);
+	void setFinishFloat(IfcTimeMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getFinishFloat <em>Finish Float</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getFinishFloat <em>Finish Float</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetFinishFloat()
 	 * @see #getFinishFloat()
-	 * @see #setFinishFloat(float)
+	 * @see #setFinishFloat(IfcTimeMeasure)
 	 * @generated
 	 */
 	void unsetFinishFloat();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getFinishFloat <em>Finish Float</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getFinishFloat <em>Finish Float</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Finish Float</em>' attribute is set.
+	 * @return whether the value of the '<em>Finish Float</em>' reference is set.
 	 * @see #unsetFinishFloat()
 	 * @see #getFinishFloat()
-	 * @see #setFinishFloat(float)
+	 * @see #setFinishFloat(IfcTimeMeasure)
 	 * @generated
 	 */
 	boolean isSetFinishFloat();
 
 	/**
-	 * Returns the value of the '<em><b>Finish Float As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Finish Float As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Finish Float As String</em>' attribute.
-	 * @see #isSetFinishFloatAsString()
-	 * @see #unsetFinishFloatAsString()
-	 * @see #setFinishFloatAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcScheduleTimeControl_FinishFloatAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getFinishFloatAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getFinishFloatAsString <em>Finish Float As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Finish Float As String</em>' attribute.
-	 * @see #isSetFinishFloatAsString()
-	 * @see #unsetFinishFloatAsString()
-	 * @see #getFinishFloatAsString()
-	 * @generated
-	 */
-	void setFinishFloatAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getFinishFloatAsString <em>Finish Float As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetFinishFloatAsString()
-	 * @see #getFinishFloatAsString()
-	 * @see #setFinishFloatAsString(String)
-	 * @generated
-	 */
-	void unsetFinishFloatAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getFinishFloatAsString <em>Finish Float As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Finish Float As String</em>' attribute is set.
-	 * @see #unsetFinishFloatAsString()
-	 * @see #getFinishFloatAsString()
-	 * @see #setFinishFloatAsString(String)
-	 * @generated
-	 */
-	boolean isSetFinishFloatAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Completion</b></em>' attribute.
+	 * Returns the value of the '<em><b>Completion</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Completion</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Completion</em>' attribute.
+	 * @return the value of the '<em>Completion</em>' reference.
 	 * @see #isSetCompletion()
 	 * @see #unsetCompletion()
-	 * @see #setCompletion(float)
+	 * @see #setCompletion(IfcPositiveRatioMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcScheduleTimeControl_Completion()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getCompletion();
+	IfcPositiveRatioMeasure getCompletion();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getCompletion <em>Completion</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getCompletion <em>Completion</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Completion</em>' attribute.
+	 * @param value the new value of the '<em>Completion</em>' reference.
 	 * @see #isSetCompletion()
 	 * @see #unsetCompletion()
 	 * @see #getCompletion()
 	 * @generated
 	 */
-	void setCompletion(float value);
+	void setCompletion(IfcPositiveRatioMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getCompletion <em>Completion</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getCompletion <em>Completion</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetCompletion()
 	 * @see #getCompletion()
-	 * @see #setCompletion(float)
+	 * @see #setCompletion(IfcPositiveRatioMeasure)
 	 * @generated
 	 */
 	void unsetCompletion();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getCompletion <em>Completion</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getCompletion <em>Completion</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Completion</em>' attribute is set.
+	 * @return whether the value of the '<em>Completion</em>' reference is set.
 	 * @see #unsetCompletion()
 	 * @see #getCompletion()
-	 * @see #setCompletion(float)
+	 * @see #setCompletion(IfcPositiveRatioMeasure)
 	 * @generated
 	 */
 	boolean isSetCompletion();
-
-	/**
-	 * Returns the value of the '<em><b>Completion As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Completion As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Completion As String</em>' attribute.
-	 * @see #isSetCompletionAsString()
-	 * @see #unsetCompletionAsString()
-	 * @see #setCompletionAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcScheduleTimeControl_CompletionAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getCompletionAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getCompletionAsString <em>Completion As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Completion As String</em>' attribute.
-	 * @see #isSetCompletionAsString()
-	 * @see #unsetCompletionAsString()
-	 * @see #getCompletionAsString()
-	 * @generated
-	 */
-	void setCompletionAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getCompletionAsString <em>Completion As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetCompletionAsString()
-	 * @see #getCompletionAsString()
-	 * @see #setCompletionAsString(String)
-	 * @generated
-	 */
-	void unsetCompletionAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcScheduleTimeControl#getCompletionAsString <em>Completion As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Completion As String</em>' attribute is set.
-	 * @see #unsetCompletionAsString()
-	 * @see #getCompletionAsString()
-	 * @see #setCompletionAsString(String)
-	 * @generated
-	 */
-	boolean isSetCompletionAsString();
 
 	/**
 	 * Returns the value of the '<em><b>Schedule Time Control Assigned</b></em>' reference.

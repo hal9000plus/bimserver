@@ -24,7 +24,9 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcAxis1Placement;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLine;
 import org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceOfRevolution;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -35,6 +37,7 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSurfaceOfRevolutionImpl#getAxisPosition <em>Axis Position</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSurfaceOfRevolutionImpl#getAxisLine <em>Axis Line</em>}</li>
  * </ul>
  * </p>
  *
@@ -76,6 +79,24 @@ public class IfcSurfaceOfRevolutionImpl extends IfcSweptSurfaceImpl implements I
 	 */
 	public void setAxisPosition(IfcAxis1Placement newAxisPosition) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcSurfaceOfRevolution_AxisPosition(), newAxisPosition);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IfcLine getAxisLine() {
+		return (IfcLine) eGet(Ifc2x3Package.eINSTANCE.getIfcSurfaceOfRevolution_AxisLine(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAxisLine(IfcLine newAxisLine) {
+		eSet(Ifc2x3Package.eINSTANCE.getIfcSurfaceOfRevolution_AxisLine(), newAxisLine);
 	}
 
 } //IfcSurfaceOfRevolutionImpl

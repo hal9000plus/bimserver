@@ -33,7 +33,9 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcCompositeCurve#getSegments <em>Segments</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcCompositeCurve#isSelfIntersect <em>Self Intersect</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcCompositeCurve#getSelfIntersect <em>Self Intersect</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcCompositeCurve#getClosedCurve <em>Closed Curve</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcCompositeCurve#getNSegments <em>NSegments</em>}</li>
  * </ul>
  * </p>
  *
@@ -61,29 +63,83 @@ public interface IfcCompositeCurve extends IfcBoundedCurve {
 	EList<IfcCompositeCurveSegment> getSegments();
 
 	/**
-	 * Returns the value of the '<em><b>Self Intersect</b></em>' attribute.
+	 * Returns the value of the '<em><b>Self Intersect</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Self Intersect</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Self Intersect</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Self Intersect</em>' attribute.
-	 * @see #setSelfIntersect(boolean)
+	 * @return the value of the '<em>Self Intersect</em>' reference.
+	 * @see #setSelfIntersect(IfcLogical)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcCompositeCurve_SelfIntersect()
 	 * @model
 	 * @generated
 	 */
-	boolean isSelfIntersect();
+	IfcLogical getSelfIntersect();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCompositeCurve#isSelfIntersect <em>Self Intersect</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCompositeCurve#getSelfIntersect <em>Self Intersect</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Self Intersect</em>' attribute.
-	 * @see #isSelfIntersect()
+	 * @param value the new value of the '<em>Self Intersect</em>' reference.
+	 * @see #getSelfIntersect()
 	 * @generated
 	 */
-	void setSelfIntersect(boolean value);
+	void setSelfIntersect(IfcLogical value);
+
+	/**
+	 * Returns the value of the '<em><b>Closed Curve</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Closed Curve</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Closed Curve</em>' reference.
+	 * @see #setClosedCurve(IfcLogical)
+	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcCompositeCurve_ClosedCurve()
+	 * @model transient="true" volatile="true" derived="true"
+	 *        annotation="http://www.iso.org/iso10303-11/EXPRESS code=' Segments[NSegments].Transition <> Discontinuous;'"
+	 * @generated
+	 */
+	IfcLogical getClosedCurve();
+
+	/**
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCompositeCurve#getClosedCurve <em>Closed Curve</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Closed Curve</em>' reference.
+	 * @see #getClosedCurve()
+	 * @generated
+	 */
+	void setClosedCurve(IfcLogical value);
+
+	/**
+	 * Returns the value of the '<em><b>NSegments</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>NSegments</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>NSegments</em>' reference.
+	 * @see #setNSegments(IfcInteger)
+	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcCompositeCurve_NSegments()
+	 * @model transient="true" volatile="true" derived="true"
+	 *        annotation="http://www.iso.org/iso10303-11/EXPRESS code=' SIZEOF(Segments);'"
+	 * @generated
+	 */
+	IfcInteger getNSegments();
+
+	/**
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCompositeCurve#getNSegments <em>NSegments</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>NSegments</em>' reference.
+	 * @see #getNSegments()
+	 * @generated
+	 */
+	void setNSegments(IfcInteger value);
 
 } // IfcCompositeCurve

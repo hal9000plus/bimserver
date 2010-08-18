@@ -31,37 +31,21 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getTorsionalConstantX <em>Torsional Constant X</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getTorsionalConstantXAsString <em>Torsional Constant XAs String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMomentOfInertiaYZ <em>Moment Of Inertia YZ</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMomentOfInertiaYZAsString <em>Moment Of Inertia YZ As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMomentOfInertiaY <em>Moment Of Inertia Y</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMomentOfInertiaYAsString <em>Moment Of Inertia YAs String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMomentOfInertiaZ <em>Moment Of Inertia Z</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMomentOfInertiaZAsString <em>Moment Of Inertia ZAs String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getWarpingConstant <em>Warping Constant</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getWarpingConstantAsString <em>Warping Constant As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getShearCentreZ <em>Shear Centre Z</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getShearCentreZAsString <em>Shear Centre ZAs String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getShearCentreY <em>Shear Centre Y</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getShearCentreYAsString <em>Shear Centre YAs String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getShearDeformationAreaZ <em>Shear Deformation Area Z</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getShearDeformationAreaZAsString <em>Shear Deformation Area ZAs String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getShearDeformationAreaY <em>Shear Deformation Area Y</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getShearDeformationAreaYAsString <em>Shear Deformation Area YAs String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMaximumSectionModulusY <em>Maximum Section Modulus Y</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMaximumSectionModulusYAsString <em>Maximum Section Modulus YAs String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMinimumSectionModulusY <em>Minimum Section Modulus Y</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMinimumSectionModulusYAsString <em>Minimum Section Modulus YAs String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMaximumSectionModulusZ <em>Maximum Section Modulus Z</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMaximumSectionModulusZAsString <em>Maximum Section Modulus ZAs String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMinimumSectionModulusZ <em>Minimum Section Modulus Z</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMinimumSectionModulusZAsString <em>Minimum Section Modulus ZAs String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getTorsionalSectionModulus <em>Torsional Section Modulus</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getTorsionalSectionModulusAsString <em>Torsional Section Modulus As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getCentreOfGravityInX <em>Centre Of Gravity In X</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getCentreOfGravityInXAsString <em>Centre Of Gravity In XAs String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getCentreOfGravityInY <em>Centre Of Gravity In Y</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getCentreOfGravityInYAsString <em>Centre Of Gravity In YAs String</em>}</li>
  * </ul>
  * </p>
  *
@@ -71,1699 +55,851 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcStructuralProfileProperties extends IfcGeneralProfileProperties {
 	/**
-	 * Returns the value of the '<em><b>Torsional Constant X</b></em>' attribute.
+	 * Returns the value of the '<em><b>Torsional Constant X</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Torsional Constant X</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Torsional Constant X</em>' attribute.
+	 * @return the value of the '<em>Torsional Constant X</em>' reference.
 	 * @see #isSetTorsionalConstantX()
 	 * @see #unsetTorsionalConstantX()
-	 * @see #setTorsionalConstantX(float)
+	 * @see #setTorsionalConstantX(IfcMomentOfInertiaMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralProfileProperties_TorsionalConstantX()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getTorsionalConstantX();
+	IfcMomentOfInertiaMeasure getTorsionalConstantX();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getTorsionalConstantX <em>Torsional Constant X</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getTorsionalConstantX <em>Torsional Constant X</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Torsional Constant X</em>' attribute.
+	 * @param value the new value of the '<em>Torsional Constant X</em>' reference.
 	 * @see #isSetTorsionalConstantX()
 	 * @see #unsetTorsionalConstantX()
 	 * @see #getTorsionalConstantX()
 	 * @generated
 	 */
-	void setTorsionalConstantX(float value);
+	void setTorsionalConstantX(IfcMomentOfInertiaMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getTorsionalConstantX <em>Torsional Constant X</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getTorsionalConstantX <em>Torsional Constant X</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetTorsionalConstantX()
 	 * @see #getTorsionalConstantX()
-	 * @see #setTorsionalConstantX(float)
+	 * @see #setTorsionalConstantX(IfcMomentOfInertiaMeasure)
 	 * @generated
 	 */
 	void unsetTorsionalConstantX();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getTorsionalConstantX <em>Torsional Constant X</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getTorsionalConstantX <em>Torsional Constant X</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Torsional Constant X</em>' attribute is set.
+	 * @return whether the value of the '<em>Torsional Constant X</em>' reference is set.
 	 * @see #unsetTorsionalConstantX()
 	 * @see #getTorsionalConstantX()
-	 * @see #setTorsionalConstantX(float)
+	 * @see #setTorsionalConstantX(IfcMomentOfInertiaMeasure)
 	 * @generated
 	 */
 	boolean isSetTorsionalConstantX();
 
 	/**
-	 * Returns the value of the '<em><b>Torsional Constant XAs String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Torsional Constant XAs String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Torsional Constant XAs String</em>' attribute.
-	 * @see #isSetTorsionalConstantXAsString()
-	 * @see #unsetTorsionalConstantXAsString()
-	 * @see #setTorsionalConstantXAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralProfileProperties_TorsionalConstantXAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getTorsionalConstantXAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getTorsionalConstantXAsString <em>Torsional Constant XAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Torsional Constant XAs String</em>' attribute.
-	 * @see #isSetTorsionalConstantXAsString()
-	 * @see #unsetTorsionalConstantXAsString()
-	 * @see #getTorsionalConstantXAsString()
-	 * @generated
-	 */
-	void setTorsionalConstantXAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getTorsionalConstantXAsString <em>Torsional Constant XAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetTorsionalConstantXAsString()
-	 * @see #getTorsionalConstantXAsString()
-	 * @see #setTorsionalConstantXAsString(String)
-	 * @generated
-	 */
-	void unsetTorsionalConstantXAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getTorsionalConstantXAsString <em>Torsional Constant XAs String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Torsional Constant XAs String</em>' attribute is set.
-	 * @see #unsetTorsionalConstantXAsString()
-	 * @see #getTorsionalConstantXAsString()
-	 * @see #setTorsionalConstantXAsString(String)
-	 * @generated
-	 */
-	boolean isSetTorsionalConstantXAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Moment Of Inertia YZ</b></em>' attribute.
+	 * Returns the value of the '<em><b>Moment Of Inertia YZ</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Moment Of Inertia YZ</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Moment Of Inertia YZ</em>' attribute.
+	 * @return the value of the '<em>Moment Of Inertia YZ</em>' reference.
 	 * @see #isSetMomentOfInertiaYZ()
 	 * @see #unsetMomentOfInertiaYZ()
-	 * @see #setMomentOfInertiaYZ(float)
+	 * @see #setMomentOfInertiaYZ(IfcMomentOfInertiaMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralProfileProperties_MomentOfInertiaYZ()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getMomentOfInertiaYZ();
+	IfcMomentOfInertiaMeasure getMomentOfInertiaYZ();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMomentOfInertiaYZ <em>Moment Of Inertia YZ</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMomentOfInertiaYZ <em>Moment Of Inertia YZ</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Moment Of Inertia YZ</em>' attribute.
+	 * @param value the new value of the '<em>Moment Of Inertia YZ</em>' reference.
 	 * @see #isSetMomentOfInertiaYZ()
 	 * @see #unsetMomentOfInertiaYZ()
 	 * @see #getMomentOfInertiaYZ()
 	 * @generated
 	 */
-	void setMomentOfInertiaYZ(float value);
+	void setMomentOfInertiaYZ(IfcMomentOfInertiaMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMomentOfInertiaYZ <em>Moment Of Inertia YZ</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMomentOfInertiaYZ <em>Moment Of Inertia YZ</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetMomentOfInertiaYZ()
 	 * @see #getMomentOfInertiaYZ()
-	 * @see #setMomentOfInertiaYZ(float)
+	 * @see #setMomentOfInertiaYZ(IfcMomentOfInertiaMeasure)
 	 * @generated
 	 */
 	void unsetMomentOfInertiaYZ();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMomentOfInertiaYZ <em>Moment Of Inertia YZ</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMomentOfInertiaYZ <em>Moment Of Inertia YZ</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Moment Of Inertia YZ</em>' attribute is set.
+	 * @return whether the value of the '<em>Moment Of Inertia YZ</em>' reference is set.
 	 * @see #unsetMomentOfInertiaYZ()
 	 * @see #getMomentOfInertiaYZ()
-	 * @see #setMomentOfInertiaYZ(float)
+	 * @see #setMomentOfInertiaYZ(IfcMomentOfInertiaMeasure)
 	 * @generated
 	 */
 	boolean isSetMomentOfInertiaYZ();
 
 	/**
-	 * Returns the value of the '<em><b>Moment Of Inertia YZ As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Moment Of Inertia YZ As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Moment Of Inertia YZ As String</em>' attribute.
-	 * @see #isSetMomentOfInertiaYZAsString()
-	 * @see #unsetMomentOfInertiaYZAsString()
-	 * @see #setMomentOfInertiaYZAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralProfileProperties_MomentOfInertiaYZAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getMomentOfInertiaYZAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMomentOfInertiaYZAsString <em>Moment Of Inertia YZ As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Moment Of Inertia YZ As String</em>' attribute.
-	 * @see #isSetMomentOfInertiaYZAsString()
-	 * @see #unsetMomentOfInertiaYZAsString()
-	 * @see #getMomentOfInertiaYZAsString()
-	 * @generated
-	 */
-	void setMomentOfInertiaYZAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMomentOfInertiaYZAsString <em>Moment Of Inertia YZ As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetMomentOfInertiaYZAsString()
-	 * @see #getMomentOfInertiaYZAsString()
-	 * @see #setMomentOfInertiaYZAsString(String)
-	 * @generated
-	 */
-	void unsetMomentOfInertiaYZAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMomentOfInertiaYZAsString <em>Moment Of Inertia YZ As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Moment Of Inertia YZ As String</em>' attribute is set.
-	 * @see #unsetMomentOfInertiaYZAsString()
-	 * @see #getMomentOfInertiaYZAsString()
-	 * @see #setMomentOfInertiaYZAsString(String)
-	 * @generated
-	 */
-	boolean isSetMomentOfInertiaYZAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Moment Of Inertia Y</b></em>' attribute.
+	 * Returns the value of the '<em><b>Moment Of Inertia Y</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Moment Of Inertia Y</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Moment Of Inertia Y</em>' attribute.
+	 * @return the value of the '<em>Moment Of Inertia Y</em>' reference.
 	 * @see #isSetMomentOfInertiaY()
 	 * @see #unsetMomentOfInertiaY()
-	 * @see #setMomentOfInertiaY(float)
+	 * @see #setMomentOfInertiaY(IfcMomentOfInertiaMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralProfileProperties_MomentOfInertiaY()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getMomentOfInertiaY();
+	IfcMomentOfInertiaMeasure getMomentOfInertiaY();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMomentOfInertiaY <em>Moment Of Inertia Y</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMomentOfInertiaY <em>Moment Of Inertia Y</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Moment Of Inertia Y</em>' attribute.
+	 * @param value the new value of the '<em>Moment Of Inertia Y</em>' reference.
 	 * @see #isSetMomentOfInertiaY()
 	 * @see #unsetMomentOfInertiaY()
 	 * @see #getMomentOfInertiaY()
 	 * @generated
 	 */
-	void setMomentOfInertiaY(float value);
+	void setMomentOfInertiaY(IfcMomentOfInertiaMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMomentOfInertiaY <em>Moment Of Inertia Y</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMomentOfInertiaY <em>Moment Of Inertia Y</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetMomentOfInertiaY()
 	 * @see #getMomentOfInertiaY()
-	 * @see #setMomentOfInertiaY(float)
+	 * @see #setMomentOfInertiaY(IfcMomentOfInertiaMeasure)
 	 * @generated
 	 */
 	void unsetMomentOfInertiaY();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMomentOfInertiaY <em>Moment Of Inertia Y</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMomentOfInertiaY <em>Moment Of Inertia Y</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Moment Of Inertia Y</em>' attribute is set.
+	 * @return whether the value of the '<em>Moment Of Inertia Y</em>' reference is set.
 	 * @see #unsetMomentOfInertiaY()
 	 * @see #getMomentOfInertiaY()
-	 * @see #setMomentOfInertiaY(float)
+	 * @see #setMomentOfInertiaY(IfcMomentOfInertiaMeasure)
 	 * @generated
 	 */
 	boolean isSetMomentOfInertiaY();
 
 	/**
-	 * Returns the value of the '<em><b>Moment Of Inertia YAs String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Moment Of Inertia YAs String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Moment Of Inertia YAs String</em>' attribute.
-	 * @see #isSetMomentOfInertiaYAsString()
-	 * @see #unsetMomentOfInertiaYAsString()
-	 * @see #setMomentOfInertiaYAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralProfileProperties_MomentOfInertiaYAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getMomentOfInertiaYAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMomentOfInertiaYAsString <em>Moment Of Inertia YAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Moment Of Inertia YAs String</em>' attribute.
-	 * @see #isSetMomentOfInertiaYAsString()
-	 * @see #unsetMomentOfInertiaYAsString()
-	 * @see #getMomentOfInertiaYAsString()
-	 * @generated
-	 */
-	void setMomentOfInertiaYAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMomentOfInertiaYAsString <em>Moment Of Inertia YAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetMomentOfInertiaYAsString()
-	 * @see #getMomentOfInertiaYAsString()
-	 * @see #setMomentOfInertiaYAsString(String)
-	 * @generated
-	 */
-	void unsetMomentOfInertiaYAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMomentOfInertiaYAsString <em>Moment Of Inertia YAs String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Moment Of Inertia YAs String</em>' attribute is set.
-	 * @see #unsetMomentOfInertiaYAsString()
-	 * @see #getMomentOfInertiaYAsString()
-	 * @see #setMomentOfInertiaYAsString(String)
-	 * @generated
-	 */
-	boolean isSetMomentOfInertiaYAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Moment Of Inertia Z</b></em>' attribute.
+	 * Returns the value of the '<em><b>Moment Of Inertia Z</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Moment Of Inertia Z</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Moment Of Inertia Z</em>' attribute.
+	 * @return the value of the '<em>Moment Of Inertia Z</em>' reference.
 	 * @see #isSetMomentOfInertiaZ()
 	 * @see #unsetMomentOfInertiaZ()
-	 * @see #setMomentOfInertiaZ(float)
+	 * @see #setMomentOfInertiaZ(IfcMomentOfInertiaMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralProfileProperties_MomentOfInertiaZ()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getMomentOfInertiaZ();
+	IfcMomentOfInertiaMeasure getMomentOfInertiaZ();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMomentOfInertiaZ <em>Moment Of Inertia Z</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMomentOfInertiaZ <em>Moment Of Inertia Z</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Moment Of Inertia Z</em>' attribute.
+	 * @param value the new value of the '<em>Moment Of Inertia Z</em>' reference.
 	 * @see #isSetMomentOfInertiaZ()
 	 * @see #unsetMomentOfInertiaZ()
 	 * @see #getMomentOfInertiaZ()
 	 * @generated
 	 */
-	void setMomentOfInertiaZ(float value);
+	void setMomentOfInertiaZ(IfcMomentOfInertiaMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMomentOfInertiaZ <em>Moment Of Inertia Z</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMomentOfInertiaZ <em>Moment Of Inertia Z</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetMomentOfInertiaZ()
 	 * @see #getMomentOfInertiaZ()
-	 * @see #setMomentOfInertiaZ(float)
+	 * @see #setMomentOfInertiaZ(IfcMomentOfInertiaMeasure)
 	 * @generated
 	 */
 	void unsetMomentOfInertiaZ();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMomentOfInertiaZ <em>Moment Of Inertia Z</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMomentOfInertiaZ <em>Moment Of Inertia Z</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Moment Of Inertia Z</em>' attribute is set.
+	 * @return whether the value of the '<em>Moment Of Inertia Z</em>' reference is set.
 	 * @see #unsetMomentOfInertiaZ()
 	 * @see #getMomentOfInertiaZ()
-	 * @see #setMomentOfInertiaZ(float)
+	 * @see #setMomentOfInertiaZ(IfcMomentOfInertiaMeasure)
 	 * @generated
 	 */
 	boolean isSetMomentOfInertiaZ();
 
 	/**
-	 * Returns the value of the '<em><b>Moment Of Inertia ZAs String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Moment Of Inertia ZAs String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Moment Of Inertia ZAs String</em>' attribute.
-	 * @see #isSetMomentOfInertiaZAsString()
-	 * @see #unsetMomentOfInertiaZAsString()
-	 * @see #setMomentOfInertiaZAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralProfileProperties_MomentOfInertiaZAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getMomentOfInertiaZAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMomentOfInertiaZAsString <em>Moment Of Inertia ZAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Moment Of Inertia ZAs String</em>' attribute.
-	 * @see #isSetMomentOfInertiaZAsString()
-	 * @see #unsetMomentOfInertiaZAsString()
-	 * @see #getMomentOfInertiaZAsString()
-	 * @generated
-	 */
-	void setMomentOfInertiaZAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMomentOfInertiaZAsString <em>Moment Of Inertia ZAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetMomentOfInertiaZAsString()
-	 * @see #getMomentOfInertiaZAsString()
-	 * @see #setMomentOfInertiaZAsString(String)
-	 * @generated
-	 */
-	void unsetMomentOfInertiaZAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMomentOfInertiaZAsString <em>Moment Of Inertia ZAs String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Moment Of Inertia ZAs String</em>' attribute is set.
-	 * @see #unsetMomentOfInertiaZAsString()
-	 * @see #getMomentOfInertiaZAsString()
-	 * @see #setMomentOfInertiaZAsString(String)
-	 * @generated
-	 */
-	boolean isSetMomentOfInertiaZAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Warping Constant</b></em>' attribute.
+	 * Returns the value of the '<em><b>Warping Constant</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Warping Constant</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Warping Constant</em>' attribute.
+	 * @return the value of the '<em>Warping Constant</em>' reference.
 	 * @see #isSetWarpingConstant()
 	 * @see #unsetWarpingConstant()
-	 * @see #setWarpingConstant(float)
+	 * @see #setWarpingConstant(IfcWarpingConstantMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralProfileProperties_WarpingConstant()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getWarpingConstant();
+	IfcWarpingConstantMeasure getWarpingConstant();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getWarpingConstant <em>Warping Constant</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getWarpingConstant <em>Warping Constant</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Warping Constant</em>' attribute.
+	 * @param value the new value of the '<em>Warping Constant</em>' reference.
 	 * @see #isSetWarpingConstant()
 	 * @see #unsetWarpingConstant()
 	 * @see #getWarpingConstant()
 	 * @generated
 	 */
-	void setWarpingConstant(float value);
+	void setWarpingConstant(IfcWarpingConstantMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getWarpingConstant <em>Warping Constant</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getWarpingConstant <em>Warping Constant</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetWarpingConstant()
 	 * @see #getWarpingConstant()
-	 * @see #setWarpingConstant(float)
+	 * @see #setWarpingConstant(IfcWarpingConstantMeasure)
 	 * @generated
 	 */
 	void unsetWarpingConstant();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getWarpingConstant <em>Warping Constant</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getWarpingConstant <em>Warping Constant</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Warping Constant</em>' attribute is set.
+	 * @return whether the value of the '<em>Warping Constant</em>' reference is set.
 	 * @see #unsetWarpingConstant()
 	 * @see #getWarpingConstant()
-	 * @see #setWarpingConstant(float)
+	 * @see #setWarpingConstant(IfcWarpingConstantMeasure)
 	 * @generated
 	 */
 	boolean isSetWarpingConstant();
 
 	/**
-	 * Returns the value of the '<em><b>Warping Constant As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Warping Constant As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Warping Constant As String</em>' attribute.
-	 * @see #isSetWarpingConstantAsString()
-	 * @see #unsetWarpingConstantAsString()
-	 * @see #setWarpingConstantAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralProfileProperties_WarpingConstantAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getWarpingConstantAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getWarpingConstantAsString <em>Warping Constant As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Warping Constant As String</em>' attribute.
-	 * @see #isSetWarpingConstantAsString()
-	 * @see #unsetWarpingConstantAsString()
-	 * @see #getWarpingConstantAsString()
-	 * @generated
-	 */
-	void setWarpingConstantAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getWarpingConstantAsString <em>Warping Constant As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetWarpingConstantAsString()
-	 * @see #getWarpingConstantAsString()
-	 * @see #setWarpingConstantAsString(String)
-	 * @generated
-	 */
-	void unsetWarpingConstantAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getWarpingConstantAsString <em>Warping Constant As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Warping Constant As String</em>' attribute is set.
-	 * @see #unsetWarpingConstantAsString()
-	 * @see #getWarpingConstantAsString()
-	 * @see #setWarpingConstantAsString(String)
-	 * @generated
-	 */
-	boolean isSetWarpingConstantAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Shear Centre Z</b></em>' attribute.
+	 * Returns the value of the '<em><b>Shear Centre Z</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Shear Centre Z</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Shear Centre Z</em>' attribute.
+	 * @return the value of the '<em>Shear Centre Z</em>' reference.
 	 * @see #isSetShearCentreZ()
 	 * @see #unsetShearCentreZ()
-	 * @see #setShearCentreZ(float)
+	 * @see #setShearCentreZ(IfcLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralProfileProperties_ShearCentreZ()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getShearCentreZ();
+	IfcLengthMeasure getShearCentreZ();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getShearCentreZ <em>Shear Centre Z</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getShearCentreZ <em>Shear Centre Z</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Shear Centre Z</em>' attribute.
+	 * @param value the new value of the '<em>Shear Centre Z</em>' reference.
 	 * @see #isSetShearCentreZ()
 	 * @see #unsetShearCentreZ()
 	 * @see #getShearCentreZ()
 	 * @generated
 	 */
-	void setShearCentreZ(float value);
+	void setShearCentreZ(IfcLengthMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getShearCentreZ <em>Shear Centre Z</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getShearCentreZ <em>Shear Centre Z</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetShearCentreZ()
 	 * @see #getShearCentreZ()
-	 * @see #setShearCentreZ(float)
+	 * @see #setShearCentreZ(IfcLengthMeasure)
 	 * @generated
 	 */
 	void unsetShearCentreZ();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getShearCentreZ <em>Shear Centre Z</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getShearCentreZ <em>Shear Centre Z</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Shear Centre Z</em>' attribute is set.
+	 * @return whether the value of the '<em>Shear Centre Z</em>' reference is set.
 	 * @see #unsetShearCentreZ()
 	 * @see #getShearCentreZ()
-	 * @see #setShearCentreZ(float)
+	 * @see #setShearCentreZ(IfcLengthMeasure)
 	 * @generated
 	 */
 	boolean isSetShearCentreZ();
 
 	/**
-	 * Returns the value of the '<em><b>Shear Centre ZAs String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Shear Centre ZAs String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Shear Centre ZAs String</em>' attribute.
-	 * @see #isSetShearCentreZAsString()
-	 * @see #unsetShearCentreZAsString()
-	 * @see #setShearCentreZAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralProfileProperties_ShearCentreZAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getShearCentreZAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getShearCentreZAsString <em>Shear Centre ZAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Shear Centre ZAs String</em>' attribute.
-	 * @see #isSetShearCentreZAsString()
-	 * @see #unsetShearCentreZAsString()
-	 * @see #getShearCentreZAsString()
-	 * @generated
-	 */
-	void setShearCentreZAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getShearCentreZAsString <em>Shear Centre ZAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetShearCentreZAsString()
-	 * @see #getShearCentreZAsString()
-	 * @see #setShearCentreZAsString(String)
-	 * @generated
-	 */
-	void unsetShearCentreZAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getShearCentreZAsString <em>Shear Centre ZAs String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Shear Centre ZAs String</em>' attribute is set.
-	 * @see #unsetShearCentreZAsString()
-	 * @see #getShearCentreZAsString()
-	 * @see #setShearCentreZAsString(String)
-	 * @generated
-	 */
-	boolean isSetShearCentreZAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Shear Centre Y</b></em>' attribute.
+	 * Returns the value of the '<em><b>Shear Centre Y</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Shear Centre Y</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Shear Centre Y</em>' attribute.
+	 * @return the value of the '<em>Shear Centre Y</em>' reference.
 	 * @see #isSetShearCentreY()
 	 * @see #unsetShearCentreY()
-	 * @see #setShearCentreY(float)
+	 * @see #setShearCentreY(IfcLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralProfileProperties_ShearCentreY()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getShearCentreY();
+	IfcLengthMeasure getShearCentreY();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getShearCentreY <em>Shear Centre Y</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getShearCentreY <em>Shear Centre Y</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Shear Centre Y</em>' attribute.
+	 * @param value the new value of the '<em>Shear Centre Y</em>' reference.
 	 * @see #isSetShearCentreY()
 	 * @see #unsetShearCentreY()
 	 * @see #getShearCentreY()
 	 * @generated
 	 */
-	void setShearCentreY(float value);
+	void setShearCentreY(IfcLengthMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getShearCentreY <em>Shear Centre Y</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getShearCentreY <em>Shear Centre Y</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetShearCentreY()
 	 * @see #getShearCentreY()
-	 * @see #setShearCentreY(float)
+	 * @see #setShearCentreY(IfcLengthMeasure)
 	 * @generated
 	 */
 	void unsetShearCentreY();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getShearCentreY <em>Shear Centre Y</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getShearCentreY <em>Shear Centre Y</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Shear Centre Y</em>' attribute is set.
+	 * @return whether the value of the '<em>Shear Centre Y</em>' reference is set.
 	 * @see #unsetShearCentreY()
 	 * @see #getShearCentreY()
-	 * @see #setShearCentreY(float)
+	 * @see #setShearCentreY(IfcLengthMeasure)
 	 * @generated
 	 */
 	boolean isSetShearCentreY();
 
 	/**
-	 * Returns the value of the '<em><b>Shear Centre YAs String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Shear Centre YAs String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Shear Centre YAs String</em>' attribute.
-	 * @see #isSetShearCentreYAsString()
-	 * @see #unsetShearCentreYAsString()
-	 * @see #setShearCentreYAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralProfileProperties_ShearCentreYAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getShearCentreYAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getShearCentreYAsString <em>Shear Centre YAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Shear Centre YAs String</em>' attribute.
-	 * @see #isSetShearCentreYAsString()
-	 * @see #unsetShearCentreYAsString()
-	 * @see #getShearCentreYAsString()
-	 * @generated
-	 */
-	void setShearCentreYAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getShearCentreYAsString <em>Shear Centre YAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetShearCentreYAsString()
-	 * @see #getShearCentreYAsString()
-	 * @see #setShearCentreYAsString(String)
-	 * @generated
-	 */
-	void unsetShearCentreYAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getShearCentreYAsString <em>Shear Centre YAs String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Shear Centre YAs String</em>' attribute is set.
-	 * @see #unsetShearCentreYAsString()
-	 * @see #getShearCentreYAsString()
-	 * @see #setShearCentreYAsString(String)
-	 * @generated
-	 */
-	boolean isSetShearCentreYAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Shear Deformation Area Z</b></em>' attribute.
+	 * Returns the value of the '<em><b>Shear Deformation Area Z</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Shear Deformation Area Z</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Shear Deformation Area Z</em>' attribute.
+	 * @return the value of the '<em>Shear Deformation Area Z</em>' reference.
 	 * @see #isSetShearDeformationAreaZ()
 	 * @see #unsetShearDeformationAreaZ()
-	 * @see #setShearDeformationAreaZ(float)
+	 * @see #setShearDeformationAreaZ(IfcAreaMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralProfileProperties_ShearDeformationAreaZ()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getShearDeformationAreaZ();
+	IfcAreaMeasure getShearDeformationAreaZ();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getShearDeformationAreaZ <em>Shear Deformation Area Z</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getShearDeformationAreaZ <em>Shear Deformation Area Z</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Shear Deformation Area Z</em>' attribute.
+	 * @param value the new value of the '<em>Shear Deformation Area Z</em>' reference.
 	 * @see #isSetShearDeformationAreaZ()
 	 * @see #unsetShearDeformationAreaZ()
 	 * @see #getShearDeformationAreaZ()
 	 * @generated
 	 */
-	void setShearDeformationAreaZ(float value);
+	void setShearDeformationAreaZ(IfcAreaMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getShearDeformationAreaZ <em>Shear Deformation Area Z</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getShearDeformationAreaZ <em>Shear Deformation Area Z</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetShearDeformationAreaZ()
 	 * @see #getShearDeformationAreaZ()
-	 * @see #setShearDeformationAreaZ(float)
+	 * @see #setShearDeformationAreaZ(IfcAreaMeasure)
 	 * @generated
 	 */
 	void unsetShearDeformationAreaZ();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getShearDeformationAreaZ <em>Shear Deformation Area Z</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getShearDeformationAreaZ <em>Shear Deformation Area Z</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Shear Deformation Area Z</em>' attribute is set.
+	 * @return whether the value of the '<em>Shear Deformation Area Z</em>' reference is set.
 	 * @see #unsetShearDeformationAreaZ()
 	 * @see #getShearDeformationAreaZ()
-	 * @see #setShearDeformationAreaZ(float)
+	 * @see #setShearDeformationAreaZ(IfcAreaMeasure)
 	 * @generated
 	 */
 	boolean isSetShearDeformationAreaZ();
 
 	/**
-	 * Returns the value of the '<em><b>Shear Deformation Area ZAs String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Shear Deformation Area ZAs String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Shear Deformation Area ZAs String</em>' attribute.
-	 * @see #isSetShearDeformationAreaZAsString()
-	 * @see #unsetShearDeformationAreaZAsString()
-	 * @see #setShearDeformationAreaZAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralProfileProperties_ShearDeformationAreaZAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getShearDeformationAreaZAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getShearDeformationAreaZAsString <em>Shear Deformation Area ZAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Shear Deformation Area ZAs String</em>' attribute.
-	 * @see #isSetShearDeformationAreaZAsString()
-	 * @see #unsetShearDeformationAreaZAsString()
-	 * @see #getShearDeformationAreaZAsString()
-	 * @generated
-	 */
-	void setShearDeformationAreaZAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getShearDeformationAreaZAsString <em>Shear Deformation Area ZAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetShearDeformationAreaZAsString()
-	 * @see #getShearDeformationAreaZAsString()
-	 * @see #setShearDeformationAreaZAsString(String)
-	 * @generated
-	 */
-	void unsetShearDeformationAreaZAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getShearDeformationAreaZAsString <em>Shear Deformation Area ZAs String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Shear Deformation Area ZAs String</em>' attribute is set.
-	 * @see #unsetShearDeformationAreaZAsString()
-	 * @see #getShearDeformationAreaZAsString()
-	 * @see #setShearDeformationAreaZAsString(String)
-	 * @generated
-	 */
-	boolean isSetShearDeformationAreaZAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Shear Deformation Area Y</b></em>' attribute.
+	 * Returns the value of the '<em><b>Shear Deformation Area Y</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Shear Deformation Area Y</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Shear Deformation Area Y</em>' attribute.
+	 * @return the value of the '<em>Shear Deformation Area Y</em>' reference.
 	 * @see #isSetShearDeformationAreaY()
 	 * @see #unsetShearDeformationAreaY()
-	 * @see #setShearDeformationAreaY(float)
+	 * @see #setShearDeformationAreaY(IfcAreaMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralProfileProperties_ShearDeformationAreaY()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getShearDeformationAreaY();
+	IfcAreaMeasure getShearDeformationAreaY();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getShearDeformationAreaY <em>Shear Deformation Area Y</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getShearDeformationAreaY <em>Shear Deformation Area Y</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Shear Deformation Area Y</em>' attribute.
+	 * @param value the new value of the '<em>Shear Deformation Area Y</em>' reference.
 	 * @see #isSetShearDeformationAreaY()
 	 * @see #unsetShearDeformationAreaY()
 	 * @see #getShearDeformationAreaY()
 	 * @generated
 	 */
-	void setShearDeformationAreaY(float value);
+	void setShearDeformationAreaY(IfcAreaMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getShearDeformationAreaY <em>Shear Deformation Area Y</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getShearDeformationAreaY <em>Shear Deformation Area Y</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetShearDeformationAreaY()
 	 * @see #getShearDeformationAreaY()
-	 * @see #setShearDeformationAreaY(float)
+	 * @see #setShearDeformationAreaY(IfcAreaMeasure)
 	 * @generated
 	 */
 	void unsetShearDeformationAreaY();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getShearDeformationAreaY <em>Shear Deformation Area Y</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getShearDeformationAreaY <em>Shear Deformation Area Y</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Shear Deformation Area Y</em>' attribute is set.
+	 * @return whether the value of the '<em>Shear Deformation Area Y</em>' reference is set.
 	 * @see #unsetShearDeformationAreaY()
 	 * @see #getShearDeformationAreaY()
-	 * @see #setShearDeformationAreaY(float)
+	 * @see #setShearDeformationAreaY(IfcAreaMeasure)
 	 * @generated
 	 */
 	boolean isSetShearDeformationAreaY();
 
 	/**
-	 * Returns the value of the '<em><b>Shear Deformation Area YAs String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Shear Deformation Area YAs String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Shear Deformation Area YAs String</em>' attribute.
-	 * @see #isSetShearDeformationAreaYAsString()
-	 * @see #unsetShearDeformationAreaYAsString()
-	 * @see #setShearDeformationAreaYAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralProfileProperties_ShearDeformationAreaYAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getShearDeformationAreaYAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getShearDeformationAreaYAsString <em>Shear Deformation Area YAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Shear Deformation Area YAs String</em>' attribute.
-	 * @see #isSetShearDeformationAreaYAsString()
-	 * @see #unsetShearDeformationAreaYAsString()
-	 * @see #getShearDeformationAreaYAsString()
-	 * @generated
-	 */
-	void setShearDeformationAreaYAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getShearDeformationAreaYAsString <em>Shear Deformation Area YAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetShearDeformationAreaYAsString()
-	 * @see #getShearDeformationAreaYAsString()
-	 * @see #setShearDeformationAreaYAsString(String)
-	 * @generated
-	 */
-	void unsetShearDeformationAreaYAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getShearDeformationAreaYAsString <em>Shear Deformation Area YAs String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Shear Deformation Area YAs String</em>' attribute is set.
-	 * @see #unsetShearDeformationAreaYAsString()
-	 * @see #getShearDeformationAreaYAsString()
-	 * @see #setShearDeformationAreaYAsString(String)
-	 * @generated
-	 */
-	boolean isSetShearDeformationAreaYAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Maximum Section Modulus Y</b></em>' attribute.
+	 * Returns the value of the '<em><b>Maximum Section Modulus Y</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Maximum Section Modulus Y</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Maximum Section Modulus Y</em>' attribute.
+	 * @return the value of the '<em>Maximum Section Modulus Y</em>' reference.
 	 * @see #isSetMaximumSectionModulusY()
 	 * @see #unsetMaximumSectionModulusY()
-	 * @see #setMaximumSectionModulusY(float)
+	 * @see #setMaximumSectionModulusY(IfcSectionModulusMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralProfileProperties_MaximumSectionModulusY()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getMaximumSectionModulusY();
+	IfcSectionModulusMeasure getMaximumSectionModulusY();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMaximumSectionModulusY <em>Maximum Section Modulus Y</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMaximumSectionModulusY <em>Maximum Section Modulus Y</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Maximum Section Modulus Y</em>' attribute.
+	 * @param value the new value of the '<em>Maximum Section Modulus Y</em>' reference.
 	 * @see #isSetMaximumSectionModulusY()
 	 * @see #unsetMaximumSectionModulusY()
 	 * @see #getMaximumSectionModulusY()
 	 * @generated
 	 */
-	void setMaximumSectionModulusY(float value);
+	void setMaximumSectionModulusY(IfcSectionModulusMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMaximumSectionModulusY <em>Maximum Section Modulus Y</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMaximumSectionModulusY <em>Maximum Section Modulus Y</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetMaximumSectionModulusY()
 	 * @see #getMaximumSectionModulusY()
-	 * @see #setMaximumSectionModulusY(float)
+	 * @see #setMaximumSectionModulusY(IfcSectionModulusMeasure)
 	 * @generated
 	 */
 	void unsetMaximumSectionModulusY();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMaximumSectionModulusY <em>Maximum Section Modulus Y</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMaximumSectionModulusY <em>Maximum Section Modulus Y</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Maximum Section Modulus Y</em>' attribute is set.
+	 * @return whether the value of the '<em>Maximum Section Modulus Y</em>' reference is set.
 	 * @see #unsetMaximumSectionModulusY()
 	 * @see #getMaximumSectionModulusY()
-	 * @see #setMaximumSectionModulusY(float)
+	 * @see #setMaximumSectionModulusY(IfcSectionModulusMeasure)
 	 * @generated
 	 */
 	boolean isSetMaximumSectionModulusY();
 
 	/**
-	 * Returns the value of the '<em><b>Maximum Section Modulus YAs String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Maximum Section Modulus YAs String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Maximum Section Modulus YAs String</em>' attribute.
-	 * @see #isSetMaximumSectionModulusYAsString()
-	 * @see #unsetMaximumSectionModulusYAsString()
-	 * @see #setMaximumSectionModulusYAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralProfileProperties_MaximumSectionModulusYAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getMaximumSectionModulusYAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMaximumSectionModulusYAsString <em>Maximum Section Modulus YAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Maximum Section Modulus YAs String</em>' attribute.
-	 * @see #isSetMaximumSectionModulusYAsString()
-	 * @see #unsetMaximumSectionModulusYAsString()
-	 * @see #getMaximumSectionModulusYAsString()
-	 * @generated
-	 */
-	void setMaximumSectionModulusYAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMaximumSectionModulusYAsString <em>Maximum Section Modulus YAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetMaximumSectionModulusYAsString()
-	 * @see #getMaximumSectionModulusYAsString()
-	 * @see #setMaximumSectionModulusYAsString(String)
-	 * @generated
-	 */
-	void unsetMaximumSectionModulusYAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMaximumSectionModulusYAsString <em>Maximum Section Modulus YAs String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Maximum Section Modulus YAs String</em>' attribute is set.
-	 * @see #unsetMaximumSectionModulusYAsString()
-	 * @see #getMaximumSectionModulusYAsString()
-	 * @see #setMaximumSectionModulusYAsString(String)
-	 * @generated
-	 */
-	boolean isSetMaximumSectionModulusYAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Minimum Section Modulus Y</b></em>' attribute.
+	 * Returns the value of the '<em><b>Minimum Section Modulus Y</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Minimum Section Modulus Y</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Minimum Section Modulus Y</em>' attribute.
+	 * @return the value of the '<em>Minimum Section Modulus Y</em>' reference.
 	 * @see #isSetMinimumSectionModulusY()
 	 * @see #unsetMinimumSectionModulusY()
-	 * @see #setMinimumSectionModulusY(float)
+	 * @see #setMinimumSectionModulusY(IfcSectionModulusMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralProfileProperties_MinimumSectionModulusY()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getMinimumSectionModulusY();
+	IfcSectionModulusMeasure getMinimumSectionModulusY();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMinimumSectionModulusY <em>Minimum Section Modulus Y</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMinimumSectionModulusY <em>Minimum Section Modulus Y</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Minimum Section Modulus Y</em>' attribute.
+	 * @param value the new value of the '<em>Minimum Section Modulus Y</em>' reference.
 	 * @see #isSetMinimumSectionModulusY()
 	 * @see #unsetMinimumSectionModulusY()
 	 * @see #getMinimumSectionModulusY()
 	 * @generated
 	 */
-	void setMinimumSectionModulusY(float value);
+	void setMinimumSectionModulusY(IfcSectionModulusMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMinimumSectionModulusY <em>Minimum Section Modulus Y</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMinimumSectionModulusY <em>Minimum Section Modulus Y</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetMinimumSectionModulusY()
 	 * @see #getMinimumSectionModulusY()
-	 * @see #setMinimumSectionModulusY(float)
+	 * @see #setMinimumSectionModulusY(IfcSectionModulusMeasure)
 	 * @generated
 	 */
 	void unsetMinimumSectionModulusY();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMinimumSectionModulusY <em>Minimum Section Modulus Y</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMinimumSectionModulusY <em>Minimum Section Modulus Y</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Minimum Section Modulus Y</em>' attribute is set.
+	 * @return whether the value of the '<em>Minimum Section Modulus Y</em>' reference is set.
 	 * @see #unsetMinimumSectionModulusY()
 	 * @see #getMinimumSectionModulusY()
-	 * @see #setMinimumSectionModulusY(float)
+	 * @see #setMinimumSectionModulusY(IfcSectionModulusMeasure)
 	 * @generated
 	 */
 	boolean isSetMinimumSectionModulusY();
 
 	/**
-	 * Returns the value of the '<em><b>Minimum Section Modulus YAs String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Minimum Section Modulus YAs String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Minimum Section Modulus YAs String</em>' attribute.
-	 * @see #isSetMinimumSectionModulusYAsString()
-	 * @see #unsetMinimumSectionModulusYAsString()
-	 * @see #setMinimumSectionModulusYAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralProfileProperties_MinimumSectionModulusYAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getMinimumSectionModulusYAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMinimumSectionModulusYAsString <em>Minimum Section Modulus YAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Minimum Section Modulus YAs String</em>' attribute.
-	 * @see #isSetMinimumSectionModulusYAsString()
-	 * @see #unsetMinimumSectionModulusYAsString()
-	 * @see #getMinimumSectionModulusYAsString()
-	 * @generated
-	 */
-	void setMinimumSectionModulusYAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMinimumSectionModulusYAsString <em>Minimum Section Modulus YAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetMinimumSectionModulusYAsString()
-	 * @see #getMinimumSectionModulusYAsString()
-	 * @see #setMinimumSectionModulusYAsString(String)
-	 * @generated
-	 */
-	void unsetMinimumSectionModulusYAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMinimumSectionModulusYAsString <em>Minimum Section Modulus YAs String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Minimum Section Modulus YAs String</em>' attribute is set.
-	 * @see #unsetMinimumSectionModulusYAsString()
-	 * @see #getMinimumSectionModulusYAsString()
-	 * @see #setMinimumSectionModulusYAsString(String)
-	 * @generated
-	 */
-	boolean isSetMinimumSectionModulusYAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Maximum Section Modulus Z</b></em>' attribute.
+	 * Returns the value of the '<em><b>Maximum Section Modulus Z</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Maximum Section Modulus Z</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Maximum Section Modulus Z</em>' attribute.
+	 * @return the value of the '<em>Maximum Section Modulus Z</em>' reference.
 	 * @see #isSetMaximumSectionModulusZ()
 	 * @see #unsetMaximumSectionModulusZ()
-	 * @see #setMaximumSectionModulusZ(float)
+	 * @see #setMaximumSectionModulusZ(IfcSectionModulusMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralProfileProperties_MaximumSectionModulusZ()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getMaximumSectionModulusZ();
+	IfcSectionModulusMeasure getMaximumSectionModulusZ();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMaximumSectionModulusZ <em>Maximum Section Modulus Z</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMaximumSectionModulusZ <em>Maximum Section Modulus Z</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Maximum Section Modulus Z</em>' attribute.
+	 * @param value the new value of the '<em>Maximum Section Modulus Z</em>' reference.
 	 * @see #isSetMaximumSectionModulusZ()
 	 * @see #unsetMaximumSectionModulusZ()
 	 * @see #getMaximumSectionModulusZ()
 	 * @generated
 	 */
-	void setMaximumSectionModulusZ(float value);
+	void setMaximumSectionModulusZ(IfcSectionModulusMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMaximumSectionModulusZ <em>Maximum Section Modulus Z</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMaximumSectionModulusZ <em>Maximum Section Modulus Z</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetMaximumSectionModulusZ()
 	 * @see #getMaximumSectionModulusZ()
-	 * @see #setMaximumSectionModulusZ(float)
+	 * @see #setMaximumSectionModulusZ(IfcSectionModulusMeasure)
 	 * @generated
 	 */
 	void unsetMaximumSectionModulusZ();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMaximumSectionModulusZ <em>Maximum Section Modulus Z</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMaximumSectionModulusZ <em>Maximum Section Modulus Z</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Maximum Section Modulus Z</em>' attribute is set.
+	 * @return whether the value of the '<em>Maximum Section Modulus Z</em>' reference is set.
 	 * @see #unsetMaximumSectionModulusZ()
 	 * @see #getMaximumSectionModulusZ()
-	 * @see #setMaximumSectionModulusZ(float)
+	 * @see #setMaximumSectionModulusZ(IfcSectionModulusMeasure)
 	 * @generated
 	 */
 	boolean isSetMaximumSectionModulusZ();
 
 	/**
-	 * Returns the value of the '<em><b>Maximum Section Modulus ZAs String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Maximum Section Modulus ZAs String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Maximum Section Modulus ZAs String</em>' attribute.
-	 * @see #isSetMaximumSectionModulusZAsString()
-	 * @see #unsetMaximumSectionModulusZAsString()
-	 * @see #setMaximumSectionModulusZAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralProfileProperties_MaximumSectionModulusZAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getMaximumSectionModulusZAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMaximumSectionModulusZAsString <em>Maximum Section Modulus ZAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Maximum Section Modulus ZAs String</em>' attribute.
-	 * @see #isSetMaximumSectionModulusZAsString()
-	 * @see #unsetMaximumSectionModulusZAsString()
-	 * @see #getMaximumSectionModulusZAsString()
-	 * @generated
-	 */
-	void setMaximumSectionModulusZAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMaximumSectionModulusZAsString <em>Maximum Section Modulus ZAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetMaximumSectionModulusZAsString()
-	 * @see #getMaximumSectionModulusZAsString()
-	 * @see #setMaximumSectionModulusZAsString(String)
-	 * @generated
-	 */
-	void unsetMaximumSectionModulusZAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMaximumSectionModulusZAsString <em>Maximum Section Modulus ZAs String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Maximum Section Modulus ZAs String</em>' attribute is set.
-	 * @see #unsetMaximumSectionModulusZAsString()
-	 * @see #getMaximumSectionModulusZAsString()
-	 * @see #setMaximumSectionModulusZAsString(String)
-	 * @generated
-	 */
-	boolean isSetMaximumSectionModulusZAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Minimum Section Modulus Z</b></em>' attribute.
+	 * Returns the value of the '<em><b>Minimum Section Modulus Z</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Minimum Section Modulus Z</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Minimum Section Modulus Z</em>' attribute.
+	 * @return the value of the '<em>Minimum Section Modulus Z</em>' reference.
 	 * @see #isSetMinimumSectionModulusZ()
 	 * @see #unsetMinimumSectionModulusZ()
-	 * @see #setMinimumSectionModulusZ(float)
+	 * @see #setMinimumSectionModulusZ(IfcSectionModulusMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralProfileProperties_MinimumSectionModulusZ()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getMinimumSectionModulusZ();
+	IfcSectionModulusMeasure getMinimumSectionModulusZ();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMinimumSectionModulusZ <em>Minimum Section Modulus Z</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMinimumSectionModulusZ <em>Minimum Section Modulus Z</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Minimum Section Modulus Z</em>' attribute.
+	 * @param value the new value of the '<em>Minimum Section Modulus Z</em>' reference.
 	 * @see #isSetMinimumSectionModulusZ()
 	 * @see #unsetMinimumSectionModulusZ()
 	 * @see #getMinimumSectionModulusZ()
 	 * @generated
 	 */
-	void setMinimumSectionModulusZ(float value);
+	void setMinimumSectionModulusZ(IfcSectionModulusMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMinimumSectionModulusZ <em>Minimum Section Modulus Z</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMinimumSectionModulusZ <em>Minimum Section Modulus Z</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetMinimumSectionModulusZ()
 	 * @see #getMinimumSectionModulusZ()
-	 * @see #setMinimumSectionModulusZ(float)
+	 * @see #setMinimumSectionModulusZ(IfcSectionModulusMeasure)
 	 * @generated
 	 */
 	void unsetMinimumSectionModulusZ();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMinimumSectionModulusZ <em>Minimum Section Modulus Z</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMinimumSectionModulusZ <em>Minimum Section Modulus Z</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Minimum Section Modulus Z</em>' attribute is set.
+	 * @return whether the value of the '<em>Minimum Section Modulus Z</em>' reference is set.
 	 * @see #unsetMinimumSectionModulusZ()
 	 * @see #getMinimumSectionModulusZ()
-	 * @see #setMinimumSectionModulusZ(float)
+	 * @see #setMinimumSectionModulusZ(IfcSectionModulusMeasure)
 	 * @generated
 	 */
 	boolean isSetMinimumSectionModulusZ();
 
 	/**
-	 * Returns the value of the '<em><b>Minimum Section Modulus ZAs String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Minimum Section Modulus ZAs String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Minimum Section Modulus ZAs String</em>' attribute.
-	 * @see #isSetMinimumSectionModulusZAsString()
-	 * @see #unsetMinimumSectionModulusZAsString()
-	 * @see #setMinimumSectionModulusZAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralProfileProperties_MinimumSectionModulusZAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getMinimumSectionModulusZAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMinimumSectionModulusZAsString <em>Minimum Section Modulus ZAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Minimum Section Modulus ZAs String</em>' attribute.
-	 * @see #isSetMinimumSectionModulusZAsString()
-	 * @see #unsetMinimumSectionModulusZAsString()
-	 * @see #getMinimumSectionModulusZAsString()
-	 * @generated
-	 */
-	void setMinimumSectionModulusZAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMinimumSectionModulusZAsString <em>Minimum Section Modulus ZAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetMinimumSectionModulusZAsString()
-	 * @see #getMinimumSectionModulusZAsString()
-	 * @see #setMinimumSectionModulusZAsString(String)
-	 * @generated
-	 */
-	void unsetMinimumSectionModulusZAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getMinimumSectionModulusZAsString <em>Minimum Section Modulus ZAs String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Minimum Section Modulus ZAs String</em>' attribute is set.
-	 * @see #unsetMinimumSectionModulusZAsString()
-	 * @see #getMinimumSectionModulusZAsString()
-	 * @see #setMinimumSectionModulusZAsString(String)
-	 * @generated
-	 */
-	boolean isSetMinimumSectionModulusZAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Torsional Section Modulus</b></em>' attribute.
+	 * Returns the value of the '<em><b>Torsional Section Modulus</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Torsional Section Modulus</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Torsional Section Modulus</em>' attribute.
+	 * @return the value of the '<em>Torsional Section Modulus</em>' reference.
 	 * @see #isSetTorsionalSectionModulus()
 	 * @see #unsetTorsionalSectionModulus()
-	 * @see #setTorsionalSectionModulus(float)
+	 * @see #setTorsionalSectionModulus(IfcSectionModulusMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralProfileProperties_TorsionalSectionModulus()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getTorsionalSectionModulus();
+	IfcSectionModulusMeasure getTorsionalSectionModulus();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getTorsionalSectionModulus <em>Torsional Section Modulus</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getTorsionalSectionModulus <em>Torsional Section Modulus</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Torsional Section Modulus</em>' attribute.
+	 * @param value the new value of the '<em>Torsional Section Modulus</em>' reference.
 	 * @see #isSetTorsionalSectionModulus()
 	 * @see #unsetTorsionalSectionModulus()
 	 * @see #getTorsionalSectionModulus()
 	 * @generated
 	 */
-	void setTorsionalSectionModulus(float value);
+	void setTorsionalSectionModulus(IfcSectionModulusMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getTorsionalSectionModulus <em>Torsional Section Modulus</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getTorsionalSectionModulus <em>Torsional Section Modulus</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetTorsionalSectionModulus()
 	 * @see #getTorsionalSectionModulus()
-	 * @see #setTorsionalSectionModulus(float)
+	 * @see #setTorsionalSectionModulus(IfcSectionModulusMeasure)
 	 * @generated
 	 */
 	void unsetTorsionalSectionModulus();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getTorsionalSectionModulus <em>Torsional Section Modulus</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getTorsionalSectionModulus <em>Torsional Section Modulus</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Torsional Section Modulus</em>' attribute is set.
+	 * @return whether the value of the '<em>Torsional Section Modulus</em>' reference is set.
 	 * @see #unsetTorsionalSectionModulus()
 	 * @see #getTorsionalSectionModulus()
-	 * @see #setTorsionalSectionModulus(float)
+	 * @see #setTorsionalSectionModulus(IfcSectionModulusMeasure)
 	 * @generated
 	 */
 	boolean isSetTorsionalSectionModulus();
 
 	/**
-	 * Returns the value of the '<em><b>Torsional Section Modulus As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Torsional Section Modulus As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Torsional Section Modulus As String</em>' attribute.
-	 * @see #isSetTorsionalSectionModulusAsString()
-	 * @see #unsetTorsionalSectionModulusAsString()
-	 * @see #setTorsionalSectionModulusAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralProfileProperties_TorsionalSectionModulusAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getTorsionalSectionModulusAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getTorsionalSectionModulusAsString <em>Torsional Section Modulus As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Torsional Section Modulus As String</em>' attribute.
-	 * @see #isSetTorsionalSectionModulusAsString()
-	 * @see #unsetTorsionalSectionModulusAsString()
-	 * @see #getTorsionalSectionModulusAsString()
-	 * @generated
-	 */
-	void setTorsionalSectionModulusAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getTorsionalSectionModulusAsString <em>Torsional Section Modulus As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetTorsionalSectionModulusAsString()
-	 * @see #getTorsionalSectionModulusAsString()
-	 * @see #setTorsionalSectionModulusAsString(String)
-	 * @generated
-	 */
-	void unsetTorsionalSectionModulusAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getTorsionalSectionModulusAsString <em>Torsional Section Modulus As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Torsional Section Modulus As String</em>' attribute is set.
-	 * @see #unsetTorsionalSectionModulusAsString()
-	 * @see #getTorsionalSectionModulusAsString()
-	 * @see #setTorsionalSectionModulusAsString(String)
-	 * @generated
-	 */
-	boolean isSetTorsionalSectionModulusAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Centre Of Gravity In X</b></em>' attribute.
+	 * Returns the value of the '<em><b>Centre Of Gravity In X</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Centre Of Gravity In X</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Centre Of Gravity In X</em>' attribute.
+	 * @return the value of the '<em>Centre Of Gravity In X</em>' reference.
 	 * @see #isSetCentreOfGravityInX()
 	 * @see #unsetCentreOfGravityInX()
-	 * @see #setCentreOfGravityInX(float)
+	 * @see #setCentreOfGravityInX(IfcLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralProfileProperties_CentreOfGravityInX()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getCentreOfGravityInX();
+	IfcLengthMeasure getCentreOfGravityInX();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getCentreOfGravityInX <em>Centre Of Gravity In X</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getCentreOfGravityInX <em>Centre Of Gravity In X</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Centre Of Gravity In X</em>' attribute.
+	 * @param value the new value of the '<em>Centre Of Gravity In X</em>' reference.
 	 * @see #isSetCentreOfGravityInX()
 	 * @see #unsetCentreOfGravityInX()
 	 * @see #getCentreOfGravityInX()
 	 * @generated
 	 */
-	void setCentreOfGravityInX(float value);
+	void setCentreOfGravityInX(IfcLengthMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getCentreOfGravityInX <em>Centre Of Gravity In X</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getCentreOfGravityInX <em>Centre Of Gravity In X</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetCentreOfGravityInX()
 	 * @see #getCentreOfGravityInX()
-	 * @see #setCentreOfGravityInX(float)
+	 * @see #setCentreOfGravityInX(IfcLengthMeasure)
 	 * @generated
 	 */
 	void unsetCentreOfGravityInX();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getCentreOfGravityInX <em>Centre Of Gravity In X</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getCentreOfGravityInX <em>Centre Of Gravity In X</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Centre Of Gravity In X</em>' attribute is set.
+	 * @return whether the value of the '<em>Centre Of Gravity In X</em>' reference is set.
 	 * @see #unsetCentreOfGravityInX()
 	 * @see #getCentreOfGravityInX()
-	 * @see #setCentreOfGravityInX(float)
+	 * @see #setCentreOfGravityInX(IfcLengthMeasure)
 	 * @generated
 	 */
 	boolean isSetCentreOfGravityInX();
 
 	/**
-	 * Returns the value of the '<em><b>Centre Of Gravity In XAs String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Centre Of Gravity In XAs String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Centre Of Gravity In XAs String</em>' attribute.
-	 * @see #isSetCentreOfGravityInXAsString()
-	 * @see #unsetCentreOfGravityInXAsString()
-	 * @see #setCentreOfGravityInXAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralProfileProperties_CentreOfGravityInXAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getCentreOfGravityInXAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getCentreOfGravityInXAsString <em>Centre Of Gravity In XAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Centre Of Gravity In XAs String</em>' attribute.
-	 * @see #isSetCentreOfGravityInXAsString()
-	 * @see #unsetCentreOfGravityInXAsString()
-	 * @see #getCentreOfGravityInXAsString()
-	 * @generated
-	 */
-	void setCentreOfGravityInXAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getCentreOfGravityInXAsString <em>Centre Of Gravity In XAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetCentreOfGravityInXAsString()
-	 * @see #getCentreOfGravityInXAsString()
-	 * @see #setCentreOfGravityInXAsString(String)
-	 * @generated
-	 */
-	void unsetCentreOfGravityInXAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getCentreOfGravityInXAsString <em>Centre Of Gravity In XAs String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Centre Of Gravity In XAs String</em>' attribute is set.
-	 * @see #unsetCentreOfGravityInXAsString()
-	 * @see #getCentreOfGravityInXAsString()
-	 * @see #setCentreOfGravityInXAsString(String)
-	 * @generated
-	 */
-	boolean isSetCentreOfGravityInXAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Centre Of Gravity In Y</b></em>' attribute.
+	 * Returns the value of the '<em><b>Centre Of Gravity In Y</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Centre Of Gravity In Y</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Centre Of Gravity In Y</em>' attribute.
+	 * @return the value of the '<em>Centre Of Gravity In Y</em>' reference.
 	 * @see #isSetCentreOfGravityInY()
 	 * @see #unsetCentreOfGravityInY()
-	 * @see #setCentreOfGravityInY(float)
+	 * @see #setCentreOfGravityInY(IfcLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralProfileProperties_CentreOfGravityInY()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getCentreOfGravityInY();
+	IfcLengthMeasure getCentreOfGravityInY();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getCentreOfGravityInY <em>Centre Of Gravity In Y</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getCentreOfGravityInY <em>Centre Of Gravity In Y</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Centre Of Gravity In Y</em>' attribute.
+	 * @param value the new value of the '<em>Centre Of Gravity In Y</em>' reference.
 	 * @see #isSetCentreOfGravityInY()
 	 * @see #unsetCentreOfGravityInY()
 	 * @see #getCentreOfGravityInY()
 	 * @generated
 	 */
-	void setCentreOfGravityInY(float value);
+	void setCentreOfGravityInY(IfcLengthMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getCentreOfGravityInY <em>Centre Of Gravity In Y</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getCentreOfGravityInY <em>Centre Of Gravity In Y</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetCentreOfGravityInY()
 	 * @see #getCentreOfGravityInY()
-	 * @see #setCentreOfGravityInY(float)
+	 * @see #setCentreOfGravityInY(IfcLengthMeasure)
 	 * @generated
 	 */
 	void unsetCentreOfGravityInY();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getCentreOfGravityInY <em>Centre Of Gravity In Y</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getCentreOfGravityInY <em>Centre Of Gravity In Y</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Centre Of Gravity In Y</em>' attribute is set.
+	 * @return whether the value of the '<em>Centre Of Gravity In Y</em>' reference is set.
 	 * @see #unsetCentreOfGravityInY()
 	 * @see #getCentreOfGravityInY()
-	 * @see #setCentreOfGravityInY(float)
+	 * @see #setCentreOfGravityInY(IfcLengthMeasure)
 	 * @generated
 	 */
 	boolean isSetCentreOfGravityInY();
-
-	/**
-	 * Returns the value of the '<em><b>Centre Of Gravity In YAs String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Centre Of Gravity In YAs String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Centre Of Gravity In YAs String</em>' attribute.
-	 * @see #isSetCentreOfGravityInYAsString()
-	 * @see #unsetCentreOfGravityInYAsString()
-	 * @see #setCentreOfGravityInYAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralProfileProperties_CentreOfGravityInYAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getCentreOfGravityInYAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getCentreOfGravityInYAsString <em>Centre Of Gravity In YAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Centre Of Gravity In YAs String</em>' attribute.
-	 * @see #isSetCentreOfGravityInYAsString()
-	 * @see #unsetCentreOfGravityInYAsString()
-	 * @see #getCentreOfGravityInYAsString()
-	 * @generated
-	 */
-	void setCentreOfGravityInYAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getCentreOfGravityInYAsString <em>Centre Of Gravity In YAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetCentreOfGravityInYAsString()
-	 * @see #getCentreOfGravityInYAsString()
-	 * @see #setCentreOfGravityInYAsString(String)
-	 * @generated
-	 */
-	void unsetCentreOfGravityInYAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralProfileProperties#getCentreOfGravityInYAsString <em>Centre Of Gravity In YAs String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Centre Of Gravity In YAs String</em>' attribute is set.
-	 * @see #unsetCentreOfGravityInYAsString()
-	 * @see #getCentreOfGravityInYAsString()
-	 * @see #setCentreOfGravityInYAsString(String)
-	 * @generated
-	 */
-	boolean isSetCentreOfGravityInYAsString();
 
 } // IfcStructuralProfileProperties

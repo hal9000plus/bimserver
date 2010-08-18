@@ -23,7 +23,9 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcInteger;
 import org.bimserver.ifc.emf.Ifc2x3.IfcPixelTexture;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -66,8 +68,8 @@ public class IfcPixelTextureImpl extends IfcSurfaceTextureImpl implements IfcPix
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getWidth() {
-		return (Integer) eGet(Ifc2x3Package.eINSTANCE.getIfcPixelTexture_Width(), true);
+	public IfcInteger getWidth() {
+		return (IfcInteger) eGet(Ifc2x3Package.eINSTANCE.getIfcPixelTexture_Width(), true);
 	}
 
 	/**
@@ -75,7 +77,7 @@ public class IfcPixelTextureImpl extends IfcSurfaceTextureImpl implements IfcPix
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setWidth(int newWidth) {
+	public void setWidth(IfcInteger newWidth) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcPixelTexture_Width(), newWidth);
 	}
 
@@ -84,8 +86,8 @@ public class IfcPixelTextureImpl extends IfcSurfaceTextureImpl implements IfcPix
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getHeight() {
-		return (Integer) eGet(Ifc2x3Package.eINSTANCE.getIfcPixelTexture_Height(), true);
+	public IfcInteger getHeight() {
+		return (IfcInteger) eGet(Ifc2x3Package.eINSTANCE.getIfcPixelTexture_Height(), true);
 	}
 
 	/**
@@ -93,7 +95,7 @@ public class IfcPixelTextureImpl extends IfcSurfaceTextureImpl implements IfcPix
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setHeight(int newHeight) {
+	public void setHeight(IfcInteger newHeight) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcPixelTexture_Height(), newHeight);
 	}
 
@@ -102,8 +104,8 @@ public class IfcPixelTextureImpl extends IfcSurfaceTextureImpl implements IfcPix
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getColourComponents() {
-		return (Integer) eGet(Ifc2x3Package.eINSTANCE.getIfcPixelTexture_ColourComponents(), true);
+	public IfcInteger getColourComponents() {
+		return (IfcInteger) eGet(Ifc2x3Package.eINSTANCE.getIfcPixelTexture_ColourComponents(), true);
 	}
 
 	/**
@@ -111,7 +113,7 @@ public class IfcPixelTextureImpl extends IfcSurfaceTextureImpl implements IfcPix
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setColourComponents(int newColourComponents) {
+	public void setColourComponents(IfcInteger newColourComponents) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcPixelTexture_ColourComponents(), newColourComponents);
 	}
 

@@ -23,7 +23,9 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcIdentifier;
 import org.bimserver.ifc.emf.Ifc2x3.IfcImageTexture;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -64,8 +66,8 @@ public class IfcImageTextureImpl extends IfcSurfaceTextureImpl implements IfcIma
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getUrlReference() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcImageTexture_UrlReference(), true);
+	public IfcIdentifier getUrlReference() {
+		return (IfcIdentifier) eGet(Ifc2x3Package.eINSTANCE.getIfcImageTexture_UrlReference(), true);
 	}
 
 	/**
@@ -73,7 +75,7 @@ public class IfcImageTextureImpl extends IfcSurfaceTextureImpl implements IfcIma
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUrlReference(String newUrlReference) {
+	public void setUrlReference(IfcIdentifier newUrlReference) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcImageTexture_UrlReference(), newUrlReference);
 	}
 

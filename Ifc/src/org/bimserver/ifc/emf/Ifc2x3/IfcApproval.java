@@ -22,8 +22,9 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3;
 
-import org.bimserver.emf.IdEObject;
 import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -48,59 +49,58 @@ import org.eclipse.emf.common.util.EList;
  *
  * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcApproval()
  * @model
- * @extends IdEObject
  * @generated
  */
-public interface IfcApproval extends IdEObject {
+public interface IfcApproval extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Description</b></em>' attribute.
+	 * Returns the value of the '<em><b>Description</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Description</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Description</em>' attribute.
+	 * @return the value of the '<em>Description</em>' reference.
 	 * @see #isSetDescription()
 	 * @see #unsetDescription()
-	 * @see #setDescription(String)
+	 * @see #setDescription(IfcText)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcApproval_Description()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getDescription();
+	IfcText getDescription();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcApproval#getDescription <em>Description</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcApproval#getDescription <em>Description</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Description</em>' attribute.
+	 * @param value the new value of the '<em>Description</em>' reference.
 	 * @see #isSetDescription()
 	 * @see #unsetDescription()
 	 * @see #getDescription()
 	 * @generated
 	 */
-	void setDescription(String value);
+	void setDescription(IfcText value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcApproval#getDescription <em>Description</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcApproval#getDescription <em>Description</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetDescription()
 	 * @see #getDescription()
-	 * @see #setDescription(String)
+	 * @see #setDescription(IfcText)
 	 * @generated
 	 */
 	void unsetDescription();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcApproval#getDescription <em>Description</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcApproval#getDescription <em>Description</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Description</em>' attribute is set.
+	 * @return whether the value of the '<em>Description</em>' reference is set.
 	 * @see #unsetDescription()
 	 * @see #getDescription()
-	 * @see #setDescription(String)
+	 * @see #setDescription(IfcText)
 	 * @generated
 	 */
 	boolean isSetDescription();
@@ -132,215 +132,215 @@ public interface IfcApproval extends IdEObject {
 	void setApprovalDateTime(IfcDateTimeSelect value);
 
 	/**
-	 * Returns the value of the '<em><b>Approval Status</b></em>' attribute.
+	 * Returns the value of the '<em><b>Approval Status</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Approval Status</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Approval Status</em>' attribute.
+	 * @return the value of the '<em>Approval Status</em>' reference.
 	 * @see #isSetApprovalStatus()
 	 * @see #unsetApprovalStatus()
-	 * @see #setApprovalStatus(String)
+	 * @see #setApprovalStatus(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcApproval_ApprovalStatus()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getApprovalStatus();
+	IfcLabel getApprovalStatus();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcApproval#getApprovalStatus <em>Approval Status</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcApproval#getApprovalStatus <em>Approval Status</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Approval Status</em>' attribute.
+	 * @param value the new value of the '<em>Approval Status</em>' reference.
 	 * @see #isSetApprovalStatus()
 	 * @see #unsetApprovalStatus()
 	 * @see #getApprovalStatus()
 	 * @generated
 	 */
-	void setApprovalStatus(String value);
+	void setApprovalStatus(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcApproval#getApprovalStatus <em>Approval Status</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcApproval#getApprovalStatus <em>Approval Status</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetApprovalStatus()
 	 * @see #getApprovalStatus()
-	 * @see #setApprovalStatus(String)
+	 * @see #setApprovalStatus(IfcLabel)
 	 * @generated
 	 */
 	void unsetApprovalStatus();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcApproval#getApprovalStatus <em>Approval Status</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcApproval#getApprovalStatus <em>Approval Status</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Approval Status</em>' attribute is set.
+	 * @return whether the value of the '<em>Approval Status</em>' reference is set.
 	 * @see #unsetApprovalStatus()
 	 * @see #getApprovalStatus()
-	 * @see #setApprovalStatus(String)
+	 * @see #setApprovalStatus(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetApprovalStatus();
 
 	/**
-	 * Returns the value of the '<em><b>Approval Level</b></em>' attribute.
+	 * Returns the value of the '<em><b>Approval Level</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Approval Level</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Approval Level</em>' attribute.
+	 * @return the value of the '<em>Approval Level</em>' reference.
 	 * @see #isSetApprovalLevel()
 	 * @see #unsetApprovalLevel()
-	 * @see #setApprovalLevel(String)
+	 * @see #setApprovalLevel(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcApproval_ApprovalLevel()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getApprovalLevel();
+	IfcLabel getApprovalLevel();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcApproval#getApprovalLevel <em>Approval Level</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcApproval#getApprovalLevel <em>Approval Level</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Approval Level</em>' attribute.
+	 * @param value the new value of the '<em>Approval Level</em>' reference.
 	 * @see #isSetApprovalLevel()
 	 * @see #unsetApprovalLevel()
 	 * @see #getApprovalLevel()
 	 * @generated
 	 */
-	void setApprovalLevel(String value);
+	void setApprovalLevel(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcApproval#getApprovalLevel <em>Approval Level</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcApproval#getApprovalLevel <em>Approval Level</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetApprovalLevel()
 	 * @see #getApprovalLevel()
-	 * @see #setApprovalLevel(String)
+	 * @see #setApprovalLevel(IfcLabel)
 	 * @generated
 	 */
 	void unsetApprovalLevel();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcApproval#getApprovalLevel <em>Approval Level</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcApproval#getApprovalLevel <em>Approval Level</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Approval Level</em>' attribute is set.
+	 * @return whether the value of the '<em>Approval Level</em>' reference is set.
 	 * @see #unsetApprovalLevel()
 	 * @see #getApprovalLevel()
-	 * @see #setApprovalLevel(String)
+	 * @see #setApprovalLevel(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetApprovalLevel();
 
 	/**
-	 * Returns the value of the '<em><b>Approval Qualifier</b></em>' attribute.
+	 * Returns the value of the '<em><b>Approval Qualifier</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Approval Qualifier</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Approval Qualifier</em>' attribute.
+	 * @return the value of the '<em>Approval Qualifier</em>' reference.
 	 * @see #isSetApprovalQualifier()
 	 * @see #unsetApprovalQualifier()
-	 * @see #setApprovalQualifier(String)
+	 * @see #setApprovalQualifier(IfcText)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcApproval_ApprovalQualifier()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getApprovalQualifier();
+	IfcText getApprovalQualifier();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcApproval#getApprovalQualifier <em>Approval Qualifier</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcApproval#getApprovalQualifier <em>Approval Qualifier</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Approval Qualifier</em>' attribute.
+	 * @param value the new value of the '<em>Approval Qualifier</em>' reference.
 	 * @see #isSetApprovalQualifier()
 	 * @see #unsetApprovalQualifier()
 	 * @see #getApprovalQualifier()
 	 * @generated
 	 */
-	void setApprovalQualifier(String value);
+	void setApprovalQualifier(IfcText value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcApproval#getApprovalQualifier <em>Approval Qualifier</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcApproval#getApprovalQualifier <em>Approval Qualifier</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetApprovalQualifier()
 	 * @see #getApprovalQualifier()
-	 * @see #setApprovalQualifier(String)
+	 * @see #setApprovalQualifier(IfcText)
 	 * @generated
 	 */
 	void unsetApprovalQualifier();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcApproval#getApprovalQualifier <em>Approval Qualifier</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcApproval#getApprovalQualifier <em>Approval Qualifier</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Approval Qualifier</em>' attribute is set.
+	 * @return whether the value of the '<em>Approval Qualifier</em>' reference is set.
 	 * @see #unsetApprovalQualifier()
 	 * @see #getApprovalQualifier()
-	 * @see #setApprovalQualifier(String)
+	 * @see #setApprovalQualifier(IfcText)
 	 * @generated
 	 */
 	boolean isSetApprovalQualifier();
 
 	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * Returns the value of the '<em><b>Name</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Name</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
+	 * @return the value of the '<em>Name</em>' reference.
+	 * @see #setName(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcApproval_Name()
 	 * @model
 	 * @generated
 	 */
-	String getName();
+	IfcLabel getName();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcApproval#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcApproval#getName <em>Name</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @param value the new value of the '<em>Name</em>' reference.
 	 * @see #getName()
 	 * @generated
 	 */
-	void setName(String value);
+	void setName(IfcLabel value);
 
 	/**
-	 * Returns the value of the '<em><b>Identifier</b></em>' attribute.
+	 * Returns the value of the '<em><b>Identifier</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Identifier</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Identifier</em>' attribute.
-	 * @see #setIdentifier(String)
+	 * @return the value of the '<em>Identifier</em>' reference.
+	 * @see #setIdentifier(IfcIdentifier)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcApproval_Identifier()
 	 * @model
 	 * @generated
 	 */
-	String getIdentifier();
+	IfcIdentifier getIdentifier();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcApproval#getIdentifier <em>Identifier</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcApproval#getIdentifier <em>Identifier</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Identifier</em>' attribute.
+	 * @param value the new value of the '<em>Identifier</em>' reference.
 	 * @see #getIdentifier()
 	 * @generated
 	 */
-	void setIdentifier(String value);
+	void setIdentifier(IfcIdentifier value);
 
 	/**
 	 * Returns the value of the '<em><b>Actors</b></em>' reference list.

@@ -37,9 +37,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcWorkControl#getCreators <em>Creators</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcWorkControl#getPurpose <em>Purpose</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcWorkControl#getDuration <em>Duration</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcWorkControl#getDurationAsString <em>Duration As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcWorkControl#getTotalFloat <em>Total Float</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcWorkControl#getTotalFloatAsString <em>Total Float As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcWorkControl#getStartTime <em>Start Time</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcWorkControl#getFinishTime <em>Finish Time</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcWorkControl#getWorkControlType <em>Work Control Type</em>}</li>
@@ -53,30 +51,30 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface IfcWorkControl extends IfcControl {
 	/**
-	 * Returns the value of the '<em><b>Identifier</b></em>' attribute.
+	 * Returns the value of the '<em><b>Identifier</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Identifier</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Identifier</em>' attribute.
-	 * @see #setIdentifier(String)
+	 * @return the value of the '<em>Identifier</em>' reference.
+	 * @see #setIdentifier(IfcIdentifier)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcWorkControl_Identifier()
 	 * @model
 	 * @generated
 	 */
-	String getIdentifier();
+	IfcIdentifier getIdentifier();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcWorkControl#getIdentifier <em>Identifier</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcWorkControl#getIdentifier <em>Identifier</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Identifier</em>' attribute.
+	 * @param value the new value of the '<em>Identifier</em>' reference.
 	 * @see #getIdentifier()
 	 * @generated
 	 */
-	void setIdentifier(String value);
+	void setIdentifier(IfcIdentifier value);
 
 	/**
 	 * Returns the value of the '<em><b>Creation Date</b></em>' reference.
@@ -144,269 +142,163 @@ public interface IfcWorkControl extends IfcControl {
 	boolean isSetCreators();
 
 	/**
-	 * Returns the value of the '<em><b>Purpose</b></em>' attribute.
+	 * Returns the value of the '<em><b>Purpose</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Purpose</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Purpose</em>' attribute.
+	 * @return the value of the '<em>Purpose</em>' reference.
 	 * @see #isSetPurpose()
 	 * @see #unsetPurpose()
-	 * @see #setPurpose(String)
+	 * @see #setPurpose(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcWorkControl_Purpose()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getPurpose();
+	IfcLabel getPurpose();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcWorkControl#getPurpose <em>Purpose</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcWorkControl#getPurpose <em>Purpose</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Purpose</em>' attribute.
+	 * @param value the new value of the '<em>Purpose</em>' reference.
 	 * @see #isSetPurpose()
 	 * @see #unsetPurpose()
 	 * @see #getPurpose()
 	 * @generated
 	 */
-	void setPurpose(String value);
+	void setPurpose(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcWorkControl#getPurpose <em>Purpose</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcWorkControl#getPurpose <em>Purpose</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetPurpose()
 	 * @see #getPurpose()
-	 * @see #setPurpose(String)
+	 * @see #setPurpose(IfcLabel)
 	 * @generated
 	 */
 	void unsetPurpose();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcWorkControl#getPurpose <em>Purpose</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcWorkControl#getPurpose <em>Purpose</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Purpose</em>' attribute is set.
+	 * @return whether the value of the '<em>Purpose</em>' reference is set.
 	 * @see #unsetPurpose()
 	 * @see #getPurpose()
-	 * @see #setPurpose(String)
+	 * @see #setPurpose(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetPurpose();
 
 	/**
-	 * Returns the value of the '<em><b>Duration</b></em>' attribute.
+	 * Returns the value of the '<em><b>Duration</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Duration</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Duration</em>' attribute.
+	 * @return the value of the '<em>Duration</em>' reference.
 	 * @see #isSetDuration()
 	 * @see #unsetDuration()
-	 * @see #setDuration(float)
+	 * @see #setDuration(IfcTimeMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcWorkControl_Duration()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getDuration();
+	IfcTimeMeasure getDuration();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcWorkControl#getDuration <em>Duration</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcWorkControl#getDuration <em>Duration</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Duration</em>' attribute.
+	 * @param value the new value of the '<em>Duration</em>' reference.
 	 * @see #isSetDuration()
 	 * @see #unsetDuration()
 	 * @see #getDuration()
 	 * @generated
 	 */
-	void setDuration(float value);
+	void setDuration(IfcTimeMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcWorkControl#getDuration <em>Duration</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcWorkControl#getDuration <em>Duration</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetDuration()
 	 * @see #getDuration()
-	 * @see #setDuration(float)
+	 * @see #setDuration(IfcTimeMeasure)
 	 * @generated
 	 */
 	void unsetDuration();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcWorkControl#getDuration <em>Duration</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcWorkControl#getDuration <em>Duration</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Duration</em>' attribute is set.
+	 * @return whether the value of the '<em>Duration</em>' reference is set.
 	 * @see #unsetDuration()
 	 * @see #getDuration()
-	 * @see #setDuration(float)
+	 * @see #setDuration(IfcTimeMeasure)
 	 * @generated
 	 */
 	boolean isSetDuration();
 
 	/**
-	 * Returns the value of the '<em><b>Duration As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Duration As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Duration As String</em>' attribute.
-	 * @see #isSetDurationAsString()
-	 * @see #unsetDurationAsString()
-	 * @see #setDurationAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcWorkControl_DurationAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getDurationAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcWorkControl#getDurationAsString <em>Duration As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Duration As String</em>' attribute.
-	 * @see #isSetDurationAsString()
-	 * @see #unsetDurationAsString()
-	 * @see #getDurationAsString()
-	 * @generated
-	 */
-	void setDurationAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcWorkControl#getDurationAsString <em>Duration As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetDurationAsString()
-	 * @see #getDurationAsString()
-	 * @see #setDurationAsString(String)
-	 * @generated
-	 */
-	void unsetDurationAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcWorkControl#getDurationAsString <em>Duration As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Duration As String</em>' attribute is set.
-	 * @see #unsetDurationAsString()
-	 * @see #getDurationAsString()
-	 * @see #setDurationAsString(String)
-	 * @generated
-	 */
-	boolean isSetDurationAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Total Float</b></em>' attribute.
+	 * Returns the value of the '<em><b>Total Float</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Total Float</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Total Float</em>' attribute.
+	 * @return the value of the '<em>Total Float</em>' reference.
 	 * @see #isSetTotalFloat()
 	 * @see #unsetTotalFloat()
-	 * @see #setTotalFloat(float)
+	 * @see #setTotalFloat(IfcTimeMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcWorkControl_TotalFloat()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getTotalFloat();
+	IfcTimeMeasure getTotalFloat();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcWorkControl#getTotalFloat <em>Total Float</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcWorkControl#getTotalFloat <em>Total Float</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Total Float</em>' attribute.
+	 * @param value the new value of the '<em>Total Float</em>' reference.
 	 * @see #isSetTotalFloat()
 	 * @see #unsetTotalFloat()
 	 * @see #getTotalFloat()
 	 * @generated
 	 */
-	void setTotalFloat(float value);
+	void setTotalFloat(IfcTimeMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcWorkControl#getTotalFloat <em>Total Float</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcWorkControl#getTotalFloat <em>Total Float</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetTotalFloat()
 	 * @see #getTotalFloat()
-	 * @see #setTotalFloat(float)
+	 * @see #setTotalFloat(IfcTimeMeasure)
 	 * @generated
 	 */
 	void unsetTotalFloat();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcWorkControl#getTotalFloat <em>Total Float</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcWorkControl#getTotalFloat <em>Total Float</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Total Float</em>' attribute is set.
+	 * @return whether the value of the '<em>Total Float</em>' reference is set.
 	 * @see #unsetTotalFloat()
 	 * @see #getTotalFloat()
-	 * @see #setTotalFloat(float)
+	 * @see #setTotalFloat(IfcTimeMeasure)
 	 * @generated
 	 */
 	boolean isSetTotalFloat();
-
-	/**
-	 * Returns the value of the '<em><b>Total Float As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Total Float As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Total Float As String</em>' attribute.
-	 * @see #isSetTotalFloatAsString()
-	 * @see #unsetTotalFloatAsString()
-	 * @see #setTotalFloatAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcWorkControl_TotalFloatAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getTotalFloatAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcWorkControl#getTotalFloatAsString <em>Total Float As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Total Float As String</em>' attribute.
-	 * @see #isSetTotalFloatAsString()
-	 * @see #unsetTotalFloatAsString()
-	 * @see #getTotalFloatAsString()
-	 * @generated
-	 */
-	void setTotalFloatAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcWorkControl#getTotalFloatAsString <em>Total Float As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetTotalFloatAsString()
-	 * @see #getTotalFloatAsString()
-	 * @see #setTotalFloatAsString(String)
-	 * @generated
-	 */
-	void unsetTotalFloatAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcWorkControl#getTotalFloatAsString <em>Total Float As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Total Float As String</em>' attribute is set.
-	 * @see #unsetTotalFloatAsString()
-	 * @see #getTotalFloatAsString()
-	 * @see #setTotalFloatAsString(String)
-	 * @generated
-	 */
-	boolean isSetTotalFloatAsString();
 
 	/**
 	 * Returns the value of the '<em><b>Start Time</b></em>' reference.
@@ -517,54 +409,54 @@ public interface IfcWorkControl extends IfcControl {
 	void setWorkControlType(IfcWorkControlTypeEnum value);
 
 	/**
-	 * Returns the value of the '<em><b>User Defined Control Type</b></em>' attribute.
+	 * Returns the value of the '<em><b>User Defined Control Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>User Defined Control Type</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>User Defined Control Type</em>' attribute.
+	 * @return the value of the '<em>User Defined Control Type</em>' reference.
 	 * @see #isSetUserDefinedControlType()
 	 * @see #unsetUserDefinedControlType()
-	 * @see #setUserDefinedControlType(String)
+	 * @see #setUserDefinedControlType(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcWorkControl_UserDefinedControlType()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getUserDefinedControlType();
+	IfcLabel getUserDefinedControlType();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcWorkControl#getUserDefinedControlType <em>User Defined Control Type</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcWorkControl#getUserDefinedControlType <em>User Defined Control Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>User Defined Control Type</em>' attribute.
+	 * @param value the new value of the '<em>User Defined Control Type</em>' reference.
 	 * @see #isSetUserDefinedControlType()
 	 * @see #unsetUserDefinedControlType()
 	 * @see #getUserDefinedControlType()
 	 * @generated
 	 */
-	void setUserDefinedControlType(String value);
+	void setUserDefinedControlType(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcWorkControl#getUserDefinedControlType <em>User Defined Control Type</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcWorkControl#getUserDefinedControlType <em>User Defined Control Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetUserDefinedControlType()
 	 * @see #getUserDefinedControlType()
-	 * @see #setUserDefinedControlType(String)
+	 * @see #setUserDefinedControlType(IfcLabel)
 	 * @generated
 	 */
 	void unsetUserDefinedControlType();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcWorkControl#getUserDefinedControlType <em>User Defined Control Type</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcWorkControl#getUserDefinedControlType <em>User Defined Control Type</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>User Defined Control Type</em>' attribute is set.
+	 * @return whether the value of the '<em>User Defined Control Type</em>' reference is set.
 	 * @see #unsetUserDefinedControlType()
 	 * @see #getUserDefinedControlType()
-	 * @see #setUserDefinedControlType(String)
+	 * @see #setUserDefinedControlType(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetUserDefinedControlType();

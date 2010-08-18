@@ -70,54 +70,54 @@ public interface IfcEnergyProperties extends IfcPropertySetDefinition {
 	void setEnergySequence(IfcEnergySequenceEnum value);
 
 	/**
-	 * Returns the value of the '<em><b>User Defined Energy Sequence</b></em>' attribute.
+	 * Returns the value of the '<em><b>User Defined Energy Sequence</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>User Defined Energy Sequence</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>User Defined Energy Sequence</em>' attribute.
+	 * @return the value of the '<em>User Defined Energy Sequence</em>' reference.
 	 * @see #isSetUserDefinedEnergySequence()
 	 * @see #unsetUserDefinedEnergySequence()
-	 * @see #setUserDefinedEnergySequence(String)
+	 * @see #setUserDefinedEnergySequence(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcEnergyProperties_UserDefinedEnergySequence()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getUserDefinedEnergySequence();
+	IfcLabel getUserDefinedEnergySequence();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcEnergyProperties#getUserDefinedEnergySequence <em>User Defined Energy Sequence</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcEnergyProperties#getUserDefinedEnergySequence <em>User Defined Energy Sequence</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>User Defined Energy Sequence</em>' attribute.
+	 * @param value the new value of the '<em>User Defined Energy Sequence</em>' reference.
 	 * @see #isSetUserDefinedEnergySequence()
 	 * @see #unsetUserDefinedEnergySequence()
 	 * @see #getUserDefinedEnergySequence()
 	 * @generated
 	 */
-	void setUserDefinedEnergySequence(String value);
+	void setUserDefinedEnergySequence(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcEnergyProperties#getUserDefinedEnergySequence <em>User Defined Energy Sequence</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcEnergyProperties#getUserDefinedEnergySequence <em>User Defined Energy Sequence</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetUserDefinedEnergySequence()
 	 * @see #getUserDefinedEnergySequence()
-	 * @see #setUserDefinedEnergySequence(String)
+	 * @see #setUserDefinedEnergySequence(IfcLabel)
 	 * @generated
 	 */
 	void unsetUserDefinedEnergySequence();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcEnergyProperties#getUserDefinedEnergySequence <em>User Defined Energy Sequence</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcEnergyProperties#getUserDefinedEnergySequence <em>User Defined Energy Sequence</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>User Defined Energy Sequence</em>' attribute is set.
+	 * @return whether the value of the '<em>User Defined Energy Sequence</em>' reference is set.
 	 * @see #unsetUserDefinedEnergySequence()
 	 * @see #getUserDefinedEnergySequence()
-	 * @see #setUserDefinedEnergySequence(String)
+	 * @see #setUserDefinedEnergySequence(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetUserDefinedEnergySequence();

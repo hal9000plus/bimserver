@@ -24,8 +24,11 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcDistributionControlElement;
+import org.bimserver.ifc.emf.Ifc2x3.IfcIdentifier;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRelFlowControlElements;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -67,8 +70,8 @@ public class IfcDistributionControlElementImpl extends IfcDistributionElementImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getControlElementId() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcDistributionControlElement_ControlElementId(), true);
+	public IfcIdentifier getControlElementId() {
+		return (IfcIdentifier) eGet(Ifc2x3Package.eINSTANCE.getIfcDistributionControlElement_ControlElementId(), true);
 	}
 
 	/**
@@ -76,7 +79,7 @@ public class IfcDistributionControlElementImpl extends IfcDistributionElementImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setControlElementId(String newControlElementId) {
+	public void setControlElementId(IfcIdentifier newControlElementId) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcDistributionControlElement_ControlElementId(), newControlElementId);
 	}
 

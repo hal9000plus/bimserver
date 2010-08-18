@@ -26,7 +26,9 @@ import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcDistributionControlElement;
 import org.bimserver.ifc.emf.Ifc2x3.IfcDistributionFlowElement;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRelFlowControlElements;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

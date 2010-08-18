@@ -32,9 +32,7 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceCurveSweptAreaSolid#getDirectrix <em>Directrix</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceCurveSweptAreaSolid#getStartParam <em>Start Param</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceCurveSweptAreaSolid#getStartParamAsString <em>Start Param As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceCurveSweptAreaSolid#getEndParam <em>End Param</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceCurveSweptAreaSolid#getEndParamAsString <em>End Param As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceCurveSweptAreaSolid#getReferenceSurface <em>Reference Surface</em>}</li>
  * </ul>
  * </p>
@@ -71,108 +69,56 @@ public interface IfcSurfaceCurveSweptAreaSolid extends IfcSweptAreaSolid {
 	void setDirectrix(IfcCurve value);
 
 	/**
-	 * Returns the value of the '<em><b>Start Param</b></em>' attribute.
+	 * Returns the value of the '<em><b>Start Param</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Start Param</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Start Param</em>' attribute.
-	 * @see #setStartParam(float)
+	 * @return the value of the '<em>Start Param</em>' reference.
+	 * @see #setStartParam(IfcParameterValue)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSurfaceCurveSweptAreaSolid_StartParam()
 	 * @model
 	 * @generated
 	 */
-	float getStartParam();
+	IfcParameterValue getStartParam();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceCurveSweptAreaSolid#getStartParam <em>Start Param</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceCurveSweptAreaSolid#getStartParam <em>Start Param</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Start Param</em>' attribute.
+	 * @param value the new value of the '<em>Start Param</em>' reference.
 	 * @see #getStartParam()
 	 * @generated
 	 */
-	void setStartParam(float value);
+	void setStartParam(IfcParameterValue value);
 
 	/**
-	 * Returns the value of the '<em><b>Start Param As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Start Param As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Start Param As String</em>' attribute.
-	 * @see #setStartParamAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSurfaceCurveSweptAreaSolid_StartParamAsString()
-	 * @model
-	 * @generated
-	 */
-	String getStartParamAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceCurveSweptAreaSolid#getStartParamAsString <em>Start Param As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Start Param As String</em>' attribute.
-	 * @see #getStartParamAsString()
-	 * @generated
-	 */
-	void setStartParamAsString(String value);
-
-	/**
-	 * Returns the value of the '<em><b>End Param</b></em>' attribute.
+	 * Returns the value of the '<em><b>End Param</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>End Param</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>End Param</em>' attribute.
-	 * @see #setEndParam(float)
+	 * @return the value of the '<em>End Param</em>' reference.
+	 * @see #setEndParam(IfcParameterValue)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSurfaceCurveSweptAreaSolid_EndParam()
 	 * @model
 	 * @generated
 	 */
-	float getEndParam();
+	IfcParameterValue getEndParam();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceCurveSweptAreaSolid#getEndParam <em>End Param</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceCurveSweptAreaSolid#getEndParam <em>End Param</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>End Param</em>' attribute.
+	 * @param value the new value of the '<em>End Param</em>' reference.
 	 * @see #getEndParam()
 	 * @generated
 	 */
-	void setEndParam(float value);
-
-	/**
-	 * Returns the value of the '<em><b>End Param As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>End Param As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>End Param As String</em>' attribute.
-	 * @see #setEndParamAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSurfaceCurveSweptAreaSolid_EndParamAsString()
-	 * @model
-	 * @generated
-	 */
-	String getEndParamAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceCurveSweptAreaSolid#getEndParamAsString <em>End Param As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>End Param As String</em>' attribute.
-	 * @see #getEndParamAsString()
-	 * @generated
-	 */
-	void setEndParamAsString(String value);
+	void setEndParam(IfcParameterValue value);
 
 	/**
 	 * Returns the value of the '<em><b>Reference Surface</b></em>' reference.

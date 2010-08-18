@@ -22,14 +22,16 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
-import org.bimserver.emf.IdEObjectImpl;
+import org.bimserver.ifc.IfcRootObject;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcCartesianTransformationOperator2D;
 import org.bimserver.ifc.emf.Ifc2x3.IfcLogical;
 import org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceTexture;
 import org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceTextureEnum;
-import org.bimserver.ifc.emf.Ifc2x3.Tristate;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -47,7 +49,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class IfcSurfaceTextureImpl extends IdEObjectImpl implements IfcSurfaceTexture {
+public class IfcSurfaceTextureImpl extends IfcRootObject implements IfcSurfaceTexture {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -82,8 +84,8 @@ public class IfcSurfaceTextureImpl extends IdEObjectImpl implements IfcSurfaceTe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Tristate getRepeatS() {
-		return (Tristate) eGet(Ifc2x3Package.eINSTANCE.getIfcSurfaceTexture_RepeatS(), true);
+	public IfcLogical getRepeatS() {
+		return (IfcLogical) eGet(Ifc2x3Package.eINSTANCE.getIfcSurfaceTexture_RepeatS(), true);
 	}
 
 	/**
@@ -91,7 +93,7 @@ public class IfcSurfaceTextureImpl extends IdEObjectImpl implements IfcSurfaceTe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRepeatS(Tristate newRepeatS) {
+	public void setRepeatS(IfcLogical newRepeatS) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcSurfaceTexture_RepeatS(), newRepeatS);
 	}
 
@@ -100,8 +102,8 @@ public class IfcSurfaceTextureImpl extends IdEObjectImpl implements IfcSurfaceTe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Tristate getRepeatT() {
-		return (Tristate) eGet(Ifc2x3Package.eINSTANCE.getIfcSurfaceTexture_RepeatT(), true);
+	public IfcLogical getRepeatT() {
+		return (IfcLogical) eGet(Ifc2x3Package.eINSTANCE.getIfcSurfaceTexture_RepeatT(), true);
 	}
 
 	/**
@@ -109,7 +111,7 @@ public class IfcSurfaceTextureImpl extends IdEObjectImpl implements IfcSurfaceTe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRepeatT(Tristate newRepeatT) {
+	public void setRepeatT(IfcLogical newRepeatT) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcSurfaceTexture_RepeatT(), newRepeatT);
 	}
 

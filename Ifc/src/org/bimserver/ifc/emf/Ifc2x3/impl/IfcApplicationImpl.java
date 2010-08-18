@@ -22,11 +22,16 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
-import org.bimserver.emf.IdEObjectImpl;
+import org.bimserver.ifc.IfcRootObject;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcApplication;
+import org.bimserver.ifc.emf.Ifc2x3.IfcIdentifier;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
 import org.bimserver.ifc.emf.Ifc2x3.IfcOrganization;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -44,7 +49,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class IfcApplicationImpl extends IdEObjectImpl implements IfcApplication {
+public class IfcApplicationImpl extends IfcRootObject implements IfcApplication {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -97,8 +102,8 @@ public class IfcApplicationImpl extends IdEObjectImpl implements IfcApplication 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getVersion() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcApplication_Version(), true);
+	public IfcLabel getVersion() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcApplication_Version(), true);
 	}
 
 	/**
@@ -106,7 +111,7 @@ public class IfcApplicationImpl extends IdEObjectImpl implements IfcApplication 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setVersion(String newVersion) {
+	public void setVersion(IfcLabel newVersion) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcApplication_Version(), newVersion);
 	}
 
@@ -115,8 +120,8 @@ public class IfcApplicationImpl extends IdEObjectImpl implements IfcApplication 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getApplicationFullName() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcApplication_ApplicationFullName(), true);
+	public IfcLabel getApplicationFullName() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcApplication_ApplicationFullName(), true);
 	}
 
 	/**
@@ -124,7 +129,7 @@ public class IfcApplicationImpl extends IdEObjectImpl implements IfcApplication 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setApplicationFullName(String newApplicationFullName) {
+	public void setApplicationFullName(IfcLabel newApplicationFullName) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcApplication_ApplicationFullName(), newApplicationFullName);
 	}
 
@@ -133,8 +138,8 @@ public class IfcApplicationImpl extends IdEObjectImpl implements IfcApplication 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getApplicationIdentifier() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcApplication_ApplicationIdentifier(), true);
+	public IfcIdentifier getApplicationIdentifier() {
+		return (IfcIdentifier) eGet(Ifc2x3Package.eINSTANCE.getIfcApplication_ApplicationIdentifier(), true);
 	}
 
 	/**
@@ -142,7 +147,7 @@ public class IfcApplicationImpl extends IdEObjectImpl implements IfcApplication 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setApplicationIdentifier(String newApplicationIdentifier) {
+	public void setApplicationIdentifier(IfcIdentifier newApplicationIdentifier) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcApplication_ApplicationIdentifier(), newApplicationIdentifier);
 	}
 

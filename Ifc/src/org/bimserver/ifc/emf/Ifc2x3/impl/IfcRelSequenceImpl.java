@@ -26,6 +26,8 @@ import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcProcess;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRelSequence;
 import org.bimserver.ifc.emf.Ifc2x3.IfcSequenceEnum;
+import org.bimserver.ifc.emf.Ifc2x3.IfcTimeMeasure;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -38,7 +40,6 @@ import org.eclipse.emf.ecore.EClass;
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRelSequenceImpl#getRelatingProcess <em>Relating Process</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRelSequenceImpl#getRelatedProcess <em>Related Process</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRelSequenceImpl#getTimeLag <em>Time Lag</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRelSequenceImpl#getTimeLagAsString <em>Time Lag As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRelSequenceImpl#getSequenceType <em>Sequence Type</em>}</li>
  * </ul>
  * </p>
@@ -106,8 +107,8 @@ public class IfcRelSequenceImpl extends IfcRelConnectsImpl implements IfcRelSequ
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getTimeLag() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcRelSequence_TimeLag(), true);
+	public IfcTimeMeasure getTimeLag() {
+		return (IfcTimeMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcRelSequence_TimeLag(), true);
 	}
 
 	/**
@@ -115,26 +116,8 @@ public class IfcRelSequenceImpl extends IfcRelConnectsImpl implements IfcRelSequ
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTimeLag(float newTimeLag) {
+	public void setTimeLag(IfcTimeMeasure newTimeLag) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcRelSequence_TimeLag(), newTimeLag);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getTimeLagAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcRelSequence_TimeLagAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTimeLagAsString(String newTimeLagAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcRelSequence_TimeLagAsString(), newTimeLagAsString);
 	}
 
 	/**

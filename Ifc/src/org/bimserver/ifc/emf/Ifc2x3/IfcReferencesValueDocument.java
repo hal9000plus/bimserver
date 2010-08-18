@@ -22,8 +22,9 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3;
 
-import org.bimserver.emf.IdEObject;
 import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -42,10 +43,9 @@ import org.eclipse.emf.common.util.EList;
  *
  * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcReferencesValueDocument()
  * @model
- * @extends IdEObject
  * @generated
  */
-public interface IfcReferencesValueDocument extends IdEObject {
+public interface IfcReferencesValueDocument extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Referenced Document</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -91,107 +91,107 @@ public interface IfcReferencesValueDocument extends IdEObject {
 	EList<IfcAppliedValue> getReferencingValues();
 
 	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * Returns the value of the '<em><b>Name</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Name</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
+	 * @return the value of the '<em>Name</em>' reference.
 	 * @see #isSetName()
 	 * @see #unsetName()
-	 * @see #setName(String)
+	 * @see #setName(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcReferencesValueDocument_Name()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getName();
+	IfcLabel getName();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcReferencesValueDocument#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcReferencesValueDocument#getName <em>Name</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @param value the new value of the '<em>Name</em>' reference.
 	 * @see #isSetName()
 	 * @see #unsetName()
 	 * @see #getName()
 	 * @generated
 	 */
-	void setName(String value);
+	void setName(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcReferencesValueDocument#getName <em>Name</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcReferencesValueDocument#getName <em>Name</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetName()
 	 * @see #getName()
-	 * @see #setName(String)
+	 * @see #setName(IfcLabel)
 	 * @generated
 	 */
 	void unsetName();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcReferencesValueDocument#getName <em>Name</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcReferencesValueDocument#getName <em>Name</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Name</em>' attribute is set.
+	 * @return whether the value of the '<em>Name</em>' reference is set.
 	 * @see #unsetName()
 	 * @see #getName()
-	 * @see #setName(String)
+	 * @see #setName(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetName();
 
 	/**
-	 * Returns the value of the '<em><b>Description</b></em>' attribute.
+	 * Returns the value of the '<em><b>Description</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Description</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Description</em>' attribute.
+	 * @return the value of the '<em>Description</em>' reference.
 	 * @see #isSetDescription()
 	 * @see #unsetDescription()
-	 * @see #setDescription(String)
+	 * @see #setDescription(IfcText)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcReferencesValueDocument_Description()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getDescription();
+	IfcText getDescription();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcReferencesValueDocument#getDescription <em>Description</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcReferencesValueDocument#getDescription <em>Description</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Description</em>' attribute.
+	 * @param value the new value of the '<em>Description</em>' reference.
 	 * @see #isSetDescription()
 	 * @see #unsetDescription()
 	 * @see #getDescription()
 	 * @generated
 	 */
-	void setDescription(String value);
+	void setDescription(IfcText value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcReferencesValueDocument#getDescription <em>Description</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcReferencesValueDocument#getDescription <em>Description</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetDescription()
 	 * @see #getDescription()
-	 * @see #setDescription(String)
+	 * @see #setDescription(IfcText)
 	 * @generated
 	 */
 	void unsetDescription();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcReferencesValueDocument#getDescription <em>Description</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcReferencesValueDocument#getDescription <em>Description</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Description</em>' attribute is set.
+	 * @return whether the value of the '<em>Description</em>' reference is set.
 	 * @see #unsetDescription()
 	 * @see #getDescription()
-	 * @see #setDescription(String)
+	 * @see #setDescription(IfcText)
 	 * @generated
 	 */
 	boolean isSetDescription();

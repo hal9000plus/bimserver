@@ -25,6 +25,8 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcServiceLife;
 import org.bimserver.ifc.emf.Ifc2x3.IfcServiceLifeTypeEnum;
+import org.bimserver.ifc.emf.Ifc2x3.IfcTimeMeasure;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -36,7 +38,6 @@ import org.eclipse.emf.ecore.EClass;
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcServiceLifeImpl#getServiceLifeType <em>Service Life Type</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcServiceLifeImpl#getServiceLifeDuration <em>Service Life Duration</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcServiceLifeImpl#getServiceLifeDurationAsString <em>Service Life Duration As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -85,8 +86,8 @@ public class IfcServiceLifeImpl extends IfcControlImpl implements IfcServiceLife
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getServiceLifeDuration() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcServiceLife_ServiceLifeDuration(), true);
+	public IfcTimeMeasure getServiceLifeDuration() {
+		return (IfcTimeMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcServiceLife_ServiceLifeDuration(), true);
 	}
 
 	/**
@@ -94,26 +95,8 @@ public class IfcServiceLifeImpl extends IfcControlImpl implements IfcServiceLife
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setServiceLifeDuration(float newServiceLifeDuration) {
+	public void setServiceLifeDuration(IfcTimeMeasure newServiceLifeDuration) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcServiceLife_ServiceLifeDuration(), newServiceLifeDuration);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getServiceLifeDurationAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcServiceLife_ServiceLifeDurationAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setServiceLifeDurationAsString(String newServiceLifeDurationAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcServiceLife_ServiceLifeDurationAsString(), newServiceLifeDurationAsString);
 	}
 
 } //IfcServiceLifeImpl

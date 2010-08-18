@@ -43,45 +43,46 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface IfcDirection extends IfcGeometricRepresentationItem, IfcOrientationSelect, IfcVectorOrDirection {
 	/**
-	 * Returns the value of the '<em><b>Direction Ratios</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.Float}.
+	 * Returns the value of the '<em><b>Direction Ratios</b></em>' reference list.
+	 * The list contents are of type {@link org.bimserver.ifc.emf.Ifc2x3.IfcReal}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Direction Ratios</em>' attribute list isn't clear,
+	 * If the meaning of the '<em>Direction Ratios</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Direction Ratios</em>' attribute list.
+	 * @return the value of the '<em>Direction Ratios</em>' reference list.
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcDirection_DirectionRatios()
-	 * @model unique="false"
+	 * @model
 	 * @generated
 	 */
-	EList<Float> getDirectionRatios();
+	EList<IfcReal> getDirectionRatios();
 
 	/**
-	 * Returns the value of the '<em><b>Dim</b></em>' attribute.
+	 * Returns the value of the '<em><b>Dim</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Dim</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Dim</em>' attribute.
-	 * @see #setDim(int)
+	 * @return the value of the '<em>Dim</em>' reference.
+	 * @see #setDim(IfcDimensionCount)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcDirection_Dim()
-	 * @model derived="true"
+	 * @model transient="true" volatile="true" derived="true"
+	 *        annotation="http://www.iso.org/iso10303-11/EXPRESS code=' HIINDEX(DirectionRatios);'"
 	 * @generated
 	 */
-	int getDim();
+	IfcDimensionCount getDim();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDirection#getDim <em>Dim</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDirection#getDim <em>Dim</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Dim</em>' attribute.
+	 * @param value the new value of the '<em>Dim</em>' reference.
 	 * @see #getDim()
 	 * @generated
 	 */
-	void setDim(int value);
+	void setDim(IfcDimensionCount value);
 
 } // IfcDirection

@@ -23,9 +23,12 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRepresentationMap;
 import org.bimserver.ifc.emf.Ifc2x3.IfcTypeProduct;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -95,8 +98,8 @@ public class IfcTypeProductImpl extends IfcTypeObjectImpl implements IfcTypeProd
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getTag() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcTypeProduct_Tag(), true);
+	public IfcLabel getTag() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcTypeProduct_Tag(), true);
 	}
 
 	/**
@@ -104,7 +107,7 @@ public class IfcTypeProductImpl extends IfcTypeObjectImpl implements IfcTypeProd
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTag(String newTag) {
+	public void setTag(IfcLabel newTag) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcTypeProduct_Tag(), newTag);
 	}
 

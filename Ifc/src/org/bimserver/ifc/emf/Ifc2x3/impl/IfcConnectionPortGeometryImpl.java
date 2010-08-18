@@ -26,6 +26,7 @@ import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcAxis2Placement;
 import org.bimserver.ifc.emf.Ifc2x3.IfcConnectionPortGeometry;
 import org.bimserver.ifc.emf.Ifc2x3.IfcProfileDef;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

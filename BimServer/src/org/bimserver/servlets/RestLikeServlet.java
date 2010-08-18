@@ -31,12 +31,15 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 
-import org.bimserver.interfaces.objects.SCheckout;
-import org.bimserver.interfaces.objects.SProject;
-import org.bimserver.interfaces.objects.SRevision;
+import org.bimserver.emf.EmfSerializer;
+import org.bimserver.shared.CheckoutResult;
 import org.bimserver.shared.ResultType;
+import org.bimserver.shared.SCheckout;
+import org.bimserver.shared.SProject;
+import org.bimserver.shared.SRevision;
 import org.bimserver.shared.ServiceInterface;
 import org.bimserver.shared.Token;
+import org.bimserver.shared.UserException;
 
 public class RestLikeServlet extends HttpServlet {
 
@@ -51,7 +54,6 @@ public class RestLikeServlet extends HttpServlet {
 		ServiceInterface service = (ServiceInterface) getServletContext().getAttribute("service");
 		String[] urlParams = null;
 		if (request.getPathInfo() == null) {
-			urlParams = request.getQueryString().split("/");
 		} else {
 			urlParams = request.getPathInfo().split("/");
 		}
@@ -88,79 +90,75 @@ public class RestLikeServlet extends HttpServlet {
 		}
 		response.setContentType(resultType.getContentType());
 		Token token;
-//		try {
-//			token = service.createAnonymousToken();
-//			if (urlParams == null) {
-//				writeObject(service.getAllProjects(token), response.getOutputStream());
-//			} else {
-//				if (pid != -1) {
-//					// Get a specific project
-//					if (rid != -1) {
-//						// Get a specific revision
-//						if (oid != -1) {
-//							// Get a specific object
-//							CheckoutResult downloadById = service.downloadByOid(token, roid, oid, resultType);
-//							EmfSerializer serializer = (EmfSerializer)downloadById.getFile().getDataSource();
-//							serializer.writeToOutputStream(response.getOutputStream());
-//						} else {
-//							if (guid != null) {
-//								CheckoutResult downloadById = service.downloadByGuid(token, roid, guid, resultType);
-//								EmfSerializer serializer = (EmfSerializer)downloadById.getFile().getDataSource();
-//								serializer.writeToOutputStream(response.getOutputStream());
-//							} else {
-//								if (className != null) {
-//									// Get all of class
-//									CheckoutResult download = service.downloadOfType(token, roid, className, resultType);
-//									EmfSerializer serializer = (EmfSerializer)download.getFile().getDataSource();
-//									serializer.writeToOutputStream(response.getOutputStream());
-//								} else {
-//									// Get all objects
-//									if (service.getRevision(token, pid, rid) == null) {
-//										response.getWriter().println("Project " + pid + " has no revision " + rid);
-//									} else {
-//										CheckoutResult download = service.download(token, roid, resultType);
-//										EmfSerializer serializer = (EmfSerializer)download.getFile().getDataSource();
-//										serializer.writeToOutputStream(response.getOutputStream());
-//									}
-//								}
-//							}
-//						}
-//					} else {
-//						// Get the last revision
-//						if (oid != -1) {
-//							// Get a specific object
-//							CheckoutResult downloadById = service.downloadByOid(token, pid, service.getLastRevision(token, pid).getId(), oid, resultType);
-//							downloadById.getFile().writeTo(response.getOutputStream());
-//						} else {
-//							if (action == null) {
-//								// Get all objects
-//								SRevision lastRevision = service.getLastRevision(token, pid);
-//								if (lastRevision == null) {
-//									response.getWriter().println("Project " + pid + " has no revisions");
-//								} else {
-//									CheckoutResult download = service.download(token, pid, lastRevision.getId(), resultType);
-//									EmfSerializer serializer = (EmfSerializer)download.getFile().getDataSource();
-//									response.setHeader("Content-Disposition", "inline; filename=\"" + download.getProjectName() + "." + download.getRevisionNr() + "." + resultType.getDefaultExtension() + "\"");
-//									serializer.writeToOutputStream(response.getOutputStream());
-//								}
-//							} else {
-//								if (action == Action.CHECKOUTS) {
-//									writeObject(service.getAllCheckoutsOfProject(token, pid), response.getOutputStream());
-//								} else if (action == Action.REVISIONS) {
-//									writeObject(service.getAllRevisionsOfProject(token, pid), response.getOutputStream());
-//								} else if (action == Action.PROJECTS) {
-//									writeObject(service.getAllProjects(token), response.getOutputStream());
-//								}
-//							}
-//						}
-//					}
-//				}
-//			}
-//		} catch (UserException e) {
-//			response.getWriter().print(e.getUserMessage());
-//		} catch (SerializerException e) {
-//			e.printStackTrace();
-//		}
+		try {
+			token = service.createAnonymousToken();
+			if (urlParams == null) {
+				writeObject(service.getAllProjects(token), response.getOutputStream());
+			} else {
+				if (pid != -1) {
+					// Get a specific project
+					if (rid != -1) {
+						// Get a specific revision
+						if (oid != -1) {
+							// Get a specific object
+							CheckoutResult downloadById = service.downloadByOid(token, pid, rid, oid, resultType);
+							EmfSerializer serializer = (EmfSerializer)downloadById.getFile().getDataSource();
+							serializer.write(response.getOutputStream());
+						} else {
+							if (guid != null) {
+								CheckoutResult downloadById = service.downloadByGuid(token, pid, rid, guid, resultType);
+								EmfSerializer serializer = (EmfSerializer)downloadById.getFile().getDataSource();
+								serializer.write(response.getOutputStream());
+							} else {
+								if (className != null) {
+									// Get all of class
+									CheckoutResult download = service.downloadOfType(token, pid, rid, className, resultType);
+									EmfSerializer serializer = (EmfSerializer)download.getFile().getDataSource();
+									serializer.write(response.getOutputStream());
+								} else {
+									// Get all objects
+									if (service.getRevision(token, pid, rid) == null) {
+										response.getWriter().println("Project " + pid + " has no revision " + rid);
+									} else {
+										CheckoutResult download = service.download(token, pid, rid, resultType);
+										EmfSerializer serializer = (EmfSerializer)download.getFile().getDataSource();
+										serializer.write(response.getOutputStream());
+									}
+								}
+							}
+						}
+					} else {
+						// Get the last revision
+						if (oid != -1) {
+							// Get a specific object
+							CheckoutResult downloadById = service.downloadByOid(token, pid, service.getLastRevision(token, pid).getId(), oid, resultType);
+							downloadById.getFile().writeTo(response.getOutputStream());
+						} else {
+							if (action == null) {
+								// Get all objects
+								SRevision lastRevision = service.getLastRevision(token, pid);
+								if (lastRevision == null) {
+									response.getWriter().println("Project " + pid + " has no revisions");
+								} else {
+									CheckoutResult download = service.download(token, pid, lastRevision.getId(), resultType);
+									EmfSerializer serializer = (EmfSerializer)download.getFile().getDataSource();
+									response.setHeader("Content-Disposition", "inline; filename=\"" + download.getProjectName() + "." + download.getRevisionNr() + "." + resultType.getDefaultExtension() + "\"");
+									serializer.write(response.getOutputStream());
+								}
+							} else {
+								if (action == Action.CHECKOUTS) {
+									writeObject(service.getAllCheckoutsOfProject(token, pid), response.getOutputStream());
+								} else if (action == Action.REVISIONS) {
+									writeObject(service.getAllRevisionsOfProject(token, pid), response.getOutputStream());
+								}
+							}
+						}
+					}
+				}
+			}
+		} catch (UserException e) {
+			response.getWriter().print(e.getUserMessage());
+		}
 	}
 
 	private void writeObject(Object object, OutputStream out) {

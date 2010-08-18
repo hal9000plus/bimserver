@@ -22,8 +22,9 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3;
 
-import org.bimserver.emf.IdEObject;
 import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -51,85 +52,84 @@ import org.eclipse.emf.common.util.EList;
  *
  * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcConstraint()
  * @model
- * @extends IdEObject
  * @generated
  */
-public interface IfcConstraint extends IdEObject {
+public interface IfcConstraint extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * Returns the value of the '<em><b>Name</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Name</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
+	 * @return the value of the '<em>Name</em>' reference.
+	 * @see #setName(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcConstraint_Name()
 	 * @model
 	 * @generated
 	 */
-	String getName();
+	IfcLabel getName();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConstraint#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConstraint#getName <em>Name</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @param value the new value of the '<em>Name</em>' reference.
 	 * @see #getName()
 	 * @generated
 	 */
-	void setName(String value);
+	void setName(IfcLabel value);
 
 	/**
-	 * Returns the value of the '<em><b>Description</b></em>' attribute.
+	 * Returns the value of the '<em><b>Description</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Description</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Description</em>' attribute.
+	 * @return the value of the '<em>Description</em>' reference.
 	 * @see #isSetDescription()
 	 * @see #unsetDescription()
-	 * @see #setDescription(String)
+	 * @see #setDescription(IfcText)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcConstraint_Description()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getDescription();
+	IfcText getDescription();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConstraint#getDescription <em>Description</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConstraint#getDescription <em>Description</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Description</em>' attribute.
+	 * @param value the new value of the '<em>Description</em>' reference.
 	 * @see #isSetDescription()
 	 * @see #unsetDescription()
 	 * @see #getDescription()
 	 * @generated
 	 */
-	void setDescription(String value);
+	void setDescription(IfcText value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConstraint#getDescription <em>Description</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConstraint#getDescription <em>Description</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetDescription()
 	 * @see #getDescription()
-	 * @see #setDescription(String)
+	 * @see #setDescription(IfcText)
 	 * @generated
 	 */
 	void unsetDescription();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConstraint#getDescription <em>Description</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConstraint#getDescription <em>Description</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Description</em>' attribute is set.
+	 * @return whether the value of the '<em>Description</em>' reference is set.
 	 * @see #unsetDescription()
 	 * @see #getDescription()
-	 * @see #setDescription(String)
+	 * @see #setDescription(IfcText)
 	 * @generated
 	 */
 	boolean isSetDescription();
@@ -164,54 +164,54 @@ public interface IfcConstraint extends IdEObject {
 	void setConstraintGrade(IfcConstraintEnum value);
 
 	/**
-	 * Returns the value of the '<em><b>Constraint Source</b></em>' attribute.
+	 * Returns the value of the '<em><b>Constraint Source</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Constraint Source</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Constraint Source</em>' attribute.
+	 * @return the value of the '<em>Constraint Source</em>' reference.
 	 * @see #isSetConstraintSource()
 	 * @see #unsetConstraintSource()
-	 * @see #setConstraintSource(String)
+	 * @see #setConstraintSource(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcConstraint_ConstraintSource()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getConstraintSource();
+	IfcLabel getConstraintSource();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConstraint#getConstraintSource <em>Constraint Source</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConstraint#getConstraintSource <em>Constraint Source</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Constraint Source</em>' attribute.
+	 * @param value the new value of the '<em>Constraint Source</em>' reference.
 	 * @see #isSetConstraintSource()
 	 * @see #unsetConstraintSource()
 	 * @see #getConstraintSource()
 	 * @generated
 	 */
-	void setConstraintSource(String value);
+	void setConstraintSource(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConstraint#getConstraintSource <em>Constraint Source</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConstraint#getConstraintSource <em>Constraint Source</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetConstraintSource()
 	 * @see #getConstraintSource()
-	 * @see #setConstraintSource(String)
+	 * @see #setConstraintSource(IfcLabel)
 	 * @generated
 	 */
 	void unsetConstraintSource();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConstraint#getConstraintSource <em>Constraint Source</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConstraint#getConstraintSource <em>Constraint Source</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Constraint Source</em>' attribute is set.
+	 * @return whether the value of the '<em>Constraint Source</em>' reference is set.
 	 * @see #unsetConstraintSource()
 	 * @see #getConstraintSource()
-	 * @see #setConstraintSource(String)
+	 * @see #setConstraintSource(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetConstraintSource();
@@ -323,54 +323,54 @@ public interface IfcConstraint extends IdEObject {
 	boolean isSetCreationTime();
 
 	/**
-	 * Returns the value of the '<em><b>User Defined Grade</b></em>' attribute.
+	 * Returns the value of the '<em><b>User Defined Grade</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>User Defined Grade</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>User Defined Grade</em>' attribute.
+	 * @return the value of the '<em>User Defined Grade</em>' reference.
 	 * @see #isSetUserDefinedGrade()
 	 * @see #unsetUserDefinedGrade()
-	 * @see #setUserDefinedGrade(String)
+	 * @see #setUserDefinedGrade(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcConstraint_UserDefinedGrade()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getUserDefinedGrade();
+	IfcLabel getUserDefinedGrade();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConstraint#getUserDefinedGrade <em>User Defined Grade</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConstraint#getUserDefinedGrade <em>User Defined Grade</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>User Defined Grade</em>' attribute.
+	 * @param value the new value of the '<em>User Defined Grade</em>' reference.
 	 * @see #isSetUserDefinedGrade()
 	 * @see #unsetUserDefinedGrade()
 	 * @see #getUserDefinedGrade()
 	 * @generated
 	 */
-	void setUserDefinedGrade(String value);
+	void setUserDefinedGrade(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConstraint#getUserDefinedGrade <em>User Defined Grade</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConstraint#getUserDefinedGrade <em>User Defined Grade</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetUserDefinedGrade()
 	 * @see #getUserDefinedGrade()
-	 * @see #setUserDefinedGrade(String)
+	 * @see #setUserDefinedGrade(IfcLabel)
 	 * @generated
 	 */
 	void unsetUserDefinedGrade();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConstraint#getUserDefinedGrade <em>User Defined Grade</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcConstraint#getUserDefinedGrade <em>User Defined Grade</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>User Defined Grade</em>' attribute is set.
+	 * @return whether the value of the '<em>User Defined Grade</em>' reference is set.
 	 * @see #unsetUserDefinedGrade()
 	 * @see #getUserDefinedGrade()
-	 * @see #setUserDefinedGrade(String)
+	 * @see #setUserDefinedGrade(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetUserDefinedGrade();

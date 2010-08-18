@@ -24,6 +24,8 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcLaborResource;
+import org.bimserver.ifc.emf.Ifc2x3.IfcText;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -64,8 +66,8 @@ public class IfcLaborResourceImpl extends IfcConstructionResourceImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getSkillSet() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcLaborResource_SkillSet(), true);
+	public IfcText getSkillSet() {
+		return (IfcText) eGet(Ifc2x3Package.eINSTANCE.getIfcLaborResource_SkillSet(), true);
 	}
 
 	/**
@@ -73,7 +75,7 @@ public class IfcLaborResourceImpl extends IfcConstructionResourceImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSkillSet(String newSkillSet) {
+	public void setSkillSet(IfcText newSkillSet) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcLaborResource_SkillSet(), newSkillSet);
 	}
 

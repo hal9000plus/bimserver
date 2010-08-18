@@ -22,7 +22,7 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3;
 
-import org.bimserver.emf.IdEObject;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -39,10 +39,9 @@ import org.bimserver.emf.IdEObject;
  *
  * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcDerivedUnitElement()
  * @model
- * @extends IdEObject
  * @generated
  */
-public interface IfcDerivedUnitElement extends IdEObject {
+public interface IfcDerivedUnitElement extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Unit</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -70,29 +69,29 @@ public interface IfcDerivedUnitElement extends IdEObject {
 	void setUnit(IfcNamedUnit value);
 
 	/**
-	 * Returns the value of the '<em><b>Exponent</b></em>' attribute.
+	 * Returns the value of the '<em><b>Exponent</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Exponent</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Exponent</em>' attribute.
-	 * @see #setExponent(int)
+	 * @return the value of the '<em>Exponent</em>' reference.
+	 * @see #setExponent(IfcInteger)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcDerivedUnitElement_Exponent()
 	 * @model
 	 * @generated
 	 */
-	int getExponent();
+	IfcInteger getExponent();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDerivedUnitElement#getExponent <em>Exponent</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDerivedUnitElement#getExponent <em>Exponent</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Exponent</em>' attribute.
+	 * @param value the new value of the '<em>Exponent</em>' reference.
 	 * @see #getExponent()
 	 * @generated
 	 */
-	void setExponent(int value);
+	void setExponent(IfcInteger value);
 
 } // IfcDerivedUnitElement

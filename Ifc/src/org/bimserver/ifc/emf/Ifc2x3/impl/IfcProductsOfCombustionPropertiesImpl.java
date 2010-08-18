@@ -23,7 +23,10 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcPositiveRatioMeasure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcProductsOfCombustionProperties;
+import org.bimserver.ifc.emf.Ifc2x3.IfcSpecificHeatCapacityMeasure;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -34,13 +37,9 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcProductsOfCombustionPropertiesImpl#getSpecificHeatCapacity <em>Specific Heat Capacity</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcProductsOfCombustionPropertiesImpl#getSpecificHeatCapacityAsString <em>Specific Heat Capacity As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcProductsOfCombustionPropertiesImpl#getN20Content <em>N20 Content</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcProductsOfCombustionPropertiesImpl#getN20ContentAsString <em>N20 Content As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcProductsOfCombustionPropertiesImpl#getCOContent <em>CO Content</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcProductsOfCombustionPropertiesImpl#getCOContentAsString <em>CO Content As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcProductsOfCombustionPropertiesImpl#getCO2Content <em>CO2 Content</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcProductsOfCombustionPropertiesImpl#getCO2ContentAsString <em>CO2 Content As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -71,8 +70,8 @@ public class IfcProductsOfCombustionPropertiesImpl extends IfcMaterialProperties
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getSpecificHeatCapacity() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcProductsOfCombustionProperties_SpecificHeatCapacity(), true);
+	public IfcSpecificHeatCapacityMeasure getSpecificHeatCapacity() {
+		return (IfcSpecificHeatCapacityMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcProductsOfCombustionProperties_SpecificHeatCapacity(), true);
 	}
 
 	/**
@@ -80,7 +79,7 @@ public class IfcProductsOfCombustionPropertiesImpl extends IfcMaterialProperties
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSpecificHeatCapacity(float newSpecificHeatCapacity) {
+	public void setSpecificHeatCapacity(IfcSpecificHeatCapacityMeasure newSpecificHeatCapacity) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcProductsOfCombustionProperties_SpecificHeatCapacity(), newSpecificHeatCapacity);
 	}
 
@@ -107,8 +106,8 @@ public class IfcProductsOfCombustionPropertiesImpl extends IfcMaterialProperties
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getSpecificHeatCapacityAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcProductsOfCombustionProperties_SpecificHeatCapacityAsString(), true);
+	public IfcPositiveRatioMeasure getN20Content() {
+		return (IfcPositiveRatioMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcProductsOfCombustionProperties_N20Content(), true);
 	}
 
 	/**
@@ -116,43 +115,7 @@ public class IfcProductsOfCombustionPropertiesImpl extends IfcMaterialProperties
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSpecificHeatCapacityAsString(String newSpecificHeatCapacityAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcProductsOfCombustionProperties_SpecificHeatCapacityAsString(), newSpecificHeatCapacityAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetSpecificHeatCapacityAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcProductsOfCombustionProperties_SpecificHeatCapacityAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetSpecificHeatCapacityAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcProductsOfCombustionProperties_SpecificHeatCapacityAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getN20Content() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcProductsOfCombustionProperties_N20Content(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setN20Content(float newN20Content) {
+	public void setN20Content(IfcPositiveRatioMeasure newN20Content) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcProductsOfCombustionProperties_N20Content(), newN20Content);
 	}
 
@@ -179,8 +142,8 @@ public class IfcProductsOfCombustionPropertiesImpl extends IfcMaterialProperties
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getN20ContentAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcProductsOfCombustionProperties_N20ContentAsString(), true);
+	public IfcPositiveRatioMeasure getCOContent() {
+		return (IfcPositiveRatioMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcProductsOfCombustionProperties_COContent(), true);
 	}
 
 	/**
@@ -188,43 +151,7 @@ public class IfcProductsOfCombustionPropertiesImpl extends IfcMaterialProperties
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setN20ContentAsString(String newN20ContentAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcProductsOfCombustionProperties_N20ContentAsString(), newN20ContentAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetN20ContentAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcProductsOfCombustionProperties_N20ContentAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetN20ContentAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcProductsOfCombustionProperties_N20ContentAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getCOContent() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcProductsOfCombustionProperties_COContent(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCOContent(float newCOContent) {
+	public void setCOContent(IfcPositiveRatioMeasure newCOContent) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcProductsOfCombustionProperties_COContent(), newCOContent);
 	}
 
@@ -251,8 +178,8 @@ public class IfcProductsOfCombustionPropertiesImpl extends IfcMaterialProperties
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getCOContentAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcProductsOfCombustionProperties_COContentAsString(), true);
+	public IfcPositiveRatioMeasure getCO2Content() {
+		return (IfcPositiveRatioMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcProductsOfCombustionProperties_CO2Content(), true);
 	}
 
 	/**
@@ -260,43 +187,7 @@ public class IfcProductsOfCombustionPropertiesImpl extends IfcMaterialProperties
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCOContentAsString(String newCOContentAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcProductsOfCombustionProperties_COContentAsString(), newCOContentAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetCOContentAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcProductsOfCombustionProperties_COContentAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetCOContentAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcProductsOfCombustionProperties_COContentAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getCO2Content() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcProductsOfCombustionProperties_CO2Content(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCO2Content(float newCO2Content) {
+	public void setCO2Content(IfcPositiveRatioMeasure newCO2Content) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcProductsOfCombustionProperties_CO2Content(), newCO2Content);
 	}
 
@@ -316,42 +207,6 @@ public class IfcProductsOfCombustionPropertiesImpl extends IfcMaterialProperties
 	 */
 	public boolean isSetCO2Content() {
 		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcProductsOfCombustionProperties_CO2Content());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getCO2ContentAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcProductsOfCombustionProperties_CO2ContentAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCO2ContentAsString(String newCO2ContentAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcProductsOfCombustionProperties_CO2ContentAsString(), newCO2ContentAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetCO2ContentAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcProductsOfCombustionProperties_CO2ContentAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetCO2ContentAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcProductsOfCombustionProperties_CO2ContentAsString());
 	}
 
 } //IfcProductsOfCombustionPropertiesImpl

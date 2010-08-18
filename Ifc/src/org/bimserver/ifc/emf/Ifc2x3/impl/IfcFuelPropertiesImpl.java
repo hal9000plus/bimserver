@@ -24,6 +24,10 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcFuelProperties;
+import org.bimserver.ifc.emf.Ifc2x3.IfcHeatingValueMeasure;
+import org.bimserver.ifc.emf.Ifc2x3.IfcPositiveRatioMeasure;
+import org.bimserver.ifc.emf.Ifc2x3.IfcThermodynamicTemperatureMeasure;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -34,13 +38,9 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcFuelPropertiesImpl#getCombustionTemperature <em>Combustion Temperature</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcFuelPropertiesImpl#getCombustionTemperatureAsString <em>Combustion Temperature As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcFuelPropertiesImpl#getCarbonContent <em>Carbon Content</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcFuelPropertiesImpl#getCarbonContentAsString <em>Carbon Content As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcFuelPropertiesImpl#getLowerHeatingValue <em>Lower Heating Value</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcFuelPropertiesImpl#getLowerHeatingValueAsString <em>Lower Heating Value As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcFuelPropertiesImpl#getHigherHeatingValue <em>Higher Heating Value</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcFuelPropertiesImpl#getHigherHeatingValueAsString <em>Higher Heating Value As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -71,8 +71,8 @@ public class IfcFuelPropertiesImpl extends IfcMaterialPropertiesImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getCombustionTemperature() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcFuelProperties_CombustionTemperature(), true);
+	public IfcThermodynamicTemperatureMeasure getCombustionTemperature() {
+		return (IfcThermodynamicTemperatureMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcFuelProperties_CombustionTemperature(), true);
 	}
 
 	/**
@@ -80,7 +80,7 @@ public class IfcFuelPropertiesImpl extends IfcMaterialPropertiesImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCombustionTemperature(float newCombustionTemperature) {
+	public void setCombustionTemperature(IfcThermodynamicTemperatureMeasure newCombustionTemperature) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcFuelProperties_CombustionTemperature(), newCombustionTemperature);
 	}
 
@@ -107,8 +107,8 @@ public class IfcFuelPropertiesImpl extends IfcMaterialPropertiesImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getCombustionTemperatureAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcFuelProperties_CombustionTemperatureAsString(), true);
+	public IfcPositiveRatioMeasure getCarbonContent() {
+		return (IfcPositiveRatioMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcFuelProperties_CarbonContent(), true);
 	}
 
 	/**
@@ -116,43 +116,7 @@ public class IfcFuelPropertiesImpl extends IfcMaterialPropertiesImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCombustionTemperatureAsString(String newCombustionTemperatureAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcFuelProperties_CombustionTemperatureAsString(), newCombustionTemperatureAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetCombustionTemperatureAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcFuelProperties_CombustionTemperatureAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetCombustionTemperatureAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcFuelProperties_CombustionTemperatureAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getCarbonContent() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcFuelProperties_CarbonContent(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCarbonContent(float newCarbonContent) {
+	public void setCarbonContent(IfcPositiveRatioMeasure newCarbonContent) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcFuelProperties_CarbonContent(), newCarbonContent);
 	}
 
@@ -179,8 +143,8 @@ public class IfcFuelPropertiesImpl extends IfcMaterialPropertiesImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getCarbonContentAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcFuelProperties_CarbonContentAsString(), true);
+	public IfcHeatingValueMeasure getLowerHeatingValue() {
+		return (IfcHeatingValueMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcFuelProperties_LowerHeatingValue(), true);
 	}
 
 	/**
@@ -188,43 +152,7 @@ public class IfcFuelPropertiesImpl extends IfcMaterialPropertiesImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCarbonContentAsString(String newCarbonContentAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcFuelProperties_CarbonContentAsString(), newCarbonContentAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetCarbonContentAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcFuelProperties_CarbonContentAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetCarbonContentAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcFuelProperties_CarbonContentAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getLowerHeatingValue() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcFuelProperties_LowerHeatingValue(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setLowerHeatingValue(float newLowerHeatingValue) {
+	public void setLowerHeatingValue(IfcHeatingValueMeasure newLowerHeatingValue) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcFuelProperties_LowerHeatingValue(), newLowerHeatingValue);
 	}
 
@@ -251,8 +179,8 @@ public class IfcFuelPropertiesImpl extends IfcMaterialPropertiesImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getLowerHeatingValueAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcFuelProperties_LowerHeatingValueAsString(), true);
+	public IfcHeatingValueMeasure getHigherHeatingValue() {
+		return (IfcHeatingValueMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcFuelProperties_HigherHeatingValue(), true);
 	}
 
 	/**
@@ -260,43 +188,7 @@ public class IfcFuelPropertiesImpl extends IfcMaterialPropertiesImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLowerHeatingValueAsString(String newLowerHeatingValueAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcFuelProperties_LowerHeatingValueAsString(), newLowerHeatingValueAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetLowerHeatingValueAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcFuelProperties_LowerHeatingValueAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetLowerHeatingValueAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcFuelProperties_LowerHeatingValueAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getHigherHeatingValue() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcFuelProperties_HigherHeatingValue(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setHigherHeatingValue(float newHigherHeatingValue) {
+	public void setHigherHeatingValue(IfcHeatingValueMeasure newHigherHeatingValue) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcFuelProperties_HigherHeatingValue(), newHigherHeatingValue);
 	}
 
@@ -316,42 +208,6 @@ public class IfcFuelPropertiesImpl extends IfcMaterialPropertiesImpl implements 
 	 */
 	public boolean isSetHigherHeatingValue() {
 		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcFuelProperties_HigherHeatingValue());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getHigherHeatingValueAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcFuelProperties_HigherHeatingValueAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setHigherHeatingValueAsString(String newHigherHeatingValueAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcFuelProperties_HigherHeatingValueAsString(), newHigherHeatingValueAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetHigherHeatingValueAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcFuelProperties_HigherHeatingValueAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetHigherHeatingValueAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcFuelProperties_HigherHeatingValueAsString());
 	}
 
 } //IfcFuelPropertiesImpl

@@ -24,10 +24,13 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcInternalOrExternalEnum;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLengthMeasure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRelCoversSpaces;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRelSpaceBoundary;
 import org.bimserver.ifc.emf.Ifc2x3.IfcSpace;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -39,7 +42,6 @@ import org.eclipse.emf.ecore.EClass;
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSpaceImpl#getInteriorOrExteriorSpace <em>Interior Or Exterior Space</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSpaceImpl#getElevationWithFlooring <em>Elevation With Flooring</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSpaceImpl#getElevationWithFlooringAsString <em>Elevation With Flooring As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSpaceImpl#getHasCoverings <em>Has Coverings</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSpaceImpl#getBoundedBy <em>Bounded By</em>}</li>
  * </ul>
@@ -90,8 +92,8 @@ public class IfcSpaceImpl extends IfcSpatialStructureElementImpl implements IfcS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getElevationWithFlooring() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcSpace_ElevationWithFlooring(), true);
+	public IfcLengthMeasure getElevationWithFlooring() {
+		return (IfcLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcSpace_ElevationWithFlooring(), true);
 	}
 
 	/**
@@ -99,7 +101,7 @@ public class IfcSpaceImpl extends IfcSpatialStructureElementImpl implements IfcS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setElevationWithFlooring(float newElevationWithFlooring) {
+	public void setElevationWithFlooring(IfcLengthMeasure newElevationWithFlooring) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcSpace_ElevationWithFlooring(), newElevationWithFlooring);
 	}
 
@@ -119,42 +121,6 @@ public class IfcSpaceImpl extends IfcSpatialStructureElementImpl implements IfcS
 	 */
 	public boolean isSetElevationWithFlooring() {
 		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcSpace_ElevationWithFlooring());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getElevationWithFlooringAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcSpace_ElevationWithFlooringAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setElevationWithFlooringAsString(String newElevationWithFlooringAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcSpace_ElevationWithFlooringAsString(), newElevationWithFlooringAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetElevationWithFlooringAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcSpace_ElevationWithFlooringAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetElevationWithFlooringAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcSpace_ElevationWithFlooringAsString());
 	}
 
 	/**

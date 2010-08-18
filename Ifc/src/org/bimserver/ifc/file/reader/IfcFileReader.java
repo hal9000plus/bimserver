@@ -40,7 +40,7 @@ import org.slf4j.LoggerFactory;
 public class IfcFileReader {
 	private static final Logger LOGGER = LoggerFactory.getLogger(IfcFileReader.class);
 	
-	public static final File DEFAULT_SCHEMA_FILE = new File((".." + File.separator + "BimServer" + File.separator + "deploy" + File.separator + "shared" + File.separator + "IFC2X3_FINAL.exp"));
+	public static final File DEFAULT_SCHEMA_FILE = new File((".." + File.separator + "buildingSMARTLibrary" + File.separator + "data" + File.separator + "IFC2X3_FINAL.exp"));
 	
 	public Map<Long, EObject> read(SchemaDefinition schemaDefinition, File ifcFile) throws FileNotFoundException {
 //		Logger.disableDefaultOutput();

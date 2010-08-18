@@ -25,6 +25,9 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcBoundingBox;
 import org.bimserver.ifc.emf.Ifc2x3.IfcCartesianPoint;
+import org.bimserver.ifc.emf.Ifc2x3.IfcDimensionCount;
+import org.bimserver.ifc.emf.Ifc2x3.IfcPositiveLengthMeasure;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -36,11 +39,8 @@ import org.eclipse.emf.ecore.EClass;
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcBoundingBoxImpl#getCorner <em>Corner</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcBoundingBoxImpl#getXDim <em>XDim</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcBoundingBoxImpl#getXDimAsString <em>XDim As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcBoundingBoxImpl#getYDim <em>YDim</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcBoundingBoxImpl#getYDimAsString <em>YDim As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcBoundingBoxImpl#getZDim <em>ZDim</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcBoundingBoxImpl#getZDimAsString <em>ZDim As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcBoundingBoxImpl#getDim <em>Dim</em>}</li>
  * </ul>
  * </p>
@@ -90,8 +90,8 @@ public class IfcBoundingBoxImpl extends IfcGeometricRepresentationItemImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getXDim() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcBoundingBox_XDim(), true);
+	public IfcPositiveLengthMeasure getXDim() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcBoundingBox_XDim(), true);
 	}
 
 	/**
@@ -99,7 +99,7 @@ public class IfcBoundingBoxImpl extends IfcGeometricRepresentationItemImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setXDim(float newXDim) {
+	public void setXDim(IfcPositiveLengthMeasure newXDim) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcBoundingBox_XDim(), newXDim);
 	}
 
@@ -108,8 +108,8 @@ public class IfcBoundingBoxImpl extends IfcGeometricRepresentationItemImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getXDimAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcBoundingBox_XDimAsString(), true);
+	public IfcPositiveLengthMeasure getYDim() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcBoundingBox_YDim(), true);
 	}
 
 	/**
@@ -117,25 +117,7 @@ public class IfcBoundingBoxImpl extends IfcGeometricRepresentationItemImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setXDimAsString(String newXDimAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcBoundingBox_XDimAsString(), newXDimAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getYDim() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcBoundingBox_YDim(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setYDim(float newYDim) {
+	public void setYDim(IfcPositiveLengthMeasure newYDim) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcBoundingBox_YDim(), newYDim);
 	}
 
@@ -144,8 +126,8 @@ public class IfcBoundingBoxImpl extends IfcGeometricRepresentationItemImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getYDimAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcBoundingBox_YDimAsString(), true);
+	public IfcPositiveLengthMeasure getZDim() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcBoundingBox_ZDim(), true);
 	}
 
 	/**
@@ -153,25 +135,7 @@ public class IfcBoundingBoxImpl extends IfcGeometricRepresentationItemImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setYDimAsString(String newYDimAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcBoundingBox_YDimAsString(), newYDimAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getZDim() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcBoundingBox_ZDim(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setZDim(float newZDim) {
+	public void setZDim(IfcPositiveLengthMeasure newZDim) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcBoundingBox_ZDim(), newZDim);
 	}
 
@@ -180,8 +144,8 @@ public class IfcBoundingBoxImpl extends IfcGeometricRepresentationItemImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getZDimAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcBoundingBox_ZDimAsString(), true);
+	public IfcDimensionCount getDim() {
+		return (IfcDimensionCount) eGet(Ifc2x3Package.eINSTANCE.getIfcBoundingBox_Dim(), true);
 	}
 
 	/**
@@ -189,25 +153,7 @@ public class IfcBoundingBoxImpl extends IfcGeometricRepresentationItemImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setZDimAsString(String newZDimAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcBoundingBox_ZDimAsString(), newZDimAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int getDim() {
-		return (Integer) eGet(Ifc2x3Package.eINSTANCE.getIfcBoundingBox_Dim(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDim(int newDim) {
+	public void setDim(IfcDimensionCount newDim) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcBoundingBox_Dim(), newDim);
 	}
 

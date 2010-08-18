@@ -26,7 +26,7 @@ import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcFaceSurface;
 import org.bimserver.ifc.emf.Ifc2x3.IfcLogical;
 import org.bimserver.ifc.emf.Ifc2x3.IfcSurface;
-import org.bimserver.ifc.emf.Ifc2x3.Tristate;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -86,8 +86,8 @@ public class IfcFaceSurfaceImpl extends IfcFaceImpl implements IfcFaceSurface {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Tristate getSameSense() {
-		return (Tristate) eGet(Ifc2x3Package.eINSTANCE.getIfcFaceSurface_SameSense(), true);
+	public IfcLogical getSameSense() {
+		return (IfcLogical) eGet(Ifc2x3Package.eINSTANCE.getIfcFaceSurface_SameSense(), true);
 	}
 
 	/**
@@ -95,7 +95,7 @@ public class IfcFaceSurfaceImpl extends IfcFaceImpl implements IfcFaceSurface {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSameSense(Tristate newSameSense) {
+	public void setSameSense(IfcLogical newSameSense) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcFaceSurface_SameSense(), newSameSense);
 	}
 

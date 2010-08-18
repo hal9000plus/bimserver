@@ -22,8 +22,9 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3;
 
-import org.bimserver.emf.IdEObject;
 import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,11 +35,8 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSectionReinforcementProperties#getLongitudinalStartPosition <em>Longitudinal Start Position</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSectionReinforcementProperties#getLongitudinalStartPositionAsString <em>Longitudinal Start Position As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSectionReinforcementProperties#getLongitudinalEndPosition <em>Longitudinal End Position</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSectionReinforcementProperties#getLongitudinalEndPositionAsString <em>Longitudinal End Position As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSectionReinforcementProperties#getTransversePosition <em>Transverse Position</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSectionReinforcementProperties#getTransversePositionAsString <em>Transverse Position As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSectionReinforcementProperties#getReinforcementRole <em>Reinforcement Role</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSectionReinforcementProperties#getSectionDefinition <em>Section Definition</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSectionReinforcementProperties#getCrossSectionReinforcementDefinitions <em>Cross Section Reinforcement Definitions</em>}</li>
@@ -47,219 +45,113 @@ import org.eclipse.emf.common.util.EList;
  *
  * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSectionReinforcementProperties()
  * @model
- * @extends IdEObject
  * @generated
  */
-public interface IfcSectionReinforcementProperties extends IdEObject {
+public interface IfcSectionReinforcementProperties extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Longitudinal Start Position</b></em>' attribute.
+	 * Returns the value of the '<em><b>Longitudinal Start Position</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Longitudinal Start Position</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Longitudinal Start Position</em>' attribute.
-	 * @see #setLongitudinalStartPosition(float)
+	 * @return the value of the '<em>Longitudinal Start Position</em>' reference.
+	 * @see #setLongitudinalStartPosition(IfcLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSectionReinforcementProperties_LongitudinalStartPosition()
 	 * @model
 	 * @generated
 	 */
-	float getLongitudinalStartPosition();
+	IfcLengthMeasure getLongitudinalStartPosition();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSectionReinforcementProperties#getLongitudinalStartPosition <em>Longitudinal Start Position</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSectionReinforcementProperties#getLongitudinalStartPosition <em>Longitudinal Start Position</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Longitudinal Start Position</em>' attribute.
+	 * @param value the new value of the '<em>Longitudinal Start Position</em>' reference.
 	 * @see #getLongitudinalStartPosition()
 	 * @generated
 	 */
-	void setLongitudinalStartPosition(float value);
+	void setLongitudinalStartPosition(IfcLengthMeasure value);
 
 	/**
-	 * Returns the value of the '<em><b>Longitudinal Start Position As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Longitudinal Start Position As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Longitudinal Start Position As String</em>' attribute.
-	 * @see #setLongitudinalStartPositionAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSectionReinforcementProperties_LongitudinalStartPositionAsString()
-	 * @model
-	 * @generated
-	 */
-	String getLongitudinalStartPositionAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSectionReinforcementProperties#getLongitudinalStartPositionAsString <em>Longitudinal Start Position As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Longitudinal Start Position As String</em>' attribute.
-	 * @see #getLongitudinalStartPositionAsString()
-	 * @generated
-	 */
-	void setLongitudinalStartPositionAsString(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Longitudinal End Position</b></em>' attribute.
+	 * Returns the value of the '<em><b>Longitudinal End Position</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Longitudinal End Position</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Longitudinal End Position</em>' attribute.
-	 * @see #setLongitudinalEndPosition(float)
+	 * @return the value of the '<em>Longitudinal End Position</em>' reference.
+	 * @see #setLongitudinalEndPosition(IfcLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSectionReinforcementProperties_LongitudinalEndPosition()
 	 * @model
 	 * @generated
 	 */
-	float getLongitudinalEndPosition();
+	IfcLengthMeasure getLongitudinalEndPosition();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSectionReinforcementProperties#getLongitudinalEndPosition <em>Longitudinal End Position</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSectionReinforcementProperties#getLongitudinalEndPosition <em>Longitudinal End Position</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Longitudinal End Position</em>' attribute.
+	 * @param value the new value of the '<em>Longitudinal End Position</em>' reference.
 	 * @see #getLongitudinalEndPosition()
 	 * @generated
 	 */
-	void setLongitudinalEndPosition(float value);
+	void setLongitudinalEndPosition(IfcLengthMeasure value);
 
 	/**
-	 * Returns the value of the '<em><b>Longitudinal End Position As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Longitudinal End Position As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Longitudinal End Position As String</em>' attribute.
-	 * @see #setLongitudinalEndPositionAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSectionReinforcementProperties_LongitudinalEndPositionAsString()
-	 * @model
-	 * @generated
-	 */
-	String getLongitudinalEndPositionAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSectionReinforcementProperties#getLongitudinalEndPositionAsString <em>Longitudinal End Position As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Longitudinal End Position As String</em>' attribute.
-	 * @see #getLongitudinalEndPositionAsString()
-	 * @generated
-	 */
-	void setLongitudinalEndPositionAsString(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Transverse Position</b></em>' attribute.
+	 * Returns the value of the '<em><b>Transverse Position</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Transverse Position</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Transverse Position</em>' attribute.
+	 * @return the value of the '<em>Transverse Position</em>' reference.
 	 * @see #isSetTransversePosition()
 	 * @see #unsetTransversePosition()
-	 * @see #setTransversePosition(float)
+	 * @see #setTransversePosition(IfcLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSectionReinforcementProperties_TransversePosition()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getTransversePosition();
+	IfcLengthMeasure getTransversePosition();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSectionReinforcementProperties#getTransversePosition <em>Transverse Position</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSectionReinforcementProperties#getTransversePosition <em>Transverse Position</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Transverse Position</em>' attribute.
+	 * @param value the new value of the '<em>Transverse Position</em>' reference.
 	 * @see #isSetTransversePosition()
 	 * @see #unsetTransversePosition()
 	 * @see #getTransversePosition()
 	 * @generated
 	 */
-	void setTransversePosition(float value);
+	void setTransversePosition(IfcLengthMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSectionReinforcementProperties#getTransversePosition <em>Transverse Position</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSectionReinforcementProperties#getTransversePosition <em>Transverse Position</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetTransversePosition()
 	 * @see #getTransversePosition()
-	 * @see #setTransversePosition(float)
+	 * @see #setTransversePosition(IfcLengthMeasure)
 	 * @generated
 	 */
 	void unsetTransversePosition();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSectionReinforcementProperties#getTransversePosition <em>Transverse Position</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSectionReinforcementProperties#getTransversePosition <em>Transverse Position</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Transverse Position</em>' attribute is set.
+	 * @return whether the value of the '<em>Transverse Position</em>' reference is set.
 	 * @see #unsetTransversePosition()
 	 * @see #getTransversePosition()
-	 * @see #setTransversePosition(float)
+	 * @see #setTransversePosition(IfcLengthMeasure)
 	 * @generated
 	 */
 	boolean isSetTransversePosition();
-
-	/**
-	 * Returns the value of the '<em><b>Transverse Position As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Transverse Position As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Transverse Position As String</em>' attribute.
-	 * @see #isSetTransversePositionAsString()
-	 * @see #unsetTransversePositionAsString()
-	 * @see #setTransversePositionAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSectionReinforcementProperties_TransversePositionAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getTransversePositionAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSectionReinforcementProperties#getTransversePositionAsString <em>Transverse Position As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Transverse Position As String</em>' attribute.
-	 * @see #isSetTransversePositionAsString()
-	 * @see #unsetTransversePositionAsString()
-	 * @see #getTransversePositionAsString()
-	 * @generated
-	 */
-	void setTransversePositionAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSectionReinforcementProperties#getTransversePositionAsString <em>Transverse Position As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetTransversePositionAsString()
-	 * @see #getTransversePositionAsString()
-	 * @see #setTransversePositionAsString(String)
-	 * @generated
-	 */
-	void unsetTransversePositionAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSectionReinforcementProperties#getTransversePositionAsString <em>Transverse Position As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Transverse Position As String</em>' attribute is set.
-	 * @see #unsetTransversePositionAsString()
-	 * @see #getTransversePositionAsString()
-	 * @see #setTransversePositionAsString(String)
-	 * @generated
-	 */
-	boolean isSetTransversePositionAsString();
 
 	/**
 	 * Returns the value of the '<em><b>Reinforcement Role</b></em>' attribute.

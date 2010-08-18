@@ -25,6 +25,7 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcCartesianTransformationOperator2DnonUniform;
 import org.bimserver.ifc.emf.Ifc2x3.IfcReal;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -35,7 +36,7 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcCartesianTransformationOperator2DnonUniformImpl#getScale2 <em>Scale2</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcCartesianTransformationOperator2DnonUniformImpl#getScale2AsString <em>Scale2 As String</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcCartesianTransformationOperator2DnonUniformImpl#getScl2 <em>Scl2</em>}</li>
  * </ul>
  * </p>
  *
@@ -66,8 +67,8 @@ public class IfcCartesianTransformationOperator2DnonUniformImpl extends IfcCarte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getScale2() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcCartesianTransformationOperator2DnonUniform_Scale2(), true);
+	public IfcReal getScale2() {
+		return (IfcReal) eGet(Ifc2x3Package.eINSTANCE.getIfcCartesianTransformationOperator2DnonUniform_Scale2(), true);
 	}
 
 	/**
@@ -75,7 +76,7 @@ public class IfcCartesianTransformationOperator2DnonUniformImpl extends IfcCarte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setScale2(float newScale2) {
+	public void setScale2(IfcReal newScale2) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcCartesianTransformationOperator2DnonUniform_Scale2(), newScale2);
 	}
 
@@ -84,8 +85,8 @@ public class IfcCartesianTransformationOperator2DnonUniformImpl extends IfcCarte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getScale2AsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcCartesianTransformationOperator2DnonUniform_Scale2AsString(), true);
+	public IfcReal getScl2() {
+		return (IfcReal) eGet(Ifc2x3Package.eINSTANCE.getIfcCartesianTransformationOperator2DnonUniform_Scl2(), true);
 	}
 
 	/**
@@ -93,8 +94,8 @@ public class IfcCartesianTransformationOperator2DnonUniformImpl extends IfcCarte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setScale2AsString(String newScale2AsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcCartesianTransformationOperator2DnonUniform_Scale2AsString(), newScale2AsString);
+	public void setScl2(IfcReal newScl2) {
+		eSet(Ifc2x3Package.eINSTANCE.getIfcCartesianTransformationOperator2DnonUniform_Scl2(), newScl2);
 	}
 
 } //IfcCartesianTransformationOperator2DnonUniformImpl

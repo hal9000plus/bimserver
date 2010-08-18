@@ -1,6 +1,5 @@
 package org.bimserver.database;
 
-
 /******************************************************************************
  * (c) Copyright bimserver.org 2009 Licensed under GNU GPLv3
  * http://www.gnu.org/licenses/gpl-3.0.txt For more information mail to

@@ -20,9 +20,6 @@ package org.bimserver.servlets;
  * long with Bimserver.org . If not, see <http://www.gnu.org/licenses/>.
  *****************************************************************************/
 
-import java.util.HashMap;
-import java.util.Map;
-
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 
@@ -43,13 +40,10 @@ public class WebServiceServlet extends CXFNonSpringServlet {
 		Bus bus = getBus();
 		BusFactory.setDefaultBus(bus);
 		ServerFactoryBean serverFactoryBean = new ServerFactoryBean();
-		Map<String,Object> properties = new HashMap<String, Object>();
-		properties.put("mtom-enabled", Boolean.TRUE);
-		serverFactoryBean.setProperties(properties);
 		serverFactoryBean.setServiceClass(ServiceInterface.class);
 		ServiceInterface service = (ServiceInterface) servletConfig.getServletContext().getAttribute("service");
 		serverFactoryBean.setInvoker(new BeanInvoker(service));
-		serverFactoryBean.setAddress("/soap");
+		serverFactoryBean.setAddress("/anonymous");
 		serverFactoryBean.setTransportId("http://schemas.xmlsoap.org/soap/http");
 		serverFactoryBean.create();
 	}

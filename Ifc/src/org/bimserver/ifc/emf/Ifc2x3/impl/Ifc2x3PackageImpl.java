@@ -23,20 +23,26 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import java.io.IOException;
+
 import java.net.URL;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Factory;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.common.util.WrappedException;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+
 import org.eclipse.emf.ecore.resource.Resource;
+
 import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
 
 /**
@@ -128,7 +134,28 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass ifcDayInMonthNumberEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass ifcDaylightSavingHourEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass ifcDescriptiveMeasureEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass ifcDimensionCountEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -198,6 +225,27 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass ifcFontStyleEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass ifcFontVariantEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass ifcFontWeightEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass ifcForceMeasureEClass = null;
 
 	/**
@@ -227,6 +275,13 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	private EClass ifcHeatingValueMeasureEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass ifcHourInDayEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -401,6 +456,13 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass ifcMinuteInHourEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass ifcModulusOfElasticityMeasureEClass = null;
 
 	/**
@@ -457,6 +519,13 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass ifcMonthInYearNumberEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass ifcNumericMeasureEClass = null;
 
 	/**
@@ -493,6 +562,13 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	private EClass ifcPowerMeasureEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass ifcPresentableTextEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -542,6 +618,13 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	private EClass ifcRotationalStiffnessMeasureEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass ifcSecondInMinuteEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -619,6 +702,34 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	private EClass ifcTextEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass ifcTextAlignmentEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass ifcTextDecorationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass ifcTextFontNameEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass ifcTextTransformationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -717,6 +828,27 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	private EClass ifcWarpingMomentMeasureEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass ifcYearNumberEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass ifcBoxAlignmentEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass ifcCompoundPlaneAngleMeasureEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -6892,7 +7024,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcAbsorbedDoseMeasure_WrappedValueAsString() {
+	public EAttribute getIfcAbsorbedDoseMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcAbsorbedDoseMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -6922,7 +7054,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcAccelerationMeasure_WrappedValueAsString() {
+	public EAttribute getIfcAccelerationMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcAccelerationMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -6952,7 +7084,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcAmountOfSubstanceMeasure_WrappedValueAsString() {
+	public EAttribute getIfcAmountOfSubstanceMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcAmountOfSubstanceMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -6982,7 +7114,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcAngularVelocityMeasure_WrappedValueAsString() {
+	public EAttribute getIfcAngularVelocityMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcAngularVelocityMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -7012,7 +7144,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcAreaMeasure_WrappedValueAsString() {
+	public EAttribute getIfcAreaMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcAreaMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -7063,7 +7195,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcContextDependentMeasure_WrappedValueAsString() {
+	public EAttribute getIfcContextDependentMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcContextDependentMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -7093,7 +7225,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCountMeasure_WrappedValueAsString() {
+	public EAttribute getIfcCountMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcCountMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -7123,8 +7255,50 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCurvatureMeasure_WrappedValueAsString() {
+	public EAttribute getIfcCurvatureMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcCurvatureMeasure().getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getIfcDayInMonthNumber() {
+		if (ifcDayInMonthNumberEClass == null) {
+			ifcDayInMonthNumberEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(11);
+		}
+		return ifcDayInMonthNumberEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getIfcDayInMonthNumber_WrappedValue() {
+		return (EAttribute) getIfcDayInMonthNumber().getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getIfcDaylightSavingHour() {
+		if (ifcDaylightSavingHourEClass == null) {
+			ifcDaylightSavingHourEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(12);
+		}
+		return ifcDaylightSavingHourEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getIfcDaylightSavingHour_WrappedValue() {
+		return (EAttribute) getIfcDaylightSavingHour().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -7134,7 +7308,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcDescriptiveMeasure() {
 		if (ifcDescriptiveMeasureEClass == null) {
-			ifcDescriptiveMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(11);
+			ifcDescriptiveMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(13);
 		}
 		return ifcDescriptiveMeasureEClass;
 	}
@@ -7153,9 +7327,30 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getIfcDimensionCount() {
+		if (ifcDimensionCountEClass == null) {
+			ifcDimensionCountEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(14);
+		}
+		return ifcDimensionCountEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getIfcDimensionCount_WrappedValue() {
+		return (EAttribute) getIfcDimensionCount().getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getIfcDoseEquivalentMeasure() {
 		if (ifcDoseEquivalentMeasureEClass == null) {
-			ifcDoseEquivalentMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(12);
+			ifcDoseEquivalentMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(15);
 		}
 		return ifcDoseEquivalentMeasureEClass;
 	}
@@ -7174,7 +7369,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcDoseEquivalentMeasure_WrappedValueAsString() {
+	public EAttribute getIfcDoseEquivalentMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcDoseEquivalentMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -7185,7 +7380,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcDynamicViscosityMeasure() {
 		if (ifcDynamicViscosityMeasureEClass == null) {
-			ifcDynamicViscosityMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(13);
+			ifcDynamicViscosityMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(16);
 		}
 		return ifcDynamicViscosityMeasureEClass;
 	}
@@ -7204,7 +7399,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcDynamicViscosityMeasure_WrappedValueAsString() {
+	public EAttribute getIfcDynamicViscosityMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcDynamicViscosityMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -7215,7 +7410,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcElectricCapacitanceMeasure() {
 		if (ifcElectricCapacitanceMeasureEClass == null) {
-			ifcElectricCapacitanceMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(14);
+			ifcElectricCapacitanceMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(17);
 		}
 		return ifcElectricCapacitanceMeasureEClass;
 	}
@@ -7234,7 +7429,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcElectricCapacitanceMeasure_WrappedValueAsString() {
+	public EAttribute getIfcElectricCapacitanceMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcElectricCapacitanceMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -7245,7 +7440,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcElectricChargeMeasure() {
 		if (ifcElectricChargeMeasureEClass == null) {
-			ifcElectricChargeMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(15);
+			ifcElectricChargeMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(18);
 		}
 		return ifcElectricChargeMeasureEClass;
 	}
@@ -7264,7 +7459,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcElectricChargeMeasure_WrappedValueAsString() {
+	public EAttribute getIfcElectricChargeMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcElectricChargeMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -7275,7 +7470,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcElectricConductanceMeasure() {
 		if (ifcElectricConductanceMeasureEClass == null) {
-			ifcElectricConductanceMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(16);
+			ifcElectricConductanceMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(19);
 		}
 		return ifcElectricConductanceMeasureEClass;
 	}
@@ -7294,7 +7489,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcElectricConductanceMeasure_WrappedValueAsString() {
+	public EAttribute getIfcElectricConductanceMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcElectricConductanceMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -7305,7 +7500,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcElectricCurrentMeasure() {
 		if (ifcElectricCurrentMeasureEClass == null) {
-			ifcElectricCurrentMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(17);
+			ifcElectricCurrentMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(20);
 		}
 		return ifcElectricCurrentMeasureEClass;
 	}
@@ -7324,7 +7519,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcElectricCurrentMeasure_WrappedValueAsString() {
+	public EAttribute getIfcElectricCurrentMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcElectricCurrentMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -7335,7 +7530,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcElectricResistanceMeasure() {
 		if (ifcElectricResistanceMeasureEClass == null) {
-			ifcElectricResistanceMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(18);
+			ifcElectricResistanceMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(21);
 		}
 		return ifcElectricResistanceMeasureEClass;
 	}
@@ -7354,7 +7549,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcElectricResistanceMeasure_WrappedValueAsString() {
+	public EAttribute getIfcElectricResistanceMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcElectricResistanceMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -7365,7 +7560,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcElectricVoltageMeasure() {
 		if (ifcElectricVoltageMeasureEClass == null) {
-			ifcElectricVoltageMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(19);
+			ifcElectricVoltageMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(22);
 		}
 		return ifcElectricVoltageMeasureEClass;
 	}
@@ -7384,7 +7579,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcElectricVoltageMeasure_WrappedValueAsString() {
+	public EAttribute getIfcElectricVoltageMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcElectricVoltageMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -7395,7 +7590,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcEnergyMeasure() {
 		if (ifcEnergyMeasureEClass == null) {
-			ifcEnergyMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(20);
+			ifcEnergyMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(23);
 		}
 		return ifcEnergyMeasureEClass;
 	}
@@ -7414,8 +7609,71 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcEnergyMeasure_WrappedValueAsString() {
+	public EAttribute getIfcEnergyMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcEnergyMeasure().getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getIfcFontStyle() {
+		if (ifcFontStyleEClass == null) {
+			ifcFontStyleEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(24);
+		}
+		return ifcFontStyleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getIfcFontStyle_WrappedValue() {
+		return (EAttribute) getIfcFontStyle().getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getIfcFontVariant() {
+		if (ifcFontVariantEClass == null) {
+			ifcFontVariantEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(25);
+		}
+		return ifcFontVariantEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getIfcFontVariant_WrappedValue() {
+		return (EAttribute) getIfcFontVariant().getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getIfcFontWeight() {
+		if (ifcFontWeightEClass == null) {
+			ifcFontWeightEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(26);
+		}
+		return ifcFontWeightEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getIfcFontWeight_WrappedValue() {
+		return (EAttribute) getIfcFontWeight().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -7425,7 +7683,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcForceMeasure() {
 		if (ifcForceMeasureEClass == null) {
-			ifcForceMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(21);
+			ifcForceMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(27);
 		}
 		return ifcForceMeasureEClass;
 	}
@@ -7444,7 +7702,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcForceMeasure_WrappedValueAsString() {
+	public EAttribute getIfcForceMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcForceMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -7455,7 +7713,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcFrequencyMeasure() {
 		if (ifcFrequencyMeasureEClass == null) {
-			ifcFrequencyMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(22);
+			ifcFrequencyMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(28);
 		}
 		return ifcFrequencyMeasureEClass;
 	}
@@ -7474,7 +7732,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcFrequencyMeasure_WrappedValueAsString() {
+	public EAttribute getIfcFrequencyMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcFrequencyMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -7485,7 +7743,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcGloballyUniqueId() {
 		if (ifcGloballyUniqueIdEClass == null) {
-			ifcGloballyUniqueIdEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(23);
+			ifcGloballyUniqueIdEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(29);
 		}
 		return ifcGloballyUniqueIdEClass;
 	}
@@ -7515,7 +7773,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcHeatFluxDensityMeasure() {
 		if (ifcHeatFluxDensityMeasureEClass == null) {
-			ifcHeatFluxDensityMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(24);
+			ifcHeatFluxDensityMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(30);
 		}
 		return ifcHeatFluxDensityMeasureEClass;
 	}
@@ -7534,7 +7792,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcHeatFluxDensityMeasure_WrappedValueAsString() {
+	public EAttribute getIfcHeatFluxDensityMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcHeatFluxDensityMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -7545,7 +7803,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcHeatingValueMeasure() {
 		if (ifcHeatingValueMeasureEClass == null) {
-			ifcHeatingValueMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(25);
+			ifcHeatingValueMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(31);
 		}
 		return ifcHeatingValueMeasureEClass;
 	}
@@ -7564,8 +7822,29 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcHeatingValueMeasure_WrappedValueAsString() {
+	public EAttribute getIfcHeatingValueMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcHeatingValueMeasure().getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getIfcHourInDay() {
+		if (ifcHourInDayEClass == null) {
+			ifcHourInDayEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(32);
+		}
+		return ifcHourInDayEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getIfcHourInDay_WrappedValue() {
+		return (EAttribute) getIfcHourInDay().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -7575,7 +7854,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcIdentifier() {
 		if (ifcIdentifierEClass == null) {
-			ifcIdentifierEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(26);
+			ifcIdentifierEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(33);
 		}
 		return ifcIdentifierEClass;
 	}
@@ -7596,7 +7875,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcIlluminanceMeasure() {
 		if (ifcIlluminanceMeasureEClass == null) {
-			ifcIlluminanceMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(27);
+			ifcIlluminanceMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(34);
 		}
 		return ifcIlluminanceMeasureEClass;
 	}
@@ -7615,7 +7894,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcIlluminanceMeasure_WrappedValueAsString() {
+	public EAttribute getIfcIlluminanceMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcIlluminanceMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -7626,7 +7905,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcInductanceMeasure() {
 		if (ifcInductanceMeasureEClass == null) {
-			ifcInductanceMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(28);
+			ifcInductanceMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(35);
 		}
 		return ifcInductanceMeasureEClass;
 	}
@@ -7645,7 +7924,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcInductanceMeasure_WrappedValueAsString() {
+	public EAttribute getIfcInductanceMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcInductanceMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -7656,7 +7935,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcInteger() {
 		if (ifcIntegerEClass == null) {
-			ifcIntegerEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(29);
+			ifcIntegerEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(36);
 		}
 		return ifcIntegerEClass;
 	}
@@ -7677,7 +7956,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcIntegerCountRateMeasure() {
 		if (ifcIntegerCountRateMeasureEClass == null) {
-			ifcIntegerCountRateMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(30);
+			ifcIntegerCountRateMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(37);
 		}
 		return ifcIntegerCountRateMeasureEClass;
 	}
@@ -7698,7 +7977,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcIonConcentrationMeasure() {
 		if (ifcIonConcentrationMeasureEClass == null) {
-			ifcIonConcentrationMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(31);
+			ifcIonConcentrationMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(38);
 		}
 		return ifcIonConcentrationMeasureEClass;
 	}
@@ -7717,7 +7996,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcIonConcentrationMeasure_WrappedValueAsString() {
+	public EAttribute getIfcIonConcentrationMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcIonConcentrationMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -7728,7 +8007,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcIsothermalMoistureCapacityMeasure() {
 		if (ifcIsothermalMoistureCapacityMeasureEClass == null) {
-			ifcIsothermalMoistureCapacityMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(32);
+			ifcIsothermalMoistureCapacityMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(39);
 		}
 		return ifcIsothermalMoistureCapacityMeasureEClass;
 	}
@@ -7747,7 +8026,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcIsothermalMoistureCapacityMeasure_WrappedValueAsString() {
+	public EAttribute getIfcIsothermalMoistureCapacityMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcIsothermalMoistureCapacityMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -7758,7 +8037,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcKinematicViscosityMeasure() {
 		if (ifcKinematicViscosityMeasureEClass == null) {
-			ifcKinematicViscosityMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(33);
+			ifcKinematicViscosityMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(40);
 		}
 		return ifcKinematicViscosityMeasureEClass;
 	}
@@ -7777,7 +8056,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcKinematicViscosityMeasure_WrappedValueAsString() {
+	public EAttribute getIfcKinematicViscosityMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcKinematicViscosityMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -7788,7 +8067,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcLabel() {
 		if (ifcLabelEClass == null) {
-			ifcLabelEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(34);
+			ifcLabelEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(41);
 		}
 		return ifcLabelEClass;
 	}
@@ -7809,7 +8088,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcLengthMeasure() {
 		if (ifcLengthMeasureEClass == null) {
-			ifcLengthMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(35);
+			ifcLengthMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(42);
 		}
 		return ifcLengthMeasureEClass;
 	}
@@ -7828,7 +8107,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcLengthMeasure_WrappedValueAsString() {
+	public EAttribute getIfcLengthMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcLengthMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -7839,7 +8118,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcLinearForceMeasure() {
 		if (ifcLinearForceMeasureEClass == null) {
-			ifcLinearForceMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(36);
+			ifcLinearForceMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(43);
 		}
 		return ifcLinearForceMeasureEClass;
 	}
@@ -7858,7 +8137,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcLinearForceMeasure_WrappedValueAsString() {
+	public EAttribute getIfcLinearForceMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcLinearForceMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -7869,7 +8148,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcLinearMomentMeasure() {
 		if (ifcLinearMomentMeasureEClass == null) {
-			ifcLinearMomentMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(37);
+			ifcLinearMomentMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(44);
 		}
 		return ifcLinearMomentMeasureEClass;
 	}
@@ -7888,7 +8167,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcLinearMomentMeasure_WrappedValueAsString() {
+	public EAttribute getIfcLinearMomentMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcLinearMomentMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -7899,7 +8178,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcLinearStiffnessMeasure() {
 		if (ifcLinearStiffnessMeasureEClass == null) {
-			ifcLinearStiffnessMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(38);
+			ifcLinearStiffnessMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(45);
 		}
 		return ifcLinearStiffnessMeasureEClass;
 	}
@@ -7918,7 +8197,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcLinearStiffnessMeasure_WrappedValueAsString() {
+	public EAttribute getIfcLinearStiffnessMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcLinearStiffnessMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -7929,7 +8208,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcLinearVelocityMeasure() {
 		if (ifcLinearVelocityMeasureEClass == null) {
-			ifcLinearVelocityMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(39);
+			ifcLinearVelocityMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(46);
 		}
 		return ifcLinearVelocityMeasureEClass;
 	}
@@ -7948,7 +8227,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcLinearVelocityMeasure_WrappedValueAsString() {
+	public EAttribute getIfcLinearVelocityMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcLinearVelocityMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -7959,7 +8238,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcLogical() {
 		if (ifcLogicalEClass == null) {
-			ifcLogicalEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(40);
+			ifcLogicalEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(47);
 		}
 		return ifcLogicalEClass;
 	}
@@ -7980,7 +8259,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcLuminousFluxMeasure() {
 		if (ifcLuminousFluxMeasureEClass == null) {
-			ifcLuminousFluxMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(41);
+			ifcLuminousFluxMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(48);
 		}
 		return ifcLuminousFluxMeasureEClass;
 	}
@@ -7999,7 +8278,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcLuminousFluxMeasure_WrappedValueAsString() {
+	public EAttribute getIfcLuminousFluxMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcLuminousFluxMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -8010,7 +8289,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcLuminousIntensityDistributionMeasure() {
 		if (ifcLuminousIntensityDistributionMeasureEClass == null) {
-			ifcLuminousIntensityDistributionMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(42);
+			ifcLuminousIntensityDistributionMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(49);
 		}
 		return ifcLuminousIntensityDistributionMeasureEClass;
 	}
@@ -8029,7 +8308,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcLuminousIntensityDistributionMeasure_WrappedValueAsString() {
+	public EAttribute getIfcLuminousIntensityDistributionMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcLuminousIntensityDistributionMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -8040,7 +8319,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcLuminousIntensityMeasure() {
 		if (ifcLuminousIntensityMeasureEClass == null) {
-			ifcLuminousIntensityMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(43);
+			ifcLuminousIntensityMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(50);
 		}
 		return ifcLuminousIntensityMeasureEClass;
 	}
@@ -8059,7 +8338,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcLuminousIntensityMeasure_WrappedValueAsString() {
+	public EAttribute getIfcLuminousIntensityMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcLuminousIntensityMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -8070,7 +8349,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcMagneticFluxDensityMeasure() {
 		if (ifcMagneticFluxDensityMeasureEClass == null) {
-			ifcMagneticFluxDensityMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(44);
+			ifcMagneticFluxDensityMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(51);
 		}
 		return ifcMagneticFluxDensityMeasureEClass;
 	}
@@ -8089,7 +8368,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcMagneticFluxDensityMeasure_WrappedValueAsString() {
+	public EAttribute getIfcMagneticFluxDensityMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcMagneticFluxDensityMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -8100,7 +8379,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcMagneticFluxMeasure() {
 		if (ifcMagneticFluxMeasureEClass == null) {
-			ifcMagneticFluxMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(45);
+			ifcMagneticFluxMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(52);
 		}
 		return ifcMagneticFluxMeasureEClass;
 	}
@@ -8119,7 +8398,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcMagneticFluxMeasure_WrappedValueAsString() {
+	public EAttribute getIfcMagneticFluxMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcMagneticFluxMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -8130,7 +8409,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcMassDensityMeasure() {
 		if (ifcMassDensityMeasureEClass == null) {
-			ifcMassDensityMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(46);
+			ifcMassDensityMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(53);
 		}
 		return ifcMassDensityMeasureEClass;
 	}
@@ -8149,7 +8428,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcMassDensityMeasure_WrappedValueAsString() {
+	public EAttribute getIfcMassDensityMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcMassDensityMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -8160,7 +8439,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcMassFlowRateMeasure() {
 		if (ifcMassFlowRateMeasureEClass == null) {
-			ifcMassFlowRateMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(47);
+			ifcMassFlowRateMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(54);
 		}
 		return ifcMassFlowRateMeasureEClass;
 	}
@@ -8179,7 +8458,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcMassFlowRateMeasure_WrappedValueAsString() {
+	public EAttribute getIfcMassFlowRateMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcMassFlowRateMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -8190,7 +8469,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcMassMeasure() {
 		if (ifcMassMeasureEClass == null) {
-			ifcMassMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(48);
+			ifcMassMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(55);
 		}
 		return ifcMassMeasureEClass;
 	}
@@ -8209,7 +8488,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcMassMeasure_WrappedValueAsString() {
+	public EAttribute getIfcMassMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcMassMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -8220,7 +8499,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcMassPerLengthMeasure() {
 		if (ifcMassPerLengthMeasureEClass == null) {
-			ifcMassPerLengthMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(49);
+			ifcMassPerLengthMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(56);
 		}
 		return ifcMassPerLengthMeasureEClass;
 	}
@@ -8239,8 +8518,29 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcMassPerLengthMeasure_WrappedValueAsString() {
+	public EAttribute getIfcMassPerLengthMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcMassPerLengthMeasure().getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getIfcMinuteInHour() {
+		if (ifcMinuteInHourEClass == null) {
+			ifcMinuteInHourEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(57);
+		}
+		return ifcMinuteInHourEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getIfcMinuteInHour_WrappedValue() {
+		return (EAttribute) getIfcMinuteInHour().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -8250,7 +8550,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcModulusOfElasticityMeasure() {
 		if (ifcModulusOfElasticityMeasureEClass == null) {
-			ifcModulusOfElasticityMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(50);
+			ifcModulusOfElasticityMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(58);
 		}
 		return ifcModulusOfElasticityMeasureEClass;
 	}
@@ -8269,7 +8569,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcModulusOfElasticityMeasure_WrappedValueAsString() {
+	public EAttribute getIfcModulusOfElasticityMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcModulusOfElasticityMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -8280,7 +8580,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcModulusOfLinearSubgradeReactionMeasure() {
 		if (ifcModulusOfLinearSubgradeReactionMeasureEClass == null) {
-			ifcModulusOfLinearSubgradeReactionMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(51);
+			ifcModulusOfLinearSubgradeReactionMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(59);
 		}
 		return ifcModulusOfLinearSubgradeReactionMeasureEClass;
 	}
@@ -8299,7 +8599,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcModulusOfLinearSubgradeReactionMeasure_WrappedValueAsString() {
+	public EAttribute getIfcModulusOfLinearSubgradeReactionMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcModulusOfLinearSubgradeReactionMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -8310,7 +8610,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcModulusOfRotationalSubgradeReactionMeasure() {
 		if (ifcModulusOfRotationalSubgradeReactionMeasureEClass == null) {
-			ifcModulusOfRotationalSubgradeReactionMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(52);
+			ifcModulusOfRotationalSubgradeReactionMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(60);
 		}
 		return ifcModulusOfRotationalSubgradeReactionMeasureEClass;
 	}
@@ -8329,7 +8629,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcModulusOfRotationalSubgradeReactionMeasure_WrappedValueAsString() {
+	public EAttribute getIfcModulusOfRotationalSubgradeReactionMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcModulusOfRotationalSubgradeReactionMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -8340,7 +8640,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcModulusOfSubgradeReactionMeasure() {
 		if (ifcModulusOfSubgradeReactionMeasureEClass == null) {
-			ifcModulusOfSubgradeReactionMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(53);
+			ifcModulusOfSubgradeReactionMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(61);
 		}
 		return ifcModulusOfSubgradeReactionMeasureEClass;
 	}
@@ -8359,7 +8659,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcModulusOfSubgradeReactionMeasure_WrappedValueAsString() {
+	public EAttribute getIfcModulusOfSubgradeReactionMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcModulusOfSubgradeReactionMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -8370,7 +8670,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcMoistureDiffusivityMeasure() {
 		if (ifcMoistureDiffusivityMeasureEClass == null) {
-			ifcMoistureDiffusivityMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(54);
+			ifcMoistureDiffusivityMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(62);
 		}
 		return ifcMoistureDiffusivityMeasureEClass;
 	}
@@ -8389,7 +8689,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcMoistureDiffusivityMeasure_WrappedValueAsString() {
+	public EAttribute getIfcMoistureDiffusivityMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcMoistureDiffusivityMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -8400,7 +8700,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcMolecularWeightMeasure() {
 		if (ifcMolecularWeightMeasureEClass == null) {
-			ifcMolecularWeightMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(55);
+			ifcMolecularWeightMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(63);
 		}
 		return ifcMolecularWeightMeasureEClass;
 	}
@@ -8419,7 +8719,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcMolecularWeightMeasure_WrappedValueAsString() {
+	public EAttribute getIfcMolecularWeightMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcMolecularWeightMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -8430,7 +8730,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcMomentOfInertiaMeasure() {
 		if (ifcMomentOfInertiaMeasureEClass == null) {
-			ifcMomentOfInertiaMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(56);
+			ifcMomentOfInertiaMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(64);
 		}
 		return ifcMomentOfInertiaMeasureEClass;
 	}
@@ -8449,7 +8749,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcMomentOfInertiaMeasure_WrappedValueAsString() {
+	public EAttribute getIfcMomentOfInertiaMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcMomentOfInertiaMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -8460,7 +8760,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcMonetaryMeasure() {
 		if (ifcMonetaryMeasureEClass == null) {
-			ifcMonetaryMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(57);
+			ifcMonetaryMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(65);
 		}
 		return ifcMonetaryMeasureEClass;
 	}
@@ -8479,8 +8779,29 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcMonetaryMeasure_WrappedValueAsString() {
+	public EAttribute getIfcMonetaryMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcMonetaryMeasure().getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getIfcMonthInYearNumber() {
+		if (ifcMonthInYearNumberEClass == null) {
+			ifcMonthInYearNumberEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(66);
+		}
+		return ifcMonthInYearNumberEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getIfcMonthInYearNumber_WrappedValue() {
+		return (EAttribute) getIfcMonthInYearNumber().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -8490,7 +8811,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcNumericMeasure() {
 		if (ifcNumericMeasureEClass == null) {
-			ifcNumericMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(58);
+			ifcNumericMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(67);
 		}
 		return ifcNumericMeasureEClass;
 	}
@@ -8509,7 +8830,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcNumericMeasure_WrappedValueAsString() {
+	public EAttribute getIfcNumericMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcNumericMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -8520,7 +8841,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPHMeasure() {
 		if (ifcPHMeasureEClass == null) {
-			ifcPHMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(59);
+			ifcPHMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(68);
 		}
 		return ifcPHMeasureEClass;
 	}
@@ -8539,7 +8860,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPHMeasure_WrappedValueAsString() {
+	public EAttribute getIfcPHMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcPHMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -8550,7 +8871,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcParameterValue() {
 		if (ifcParameterValueEClass == null) {
-			ifcParameterValueEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(60);
+			ifcParameterValueEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(69);
 		}
 		return ifcParameterValueEClass;
 	}
@@ -8569,7 +8890,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcParameterValue_WrappedValueAsString() {
+	public EAttribute getIfcParameterValue_StringValuewrappedValue() {
 		return (EAttribute) getIfcParameterValue().getEStructuralFeatures().get(1);
 	}
 
@@ -8580,7 +8901,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPlanarForceMeasure() {
 		if (ifcPlanarForceMeasureEClass == null) {
-			ifcPlanarForceMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(61);
+			ifcPlanarForceMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(70);
 		}
 		return ifcPlanarForceMeasureEClass;
 	}
@@ -8599,7 +8920,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPlanarForceMeasure_WrappedValueAsString() {
+	public EAttribute getIfcPlanarForceMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcPlanarForceMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -8610,7 +8931,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPlaneAngleMeasure() {
 		if (ifcPlaneAngleMeasureEClass == null) {
-			ifcPlaneAngleMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(62);
+			ifcPlaneAngleMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(71);
 		}
 		return ifcPlaneAngleMeasureEClass;
 	}
@@ -8629,7 +8950,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPlaneAngleMeasure_WrappedValueAsString() {
+	public EAttribute getIfcPlaneAngleMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcPlaneAngleMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -8640,7 +8961,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPowerMeasure() {
 		if (ifcPowerMeasureEClass == null) {
-			ifcPowerMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(63);
+			ifcPowerMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(72);
 		}
 		return ifcPowerMeasureEClass;
 	}
@@ -8659,8 +8980,29 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPowerMeasure_WrappedValueAsString() {
+	public EAttribute getIfcPowerMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcPowerMeasure().getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getIfcPresentableText() {
+		if (ifcPresentableTextEClass == null) {
+			ifcPresentableTextEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(73);
+		}
+		return ifcPresentableTextEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getIfcPresentableText_WrappedValue() {
+		return (EAttribute) getIfcPresentableText().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -8670,7 +9012,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPressureMeasure() {
 		if (ifcPressureMeasureEClass == null) {
-			ifcPressureMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(64);
+			ifcPressureMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(74);
 		}
 		return ifcPressureMeasureEClass;
 	}
@@ -8689,7 +9031,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPressureMeasure_WrappedValueAsString() {
+	public EAttribute getIfcPressureMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcPressureMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -8700,7 +9042,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRadioActivityMeasure() {
 		if (ifcRadioActivityMeasureEClass == null) {
-			ifcRadioActivityMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(65);
+			ifcRadioActivityMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(75);
 		}
 		return ifcRadioActivityMeasureEClass;
 	}
@@ -8719,7 +9061,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRadioActivityMeasure_WrappedValueAsString() {
+	public EAttribute getIfcRadioActivityMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcRadioActivityMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -8730,7 +9072,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRatioMeasure() {
 		if (ifcRatioMeasureEClass == null) {
-			ifcRatioMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(66);
+			ifcRatioMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(76);
 		}
 		return ifcRatioMeasureEClass;
 	}
@@ -8749,7 +9091,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRatioMeasure_WrappedValueAsString() {
+	public EAttribute getIfcRatioMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcRatioMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -8760,7 +9102,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcReal() {
 		if (ifcRealEClass == null) {
-			ifcRealEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(67);
+			ifcRealEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(77);
 		}
 		return ifcRealEClass;
 	}
@@ -8779,7 +9121,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcReal_WrappedValueAsString() {
+	public EAttribute getIfcReal_StringValuewrappedValue() {
 		return (EAttribute) getIfcReal().getEStructuralFeatures().get(1);
 	}
 
@@ -8790,7 +9132,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRotationalFrequencyMeasure() {
 		if (ifcRotationalFrequencyMeasureEClass == null) {
-			ifcRotationalFrequencyMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(68);
+			ifcRotationalFrequencyMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(78);
 		}
 		return ifcRotationalFrequencyMeasureEClass;
 	}
@@ -8809,7 +9151,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRotationalFrequencyMeasure_WrappedValueAsString() {
+	public EAttribute getIfcRotationalFrequencyMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcRotationalFrequencyMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -8820,7 +9162,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRotationalMassMeasure() {
 		if (ifcRotationalMassMeasureEClass == null) {
-			ifcRotationalMassMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(69);
+			ifcRotationalMassMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(79);
 		}
 		return ifcRotationalMassMeasureEClass;
 	}
@@ -8839,7 +9181,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRotationalMassMeasure_WrappedValueAsString() {
+	public EAttribute getIfcRotationalMassMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcRotationalMassMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -8850,7 +9192,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRotationalStiffnessMeasure() {
 		if (ifcRotationalStiffnessMeasureEClass == null) {
-			ifcRotationalStiffnessMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(70);
+			ifcRotationalStiffnessMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(80);
 		}
 		return ifcRotationalStiffnessMeasureEClass;
 	}
@@ -8869,8 +9211,38 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRotationalStiffnessMeasure_WrappedValueAsString() {
+	public EAttribute getIfcRotationalStiffnessMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcRotationalStiffnessMeasure().getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getIfcSecondInMinute() {
+		if (ifcSecondInMinuteEClass == null) {
+			ifcSecondInMinuteEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(81);
+		}
+		return ifcSecondInMinuteEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getIfcSecondInMinute_WrappedValue() {
+		return (EAttribute) getIfcSecondInMinute().getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getIfcSecondInMinute_StringValuewrappedValue() {
+		return (EAttribute) getIfcSecondInMinute().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -8880,7 +9252,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSectionModulusMeasure() {
 		if (ifcSectionModulusMeasureEClass == null) {
-			ifcSectionModulusMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(71);
+			ifcSectionModulusMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(82);
 		}
 		return ifcSectionModulusMeasureEClass;
 	}
@@ -8899,7 +9271,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSectionModulusMeasure_WrappedValueAsString() {
+	public EAttribute getIfcSectionModulusMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcSectionModulusMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -8910,7 +9282,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSectionalAreaIntegralMeasure() {
 		if (ifcSectionalAreaIntegralMeasureEClass == null) {
-			ifcSectionalAreaIntegralMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(72);
+			ifcSectionalAreaIntegralMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(83);
 		}
 		return ifcSectionalAreaIntegralMeasureEClass;
 	}
@@ -8929,7 +9301,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSectionalAreaIntegralMeasure_WrappedValueAsString() {
+	public EAttribute getIfcSectionalAreaIntegralMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcSectionalAreaIntegralMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -8940,7 +9312,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcShearModulusMeasure() {
 		if (ifcShearModulusMeasureEClass == null) {
-			ifcShearModulusMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(73);
+			ifcShearModulusMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(84);
 		}
 		return ifcShearModulusMeasureEClass;
 	}
@@ -8959,7 +9331,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcShearModulusMeasure_WrappedValueAsString() {
+	public EAttribute getIfcShearModulusMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcShearModulusMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -8970,7 +9342,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSolidAngleMeasure() {
 		if (ifcSolidAngleMeasureEClass == null) {
-			ifcSolidAngleMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(74);
+			ifcSolidAngleMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(85);
 		}
 		return ifcSolidAngleMeasureEClass;
 	}
@@ -8989,7 +9361,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSolidAngleMeasure_WrappedValueAsString() {
+	public EAttribute getIfcSolidAngleMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcSolidAngleMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -9000,7 +9372,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSoundPowerMeasure() {
 		if (ifcSoundPowerMeasureEClass == null) {
-			ifcSoundPowerMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(75);
+			ifcSoundPowerMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(86);
 		}
 		return ifcSoundPowerMeasureEClass;
 	}
@@ -9019,7 +9391,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSoundPowerMeasure_WrappedValueAsString() {
+	public EAttribute getIfcSoundPowerMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcSoundPowerMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -9030,7 +9402,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSoundPressureMeasure() {
 		if (ifcSoundPressureMeasureEClass == null) {
-			ifcSoundPressureMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(76);
+			ifcSoundPressureMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(87);
 		}
 		return ifcSoundPressureMeasureEClass;
 	}
@@ -9049,7 +9421,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSoundPressureMeasure_WrappedValueAsString() {
+	public EAttribute getIfcSoundPressureMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcSoundPressureMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -9060,7 +9432,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSpecificHeatCapacityMeasure() {
 		if (ifcSpecificHeatCapacityMeasureEClass == null) {
-			ifcSpecificHeatCapacityMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(77);
+			ifcSpecificHeatCapacityMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(88);
 		}
 		return ifcSpecificHeatCapacityMeasureEClass;
 	}
@@ -9079,7 +9451,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSpecificHeatCapacityMeasure_WrappedValueAsString() {
+	public EAttribute getIfcSpecificHeatCapacityMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcSpecificHeatCapacityMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -9090,7 +9462,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSpecularExponent() {
 		if (ifcSpecularExponentEClass == null) {
-			ifcSpecularExponentEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(78);
+			ifcSpecularExponentEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(89);
 		}
 		return ifcSpecularExponentEClass;
 	}
@@ -9109,7 +9481,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSpecularExponent_WrappedValueAsString() {
+	public EAttribute getIfcSpecularExponent_StringValuewrappedValue() {
 		return (EAttribute) getIfcSpecularExponent().getEStructuralFeatures().get(1);
 	}
 
@@ -9120,7 +9492,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSpecularRoughness() {
 		if (ifcSpecularRoughnessEClass == null) {
-			ifcSpecularRoughnessEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(79);
+			ifcSpecularRoughnessEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(90);
 		}
 		return ifcSpecularRoughnessEClass;
 	}
@@ -9139,7 +9511,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSpecularRoughness_WrappedValueAsString() {
+	public EAttribute getIfcSpecularRoughness_StringValuewrappedValue() {
 		return (EAttribute) getIfcSpecularRoughness().getEStructuralFeatures().get(1);
 	}
 
@@ -9150,7 +9522,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcTemperatureGradientMeasure() {
 		if (ifcTemperatureGradientMeasureEClass == null) {
-			ifcTemperatureGradientMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(80);
+			ifcTemperatureGradientMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(91);
 		}
 		return ifcTemperatureGradientMeasureEClass;
 	}
@@ -9169,7 +9541,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTemperatureGradientMeasure_WrappedValueAsString() {
+	public EAttribute getIfcTemperatureGradientMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcTemperatureGradientMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -9180,7 +9552,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcText() {
 		if (ifcTextEClass == null) {
-			ifcTextEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(81);
+			ifcTextEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(92);
 		}
 		return ifcTextEClass;
 	}
@@ -9199,9 +9571,93 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getIfcTextAlignment() {
+		if (ifcTextAlignmentEClass == null) {
+			ifcTextAlignmentEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(93);
+		}
+		return ifcTextAlignmentEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getIfcTextAlignment_WrappedValue() {
+		return (EAttribute) getIfcTextAlignment().getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getIfcTextDecoration() {
+		if (ifcTextDecorationEClass == null) {
+			ifcTextDecorationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(94);
+		}
+		return ifcTextDecorationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getIfcTextDecoration_WrappedValue() {
+		return (EAttribute) getIfcTextDecoration().getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getIfcTextFontName() {
+		if (ifcTextFontNameEClass == null) {
+			ifcTextFontNameEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(95);
+		}
+		return ifcTextFontNameEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getIfcTextFontName_WrappedValue() {
+		return (EAttribute) getIfcTextFontName().getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getIfcTextTransformation() {
+		if (ifcTextTransformationEClass == null) {
+			ifcTextTransformationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(96);
+		}
+		return ifcTextTransformationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getIfcTextTransformation_WrappedValue() {
+		return (EAttribute) getIfcTextTransformation().getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getIfcThermalAdmittanceMeasure() {
 		if (ifcThermalAdmittanceMeasureEClass == null) {
-			ifcThermalAdmittanceMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(82);
+			ifcThermalAdmittanceMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(97);
 		}
 		return ifcThermalAdmittanceMeasureEClass;
 	}
@@ -9220,7 +9676,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcThermalAdmittanceMeasure_WrappedValueAsString() {
+	public EAttribute getIfcThermalAdmittanceMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcThermalAdmittanceMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -9231,7 +9687,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcThermalConductivityMeasure() {
 		if (ifcThermalConductivityMeasureEClass == null) {
-			ifcThermalConductivityMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(83);
+			ifcThermalConductivityMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(98);
 		}
 		return ifcThermalConductivityMeasureEClass;
 	}
@@ -9250,7 +9706,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcThermalConductivityMeasure_WrappedValueAsString() {
+	public EAttribute getIfcThermalConductivityMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcThermalConductivityMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -9261,7 +9717,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcThermalExpansionCoefficientMeasure() {
 		if (ifcThermalExpansionCoefficientMeasureEClass == null) {
-			ifcThermalExpansionCoefficientMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(84);
+			ifcThermalExpansionCoefficientMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(99);
 		}
 		return ifcThermalExpansionCoefficientMeasureEClass;
 	}
@@ -9280,7 +9736,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcThermalExpansionCoefficientMeasure_WrappedValueAsString() {
+	public EAttribute getIfcThermalExpansionCoefficientMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcThermalExpansionCoefficientMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -9291,7 +9747,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcThermalResistanceMeasure() {
 		if (ifcThermalResistanceMeasureEClass == null) {
-			ifcThermalResistanceMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(85);
+			ifcThermalResistanceMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(100);
 		}
 		return ifcThermalResistanceMeasureEClass;
 	}
@@ -9310,7 +9766,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcThermalResistanceMeasure_WrappedValueAsString() {
+	public EAttribute getIfcThermalResistanceMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcThermalResistanceMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -9321,7 +9777,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcThermalTransmittanceMeasure() {
 		if (ifcThermalTransmittanceMeasureEClass == null) {
-			ifcThermalTransmittanceMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(86);
+			ifcThermalTransmittanceMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(101);
 		}
 		return ifcThermalTransmittanceMeasureEClass;
 	}
@@ -9340,7 +9796,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcThermalTransmittanceMeasure_WrappedValueAsString() {
+	public EAttribute getIfcThermalTransmittanceMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcThermalTransmittanceMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -9351,7 +9807,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcThermodynamicTemperatureMeasure() {
 		if (ifcThermodynamicTemperatureMeasureEClass == null) {
-			ifcThermodynamicTemperatureMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(87);
+			ifcThermodynamicTemperatureMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(102);
 		}
 		return ifcThermodynamicTemperatureMeasureEClass;
 	}
@@ -9370,7 +9826,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcThermodynamicTemperatureMeasure_WrappedValueAsString() {
+	public EAttribute getIfcThermodynamicTemperatureMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcThermodynamicTemperatureMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -9381,7 +9837,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcTimeMeasure() {
 		if (ifcTimeMeasureEClass == null) {
-			ifcTimeMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(88);
+			ifcTimeMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(103);
 		}
 		return ifcTimeMeasureEClass;
 	}
@@ -9400,7 +9856,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTimeMeasure_WrappedValueAsString() {
+	public EAttribute getIfcTimeMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcTimeMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -9411,7 +9867,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcTimeStamp() {
 		if (ifcTimeStampEClass == null) {
-			ifcTimeStampEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(89);
+			ifcTimeStampEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(104);
 		}
 		return ifcTimeStampEClass;
 	}
@@ -9432,7 +9888,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcTorqueMeasure() {
 		if (ifcTorqueMeasureEClass == null) {
-			ifcTorqueMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(90);
+			ifcTorqueMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(105);
 		}
 		return ifcTorqueMeasureEClass;
 	}
@@ -9451,7 +9907,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTorqueMeasure_WrappedValueAsString() {
+	public EAttribute getIfcTorqueMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcTorqueMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -9462,7 +9918,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcVaporPermeabilityMeasure() {
 		if (ifcVaporPermeabilityMeasureEClass == null) {
-			ifcVaporPermeabilityMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(91);
+			ifcVaporPermeabilityMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(106);
 		}
 		return ifcVaporPermeabilityMeasureEClass;
 	}
@@ -9481,7 +9937,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcVaporPermeabilityMeasure_WrappedValueAsString() {
+	public EAttribute getIfcVaporPermeabilityMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcVaporPermeabilityMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -9492,7 +9948,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcVolumeMeasure() {
 		if (ifcVolumeMeasureEClass == null) {
-			ifcVolumeMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(92);
+			ifcVolumeMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(107);
 		}
 		return ifcVolumeMeasureEClass;
 	}
@@ -9511,7 +9967,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcVolumeMeasure_WrappedValueAsString() {
+	public EAttribute getIfcVolumeMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcVolumeMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -9522,7 +9978,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcVolumetricFlowRateMeasure() {
 		if (ifcVolumetricFlowRateMeasureEClass == null) {
-			ifcVolumetricFlowRateMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(93);
+			ifcVolumetricFlowRateMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(108);
 		}
 		return ifcVolumetricFlowRateMeasureEClass;
 	}
@@ -9541,7 +9997,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcVolumetricFlowRateMeasure_WrappedValueAsString() {
+	public EAttribute getIfcVolumetricFlowRateMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcVolumetricFlowRateMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -9552,7 +10008,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcWarpingConstantMeasure() {
 		if (ifcWarpingConstantMeasureEClass == null) {
-			ifcWarpingConstantMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(94);
+			ifcWarpingConstantMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(109);
 		}
 		return ifcWarpingConstantMeasureEClass;
 	}
@@ -9571,7 +10027,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcWarpingConstantMeasure_WrappedValueAsString() {
+	public EAttribute getIfcWarpingConstantMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcWarpingConstantMeasure().getEStructuralFeatures().get(1);
 	}
 
@@ -9582,7 +10038,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcWarpingMomentMeasure() {
 		if (ifcWarpingMomentMeasureEClass == null) {
-			ifcWarpingMomentMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(95);
+			ifcWarpingMomentMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(110);
 		}
 		return ifcWarpingMomentMeasureEClass;
 	}
@@ -9601,8 +10057,62 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcWarpingMomentMeasure_WrappedValueAsString() {
+	public EAttribute getIfcWarpingMomentMeasure_StringValuewrappedValue() {
 		return (EAttribute) getIfcWarpingMomentMeasure().getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getIfcYearNumber() {
+		if (ifcYearNumberEClass == null) {
+			ifcYearNumberEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(111);
+		}
+		return ifcYearNumberEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getIfcYearNumber_WrappedValue() {
+		return (EAttribute) getIfcYearNumber().getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getIfcBoxAlignment() {
+		if (ifcBoxAlignmentEClass == null) {
+			ifcBoxAlignmentEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(112);
+		}
+		return ifcBoxAlignmentEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getIfcCompoundPlaneAngleMeasure() {
+		if (ifcCompoundPlaneAngleMeasureEClass == null) {
+			ifcCompoundPlaneAngleMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(113);
+		}
+		return ifcCompoundPlaneAngleMeasureEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getIfcCompoundPlaneAngleMeasure_WrappedValue() {
+		return (EAttribute) getIfcCompoundPlaneAngleMeasure().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -9612,7 +10122,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcNormalisedRatioMeasure() {
 		if (ifcNormalisedRatioMeasureEClass == null) {
-			ifcNormalisedRatioMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(96);
+			ifcNormalisedRatioMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(114);
 		}
 		return ifcNormalisedRatioMeasureEClass;
 	}
@@ -9624,7 +10134,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPositiveLengthMeasure() {
 		if (ifcPositiveLengthMeasureEClass == null) {
-			ifcPositiveLengthMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(97);
+			ifcPositiveLengthMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(115);
 		}
 		return ifcPositiveLengthMeasureEClass;
 	}
@@ -9636,7 +10146,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPositivePlaneAngleMeasure() {
 		if (ifcPositivePlaneAngleMeasureEClass == null) {
-			ifcPositivePlaneAngleMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(98);
+			ifcPositivePlaneAngleMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(116);
 		}
 		return ifcPositivePlaneAngleMeasureEClass;
 	}
@@ -9648,7 +10158,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPositiveRatioMeasure() {
 		if (ifcPositiveRatioMeasureEClass == null) {
-			ifcPositiveRatioMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(99);
+			ifcPositiveRatioMeasureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(117);
 		}
 		return ifcPositiveRatioMeasureEClass;
 	}
@@ -9660,7 +10170,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfc2DCompositeCurve() {
 		if (ifc2DCompositeCurveEClass == null) {
-			ifc2DCompositeCurveEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(264);
+			ifc2DCompositeCurveEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(282);
 		}
 		return ifc2DCompositeCurveEClass;
 	}
@@ -9672,7 +10182,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcActionRequest() {
 		if (ifcActionRequestEClass == null) {
-			ifcActionRequestEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(265);
+			ifcActionRequestEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(283);
 		}
 		return ifcActionRequestEClass;
 	}
@@ -9682,8 +10192,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcActionRequest_RequestID() {
-		return (EAttribute) getIfcActionRequest().getEStructuralFeatures().get(0);
+	public EReference getIfcActionRequest_RequestID() {
+		return (EReference) getIfcActionRequest().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -9693,7 +10203,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcActor() {
 		if (ifcActorEClass == null) {
-			ifcActorEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(266);
+			ifcActorEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(284);
 		}
 		return ifcActorEClass;
 	}
@@ -9723,7 +10233,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcActorRole() {
 		if (ifcActorRoleEClass == null) {
-			ifcActorRoleEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(267);
+			ifcActorRoleEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(285);
 		}
 		return ifcActorRoleEClass;
 	}
@@ -9742,8 +10252,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcActorRole_UserDefinedRole() {
-		return (EAttribute) getIfcActorRole().getEStructuralFeatures().get(1);
+	public EReference getIfcActorRole_UserDefinedRole() {
+		return (EReference) getIfcActorRole().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -9751,8 +10261,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcActorRole_Description() {
-		return (EAttribute) getIfcActorRole().getEStructuralFeatures().get(2);
+	public EReference getIfcActorRole_Description() {
+		return (EReference) getIfcActorRole().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -9762,7 +10272,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcActuatorType() {
 		if (ifcActuatorTypeEClass == null) {
-			ifcActuatorTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(268);
+			ifcActuatorTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(286);
 		}
 		return ifcActuatorTypeEClass;
 	}
@@ -9783,7 +10293,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcAddress() {
 		if (ifcAddressEClass == null) {
-			ifcAddressEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(269);
+			ifcAddressEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(287);
 		}
 		return ifcAddressEClass;
 	}
@@ -9802,8 +10312,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcAddress_Description() {
-		return (EAttribute) getIfcAddress().getEStructuralFeatures().get(1);
+	public EReference getIfcAddress_Description() {
+		return (EReference) getIfcAddress().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -9811,8 +10321,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcAddress_UserDefinedPurpose() {
-		return (EAttribute) getIfcAddress().getEStructuralFeatures().get(2);
+	public EReference getIfcAddress_UserDefinedPurpose() {
+		return (EReference) getIfcAddress().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -9840,7 +10350,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcAirTerminalBoxType() {
 		if (ifcAirTerminalBoxTypeEClass == null) {
-			ifcAirTerminalBoxTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(270);
+			ifcAirTerminalBoxTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(288);
 		}
 		return ifcAirTerminalBoxTypeEClass;
 	}
@@ -9861,7 +10371,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcAirTerminalType() {
 		if (ifcAirTerminalTypeEClass == null) {
-			ifcAirTerminalTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(271);
+			ifcAirTerminalTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(289);
 		}
 		return ifcAirTerminalTypeEClass;
 	}
@@ -9882,7 +10392,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcAirToAirHeatRecoveryType() {
 		if (ifcAirToAirHeatRecoveryTypeEClass == null) {
-			ifcAirToAirHeatRecoveryTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(272);
+			ifcAirToAirHeatRecoveryTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(290);
 		}
 		return ifcAirToAirHeatRecoveryTypeEClass;
 	}
@@ -9903,7 +10413,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcAlarmType() {
 		if (ifcAlarmTypeEClass == null) {
-			ifcAlarmTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(273);
+			ifcAlarmTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(291);
 		}
 		return ifcAlarmTypeEClass;
 	}
@@ -9924,7 +10434,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcAngularDimension() {
 		if (ifcAngularDimensionEClass == null) {
-			ifcAngularDimensionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(274);
+			ifcAngularDimensionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(292);
 		}
 		return ifcAngularDimensionEClass;
 	}
@@ -9936,7 +10446,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcAnnotation() {
 		if (ifcAnnotationEClass == null) {
-			ifcAnnotationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(275);
+			ifcAnnotationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(293);
 		}
 		return ifcAnnotationEClass;
 	}
@@ -9957,7 +10467,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcAnnotationCurveOccurrence() {
 		if (ifcAnnotationCurveOccurrenceEClass == null) {
-			ifcAnnotationCurveOccurrenceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(276);
+			ifcAnnotationCurveOccurrenceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(294);
 		}
 		return ifcAnnotationCurveOccurrenceEClass;
 	}
@@ -9969,7 +10479,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcAnnotationFillArea() {
 		if (ifcAnnotationFillAreaEClass == null) {
-			ifcAnnotationFillAreaEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(277);
+			ifcAnnotationFillAreaEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(295);
 		}
 		return ifcAnnotationFillAreaEClass;
 	}
@@ -9999,7 +10509,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcAnnotationFillAreaOccurrence() {
 		if (ifcAnnotationFillAreaOccurrenceEClass == null) {
-			ifcAnnotationFillAreaOccurrenceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(278);
+			ifcAnnotationFillAreaOccurrenceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(296);
 		}
 		return ifcAnnotationFillAreaOccurrenceEClass;
 	}
@@ -10029,7 +10539,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcAnnotationOccurrence() {
 		if (ifcAnnotationOccurrenceEClass == null) {
-			ifcAnnotationOccurrenceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(279);
+			ifcAnnotationOccurrenceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(297);
 		}
 		return ifcAnnotationOccurrenceEClass;
 	}
@@ -10041,7 +10551,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcAnnotationSurface() {
 		if (ifcAnnotationSurfaceEClass == null) {
-			ifcAnnotationSurfaceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(280);
+			ifcAnnotationSurfaceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(298);
 		}
 		return ifcAnnotationSurfaceEClass;
 	}
@@ -10071,7 +10581,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcAnnotationSurfaceOccurrence() {
 		if (ifcAnnotationSurfaceOccurrenceEClass == null) {
-			ifcAnnotationSurfaceOccurrenceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(281);
+			ifcAnnotationSurfaceOccurrenceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(299);
 		}
 		return ifcAnnotationSurfaceOccurrenceEClass;
 	}
@@ -10083,7 +10593,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcAnnotationSymbolOccurrence() {
 		if (ifcAnnotationSymbolOccurrenceEClass == null) {
-			ifcAnnotationSymbolOccurrenceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(282);
+			ifcAnnotationSymbolOccurrenceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(300);
 		}
 		return ifcAnnotationSymbolOccurrenceEClass;
 	}
@@ -10095,7 +10605,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcAnnotationTextOccurrence() {
 		if (ifcAnnotationTextOccurrenceEClass == null) {
-			ifcAnnotationTextOccurrenceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(283);
+			ifcAnnotationTextOccurrenceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(301);
 		}
 		return ifcAnnotationTextOccurrenceEClass;
 	}
@@ -10107,7 +10617,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcApplication() {
 		if (ifcApplicationEClass == null) {
-			ifcApplicationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(284);
+			ifcApplicationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(302);
 		}
 		return ifcApplicationEClass;
 	}
@@ -10126,8 +10636,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcApplication_Version() {
-		return (EAttribute) getIfcApplication().getEStructuralFeatures().get(1);
+	public EReference getIfcApplication_Version() {
+		return (EReference) getIfcApplication().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -10135,8 +10645,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcApplication_ApplicationFullName() {
-		return (EAttribute) getIfcApplication().getEStructuralFeatures().get(2);
+	public EReference getIfcApplication_ApplicationFullName() {
+		return (EReference) getIfcApplication().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -10144,8 +10654,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcApplication_ApplicationIdentifier() {
-		return (EAttribute) getIfcApplication().getEStructuralFeatures().get(3);
+	public EReference getIfcApplication_ApplicationIdentifier() {
+		return (EReference) getIfcApplication().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -10155,7 +10665,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcAppliedValue() {
 		if (ifcAppliedValueEClass == null) {
-			ifcAppliedValueEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(285);
+			ifcAppliedValueEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(303);
 		}
 		return ifcAppliedValueEClass;
 	}
@@ -10165,8 +10675,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcAppliedValue_Name() {
-		return (EAttribute) getIfcAppliedValue().getEStructuralFeatures().get(0);
+	public EReference getIfcAppliedValue_Name() {
+		return (EReference) getIfcAppliedValue().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -10174,8 +10684,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcAppliedValue_Description() {
-		return (EAttribute) getIfcAppliedValue().getEStructuralFeatures().get(1);
+	public EReference getIfcAppliedValue_Description() {
+		return (EReference) getIfcAppliedValue().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -10248,7 +10758,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcAppliedValueRelationship() {
 		if (ifcAppliedValueRelationshipEClass == null) {
-			ifcAppliedValueRelationshipEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(286);
+			ifcAppliedValueRelationshipEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(304);
 		}
 		return ifcAppliedValueRelationshipEClass;
 	}
@@ -10285,8 +10795,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcAppliedValueRelationship_Name() {
-		return (EAttribute) getIfcAppliedValueRelationship().getEStructuralFeatures().get(3);
+	public EReference getIfcAppliedValueRelationship_Name() {
+		return (EReference) getIfcAppliedValueRelationship().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -10294,8 +10804,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcAppliedValueRelationship_Description() {
-		return (EAttribute) getIfcAppliedValueRelationship().getEStructuralFeatures().get(4);
+	public EReference getIfcAppliedValueRelationship_Description() {
+		return (EReference) getIfcAppliedValueRelationship().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -10305,7 +10815,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcApproval() {
 		if (ifcApprovalEClass == null) {
-			ifcApprovalEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(287);
+			ifcApprovalEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(305);
 		}
 		return ifcApprovalEClass;
 	}
@@ -10315,8 +10825,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcApproval_Description() {
-		return (EAttribute) getIfcApproval().getEStructuralFeatures().get(0);
+	public EReference getIfcApproval_Description() {
+		return (EReference) getIfcApproval().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -10333,8 +10843,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcApproval_ApprovalStatus() {
-		return (EAttribute) getIfcApproval().getEStructuralFeatures().get(2);
+	public EReference getIfcApproval_ApprovalStatus() {
+		return (EReference) getIfcApproval().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -10342,8 +10852,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcApproval_ApprovalLevel() {
-		return (EAttribute) getIfcApproval().getEStructuralFeatures().get(3);
+	public EReference getIfcApproval_ApprovalLevel() {
+		return (EReference) getIfcApproval().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -10351,8 +10861,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcApproval_ApprovalQualifier() {
-		return (EAttribute) getIfcApproval().getEStructuralFeatures().get(4);
+	public EReference getIfcApproval_ApprovalQualifier() {
+		return (EReference) getIfcApproval().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -10360,8 +10870,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcApproval_Name() {
-		return (EAttribute) getIfcApproval().getEStructuralFeatures().get(5);
+	public EReference getIfcApproval_Name() {
+		return (EReference) getIfcApproval().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -10369,8 +10879,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcApproval_Identifier() {
-		return (EAttribute) getIfcApproval().getEStructuralFeatures().get(6);
+	public EReference getIfcApproval_Identifier() {
+		return (EReference) getIfcApproval().getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -10407,7 +10917,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcApprovalActorRelationship() {
 		if (ifcApprovalActorRelationshipEClass == null) {
-			ifcApprovalActorRelationshipEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(288);
+			ifcApprovalActorRelationshipEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(306);
 		}
 		return ifcApprovalActorRelationshipEClass;
 	}
@@ -10446,7 +10956,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcApprovalPropertyRelationship() {
 		if (ifcApprovalPropertyRelationshipEClass == null) {
-			ifcApprovalPropertyRelationshipEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(289);
+			ifcApprovalPropertyRelationshipEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(307);
 		}
 		return ifcApprovalPropertyRelationshipEClass;
 	}
@@ -10476,7 +10986,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcApprovalRelationship() {
 		if (ifcApprovalRelationshipEClass == null) {
-			ifcApprovalRelationshipEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(290);
+			ifcApprovalRelationshipEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(308);
 		}
 		return ifcApprovalRelationshipEClass;
 	}
@@ -10504,8 +11014,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcApprovalRelationship_Description() {
-		return (EAttribute) getIfcApprovalRelationship().getEStructuralFeatures().get(2);
+	public EReference getIfcApprovalRelationship_Description() {
+		return (EReference) getIfcApprovalRelationship().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -10513,8 +11023,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcApprovalRelationship_Name() {
-		return (EAttribute) getIfcApprovalRelationship().getEStructuralFeatures().get(3);
+	public EReference getIfcApprovalRelationship_Name() {
+		return (EReference) getIfcApprovalRelationship().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -10524,7 +11034,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcArbitraryClosedProfileDef() {
 		if (ifcArbitraryClosedProfileDefEClass == null) {
-			ifcArbitraryClosedProfileDefEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(291);
+			ifcArbitraryClosedProfileDefEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(309);
 		}
 		return ifcArbitraryClosedProfileDefEClass;
 	}
@@ -10545,7 +11055,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcArbitraryOpenProfileDef() {
 		if (ifcArbitraryOpenProfileDefEClass == null) {
-			ifcArbitraryOpenProfileDefEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(292);
+			ifcArbitraryOpenProfileDefEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(310);
 		}
 		return ifcArbitraryOpenProfileDefEClass;
 	}
@@ -10566,7 +11076,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcArbitraryProfileDefWithVoids() {
 		if (ifcArbitraryProfileDefWithVoidsEClass == null) {
-			ifcArbitraryProfileDefWithVoidsEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(293);
+			ifcArbitraryProfileDefWithVoidsEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(311);
 		}
 		return ifcArbitraryProfileDefWithVoidsEClass;
 	}
@@ -10587,7 +11097,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcAsset() {
 		if (ifcAssetEClass == null) {
-			ifcAssetEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(294);
+			ifcAssetEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(312);
 		}
 		return ifcAssetEClass;
 	}
@@ -10597,8 +11107,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcAsset_AssetID() {
-		return (EAttribute) getIfcAsset().getEStructuralFeatures().get(0);
+	public EReference getIfcAsset_AssetID() {
+		return (EReference) getIfcAsset().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -10680,7 +11190,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcAsymmetricIShapeProfileDef() {
 		if (ifcAsymmetricIShapeProfileDefEClass == null) {
-			ifcAsymmetricIShapeProfileDefEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(295);
+			ifcAsymmetricIShapeProfileDefEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(313);
 		}
 		return ifcAsymmetricIShapeProfileDefEClass;
 	}
@@ -10690,8 +11200,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcAsymmetricIShapeProfileDef_TopFlangeWidth() {
-		return (EAttribute) getIfcAsymmetricIShapeProfileDef().getEStructuralFeatures().get(0);
+	public EReference getIfcAsymmetricIShapeProfileDef_TopFlangeWidth() {
+		return (EReference) getIfcAsymmetricIShapeProfileDef().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -10699,8 +11209,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcAsymmetricIShapeProfileDef_TopFlangeWidthAsString() {
-		return (EAttribute) getIfcAsymmetricIShapeProfileDef().getEStructuralFeatures().get(1);
+	public EReference getIfcAsymmetricIShapeProfileDef_TopFlangeThickness() {
+		return (EReference) getIfcAsymmetricIShapeProfileDef().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -10708,8 +11218,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcAsymmetricIShapeProfileDef_TopFlangeThickness() {
-		return (EAttribute) getIfcAsymmetricIShapeProfileDef().getEStructuralFeatures().get(2);
+	public EReference getIfcAsymmetricIShapeProfileDef_TopFlangeFilletRadius() {
+		return (EReference) getIfcAsymmetricIShapeProfileDef().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -10717,44 +11227,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcAsymmetricIShapeProfileDef_TopFlangeThicknessAsString() {
-		return (EAttribute) getIfcAsymmetricIShapeProfileDef().getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcAsymmetricIShapeProfileDef_TopFlangeFilletRadius() {
-		return (EAttribute) getIfcAsymmetricIShapeProfileDef().getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcAsymmetricIShapeProfileDef_TopFlangeFilletRadiusAsString() {
-		return (EAttribute) getIfcAsymmetricIShapeProfileDef().getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcAsymmetricIShapeProfileDef_CentreOfGravityInY() {
-		return (EAttribute) getIfcAsymmetricIShapeProfileDef().getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcAsymmetricIShapeProfileDef_CentreOfGravityInYAsString() {
-		return (EAttribute) getIfcAsymmetricIShapeProfileDef().getEStructuralFeatures().get(7);
+	public EReference getIfcAsymmetricIShapeProfileDef_CentreOfGravityInY() {
+		return (EReference) getIfcAsymmetricIShapeProfileDef().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -10764,7 +11238,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcAxis1Placement() {
 		if (ifcAxis1PlacementEClass == null) {
-			ifcAxis1PlacementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(296);
+			ifcAxis1PlacementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(314);
 		}
 		return ifcAxis1PlacementEClass;
 	}
@@ -10783,9 +11257,18 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getIfcAxis1Placement_Z() {
+		return (EReference) getIfcAxis1Placement().getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getIfcAxis2Placement2D() {
 		if (ifcAxis2Placement2DEClass == null) {
-			ifcAxis2Placement2DEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(297);
+			ifcAxis2Placement2DEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(315);
 		}
 		return ifcAxis2Placement2DEClass;
 	}
@@ -10804,9 +11287,18 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getIfcAxis2Placement2D_P() {
+		return (EReference) getIfcAxis2Placement2D().getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getIfcAxis2Placement3D() {
 		if (ifcAxis2Placement3DEClass == null) {
-			ifcAxis2Placement3DEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(298);
+			ifcAxis2Placement3DEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(316);
 		}
 		return ifcAxis2Placement3DEClass;
 	}
@@ -10834,9 +11326,18 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getIfcAxis2Placement3D_P() {
+		return (EReference) getIfcAxis2Placement3D().getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getIfcBSplineCurve() {
 		if (ifcBSplineCurveEClass == null) {
-			ifcBSplineCurveEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(299);
+			ifcBSplineCurveEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(317);
 		}
 		return ifcBSplineCurveEClass;
 	}
@@ -10846,8 +11347,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcBSplineCurve_Degree() {
-		return (EAttribute) getIfcBSplineCurve().getEStructuralFeatures().get(0);
+	public EReference getIfcBSplineCurve_Degree() {
+		return (EReference) getIfcBSplineCurve().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -10873,8 +11374,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcBSplineCurve_ClosedCurve() {
-		return (EAttribute) getIfcBSplineCurve().getEStructuralFeatures().get(3);
+	public EReference getIfcBSplineCurve_ClosedCurve() {
+		return (EReference) getIfcBSplineCurve().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -10882,8 +11383,26 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcBSplineCurve_SelfIntersect() {
-		return (EAttribute) getIfcBSplineCurve().getEStructuralFeatures().get(4);
+	public EReference getIfcBSplineCurve_SelfIntersect() {
+		return (EReference) getIfcBSplineCurve().getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getIfcBSplineCurve_UpperIndexOnControlPoints() {
+		return (EReference) getIfcBSplineCurve().getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getIfcBSplineCurve_ControlPoints() {
+		return (EReference) getIfcBSplineCurve().getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -10893,7 +11412,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcBeam() {
 		if (ifcBeamEClass == null) {
-			ifcBeamEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(300);
+			ifcBeamEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(318);
 		}
 		return ifcBeamEClass;
 	}
@@ -10905,7 +11424,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcBeamType() {
 		if (ifcBeamTypeEClass == null) {
-			ifcBeamTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(301);
+			ifcBeamTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(319);
 		}
 		return ifcBeamTypeEClass;
 	}
@@ -10926,7 +11445,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcBezierCurve() {
 		if (ifcBezierCurveEClass == null) {
-			ifcBezierCurveEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(302);
+			ifcBezierCurveEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(320);
 		}
 		return ifcBezierCurveEClass;
 	}
@@ -10938,7 +11457,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcBlobTexture() {
 		if (ifcBlobTextureEClass == null) {
-			ifcBlobTextureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(303);
+			ifcBlobTextureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(321);
 		}
 		return ifcBlobTextureEClass;
 	}
@@ -10948,8 +11467,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcBlobTexture_RasterFormat() {
-		return (EAttribute) getIfcBlobTexture().getEStructuralFeatures().get(0);
+	public EReference getIfcBlobTexture_RasterFormat() {
+		return (EReference) getIfcBlobTexture().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -10957,8 +11476,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcBlobTexture_RasterCode() {
-		return (EAttribute) getIfcBlobTexture().getEStructuralFeatures().get(1);
+	public EReference getIfcBlobTexture_RasterCode() {
+		return (EReference) getIfcBlobTexture().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -10968,7 +11487,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcBlock() {
 		if (ifcBlockEClass == null) {
-			ifcBlockEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(304);
+			ifcBlockEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(322);
 		}
 		return ifcBlockEClass;
 	}
@@ -10978,8 +11497,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcBlock_XLength() {
-		return (EAttribute) getIfcBlock().getEStructuralFeatures().get(0);
+	public EReference getIfcBlock_XLength() {
+		return (EReference) getIfcBlock().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -10987,8 +11506,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcBlock_XLengthAsString() {
-		return (EAttribute) getIfcBlock().getEStructuralFeatures().get(1);
+	public EReference getIfcBlock_YLength() {
+		return (EReference) getIfcBlock().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -10996,35 +11515,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcBlock_YLength() {
-		return (EAttribute) getIfcBlock().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcBlock_YLengthAsString() {
-		return (EAttribute) getIfcBlock().getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcBlock_ZLength() {
-		return (EAttribute) getIfcBlock().getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcBlock_ZLengthAsString() {
-		return (EAttribute) getIfcBlock().getEStructuralFeatures().get(5);
+	public EReference getIfcBlock_ZLength() {
+		return (EReference) getIfcBlock().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -11034,7 +11526,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcBoilerType() {
 		if (ifcBoilerTypeEClass == null) {
-			ifcBoilerTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(305);
+			ifcBoilerTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(323);
 		}
 		return ifcBoilerTypeEClass;
 	}
@@ -11055,7 +11547,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcBooleanClippingResult() {
 		if (ifcBooleanClippingResultEClass == null) {
-			ifcBooleanClippingResultEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(306);
+			ifcBooleanClippingResultEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(324);
 		}
 		return ifcBooleanClippingResultEClass;
 	}
@@ -11067,7 +11559,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcBooleanResult() {
 		if (ifcBooleanResultEClass == null) {
-			ifcBooleanResultEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(307);
+			ifcBooleanResultEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(325);
 		}
 		return ifcBooleanResultEClass;
 	}
@@ -11104,8 +11596,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcBooleanResult_Dim() {
-		return (EAttribute) getIfcBooleanResult().getEStructuralFeatures().get(3);
+	public EReference getIfcBooleanResult_Dim() {
+		return (EReference) getIfcBooleanResult().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -11115,7 +11607,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcBoundaryCondition() {
 		if (ifcBoundaryConditionEClass == null) {
-			ifcBoundaryConditionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(308);
+			ifcBoundaryConditionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(326);
 		}
 		return ifcBoundaryConditionEClass;
 	}
@@ -11125,8 +11617,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcBoundaryCondition_Name() {
-		return (EAttribute) getIfcBoundaryCondition().getEStructuralFeatures().get(0);
+	public EReference getIfcBoundaryCondition_Name() {
+		return (EReference) getIfcBoundaryCondition().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -11136,7 +11628,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcBoundaryEdgeCondition() {
 		if (ifcBoundaryEdgeConditionEClass == null) {
-			ifcBoundaryEdgeConditionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(309);
+			ifcBoundaryEdgeConditionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(327);
 		}
 		return ifcBoundaryEdgeConditionEClass;
 	}
@@ -11146,8 +11638,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcBoundaryEdgeCondition_LinearStiffnessByLengthX() {
-		return (EAttribute) getIfcBoundaryEdgeCondition().getEStructuralFeatures().get(0);
+	public EReference getIfcBoundaryEdgeCondition_LinearStiffnessByLengthX() {
+		return (EReference) getIfcBoundaryEdgeCondition().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -11155,8 +11647,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcBoundaryEdgeCondition_LinearStiffnessByLengthXAsString() {
-		return (EAttribute) getIfcBoundaryEdgeCondition().getEStructuralFeatures().get(1);
+	public EReference getIfcBoundaryEdgeCondition_LinearStiffnessByLengthY() {
+		return (EReference) getIfcBoundaryEdgeCondition().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -11164,8 +11656,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcBoundaryEdgeCondition_LinearStiffnessByLengthY() {
-		return (EAttribute) getIfcBoundaryEdgeCondition().getEStructuralFeatures().get(2);
+	public EReference getIfcBoundaryEdgeCondition_LinearStiffnessByLengthZ() {
+		return (EReference) getIfcBoundaryEdgeCondition().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -11173,8 +11665,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcBoundaryEdgeCondition_LinearStiffnessByLengthYAsString() {
-		return (EAttribute) getIfcBoundaryEdgeCondition().getEStructuralFeatures().get(3);
+	public EReference getIfcBoundaryEdgeCondition_RotationalStiffnessByLengthX() {
+		return (EReference) getIfcBoundaryEdgeCondition().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -11182,8 +11674,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcBoundaryEdgeCondition_LinearStiffnessByLengthZ() {
-		return (EAttribute) getIfcBoundaryEdgeCondition().getEStructuralFeatures().get(4);
+	public EReference getIfcBoundaryEdgeCondition_RotationalStiffnessByLengthY() {
+		return (EReference) getIfcBoundaryEdgeCondition().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -11191,62 +11683,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcBoundaryEdgeCondition_LinearStiffnessByLengthZAsString() {
-		return (EAttribute) getIfcBoundaryEdgeCondition().getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcBoundaryEdgeCondition_RotationalStiffnessByLengthX() {
-		return (EAttribute) getIfcBoundaryEdgeCondition().getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcBoundaryEdgeCondition_RotationalStiffnessByLengthXAsString() {
-		return (EAttribute) getIfcBoundaryEdgeCondition().getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcBoundaryEdgeCondition_RotationalStiffnessByLengthY() {
-		return (EAttribute) getIfcBoundaryEdgeCondition().getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcBoundaryEdgeCondition_RotationalStiffnessByLengthYAsString() {
-		return (EAttribute) getIfcBoundaryEdgeCondition().getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcBoundaryEdgeCondition_RotationalStiffnessByLengthZ() {
-		return (EAttribute) getIfcBoundaryEdgeCondition().getEStructuralFeatures().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcBoundaryEdgeCondition_RotationalStiffnessByLengthZAsString() {
-		return (EAttribute) getIfcBoundaryEdgeCondition().getEStructuralFeatures().get(11);
+	public EReference getIfcBoundaryEdgeCondition_RotationalStiffnessByLengthZ() {
+		return (EReference) getIfcBoundaryEdgeCondition().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -11256,7 +11694,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcBoundaryFaceCondition() {
 		if (ifcBoundaryFaceConditionEClass == null) {
-			ifcBoundaryFaceConditionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(310);
+			ifcBoundaryFaceConditionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(328);
 		}
 		return ifcBoundaryFaceConditionEClass;
 	}
@@ -11266,8 +11704,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcBoundaryFaceCondition_LinearStiffnessByAreaX() {
-		return (EAttribute) getIfcBoundaryFaceCondition().getEStructuralFeatures().get(0);
+	public EReference getIfcBoundaryFaceCondition_LinearStiffnessByAreaX() {
+		return (EReference) getIfcBoundaryFaceCondition().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -11275,8 +11713,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcBoundaryFaceCondition_LinearStiffnessByAreaXAsString() {
-		return (EAttribute) getIfcBoundaryFaceCondition().getEStructuralFeatures().get(1);
+	public EReference getIfcBoundaryFaceCondition_LinearStiffnessByAreaY() {
+		return (EReference) getIfcBoundaryFaceCondition().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -11284,35 +11722,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcBoundaryFaceCondition_LinearStiffnessByAreaY() {
-		return (EAttribute) getIfcBoundaryFaceCondition().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcBoundaryFaceCondition_LinearStiffnessByAreaYAsString() {
-		return (EAttribute) getIfcBoundaryFaceCondition().getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcBoundaryFaceCondition_LinearStiffnessByAreaZ() {
-		return (EAttribute) getIfcBoundaryFaceCondition().getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcBoundaryFaceCondition_LinearStiffnessByAreaZAsString() {
-		return (EAttribute) getIfcBoundaryFaceCondition().getEStructuralFeatures().get(5);
+	public EReference getIfcBoundaryFaceCondition_LinearStiffnessByAreaZ() {
+		return (EReference) getIfcBoundaryFaceCondition().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -11322,7 +11733,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcBoundaryNodeCondition() {
 		if (ifcBoundaryNodeConditionEClass == null) {
-			ifcBoundaryNodeConditionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(311);
+			ifcBoundaryNodeConditionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(329);
 		}
 		return ifcBoundaryNodeConditionEClass;
 	}
@@ -11332,8 +11743,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcBoundaryNodeCondition_LinearStiffnessX() {
-		return (EAttribute) getIfcBoundaryNodeCondition().getEStructuralFeatures().get(0);
+	public EReference getIfcBoundaryNodeCondition_LinearStiffnessX() {
+		return (EReference) getIfcBoundaryNodeCondition().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -11341,8 +11752,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcBoundaryNodeCondition_LinearStiffnessXAsString() {
-		return (EAttribute) getIfcBoundaryNodeCondition().getEStructuralFeatures().get(1);
+	public EReference getIfcBoundaryNodeCondition_LinearStiffnessY() {
+		return (EReference) getIfcBoundaryNodeCondition().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -11350,8 +11761,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcBoundaryNodeCondition_LinearStiffnessY() {
-		return (EAttribute) getIfcBoundaryNodeCondition().getEStructuralFeatures().get(2);
+	public EReference getIfcBoundaryNodeCondition_LinearStiffnessZ() {
+		return (EReference) getIfcBoundaryNodeCondition().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -11359,8 +11770,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcBoundaryNodeCondition_LinearStiffnessYAsString() {
-		return (EAttribute) getIfcBoundaryNodeCondition().getEStructuralFeatures().get(3);
+	public EReference getIfcBoundaryNodeCondition_RotationalStiffnessX() {
+		return (EReference) getIfcBoundaryNodeCondition().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -11368,8 +11779,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcBoundaryNodeCondition_LinearStiffnessZ() {
-		return (EAttribute) getIfcBoundaryNodeCondition().getEStructuralFeatures().get(4);
+	public EReference getIfcBoundaryNodeCondition_RotationalStiffnessY() {
+		return (EReference) getIfcBoundaryNodeCondition().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -11377,62 +11788,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcBoundaryNodeCondition_LinearStiffnessZAsString() {
-		return (EAttribute) getIfcBoundaryNodeCondition().getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcBoundaryNodeCondition_RotationalStiffnessX() {
-		return (EAttribute) getIfcBoundaryNodeCondition().getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcBoundaryNodeCondition_RotationalStiffnessXAsString() {
-		return (EAttribute) getIfcBoundaryNodeCondition().getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcBoundaryNodeCondition_RotationalStiffnessY() {
-		return (EAttribute) getIfcBoundaryNodeCondition().getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcBoundaryNodeCondition_RotationalStiffnessYAsString() {
-		return (EAttribute) getIfcBoundaryNodeCondition().getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcBoundaryNodeCondition_RotationalStiffnessZ() {
-		return (EAttribute) getIfcBoundaryNodeCondition().getEStructuralFeatures().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcBoundaryNodeCondition_RotationalStiffnessZAsString() {
-		return (EAttribute) getIfcBoundaryNodeCondition().getEStructuralFeatures().get(11);
+	public EReference getIfcBoundaryNodeCondition_RotationalStiffnessZ() {
+		return (EReference) getIfcBoundaryNodeCondition().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -11442,7 +11799,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcBoundaryNodeConditionWarping() {
 		if (ifcBoundaryNodeConditionWarpingEClass == null) {
-			ifcBoundaryNodeConditionWarpingEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(312);
+			ifcBoundaryNodeConditionWarpingEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(330);
 		}
 		return ifcBoundaryNodeConditionWarpingEClass;
 	}
@@ -11452,17 +11809,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcBoundaryNodeConditionWarping_WarpingStiffness() {
-		return (EAttribute) getIfcBoundaryNodeConditionWarping().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcBoundaryNodeConditionWarping_WarpingStiffnessAsString() {
-		return (EAttribute) getIfcBoundaryNodeConditionWarping().getEStructuralFeatures().get(1);
+	public EReference getIfcBoundaryNodeConditionWarping_WarpingStiffness() {
+		return (EReference) getIfcBoundaryNodeConditionWarping().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -11472,7 +11820,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcBoundedCurve() {
 		if (ifcBoundedCurveEClass == null) {
-			ifcBoundedCurveEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(313);
+			ifcBoundedCurveEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(331);
 		}
 		return ifcBoundedCurveEClass;
 	}
@@ -11484,7 +11832,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcBoundedSurface() {
 		if (ifcBoundedSurfaceEClass == null) {
-			ifcBoundedSurfaceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(314);
+			ifcBoundedSurfaceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(332);
 		}
 		return ifcBoundedSurfaceEClass;
 	}
@@ -11496,7 +11844,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcBoundingBox() {
 		if (ifcBoundingBoxEClass == null) {
-			ifcBoundingBoxEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(315);
+			ifcBoundingBoxEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(333);
 		}
 		return ifcBoundingBoxEClass;
 	}
@@ -11515,8 +11863,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcBoundingBox_XDim() {
-		return (EAttribute) getIfcBoundingBox().getEStructuralFeatures().get(1);
+	public EReference getIfcBoundingBox_XDim() {
+		return (EReference) getIfcBoundingBox().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -11524,8 +11872,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcBoundingBox_XDimAsString() {
-		return (EAttribute) getIfcBoundingBox().getEStructuralFeatures().get(2);
+	public EReference getIfcBoundingBox_YDim() {
+		return (EReference) getIfcBoundingBox().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -11533,8 +11881,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcBoundingBox_YDim() {
-		return (EAttribute) getIfcBoundingBox().getEStructuralFeatures().get(3);
+	public EReference getIfcBoundingBox_ZDim() {
+		return (EReference) getIfcBoundingBox().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -11542,35 +11890,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcBoundingBox_YDimAsString() {
-		return (EAttribute) getIfcBoundingBox().getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcBoundingBox_ZDim() {
-		return (EAttribute) getIfcBoundingBox().getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcBoundingBox_ZDimAsString() {
-		return (EAttribute) getIfcBoundingBox().getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcBoundingBox_Dim() {
-		return (EAttribute) getIfcBoundingBox().getEStructuralFeatures().get(7);
+	public EReference getIfcBoundingBox_Dim() {
+		return (EReference) getIfcBoundingBox().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -11580,7 +11901,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcBoxedHalfSpace() {
 		if (ifcBoxedHalfSpaceEClass == null) {
-			ifcBoxedHalfSpaceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(316);
+			ifcBoxedHalfSpaceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(334);
 		}
 		return ifcBoxedHalfSpaceEClass;
 	}
@@ -11601,7 +11922,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcBuilding() {
 		if (ifcBuildingEClass == null) {
-			ifcBuildingEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(317);
+			ifcBuildingEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(335);
 		}
 		return ifcBuildingEClass;
 	}
@@ -11611,8 +11932,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcBuilding_ElevationOfRefHeight() {
-		return (EAttribute) getIfcBuilding().getEStructuralFeatures().get(0);
+	public EReference getIfcBuilding_ElevationOfRefHeight() {
+		return (EReference) getIfcBuilding().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -11620,26 +11941,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcBuilding_ElevationOfRefHeightAsString() {
-		return (EAttribute) getIfcBuilding().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcBuilding_ElevationOfTerrain() {
-		return (EAttribute) getIfcBuilding().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcBuilding_ElevationOfTerrainAsString() {
-		return (EAttribute) getIfcBuilding().getEStructuralFeatures().get(3);
+	public EReference getIfcBuilding_ElevationOfTerrain() {
+		return (EReference) getIfcBuilding().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -11648,7 +11951,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EReference getIfcBuilding_BuildingAddress() {
-		return (EReference) getIfcBuilding().getEStructuralFeatures().get(4);
+		return (EReference) getIfcBuilding().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -11658,7 +11961,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcBuildingElement() {
 		if (ifcBuildingElementEClass == null) {
-			ifcBuildingElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(318);
+			ifcBuildingElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(336);
 		}
 		return ifcBuildingElementEClass;
 	}
@@ -11670,7 +11973,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcBuildingElementComponent() {
 		if (ifcBuildingElementComponentEClass == null) {
-			ifcBuildingElementComponentEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(319);
+			ifcBuildingElementComponentEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(337);
 		}
 		return ifcBuildingElementComponentEClass;
 	}
@@ -11682,7 +11985,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcBuildingElementPart() {
 		if (ifcBuildingElementPartEClass == null) {
-			ifcBuildingElementPartEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(320);
+			ifcBuildingElementPartEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(338);
 		}
 		return ifcBuildingElementPartEClass;
 	}
@@ -11694,7 +11997,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcBuildingElementProxy() {
 		if (ifcBuildingElementProxyEClass == null) {
-			ifcBuildingElementProxyEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(321);
+			ifcBuildingElementProxyEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(339);
 		}
 		return ifcBuildingElementProxyEClass;
 	}
@@ -11715,7 +12018,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcBuildingElementProxyType() {
 		if (ifcBuildingElementProxyTypeEClass == null) {
-			ifcBuildingElementProxyTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(322);
+			ifcBuildingElementProxyTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(340);
 		}
 		return ifcBuildingElementProxyTypeEClass;
 	}
@@ -11736,7 +12039,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcBuildingElementType() {
 		if (ifcBuildingElementTypeEClass == null) {
-			ifcBuildingElementTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(323);
+			ifcBuildingElementTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(341);
 		}
 		return ifcBuildingElementTypeEClass;
 	}
@@ -11748,7 +12051,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcBuildingStorey() {
 		if (ifcBuildingStoreyEClass == null) {
-			ifcBuildingStoreyEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(324);
+			ifcBuildingStoreyEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(342);
 		}
 		return ifcBuildingStoreyEClass;
 	}
@@ -11758,17 +12061,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcBuildingStorey_Elevation() {
-		return (EAttribute) getIfcBuildingStorey().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcBuildingStorey_ElevationAsString() {
-		return (EAttribute) getIfcBuildingStorey().getEStructuralFeatures().get(1);
+	public EReference getIfcBuildingStorey_Elevation() {
+		return (EReference) getIfcBuildingStorey().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -11778,7 +12072,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcCShapeProfileDef() {
 		if (ifcCShapeProfileDefEClass == null) {
-			ifcCShapeProfileDefEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(325);
+			ifcCShapeProfileDefEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(343);
 		}
 		return ifcCShapeProfileDefEClass;
 	}
@@ -11788,8 +12082,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCShapeProfileDef_Depth() {
-		return (EAttribute) getIfcCShapeProfileDef().getEStructuralFeatures().get(0);
+	public EReference getIfcCShapeProfileDef_Depth() {
+		return (EReference) getIfcCShapeProfileDef().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -11797,8 +12091,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCShapeProfileDef_DepthAsString() {
-		return (EAttribute) getIfcCShapeProfileDef().getEStructuralFeatures().get(1);
+	public EReference getIfcCShapeProfileDef_Width() {
+		return (EReference) getIfcCShapeProfileDef().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -11806,8 +12100,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCShapeProfileDef_Width() {
-		return (EAttribute) getIfcCShapeProfileDef().getEStructuralFeatures().get(2);
+	public EReference getIfcCShapeProfileDef_WallThickness() {
+		return (EReference) getIfcCShapeProfileDef().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -11815,8 +12109,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCShapeProfileDef_WidthAsString() {
-		return (EAttribute) getIfcCShapeProfileDef().getEStructuralFeatures().get(3);
+	public EReference getIfcCShapeProfileDef_Girth() {
+		return (EReference) getIfcCShapeProfileDef().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -11824,8 +12118,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCShapeProfileDef_WallThickness() {
-		return (EAttribute) getIfcCShapeProfileDef().getEStructuralFeatures().get(4);
+	public EReference getIfcCShapeProfileDef_InternalFilletRadius() {
+		return (EReference) getIfcCShapeProfileDef().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -11833,62 +12127,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCShapeProfileDef_WallThicknessAsString() {
-		return (EAttribute) getIfcCShapeProfileDef().getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcCShapeProfileDef_Girth() {
-		return (EAttribute) getIfcCShapeProfileDef().getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcCShapeProfileDef_GirthAsString() {
-		return (EAttribute) getIfcCShapeProfileDef().getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcCShapeProfileDef_InternalFilletRadius() {
-		return (EAttribute) getIfcCShapeProfileDef().getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcCShapeProfileDef_InternalFilletRadiusAsString() {
-		return (EAttribute) getIfcCShapeProfileDef().getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcCShapeProfileDef_CentreOfGravityInX() {
-		return (EAttribute) getIfcCShapeProfileDef().getEStructuralFeatures().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcCShapeProfileDef_CentreOfGravityInXAsString() {
-		return (EAttribute) getIfcCShapeProfileDef().getEStructuralFeatures().get(11);
+	public EReference getIfcCShapeProfileDef_CentreOfGravityInX() {
+		return (EReference) getIfcCShapeProfileDef().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -11898,7 +12138,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcCableCarrierFittingType() {
 		if (ifcCableCarrierFittingTypeEClass == null) {
-			ifcCableCarrierFittingTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(326);
+			ifcCableCarrierFittingTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(344);
 		}
 		return ifcCableCarrierFittingTypeEClass;
 	}
@@ -11919,7 +12159,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcCableCarrierSegmentType() {
 		if (ifcCableCarrierSegmentTypeEClass == null) {
-			ifcCableCarrierSegmentTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(327);
+			ifcCableCarrierSegmentTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(345);
 		}
 		return ifcCableCarrierSegmentTypeEClass;
 	}
@@ -11940,7 +12180,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcCableSegmentType() {
 		if (ifcCableSegmentTypeEClass == null) {
-			ifcCableSegmentTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(328);
+			ifcCableSegmentTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(346);
 		}
 		return ifcCableSegmentTypeEClass;
 	}
@@ -11961,7 +12201,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcCalendarDate() {
 		if (ifcCalendarDateEClass == null) {
-			ifcCalendarDateEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(329);
+			ifcCalendarDateEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(347);
 		}
 		return ifcCalendarDateEClass;
 	}
@@ -11971,8 +12211,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCalendarDate_DayComponent() {
-		return (EAttribute) getIfcCalendarDate().getEStructuralFeatures().get(0);
+	public EReference getIfcCalendarDate_DayComponent() {
+		return (EReference) getIfcCalendarDate().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -11980,8 +12220,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCalendarDate_MonthComponent() {
-		return (EAttribute) getIfcCalendarDate().getEStructuralFeatures().get(1);
+	public EReference getIfcCalendarDate_MonthComponent() {
+		return (EReference) getIfcCalendarDate().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -11989,8 +12229,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCalendarDate_YearComponent() {
-		return (EAttribute) getIfcCalendarDate().getEStructuralFeatures().get(2);
+	public EReference getIfcCalendarDate_YearComponent() {
+		return (EReference) getIfcCalendarDate().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -12000,7 +12240,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcCartesianPoint() {
 		if (ifcCartesianPointEClass == null) {
-			ifcCartesianPointEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(330);
+			ifcCartesianPointEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(348);
 		}
 		return ifcCartesianPointEClass;
 	}
@@ -12010,8 +12250,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCartesianPoint_Coordinates() {
-		return (EAttribute) getIfcCartesianPoint().getEStructuralFeatures().get(0);
+	public EReference getIfcCartesianPoint_Coordinates() {
+		return (EReference) getIfcCartesianPoint().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -12019,17 +12259,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCartesianPoint_CoordinatesAsString() {
-		return (EAttribute) getIfcCartesianPoint().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcCartesianPoint_Dim() {
-		return (EAttribute) getIfcCartesianPoint().getEStructuralFeatures().get(2);
+	public EReference getIfcCartesianPoint_Dim() {
+		return (EReference) getIfcCartesianPoint().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -12039,7 +12270,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcCartesianTransformationOperator() {
 		if (ifcCartesianTransformationOperatorEClass == null) {
-			ifcCartesianTransformationOperatorEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(331);
+			ifcCartesianTransformationOperatorEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(349);
 		}
 		return ifcCartesianTransformationOperatorEClass;
 	}
@@ -12076,8 +12307,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCartesianTransformationOperator_Scale() {
-		return (EAttribute) getIfcCartesianTransformationOperator().getEStructuralFeatures().get(3);
+	public EReference getIfcCartesianTransformationOperator_Scale() {
+		return (EReference) getIfcCartesianTransformationOperator().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -12085,8 +12316,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCartesianTransformationOperator_ScaleAsString() {
-		return (EAttribute) getIfcCartesianTransformationOperator().getEStructuralFeatures().get(4);
+	public EReference getIfcCartesianTransformationOperator_Scl() {
+		return (EReference) getIfcCartesianTransformationOperator().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -12094,8 +12325,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCartesianTransformationOperator_Dim() {
-		return (EAttribute) getIfcCartesianTransformationOperator().getEStructuralFeatures().get(5);
+	public EReference getIfcCartesianTransformationOperator_Dim() {
+		return (EReference) getIfcCartesianTransformationOperator().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -12105,7 +12336,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcCartesianTransformationOperator2D() {
 		if (ifcCartesianTransformationOperator2DEClass == null) {
-			ifcCartesianTransformationOperator2DEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(332);
+			ifcCartesianTransformationOperator2DEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(350);
 		}
 		return ifcCartesianTransformationOperator2DEClass;
 	}
@@ -12115,9 +12346,18 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getIfcCartesianTransformationOperator2D_U() {
+		return (EReference) getIfcCartesianTransformationOperator2D().getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getIfcCartesianTransformationOperator2DnonUniform() {
 		if (ifcCartesianTransformationOperator2DnonUniformEClass == null) {
-			ifcCartesianTransformationOperator2DnonUniformEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(333);
+			ifcCartesianTransformationOperator2DnonUniformEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(351);
 		}
 		return ifcCartesianTransformationOperator2DnonUniformEClass;
 	}
@@ -12127,8 +12367,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCartesianTransformationOperator2DnonUniform_Scale2() {
-		return (EAttribute) getIfcCartesianTransformationOperator2DnonUniform().getEStructuralFeatures().get(0);
+	public EReference getIfcCartesianTransformationOperator2DnonUniform_Scale2() {
+		return (EReference) getIfcCartesianTransformationOperator2DnonUniform().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -12136,8 +12376,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCartesianTransformationOperator2DnonUniform_Scale2AsString() {
-		return (EAttribute) getIfcCartesianTransformationOperator2DnonUniform().getEStructuralFeatures().get(1);
+	public EReference getIfcCartesianTransformationOperator2DnonUniform_Scl2() {
+		return (EReference) getIfcCartesianTransformationOperator2DnonUniform().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -12147,7 +12387,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcCartesianTransformationOperator3D() {
 		if (ifcCartesianTransformationOperator3DEClass == null) {
-			ifcCartesianTransformationOperator3DEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(334);
+			ifcCartesianTransformationOperator3DEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(352);
 		}
 		return ifcCartesianTransformationOperator3DEClass;
 	}
@@ -12166,9 +12406,18 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getIfcCartesianTransformationOperator3D_U() {
+		return (EReference) getIfcCartesianTransformationOperator3D().getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getIfcCartesianTransformationOperator3DnonUniform() {
 		if (ifcCartesianTransformationOperator3DnonUniformEClass == null) {
-			ifcCartesianTransformationOperator3DnonUniformEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(335);
+			ifcCartesianTransformationOperator3DnonUniformEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(353);
 		}
 		return ifcCartesianTransformationOperator3DnonUniformEClass;
 	}
@@ -12178,8 +12427,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCartesianTransformationOperator3DnonUniform_Scale2() {
-		return (EAttribute) getIfcCartesianTransformationOperator3DnonUniform().getEStructuralFeatures().get(0);
+	public EReference getIfcCartesianTransformationOperator3DnonUniform_Scale2() {
+		return (EReference) getIfcCartesianTransformationOperator3DnonUniform().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -12187,8 +12436,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCartesianTransformationOperator3DnonUniform_Scale2AsString() {
-		return (EAttribute) getIfcCartesianTransformationOperator3DnonUniform().getEStructuralFeatures().get(1);
+	public EReference getIfcCartesianTransformationOperator3DnonUniform_Scale3() {
+		return (EReference) getIfcCartesianTransformationOperator3DnonUniform().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -12196,8 +12445,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCartesianTransformationOperator3DnonUniform_Scale3() {
-		return (EAttribute) getIfcCartesianTransformationOperator3DnonUniform().getEStructuralFeatures().get(2);
+	public EReference getIfcCartesianTransformationOperator3DnonUniform_Scl2() {
+		return (EReference) getIfcCartesianTransformationOperator3DnonUniform().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -12205,8 +12454,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCartesianTransformationOperator3DnonUniform_Scale3AsString() {
-		return (EAttribute) getIfcCartesianTransformationOperator3DnonUniform().getEStructuralFeatures().get(3);
+	public EReference getIfcCartesianTransformationOperator3DnonUniform_Scl3() {
+		return (EReference) getIfcCartesianTransformationOperator3DnonUniform().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -12216,7 +12465,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcCenterLineProfileDef() {
 		if (ifcCenterLineProfileDefEClass == null) {
-			ifcCenterLineProfileDefEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(336);
+			ifcCenterLineProfileDefEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(354);
 		}
 		return ifcCenterLineProfileDefEClass;
 	}
@@ -12226,17 +12475,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCenterLineProfileDef_Thickness() {
-		return (EAttribute) getIfcCenterLineProfileDef().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcCenterLineProfileDef_ThicknessAsString() {
-		return (EAttribute) getIfcCenterLineProfileDef().getEStructuralFeatures().get(1);
+	public EReference getIfcCenterLineProfileDef_Thickness() {
+		return (EReference) getIfcCenterLineProfileDef().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -12246,7 +12486,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcChamferEdgeFeature() {
 		if (ifcChamferEdgeFeatureEClass == null) {
-			ifcChamferEdgeFeatureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(337);
+			ifcChamferEdgeFeatureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(355);
 		}
 		return ifcChamferEdgeFeatureEClass;
 	}
@@ -12256,8 +12496,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcChamferEdgeFeature_Width() {
-		return (EAttribute) getIfcChamferEdgeFeature().getEStructuralFeatures().get(0);
+	public EReference getIfcChamferEdgeFeature_Width() {
+		return (EReference) getIfcChamferEdgeFeature().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -12265,26 +12505,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcChamferEdgeFeature_WidthAsString() {
-		return (EAttribute) getIfcChamferEdgeFeature().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcChamferEdgeFeature_Height() {
-		return (EAttribute) getIfcChamferEdgeFeature().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcChamferEdgeFeature_HeightAsString() {
-		return (EAttribute) getIfcChamferEdgeFeature().getEStructuralFeatures().get(3);
+	public EReference getIfcChamferEdgeFeature_Height() {
+		return (EReference) getIfcChamferEdgeFeature().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -12294,7 +12516,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcChillerType() {
 		if (ifcChillerTypeEClass == null) {
-			ifcChillerTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(338);
+			ifcChillerTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(356);
 		}
 		return ifcChillerTypeEClass;
 	}
@@ -12315,7 +12537,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcCircle() {
 		if (ifcCircleEClass == null) {
-			ifcCircleEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(339);
+			ifcCircleEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(357);
 		}
 		return ifcCircleEClass;
 	}
@@ -12325,17 +12547,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCircle_Radius() {
-		return (EAttribute) getIfcCircle().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcCircle_RadiusAsString() {
-		return (EAttribute) getIfcCircle().getEStructuralFeatures().get(1);
+	public EReference getIfcCircle_Radius() {
+		return (EReference) getIfcCircle().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -12345,7 +12558,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcCircleHollowProfileDef() {
 		if (ifcCircleHollowProfileDefEClass == null) {
-			ifcCircleHollowProfileDefEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(340);
+			ifcCircleHollowProfileDefEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(358);
 		}
 		return ifcCircleHollowProfileDefEClass;
 	}
@@ -12355,17 +12568,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCircleHollowProfileDef_WallThickness() {
-		return (EAttribute) getIfcCircleHollowProfileDef().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcCircleHollowProfileDef_WallThicknessAsString() {
-		return (EAttribute) getIfcCircleHollowProfileDef().getEStructuralFeatures().get(1);
+	public EReference getIfcCircleHollowProfileDef_WallThickness() {
+		return (EReference) getIfcCircleHollowProfileDef().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -12375,7 +12579,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcCircleProfileDef() {
 		if (ifcCircleProfileDefEClass == null) {
-			ifcCircleProfileDefEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(341);
+			ifcCircleProfileDefEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(359);
 		}
 		return ifcCircleProfileDefEClass;
 	}
@@ -12385,17 +12589,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCircleProfileDef_Radius() {
-		return (EAttribute) getIfcCircleProfileDef().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcCircleProfileDef_RadiusAsString() {
-		return (EAttribute) getIfcCircleProfileDef().getEStructuralFeatures().get(1);
+	public EReference getIfcCircleProfileDef_Radius() {
+		return (EReference) getIfcCircleProfileDef().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -12405,7 +12600,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcClassification() {
 		if (ifcClassificationEClass == null) {
-			ifcClassificationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(342);
+			ifcClassificationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(360);
 		}
 		return ifcClassificationEClass;
 	}
@@ -12415,8 +12610,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcClassification_Source() {
-		return (EAttribute) getIfcClassification().getEStructuralFeatures().get(0);
+	public EReference getIfcClassification_Source() {
+		return (EReference) getIfcClassification().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -12424,8 +12619,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcClassification_Edition() {
-		return (EAttribute) getIfcClassification().getEStructuralFeatures().get(1);
+	public EReference getIfcClassification_Edition() {
+		return (EReference) getIfcClassification().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -12442,8 +12637,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcClassification_Name() {
-		return (EAttribute) getIfcClassification().getEStructuralFeatures().get(3);
+	public EReference getIfcClassification_Name() {
+		return (EReference) getIfcClassification().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -12462,7 +12657,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcClassificationItem() {
 		if (ifcClassificationItemEClass == null) {
-			ifcClassificationItemEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(343);
+			ifcClassificationItemEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(361);
 		}
 		return ifcClassificationItemEClass;
 	}
@@ -12490,8 +12685,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcClassificationItem_Title() {
-		return (EAttribute) getIfcClassificationItem().getEStructuralFeatures().get(2);
+	public EReference getIfcClassificationItem_Title() {
+		return (EReference) getIfcClassificationItem().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -12519,7 +12714,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcClassificationItemRelationship() {
 		if (ifcClassificationItemRelationshipEClass == null) {
-			ifcClassificationItemRelationshipEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(344);
+			ifcClassificationItemRelationshipEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(362);
 		}
 		return ifcClassificationItemRelationshipEClass;
 	}
@@ -12549,7 +12744,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcClassificationNotation() {
 		if (ifcClassificationNotationEClass == null) {
-			ifcClassificationNotationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(345);
+			ifcClassificationNotationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(363);
 		}
 		return ifcClassificationNotationEClass;
 	}
@@ -12570,7 +12765,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcClassificationNotationFacet() {
 		if (ifcClassificationNotationFacetEClass == null) {
-			ifcClassificationNotationFacetEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(346);
+			ifcClassificationNotationFacetEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(364);
 		}
 		return ifcClassificationNotationFacetEClass;
 	}
@@ -12580,8 +12775,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcClassificationNotationFacet_NotationValue() {
-		return (EAttribute) getIfcClassificationNotationFacet().getEStructuralFeatures().get(0);
+	public EReference getIfcClassificationNotationFacet_NotationValue() {
+		return (EReference) getIfcClassificationNotationFacet().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -12591,7 +12786,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcClassificationReference() {
 		if (ifcClassificationReferenceEClass == null) {
-			ifcClassificationReferenceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(347);
+			ifcClassificationReferenceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(365);
 		}
 		return ifcClassificationReferenceEClass;
 	}
@@ -12612,7 +12807,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcClosedShell() {
 		if (ifcClosedShellEClass == null) {
-			ifcClosedShellEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(348);
+			ifcClosedShellEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(366);
 		}
 		return ifcClosedShellEClass;
 	}
@@ -12624,7 +12819,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcCoilType() {
 		if (ifcCoilTypeEClass == null) {
-			ifcCoilTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(349);
+			ifcCoilTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(367);
 		}
 		return ifcCoilTypeEClass;
 	}
@@ -12645,7 +12840,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcColourRgb() {
 		if (ifcColourRgbEClass == null) {
-			ifcColourRgbEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(350);
+			ifcColourRgbEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(368);
 		}
 		return ifcColourRgbEClass;
 	}
@@ -12655,8 +12850,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcColourRgb_Red() {
-		return (EAttribute) getIfcColourRgb().getEStructuralFeatures().get(0);
+	public EReference getIfcColourRgb_Red() {
+		return (EReference) getIfcColourRgb().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -12664,8 +12859,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcColourRgb_RedAsString() {
-		return (EAttribute) getIfcColourRgb().getEStructuralFeatures().get(1);
+	public EReference getIfcColourRgb_Green() {
+		return (EReference) getIfcColourRgb().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -12673,35 +12868,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcColourRgb_Green() {
-		return (EAttribute) getIfcColourRgb().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcColourRgb_GreenAsString() {
-		return (EAttribute) getIfcColourRgb().getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcColourRgb_Blue() {
-		return (EAttribute) getIfcColourRgb().getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcColourRgb_BlueAsString() {
-		return (EAttribute) getIfcColourRgb().getEStructuralFeatures().get(5);
+	public EReference getIfcColourRgb_Blue() {
+		return (EReference) getIfcColourRgb().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -12711,7 +12879,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcColourSpecification() {
 		if (ifcColourSpecificationEClass == null) {
-			ifcColourSpecificationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(351);
+			ifcColourSpecificationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(369);
 		}
 		return ifcColourSpecificationEClass;
 	}
@@ -12721,8 +12889,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcColourSpecification_Name() {
-		return (EAttribute) getIfcColourSpecification().getEStructuralFeatures().get(0);
+	public EReference getIfcColourSpecification_Name() {
+		return (EReference) getIfcColourSpecification().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -12732,7 +12900,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcColumn() {
 		if (ifcColumnEClass == null) {
-			ifcColumnEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(352);
+			ifcColumnEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(370);
 		}
 		return ifcColumnEClass;
 	}
@@ -12744,7 +12912,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcColumnType() {
 		if (ifcColumnTypeEClass == null) {
-			ifcColumnTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(353);
+			ifcColumnTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(371);
 		}
 		return ifcColumnTypeEClass;
 	}
@@ -12765,7 +12933,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcComplexProperty() {
 		if (ifcComplexPropertyEClass == null) {
-			ifcComplexPropertyEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(354);
+			ifcComplexPropertyEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(372);
 		}
 		return ifcComplexPropertyEClass;
 	}
@@ -12775,8 +12943,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcComplexProperty_UsageName() {
-		return (EAttribute) getIfcComplexProperty().getEStructuralFeatures().get(0);
+	public EReference getIfcComplexProperty_UsageName() {
+		return (EReference) getIfcComplexProperty().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -12795,7 +12963,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcCompositeCurve() {
 		if (ifcCompositeCurveEClass == null) {
-			ifcCompositeCurveEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(355);
+			ifcCompositeCurveEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(373);
 		}
 		return ifcCompositeCurveEClass;
 	}
@@ -12814,8 +12982,26 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCompositeCurve_SelfIntersect() {
-		return (EAttribute) getIfcCompositeCurve().getEStructuralFeatures().get(1);
+	public EReference getIfcCompositeCurve_SelfIntersect() {
+		return (EReference) getIfcCompositeCurve().getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getIfcCompositeCurve_ClosedCurve() {
+		return (EReference) getIfcCompositeCurve().getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getIfcCompositeCurve_NSegments() {
+		return (EReference) getIfcCompositeCurve().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -12825,7 +13011,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcCompositeCurveSegment() {
 		if (ifcCompositeCurveSegmentEClass == null) {
-			ifcCompositeCurveSegmentEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(356);
+			ifcCompositeCurveSegmentEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(374);
 		}
 		return ifcCompositeCurveSegmentEClass;
 	}
@@ -12844,8 +13030,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCompositeCurveSegment_SameSense() {
-		return (EAttribute) getIfcCompositeCurveSegment().getEStructuralFeatures().get(1);
+	public EReference getIfcCompositeCurveSegment_SameSense() {
+		return (EReference) getIfcCompositeCurveSegment().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -12871,8 +13057,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCompositeCurveSegment_Dim() {
-		return (EAttribute) getIfcCompositeCurveSegment().getEStructuralFeatures().get(4);
+	public EReference getIfcCompositeCurveSegment_Dim() {
+		return (EReference) getIfcCompositeCurveSegment().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -12882,7 +13068,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcCompositeProfileDef() {
 		if (ifcCompositeProfileDefEClass == null) {
-			ifcCompositeProfileDefEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(357);
+			ifcCompositeProfileDefEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(375);
 		}
 		return ifcCompositeProfileDefEClass;
 	}
@@ -12901,8 +13087,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCompositeProfileDef_Label() {
-		return (EAttribute) getIfcCompositeProfileDef().getEStructuralFeatures().get(1);
+	public EReference getIfcCompositeProfileDef_Label() {
+		return (EReference) getIfcCompositeProfileDef().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -12912,7 +13098,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcCompressorType() {
 		if (ifcCompressorTypeEClass == null) {
-			ifcCompressorTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(358);
+			ifcCompressorTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(376);
 		}
 		return ifcCompressorTypeEClass;
 	}
@@ -12933,7 +13119,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcCondenserType() {
 		if (ifcCondenserTypeEClass == null) {
-			ifcCondenserTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(359);
+			ifcCondenserTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(377);
 		}
 		return ifcCondenserTypeEClass;
 	}
@@ -12954,7 +13140,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcCondition() {
 		if (ifcConditionEClass == null) {
-			ifcConditionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(360);
+			ifcConditionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(378);
 		}
 		return ifcConditionEClass;
 	}
@@ -12966,7 +13152,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcConditionCriterion() {
 		if (ifcConditionCriterionEClass == null) {
-			ifcConditionCriterionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(361);
+			ifcConditionCriterionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(379);
 		}
 		return ifcConditionCriterionEClass;
 	}
@@ -12996,7 +13182,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcConic() {
 		if (ifcConicEClass == null) {
-			ifcConicEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(362);
+			ifcConicEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(380);
 		}
 		return ifcConicEClass;
 	}
@@ -13017,7 +13203,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcConnectedFaceSet() {
 		if (ifcConnectedFaceSetEClass == null) {
-			ifcConnectedFaceSetEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(363);
+			ifcConnectedFaceSetEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(381);
 		}
 		return ifcConnectedFaceSetEClass;
 	}
@@ -13038,7 +13224,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcConnectionCurveGeometry() {
 		if (ifcConnectionCurveGeometryEClass == null) {
-			ifcConnectionCurveGeometryEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(364);
+			ifcConnectionCurveGeometryEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(382);
 		}
 		return ifcConnectionCurveGeometryEClass;
 	}
@@ -13068,7 +13254,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcConnectionGeometry() {
 		if (ifcConnectionGeometryEClass == null) {
-			ifcConnectionGeometryEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(365);
+			ifcConnectionGeometryEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(383);
 		}
 		return ifcConnectionGeometryEClass;
 	}
@@ -13080,7 +13266,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcConnectionPointEccentricity() {
 		if (ifcConnectionPointEccentricityEClass == null) {
-			ifcConnectionPointEccentricityEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(366);
+			ifcConnectionPointEccentricityEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(384);
 		}
 		return ifcConnectionPointEccentricityEClass;
 	}
@@ -13090,8 +13276,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcConnectionPointEccentricity_EccentricityInX() {
-		return (EAttribute) getIfcConnectionPointEccentricity().getEStructuralFeatures().get(0);
+	public EReference getIfcConnectionPointEccentricity_EccentricityInX() {
+		return (EReference) getIfcConnectionPointEccentricity().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -13099,8 +13285,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcConnectionPointEccentricity_EccentricityInXAsString() {
-		return (EAttribute) getIfcConnectionPointEccentricity().getEStructuralFeatures().get(1);
+	public EReference getIfcConnectionPointEccentricity_EccentricityInY() {
+		return (EReference) getIfcConnectionPointEccentricity().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -13108,35 +13294,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcConnectionPointEccentricity_EccentricityInY() {
-		return (EAttribute) getIfcConnectionPointEccentricity().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcConnectionPointEccentricity_EccentricityInYAsString() {
-		return (EAttribute) getIfcConnectionPointEccentricity().getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcConnectionPointEccentricity_EccentricityInZ() {
-		return (EAttribute) getIfcConnectionPointEccentricity().getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcConnectionPointEccentricity_EccentricityInZAsString() {
-		return (EAttribute) getIfcConnectionPointEccentricity().getEStructuralFeatures().get(5);
+	public EReference getIfcConnectionPointEccentricity_EccentricityInZ() {
+		return (EReference) getIfcConnectionPointEccentricity().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -13146,7 +13305,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcConnectionPointGeometry() {
 		if (ifcConnectionPointGeometryEClass == null) {
-			ifcConnectionPointGeometryEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(367);
+			ifcConnectionPointGeometryEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(385);
 		}
 		return ifcConnectionPointGeometryEClass;
 	}
@@ -13176,7 +13335,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcConnectionPortGeometry() {
 		if (ifcConnectionPortGeometryEClass == null) {
-			ifcConnectionPortGeometryEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(368);
+			ifcConnectionPortGeometryEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(386);
 		}
 		return ifcConnectionPortGeometryEClass;
 	}
@@ -13215,7 +13374,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcConnectionSurfaceGeometry() {
 		if (ifcConnectionSurfaceGeometryEClass == null) {
-			ifcConnectionSurfaceGeometryEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(369);
+			ifcConnectionSurfaceGeometryEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(387);
 		}
 		return ifcConnectionSurfaceGeometryEClass;
 	}
@@ -13245,7 +13404,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcConstraint() {
 		if (ifcConstraintEClass == null) {
-			ifcConstraintEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(370);
+			ifcConstraintEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(388);
 		}
 		return ifcConstraintEClass;
 	}
@@ -13255,8 +13414,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcConstraint_Name() {
-		return (EAttribute) getIfcConstraint().getEStructuralFeatures().get(0);
+	public EReference getIfcConstraint_Name() {
+		return (EReference) getIfcConstraint().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -13264,8 +13423,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcConstraint_Description() {
-		return (EAttribute) getIfcConstraint().getEStructuralFeatures().get(1);
+	public EReference getIfcConstraint_Description() {
+		return (EReference) getIfcConstraint().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -13282,8 +13441,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcConstraint_ConstraintSource() {
-		return (EAttribute) getIfcConstraint().getEStructuralFeatures().get(3);
+	public EReference getIfcConstraint_ConstraintSource() {
+		return (EReference) getIfcConstraint().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -13309,8 +13468,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcConstraint_UserDefinedGrade() {
-		return (EAttribute) getIfcConstraint().getEStructuralFeatures().get(6);
+	public EReference getIfcConstraint_UserDefinedGrade() {
+		return (EReference) getIfcConstraint().getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -13374,7 +13533,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcConstraintAggregationRelationship() {
 		if (ifcConstraintAggregationRelationshipEClass == null) {
-			ifcConstraintAggregationRelationshipEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(371);
+			ifcConstraintAggregationRelationshipEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(389);
 		}
 		return ifcConstraintAggregationRelationshipEClass;
 	}
@@ -13384,8 +13543,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcConstraintAggregationRelationship_Name() {
-		return (EAttribute) getIfcConstraintAggregationRelationship().getEStructuralFeatures().get(0);
+	public EReference getIfcConstraintAggregationRelationship_Name() {
+		return (EReference) getIfcConstraintAggregationRelationship().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -13393,8 +13552,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcConstraintAggregationRelationship_Description() {
-		return (EAttribute) getIfcConstraintAggregationRelationship().getEStructuralFeatures().get(1);
+	public EReference getIfcConstraintAggregationRelationship_Description() {
+		return (EReference) getIfcConstraintAggregationRelationship().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -13431,7 +13590,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcConstraintClassificationRelationship() {
 		if (ifcConstraintClassificationRelationshipEClass == null) {
-			ifcConstraintClassificationRelationshipEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(372);
+			ifcConstraintClassificationRelationshipEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(390);
 		}
 		return ifcConstraintClassificationRelationshipEClass;
 	}
@@ -13461,7 +13620,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcConstraintRelationship() {
 		if (ifcConstraintRelationshipEClass == null) {
-			ifcConstraintRelationshipEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(373);
+			ifcConstraintRelationshipEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(391);
 		}
 		return ifcConstraintRelationshipEClass;
 	}
@@ -13471,8 +13630,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcConstraintRelationship_Name() {
-		return (EAttribute) getIfcConstraintRelationship().getEStructuralFeatures().get(0);
+	public EReference getIfcConstraintRelationship_Name() {
+		return (EReference) getIfcConstraintRelationship().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -13480,8 +13639,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcConstraintRelationship_Description() {
-		return (EAttribute) getIfcConstraintRelationship().getEStructuralFeatures().get(1);
+	public EReference getIfcConstraintRelationship_Description() {
+		return (EReference) getIfcConstraintRelationship().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -13509,7 +13668,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcConstructionEquipmentResource() {
 		if (ifcConstructionEquipmentResourceEClass == null) {
-			ifcConstructionEquipmentResourceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(374);
+			ifcConstructionEquipmentResourceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(392);
 		}
 		return ifcConstructionEquipmentResourceEClass;
 	}
@@ -13521,7 +13680,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcConstructionMaterialResource() {
 		if (ifcConstructionMaterialResourceEClass == null) {
-			ifcConstructionMaterialResourceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(375);
+			ifcConstructionMaterialResourceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(393);
 		}
 		return ifcConstructionMaterialResourceEClass;
 	}
@@ -13540,17 +13699,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcConstructionMaterialResource_UsageRatio() {
-		return (EAttribute) getIfcConstructionMaterialResource().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcConstructionMaterialResource_UsageRatioAsString() {
-		return (EAttribute) getIfcConstructionMaterialResource().getEStructuralFeatures().get(2);
+	public EReference getIfcConstructionMaterialResource_UsageRatio() {
+		return (EReference) getIfcConstructionMaterialResource().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -13560,7 +13710,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcConstructionProductResource() {
 		if (ifcConstructionProductResourceEClass == null) {
-			ifcConstructionProductResourceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(376);
+			ifcConstructionProductResourceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(394);
 		}
 		return ifcConstructionProductResourceEClass;
 	}
@@ -13572,7 +13722,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcConstructionResource() {
 		if (ifcConstructionResourceEClass == null) {
-			ifcConstructionResourceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(377);
+			ifcConstructionResourceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(395);
 		}
 		return ifcConstructionResourceEClass;
 	}
@@ -13582,8 +13732,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcConstructionResource_ResourceIdentifier() {
-		return (EAttribute) getIfcConstructionResource().getEStructuralFeatures().get(0);
+	public EReference getIfcConstructionResource_ResourceIdentifier() {
+		return (EReference) getIfcConstructionResource().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -13591,8 +13741,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcConstructionResource_ResourceGroup() {
-		return (EAttribute) getIfcConstructionResource().getEStructuralFeatures().get(1);
+	public EReference getIfcConstructionResource_ResourceGroup() {
+		return (EReference) getIfcConstructionResource().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -13620,7 +13770,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcContextDependentUnit() {
 		if (ifcContextDependentUnitEClass == null) {
-			ifcContextDependentUnitEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(378);
+			ifcContextDependentUnitEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(396);
 		}
 		return ifcContextDependentUnitEClass;
 	}
@@ -13630,8 +13780,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcContextDependentUnit_Name() {
-		return (EAttribute) getIfcContextDependentUnit().getEStructuralFeatures().get(0);
+	public EReference getIfcContextDependentUnit_Name() {
+		return (EReference) getIfcContextDependentUnit().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -13641,7 +13791,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcControl() {
 		if (ifcControlEClass == null) {
-			ifcControlEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(379);
+			ifcControlEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(397);
 		}
 		return ifcControlEClass;
 	}
@@ -13662,7 +13812,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcControllerType() {
 		if (ifcControllerTypeEClass == null) {
-			ifcControllerTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(380);
+			ifcControllerTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(398);
 		}
 		return ifcControllerTypeEClass;
 	}
@@ -13683,7 +13833,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcConversionBasedUnit() {
 		if (ifcConversionBasedUnitEClass == null) {
-			ifcConversionBasedUnitEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(381);
+			ifcConversionBasedUnitEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(399);
 		}
 		return ifcConversionBasedUnitEClass;
 	}
@@ -13693,8 +13843,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcConversionBasedUnit_Name() {
-		return (EAttribute) getIfcConversionBasedUnit().getEStructuralFeatures().get(0);
+	public EReference getIfcConversionBasedUnit_Name() {
+		return (EReference) getIfcConversionBasedUnit().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -13713,7 +13863,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcCooledBeamType() {
 		if (ifcCooledBeamTypeEClass == null) {
-			ifcCooledBeamTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(382);
+			ifcCooledBeamTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(400);
 		}
 		return ifcCooledBeamTypeEClass;
 	}
@@ -13734,7 +13884,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcCoolingTowerType() {
 		if (ifcCoolingTowerTypeEClass == null) {
-			ifcCoolingTowerTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(383);
+			ifcCoolingTowerTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(401);
 		}
 		return ifcCoolingTowerTypeEClass;
 	}
@@ -13755,7 +13905,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcCoordinatedUniversalTimeOffset() {
 		if (ifcCoordinatedUniversalTimeOffsetEClass == null) {
-			ifcCoordinatedUniversalTimeOffsetEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(384);
+			ifcCoordinatedUniversalTimeOffsetEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(402);
 		}
 		return ifcCoordinatedUniversalTimeOffsetEClass;
 	}
@@ -13765,8 +13915,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCoordinatedUniversalTimeOffset_HourOffset() {
-		return (EAttribute) getIfcCoordinatedUniversalTimeOffset().getEStructuralFeatures().get(0);
+	public EReference getIfcCoordinatedUniversalTimeOffset_HourOffset() {
+		return (EReference) getIfcCoordinatedUniversalTimeOffset().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -13774,8 +13924,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCoordinatedUniversalTimeOffset_MinuteOffset() {
-		return (EAttribute) getIfcCoordinatedUniversalTimeOffset().getEStructuralFeatures().get(1);
+	public EReference getIfcCoordinatedUniversalTimeOffset_MinuteOffset() {
+		return (EReference) getIfcCoordinatedUniversalTimeOffset().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -13794,7 +13944,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcCostItem() {
 		if (ifcCostItemEClass == null) {
-			ifcCostItemEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(385);
+			ifcCostItemEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(403);
 		}
 		return ifcCostItemEClass;
 	}
@@ -13806,7 +13956,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcCostSchedule() {
 		if (ifcCostScheduleEClass == null) {
-			ifcCostScheduleEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(386);
+			ifcCostScheduleEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(404);
 		}
 		return ifcCostScheduleEClass;
 	}
@@ -13843,8 +13993,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCostSchedule_Status() {
-		return (EAttribute) getIfcCostSchedule().getEStructuralFeatures().get(3);
+	public EReference getIfcCostSchedule_Status() {
+		return (EReference) getIfcCostSchedule().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -13870,8 +14020,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCostSchedule_ID() {
-		return (EAttribute) getIfcCostSchedule().getEStructuralFeatures().get(6);
+	public EReference getIfcCostSchedule_ID() {
+		return (EReference) getIfcCostSchedule().getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -13890,7 +14040,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcCostValue() {
 		if (ifcCostValueEClass == null) {
-			ifcCostValueEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(387);
+			ifcCostValueEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(405);
 		}
 		return ifcCostValueEClass;
 	}
@@ -13900,8 +14050,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCostValue_CostType() {
-		return (EAttribute) getIfcCostValue().getEStructuralFeatures().get(0);
+	public EReference getIfcCostValue_CostType() {
+		return (EReference) getIfcCostValue().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -13909,8 +14059,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCostValue_Condition() {
-		return (EAttribute) getIfcCostValue().getEStructuralFeatures().get(1);
+	public EReference getIfcCostValue_Condition() {
+		return (EReference) getIfcCostValue().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -13920,7 +14070,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcCovering() {
 		if (ifcCoveringEClass == null) {
-			ifcCoveringEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(388);
+			ifcCoveringEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(406);
 		}
 		return ifcCoveringEClass;
 	}
@@ -13959,7 +14109,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcCoveringType() {
 		if (ifcCoveringTypeEClass == null) {
-			ifcCoveringTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(389);
+			ifcCoveringTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(407);
 		}
 		return ifcCoveringTypeEClass;
 	}
@@ -13980,7 +14130,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcCraneRailAShapeProfileDef() {
 		if (ifcCraneRailAShapeProfileDefEClass == null) {
-			ifcCraneRailAShapeProfileDefEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(390);
+			ifcCraneRailAShapeProfileDefEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(408);
 		}
 		return ifcCraneRailAShapeProfileDefEClass;
 	}
@@ -13990,8 +14140,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCraneRailAShapeProfileDef_OverallHeight() {
-		return (EAttribute) getIfcCraneRailAShapeProfileDef().getEStructuralFeatures().get(0);
+	public EReference getIfcCraneRailAShapeProfileDef_OverallHeight() {
+		return (EReference) getIfcCraneRailAShapeProfileDef().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -13999,8 +14149,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCraneRailAShapeProfileDef_OverallHeightAsString() {
-		return (EAttribute) getIfcCraneRailAShapeProfileDef().getEStructuralFeatures().get(1);
+	public EReference getIfcCraneRailAShapeProfileDef_BaseWidth2() {
+		return (EReference) getIfcCraneRailAShapeProfileDef().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -14008,8 +14158,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCraneRailAShapeProfileDef_BaseWidth2() {
-		return (EAttribute) getIfcCraneRailAShapeProfileDef().getEStructuralFeatures().get(2);
+	public EReference getIfcCraneRailAShapeProfileDef_Radius() {
+		return (EReference) getIfcCraneRailAShapeProfileDef().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -14017,8 +14167,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCraneRailAShapeProfileDef_BaseWidth2AsString() {
-		return (EAttribute) getIfcCraneRailAShapeProfileDef().getEStructuralFeatures().get(3);
+	public EReference getIfcCraneRailAShapeProfileDef_HeadWidth() {
+		return (EReference) getIfcCraneRailAShapeProfileDef().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -14026,8 +14176,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCraneRailAShapeProfileDef_Radius() {
-		return (EAttribute) getIfcCraneRailAShapeProfileDef().getEStructuralFeatures().get(4);
+	public EReference getIfcCraneRailAShapeProfileDef_HeadDepth2() {
+		return (EReference) getIfcCraneRailAShapeProfileDef().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -14035,8 +14185,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCraneRailAShapeProfileDef_RadiusAsString() {
-		return (EAttribute) getIfcCraneRailAShapeProfileDef().getEStructuralFeatures().get(5);
+	public EReference getIfcCraneRailAShapeProfileDef_HeadDepth3() {
+		return (EReference) getIfcCraneRailAShapeProfileDef().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -14044,8 +14194,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCraneRailAShapeProfileDef_HeadWidth() {
-		return (EAttribute) getIfcCraneRailAShapeProfileDef().getEStructuralFeatures().get(6);
+	public EReference getIfcCraneRailAShapeProfileDef_WebThickness() {
+		return (EReference) getIfcCraneRailAShapeProfileDef().getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -14053,8 +14203,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCraneRailAShapeProfileDef_HeadWidthAsString() {
-		return (EAttribute) getIfcCraneRailAShapeProfileDef().getEStructuralFeatures().get(7);
+	public EReference getIfcCraneRailAShapeProfileDef_BaseWidth4() {
+		return (EReference) getIfcCraneRailAShapeProfileDef().getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -14062,8 +14212,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCraneRailAShapeProfileDef_HeadDepth2() {
-		return (EAttribute) getIfcCraneRailAShapeProfileDef().getEStructuralFeatures().get(8);
+	public EReference getIfcCraneRailAShapeProfileDef_BaseDepth1() {
+		return (EReference) getIfcCraneRailAShapeProfileDef().getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -14071,8 +14221,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCraneRailAShapeProfileDef_HeadDepth2AsString() {
-		return (EAttribute) getIfcCraneRailAShapeProfileDef().getEStructuralFeatures().get(9);
+	public EReference getIfcCraneRailAShapeProfileDef_BaseDepth2() {
+		return (EReference) getIfcCraneRailAShapeProfileDef().getEStructuralFeatures().get(9);
 	}
 
 	/**
@@ -14080,8 +14230,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCraneRailAShapeProfileDef_HeadDepth3() {
-		return (EAttribute) getIfcCraneRailAShapeProfileDef().getEStructuralFeatures().get(10);
+	public EReference getIfcCraneRailAShapeProfileDef_BaseDepth3() {
+		return (EReference) getIfcCraneRailAShapeProfileDef().getEStructuralFeatures().get(10);
 	}
 
 	/**
@@ -14089,116 +14239,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCraneRailAShapeProfileDef_HeadDepth3AsString() {
-		return (EAttribute) getIfcCraneRailAShapeProfileDef().getEStructuralFeatures().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcCraneRailAShapeProfileDef_WebThickness() {
-		return (EAttribute) getIfcCraneRailAShapeProfileDef().getEStructuralFeatures().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcCraneRailAShapeProfileDef_WebThicknessAsString() {
-		return (EAttribute) getIfcCraneRailAShapeProfileDef().getEStructuralFeatures().get(13);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcCraneRailAShapeProfileDef_BaseWidth4() {
-		return (EAttribute) getIfcCraneRailAShapeProfileDef().getEStructuralFeatures().get(14);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcCraneRailAShapeProfileDef_BaseWidth4AsString() {
-		return (EAttribute) getIfcCraneRailAShapeProfileDef().getEStructuralFeatures().get(15);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcCraneRailAShapeProfileDef_BaseDepth1() {
-		return (EAttribute) getIfcCraneRailAShapeProfileDef().getEStructuralFeatures().get(16);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcCraneRailAShapeProfileDef_BaseDepth1AsString() {
-		return (EAttribute) getIfcCraneRailAShapeProfileDef().getEStructuralFeatures().get(17);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcCraneRailAShapeProfileDef_BaseDepth2() {
-		return (EAttribute) getIfcCraneRailAShapeProfileDef().getEStructuralFeatures().get(18);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcCraneRailAShapeProfileDef_BaseDepth2AsString() {
-		return (EAttribute) getIfcCraneRailAShapeProfileDef().getEStructuralFeatures().get(19);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcCraneRailAShapeProfileDef_BaseDepth3() {
-		return (EAttribute) getIfcCraneRailAShapeProfileDef().getEStructuralFeatures().get(20);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcCraneRailAShapeProfileDef_BaseDepth3AsString() {
-		return (EAttribute) getIfcCraneRailAShapeProfileDef().getEStructuralFeatures().get(21);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcCraneRailAShapeProfileDef_CentreOfGravityInY() {
-		return (EAttribute) getIfcCraneRailAShapeProfileDef().getEStructuralFeatures().get(22);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcCraneRailAShapeProfileDef_CentreOfGravityInYAsString() {
-		return (EAttribute) getIfcCraneRailAShapeProfileDef().getEStructuralFeatures().get(23);
+	public EReference getIfcCraneRailAShapeProfileDef_CentreOfGravityInY() {
+		return (EReference) getIfcCraneRailAShapeProfileDef().getEStructuralFeatures().get(11);
 	}
 
 	/**
@@ -14208,7 +14250,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcCraneRailFShapeProfileDef() {
 		if (ifcCraneRailFShapeProfileDefEClass == null) {
-			ifcCraneRailFShapeProfileDefEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(391);
+			ifcCraneRailFShapeProfileDefEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(409);
 		}
 		return ifcCraneRailFShapeProfileDefEClass;
 	}
@@ -14218,8 +14260,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCraneRailFShapeProfileDef_OverallHeight() {
-		return (EAttribute) getIfcCraneRailFShapeProfileDef().getEStructuralFeatures().get(0);
+	public EReference getIfcCraneRailFShapeProfileDef_OverallHeight() {
+		return (EReference) getIfcCraneRailFShapeProfileDef().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -14227,8 +14269,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCraneRailFShapeProfileDef_OverallHeightAsString() {
-		return (EAttribute) getIfcCraneRailFShapeProfileDef().getEStructuralFeatures().get(1);
+	public EReference getIfcCraneRailFShapeProfileDef_HeadWidth() {
+		return (EReference) getIfcCraneRailFShapeProfileDef().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -14236,8 +14278,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCraneRailFShapeProfileDef_HeadWidth() {
-		return (EAttribute) getIfcCraneRailFShapeProfileDef().getEStructuralFeatures().get(2);
+	public EReference getIfcCraneRailFShapeProfileDef_Radius() {
+		return (EReference) getIfcCraneRailFShapeProfileDef().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -14245,8 +14287,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCraneRailFShapeProfileDef_HeadWidthAsString() {
-		return (EAttribute) getIfcCraneRailFShapeProfileDef().getEStructuralFeatures().get(3);
+	public EReference getIfcCraneRailFShapeProfileDef_HeadDepth2() {
+		return (EReference) getIfcCraneRailFShapeProfileDef().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -14254,8 +14296,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCraneRailFShapeProfileDef_Radius() {
-		return (EAttribute) getIfcCraneRailFShapeProfileDef().getEStructuralFeatures().get(4);
+	public EReference getIfcCraneRailFShapeProfileDef_HeadDepth3() {
+		return (EReference) getIfcCraneRailFShapeProfileDef().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -14263,8 +14305,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCraneRailFShapeProfileDef_RadiusAsString() {
-		return (EAttribute) getIfcCraneRailFShapeProfileDef().getEStructuralFeatures().get(5);
+	public EReference getIfcCraneRailFShapeProfileDef_WebThickness() {
+		return (EReference) getIfcCraneRailFShapeProfileDef().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -14272,8 +14314,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCraneRailFShapeProfileDef_HeadDepth2() {
-		return (EAttribute) getIfcCraneRailFShapeProfileDef().getEStructuralFeatures().get(6);
+	public EReference getIfcCraneRailFShapeProfileDef_BaseDepth1() {
+		return (EReference) getIfcCraneRailFShapeProfileDef().getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -14281,8 +14323,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCraneRailFShapeProfileDef_HeadDepth2AsString() {
-		return (EAttribute) getIfcCraneRailFShapeProfileDef().getEStructuralFeatures().get(7);
+	public EReference getIfcCraneRailFShapeProfileDef_BaseDepth2() {
+		return (EReference) getIfcCraneRailFShapeProfileDef().getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -14290,89 +14332,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCraneRailFShapeProfileDef_HeadDepth3() {
-		return (EAttribute) getIfcCraneRailFShapeProfileDef().getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcCraneRailFShapeProfileDef_HeadDepth3AsString() {
-		return (EAttribute) getIfcCraneRailFShapeProfileDef().getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcCraneRailFShapeProfileDef_WebThickness() {
-		return (EAttribute) getIfcCraneRailFShapeProfileDef().getEStructuralFeatures().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcCraneRailFShapeProfileDef_WebThicknessAsString() {
-		return (EAttribute) getIfcCraneRailFShapeProfileDef().getEStructuralFeatures().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcCraneRailFShapeProfileDef_BaseDepth1() {
-		return (EAttribute) getIfcCraneRailFShapeProfileDef().getEStructuralFeatures().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcCraneRailFShapeProfileDef_BaseDepth1AsString() {
-		return (EAttribute) getIfcCraneRailFShapeProfileDef().getEStructuralFeatures().get(13);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcCraneRailFShapeProfileDef_BaseDepth2() {
-		return (EAttribute) getIfcCraneRailFShapeProfileDef().getEStructuralFeatures().get(14);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcCraneRailFShapeProfileDef_BaseDepth2AsString() {
-		return (EAttribute) getIfcCraneRailFShapeProfileDef().getEStructuralFeatures().get(15);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcCraneRailFShapeProfileDef_CentreOfGravityInY() {
-		return (EAttribute) getIfcCraneRailFShapeProfileDef().getEStructuralFeatures().get(16);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcCraneRailFShapeProfileDef_CentreOfGravityInYAsString() {
-		return (EAttribute) getIfcCraneRailFShapeProfileDef().getEStructuralFeatures().get(17);
+	public EReference getIfcCraneRailFShapeProfileDef_CentreOfGravityInY() {
+		return (EReference) getIfcCraneRailFShapeProfileDef().getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -14382,7 +14343,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcCrewResource() {
 		if (ifcCrewResourceEClass == null) {
-			ifcCrewResourceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(392);
+			ifcCrewResourceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(410);
 		}
 		return ifcCrewResourceEClass;
 	}
@@ -14394,7 +14355,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcCsgPrimitive3D() {
 		if (ifcCsgPrimitive3DEClass == null) {
-			ifcCsgPrimitive3DEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(393);
+			ifcCsgPrimitive3DEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(411);
 		}
 		return ifcCsgPrimitive3DEClass;
 	}
@@ -14413,8 +14374,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCsgPrimitive3D_Dim() {
-		return (EAttribute) getIfcCsgPrimitive3D().getEStructuralFeatures().get(1);
+	public EReference getIfcCsgPrimitive3D_Dim() {
+		return (EReference) getIfcCsgPrimitive3D().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -14424,7 +14385,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcCsgSolid() {
 		if (ifcCsgSolidEClass == null) {
-			ifcCsgSolidEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(394);
+			ifcCsgSolidEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(412);
 		}
 		return ifcCsgSolidEClass;
 	}
@@ -14445,7 +14406,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcCurrencyRelationship() {
 		if (ifcCurrencyRelationshipEClass == null) {
-			ifcCurrencyRelationshipEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(395);
+			ifcCurrencyRelationshipEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(413);
 		}
 		return ifcCurrencyRelationshipEClass;
 	}
@@ -14473,17 +14434,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCurrencyRelationship_ExchangeRate() {
-		return (EAttribute) getIfcCurrencyRelationship().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcCurrencyRelationship_ExchangeRateAsString() {
-		return (EAttribute) getIfcCurrencyRelationship().getEStructuralFeatures().get(3);
+	public EReference getIfcCurrencyRelationship_ExchangeRate() {
+		return (EReference) getIfcCurrencyRelationship().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -14492,7 +14444,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EReference getIfcCurrencyRelationship_RateDateTime() {
-		return (EReference) getIfcCurrencyRelationship().getEStructuralFeatures().get(4);
+		return (EReference) getIfcCurrencyRelationship().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -14501,7 +14453,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EReference getIfcCurrencyRelationship_RateSource() {
-		return (EReference) getIfcCurrencyRelationship().getEStructuralFeatures().get(5);
+		return (EReference) getIfcCurrencyRelationship().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -14511,7 +14463,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcCurtainWall() {
 		if (ifcCurtainWallEClass == null) {
-			ifcCurtainWallEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(396);
+			ifcCurtainWallEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(414);
 		}
 		return ifcCurtainWallEClass;
 	}
@@ -14523,7 +14475,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcCurtainWallType() {
 		if (ifcCurtainWallTypeEClass == null) {
-			ifcCurtainWallTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(397);
+			ifcCurtainWallTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(415);
 		}
 		return ifcCurtainWallTypeEClass;
 	}
@@ -14544,7 +14496,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcCurve() {
 		if (ifcCurveEClass == null) {
-			ifcCurveEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(398);
+			ifcCurveEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(416);
 		}
 		return ifcCurveEClass;
 	}
@@ -14554,8 +14506,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCurve_Dim() {
-		return (EAttribute) getIfcCurve().getEStructuralFeatures().get(0);
+	public EReference getIfcCurve_Dim() {
+		return (EReference) getIfcCurve().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -14565,7 +14517,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcCurveBoundedPlane() {
 		if (ifcCurveBoundedPlaneEClass == null) {
-			ifcCurveBoundedPlaneEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(399);
+			ifcCurveBoundedPlaneEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(417);
 		}
 		return ifcCurveBoundedPlaneEClass;
 	}
@@ -14602,8 +14554,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCurveBoundedPlane_Dim() {
-		return (EAttribute) getIfcCurveBoundedPlane().getEStructuralFeatures().get(3);
+	public EReference getIfcCurveBoundedPlane_Dim() {
+		return (EReference) getIfcCurveBoundedPlane().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -14613,7 +14565,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcCurveStyle() {
 		if (ifcCurveStyleEClass == null) {
-			ifcCurveStyleEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(400);
+			ifcCurveStyleEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(418);
 		}
 		return ifcCurveStyleEClass;
 	}
@@ -14652,7 +14604,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcCurveStyleFont() {
 		if (ifcCurveStyleFontEClass == null) {
-			ifcCurveStyleFontEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(401);
+			ifcCurveStyleFontEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(419);
 		}
 		return ifcCurveStyleFontEClass;
 	}
@@ -14662,8 +14614,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCurveStyleFont_Name() {
-		return (EAttribute) getIfcCurveStyleFont().getEStructuralFeatures().get(0);
+	public EReference getIfcCurveStyleFont_Name() {
+		return (EReference) getIfcCurveStyleFont().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -14682,7 +14634,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcCurveStyleFontAndScaling() {
 		if (ifcCurveStyleFontAndScalingEClass == null) {
-			ifcCurveStyleFontAndScalingEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(402);
+			ifcCurveStyleFontAndScalingEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(420);
 		}
 		return ifcCurveStyleFontAndScalingEClass;
 	}
@@ -14692,8 +14644,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCurveStyleFontAndScaling_Name() {
-		return (EAttribute) getIfcCurveStyleFontAndScaling().getEStructuralFeatures().get(0);
+	public EReference getIfcCurveStyleFontAndScaling_Name() {
+		return (EReference) getIfcCurveStyleFontAndScaling().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -14710,17 +14662,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCurveStyleFontAndScaling_CurveFontScaling() {
-		return (EAttribute) getIfcCurveStyleFontAndScaling().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcCurveStyleFontAndScaling_CurveFontScalingAsString() {
-		return (EAttribute) getIfcCurveStyleFontAndScaling().getEStructuralFeatures().get(3);
+	public EReference getIfcCurveStyleFontAndScaling_CurveFontScaling() {
+		return (EReference) getIfcCurveStyleFontAndScaling().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -14730,7 +14673,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcCurveStyleFontPattern() {
 		if (ifcCurveStyleFontPatternEClass == null) {
-			ifcCurveStyleFontPatternEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(403);
+			ifcCurveStyleFontPatternEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(421);
 		}
 		return ifcCurveStyleFontPatternEClass;
 	}
@@ -14740,8 +14683,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCurveStyleFontPattern_VisibleSegmentLength() {
-		return (EAttribute) getIfcCurveStyleFontPattern().getEStructuralFeatures().get(0);
+	public EReference getIfcCurveStyleFontPattern_VisibleSegmentLength() {
+		return (EReference) getIfcCurveStyleFontPattern().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -14749,26 +14692,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcCurveStyleFontPattern_VisibleSegmentLengthAsString() {
-		return (EAttribute) getIfcCurveStyleFontPattern().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcCurveStyleFontPattern_InvisibleSegmentLength() {
-		return (EAttribute) getIfcCurveStyleFontPattern().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcCurveStyleFontPattern_InvisibleSegmentLengthAsString() {
-		return (EAttribute) getIfcCurveStyleFontPattern().getEStructuralFeatures().get(3);
+	public EReference getIfcCurveStyleFontPattern_InvisibleSegmentLength() {
+		return (EReference) getIfcCurveStyleFontPattern().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -14778,7 +14703,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcDamperType() {
 		if (ifcDamperTypeEClass == null) {
-			ifcDamperTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(404);
+			ifcDamperTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(422);
 		}
 		return ifcDamperTypeEClass;
 	}
@@ -14799,7 +14724,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcDateAndTime() {
 		if (ifcDateAndTimeEClass == null) {
-			ifcDateAndTimeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(405);
+			ifcDateAndTimeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(423);
 		}
 		return ifcDateAndTimeEClass;
 	}
@@ -14829,7 +14754,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcDefinedSymbol() {
 		if (ifcDefinedSymbolEClass == null) {
-			ifcDefinedSymbolEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(406);
+			ifcDefinedSymbolEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(424);
 		}
 		return ifcDefinedSymbolEClass;
 	}
@@ -14859,7 +14784,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcDerivedProfileDef() {
 		if (ifcDerivedProfileDefEClass == null) {
-			ifcDerivedProfileDefEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(407);
+			ifcDerivedProfileDefEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(425);
 		}
 		return ifcDerivedProfileDefEClass;
 	}
@@ -14887,8 +14812,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcDerivedProfileDef_Label() {
-		return (EAttribute) getIfcDerivedProfileDef().getEStructuralFeatures().get(2);
+	public EReference getIfcDerivedProfileDef_Label() {
+		return (EReference) getIfcDerivedProfileDef().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -14898,7 +14823,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcDerivedUnit() {
 		if (ifcDerivedUnitEClass == null) {
-			ifcDerivedUnitEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(408);
+			ifcDerivedUnitEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(426);
 		}
 		return ifcDerivedUnitEClass;
 	}
@@ -14926,8 +14851,17 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcDerivedUnit_UserDefinedType() {
-		return (EAttribute) getIfcDerivedUnit().getEStructuralFeatures().get(2);
+	public EReference getIfcDerivedUnit_UserDefinedType() {
+		return (EReference) getIfcDerivedUnit().getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getIfcDerivedUnit_Dimensions() {
+		return (EReference) getIfcDerivedUnit().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -14937,7 +14871,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcDerivedUnitElement() {
 		if (ifcDerivedUnitElementEClass == null) {
-			ifcDerivedUnitElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(409);
+			ifcDerivedUnitElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(427);
 		}
 		return ifcDerivedUnitElementEClass;
 	}
@@ -14956,8 +14890,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcDerivedUnitElement_Exponent() {
-		return (EAttribute) getIfcDerivedUnitElement().getEStructuralFeatures().get(1);
+	public EReference getIfcDerivedUnitElement_Exponent() {
+		return (EReference) getIfcDerivedUnitElement().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -14967,7 +14901,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcDiameterDimension() {
 		if (ifcDiameterDimensionEClass == null) {
-			ifcDiameterDimensionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(410);
+			ifcDiameterDimensionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(428);
 		}
 		return ifcDiameterDimensionEClass;
 	}
@@ -14979,7 +14913,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcDimensionCalloutRelationship() {
 		if (ifcDimensionCalloutRelationshipEClass == null) {
-			ifcDimensionCalloutRelationshipEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(411);
+			ifcDimensionCalloutRelationshipEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(429);
 		}
 		return ifcDimensionCalloutRelationshipEClass;
 	}
@@ -14991,7 +14925,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcDimensionCurve() {
 		if (ifcDimensionCurveEClass == null) {
-			ifcDimensionCurveEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(412);
+			ifcDimensionCurveEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(430);
 		}
 		return ifcDimensionCurveEClass;
 	}
@@ -15012,7 +14946,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcDimensionCurveDirectedCallout() {
 		if (ifcDimensionCurveDirectedCalloutEClass == null) {
-			ifcDimensionCurveDirectedCalloutEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(413);
+			ifcDimensionCurveDirectedCalloutEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(431);
 		}
 		return ifcDimensionCurveDirectedCalloutEClass;
 	}
@@ -15024,7 +14958,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcDimensionCurveTerminator() {
 		if (ifcDimensionCurveTerminatorEClass == null) {
-			ifcDimensionCurveTerminatorEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(414);
+			ifcDimensionCurveTerminatorEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(432);
 		}
 		return ifcDimensionCurveTerminatorEClass;
 	}
@@ -15045,7 +14979,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcDimensionPair() {
 		if (ifcDimensionPairEClass == null) {
-			ifcDimensionPairEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(415);
+			ifcDimensionPairEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(433);
 		}
 		return ifcDimensionPairEClass;
 	}
@@ -15057,7 +14991,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcDimensionalExponents() {
 		if (ifcDimensionalExponentsEClass == null) {
-			ifcDimensionalExponentsEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(416);
+			ifcDimensionalExponentsEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(434);
 		}
 		return ifcDimensionalExponentsEClass;
 	}
@@ -15067,8 +15001,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcDimensionalExponents_LengthExponent() {
-		return (EAttribute) getIfcDimensionalExponents().getEStructuralFeatures().get(0);
+	public EReference getIfcDimensionalExponents_LengthExponent() {
+		return (EReference) getIfcDimensionalExponents().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -15076,8 +15010,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcDimensionalExponents_MassExponent() {
-		return (EAttribute) getIfcDimensionalExponents().getEStructuralFeatures().get(1);
+	public EReference getIfcDimensionalExponents_MassExponent() {
+		return (EReference) getIfcDimensionalExponents().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -15085,8 +15019,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcDimensionalExponents_TimeExponent() {
-		return (EAttribute) getIfcDimensionalExponents().getEStructuralFeatures().get(2);
+	public EReference getIfcDimensionalExponents_TimeExponent() {
+		return (EReference) getIfcDimensionalExponents().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -15094,8 +15028,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcDimensionalExponents_ElectricCurrentExponent() {
-		return (EAttribute) getIfcDimensionalExponents().getEStructuralFeatures().get(3);
+	public EReference getIfcDimensionalExponents_ElectricCurrentExponent() {
+		return (EReference) getIfcDimensionalExponents().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -15103,8 +15037,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcDimensionalExponents_ThermodynamicTemperatureExponent() {
-		return (EAttribute) getIfcDimensionalExponents().getEStructuralFeatures().get(4);
+	public EReference getIfcDimensionalExponents_ThermodynamicTemperatureExponent() {
+		return (EReference) getIfcDimensionalExponents().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -15112,8 +15046,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcDimensionalExponents_AmountOfSubstanceExponent() {
-		return (EAttribute) getIfcDimensionalExponents().getEStructuralFeatures().get(5);
+	public EReference getIfcDimensionalExponents_AmountOfSubstanceExponent() {
+		return (EReference) getIfcDimensionalExponents().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -15121,8 +15055,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcDimensionalExponents_LuminousIntensityExponent() {
-		return (EAttribute) getIfcDimensionalExponents().getEStructuralFeatures().get(6);
+	public EReference getIfcDimensionalExponents_LuminousIntensityExponent() {
+		return (EReference) getIfcDimensionalExponents().getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -15132,7 +15066,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcDirection() {
 		if (ifcDirectionEClass == null) {
-			ifcDirectionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(417);
+			ifcDirectionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(435);
 		}
 		return ifcDirectionEClass;
 	}
@@ -15142,8 +15076,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcDirection_DirectionRatios() {
-		return (EAttribute) getIfcDirection().getEStructuralFeatures().get(0);
+	public EReference getIfcDirection_DirectionRatios() {
+		return (EReference) getIfcDirection().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -15151,8 +15085,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcDirection_Dim() {
-		return (EAttribute) getIfcDirection().getEStructuralFeatures().get(1);
+	public EReference getIfcDirection_Dim() {
+		return (EReference) getIfcDirection().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -15162,7 +15096,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcDiscreteAccessory() {
 		if (ifcDiscreteAccessoryEClass == null) {
-			ifcDiscreteAccessoryEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(418);
+			ifcDiscreteAccessoryEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(436);
 		}
 		return ifcDiscreteAccessoryEClass;
 	}
@@ -15174,7 +15108,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcDiscreteAccessoryType() {
 		if (ifcDiscreteAccessoryTypeEClass == null) {
-			ifcDiscreteAccessoryTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(419);
+			ifcDiscreteAccessoryTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(437);
 		}
 		return ifcDiscreteAccessoryTypeEClass;
 	}
@@ -15186,7 +15120,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcDistributionChamberElement() {
 		if (ifcDistributionChamberElementEClass == null) {
-			ifcDistributionChamberElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(420);
+			ifcDistributionChamberElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(438);
 		}
 		return ifcDistributionChamberElementEClass;
 	}
@@ -15198,7 +15132,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcDistributionChamberElementType() {
 		if (ifcDistributionChamberElementTypeEClass == null) {
-			ifcDistributionChamberElementTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(421);
+			ifcDistributionChamberElementTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(439);
 		}
 		return ifcDistributionChamberElementTypeEClass;
 	}
@@ -15219,7 +15153,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcDistributionControlElement() {
 		if (ifcDistributionControlElementEClass == null) {
-			ifcDistributionControlElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(422);
+			ifcDistributionControlElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(440);
 		}
 		return ifcDistributionControlElementEClass;
 	}
@@ -15229,8 +15163,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcDistributionControlElement_ControlElementId() {
-		return (EAttribute) getIfcDistributionControlElement().getEStructuralFeatures().get(0);
+	public EReference getIfcDistributionControlElement_ControlElementId() {
+		return (EReference) getIfcDistributionControlElement().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -15249,7 +15183,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcDistributionControlElementType() {
 		if (ifcDistributionControlElementTypeEClass == null) {
-			ifcDistributionControlElementTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(423);
+			ifcDistributionControlElementTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(441);
 		}
 		return ifcDistributionControlElementTypeEClass;
 	}
@@ -15261,7 +15195,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcDistributionElement() {
 		if (ifcDistributionElementEClass == null) {
-			ifcDistributionElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(424);
+			ifcDistributionElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(442);
 		}
 		return ifcDistributionElementEClass;
 	}
@@ -15273,7 +15207,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcDistributionElementType() {
 		if (ifcDistributionElementTypeEClass == null) {
-			ifcDistributionElementTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(425);
+			ifcDistributionElementTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(443);
 		}
 		return ifcDistributionElementTypeEClass;
 	}
@@ -15285,7 +15219,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcDistributionFlowElement() {
 		if (ifcDistributionFlowElementEClass == null) {
-			ifcDistributionFlowElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(426);
+			ifcDistributionFlowElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(444);
 		}
 		return ifcDistributionFlowElementEClass;
 	}
@@ -15306,7 +15240,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcDistributionFlowElementType() {
 		if (ifcDistributionFlowElementTypeEClass == null) {
-			ifcDistributionFlowElementTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(427);
+			ifcDistributionFlowElementTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(445);
 		}
 		return ifcDistributionFlowElementTypeEClass;
 	}
@@ -15318,7 +15252,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcDistributionPort() {
 		if (ifcDistributionPortEClass == null) {
-			ifcDistributionPortEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(428);
+			ifcDistributionPortEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(446);
 		}
 		return ifcDistributionPortEClass;
 	}
@@ -15339,7 +15273,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcDocumentElectronicFormat() {
 		if (ifcDocumentElectronicFormatEClass == null) {
-			ifcDocumentElectronicFormatEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(429);
+			ifcDocumentElectronicFormatEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(447);
 		}
 		return ifcDocumentElectronicFormatEClass;
 	}
@@ -15349,8 +15283,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcDocumentElectronicFormat_FileExtension() {
-		return (EAttribute) getIfcDocumentElectronicFormat().getEStructuralFeatures().get(0);
+	public EReference getIfcDocumentElectronicFormat_FileExtension() {
+		return (EReference) getIfcDocumentElectronicFormat().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -15358,8 +15292,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcDocumentElectronicFormat_MimeContentType() {
-		return (EAttribute) getIfcDocumentElectronicFormat().getEStructuralFeatures().get(1);
+	public EReference getIfcDocumentElectronicFormat_MimeContentType() {
+		return (EReference) getIfcDocumentElectronicFormat().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -15367,8 +15301,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcDocumentElectronicFormat_MimeSubtype() {
-		return (EAttribute) getIfcDocumentElectronicFormat().getEStructuralFeatures().get(2);
+	public EReference getIfcDocumentElectronicFormat_MimeSubtype() {
+		return (EReference) getIfcDocumentElectronicFormat().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -15378,7 +15312,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcDocumentInformation() {
 		if (ifcDocumentInformationEClass == null) {
-			ifcDocumentInformationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(430);
+			ifcDocumentInformationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(448);
 		}
 		return ifcDocumentInformationEClass;
 	}
@@ -15388,8 +15322,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcDocumentInformation_DocumentId() {
-		return (EAttribute) getIfcDocumentInformation().getEStructuralFeatures().get(0);
+	public EReference getIfcDocumentInformation_DocumentId() {
+		return (EReference) getIfcDocumentInformation().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -15397,8 +15331,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcDocumentInformation_Name() {
-		return (EAttribute) getIfcDocumentInformation().getEStructuralFeatures().get(1);
+	public EReference getIfcDocumentInformation_Name() {
+		return (EReference) getIfcDocumentInformation().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -15406,8 +15340,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcDocumentInformation_Description() {
-		return (EAttribute) getIfcDocumentInformation().getEStructuralFeatures().get(2);
+	public EReference getIfcDocumentInformation_Description() {
+		return (EReference) getIfcDocumentInformation().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -15424,8 +15358,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcDocumentInformation_Purpose() {
-		return (EAttribute) getIfcDocumentInformation().getEStructuralFeatures().get(4);
+	public EReference getIfcDocumentInformation_Purpose() {
+		return (EReference) getIfcDocumentInformation().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -15433,8 +15367,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcDocumentInformation_IntendedUse() {
-		return (EAttribute) getIfcDocumentInformation().getEStructuralFeatures().get(5);
+	public EReference getIfcDocumentInformation_IntendedUse() {
+		return (EReference) getIfcDocumentInformation().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -15442,8 +15376,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcDocumentInformation_Scope() {
-		return (EAttribute) getIfcDocumentInformation().getEStructuralFeatures().get(6);
+	public EReference getIfcDocumentInformation_Scope() {
+		return (EReference) getIfcDocumentInformation().getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -15451,8 +15385,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcDocumentInformation_Revision() {
-		return (EAttribute) getIfcDocumentInformation().getEStructuralFeatures().get(7);
+	public EReference getIfcDocumentInformation_Revision() {
+		return (EReference) getIfcDocumentInformation().getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -15561,7 +15495,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcDocumentInformationRelationship() {
 		if (ifcDocumentInformationRelationshipEClass == null) {
-			ifcDocumentInformationRelationshipEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(431);
+			ifcDocumentInformationRelationshipEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(449);
 		}
 		return ifcDocumentInformationRelationshipEClass;
 	}
@@ -15589,8 +15523,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcDocumentInformationRelationship_RelationshipType() {
-		return (EAttribute) getIfcDocumentInformationRelationship().getEStructuralFeatures().get(2);
+	public EReference getIfcDocumentInformationRelationship_RelationshipType() {
+		return (EReference) getIfcDocumentInformationRelationship().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -15600,7 +15534,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcDocumentReference() {
 		if (ifcDocumentReferenceEClass == null) {
-			ifcDocumentReferenceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(432);
+			ifcDocumentReferenceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(450);
 		}
 		return ifcDocumentReferenceEClass;
 	}
@@ -15621,7 +15555,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcDoor() {
 		if (ifcDoorEClass == null) {
-			ifcDoorEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(433);
+			ifcDoorEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(451);
 		}
 		return ifcDoorEClass;
 	}
@@ -15631,8 +15565,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcDoor_OverallHeight() {
-		return (EAttribute) getIfcDoor().getEStructuralFeatures().get(0);
+	public EReference getIfcDoor_OverallHeight() {
+		return (EReference) getIfcDoor().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -15640,26 +15574,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcDoor_OverallHeightAsString() {
-		return (EAttribute) getIfcDoor().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcDoor_OverallWidth() {
-		return (EAttribute) getIfcDoor().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcDoor_OverallWidthAsString() {
-		return (EAttribute) getIfcDoor().getEStructuralFeatures().get(3);
+	public EReference getIfcDoor_OverallWidth() {
+		return (EReference) getIfcDoor().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -15669,7 +15585,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcDoorLiningProperties() {
 		if (ifcDoorLiningPropertiesEClass == null) {
-			ifcDoorLiningPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(434);
+			ifcDoorLiningPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(452);
 		}
 		return ifcDoorLiningPropertiesEClass;
 	}
@@ -15679,8 +15595,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcDoorLiningProperties_LiningDepth() {
-		return (EAttribute) getIfcDoorLiningProperties().getEStructuralFeatures().get(0);
+	public EReference getIfcDoorLiningProperties_LiningDepth() {
+		return (EReference) getIfcDoorLiningProperties().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -15688,8 +15604,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcDoorLiningProperties_LiningDepthAsString() {
-		return (EAttribute) getIfcDoorLiningProperties().getEStructuralFeatures().get(1);
+	public EReference getIfcDoorLiningProperties_LiningThickness() {
+		return (EReference) getIfcDoorLiningProperties().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -15697,8 +15613,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcDoorLiningProperties_LiningThickness() {
-		return (EAttribute) getIfcDoorLiningProperties().getEStructuralFeatures().get(2);
+	public EReference getIfcDoorLiningProperties_ThresholdDepth() {
+		return (EReference) getIfcDoorLiningProperties().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -15706,8 +15622,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcDoorLiningProperties_LiningThicknessAsString() {
-		return (EAttribute) getIfcDoorLiningProperties().getEStructuralFeatures().get(3);
+	public EReference getIfcDoorLiningProperties_ThresholdThickness() {
+		return (EReference) getIfcDoorLiningProperties().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -15715,8 +15631,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcDoorLiningProperties_ThresholdDepth() {
-		return (EAttribute) getIfcDoorLiningProperties().getEStructuralFeatures().get(4);
+	public EReference getIfcDoorLiningProperties_TransomThickness() {
+		return (EReference) getIfcDoorLiningProperties().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -15724,8 +15640,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcDoorLiningProperties_ThresholdDepthAsString() {
-		return (EAttribute) getIfcDoorLiningProperties().getEStructuralFeatures().get(5);
+	public EReference getIfcDoorLiningProperties_TransomOffset() {
+		return (EReference) getIfcDoorLiningProperties().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -15733,8 +15649,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcDoorLiningProperties_ThresholdThickness() {
-		return (EAttribute) getIfcDoorLiningProperties().getEStructuralFeatures().get(6);
+	public EReference getIfcDoorLiningProperties_LiningOffset() {
+		return (EReference) getIfcDoorLiningProperties().getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -15742,8 +15658,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcDoorLiningProperties_ThresholdThicknessAsString() {
-		return (EAttribute) getIfcDoorLiningProperties().getEStructuralFeatures().get(7);
+	public EReference getIfcDoorLiningProperties_ThresholdOffset() {
+		return (EReference) getIfcDoorLiningProperties().getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -15751,8 +15667,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcDoorLiningProperties_TransomThickness() {
-		return (EAttribute) getIfcDoorLiningProperties().getEStructuralFeatures().get(8);
+	public EReference getIfcDoorLiningProperties_CasingThickness() {
+		return (EReference) getIfcDoorLiningProperties().getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -15760,98 +15676,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcDoorLiningProperties_TransomThicknessAsString() {
-		return (EAttribute) getIfcDoorLiningProperties().getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcDoorLiningProperties_TransomOffset() {
-		return (EAttribute) getIfcDoorLiningProperties().getEStructuralFeatures().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcDoorLiningProperties_TransomOffsetAsString() {
-		return (EAttribute) getIfcDoorLiningProperties().getEStructuralFeatures().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcDoorLiningProperties_LiningOffset() {
-		return (EAttribute) getIfcDoorLiningProperties().getEStructuralFeatures().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcDoorLiningProperties_LiningOffsetAsString() {
-		return (EAttribute) getIfcDoorLiningProperties().getEStructuralFeatures().get(13);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcDoorLiningProperties_ThresholdOffset() {
-		return (EAttribute) getIfcDoorLiningProperties().getEStructuralFeatures().get(14);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcDoorLiningProperties_ThresholdOffsetAsString() {
-		return (EAttribute) getIfcDoorLiningProperties().getEStructuralFeatures().get(15);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcDoorLiningProperties_CasingThickness() {
-		return (EAttribute) getIfcDoorLiningProperties().getEStructuralFeatures().get(16);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcDoorLiningProperties_CasingThicknessAsString() {
-		return (EAttribute) getIfcDoorLiningProperties().getEStructuralFeatures().get(17);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcDoorLiningProperties_CasingDepth() {
-		return (EAttribute) getIfcDoorLiningProperties().getEStructuralFeatures().get(18);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcDoorLiningProperties_CasingDepthAsString() {
-		return (EAttribute) getIfcDoorLiningProperties().getEStructuralFeatures().get(19);
+	public EReference getIfcDoorLiningProperties_CasingDepth() {
+		return (EReference) getIfcDoorLiningProperties().getEStructuralFeatures().get(9);
 	}
 
 	/**
@@ -15860,7 +15686,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EReference getIfcDoorLiningProperties_ShapeAspectStyle() {
-		return (EReference) getIfcDoorLiningProperties().getEStructuralFeatures().get(20);
+		return (EReference) getIfcDoorLiningProperties().getEStructuralFeatures().get(10);
 	}
 
 	/**
@@ -15870,7 +15696,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcDoorPanelProperties() {
 		if (ifcDoorPanelPropertiesEClass == null) {
-			ifcDoorPanelPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(435);
+			ifcDoorPanelPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(453);
 		}
 		return ifcDoorPanelPropertiesEClass;
 	}
@@ -15880,17 +15706,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcDoorPanelProperties_PanelDepth() {
-		return (EAttribute) getIfcDoorPanelProperties().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcDoorPanelProperties_PanelDepthAsString() {
-		return (EAttribute) getIfcDoorPanelProperties().getEStructuralFeatures().get(1);
+	public EReference getIfcDoorPanelProperties_PanelDepth() {
+		return (EReference) getIfcDoorPanelProperties().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -15899,7 +15716,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EAttribute getIfcDoorPanelProperties_PanelOperation() {
-		return (EAttribute) getIfcDoorPanelProperties().getEStructuralFeatures().get(2);
+		return (EAttribute) getIfcDoorPanelProperties().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -15907,17 +15724,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcDoorPanelProperties_PanelWidth() {
-		return (EAttribute) getIfcDoorPanelProperties().getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcDoorPanelProperties_PanelWidthAsString() {
-		return (EAttribute) getIfcDoorPanelProperties().getEStructuralFeatures().get(4);
+	public EReference getIfcDoorPanelProperties_PanelWidth() {
+		return (EReference) getIfcDoorPanelProperties().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -15926,7 +15734,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EAttribute getIfcDoorPanelProperties_PanelPosition() {
-		return (EAttribute) getIfcDoorPanelProperties().getEStructuralFeatures().get(5);
+		return (EAttribute) getIfcDoorPanelProperties().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -15935,7 +15743,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EReference getIfcDoorPanelProperties_ShapeAspectStyle() {
-		return (EReference) getIfcDoorPanelProperties().getEStructuralFeatures().get(6);
+		return (EReference) getIfcDoorPanelProperties().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -15945,7 +15753,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcDoorStyle() {
 		if (ifcDoorStyleEClass == null) {
-			ifcDoorStyleEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(436);
+			ifcDoorStyleEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(454);
 		}
 		return ifcDoorStyleEClass;
 	}
@@ -15973,8 +15781,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcDoorStyle_ParameterTakesPrecedence() {
-		return (EAttribute) getIfcDoorStyle().getEStructuralFeatures().get(2);
+	public EReference getIfcDoorStyle_ParameterTakesPrecedence() {
+		return (EReference) getIfcDoorStyle().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -15982,8 +15790,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcDoorStyle_Sizeable() {
-		return (EAttribute) getIfcDoorStyle().getEStructuralFeatures().get(3);
+	public EReference getIfcDoorStyle_Sizeable() {
+		return (EReference) getIfcDoorStyle().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -15993,7 +15801,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcDraughtingCallout() {
 		if (ifcDraughtingCalloutEClass == null) {
-			ifcDraughtingCalloutEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(437);
+			ifcDraughtingCalloutEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(455);
 		}
 		return ifcDraughtingCalloutEClass;
 	}
@@ -16032,7 +15840,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcDraughtingCalloutRelationship() {
 		if (ifcDraughtingCalloutRelationshipEClass == null) {
-			ifcDraughtingCalloutRelationshipEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(438);
+			ifcDraughtingCalloutRelationshipEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(456);
 		}
 		return ifcDraughtingCalloutRelationshipEClass;
 	}
@@ -16042,8 +15850,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcDraughtingCalloutRelationship_Name() {
-		return (EAttribute) getIfcDraughtingCalloutRelationship().getEStructuralFeatures().get(0);
+	public EReference getIfcDraughtingCalloutRelationship_Name() {
+		return (EReference) getIfcDraughtingCalloutRelationship().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -16051,8 +15859,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcDraughtingCalloutRelationship_Description() {
-		return (EAttribute) getIfcDraughtingCalloutRelationship().getEStructuralFeatures().get(1);
+	public EReference getIfcDraughtingCalloutRelationship_Description() {
+		return (EReference) getIfcDraughtingCalloutRelationship().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -16080,7 +15888,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcDraughtingPreDefinedColour() {
 		if (ifcDraughtingPreDefinedColourEClass == null) {
-			ifcDraughtingPreDefinedColourEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(439);
+			ifcDraughtingPreDefinedColourEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(457);
 		}
 		return ifcDraughtingPreDefinedColourEClass;
 	}
@@ -16092,7 +15900,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcDraughtingPreDefinedCurveFont() {
 		if (ifcDraughtingPreDefinedCurveFontEClass == null) {
-			ifcDraughtingPreDefinedCurveFontEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(440);
+			ifcDraughtingPreDefinedCurveFontEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(458);
 		}
 		return ifcDraughtingPreDefinedCurveFontEClass;
 	}
@@ -16104,7 +15912,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcDraughtingPreDefinedTextFont() {
 		if (ifcDraughtingPreDefinedTextFontEClass == null) {
-			ifcDraughtingPreDefinedTextFontEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(441);
+			ifcDraughtingPreDefinedTextFontEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(459);
 		}
 		return ifcDraughtingPreDefinedTextFontEClass;
 	}
@@ -16116,7 +15924,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcDuctFittingType() {
 		if (ifcDuctFittingTypeEClass == null) {
-			ifcDuctFittingTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(442);
+			ifcDuctFittingTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(460);
 		}
 		return ifcDuctFittingTypeEClass;
 	}
@@ -16137,7 +15945,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcDuctSegmentType() {
 		if (ifcDuctSegmentTypeEClass == null) {
-			ifcDuctSegmentTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(443);
+			ifcDuctSegmentTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(461);
 		}
 		return ifcDuctSegmentTypeEClass;
 	}
@@ -16158,7 +15966,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcDuctSilencerType() {
 		if (ifcDuctSilencerTypeEClass == null) {
-			ifcDuctSilencerTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(444);
+			ifcDuctSilencerTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(462);
 		}
 		return ifcDuctSilencerTypeEClass;
 	}
@@ -16179,7 +15987,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcEdge() {
 		if (ifcEdgeEClass == null) {
-			ifcEdgeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(445);
+			ifcEdgeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(463);
 		}
 		return ifcEdgeEClass;
 	}
@@ -16209,7 +16017,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcEdgeCurve() {
 		if (ifcEdgeCurveEClass == null) {
-			ifcEdgeCurveEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(446);
+			ifcEdgeCurveEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(464);
 		}
 		return ifcEdgeCurveEClass;
 	}
@@ -16228,8 +16036,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcEdgeCurve_SameSense() {
-		return (EAttribute) getIfcEdgeCurve().getEStructuralFeatures().get(1);
+	public EReference getIfcEdgeCurve_SameSense() {
+		return (EReference) getIfcEdgeCurve().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -16239,7 +16047,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcEdgeFeature() {
 		if (ifcEdgeFeatureEClass == null) {
-			ifcEdgeFeatureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(447);
+			ifcEdgeFeatureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(465);
 		}
 		return ifcEdgeFeatureEClass;
 	}
@@ -16249,17 +16057,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcEdgeFeature_FeatureLength() {
-		return (EAttribute) getIfcEdgeFeature().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcEdgeFeature_FeatureLengthAsString() {
-		return (EAttribute) getIfcEdgeFeature().getEStructuralFeatures().get(1);
+	public EReference getIfcEdgeFeature_FeatureLength() {
+		return (EReference) getIfcEdgeFeature().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -16269,7 +16068,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcEdgeLoop() {
 		if (ifcEdgeLoopEClass == null) {
-			ifcEdgeLoopEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(448);
+			ifcEdgeLoopEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(466);
 		}
 		return ifcEdgeLoopEClass;
 	}
@@ -16288,9 +16087,18 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getIfcEdgeLoop_Ne() {
+		return (EReference) getIfcEdgeLoop().getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getIfcElectricApplianceType() {
 		if (ifcElectricApplianceTypeEClass == null) {
-			ifcElectricApplianceTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(449);
+			ifcElectricApplianceTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(467);
 		}
 		return ifcElectricApplianceTypeEClass;
 	}
@@ -16311,7 +16119,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcElectricDistributionPoint() {
 		if (ifcElectricDistributionPointEClass == null) {
-			ifcElectricDistributionPointEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(450);
+			ifcElectricDistributionPointEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(468);
 		}
 		return ifcElectricDistributionPointEClass;
 	}
@@ -16330,8 +16138,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcElectricDistributionPoint_UserDefinedFunction() {
-		return (EAttribute) getIfcElectricDistributionPoint().getEStructuralFeatures().get(1);
+	public EReference getIfcElectricDistributionPoint_UserDefinedFunction() {
+		return (EReference) getIfcElectricDistributionPoint().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -16341,7 +16149,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcElectricFlowStorageDeviceType() {
 		if (ifcElectricFlowStorageDeviceTypeEClass == null) {
-			ifcElectricFlowStorageDeviceTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(451);
+			ifcElectricFlowStorageDeviceTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(469);
 		}
 		return ifcElectricFlowStorageDeviceTypeEClass;
 	}
@@ -16362,7 +16170,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcElectricGeneratorType() {
 		if (ifcElectricGeneratorTypeEClass == null) {
-			ifcElectricGeneratorTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(452);
+			ifcElectricGeneratorTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(470);
 		}
 		return ifcElectricGeneratorTypeEClass;
 	}
@@ -16383,7 +16191,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcElectricHeaterType() {
 		if (ifcElectricHeaterTypeEClass == null) {
-			ifcElectricHeaterTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(453);
+			ifcElectricHeaterTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(471);
 		}
 		return ifcElectricHeaterTypeEClass;
 	}
@@ -16404,7 +16212,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcElectricMotorType() {
 		if (ifcElectricMotorTypeEClass == null) {
-			ifcElectricMotorTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(454);
+			ifcElectricMotorTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(472);
 		}
 		return ifcElectricMotorTypeEClass;
 	}
@@ -16425,7 +16233,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcElectricTimeControlType() {
 		if (ifcElectricTimeControlTypeEClass == null) {
-			ifcElectricTimeControlTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(455);
+			ifcElectricTimeControlTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(473);
 		}
 		return ifcElectricTimeControlTypeEClass;
 	}
@@ -16446,7 +16254,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcElectricalBaseProperties() {
 		if (ifcElectricalBasePropertiesEClass == null) {
-			ifcElectricalBasePropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(456);
+			ifcElectricalBasePropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(474);
 		}
 		return ifcElectricalBasePropertiesEClass;
 	}
@@ -16465,8 +16273,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcElectricalBaseProperties_InputVoltage() {
-		return (EAttribute) getIfcElectricalBaseProperties().getEStructuralFeatures().get(1);
+	public EReference getIfcElectricalBaseProperties_InputVoltage() {
+		return (EReference) getIfcElectricalBaseProperties().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -16474,8 +16282,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcElectricalBaseProperties_InputVoltageAsString() {
-		return (EAttribute) getIfcElectricalBaseProperties().getEStructuralFeatures().get(2);
+	public EReference getIfcElectricalBaseProperties_InputFrequency() {
+		return (EReference) getIfcElectricalBaseProperties().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -16483,8 +16291,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcElectricalBaseProperties_InputFrequency() {
-		return (EAttribute) getIfcElectricalBaseProperties().getEStructuralFeatures().get(3);
+	public EReference getIfcElectricalBaseProperties_FullLoadCurrent() {
+		return (EReference) getIfcElectricalBaseProperties().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -16492,8 +16300,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcElectricalBaseProperties_InputFrequencyAsString() {
-		return (EAttribute) getIfcElectricalBaseProperties().getEStructuralFeatures().get(4);
+	public EReference getIfcElectricalBaseProperties_MinimumCircuitCurrent() {
+		return (EReference) getIfcElectricalBaseProperties().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -16501,8 +16309,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcElectricalBaseProperties_FullLoadCurrent() {
-		return (EAttribute) getIfcElectricalBaseProperties().getEStructuralFeatures().get(5);
+	public EReference getIfcElectricalBaseProperties_MaximumPowerInput() {
+		return (EReference) getIfcElectricalBaseProperties().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -16510,8 +16318,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcElectricalBaseProperties_FullLoadCurrentAsString() {
-		return (EAttribute) getIfcElectricalBaseProperties().getEStructuralFeatures().get(6);
+	public EReference getIfcElectricalBaseProperties_RatedPowerInput() {
+		return (EReference) getIfcElectricalBaseProperties().getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -16519,62 +16327,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcElectricalBaseProperties_MinimumCircuitCurrent() {
-		return (EAttribute) getIfcElectricalBaseProperties().getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcElectricalBaseProperties_MinimumCircuitCurrentAsString() {
-		return (EAttribute) getIfcElectricalBaseProperties().getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcElectricalBaseProperties_MaximumPowerInput() {
-		return (EAttribute) getIfcElectricalBaseProperties().getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcElectricalBaseProperties_MaximumPowerInputAsString() {
-		return (EAttribute) getIfcElectricalBaseProperties().getEStructuralFeatures().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcElectricalBaseProperties_RatedPowerInput() {
-		return (EAttribute) getIfcElectricalBaseProperties().getEStructuralFeatures().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcElectricalBaseProperties_RatedPowerInputAsString() {
-		return (EAttribute) getIfcElectricalBaseProperties().getEStructuralFeatures().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcElectricalBaseProperties_InputPhase() {
-		return (EAttribute) getIfcElectricalBaseProperties().getEStructuralFeatures().get(13);
+	public EReference getIfcElectricalBaseProperties_InputPhase() {
+		return (EReference) getIfcElectricalBaseProperties().getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -16584,7 +16338,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcElectricalCircuit() {
 		if (ifcElectricalCircuitEClass == null) {
-			ifcElectricalCircuitEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(457);
+			ifcElectricalCircuitEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(475);
 		}
 		return ifcElectricalCircuitEClass;
 	}
@@ -16596,7 +16350,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcElectricalElement() {
 		if (ifcElectricalElementEClass == null) {
-			ifcElectricalElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(458);
+			ifcElectricalElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(476);
 		}
 		return ifcElectricalElementEClass;
 	}
@@ -16608,7 +16362,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcElement() {
 		if (ifcElementEClass == null) {
-			ifcElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(459);
+			ifcElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(477);
 		}
 		return ifcElementEClass;
 	}
@@ -16618,8 +16372,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcElement_Tag() {
-		return (EAttribute) getIfcElement().getEStructuralFeatures().get(0);
+	public EReference getIfcElement_Tag() {
+		return (EReference) getIfcElement().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -16737,7 +16491,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcElementAssembly() {
 		if (ifcElementAssemblyEClass == null) {
-			ifcElementAssemblyEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(460);
+			ifcElementAssemblyEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(478);
 		}
 		return ifcElementAssemblyEClass;
 	}
@@ -16767,7 +16521,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcElementComponent() {
 		if (ifcElementComponentEClass == null) {
-			ifcElementComponentEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(461);
+			ifcElementComponentEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(479);
 		}
 		return ifcElementComponentEClass;
 	}
@@ -16779,7 +16533,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcElementComponentType() {
 		if (ifcElementComponentTypeEClass == null) {
-			ifcElementComponentTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(462);
+			ifcElementComponentTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(480);
 		}
 		return ifcElementComponentTypeEClass;
 	}
@@ -16791,7 +16545,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcElementQuantity() {
 		if (ifcElementQuantityEClass == null) {
-			ifcElementQuantityEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(463);
+			ifcElementQuantityEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(481);
 		}
 		return ifcElementQuantityEClass;
 	}
@@ -16801,8 +16555,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcElementQuantity_MethodOfMeasurement() {
-		return (EAttribute) getIfcElementQuantity().getEStructuralFeatures().get(0);
+	public EReference getIfcElementQuantity_MethodOfMeasurement() {
+		return (EReference) getIfcElementQuantity().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -16821,7 +16575,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcElementType() {
 		if (ifcElementTypeEClass == null) {
-			ifcElementTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(464);
+			ifcElementTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(482);
 		}
 		return ifcElementTypeEClass;
 	}
@@ -16831,8 +16585,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcElementType_ElementType() {
-		return (EAttribute) getIfcElementType().getEStructuralFeatures().get(0);
+	public EReference getIfcElementType_ElementType() {
+		return (EReference) getIfcElementType().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -16842,7 +16596,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcElementarySurface() {
 		if (ifcElementarySurfaceEClass == null) {
-			ifcElementarySurfaceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(465);
+			ifcElementarySurfaceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(483);
 		}
 		return ifcElementarySurfaceEClass;
 	}
@@ -16861,8 +16615,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcElementarySurface_Dim() {
-		return (EAttribute) getIfcElementarySurface().getEStructuralFeatures().get(1);
+	public EReference getIfcElementarySurface_Dim() {
+		return (EReference) getIfcElementarySurface().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -16872,7 +16626,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcEllipse() {
 		if (ifcEllipseEClass == null) {
-			ifcEllipseEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(466);
+			ifcEllipseEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(484);
 		}
 		return ifcEllipseEClass;
 	}
@@ -16882,8 +16636,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcEllipse_SemiAxis1() {
-		return (EAttribute) getIfcEllipse().getEStructuralFeatures().get(0);
+	public EReference getIfcEllipse_SemiAxis1() {
+		return (EReference) getIfcEllipse().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -16891,26 +16645,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcEllipse_SemiAxis1AsString() {
-		return (EAttribute) getIfcEllipse().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcEllipse_SemiAxis2() {
-		return (EAttribute) getIfcEllipse().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcEllipse_SemiAxis2AsString() {
-		return (EAttribute) getIfcEllipse().getEStructuralFeatures().get(3);
+	public EReference getIfcEllipse_SemiAxis2() {
+		return (EReference) getIfcEllipse().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -16920,7 +16656,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcEllipseProfileDef() {
 		if (ifcEllipseProfileDefEClass == null) {
-			ifcEllipseProfileDefEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(467);
+			ifcEllipseProfileDefEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(485);
 		}
 		return ifcEllipseProfileDefEClass;
 	}
@@ -16930,8 +16666,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcEllipseProfileDef_SemiAxis1() {
-		return (EAttribute) getIfcEllipseProfileDef().getEStructuralFeatures().get(0);
+	public EReference getIfcEllipseProfileDef_SemiAxis1() {
+		return (EReference) getIfcEllipseProfileDef().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -16939,26 +16675,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcEllipseProfileDef_SemiAxis1AsString() {
-		return (EAttribute) getIfcEllipseProfileDef().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcEllipseProfileDef_SemiAxis2() {
-		return (EAttribute) getIfcEllipseProfileDef().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcEllipseProfileDef_SemiAxis2AsString() {
-		return (EAttribute) getIfcEllipseProfileDef().getEStructuralFeatures().get(3);
+	public EReference getIfcEllipseProfileDef_SemiAxis2() {
+		return (EReference) getIfcEllipseProfileDef().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -16968,7 +16686,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcEnergyConversionDevice() {
 		if (ifcEnergyConversionDeviceEClass == null) {
-			ifcEnergyConversionDeviceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(468);
+			ifcEnergyConversionDeviceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(486);
 		}
 		return ifcEnergyConversionDeviceEClass;
 	}
@@ -16980,7 +16698,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcEnergyConversionDeviceType() {
 		if (ifcEnergyConversionDeviceTypeEClass == null) {
-			ifcEnergyConversionDeviceTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(469);
+			ifcEnergyConversionDeviceTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(487);
 		}
 		return ifcEnergyConversionDeviceTypeEClass;
 	}
@@ -16992,7 +16710,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcEnergyProperties() {
 		if (ifcEnergyPropertiesEClass == null) {
-			ifcEnergyPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(470);
+			ifcEnergyPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(488);
 		}
 		return ifcEnergyPropertiesEClass;
 	}
@@ -17011,8 +16729,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcEnergyProperties_UserDefinedEnergySequence() {
-		return (EAttribute) getIfcEnergyProperties().getEStructuralFeatures().get(1);
+	public EReference getIfcEnergyProperties_UserDefinedEnergySequence() {
+		return (EReference) getIfcEnergyProperties().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -17022,7 +16740,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcEnvironmentalImpactValue() {
 		if (ifcEnvironmentalImpactValueEClass == null) {
-			ifcEnvironmentalImpactValueEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(471);
+			ifcEnvironmentalImpactValueEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(489);
 		}
 		return ifcEnvironmentalImpactValueEClass;
 	}
@@ -17032,8 +16750,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcEnvironmentalImpactValue_ImpactType() {
-		return (EAttribute) getIfcEnvironmentalImpactValue().getEStructuralFeatures().get(0);
+	public EReference getIfcEnvironmentalImpactValue_ImpactType() {
+		return (EReference) getIfcEnvironmentalImpactValue().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -17050,8 +16768,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcEnvironmentalImpactValue_UserDefinedCategory() {
-		return (EAttribute) getIfcEnvironmentalImpactValue().getEStructuralFeatures().get(2);
+	public EReference getIfcEnvironmentalImpactValue_UserDefinedCategory() {
+		return (EReference) getIfcEnvironmentalImpactValue().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -17061,7 +16779,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcEquipmentElement() {
 		if (ifcEquipmentElementEClass == null) {
-			ifcEquipmentElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(472);
+			ifcEquipmentElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(490);
 		}
 		return ifcEquipmentElementEClass;
 	}
@@ -17073,7 +16791,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcEquipmentStandard() {
 		if (ifcEquipmentStandardEClass == null) {
-			ifcEquipmentStandardEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(473);
+			ifcEquipmentStandardEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(491);
 		}
 		return ifcEquipmentStandardEClass;
 	}
@@ -17085,7 +16803,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcEvaporativeCoolerType() {
 		if (ifcEvaporativeCoolerTypeEClass == null) {
-			ifcEvaporativeCoolerTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(474);
+			ifcEvaporativeCoolerTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(492);
 		}
 		return ifcEvaporativeCoolerTypeEClass;
 	}
@@ -17106,7 +16824,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcEvaporatorType() {
 		if (ifcEvaporatorTypeEClass == null) {
-			ifcEvaporatorTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(475);
+			ifcEvaporatorTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(493);
 		}
 		return ifcEvaporatorTypeEClass;
 	}
@@ -17127,7 +16845,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcExtendedMaterialProperties() {
 		if (ifcExtendedMaterialPropertiesEClass == null) {
-			ifcExtendedMaterialPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(476);
+			ifcExtendedMaterialPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(494);
 		}
 		return ifcExtendedMaterialPropertiesEClass;
 	}
@@ -17146,8 +16864,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcExtendedMaterialProperties_Description() {
-		return (EAttribute) getIfcExtendedMaterialProperties().getEStructuralFeatures().get(1);
+	public EReference getIfcExtendedMaterialProperties_Description() {
+		return (EReference) getIfcExtendedMaterialProperties().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -17155,8 +16873,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcExtendedMaterialProperties_Name() {
-		return (EAttribute) getIfcExtendedMaterialProperties().getEStructuralFeatures().get(2);
+	public EReference getIfcExtendedMaterialProperties_Name() {
+		return (EReference) getIfcExtendedMaterialProperties().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -17166,7 +16884,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcExternalReference() {
 		if (ifcExternalReferenceEClass == null) {
-			ifcExternalReferenceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(477);
+			ifcExternalReferenceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(495);
 		}
 		return ifcExternalReferenceEClass;
 	}
@@ -17176,8 +16894,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcExternalReference_Location() {
-		return (EAttribute) getIfcExternalReference().getEStructuralFeatures().get(0);
+	public EReference getIfcExternalReference_Location() {
+		return (EReference) getIfcExternalReference().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -17185,8 +16903,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcExternalReference_ItemReference() {
-		return (EAttribute) getIfcExternalReference().getEStructuralFeatures().get(1);
+	public EReference getIfcExternalReference_ItemReference() {
+		return (EReference) getIfcExternalReference().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -17194,8 +16912,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcExternalReference_Name() {
-		return (EAttribute) getIfcExternalReference().getEStructuralFeatures().get(2);
+	public EReference getIfcExternalReference_Name() {
+		return (EReference) getIfcExternalReference().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -17205,7 +16923,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcExternallyDefinedHatchStyle() {
 		if (ifcExternallyDefinedHatchStyleEClass == null) {
-			ifcExternallyDefinedHatchStyleEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(478);
+			ifcExternallyDefinedHatchStyleEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(496);
 		}
 		return ifcExternallyDefinedHatchStyleEClass;
 	}
@@ -17217,7 +16935,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcExternallyDefinedSurfaceStyle() {
 		if (ifcExternallyDefinedSurfaceStyleEClass == null) {
-			ifcExternallyDefinedSurfaceStyleEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(479);
+			ifcExternallyDefinedSurfaceStyleEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(497);
 		}
 		return ifcExternallyDefinedSurfaceStyleEClass;
 	}
@@ -17229,7 +16947,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcExternallyDefinedSymbol() {
 		if (ifcExternallyDefinedSymbolEClass == null) {
-			ifcExternallyDefinedSymbolEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(480);
+			ifcExternallyDefinedSymbolEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(498);
 		}
 		return ifcExternallyDefinedSymbolEClass;
 	}
@@ -17241,7 +16959,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcExternallyDefinedTextFont() {
 		if (ifcExternallyDefinedTextFontEClass == null) {
-			ifcExternallyDefinedTextFontEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(481);
+			ifcExternallyDefinedTextFontEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(499);
 		}
 		return ifcExternallyDefinedTextFontEClass;
 	}
@@ -17253,7 +16971,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcExtrudedAreaSolid() {
 		if (ifcExtrudedAreaSolidEClass == null) {
-			ifcExtrudedAreaSolidEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(482);
+			ifcExtrudedAreaSolidEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(500);
 		}
 		return ifcExtrudedAreaSolidEClass;
 	}
@@ -17272,17 +16990,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcExtrudedAreaSolid_Depth() {
-		return (EAttribute) getIfcExtrudedAreaSolid().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcExtrudedAreaSolid_DepthAsString() {
-		return (EAttribute) getIfcExtrudedAreaSolid().getEStructuralFeatures().get(2);
+	public EReference getIfcExtrudedAreaSolid_Depth() {
+		return (EReference) getIfcExtrudedAreaSolid().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -17292,7 +17001,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcFace() {
 		if (ifcFaceEClass == null) {
-			ifcFaceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(483);
+			ifcFaceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(501);
 		}
 		return ifcFaceEClass;
 	}
@@ -17313,7 +17022,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcFaceBasedSurfaceModel() {
 		if (ifcFaceBasedSurfaceModelEClass == null) {
-			ifcFaceBasedSurfaceModelEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(484);
+			ifcFaceBasedSurfaceModelEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(502);
 		}
 		return ifcFaceBasedSurfaceModelEClass;
 	}
@@ -17332,8 +17041,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcFaceBasedSurfaceModel_Dim() {
-		return (EAttribute) getIfcFaceBasedSurfaceModel().getEStructuralFeatures().get(1);
+	public EReference getIfcFaceBasedSurfaceModel_Dim() {
+		return (EReference) getIfcFaceBasedSurfaceModel().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -17343,7 +17052,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcFaceBound() {
 		if (ifcFaceBoundEClass == null) {
-			ifcFaceBoundEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(485);
+			ifcFaceBoundEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(503);
 		}
 		return ifcFaceBoundEClass;
 	}
@@ -17362,8 +17071,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcFaceBound_Orientation() {
-		return (EAttribute) getIfcFaceBound().getEStructuralFeatures().get(1);
+	public EReference getIfcFaceBound_Orientation() {
+		return (EReference) getIfcFaceBound().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -17373,7 +17082,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcFaceOuterBound() {
 		if (ifcFaceOuterBoundEClass == null) {
-			ifcFaceOuterBoundEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(486);
+			ifcFaceOuterBoundEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(504);
 		}
 		return ifcFaceOuterBoundEClass;
 	}
@@ -17385,7 +17094,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcFaceSurface() {
 		if (ifcFaceSurfaceEClass == null) {
-			ifcFaceSurfaceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(487);
+			ifcFaceSurfaceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(505);
 		}
 		return ifcFaceSurfaceEClass;
 	}
@@ -17404,8 +17113,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcFaceSurface_SameSense() {
-		return (EAttribute) getIfcFaceSurface().getEStructuralFeatures().get(1);
+	public EReference getIfcFaceSurface_SameSense() {
+		return (EReference) getIfcFaceSurface().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -17415,7 +17124,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcFacetedBrep() {
 		if (ifcFacetedBrepEClass == null) {
-			ifcFacetedBrepEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(488);
+			ifcFacetedBrepEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(506);
 		}
 		return ifcFacetedBrepEClass;
 	}
@@ -17427,7 +17136,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcFacetedBrepWithVoids() {
 		if (ifcFacetedBrepWithVoidsEClass == null) {
-			ifcFacetedBrepWithVoidsEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(489);
+			ifcFacetedBrepWithVoidsEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(507);
 		}
 		return ifcFacetedBrepWithVoidsEClass;
 	}
@@ -17448,7 +17157,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcFailureConnectionCondition() {
 		if (ifcFailureConnectionConditionEClass == null) {
-			ifcFailureConnectionConditionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(490);
+			ifcFailureConnectionConditionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(508);
 		}
 		return ifcFailureConnectionConditionEClass;
 	}
@@ -17458,8 +17167,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcFailureConnectionCondition_TensionFailureX() {
-		return (EAttribute) getIfcFailureConnectionCondition().getEStructuralFeatures().get(0);
+	public EReference getIfcFailureConnectionCondition_TensionFailureX() {
+		return (EReference) getIfcFailureConnectionCondition().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -17467,8 +17176,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcFailureConnectionCondition_TensionFailureXAsString() {
-		return (EAttribute) getIfcFailureConnectionCondition().getEStructuralFeatures().get(1);
+	public EReference getIfcFailureConnectionCondition_TensionFailureY() {
+		return (EReference) getIfcFailureConnectionCondition().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -17476,8 +17185,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcFailureConnectionCondition_TensionFailureY() {
-		return (EAttribute) getIfcFailureConnectionCondition().getEStructuralFeatures().get(2);
+	public EReference getIfcFailureConnectionCondition_TensionFailureZ() {
+		return (EReference) getIfcFailureConnectionCondition().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -17485,8 +17194,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcFailureConnectionCondition_TensionFailureYAsString() {
-		return (EAttribute) getIfcFailureConnectionCondition().getEStructuralFeatures().get(3);
+	public EReference getIfcFailureConnectionCondition_CompressionFailureX() {
+		return (EReference) getIfcFailureConnectionCondition().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -17494,8 +17203,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcFailureConnectionCondition_TensionFailureZ() {
-		return (EAttribute) getIfcFailureConnectionCondition().getEStructuralFeatures().get(4);
+	public EReference getIfcFailureConnectionCondition_CompressionFailureY() {
+		return (EReference) getIfcFailureConnectionCondition().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -17503,62 +17212,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcFailureConnectionCondition_TensionFailureZAsString() {
-		return (EAttribute) getIfcFailureConnectionCondition().getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcFailureConnectionCondition_CompressionFailureX() {
-		return (EAttribute) getIfcFailureConnectionCondition().getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcFailureConnectionCondition_CompressionFailureXAsString() {
-		return (EAttribute) getIfcFailureConnectionCondition().getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcFailureConnectionCondition_CompressionFailureY() {
-		return (EAttribute) getIfcFailureConnectionCondition().getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcFailureConnectionCondition_CompressionFailureYAsString() {
-		return (EAttribute) getIfcFailureConnectionCondition().getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcFailureConnectionCondition_CompressionFailureZ() {
-		return (EAttribute) getIfcFailureConnectionCondition().getEStructuralFeatures().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcFailureConnectionCondition_CompressionFailureZAsString() {
-		return (EAttribute) getIfcFailureConnectionCondition().getEStructuralFeatures().get(11);
+	public EReference getIfcFailureConnectionCondition_CompressionFailureZ() {
+		return (EReference) getIfcFailureConnectionCondition().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -17568,7 +17223,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcFanType() {
 		if (ifcFanTypeEClass == null) {
-			ifcFanTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(491);
+			ifcFanTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(509);
 		}
 		return ifcFanTypeEClass;
 	}
@@ -17589,7 +17244,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcFastener() {
 		if (ifcFastenerEClass == null) {
-			ifcFastenerEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(492);
+			ifcFastenerEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(510);
 		}
 		return ifcFastenerEClass;
 	}
@@ -17601,7 +17256,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcFastenerType() {
 		if (ifcFastenerTypeEClass == null) {
-			ifcFastenerTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(493);
+			ifcFastenerTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(511);
 		}
 		return ifcFastenerTypeEClass;
 	}
@@ -17613,7 +17268,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcFeatureElement() {
 		if (ifcFeatureElementEClass == null) {
-			ifcFeatureElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(494);
+			ifcFeatureElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(512);
 		}
 		return ifcFeatureElementEClass;
 	}
@@ -17625,7 +17280,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcFeatureElementAddition() {
 		if (ifcFeatureElementAdditionEClass == null) {
-			ifcFeatureElementAdditionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(495);
+			ifcFeatureElementAdditionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(513);
 		}
 		return ifcFeatureElementAdditionEClass;
 	}
@@ -17646,7 +17301,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcFeatureElementSubtraction() {
 		if (ifcFeatureElementSubtractionEClass == null) {
-			ifcFeatureElementSubtractionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(496);
+			ifcFeatureElementSubtractionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(514);
 		}
 		return ifcFeatureElementSubtractionEClass;
 	}
@@ -17667,7 +17322,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcFillAreaStyle() {
 		if (ifcFillAreaStyleEClass == null) {
-			ifcFillAreaStyleEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(497);
+			ifcFillAreaStyleEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(515);
 		}
 		return ifcFillAreaStyleEClass;
 	}
@@ -17688,7 +17343,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcFillAreaStyleHatching() {
 		if (ifcFillAreaStyleHatchingEClass == null) {
-			ifcFillAreaStyleHatchingEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(498);
+			ifcFillAreaStyleHatchingEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(516);
 		}
 		return ifcFillAreaStyleHatchingEClass;
 	}
@@ -17734,17 +17389,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcFillAreaStyleHatching_HatchLineAngle() {
-		return (EAttribute) getIfcFillAreaStyleHatching().getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcFillAreaStyleHatching_HatchLineAngleAsString() {
-		return (EAttribute) getIfcFillAreaStyleHatching().getEStructuralFeatures().get(5);
+	public EReference getIfcFillAreaStyleHatching_HatchLineAngle() {
+		return (EReference) getIfcFillAreaStyleHatching().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -17754,7 +17400,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcFillAreaStyleTileSymbolWithStyle() {
 		if (ifcFillAreaStyleTileSymbolWithStyleEClass == null) {
-			ifcFillAreaStyleTileSymbolWithStyleEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(499);
+			ifcFillAreaStyleTileSymbolWithStyleEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(517);
 		}
 		return ifcFillAreaStyleTileSymbolWithStyleEClass;
 	}
@@ -17775,7 +17421,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcFillAreaStyleTiles() {
 		if (ifcFillAreaStyleTilesEClass == null) {
-			ifcFillAreaStyleTilesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(500);
+			ifcFillAreaStyleTilesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(518);
 		}
 		return ifcFillAreaStyleTilesEClass;
 	}
@@ -17803,17 +17449,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcFillAreaStyleTiles_TilingScale() {
-		return (EAttribute) getIfcFillAreaStyleTiles().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcFillAreaStyleTiles_TilingScaleAsString() {
-		return (EAttribute) getIfcFillAreaStyleTiles().getEStructuralFeatures().get(3);
+	public EReference getIfcFillAreaStyleTiles_TilingScale() {
+		return (EReference) getIfcFillAreaStyleTiles().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -17823,7 +17460,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcFilterType() {
 		if (ifcFilterTypeEClass == null) {
-			ifcFilterTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(501);
+			ifcFilterTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(519);
 		}
 		return ifcFilterTypeEClass;
 	}
@@ -17844,7 +17481,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcFireSuppressionTerminalType() {
 		if (ifcFireSuppressionTerminalTypeEClass == null) {
-			ifcFireSuppressionTerminalTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(502);
+			ifcFireSuppressionTerminalTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(520);
 		}
 		return ifcFireSuppressionTerminalTypeEClass;
 	}
@@ -17865,7 +17502,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcFlowController() {
 		if (ifcFlowControllerEClass == null) {
-			ifcFlowControllerEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(503);
+			ifcFlowControllerEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(521);
 		}
 		return ifcFlowControllerEClass;
 	}
@@ -17877,7 +17514,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcFlowControllerType() {
 		if (ifcFlowControllerTypeEClass == null) {
-			ifcFlowControllerTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(504);
+			ifcFlowControllerTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(522);
 		}
 		return ifcFlowControllerTypeEClass;
 	}
@@ -17889,7 +17526,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcFlowFitting() {
 		if (ifcFlowFittingEClass == null) {
-			ifcFlowFittingEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(505);
+			ifcFlowFittingEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(523);
 		}
 		return ifcFlowFittingEClass;
 	}
@@ -17901,7 +17538,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcFlowFittingType() {
 		if (ifcFlowFittingTypeEClass == null) {
-			ifcFlowFittingTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(506);
+			ifcFlowFittingTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(524);
 		}
 		return ifcFlowFittingTypeEClass;
 	}
@@ -17913,7 +17550,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcFlowInstrumentType() {
 		if (ifcFlowInstrumentTypeEClass == null) {
-			ifcFlowInstrumentTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(507);
+			ifcFlowInstrumentTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(525);
 		}
 		return ifcFlowInstrumentTypeEClass;
 	}
@@ -17934,7 +17571,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcFlowMeterType() {
 		if (ifcFlowMeterTypeEClass == null) {
-			ifcFlowMeterTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(508);
+			ifcFlowMeterTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(526);
 		}
 		return ifcFlowMeterTypeEClass;
 	}
@@ -17955,7 +17592,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcFlowMovingDevice() {
 		if (ifcFlowMovingDeviceEClass == null) {
-			ifcFlowMovingDeviceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(509);
+			ifcFlowMovingDeviceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(527);
 		}
 		return ifcFlowMovingDeviceEClass;
 	}
@@ -17967,7 +17604,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcFlowMovingDeviceType() {
 		if (ifcFlowMovingDeviceTypeEClass == null) {
-			ifcFlowMovingDeviceTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(510);
+			ifcFlowMovingDeviceTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(528);
 		}
 		return ifcFlowMovingDeviceTypeEClass;
 	}
@@ -17979,7 +17616,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcFlowSegment() {
 		if (ifcFlowSegmentEClass == null) {
-			ifcFlowSegmentEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(511);
+			ifcFlowSegmentEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(529);
 		}
 		return ifcFlowSegmentEClass;
 	}
@@ -17991,7 +17628,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcFlowSegmentType() {
 		if (ifcFlowSegmentTypeEClass == null) {
-			ifcFlowSegmentTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(512);
+			ifcFlowSegmentTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(530);
 		}
 		return ifcFlowSegmentTypeEClass;
 	}
@@ -18003,7 +17640,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcFlowStorageDevice() {
 		if (ifcFlowStorageDeviceEClass == null) {
-			ifcFlowStorageDeviceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(513);
+			ifcFlowStorageDeviceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(531);
 		}
 		return ifcFlowStorageDeviceEClass;
 	}
@@ -18015,7 +17652,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcFlowStorageDeviceType() {
 		if (ifcFlowStorageDeviceTypeEClass == null) {
-			ifcFlowStorageDeviceTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(514);
+			ifcFlowStorageDeviceTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(532);
 		}
 		return ifcFlowStorageDeviceTypeEClass;
 	}
@@ -18027,7 +17664,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcFlowTerminal() {
 		if (ifcFlowTerminalEClass == null) {
-			ifcFlowTerminalEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(515);
+			ifcFlowTerminalEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(533);
 		}
 		return ifcFlowTerminalEClass;
 	}
@@ -18039,7 +17676,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcFlowTerminalType() {
 		if (ifcFlowTerminalTypeEClass == null) {
-			ifcFlowTerminalTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(516);
+			ifcFlowTerminalTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(534);
 		}
 		return ifcFlowTerminalTypeEClass;
 	}
@@ -18051,7 +17688,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcFlowTreatmentDevice() {
 		if (ifcFlowTreatmentDeviceEClass == null) {
-			ifcFlowTreatmentDeviceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(517);
+			ifcFlowTreatmentDeviceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(535);
 		}
 		return ifcFlowTreatmentDeviceEClass;
 	}
@@ -18063,7 +17700,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcFlowTreatmentDeviceType() {
 		if (ifcFlowTreatmentDeviceTypeEClass == null) {
-			ifcFlowTreatmentDeviceTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(518);
+			ifcFlowTreatmentDeviceTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(536);
 		}
 		return ifcFlowTreatmentDeviceTypeEClass;
 	}
@@ -18075,7 +17712,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcFluidFlowProperties() {
 		if (ifcFluidFlowPropertiesEClass == null) {
-			ifcFluidFlowPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(519);
+			ifcFluidFlowPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(537);
 		}
 		return ifcFluidFlowPropertiesEClass;
 	}
@@ -18139,8 +17776,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcFluidFlowProperties_UserDefinedPropertySource() {
-		return (EAttribute) getIfcFluidFlowProperties().getEStructuralFeatures().get(6);
+	public EReference getIfcFluidFlowProperties_UserDefinedPropertySource() {
+		return (EReference) getIfcFluidFlowProperties().getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -18148,8 +17785,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcFluidFlowProperties_TemperatureSingleValue() {
-		return (EAttribute) getIfcFluidFlowProperties().getEStructuralFeatures().get(7);
+	public EReference getIfcFluidFlowProperties_TemperatureSingleValue() {
+		return (EReference) getIfcFluidFlowProperties().getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -18157,26 +17794,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcFluidFlowProperties_TemperatureSingleValueAsString() {
-		return (EAttribute) getIfcFluidFlowProperties().getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcFluidFlowProperties_WetBulbTemperatureSingleValue() {
-		return (EAttribute) getIfcFluidFlowProperties().getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcFluidFlowProperties_WetBulbTemperatureSingleValueAsString() {
-		return (EAttribute) getIfcFluidFlowProperties().getEStructuralFeatures().get(10);
+	public EReference getIfcFluidFlowProperties_WetBulbTemperatureSingleValue() {
+		return (EReference) getIfcFluidFlowProperties().getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -18185,7 +17804,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EReference getIfcFluidFlowProperties_WetBulbTemperatureTimeSeries() {
-		return (EReference) getIfcFluidFlowProperties().getEStructuralFeatures().get(11);
+		return (EReference) getIfcFluidFlowProperties().getEStructuralFeatures().get(9);
 	}
 
 	/**
@@ -18194,7 +17813,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EReference getIfcFluidFlowProperties_TemperatureTimeSeries() {
-		return (EReference) getIfcFluidFlowProperties().getEStructuralFeatures().get(12);
+		return (EReference) getIfcFluidFlowProperties().getEStructuralFeatures().get(10);
 	}
 
 	/**
@@ -18203,6 +17822,24 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EReference getIfcFluidFlowProperties_FlowrateSingleValue() {
+		return (EReference) getIfcFluidFlowProperties().getEStructuralFeatures().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getIfcFluidFlowProperties_FlowConditionSingleValue() {
+		return (EReference) getIfcFluidFlowProperties().getEStructuralFeatures().get(12);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getIfcFluidFlowProperties_VelocitySingleValue() {
 		return (EReference) getIfcFluidFlowProperties().getEStructuralFeatures().get(13);
 	}
 
@@ -18211,53 +17848,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcFluidFlowProperties_FlowConditionSingleValue() {
-		return (EAttribute) getIfcFluidFlowProperties().getEStructuralFeatures().get(14);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcFluidFlowProperties_FlowConditionSingleValueAsString() {
-		return (EAttribute) getIfcFluidFlowProperties().getEStructuralFeatures().get(15);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcFluidFlowProperties_VelocitySingleValue() {
-		return (EAttribute) getIfcFluidFlowProperties().getEStructuralFeatures().get(16);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcFluidFlowProperties_VelocitySingleValueAsString() {
-		return (EAttribute) getIfcFluidFlowProperties().getEStructuralFeatures().get(17);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcFluidFlowProperties_PressureSingleValue() {
-		return (EAttribute) getIfcFluidFlowProperties().getEStructuralFeatures().get(18);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcFluidFlowProperties_PressureSingleValueAsString() {
-		return (EAttribute) getIfcFluidFlowProperties().getEStructuralFeatures().get(19);
+	public EReference getIfcFluidFlowProperties_PressureSingleValue() {
+		return (EReference) getIfcFluidFlowProperties().getEStructuralFeatures().get(14);
 	}
 
 	/**
@@ -18267,7 +17859,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcFooting() {
 		if (ifcFootingEClass == null) {
-			ifcFootingEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(520);
+			ifcFootingEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(538);
 		}
 		return ifcFootingEClass;
 	}
@@ -18288,7 +17880,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcFuelProperties() {
 		if (ifcFuelPropertiesEClass == null) {
-			ifcFuelPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(521);
+			ifcFuelPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(539);
 		}
 		return ifcFuelPropertiesEClass;
 	}
@@ -18298,8 +17890,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcFuelProperties_CombustionTemperature() {
-		return (EAttribute) getIfcFuelProperties().getEStructuralFeatures().get(0);
+	public EReference getIfcFuelProperties_CombustionTemperature() {
+		return (EReference) getIfcFuelProperties().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -18307,8 +17899,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcFuelProperties_CombustionTemperatureAsString() {
-		return (EAttribute) getIfcFuelProperties().getEStructuralFeatures().get(1);
+	public EReference getIfcFuelProperties_CarbonContent() {
+		return (EReference) getIfcFuelProperties().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -18316,8 +17908,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcFuelProperties_CarbonContent() {
-		return (EAttribute) getIfcFuelProperties().getEStructuralFeatures().get(2);
+	public EReference getIfcFuelProperties_LowerHeatingValue() {
+		return (EReference) getIfcFuelProperties().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -18325,44 +17917,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcFuelProperties_CarbonContentAsString() {
-		return (EAttribute) getIfcFuelProperties().getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcFuelProperties_LowerHeatingValue() {
-		return (EAttribute) getIfcFuelProperties().getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcFuelProperties_LowerHeatingValueAsString() {
-		return (EAttribute) getIfcFuelProperties().getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcFuelProperties_HigherHeatingValue() {
-		return (EAttribute) getIfcFuelProperties().getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcFuelProperties_HigherHeatingValueAsString() {
-		return (EAttribute) getIfcFuelProperties().getEStructuralFeatures().get(7);
+	public EReference getIfcFuelProperties_HigherHeatingValue() {
+		return (EReference) getIfcFuelProperties().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -18372,7 +17928,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcFurnishingElement() {
 		if (ifcFurnishingElementEClass == null) {
-			ifcFurnishingElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(522);
+			ifcFurnishingElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(540);
 		}
 		return ifcFurnishingElementEClass;
 	}
@@ -18384,7 +17940,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcFurnishingElementType() {
 		if (ifcFurnishingElementTypeEClass == null) {
-			ifcFurnishingElementTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(523);
+			ifcFurnishingElementTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(541);
 		}
 		return ifcFurnishingElementTypeEClass;
 	}
@@ -18396,7 +17952,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcFurnitureStandard() {
 		if (ifcFurnitureStandardEClass == null) {
-			ifcFurnitureStandardEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(524);
+			ifcFurnitureStandardEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(542);
 		}
 		return ifcFurnitureStandardEClass;
 	}
@@ -18408,7 +17964,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcFurnitureType() {
 		if (ifcFurnitureTypeEClass == null) {
-			ifcFurnitureTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(525);
+			ifcFurnitureTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(543);
 		}
 		return ifcFurnitureTypeEClass;
 	}
@@ -18429,7 +17985,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcGasTerminalType() {
 		if (ifcGasTerminalTypeEClass == null) {
-			ifcGasTerminalTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(526);
+			ifcGasTerminalTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(544);
 		}
 		return ifcGasTerminalTypeEClass;
 	}
@@ -18450,7 +18006,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcGeneralMaterialProperties() {
 		if (ifcGeneralMaterialPropertiesEClass == null) {
-			ifcGeneralMaterialPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(527);
+			ifcGeneralMaterialPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(545);
 		}
 		return ifcGeneralMaterialPropertiesEClass;
 	}
@@ -18460,8 +18016,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcGeneralMaterialProperties_MolecularWeight() {
-		return (EAttribute) getIfcGeneralMaterialProperties().getEStructuralFeatures().get(0);
+	public EReference getIfcGeneralMaterialProperties_MolecularWeight() {
+		return (EReference) getIfcGeneralMaterialProperties().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -18469,8 +18025,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcGeneralMaterialProperties_MolecularWeightAsString() {
-		return (EAttribute) getIfcGeneralMaterialProperties().getEStructuralFeatures().get(1);
+	public EReference getIfcGeneralMaterialProperties_Porosity() {
+		return (EReference) getIfcGeneralMaterialProperties().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -18478,35 +18034,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcGeneralMaterialProperties_Porosity() {
-		return (EAttribute) getIfcGeneralMaterialProperties().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcGeneralMaterialProperties_PorosityAsString() {
-		return (EAttribute) getIfcGeneralMaterialProperties().getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcGeneralMaterialProperties_MassDensity() {
-		return (EAttribute) getIfcGeneralMaterialProperties().getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcGeneralMaterialProperties_MassDensityAsString() {
-		return (EAttribute) getIfcGeneralMaterialProperties().getEStructuralFeatures().get(5);
+	public EReference getIfcGeneralMaterialProperties_MassDensity() {
+		return (EReference) getIfcGeneralMaterialProperties().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -18516,7 +18045,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcGeneralProfileProperties() {
 		if (ifcGeneralProfilePropertiesEClass == null) {
-			ifcGeneralProfilePropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(528);
+			ifcGeneralProfilePropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(546);
 		}
 		return ifcGeneralProfilePropertiesEClass;
 	}
@@ -18526,8 +18055,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcGeneralProfileProperties_PhysicalWeight() {
-		return (EAttribute) getIfcGeneralProfileProperties().getEStructuralFeatures().get(0);
+	public EReference getIfcGeneralProfileProperties_PhysicalWeight() {
+		return (EReference) getIfcGeneralProfileProperties().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -18535,8 +18064,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcGeneralProfileProperties_PhysicalWeightAsString() {
-		return (EAttribute) getIfcGeneralProfileProperties().getEStructuralFeatures().get(1);
+	public EReference getIfcGeneralProfileProperties_Perimeter() {
+		return (EReference) getIfcGeneralProfileProperties().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -18544,8 +18073,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcGeneralProfileProperties_Perimeter() {
-		return (EAttribute) getIfcGeneralProfileProperties().getEStructuralFeatures().get(2);
+	public EReference getIfcGeneralProfileProperties_MinimumPlateThickness() {
+		return (EReference) getIfcGeneralProfileProperties().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -18553,8 +18082,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcGeneralProfileProperties_PerimeterAsString() {
-		return (EAttribute) getIfcGeneralProfileProperties().getEStructuralFeatures().get(3);
+	public EReference getIfcGeneralProfileProperties_MaximumPlateThickness() {
+		return (EReference) getIfcGeneralProfileProperties().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -18562,53 +18091,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcGeneralProfileProperties_MinimumPlateThickness() {
-		return (EAttribute) getIfcGeneralProfileProperties().getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcGeneralProfileProperties_MinimumPlateThicknessAsString() {
-		return (EAttribute) getIfcGeneralProfileProperties().getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcGeneralProfileProperties_MaximumPlateThickness() {
-		return (EAttribute) getIfcGeneralProfileProperties().getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcGeneralProfileProperties_MaximumPlateThicknessAsString() {
-		return (EAttribute) getIfcGeneralProfileProperties().getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcGeneralProfileProperties_CrossSectionArea() {
-		return (EAttribute) getIfcGeneralProfileProperties().getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcGeneralProfileProperties_CrossSectionAreaAsString() {
-		return (EAttribute) getIfcGeneralProfileProperties().getEStructuralFeatures().get(9);
+	public EReference getIfcGeneralProfileProperties_CrossSectionArea() {
+		return (EReference) getIfcGeneralProfileProperties().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -18618,7 +18102,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcGeometricCurveSet() {
 		if (ifcGeometricCurveSetEClass == null) {
-			ifcGeometricCurveSetEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(529);
+			ifcGeometricCurveSetEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(547);
 		}
 		return ifcGeometricCurveSetEClass;
 	}
@@ -18630,7 +18114,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcGeometricRepresentationContext() {
 		if (ifcGeometricRepresentationContextEClass == null) {
-			ifcGeometricRepresentationContextEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(530);
+			ifcGeometricRepresentationContextEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(548);
 		}
 		return ifcGeometricRepresentationContextEClass;
 	}
@@ -18640,8 +18124,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcGeometricRepresentationContext_CoordinateSpaceDimension() {
-		return (EAttribute) getIfcGeometricRepresentationContext().getEStructuralFeatures().get(0);
+	public EReference getIfcGeometricRepresentationContext_CoordinateSpaceDimension() {
+		return (EReference) getIfcGeometricRepresentationContext().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -18649,17 +18133,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcGeometricRepresentationContext_Precision() {
-		return (EAttribute) getIfcGeometricRepresentationContext().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcGeometricRepresentationContext_PrecisionAsString() {
-		return (EAttribute) getIfcGeometricRepresentationContext().getEStructuralFeatures().get(2);
+	public EReference getIfcGeometricRepresentationContext_Precision() {
+		return (EReference) getIfcGeometricRepresentationContext().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -18668,7 +18143,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EReference getIfcGeometricRepresentationContext_WorldCoordinateSystem() {
-		return (EReference) getIfcGeometricRepresentationContext().getEStructuralFeatures().get(3);
+		return (EReference) getIfcGeometricRepresentationContext().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -18677,7 +18152,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EReference getIfcGeometricRepresentationContext_TrueNorth() {
-		return (EReference) getIfcGeometricRepresentationContext().getEStructuralFeatures().get(4);
+		return (EReference) getIfcGeometricRepresentationContext().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -18686,7 +18161,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EReference getIfcGeometricRepresentationContext_HasSubContexts() {
-		return (EReference) getIfcGeometricRepresentationContext().getEStructuralFeatures().get(5);
+		return (EReference) getIfcGeometricRepresentationContext().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -18696,7 +18171,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcGeometricRepresentationItem() {
 		if (ifcGeometricRepresentationItemEClass == null) {
-			ifcGeometricRepresentationItemEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(531);
+			ifcGeometricRepresentationItemEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(549);
 		}
 		return ifcGeometricRepresentationItemEClass;
 	}
@@ -18708,7 +18183,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcGeometricRepresentationSubContext() {
 		if (ifcGeometricRepresentationSubContextEClass == null) {
-			ifcGeometricRepresentationSubContextEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(532);
+			ifcGeometricRepresentationSubContextEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(550);
 		}
 		return ifcGeometricRepresentationSubContextEClass;
 	}
@@ -18727,17 +18202,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcGeometricRepresentationSubContext_TargetScale() {
-		return (EAttribute) getIfcGeometricRepresentationSubContext().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcGeometricRepresentationSubContext_TargetScaleAsString() {
-		return (EAttribute) getIfcGeometricRepresentationSubContext().getEStructuralFeatures().get(2);
+	public EReference getIfcGeometricRepresentationSubContext_TargetScale() {
+		return (EReference) getIfcGeometricRepresentationSubContext().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -18746,7 +18212,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EAttribute getIfcGeometricRepresentationSubContext_TargetView() {
-		return (EAttribute) getIfcGeometricRepresentationSubContext().getEStructuralFeatures().get(3);
+		return (EAttribute) getIfcGeometricRepresentationSubContext().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -18754,8 +18220,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcGeometricRepresentationSubContext_UserDefinedTargetView() {
-		return (EAttribute) getIfcGeometricRepresentationSubContext().getEStructuralFeatures().get(4);
+	public EReference getIfcGeometricRepresentationSubContext_UserDefinedTargetView() {
+		return (EReference) getIfcGeometricRepresentationSubContext().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -18765,7 +18231,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcGeometricSet() {
 		if (ifcGeometricSetEClass == null) {
-			ifcGeometricSetEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(533);
+			ifcGeometricSetEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(551);
 		}
 		return ifcGeometricSetEClass;
 	}
@@ -18784,8 +18250,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcGeometricSet_Dim() {
-		return (EAttribute) getIfcGeometricSet().getEStructuralFeatures().get(1);
+	public EReference getIfcGeometricSet_Dim() {
+		return (EReference) getIfcGeometricSet().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -18795,7 +18261,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcGrid() {
 		if (ifcGridEClass == null) {
-			ifcGridEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(534);
+			ifcGridEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(552);
 		}
 		return ifcGridEClass;
 	}
@@ -18843,7 +18309,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcGridAxis() {
 		if (ifcGridAxisEClass == null) {
-			ifcGridAxisEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(535);
+			ifcGridAxisEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(553);
 		}
 		return ifcGridAxisEClass;
 	}
@@ -18853,8 +18319,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcGridAxis_AxisTag() {
-		return (EAttribute) getIfcGridAxis().getEStructuralFeatures().get(0);
+	public EReference getIfcGridAxis_AxisTag() {
+		return (EReference) getIfcGridAxis().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -18871,8 +18337,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcGridAxis_SameSense() {
-		return (EAttribute) getIfcGridAxis().getEStructuralFeatures().get(2);
+	public EReference getIfcGridAxis_SameSense() {
+		return (EReference) getIfcGridAxis().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -18918,7 +18384,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcGridPlacement() {
 		if (ifcGridPlacementEClass == null) {
-			ifcGridPlacementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(536);
+			ifcGridPlacementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(554);
 		}
 		return ifcGridPlacementEClass;
 	}
@@ -18948,7 +18414,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcGroup() {
 		if (ifcGroupEClass == null) {
-			ifcGroupEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(537);
+			ifcGroupEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(555);
 		}
 		return ifcGroupEClass;
 	}
@@ -18969,7 +18435,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcHalfSpaceSolid() {
 		if (ifcHalfSpaceSolidEClass == null) {
-			ifcHalfSpaceSolidEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(538);
+			ifcHalfSpaceSolidEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(556);
 		}
 		return ifcHalfSpaceSolidEClass;
 	}
@@ -18988,8 +18454,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcHalfSpaceSolid_AgreementFlag() {
-		return (EAttribute) getIfcHalfSpaceSolid().getEStructuralFeatures().get(1);
+	public EReference getIfcHalfSpaceSolid_AgreementFlag() {
+		return (EReference) getIfcHalfSpaceSolid().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -18997,8 +18463,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcHalfSpaceSolid_Dim() {
-		return (EAttribute) getIfcHalfSpaceSolid().getEStructuralFeatures().get(2);
+	public EReference getIfcHalfSpaceSolid_Dim() {
+		return (EReference) getIfcHalfSpaceSolid().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -19008,7 +18474,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcHeatExchangerType() {
 		if (ifcHeatExchangerTypeEClass == null) {
-			ifcHeatExchangerTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(539);
+			ifcHeatExchangerTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(557);
 		}
 		return ifcHeatExchangerTypeEClass;
 	}
@@ -19029,7 +18495,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcHumidifierType() {
 		if (ifcHumidifierTypeEClass == null) {
-			ifcHumidifierTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(540);
+			ifcHumidifierTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(558);
 		}
 		return ifcHumidifierTypeEClass;
 	}
@@ -19050,7 +18516,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcHygroscopicMaterialProperties() {
 		if (ifcHygroscopicMaterialPropertiesEClass == null) {
-			ifcHygroscopicMaterialPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(541);
+			ifcHygroscopicMaterialPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(559);
 		}
 		return ifcHygroscopicMaterialPropertiesEClass;
 	}
@@ -19060,8 +18526,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcHygroscopicMaterialProperties_UpperVaporResistanceFactor() {
-		return (EAttribute) getIfcHygroscopicMaterialProperties().getEStructuralFeatures().get(0);
+	public EReference getIfcHygroscopicMaterialProperties_UpperVaporResistanceFactor() {
+		return (EReference) getIfcHygroscopicMaterialProperties().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -19069,8 +18535,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcHygroscopicMaterialProperties_UpperVaporResistanceFactorAsString() {
-		return (EAttribute) getIfcHygroscopicMaterialProperties().getEStructuralFeatures().get(1);
+	public EReference getIfcHygroscopicMaterialProperties_LowerVaporResistanceFactor() {
+		return (EReference) getIfcHygroscopicMaterialProperties().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -19078,8 +18544,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcHygroscopicMaterialProperties_LowerVaporResistanceFactor() {
-		return (EAttribute) getIfcHygroscopicMaterialProperties().getEStructuralFeatures().get(2);
+	public EReference getIfcHygroscopicMaterialProperties_IsothermalMoistureCapacity() {
+		return (EReference) getIfcHygroscopicMaterialProperties().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -19087,8 +18553,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcHygroscopicMaterialProperties_LowerVaporResistanceFactorAsString() {
-		return (EAttribute) getIfcHygroscopicMaterialProperties().getEStructuralFeatures().get(3);
+	public EReference getIfcHygroscopicMaterialProperties_VaporPermeability() {
+		return (EReference) getIfcHygroscopicMaterialProperties().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -19096,53 +18562,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcHygroscopicMaterialProperties_IsothermalMoistureCapacity() {
-		return (EAttribute) getIfcHygroscopicMaterialProperties().getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcHygroscopicMaterialProperties_IsothermalMoistureCapacityAsString() {
-		return (EAttribute) getIfcHygroscopicMaterialProperties().getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcHygroscopicMaterialProperties_VaporPermeability() {
-		return (EAttribute) getIfcHygroscopicMaterialProperties().getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcHygroscopicMaterialProperties_VaporPermeabilityAsString() {
-		return (EAttribute) getIfcHygroscopicMaterialProperties().getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcHygroscopicMaterialProperties_MoistureDiffusivity() {
-		return (EAttribute) getIfcHygroscopicMaterialProperties().getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcHygroscopicMaterialProperties_MoistureDiffusivityAsString() {
-		return (EAttribute) getIfcHygroscopicMaterialProperties().getEStructuralFeatures().get(9);
+	public EReference getIfcHygroscopicMaterialProperties_MoistureDiffusivity() {
+		return (EReference) getIfcHygroscopicMaterialProperties().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -19152,7 +18573,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcIShapeProfileDef() {
 		if (ifcIShapeProfileDefEClass == null) {
-			ifcIShapeProfileDefEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(542);
+			ifcIShapeProfileDefEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(560);
 		}
 		return ifcIShapeProfileDefEClass;
 	}
@@ -19162,8 +18583,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcIShapeProfileDef_OverallWidth() {
-		return (EAttribute) getIfcIShapeProfileDef().getEStructuralFeatures().get(0);
+	public EReference getIfcIShapeProfileDef_OverallWidth() {
+		return (EReference) getIfcIShapeProfileDef().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -19171,8 +18592,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcIShapeProfileDef_OverallWidthAsString() {
-		return (EAttribute) getIfcIShapeProfileDef().getEStructuralFeatures().get(1);
+	public EReference getIfcIShapeProfileDef_OverallDepth() {
+		return (EReference) getIfcIShapeProfileDef().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -19180,8 +18601,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcIShapeProfileDef_OverallDepth() {
-		return (EAttribute) getIfcIShapeProfileDef().getEStructuralFeatures().get(2);
+	public EReference getIfcIShapeProfileDef_WebThickness() {
+		return (EReference) getIfcIShapeProfileDef().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -19189,8 +18610,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcIShapeProfileDef_OverallDepthAsString() {
-		return (EAttribute) getIfcIShapeProfileDef().getEStructuralFeatures().get(3);
+	public EReference getIfcIShapeProfileDef_FlangeThickness() {
+		return (EReference) getIfcIShapeProfileDef().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -19198,53 +18619,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcIShapeProfileDef_WebThickness() {
-		return (EAttribute) getIfcIShapeProfileDef().getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcIShapeProfileDef_WebThicknessAsString() {
-		return (EAttribute) getIfcIShapeProfileDef().getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcIShapeProfileDef_FlangeThickness() {
-		return (EAttribute) getIfcIShapeProfileDef().getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcIShapeProfileDef_FlangeThicknessAsString() {
-		return (EAttribute) getIfcIShapeProfileDef().getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcIShapeProfileDef_FilletRadius() {
-		return (EAttribute) getIfcIShapeProfileDef().getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcIShapeProfileDef_FilletRadiusAsString() {
-		return (EAttribute) getIfcIShapeProfileDef().getEStructuralFeatures().get(9);
+	public EReference getIfcIShapeProfileDef_FilletRadius() {
+		return (EReference) getIfcIShapeProfileDef().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -19254,7 +18630,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcImageTexture() {
 		if (ifcImageTextureEClass == null) {
-			ifcImageTextureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(543);
+			ifcImageTextureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(561);
 		}
 		return ifcImageTextureEClass;
 	}
@@ -19264,8 +18640,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcImageTexture_UrlReference() {
-		return (EAttribute) getIfcImageTexture().getEStructuralFeatures().get(0);
+	public EReference getIfcImageTexture_UrlReference() {
+		return (EReference) getIfcImageTexture().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -19275,7 +18651,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcInventory() {
 		if (ifcInventoryEClass == null) {
-			ifcInventoryEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(544);
+			ifcInventoryEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(562);
 		}
 		return ifcInventoryEClass;
 	}
@@ -19341,7 +18717,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcIrregularTimeSeries() {
 		if (ifcIrregularTimeSeriesEClass == null) {
-			ifcIrregularTimeSeriesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(545);
+			ifcIrregularTimeSeriesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(563);
 		}
 		return ifcIrregularTimeSeriesEClass;
 	}
@@ -19362,7 +18738,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcIrregularTimeSeriesValue() {
 		if (ifcIrregularTimeSeriesValueEClass == null) {
-			ifcIrregularTimeSeriesValueEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(546);
+			ifcIrregularTimeSeriesValueEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(564);
 		}
 		return ifcIrregularTimeSeriesValueEClass;
 	}
@@ -19392,7 +18768,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcJunctionBoxType() {
 		if (ifcJunctionBoxTypeEClass == null) {
-			ifcJunctionBoxTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(547);
+			ifcJunctionBoxTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(565);
 		}
 		return ifcJunctionBoxTypeEClass;
 	}
@@ -19413,7 +18789,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcLShapeProfileDef() {
 		if (ifcLShapeProfileDefEClass == null) {
-			ifcLShapeProfileDefEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(548);
+			ifcLShapeProfileDefEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(566);
 		}
 		return ifcLShapeProfileDefEClass;
 	}
@@ -19423,8 +18799,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcLShapeProfileDef_Depth() {
-		return (EAttribute) getIfcLShapeProfileDef().getEStructuralFeatures().get(0);
+	public EReference getIfcLShapeProfileDef_Depth() {
+		return (EReference) getIfcLShapeProfileDef().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -19432,8 +18808,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcLShapeProfileDef_DepthAsString() {
-		return (EAttribute) getIfcLShapeProfileDef().getEStructuralFeatures().get(1);
+	public EReference getIfcLShapeProfileDef_Width() {
+		return (EReference) getIfcLShapeProfileDef().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -19441,8 +18817,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcLShapeProfileDef_Width() {
-		return (EAttribute) getIfcLShapeProfileDef().getEStructuralFeatures().get(2);
+	public EReference getIfcLShapeProfileDef_Thickness() {
+		return (EReference) getIfcLShapeProfileDef().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -19450,8 +18826,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcLShapeProfileDef_WidthAsString() {
-		return (EAttribute) getIfcLShapeProfileDef().getEStructuralFeatures().get(3);
+	public EReference getIfcLShapeProfileDef_FilletRadius() {
+		return (EReference) getIfcLShapeProfileDef().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -19459,8 +18835,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcLShapeProfileDef_Thickness() {
-		return (EAttribute) getIfcLShapeProfileDef().getEStructuralFeatures().get(4);
+	public EReference getIfcLShapeProfileDef_EdgeRadius() {
+		return (EReference) getIfcLShapeProfileDef().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -19468,8 +18844,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcLShapeProfileDef_ThicknessAsString() {
-		return (EAttribute) getIfcLShapeProfileDef().getEStructuralFeatures().get(5);
+	public EReference getIfcLShapeProfileDef_LegSlope() {
+		return (EReference) getIfcLShapeProfileDef().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -19477,8 +18853,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcLShapeProfileDef_FilletRadius() {
-		return (EAttribute) getIfcLShapeProfileDef().getEStructuralFeatures().get(6);
+	public EReference getIfcLShapeProfileDef_CentreOfGravityInX() {
+		return (EReference) getIfcLShapeProfileDef().getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -19486,80 +18862,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcLShapeProfileDef_FilletRadiusAsString() {
-		return (EAttribute) getIfcLShapeProfileDef().getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcLShapeProfileDef_EdgeRadius() {
-		return (EAttribute) getIfcLShapeProfileDef().getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcLShapeProfileDef_EdgeRadiusAsString() {
-		return (EAttribute) getIfcLShapeProfileDef().getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcLShapeProfileDef_LegSlope() {
-		return (EAttribute) getIfcLShapeProfileDef().getEStructuralFeatures().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcLShapeProfileDef_LegSlopeAsString() {
-		return (EAttribute) getIfcLShapeProfileDef().getEStructuralFeatures().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcLShapeProfileDef_CentreOfGravityInX() {
-		return (EAttribute) getIfcLShapeProfileDef().getEStructuralFeatures().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcLShapeProfileDef_CentreOfGravityInXAsString() {
-		return (EAttribute) getIfcLShapeProfileDef().getEStructuralFeatures().get(13);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcLShapeProfileDef_CentreOfGravityInY() {
-		return (EAttribute) getIfcLShapeProfileDef().getEStructuralFeatures().get(14);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcLShapeProfileDef_CentreOfGravityInYAsString() {
-		return (EAttribute) getIfcLShapeProfileDef().getEStructuralFeatures().get(15);
+	public EReference getIfcLShapeProfileDef_CentreOfGravityInY() {
+		return (EReference) getIfcLShapeProfileDef().getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -19569,7 +18873,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcLaborResource() {
 		if (ifcLaborResourceEClass == null) {
-			ifcLaborResourceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(549);
+			ifcLaborResourceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(567);
 		}
 		return ifcLaborResourceEClass;
 	}
@@ -19579,8 +18883,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcLaborResource_SkillSet() {
-		return (EAttribute) getIfcLaborResource().getEStructuralFeatures().get(0);
+	public EReference getIfcLaborResource_SkillSet() {
+		return (EReference) getIfcLaborResource().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -19590,7 +18894,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcLampType() {
 		if (ifcLampTypeEClass == null) {
-			ifcLampTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(550);
+			ifcLampTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(568);
 		}
 		return ifcLampTypeEClass;
 	}
@@ -19611,7 +18915,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcLibraryInformation() {
 		if (ifcLibraryInformationEClass == null) {
-			ifcLibraryInformationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(551);
+			ifcLibraryInformationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(569);
 		}
 		return ifcLibraryInformationEClass;
 	}
@@ -19621,8 +18925,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcLibraryInformation_Name() {
-		return (EAttribute) getIfcLibraryInformation().getEStructuralFeatures().get(0);
+	public EReference getIfcLibraryInformation_Name() {
+		return (EReference) getIfcLibraryInformation().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -19630,8 +18934,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcLibraryInformation_Version() {
-		return (EAttribute) getIfcLibraryInformation().getEStructuralFeatures().get(1);
+	public EReference getIfcLibraryInformation_Version() {
+		return (EReference) getIfcLibraryInformation().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -19668,7 +18972,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcLibraryReference() {
 		if (ifcLibraryReferenceEClass == null) {
-			ifcLibraryReferenceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(552);
+			ifcLibraryReferenceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(570);
 		}
 		return ifcLibraryReferenceEClass;
 	}
@@ -19689,7 +18993,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcLightDistributionData() {
 		if (ifcLightDistributionDataEClass == null) {
-			ifcLightDistributionDataEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(553);
+			ifcLightDistributionDataEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(571);
 		}
 		return ifcLightDistributionDataEClass;
 	}
@@ -19699,8 +19003,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcLightDistributionData_MainPlaneAngle() {
-		return (EAttribute) getIfcLightDistributionData().getEStructuralFeatures().get(0);
+	public EReference getIfcLightDistributionData_MainPlaneAngle() {
+		return (EReference) getIfcLightDistributionData().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -19708,8 +19012,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcLightDistributionData_MainPlaneAngleAsString() {
-		return (EAttribute) getIfcLightDistributionData().getEStructuralFeatures().get(1);
+	public EReference getIfcLightDistributionData_SecondaryPlaneAngle() {
+		return (EReference) getIfcLightDistributionData().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -19717,35 +19021,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcLightDistributionData_SecondaryPlaneAngle() {
-		return (EAttribute) getIfcLightDistributionData().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcLightDistributionData_SecondaryPlaneAngleAsString() {
-		return (EAttribute) getIfcLightDistributionData().getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcLightDistributionData_LuminousIntensity() {
-		return (EAttribute) getIfcLightDistributionData().getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcLightDistributionData_LuminousIntensityAsString() {
-		return (EAttribute) getIfcLightDistributionData().getEStructuralFeatures().get(5);
+	public EReference getIfcLightDistributionData_LuminousIntensity() {
+		return (EReference) getIfcLightDistributionData().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -19755,7 +19032,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcLightFixtureType() {
 		if (ifcLightFixtureTypeEClass == null) {
-			ifcLightFixtureTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(554);
+			ifcLightFixtureTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(572);
 		}
 		return ifcLightFixtureTypeEClass;
 	}
@@ -19776,7 +19053,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcLightIntensityDistribution() {
 		if (ifcLightIntensityDistributionEClass == null) {
-			ifcLightIntensityDistributionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(555);
+			ifcLightIntensityDistributionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(573);
 		}
 		return ifcLightIntensityDistributionEClass;
 	}
@@ -19806,7 +19083,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcLightSource() {
 		if (ifcLightSourceEClass == null) {
-			ifcLightSourceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(556);
+			ifcLightSourceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(574);
 		}
 		return ifcLightSourceEClass;
 	}
@@ -19816,8 +19093,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcLightSource_Name() {
-		return (EAttribute) getIfcLightSource().getEStructuralFeatures().get(0);
+	public EReference getIfcLightSource_Name() {
+		return (EReference) getIfcLightSource().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -19834,8 +19111,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcLightSource_AmbientIntensity() {
-		return (EAttribute) getIfcLightSource().getEStructuralFeatures().get(2);
+	public EReference getIfcLightSource_AmbientIntensity() {
+		return (EReference) getIfcLightSource().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -19843,26 +19120,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcLightSource_AmbientIntensityAsString() {
-		return (EAttribute) getIfcLightSource().getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcLightSource_Intensity() {
-		return (EAttribute) getIfcLightSource().getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcLightSource_IntensityAsString() {
-		return (EAttribute) getIfcLightSource().getEStructuralFeatures().get(5);
+	public EReference getIfcLightSource_Intensity() {
+		return (EReference) getIfcLightSource().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -19872,7 +19131,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcLightSourceAmbient() {
 		if (ifcLightSourceAmbientEClass == null) {
-			ifcLightSourceAmbientEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(557);
+			ifcLightSourceAmbientEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(575);
 		}
 		return ifcLightSourceAmbientEClass;
 	}
@@ -19884,7 +19143,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcLightSourceDirectional() {
 		if (ifcLightSourceDirectionalEClass == null) {
-			ifcLightSourceDirectionalEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(558);
+			ifcLightSourceDirectionalEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(576);
 		}
 		return ifcLightSourceDirectionalEClass;
 	}
@@ -19905,7 +19164,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcLightSourceGoniometric() {
 		if (ifcLightSourceGoniometricEClass == null) {
-			ifcLightSourceGoniometricEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(559);
+			ifcLightSourceGoniometricEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(577);
 		}
 		return ifcLightSourceGoniometricEClass;
 	}
@@ -19933,8 +19192,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcLightSourceGoniometric_ColourTemperature() {
-		return (EAttribute) getIfcLightSourceGoniometric().getEStructuralFeatures().get(2);
+	public EReference getIfcLightSourceGoniometric_ColourTemperature() {
+		return (EReference) getIfcLightSourceGoniometric().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -19942,26 +19201,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcLightSourceGoniometric_ColourTemperatureAsString() {
-		return (EAttribute) getIfcLightSourceGoniometric().getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcLightSourceGoniometric_LuminousFlux() {
-		return (EAttribute) getIfcLightSourceGoniometric().getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcLightSourceGoniometric_LuminousFluxAsString() {
-		return (EAttribute) getIfcLightSourceGoniometric().getEStructuralFeatures().get(5);
+	public EReference getIfcLightSourceGoniometric_LuminousFlux() {
+		return (EReference) getIfcLightSourceGoniometric().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -19970,7 +19211,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EAttribute getIfcLightSourceGoniometric_LightEmissionSource() {
-		return (EAttribute) getIfcLightSourceGoniometric().getEStructuralFeatures().get(6);
+		return (EAttribute) getIfcLightSourceGoniometric().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -19979,7 +19220,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EReference getIfcLightSourceGoniometric_LightDistributionDataSource() {
-		return (EReference) getIfcLightSourceGoniometric().getEStructuralFeatures().get(7);
+		return (EReference) getIfcLightSourceGoniometric().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -19989,7 +19230,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcLightSourcePositional() {
 		if (ifcLightSourcePositionalEClass == null) {
-			ifcLightSourcePositionalEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(560);
+			ifcLightSourcePositionalEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(578);
 		}
 		return ifcLightSourcePositionalEClass;
 	}
@@ -20008,8 +19249,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcLightSourcePositional_Radius() {
-		return (EAttribute) getIfcLightSourcePositional().getEStructuralFeatures().get(1);
+	public EReference getIfcLightSourcePositional_Radius() {
+		return (EReference) getIfcLightSourcePositional().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -20017,8 +19258,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcLightSourcePositional_RadiusAsString() {
-		return (EAttribute) getIfcLightSourcePositional().getEStructuralFeatures().get(2);
+	public EReference getIfcLightSourcePositional_ConstantAttenuation() {
+		return (EReference) getIfcLightSourcePositional().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -20026,8 +19267,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcLightSourcePositional_ConstantAttenuation() {
-		return (EAttribute) getIfcLightSourcePositional().getEStructuralFeatures().get(3);
+	public EReference getIfcLightSourcePositional_DistanceAttenuation() {
+		return (EReference) getIfcLightSourcePositional().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -20035,44 +19276,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcLightSourcePositional_ConstantAttenuationAsString() {
-		return (EAttribute) getIfcLightSourcePositional().getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcLightSourcePositional_DistanceAttenuation() {
-		return (EAttribute) getIfcLightSourcePositional().getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcLightSourcePositional_DistanceAttenuationAsString() {
-		return (EAttribute) getIfcLightSourcePositional().getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcLightSourcePositional_QuadricAttenuation() {
-		return (EAttribute) getIfcLightSourcePositional().getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcLightSourcePositional_QuadricAttenuationAsString() {
-		return (EAttribute) getIfcLightSourcePositional().getEStructuralFeatures().get(8);
+	public EReference getIfcLightSourcePositional_QuadricAttenuation() {
+		return (EReference) getIfcLightSourcePositional().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -20082,7 +19287,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcLightSourceSpot() {
 		if (ifcLightSourceSpotEClass == null) {
-			ifcLightSourceSpotEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(561);
+			ifcLightSourceSpotEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(579);
 		}
 		return ifcLightSourceSpotEClass;
 	}
@@ -20101,8 +19306,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcLightSourceSpot_ConcentrationExponent() {
-		return (EAttribute) getIfcLightSourceSpot().getEStructuralFeatures().get(1);
+	public EReference getIfcLightSourceSpot_ConcentrationExponent() {
+		return (EReference) getIfcLightSourceSpot().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -20110,8 +19315,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcLightSourceSpot_ConcentrationExponentAsString() {
-		return (EAttribute) getIfcLightSourceSpot().getEStructuralFeatures().get(2);
+	public EReference getIfcLightSourceSpot_SpreadAngle() {
+		return (EReference) getIfcLightSourceSpot().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -20119,35 +19324,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcLightSourceSpot_SpreadAngle() {
-		return (EAttribute) getIfcLightSourceSpot().getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcLightSourceSpot_SpreadAngleAsString() {
-		return (EAttribute) getIfcLightSourceSpot().getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcLightSourceSpot_BeamWidthAngle() {
-		return (EAttribute) getIfcLightSourceSpot().getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcLightSourceSpot_BeamWidthAngleAsString() {
-		return (EAttribute) getIfcLightSourceSpot().getEStructuralFeatures().get(6);
+	public EReference getIfcLightSourceSpot_BeamWidthAngle() {
+		return (EReference) getIfcLightSourceSpot().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -20157,7 +19335,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcLine() {
 		if (ifcLineEClass == null) {
-			ifcLineEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(562);
+			ifcLineEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(580);
 		}
 		return ifcLineEClass;
 	}
@@ -20187,7 +19365,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcLinearDimension() {
 		if (ifcLinearDimensionEClass == null) {
-			ifcLinearDimensionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(563);
+			ifcLinearDimensionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(581);
 		}
 		return ifcLinearDimensionEClass;
 	}
@@ -20199,7 +19377,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcLocalPlacement() {
 		if (ifcLocalPlacementEClass == null) {
-			ifcLocalPlacementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(564);
+			ifcLocalPlacementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(582);
 		}
 		return ifcLocalPlacementEClass;
 	}
@@ -20229,7 +19407,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcLocalTime() {
 		if (ifcLocalTimeEClass == null) {
-			ifcLocalTimeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(565);
+			ifcLocalTimeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(583);
 		}
 		return ifcLocalTimeEClass;
 	}
@@ -20239,8 +19417,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcLocalTime_HourComponent() {
-		return (EAttribute) getIfcLocalTime().getEStructuralFeatures().get(0);
+	public EReference getIfcLocalTime_HourComponent() {
+		return (EReference) getIfcLocalTime().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -20248,8 +19426,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcLocalTime_MinuteComponent() {
-		return (EAttribute) getIfcLocalTime().getEStructuralFeatures().get(1);
+	public EReference getIfcLocalTime_MinuteComponent() {
+		return (EReference) getIfcLocalTime().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -20257,17 +19435,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcLocalTime_SecondComponent() {
-		return (EAttribute) getIfcLocalTime().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcLocalTime_SecondComponentAsString() {
-		return (EAttribute) getIfcLocalTime().getEStructuralFeatures().get(3);
+	public EReference getIfcLocalTime_SecondComponent() {
+		return (EReference) getIfcLocalTime().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -20276,7 +19445,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EReference getIfcLocalTime_Zone() {
-		return (EReference) getIfcLocalTime().getEStructuralFeatures().get(4);
+		return (EReference) getIfcLocalTime().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -20284,8 +19453,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcLocalTime_DaylightSavingOffset() {
-		return (EAttribute) getIfcLocalTime().getEStructuralFeatures().get(5);
+	public EReference getIfcLocalTime_DaylightSavingOffset() {
+		return (EReference) getIfcLocalTime().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -20295,7 +19464,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcLoop() {
 		if (ifcLoopEClass == null) {
-			ifcLoopEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(566);
+			ifcLoopEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(584);
 		}
 		return ifcLoopEClass;
 	}
@@ -20307,7 +19476,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcManifoldSolidBrep() {
 		if (ifcManifoldSolidBrepEClass == null) {
-			ifcManifoldSolidBrepEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(567);
+			ifcManifoldSolidBrepEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(585);
 		}
 		return ifcManifoldSolidBrepEClass;
 	}
@@ -20328,7 +19497,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcMappedItem() {
 		if (ifcMappedItemEClass == null) {
-			ifcMappedItemEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(568);
+			ifcMappedItemEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(586);
 		}
 		return ifcMappedItemEClass;
 	}
@@ -20358,7 +19527,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcMaterial() {
 		if (ifcMaterialEClass == null) {
-			ifcMaterialEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(569);
+			ifcMaterialEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(587);
 		}
 		return ifcMaterialEClass;
 	}
@@ -20368,8 +19537,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcMaterial_Name() {
-		return (EAttribute) getIfcMaterial().getEStructuralFeatures().get(0);
+	public EReference getIfcMaterial_Name() {
+		return (EReference) getIfcMaterial().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -20397,7 +19566,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcMaterialClassificationRelationship() {
 		if (ifcMaterialClassificationRelationshipEClass == null) {
-			ifcMaterialClassificationRelationshipEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(570);
+			ifcMaterialClassificationRelationshipEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(588);
 		}
 		return ifcMaterialClassificationRelationshipEClass;
 	}
@@ -20427,7 +19596,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcMaterialDefinitionRepresentation() {
 		if (ifcMaterialDefinitionRepresentationEClass == null) {
-			ifcMaterialDefinitionRepresentationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(571);
+			ifcMaterialDefinitionRepresentationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(589);
 		}
 		return ifcMaterialDefinitionRepresentationEClass;
 	}
@@ -20448,7 +19617,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcMaterialLayer() {
 		if (ifcMaterialLayerEClass == null) {
-			ifcMaterialLayerEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(572);
+			ifcMaterialLayerEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(590);
 		}
 		return ifcMaterialLayerEClass;
 	}
@@ -20467,8 +19636,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcMaterialLayer_LayerThickness() {
-		return (EAttribute) getIfcMaterialLayer().getEStructuralFeatures().get(1);
+	public EReference getIfcMaterialLayer_LayerThickness() {
+		return (EReference) getIfcMaterialLayer().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -20476,17 +19645,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcMaterialLayer_LayerThicknessAsString() {
-		return (EAttribute) getIfcMaterialLayer().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcMaterialLayer_IsVentilated() {
-		return (EAttribute) getIfcMaterialLayer().getEStructuralFeatures().get(3);
+	public EReference getIfcMaterialLayer_IsVentilated() {
+		return (EReference) getIfcMaterialLayer().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -20495,7 +19655,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EReference getIfcMaterialLayer_ToMaterialLayerSet() {
-		return (EReference) getIfcMaterialLayer().getEStructuralFeatures().get(4);
+		return (EReference) getIfcMaterialLayer().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -20505,7 +19665,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcMaterialLayerSet() {
 		if (ifcMaterialLayerSetEClass == null) {
-			ifcMaterialLayerSetEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(573);
+			ifcMaterialLayerSetEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(591);
 		}
 		return ifcMaterialLayerSetEClass;
 	}
@@ -20524,8 +19684,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcMaterialLayerSet_LayerSetName() {
-		return (EAttribute) getIfcMaterialLayerSet().getEStructuralFeatures().get(1);
+	public EReference getIfcMaterialLayerSet_LayerSetName() {
+		return (EReference) getIfcMaterialLayerSet().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -20533,17 +19693,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcMaterialLayerSet_TotalThickness() {
-		return (EAttribute) getIfcMaterialLayerSet().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcMaterialLayerSet_TotalThicknessAsString() {
-		return (EAttribute) getIfcMaterialLayerSet().getEStructuralFeatures().get(3);
+	public EReference getIfcMaterialLayerSet_TotalThickness() {
+		return (EReference) getIfcMaterialLayerSet().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -20553,7 +19704,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcMaterialLayerSetUsage() {
 		if (ifcMaterialLayerSetUsageEClass == null) {
-			ifcMaterialLayerSetUsageEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(574);
+			ifcMaterialLayerSetUsageEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(592);
 		}
 		return ifcMaterialLayerSetUsageEClass;
 	}
@@ -20590,17 +19741,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcMaterialLayerSetUsage_OffsetFromReferenceLine() {
-		return (EAttribute) getIfcMaterialLayerSetUsage().getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcMaterialLayerSetUsage_OffsetFromReferenceLineAsString() {
-		return (EAttribute) getIfcMaterialLayerSetUsage().getEStructuralFeatures().get(4);
+	public EReference getIfcMaterialLayerSetUsage_OffsetFromReferenceLine() {
+		return (EReference) getIfcMaterialLayerSetUsage().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -20610,7 +19752,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcMaterialList() {
 		if (ifcMaterialListEClass == null) {
-			ifcMaterialListEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(575);
+			ifcMaterialListEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(593);
 		}
 		return ifcMaterialListEClass;
 	}
@@ -20631,7 +19773,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcMaterialProperties() {
 		if (ifcMaterialPropertiesEClass == null) {
-			ifcMaterialPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(576);
+			ifcMaterialPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(594);
 		}
 		return ifcMaterialPropertiesEClass;
 	}
@@ -20652,7 +19794,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcMeasureWithUnit() {
 		if (ifcMeasureWithUnitEClass == null) {
-			ifcMeasureWithUnitEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(577);
+			ifcMeasureWithUnitEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(595);
 		}
 		return ifcMeasureWithUnitEClass;
 	}
@@ -20682,7 +19824,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcMechanicalConcreteMaterialProperties() {
 		if (ifcMechanicalConcreteMaterialPropertiesEClass == null) {
-			ifcMechanicalConcreteMaterialPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(578);
+			ifcMechanicalConcreteMaterialPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(596);
 		}
 		return ifcMechanicalConcreteMaterialPropertiesEClass;
 	}
@@ -20692,8 +19834,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcMechanicalConcreteMaterialProperties_CompressiveStrength() {
-		return (EAttribute) getIfcMechanicalConcreteMaterialProperties().getEStructuralFeatures().get(0);
+	public EReference getIfcMechanicalConcreteMaterialProperties_CompressiveStrength() {
+		return (EReference) getIfcMechanicalConcreteMaterialProperties().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -20701,8 +19843,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcMechanicalConcreteMaterialProperties_CompressiveStrengthAsString() {
-		return (EAttribute) getIfcMechanicalConcreteMaterialProperties().getEStructuralFeatures().get(1);
+	public EReference getIfcMechanicalConcreteMaterialProperties_MaxAggregateSize() {
+		return (EReference) getIfcMechanicalConcreteMaterialProperties().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -20710,8 +19852,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcMechanicalConcreteMaterialProperties_MaxAggregateSize() {
-		return (EAttribute) getIfcMechanicalConcreteMaterialProperties().getEStructuralFeatures().get(2);
+	public EReference getIfcMechanicalConcreteMaterialProperties_AdmixturesDescription() {
+		return (EReference) getIfcMechanicalConcreteMaterialProperties().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -20719,8 +19861,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcMechanicalConcreteMaterialProperties_MaxAggregateSizeAsString() {
-		return (EAttribute) getIfcMechanicalConcreteMaterialProperties().getEStructuralFeatures().get(3);
+	public EReference getIfcMechanicalConcreteMaterialProperties_Workability() {
+		return (EReference) getIfcMechanicalConcreteMaterialProperties().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -20728,8 +19870,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcMechanicalConcreteMaterialProperties_AdmixturesDescription() {
-		return (EAttribute) getIfcMechanicalConcreteMaterialProperties().getEStructuralFeatures().get(4);
+	public EReference getIfcMechanicalConcreteMaterialProperties_ProtectivePoreRatio() {
+		return (EReference) getIfcMechanicalConcreteMaterialProperties().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -20737,35 +19879,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcMechanicalConcreteMaterialProperties_Workability() {
-		return (EAttribute) getIfcMechanicalConcreteMaterialProperties().getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcMechanicalConcreteMaterialProperties_ProtectivePoreRatio() {
-		return (EAttribute) getIfcMechanicalConcreteMaterialProperties().getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcMechanicalConcreteMaterialProperties_ProtectivePoreRatioAsString() {
-		return (EAttribute) getIfcMechanicalConcreteMaterialProperties().getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcMechanicalConcreteMaterialProperties_WaterImpermeability() {
-		return (EAttribute) getIfcMechanicalConcreteMaterialProperties().getEStructuralFeatures().get(8);
+	public EReference getIfcMechanicalConcreteMaterialProperties_WaterImpermeability() {
+		return (EReference) getIfcMechanicalConcreteMaterialProperties().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -20775,7 +19890,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcMechanicalFastener() {
 		if (ifcMechanicalFastenerEClass == null) {
-			ifcMechanicalFastenerEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(579);
+			ifcMechanicalFastenerEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(597);
 		}
 		return ifcMechanicalFastenerEClass;
 	}
@@ -20785,8 +19900,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcMechanicalFastener_NominalDiameter() {
-		return (EAttribute) getIfcMechanicalFastener().getEStructuralFeatures().get(0);
+	public EReference getIfcMechanicalFastener_NominalDiameter() {
+		return (EReference) getIfcMechanicalFastener().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -20794,26 +19909,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcMechanicalFastener_NominalDiameterAsString() {
-		return (EAttribute) getIfcMechanicalFastener().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcMechanicalFastener_NominalLength() {
-		return (EAttribute) getIfcMechanicalFastener().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcMechanicalFastener_NominalLengthAsString() {
-		return (EAttribute) getIfcMechanicalFastener().getEStructuralFeatures().get(3);
+	public EReference getIfcMechanicalFastener_NominalLength() {
+		return (EReference) getIfcMechanicalFastener().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -20823,7 +19920,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcMechanicalFastenerType() {
 		if (ifcMechanicalFastenerTypeEClass == null) {
-			ifcMechanicalFastenerTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(580);
+			ifcMechanicalFastenerTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(598);
 		}
 		return ifcMechanicalFastenerTypeEClass;
 	}
@@ -20835,7 +19932,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcMechanicalMaterialProperties() {
 		if (ifcMechanicalMaterialPropertiesEClass == null) {
-			ifcMechanicalMaterialPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(581);
+			ifcMechanicalMaterialPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(599);
 		}
 		return ifcMechanicalMaterialPropertiesEClass;
 	}
@@ -20845,8 +19942,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcMechanicalMaterialProperties_DynamicViscosity() {
-		return (EAttribute) getIfcMechanicalMaterialProperties().getEStructuralFeatures().get(0);
+	public EReference getIfcMechanicalMaterialProperties_DynamicViscosity() {
+		return (EReference) getIfcMechanicalMaterialProperties().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -20854,8 +19951,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcMechanicalMaterialProperties_DynamicViscosityAsString() {
-		return (EAttribute) getIfcMechanicalMaterialProperties().getEStructuralFeatures().get(1);
+	public EReference getIfcMechanicalMaterialProperties_YoungModulus() {
+		return (EReference) getIfcMechanicalMaterialProperties().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -20863,8 +19960,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcMechanicalMaterialProperties_YoungModulus() {
-		return (EAttribute) getIfcMechanicalMaterialProperties().getEStructuralFeatures().get(2);
+	public EReference getIfcMechanicalMaterialProperties_ShearModulus() {
+		return (EReference) getIfcMechanicalMaterialProperties().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -20872,8 +19969,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcMechanicalMaterialProperties_YoungModulusAsString() {
-		return (EAttribute) getIfcMechanicalMaterialProperties().getEStructuralFeatures().get(3);
+	public EReference getIfcMechanicalMaterialProperties_PoissonRatio() {
+		return (EReference) getIfcMechanicalMaterialProperties().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -20881,53 +19978,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcMechanicalMaterialProperties_ShearModulus() {
-		return (EAttribute) getIfcMechanicalMaterialProperties().getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcMechanicalMaterialProperties_ShearModulusAsString() {
-		return (EAttribute) getIfcMechanicalMaterialProperties().getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcMechanicalMaterialProperties_PoissonRatio() {
-		return (EAttribute) getIfcMechanicalMaterialProperties().getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcMechanicalMaterialProperties_PoissonRatioAsString() {
-		return (EAttribute) getIfcMechanicalMaterialProperties().getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcMechanicalMaterialProperties_ThermalExpansionCoefficient() {
-		return (EAttribute) getIfcMechanicalMaterialProperties().getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcMechanicalMaterialProperties_ThermalExpansionCoefficientAsString() {
-		return (EAttribute) getIfcMechanicalMaterialProperties().getEStructuralFeatures().get(9);
+	public EReference getIfcMechanicalMaterialProperties_ThermalExpansionCoefficient() {
+		return (EReference) getIfcMechanicalMaterialProperties().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -20937,7 +19989,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcMechanicalSteelMaterialProperties() {
 		if (ifcMechanicalSteelMaterialPropertiesEClass == null) {
-			ifcMechanicalSteelMaterialPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(582);
+			ifcMechanicalSteelMaterialPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(600);
 		}
 		return ifcMechanicalSteelMaterialPropertiesEClass;
 	}
@@ -20947,8 +19999,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcMechanicalSteelMaterialProperties_YieldStress() {
-		return (EAttribute) getIfcMechanicalSteelMaterialProperties().getEStructuralFeatures().get(0);
+	public EReference getIfcMechanicalSteelMaterialProperties_YieldStress() {
+		return (EReference) getIfcMechanicalSteelMaterialProperties().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -20956,8 +20008,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcMechanicalSteelMaterialProperties_YieldStressAsString() {
-		return (EAttribute) getIfcMechanicalSteelMaterialProperties().getEStructuralFeatures().get(1);
+	public EReference getIfcMechanicalSteelMaterialProperties_UltimateStress() {
+		return (EReference) getIfcMechanicalSteelMaterialProperties().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -20965,8 +20017,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcMechanicalSteelMaterialProperties_UltimateStress() {
-		return (EAttribute) getIfcMechanicalSteelMaterialProperties().getEStructuralFeatures().get(2);
+	public EReference getIfcMechanicalSteelMaterialProperties_UltimateStrain() {
+		return (EReference) getIfcMechanicalSteelMaterialProperties().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -20974,8 +20026,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcMechanicalSteelMaterialProperties_UltimateStressAsString() {
-		return (EAttribute) getIfcMechanicalSteelMaterialProperties().getEStructuralFeatures().get(3);
+	public EReference getIfcMechanicalSteelMaterialProperties_HardeningModule() {
+		return (EReference) getIfcMechanicalSteelMaterialProperties().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -20983,8 +20035,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcMechanicalSteelMaterialProperties_UltimateStrain() {
-		return (EAttribute) getIfcMechanicalSteelMaterialProperties().getEStructuralFeatures().get(4);
+	public EReference getIfcMechanicalSteelMaterialProperties_ProportionalStress() {
+		return (EReference) getIfcMechanicalSteelMaterialProperties().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -20992,62 +20044,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcMechanicalSteelMaterialProperties_UltimateStrainAsString() {
-		return (EAttribute) getIfcMechanicalSteelMaterialProperties().getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcMechanicalSteelMaterialProperties_HardeningModule() {
-		return (EAttribute) getIfcMechanicalSteelMaterialProperties().getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcMechanicalSteelMaterialProperties_HardeningModuleAsString() {
-		return (EAttribute) getIfcMechanicalSteelMaterialProperties().getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcMechanicalSteelMaterialProperties_ProportionalStress() {
-		return (EAttribute) getIfcMechanicalSteelMaterialProperties().getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcMechanicalSteelMaterialProperties_ProportionalStressAsString() {
-		return (EAttribute) getIfcMechanicalSteelMaterialProperties().getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcMechanicalSteelMaterialProperties_PlasticStrain() {
-		return (EAttribute) getIfcMechanicalSteelMaterialProperties().getEStructuralFeatures().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcMechanicalSteelMaterialProperties_PlasticStrainAsString() {
-		return (EAttribute) getIfcMechanicalSteelMaterialProperties().getEStructuralFeatures().get(11);
+	public EReference getIfcMechanicalSteelMaterialProperties_PlasticStrain() {
+		return (EReference) getIfcMechanicalSteelMaterialProperties().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -21056,7 +20054,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EReference getIfcMechanicalSteelMaterialProperties_Relaxations() {
-		return (EReference) getIfcMechanicalSteelMaterialProperties().getEStructuralFeatures().get(12);
+		return (EReference) getIfcMechanicalSteelMaterialProperties().getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -21066,7 +20064,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcMember() {
 		if (ifcMemberEClass == null) {
-			ifcMemberEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(583);
+			ifcMemberEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(601);
 		}
 		return ifcMemberEClass;
 	}
@@ -21078,7 +20076,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcMemberType() {
 		if (ifcMemberTypeEClass == null) {
-			ifcMemberTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(584);
+			ifcMemberTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(602);
 		}
 		return ifcMemberTypeEClass;
 	}
@@ -21099,7 +20097,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcMetric() {
 		if (ifcMetricEClass == null) {
-			ifcMetricEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(585);
+			ifcMetricEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(603);
 		}
 		return ifcMetricEClass;
 	}
@@ -21118,8 +20116,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcMetric_ValueSource() {
-		return (EAttribute) getIfcMetric().getEStructuralFeatures().get(1);
+	public EReference getIfcMetric_ValueSource() {
+		return (EReference) getIfcMetric().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -21138,7 +20136,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcMonetaryUnit() {
 		if (ifcMonetaryUnitEClass == null) {
-			ifcMonetaryUnitEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(586);
+			ifcMonetaryUnitEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(604);
 		}
 		return ifcMonetaryUnitEClass;
 	}
@@ -21159,7 +20157,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcMotorConnectionType() {
 		if (ifcMotorConnectionTypeEClass == null) {
-			ifcMotorConnectionTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(587);
+			ifcMotorConnectionTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(605);
 		}
 		return ifcMotorConnectionTypeEClass;
 	}
@@ -21180,7 +20178,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcMove() {
 		if (ifcMoveEClass == null) {
-			ifcMoveEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(588);
+			ifcMoveEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(606);
 		}
 		return ifcMoveEClass;
 	}
@@ -21208,8 +20206,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcMove_PunchList() {
-		return (EAttribute) getIfcMove().getEStructuralFeatures().get(2);
+	public EReference getIfcMove_PunchList() {
+		return (EReference) getIfcMove().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -21219,7 +20217,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcNamedUnit() {
 		if (ifcNamedUnitEClass == null) {
-			ifcNamedUnitEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(589);
+			ifcNamedUnitEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(607);
 		}
 		return ifcNamedUnitEClass;
 	}
@@ -21249,7 +20247,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcObject() {
 		if (ifcObjectEClass == null) {
-			ifcObjectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(590);
+			ifcObjectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(608);
 		}
 		return ifcObjectEClass;
 	}
@@ -21259,8 +20257,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcObject_ObjectType() {
-		return (EAttribute) getIfcObject().getEStructuralFeatures().get(0);
+	public EReference getIfcObject_ObjectType() {
+		return (EReference) getIfcObject().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -21279,7 +20277,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcObjectDefinition() {
 		if (ifcObjectDefinitionEClass == null) {
-			ifcObjectDefinitionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(591);
+			ifcObjectDefinitionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(609);
 		}
 		return ifcObjectDefinitionEClass;
 	}
@@ -21327,7 +20325,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcObjectPlacement() {
 		if (ifcObjectPlacementEClass == null) {
-			ifcObjectPlacementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(592);
+			ifcObjectPlacementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(610);
 		}
 		return ifcObjectPlacementEClass;
 	}
@@ -21357,7 +20355,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcObjective() {
 		if (ifcObjectiveEClass == null) {
-			ifcObjectiveEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(593);
+			ifcObjectiveEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(611);
 		}
 		return ifcObjectiveEClass;
 	}
@@ -21394,8 +20392,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcObjective_UserDefinedQualifier() {
-		return (EAttribute) getIfcObjective().getEStructuralFeatures().get(3);
+	public EReference getIfcObjective_UserDefinedQualifier() {
+		return (EReference) getIfcObjective().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -21405,7 +20403,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcOccupant() {
 		if (ifcOccupantEClass == null) {
-			ifcOccupantEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(594);
+			ifcOccupantEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(612);
 		}
 		return ifcOccupantEClass;
 	}
@@ -21426,7 +20424,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcOffsetCurve2D() {
 		if (ifcOffsetCurve2DEClass == null) {
-			ifcOffsetCurve2DEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(595);
+			ifcOffsetCurve2DEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(613);
 		}
 		return ifcOffsetCurve2DEClass;
 	}
@@ -21445,8 +20443,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcOffsetCurve2D_Distance() {
-		return (EAttribute) getIfcOffsetCurve2D().getEStructuralFeatures().get(1);
+	public EReference getIfcOffsetCurve2D_Distance() {
+		return (EReference) getIfcOffsetCurve2D().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -21454,17 +20452,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcOffsetCurve2D_DistanceAsString() {
-		return (EAttribute) getIfcOffsetCurve2D().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcOffsetCurve2D_SelfIntersect() {
-		return (EAttribute) getIfcOffsetCurve2D().getEStructuralFeatures().get(3);
+	public EReference getIfcOffsetCurve2D_SelfIntersect() {
+		return (EReference) getIfcOffsetCurve2D().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -21474,7 +20463,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcOffsetCurve3D() {
 		if (ifcOffsetCurve3DEClass == null) {
-			ifcOffsetCurve3DEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(596);
+			ifcOffsetCurve3DEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(614);
 		}
 		return ifcOffsetCurve3DEClass;
 	}
@@ -21493,8 +20482,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcOffsetCurve3D_Distance() {
-		return (EAttribute) getIfcOffsetCurve3D().getEStructuralFeatures().get(1);
+	public EReference getIfcOffsetCurve3D_Distance() {
+		return (EReference) getIfcOffsetCurve3D().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -21502,17 +20491,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcOffsetCurve3D_DistanceAsString() {
-		return (EAttribute) getIfcOffsetCurve3D().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcOffsetCurve3D_SelfIntersect() {
-		return (EAttribute) getIfcOffsetCurve3D().getEStructuralFeatures().get(3);
+	public EReference getIfcOffsetCurve3D_SelfIntersect() {
+		return (EReference) getIfcOffsetCurve3D().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -21521,7 +20501,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EReference getIfcOffsetCurve3D_RefDirection() {
-		return (EReference) getIfcOffsetCurve3D().getEStructuralFeatures().get(4);
+		return (EReference) getIfcOffsetCurve3D().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -21531,7 +20511,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcOneDirectionRepeatFactor() {
 		if (ifcOneDirectionRepeatFactorEClass == null) {
-			ifcOneDirectionRepeatFactorEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(597);
+			ifcOneDirectionRepeatFactorEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(615);
 		}
 		return ifcOneDirectionRepeatFactorEClass;
 	}
@@ -21552,7 +20532,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcOpenShell() {
 		if (ifcOpenShellEClass == null) {
-			ifcOpenShellEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(598);
+			ifcOpenShellEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(616);
 		}
 		return ifcOpenShellEClass;
 	}
@@ -21564,7 +20544,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcOpeningElement() {
 		if (ifcOpeningElementEClass == null) {
-			ifcOpeningElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(599);
+			ifcOpeningElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(617);
 		}
 		return ifcOpeningElementEClass;
 	}
@@ -21585,7 +20565,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcOpticalMaterialProperties() {
 		if (ifcOpticalMaterialPropertiesEClass == null) {
-			ifcOpticalMaterialPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(600);
+			ifcOpticalMaterialPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(618);
 		}
 		return ifcOpticalMaterialPropertiesEClass;
 	}
@@ -21595,8 +20575,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcOpticalMaterialProperties_VisibleTransmittance() {
-		return (EAttribute) getIfcOpticalMaterialProperties().getEStructuralFeatures().get(0);
+	public EReference getIfcOpticalMaterialProperties_VisibleTransmittance() {
+		return (EReference) getIfcOpticalMaterialProperties().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -21604,8 +20584,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcOpticalMaterialProperties_VisibleTransmittanceAsString() {
-		return (EAttribute) getIfcOpticalMaterialProperties().getEStructuralFeatures().get(1);
+	public EReference getIfcOpticalMaterialProperties_SolarTransmittance() {
+		return (EReference) getIfcOpticalMaterialProperties().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -21613,8 +20593,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcOpticalMaterialProperties_SolarTransmittance() {
-		return (EAttribute) getIfcOpticalMaterialProperties().getEStructuralFeatures().get(2);
+	public EReference getIfcOpticalMaterialProperties_ThermalIrTransmittance() {
+		return (EReference) getIfcOpticalMaterialProperties().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -21622,8 +20602,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcOpticalMaterialProperties_SolarTransmittanceAsString() {
-		return (EAttribute) getIfcOpticalMaterialProperties().getEStructuralFeatures().get(3);
+	public EReference getIfcOpticalMaterialProperties_ThermalIrEmissivityBack() {
+		return (EReference) getIfcOpticalMaterialProperties().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -21631,8 +20611,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcOpticalMaterialProperties_ThermalIrTransmittance() {
-		return (EAttribute) getIfcOpticalMaterialProperties().getEStructuralFeatures().get(4);
+	public EReference getIfcOpticalMaterialProperties_ThermalIrEmissivityFront() {
+		return (EReference) getIfcOpticalMaterialProperties().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -21640,8 +20620,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcOpticalMaterialProperties_ThermalIrTransmittanceAsString() {
-		return (EAttribute) getIfcOpticalMaterialProperties().getEStructuralFeatures().get(5);
+	public EReference getIfcOpticalMaterialProperties_VisibleReflectanceBack() {
+		return (EReference) getIfcOpticalMaterialProperties().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -21649,8 +20629,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcOpticalMaterialProperties_ThermalIrEmissivityBack() {
-		return (EAttribute) getIfcOpticalMaterialProperties().getEStructuralFeatures().get(6);
+	public EReference getIfcOpticalMaterialProperties_VisibleReflectanceFront() {
+		return (EReference) getIfcOpticalMaterialProperties().getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -21658,8 +20638,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcOpticalMaterialProperties_ThermalIrEmissivityBackAsString() {
-		return (EAttribute) getIfcOpticalMaterialProperties().getEStructuralFeatures().get(7);
+	public EReference getIfcOpticalMaterialProperties_SolarReflectanceFront() {
+		return (EReference) getIfcOpticalMaterialProperties().getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -21667,89 +20647,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcOpticalMaterialProperties_ThermalIrEmissivityFront() {
-		return (EAttribute) getIfcOpticalMaterialProperties().getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcOpticalMaterialProperties_ThermalIrEmissivityFrontAsString() {
-		return (EAttribute) getIfcOpticalMaterialProperties().getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcOpticalMaterialProperties_VisibleReflectanceBack() {
-		return (EAttribute) getIfcOpticalMaterialProperties().getEStructuralFeatures().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcOpticalMaterialProperties_VisibleReflectanceBackAsString() {
-		return (EAttribute) getIfcOpticalMaterialProperties().getEStructuralFeatures().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcOpticalMaterialProperties_VisibleReflectanceFront() {
-		return (EAttribute) getIfcOpticalMaterialProperties().getEStructuralFeatures().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcOpticalMaterialProperties_VisibleReflectanceFrontAsString() {
-		return (EAttribute) getIfcOpticalMaterialProperties().getEStructuralFeatures().get(13);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcOpticalMaterialProperties_SolarReflectanceFront() {
-		return (EAttribute) getIfcOpticalMaterialProperties().getEStructuralFeatures().get(14);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcOpticalMaterialProperties_SolarReflectanceFrontAsString() {
-		return (EAttribute) getIfcOpticalMaterialProperties().getEStructuralFeatures().get(15);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcOpticalMaterialProperties_SolarReflectanceBack() {
-		return (EAttribute) getIfcOpticalMaterialProperties().getEStructuralFeatures().get(16);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcOpticalMaterialProperties_SolarReflectanceBackAsString() {
-		return (EAttribute) getIfcOpticalMaterialProperties().getEStructuralFeatures().get(17);
+	public EReference getIfcOpticalMaterialProperties_SolarReflectanceBack() {
+		return (EReference) getIfcOpticalMaterialProperties().getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -21759,7 +20658,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcOrderAction() {
 		if (ifcOrderActionEClass == null) {
-			ifcOrderActionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(601);
+			ifcOrderActionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(619);
 		}
 		return ifcOrderActionEClass;
 	}
@@ -21769,8 +20668,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcOrderAction_ActionID() {
-		return (EAttribute) getIfcOrderAction().getEStructuralFeatures().get(0);
+	public EReference getIfcOrderAction_ActionID() {
+		return (EReference) getIfcOrderAction().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -21780,7 +20679,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcOrganization() {
 		if (ifcOrganizationEClass == null) {
-			ifcOrganizationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(602);
+			ifcOrganizationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(620);
 		}
 		return ifcOrganizationEClass;
 	}
@@ -21790,8 +20689,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcOrganization_Id() {
-		return (EAttribute) getIfcOrganization().getEStructuralFeatures().get(0);
+	public EReference getIfcOrganization_Id() {
+		return (EReference) getIfcOrganization().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -21799,8 +20698,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcOrganization_Name() {
-		return (EAttribute) getIfcOrganization().getEStructuralFeatures().get(1);
+	public EReference getIfcOrganization_Name() {
+		return (EReference) getIfcOrganization().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -21808,8 +20707,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcOrganization_Description() {
-		return (EAttribute) getIfcOrganization().getEStructuralFeatures().get(2);
+	public EReference getIfcOrganization_Description() {
+		return (EReference) getIfcOrganization().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -21864,7 +20763,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcOrganizationRelationship() {
 		if (ifcOrganizationRelationshipEClass == null) {
-			ifcOrganizationRelationshipEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(603);
+			ifcOrganizationRelationshipEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(621);
 		}
 		return ifcOrganizationRelationshipEClass;
 	}
@@ -21874,8 +20773,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcOrganizationRelationship_Name() {
-		return (EAttribute) getIfcOrganizationRelationship().getEStructuralFeatures().get(0);
+	public EReference getIfcOrganizationRelationship_Name() {
+		return (EReference) getIfcOrganizationRelationship().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -21883,8 +20782,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcOrganizationRelationship_Description() {
-		return (EAttribute) getIfcOrganizationRelationship().getEStructuralFeatures().get(1);
+	public EReference getIfcOrganizationRelationship_Description() {
+		return (EReference) getIfcOrganizationRelationship().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -21912,7 +20811,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcOrientedEdge() {
 		if (ifcOrientedEdgeEClass == null) {
-			ifcOrientedEdgeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(604);
+			ifcOrientedEdgeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(622);
 		}
 		return ifcOrientedEdgeEClass;
 	}
@@ -21931,8 +20830,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcOrientedEdge_Orientation() {
-		return (EAttribute) getIfcOrientedEdge().getEStructuralFeatures().get(1);
+	public EReference getIfcOrientedEdge_Orientation() {
+		return (EReference) getIfcOrientedEdge().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -21942,7 +20841,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcOutletType() {
 		if (ifcOutletTypeEClass == null) {
-			ifcOutletTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(605);
+			ifcOutletTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(623);
 		}
 		return ifcOutletTypeEClass;
 	}
@@ -21963,7 +20862,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcOwnerHistory() {
 		if (ifcOwnerHistoryEClass == null) {
-			ifcOwnerHistoryEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(606);
+			ifcOwnerHistoryEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(624);
 		}
 		return ifcOwnerHistoryEClass;
 	}
@@ -22009,8 +20908,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcOwnerHistory_LastModifiedDate() {
-		return (EAttribute) getIfcOwnerHistory().getEStructuralFeatures().get(4);
+	public EReference getIfcOwnerHistory_LastModifiedDate() {
+		return (EReference) getIfcOwnerHistory().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -22036,8 +20935,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcOwnerHistory_CreationDate() {
-		return (EAttribute) getIfcOwnerHistory().getEStructuralFeatures().get(7);
+	public EReference getIfcOwnerHistory_CreationDate() {
+		return (EReference) getIfcOwnerHistory().getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -22047,7 +20946,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcParameterizedProfileDef() {
 		if (ifcParameterizedProfileDefEClass == null) {
-			ifcParameterizedProfileDefEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(607);
+			ifcParameterizedProfileDefEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(625);
 		}
 		return ifcParameterizedProfileDefEClass;
 	}
@@ -22068,7 +20967,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPath() {
 		if (ifcPathEClass == null) {
-			ifcPathEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(608);
+			ifcPathEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(626);
 		}
 		return ifcPathEClass;
 	}
@@ -22089,7 +20988,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPerformanceHistory() {
 		if (ifcPerformanceHistoryEClass == null) {
-			ifcPerformanceHistoryEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(609);
+			ifcPerformanceHistoryEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(627);
 		}
 		return ifcPerformanceHistoryEClass;
 	}
@@ -22099,8 +20998,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPerformanceHistory_LifeCyclePhase() {
-		return (EAttribute) getIfcPerformanceHistory().getEStructuralFeatures().get(0);
+	public EReference getIfcPerformanceHistory_LifeCyclePhase() {
+		return (EReference) getIfcPerformanceHistory().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -22110,7 +21009,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPermeableCoveringProperties() {
 		if (ifcPermeableCoveringPropertiesEClass == null) {
-			ifcPermeableCoveringPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(610);
+			ifcPermeableCoveringPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(628);
 		}
 		return ifcPermeableCoveringPropertiesEClass;
 	}
@@ -22138,8 +21037,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPermeableCoveringProperties_FrameDepth() {
-		return (EAttribute) getIfcPermeableCoveringProperties().getEStructuralFeatures().get(2);
+	public EReference getIfcPermeableCoveringProperties_FrameDepth() {
+		return (EReference) getIfcPermeableCoveringProperties().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -22147,26 +21046,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPermeableCoveringProperties_FrameDepthAsString() {
-		return (EAttribute) getIfcPermeableCoveringProperties().getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcPermeableCoveringProperties_FrameThickness() {
-		return (EAttribute) getIfcPermeableCoveringProperties().getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcPermeableCoveringProperties_FrameThicknessAsString() {
-		return (EAttribute) getIfcPermeableCoveringProperties().getEStructuralFeatures().get(5);
+	public EReference getIfcPermeableCoveringProperties_FrameThickness() {
+		return (EReference) getIfcPermeableCoveringProperties().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -22175,7 +21056,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EReference getIfcPermeableCoveringProperties_ShapeAspectStyle() {
-		return (EReference) getIfcPermeableCoveringProperties().getEStructuralFeatures().get(6);
+		return (EReference) getIfcPermeableCoveringProperties().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -22185,7 +21066,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPermit() {
 		if (ifcPermitEClass == null) {
-			ifcPermitEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(611);
+			ifcPermitEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(629);
 		}
 		return ifcPermitEClass;
 	}
@@ -22195,8 +21076,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPermit_PermitID() {
-		return (EAttribute) getIfcPermit().getEStructuralFeatures().get(0);
+	public EReference getIfcPermit_PermitID() {
+		return (EReference) getIfcPermit().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -22206,7 +21087,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPerson() {
 		if (ifcPersonEClass == null) {
-			ifcPersonEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(612);
+			ifcPersonEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(630);
 		}
 		return ifcPersonEClass;
 	}
@@ -22216,8 +21097,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPerson_Id() {
-		return (EAttribute) getIfcPerson().getEStructuralFeatures().get(0);
+	public EReference getIfcPerson_Id() {
+		return (EReference) getIfcPerson().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -22225,8 +21106,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPerson_FamilyName() {
-		return (EAttribute) getIfcPerson().getEStructuralFeatures().get(1);
+	public EReference getIfcPerson_FamilyName() {
+		return (EReference) getIfcPerson().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -22234,8 +21115,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPerson_GivenName() {
-		return (EAttribute) getIfcPerson().getEStructuralFeatures().get(2);
+	public EReference getIfcPerson_GivenName() {
+		return (EReference) getIfcPerson().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -22243,8 +21124,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPerson_MiddleNames() {
-		return (EAttribute) getIfcPerson().getEStructuralFeatures().get(3);
+	public EReference getIfcPerson_MiddleNames() {
+		return (EReference) getIfcPerson().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -22252,8 +21133,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPerson_PrefixTitles() {
-		return (EAttribute) getIfcPerson().getEStructuralFeatures().get(4);
+	public EReference getIfcPerson_PrefixTitles() {
+		return (EReference) getIfcPerson().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -22261,8 +21142,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPerson_SuffixTitles() {
-		return (EAttribute) getIfcPerson().getEStructuralFeatures().get(5);
+	public EReference getIfcPerson_SuffixTitles() {
+		return (EReference) getIfcPerson().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -22299,7 +21180,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPersonAndOrganization() {
 		if (ifcPersonAndOrganizationEClass == null) {
-			ifcPersonAndOrganizationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(613);
+			ifcPersonAndOrganizationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(631);
 		}
 		return ifcPersonAndOrganizationEClass;
 	}
@@ -22338,7 +21219,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPhysicalComplexQuantity() {
 		if (ifcPhysicalComplexQuantityEClass == null) {
-			ifcPhysicalComplexQuantityEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(614);
+			ifcPhysicalComplexQuantityEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(632);
 		}
 		return ifcPhysicalComplexQuantityEClass;
 	}
@@ -22357,8 +21238,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPhysicalComplexQuantity_Discrimination() {
-		return (EAttribute) getIfcPhysicalComplexQuantity().getEStructuralFeatures().get(1);
+	public EReference getIfcPhysicalComplexQuantity_Discrimination() {
+		return (EReference) getIfcPhysicalComplexQuantity().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -22366,8 +21247,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPhysicalComplexQuantity_Quality() {
-		return (EAttribute) getIfcPhysicalComplexQuantity().getEStructuralFeatures().get(2);
+	public EReference getIfcPhysicalComplexQuantity_Quality() {
+		return (EReference) getIfcPhysicalComplexQuantity().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -22375,8 +21256,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPhysicalComplexQuantity_Usage() {
-		return (EAttribute) getIfcPhysicalComplexQuantity().getEStructuralFeatures().get(3);
+	public EReference getIfcPhysicalComplexQuantity_Usage() {
+		return (EReference) getIfcPhysicalComplexQuantity().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -22386,7 +21267,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPhysicalQuantity() {
 		if (ifcPhysicalQuantityEClass == null) {
-			ifcPhysicalQuantityEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(615);
+			ifcPhysicalQuantityEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(633);
 		}
 		return ifcPhysicalQuantityEClass;
 	}
@@ -22396,8 +21277,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPhysicalQuantity_Name() {
-		return (EAttribute) getIfcPhysicalQuantity().getEStructuralFeatures().get(0);
+	public EReference getIfcPhysicalQuantity_Name() {
+		return (EReference) getIfcPhysicalQuantity().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -22405,8 +21286,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPhysicalQuantity_Description() {
-		return (EAttribute) getIfcPhysicalQuantity().getEStructuralFeatures().get(1);
+	public EReference getIfcPhysicalQuantity_Description() {
+		return (EReference) getIfcPhysicalQuantity().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -22425,7 +21306,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPhysicalSimpleQuantity() {
 		if (ifcPhysicalSimpleQuantityEClass == null) {
-			ifcPhysicalSimpleQuantityEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(616);
+			ifcPhysicalSimpleQuantityEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(634);
 		}
 		return ifcPhysicalSimpleQuantityEClass;
 	}
@@ -22446,7 +21327,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPile() {
 		if (ifcPileEClass == null) {
-			ifcPileEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(617);
+			ifcPileEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(635);
 		}
 		return ifcPileEClass;
 	}
@@ -22476,7 +21357,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPipeFittingType() {
 		if (ifcPipeFittingTypeEClass == null) {
-			ifcPipeFittingTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(618);
+			ifcPipeFittingTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(636);
 		}
 		return ifcPipeFittingTypeEClass;
 	}
@@ -22497,7 +21378,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPipeSegmentType() {
 		if (ifcPipeSegmentTypeEClass == null) {
-			ifcPipeSegmentTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(619);
+			ifcPipeSegmentTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(637);
 		}
 		return ifcPipeSegmentTypeEClass;
 	}
@@ -22518,7 +21399,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPixelTexture() {
 		if (ifcPixelTextureEClass == null) {
-			ifcPixelTextureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(620);
+			ifcPixelTextureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(638);
 		}
 		return ifcPixelTextureEClass;
 	}
@@ -22528,8 +21409,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPixelTexture_Width() {
-		return (EAttribute) getIfcPixelTexture().getEStructuralFeatures().get(0);
+	public EReference getIfcPixelTexture_Width() {
+		return (EReference) getIfcPixelTexture().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -22537,8 +21418,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPixelTexture_Height() {
-		return (EAttribute) getIfcPixelTexture().getEStructuralFeatures().get(1);
+	public EReference getIfcPixelTexture_Height() {
+		return (EReference) getIfcPixelTexture().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -22546,8 +21427,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPixelTexture_ColourComponents() {
-		return (EAttribute) getIfcPixelTexture().getEStructuralFeatures().get(2);
+	public EReference getIfcPixelTexture_ColourComponents() {
+		return (EReference) getIfcPixelTexture().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -22557,7 +21438,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPlacement() {
 		if (ifcPlacementEClass == null) {
-			ifcPlacementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(621);
+			ifcPlacementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(639);
 		}
 		return ifcPlacementEClass;
 	}
@@ -22576,8 +21457,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPlacement_Dim() {
-		return (EAttribute) getIfcPlacement().getEStructuralFeatures().get(1);
+	public EReference getIfcPlacement_Dim() {
+		return (EReference) getIfcPlacement().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -22587,7 +21468,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPlanarBox() {
 		if (ifcPlanarBoxEClass == null) {
-			ifcPlanarBoxEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(622);
+			ifcPlanarBoxEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(640);
 		}
 		return ifcPlanarBoxEClass;
 	}
@@ -22608,7 +21489,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPlanarExtent() {
 		if (ifcPlanarExtentEClass == null) {
-			ifcPlanarExtentEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(623);
+			ifcPlanarExtentEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(641);
 		}
 		return ifcPlanarExtentEClass;
 	}
@@ -22618,8 +21499,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPlanarExtent_SizeInX() {
-		return (EAttribute) getIfcPlanarExtent().getEStructuralFeatures().get(0);
+	public EReference getIfcPlanarExtent_SizeInX() {
+		return (EReference) getIfcPlanarExtent().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -22627,26 +21508,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPlanarExtent_SizeInXAsString() {
-		return (EAttribute) getIfcPlanarExtent().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcPlanarExtent_SizeInY() {
-		return (EAttribute) getIfcPlanarExtent().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcPlanarExtent_SizeInYAsString() {
-		return (EAttribute) getIfcPlanarExtent().getEStructuralFeatures().get(3);
+	public EReference getIfcPlanarExtent_SizeInY() {
+		return (EReference) getIfcPlanarExtent().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -22656,7 +21519,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPlane() {
 		if (ifcPlaneEClass == null) {
-			ifcPlaneEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(624);
+			ifcPlaneEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(642);
 		}
 		return ifcPlaneEClass;
 	}
@@ -22668,7 +21531,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPlate() {
 		if (ifcPlateEClass == null) {
-			ifcPlateEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(625);
+			ifcPlateEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(643);
 		}
 		return ifcPlateEClass;
 	}
@@ -22680,7 +21543,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPlateType() {
 		if (ifcPlateTypeEClass == null) {
-			ifcPlateTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(626);
+			ifcPlateTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(644);
 		}
 		return ifcPlateTypeEClass;
 	}
@@ -22701,7 +21564,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPoint() {
 		if (ifcPointEClass == null) {
-			ifcPointEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(627);
+			ifcPointEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(645);
 		}
 		return ifcPointEClass;
 	}
@@ -22713,7 +21576,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPointOnCurve() {
 		if (ifcPointOnCurveEClass == null) {
-			ifcPointOnCurveEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(628);
+			ifcPointOnCurveEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(646);
 		}
 		return ifcPointOnCurveEClass;
 	}
@@ -22732,8 +21595,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPointOnCurve_PointParameter() {
-		return (EAttribute) getIfcPointOnCurve().getEStructuralFeatures().get(1);
+	public EReference getIfcPointOnCurve_PointParameter() {
+		return (EReference) getIfcPointOnCurve().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -22741,17 +21604,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPointOnCurve_PointParameterAsString() {
-		return (EAttribute) getIfcPointOnCurve().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcPointOnCurve_Dim() {
-		return (EAttribute) getIfcPointOnCurve().getEStructuralFeatures().get(3);
+	public EReference getIfcPointOnCurve_Dim() {
+		return (EReference) getIfcPointOnCurve().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -22761,7 +21615,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPointOnSurface() {
 		if (ifcPointOnSurfaceEClass == null) {
-			ifcPointOnSurfaceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(629);
+			ifcPointOnSurfaceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(647);
 		}
 		return ifcPointOnSurfaceEClass;
 	}
@@ -22780,8 +21634,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPointOnSurface_PointParameterU() {
-		return (EAttribute) getIfcPointOnSurface().getEStructuralFeatures().get(1);
+	public EReference getIfcPointOnSurface_PointParameterU() {
+		return (EReference) getIfcPointOnSurface().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -22789,8 +21643,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPointOnSurface_PointParameterUAsString() {
-		return (EAttribute) getIfcPointOnSurface().getEStructuralFeatures().get(2);
+	public EReference getIfcPointOnSurface_PointParameterV() {
+		return (EReference) getIfcPointOnSurface().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -22798,26 +21652,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPointOnSurface_PointParameterV() {
-		return (EAttribute) getIfcPointOnSurface().getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcPointOnSurface_PointParameterVAsString() {
-		return (EAttribute) getIfcPointOnSurface().getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcPointOnSurface_Dim() {
-		return (EAttribute) getIfcPointOnSurface().getEStructuralFeatures().get(5);
+	public EReference getIfcPointOnSurface_Dim() {
+		return (EReference) getIfcPointOnSurface().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -22827,7 +21663,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPolyLoop() {
 		if (ifcPolyLoopEClass == null) {
-			ifcPolyLoopEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(630);
+			ifcPolyLoopEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(648);
 		}
 		return ifcPolyLoopEClass;
 	}
@@ -22848,7 +21684,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPolygonalBoundedHalfSpace() {
 		if (ifcPolygonalBoundedHalfSpaceEClass == null) {
-			ifcPolygonalBoundedHalfSpaceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(631);
+			ifcPolygonalBoundedHalfSpaceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(649);
 		}
 		return ifcPolygonalBoundedHalfSpaceEClass;
 	}
@@ -22878,7 +21714,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPolyline() {
 		if (ifcPolylineEClass == null) {
-			ifcPolylineEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(632);
+			ifcPolylineEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(650);
 		}
 		return ifcPolylineEClass;
 	}
@@ -22899,7 +21735,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPort() {
 		if (ifcPortEClass == null) {
-			ifcPortEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(633);
+			ifcPortEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(651);
 		}
 		return ifcPortEClass;
 	}
@@ -22938,7 +21774,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPostalAddress() {
 		if (ifcPostalAddressEClass == null) {
-			ifcPostalAddressEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(634);
+			ifcPostalAddressEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(652);
 		}
 		return ifcPostalAddressEClass;
 	}
@@ -22948,8 +21784,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPostalAddress_InternalLocation() {
-		return (EAttribute) getIfcPostalAddress().getEStructuralFeatures().get(0);
+	public EReference getIfcPostalAddress_InternalLocation() {
+		return (EReference) getIfcPostalAddress().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -22957,8 +21793,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPostalAddress_AddressLines() {
-		return (EAttribute) getIfcPostalAddress().getEStructuralFeatures().get(1);
+	public EReference getIfcPostalAddress_AddressLines() {
+		return (EReference) getIfcPostalAddress().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -22966,8 +21802,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPostalAddress_PostalBox() {
-		return (EAttribute) getIfcPostalAddress().getEStructuralFeatures().get(2);
+	public EReference getIfcPostalAddress_PostalBox() {
+		return (EReference) getIfcPostalAddress().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -22975,8 +21811,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPostalAddress_Town() {
-		return (EAttribute) getIfcPostalAddress().getEStructuralFeatures().get(3);
+	public EReference getIfcPostalAddress_Town() {
+		return (EReference) getIfcPostalAddress().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -22984,8 +21820,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPostalAddress_Region() {
-		return (EAttribute) getIfcPostalAddress().getEStructuralFeatures().get(4);
+	public EReference getIfcPostalAddress_Region() {
+		return (EReference) getIfcPostalAddress().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -22993,8 +21829,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPostalAddress_PostalCode() {
-		return (EAttribute) getIfcPostalAddress().getEStructuralFeatures().get(5);
+	public EReference getIfcPostalAddress_PostalCode() {
+		return (EReference) getIfcPostalAddress().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -23002,8 +21838,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPostalAddress_Country() {
-		return (EAttribute) getIfcPostalAddress().getEStructuralFeatures().get(6);
+	public EReference getIfcPostalAddress_Country() {
+		return (EReference) getIfcPostalAddress().getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -23013,7 +21849,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPreDefinedColour() {
 		if (ifcPreDefinedColourEClass == null) {
-			ifcPreDefinedColourEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(635);
+			ifcPreDefinedColourEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(653);
 		}
 		return ifcPreDefinedColourEClass;
 	}
@@ -23025,7 +21861,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPreDefinedCurveFont() {
 		if (ifcPreDefinedCurveFontEClass == null) {
-			ifcPreDefinedCurveFontEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(636);
+			ifcPreDefinedCurveFontEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(654);
 		}
 		return ifcPreDefinedCurveFontEClass;
 	}
@@ -23037,7 +21873,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPreDefinedDimensionSymbol() {
 		if (ifcPreDefinedDimensionSymbolEClass == null) {
-			ifcPreDefinedDimensionSymbolEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(637);
+			ifcPreDefinedDimensionSymbolEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(655);
 		}
 		return ifcPreDefinedDimensionSymbolEClass;
 	}
@@ -23049,7 +21885,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPreDefinedItem() {
 		if (ifcPreDefinedItemEClass == null) {
-			ifcPreDefinedItemEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(638);
+			ifcPreDefinedItemEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(656);
 		}
 		return ifcPreDefinedItemEClass;
 	}
@@ -23059,8 +21895,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPreDefinedItem_Name() {
-		return (EAttribute) getIfcPreDefinedItem().getEStructuralFeatures().get(0);
+	public EReference getIfcPreDefinedItem_Name() {
+		return (EReference) getIfcPreDefinedItem().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -23070,7 +21906,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPreDefinedPointMarkerSymbol() {
 		if (ifcPreDefinedPointMarkerSymbolEClass == null) {
-			ifcPreDefinedPointMarkerSymbolEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(639);
+			ifcPreDefinedPointMarkerSymbolEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(657);
 		}
 		return ifcPreDefinedPointMarkerSymbolEClass;
 	}
@@ -23082,7 +21918,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPreDefinedSymbol() {
 		if (ifcPreDefinedSymbolEClass == null) {
-			ifcPreDefinedSymbolEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(640);
+			ifcPreDefinedSymbolEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(658);
 		}
 		return ifcPreDefinedSymbolEClass;
 	}
@@ -23094,7 +21930,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPreDefinedTerminatorSymbol() {
 		if (ifcPreDefinedTerminatorSymbolEClass == null) {
-			ifcPreDefinedTerminatorSymbolEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(641);
+			ifcPreDefinedTerminatorSymbolEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(659);
 		}
 		return ifcPreDefinedTerminatorSymbolEClass;
 	}
@@ -23106,7 +21942,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPreDefinedTextFont() {
 		if (ifcPreDefinedTextFontEClass == null) {
-			ifcPreDefinedTextFontEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(642);
+			ifcPreDefinedTextFontEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(660);
 		}
 		return ifcPreDefinedTextFontEClass;
 	}
@@ -23118,7 +21954,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPresentationLayerAssignment() {
 		if (ifcPresentationLayerAssignmentEClass == null) {
-			ifcPresentationLayerAssignmentEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(643);
+			ifcPresentationLayerAssignmentEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(661);
 		}
 		return ifcPresentationLayerAssignmentEClass;
 	}
@@ -23128,8 +21964,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPresentationLayerAssignment_Name() {
-		return (EAttribute) getIfcPresentationLayerAssignment().getEStructuralFeatures().get(0);
+	public EReference getIfcPresentationLayerAssignment_Name() {
+		return (EReference) getIfcPresentationLayerAssignment().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -23137,8 +21973,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPresentationLayerAssignment_Description() {
-		return (EAttribute) getIfcPresentationLayerAssignment().getEStructuralFeatures().get(1);
+	public EReference getIfcPresentationLayerAssignment_Description() {
+		return (EReference) getIfcPresentationLayerAssignment().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -23155,8 +21991,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPresentationLayerAssignment_Identifier() {
-		return (EAttribute) getIfcPresentationLayerAssignment().getEStructuralFeatures().get(3);
+	public EReference getIfcPresentationLayerAssignment_Identifier() {
+		return (EReference) getIfcPresentationLayerAssignment().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -23166,7 +22002,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPresentationLayerWithStyle() {
 		if (ifcPresentationLayerWithStyleEClass == null) {
-			ifcPresentationLayerWithStyleEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(644);
+			ifcPresentationLayerWithStyleEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(662);
 		}
 		return ifcPresentationLayerWithStyleEClass;
 	}
@@ -23176,8 +22012,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPresentationLayerWithStyle_LayerOn() {
-		return (EAttribute) getIfcPresentationLayerWithStyle().getEStructuralFeatures().get(0);
+	public EReference getIfcPresentationLayerWithStyle_LayerOn() {
+		return (EReference) getIfcPresentationLayerWithStyle().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -23185,8 +22021,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPresentationLayerWithStyle_LayerFrozen() {
-		return (EAttribute) getIfcPresentationLayerWithStyle().getEStructuralFeatures().get(1);
+	public EReference getIfcPresentationLayerWithStyle_LayerFrozen() {
+		return (EReference) getIfcPresentationLayerWithStyle().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -23194,8 +22030,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPresentationLayerWithStyle_LayerBlocked() {
-		return (EAttribute) getIfcPresentationLayerWithStyle().getEStructuralFeatures().get(2);
+	public EReference getIfcPresentationLayerWithStyle_LayerBlocked() {
+		return (EReference) getIfcPresentationLayerWithStyle().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -23214,7 +22050,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPresentationStyle() {
 		if (ifcPresentationStyleEClass == null) {
-			ifcPresentationStyleEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(645);
+			ifcPresentationStyleEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(663);
 		}
 		return ifcPresentationStyleEClass;
 	}
@@ -23224,8 +22060,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPresentationStyle_Name() {
-		return (EAttribute) getIfcPresentationStyle().getEStructuralFeatures().get(0);
+	public EReference getIfcPresentationStyle_Name() {
+		return (EReference) getIfcPresentationStyle().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -23235,7 +22071,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPresentationStyleAssignment() {
 		if (ifcPresentationStyleAssignmentEClass == null) {
-			ifcPresentationStyleAssignmentEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(646);
+			ifcPresentationStyleAssignmentEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(664);
 		}
 		return ifcPresentationStyleAssignmentEClass;
 	}
@@ -23256,7 +22092,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcProcedure() {
 		if (ifcProcedureEClass == null) {
-			ifcProcedureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(647);
+			ifcProcedureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(665);
 		}
 		return ifcProcedureEClass;
 	}
@@ -23266,8 +22102,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcProcedure_ProcedureID() {
-		return (EAttribute) getIfcProcedure().getEStructuralFeatures().get(0);
+	public EReference getIfcProcedure_ProcedureID() {
+		return (EReference) getIfcProcedure().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -23284,8 +22120,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcProcedure_UserDefinedProcedureType() {
-		return (EAttribute) getIfcProcedure().getEStructuralFeatures().get(2);
+	public EReference getIfcProcedure_UserDefinedProcedureType() {
+		return (EReference) getIfcProcedure().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -23295,7 +22131,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcProcess() {
 		if (ifcProcessEClass == null) {
-			ifcProcessEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(648);
+			ifcProcessEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(666);
 		}
 		return ifcProcessEClass;
 	}
@@ -23334,7 +22170,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcProduct() {
 		if (ifcProductEClass == null) {
-			ifcProductEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(649);
+			ifcProductEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(667);
 		}
 		return ifcProductEClass;
 	}
@@ -23373,7 +22209,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcProductDefinitionShape() {
 		if (ifcProductDefinitionShapeEClass == null) {
-			ifcProductDefinitionShapeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(650);
+			ifcProductDefinitionShapeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(668);
 		}
 		return ifcProductDefinitionShapeEClass;
 	}
@@ -23403,7 +22239,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcProductRepresentation() {
 		if (ifcProductRepresentationEClass == null) {
-			ifcProductRepresentationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(651);
+			ifcProductRepresentationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(669);
 		}
 		return ifcProductRepresentationEClass;
 	}
@@ -23413,8 +22249,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcProductRepresentation_Name() {
-		return (EAttribute) getIfcProductRepresentation().getEStructuralFeatures().get(0);
+	public EReference getIfcProductRepresentation_Name() {
+		return (EReference) getIfcProductRepresentation().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -23422,8 +22258,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcProductRepresentation_Description() {
-		return (EAttribute) getIfcProductRepresentation().getEStructuralFeatures().get(1);
+	public EReference getIfcProductRepresentation_Description() {
+		return (EReference) getIfcProductRepresentation().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -23442,7 +22278,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcProductsOfCombustionProperties() {
 		if (ifcProductsOfCombustionPropertiesEClass == null) {
-			ifcProductsOfCombustionPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(652);
+			ifcProductsOfCombustionPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(670);
 		}
 		return ifcProductsOfCombustionPropertiesEClass;
 	}
@@ -23452,8 +22288,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcProductsOfCombustionProperties_SpecificHeatCapacity() {
-		return (EAttribute) getIfcProductsOfCombustionProperties().getEStructuralFeatures().get(0);
+	public EReference getIfcProductsOfCombustionProperties_SpecificHeatCapacity() {
+		return (EReference) getIfcProductsOfCombustionProperties().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -23461,8 +22297,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcProductsOfCombustionProperties_SpecificHeatCapacityAsString() {
-		return (EAttribute) getIfcProductsOfCombustionProperties().getEStructuralFeatures().get(1);
+	public EReference getIfcProductsOfCombustionProperties_N20Content() {
+		return (EReference) getIfcProductsOfCombustionProperties().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -23470,8 +22306,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcProductsOfCombustionProperties_N20Content() {
-		return (EAttribute) getIfcProductsOfCombustionProperties().getEStructuralFeatures().get(2);
+	public EReference getIfcProductsOfCombustionProperties_COContent() {
+		return (EReference) getIfcProductsOfCombustionProperties().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -23479,44 +22315,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcProductsOfCombustionProperties_N20ContentAsString() {
-		return (EAttribute) getIfcProductsOfCombustionProperties().getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcProductsOfCombustionProperties_COContent() {
-		return (EAttribute) getIfcProductsOfCombustionProperties().getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcProductsOfCombustionProperties_COContentAsString() {
-		return (EAttribute) getIfcProductsOfCombustionProperties().getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcProductsOfCombustionProperties_CO2Content() {
-		return (EAttribute) getIfcProductsOfCombustionProperties().getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcProductsOfCombustionProperties_CO2ContentAsString() {
-		return (EAttribute) getIfcProductsOfCombustionProperties().getEStructuralFeatures().get(7);
+	public EReference getIfcProductsOfCombustionProperties_CO2Content() {
+		return (EReference) getIfcProductsOfCombustionProperties().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -23526,7 +22326,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcProfileDef() {
 		if (ifcProfileDefEClass == null) {
-			ifcProfileDefEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(653);
+			ifcProfileDefEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(671);
 		}
 		return ifcProfileDefEClass;
 	}
@@ -23545,8 +22345,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcProfileDef_ProfileName() {
-		return (EAttribute) getIfcProfileDef().getEStructuralFeatures().get(1);
+	public EReference getIfcProfileDef_ProfileName() {
+		return (EReference) getIfcProfileDef().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -23556,7 +22356,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcProfileProperties() {
 		if (ifcProfilePropertiesEClass == null) {
-			ifcProfilePropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(654);
+			ifcProfilePropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(672);
 		}
 		return ifcProfilePropertiesEClass;
 	}
@@ -23566,8 +22366,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcProfileProperties_ProfileName() {
-		return (EAttribute) getIfcProfileProperties().getEStructuralFeatures().get(0);
+	public EReference getIfcProfileProperties_ProfileName() {
+		return (EReference) getIfcProfileProperties().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -23586,7 +22386,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcProject() {
 		if (ifcProjectEClass == null) {
-			ifcProjectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(655);
+			ifcProjectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(673);
 		}
 		return ifcProjectEClass;
 	}
@@ -23596,8 +22396,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcProject_LongName() {
-		return (EAttribute) getIfcProject().getEStructuralFeatures().get(0);
+	public EReference getIfcProject_LongName() {
+		return (EReference) getIfcProject().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -23605,8 +22405,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcProject_Phase() {
-		return (EAttribute) getIfcProject().getEStructuralFeatures().get(1);
+	public EReference getIfcProject_Phase() {
+		return (EReference) getIfcProject().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -23634,7 +22434,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcProjectOrder() {
 		if (ifcProjectOrderEClass == null) {
-			ifcProjectOrderEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(656);
+			ifcProjectOrderEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(674);
 		}
 		return ifcProjectOrderEClass;
 	}
@@ -23644,8 +22444,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcProjectOrder_ID() {
-		return (EAttribute) getIfcProjectOrder().getEStructuralFeatures().get(0);
+	public EReference getIfcProjectOrder_ID() {
+		return (EReference) getIfcProjectOrder().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -23662,8 +22462,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcProjectOrder_Status() {
-		return (EAttribute) getIfcProjectOrder().getEStructuralFeatures().get(2);
+	public EReference getIfcProjectOrder_Status() {
+		return (EReference) getIfcProjectOrder().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -23673,7 +22473,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcProjectOrderRecord() {
 		if (ifcProjectOrderRecordEClass == null) {
-			ifcProjectOrderRecordEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(657);
+			ifcProjectOrderRecordEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(675);
 		}
 		return ifcProjectOrderRecordEClass;
 	}
@@ -23703,7 +22503,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcProjectionCurve() {
 		if (ifcProjectionCurveEClass == null) {
-			ifcProjectionCurveEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(658);
+			ifcProjectionCurveEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(676);
 		}
 		return ifcProjectionCurveEClass;
 	}
@@ -23715,7 +22515,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcProjectionElement() {
 		if (ifcProjectionElementEClass == null) {
-			ifcProjectionElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(659);
+			ifcProjectionElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(677);
 		}
 		return ifcProjectionElementEClass;
 	}
@@ -23727,7 +22527,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcProperty() {
 		if (ifcPropertyEClass == null) {
-			ifcPropertyEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(660);
+			ifcPropertyEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(678);
 		}
 		return ifcPropertyEClass;
 	}
@@ -23737,8 +22537,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcProperty_Name() {
-		return (EAttribute) getIfcProperty().getEStructuralFeatures().get(0);
+	public EReference getIfcProperty_Name() {
+		return (EReference) getIfcProperty().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -23746,8 +22546,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcProperty_Description() {
-		return (EAttribute) getIfcProperty().getEStructuralFeatures().get(1);
+	public EReference getIfcProperty_Description() {
+		return (EReference) getIfcProperty().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -23784,7 +22584,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPropertyBoundedValue() {
 		if (ifcPropertyBoundedValueEClass == null) {
-			ifcPropertyBoundedValueEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(661);
+			ifcPropertyBoundedValueEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(679);
 		}
 		return ifcPropertyBoundedValueEClass;
 	}
@@ -23823,7 +22623,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPropertyConstraintRelationship() {
 		if (ifcPropertyConstraintRelationshipEClass == null) {
-			ifcPropertyConstraintRelationshipEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(662);
+			ifcPropertyConstraintRelationshipEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(680);
 		}
 		return ifcPropertyConstraintRelationshipEClass;
 	}
@@ -23851,8 +22651,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPropertyConstraintRelationship_Name() {
-		return (EAttribute) getIfcPropertyConstraintRelationship().getEStructuralFeatures().get(2);
+	public EReference getIfcPropertyConstraintRelationship_Name() {
+		return (EReference) getIfcPropertyConstraintRelationship().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -23860,8 +22660,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPropertyConstraintRelationship_Description() {
-		return (EAttribute) getIfcPropertyConstraintRelationship().getEStructuralFeatures().get(3);
+	public EReference getIfcPropertyConstraintRelationship_Description() {
+		return (EReference) getIfcPropertyConstraintRelationship().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -23871,7 +22671,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPropertyDefinition() {
 		if (ifcPropertyDefinitionEClass == null) {
-			ifcPropertyDefinitionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(663);
+			ifcPropertyDefinitionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(681);
 		}
 		return ifcPropertyDefinitionEClass;
 	}
@@ -23892,7 +22692,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPropertyDependencyRelationship() {
 		if (ifcPropertyDependencyRelationshipEClass == null) {
-			ifcPropertyDependencyRelationshipEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(664);
+			ifcPropertyDependencyRelationshipEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(682);
 		}
 		return ifcPropertyDependencyRelationshipEClass;
 	}
@@ -23920,8 +22720,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPropertyDependencyRelationship_Name() {
-		return (EAttribute) getIfcPropertyDependencyRelationship().getEStructuralFeatures().get(2);
+	public EReference getIfcPropertyDependencyRelationship_Name() {
+		return (EReference) getIfcPropertyDependencyRelationship().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -23929,8 +22729,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPropertyDependencyRelationship_Description() {
-		return (EAttribute) getIfcPropertyDependencyRelationship().getEStructuralFeatures().get(3);
+	public EReference getIfcPropertyDependencyRelationship_Description() {
+		return (EReference) getIfcPropertyDependencyRelationship().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -23938,8 +22738,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPropertyDependencyRelationship_Expression() {
-		return (EAttribute) getIfcPropertyDependencyRelationship().getEStructuralFeatures().get(4);
+	public EReference getIfcPropertyDependencyRelationship_Expression() {
+		return (EReference) getIfcPropertyDependencyRelationship().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -23949,7 +22749,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPropertyEnumeratedValue() {
 		if (ifcPropertyEnumeratedValueEClass == null) {
-			ifcPropertyEnumeratedValueEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(665);
+			ifcPropertyEnumeratedValueEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(683);
 		}
 		return ifcPropertyEnumeratedValueEClass;
 	}
@@ -23979,7 +22779,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPropertyEnumeration() {
 		if (ifcPropertyEnumerationEClass == null) {
-			ifcPropertyEnumerationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(666);
+			ifcPropertyEnumerationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(684);
 		}
 		return ifcPropertyEnumerationEClass;
 	}
@@ -23989,8 +22789,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPropertyEnumeration_Name() {
-		return (EAttribute) getIfcPropertyEnumeration().getEStructuralFeatures().get(0);
+	public EReference getIfcPropertyEnumeration_Name() {
+		return (EReference) getIfcPropertyEnumeration().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -24018,7 +22818,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPropertyListValue() {
 		if (ifcPropertyListValueEClass == null) {
-			ifcPropertyListValueEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(667);
+			ifcPropertyListValueEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(685);
 		}
 		return ifcPropertyListValueEClass;
 	}
@@ -24048,7 +22848,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPropertyReferenceValue() {
 		if (ifcPropertyReferenceValueEClass == null) {
-			ifcPropertyReferenceValueEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(668);
+			ifcPropertyReferenceValueEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(686);
 		}
 		return ifcPropertyReferenceValueEClass;
 	}
@@ -24058,8 +22858,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPropertyReferenceValue_UsageName() {
-		return (EAttribute) getIfcPropertyReferenceValue().getEStructuralFeatures().get(0);
+	public EReference getIfcPropertyReferenceValue_UsageName() {
+		return (EReference) getIfcPropertyReferenceValue().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -24078,7 +22878,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPropertySet() {
 		if (ifcPropertySetEClass == null) {
-			ifcPropertySetEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(669);
+			ifcPropertySetEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(687);
 		}
 		return ifcPropertySetEClass;
 	}
@@ -24099,7 +22899,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPropertySetDefinition() {
 		if (ifcPropertySetDefinitionEClass == null) {
-			ifcPropertySetDefinitionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(670);
+			ifcPropertySetDefinitionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(688);
 		}
 		return ifcPropertySetDefinitionEClass;
 	}
@@ -24129,7 +22929,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPropertySingleValue() {
 		if (ifcPropertySingleValueEClass == null) {
-			ifcPropertySingleValueEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(671);
+			ifcPropertySingleValueEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(689);
 		}
 		return ifcPropertySingleValueEClass;
 	}
@@ -24159,7 +22959,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPropertyTableValue() {
 		if (ifcPropertyTableValueEClass == null) {
-			ifcPropertyTableValueEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(672);
+			ifcPropertyTableValueEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(690);
 		}
 		return ifcPropertyTableValueEClass;
 	}
@@ -24187,8 +22987,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcPropertyTableValue_Expression() {
-		return (EAttribute) getIfcPropertyTableValue().getEStructuralFeatures().get(2);
+	public EReference getIfcPropertyTableValue_Expression() {
+		return (EReference) getIfcPropertyTableValue().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -24216,7 +23016,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcProtectiveDeviceType() {
 		if (ifcProtectiveDeviceTypeEClass == null) {
-			ifcProtectiveDeviceTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(673);
+			ifcProtectiveDeviceTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(691);
 		}
 		return ifcProtectiveDeviceTypeEClass;
 	}
@@ -24237,7 +23037,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcProxy() {
 		if (ifcProxyEClass == null) {
-			ifcProxyEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(674);
+			ifcProxyEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(692);
 		}
 		return ifcProxyEClass;
 	}
@@ -24256,8 +23056,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcProxy_Tag() {
-		return (EAttribute) getIfcProxy().getEStructuralFeatures().get(1);
+	public EReference getIfcProxy_Tag() {
+		return (EReference) getIfcProxy().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -24267,7 +23067,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPumpType() {
 		if (ifcPumpTypeEClass == null) {
-			ifcPumpTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(675);
+			ifcPumpTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(693);
 		}
 		return ifcPumpTypeEClass;
 	}
@@ -24288,7 +23088,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcQuantityArea() {
 		if (ifcQuantityAreaEClass == null) {
-			ifcQuantityAreaEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(676);
+			ifcQuantityAreaEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(694);
 		}
 		return ifcQuantityAreaEClass;
 	}
@@ -24298,17 +23098,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcQuantityArea_AreaValue() {
-		return (EAttribute) getIfcQuantityArea().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcQuantityArea_AreaValueAsString() {
-		return (EAttribute) getIfcQuantityArea().getEStructuralFeatures().get(1);
+	public EReference getIfcQuantityArea_AreaValue() {
+		return (EReference) getIfcQuantityArea().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -24318,7 +23109,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcQuantityCount() {
 		if (ifcQuantityCountEClass == null) {
-			ifcQuantityCountEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(677);
+			ifcQuantityCountEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(695);
 		}
 		return ifcQuantityCountEClass;
 	}
@@ -24328,17 +23119,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcQuantityCount_CountValue() {
-		return (EAttribute) getIfcQuantityCount().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcQuantityCount_CountValueAsString() {
-		return (EAttribute) getIfcQuantityCount().getEStructuralFeatures().get(1);
+	public EReference getIfcQuantityCount_CountValue() {
+		return (EReference) getIfcQuantityCount().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -24348,7 +23130,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcQuantityLength() {
 		if (ifcQuantityLengthEClass == null) {
-			ifcQuantityLengthEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(678);
+			ifcQuantityLengthEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(696);
 		}
 		return ifcQuantityLengthEClass;
 	}
@@ -24358,17 +23140,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcQuantityLength_LengthValue() {
-		return (EAttribute) getIfcQuantityLength().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcQuantityLength_LengthValueAsString() {
-		return (EAttribute) getIfcQuantityLength().getEStructuralFeatures().get(1);
+	public EReference getIfcQuantityLength_LengthValue() {
+		return (EReference) getIfcQuantityLength().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -24378,7 +23151,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcQuantityTime() {
 		if (ifcQuantityTimeEClass == null) {
-			ifcQuantityTimeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(679);
+			ifcQuantityTimeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(697);
 		}
 		return ifcQuantityTimeEClass;
 	}
@@ -24388,17 +23161,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcQuantityTime_TimeValue() {
-		return (EAttribute) getIfcQuantityTime().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcQuantityTime_TimeValueAsString() {
-		return (EAttribute) getIfcQuantityTime().getEStructuralFeatures().get(1);
+	public EReference getIfcQuantityTime_TimeValue() {
+		return (EReference) getIfcQuantityTime().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -24408,7 +23172,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcQuantityVolume() {
 		if (ifcQuantityVolumeEClass == null) {
-			ifcQuantityVolumeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(680);
+			ifcQuantityVolumeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(698);
 		}
 		return ifcQuantityVolumeEClass;
 	}
@@ -24418,17 +23182,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcQuantityVolume_VolumeValue() {
-		return (EAttribute) getIfcQuantityVolume().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcQuantityVolume_VolumeValueAsString() {
-		return (EAttribute) getIfcQuantityVolume().getEStructuralFeatures().get(1);
+	public EReference getIfcQuantityVolume_VolumeValue() {
+		return (EReference) getIfcQuantityVolume().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -24438,7 +23193,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcQuantityWeight() {
 		if (ifcQuantityWeightEClass == null) {
-			ifcQuantityWeightEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(681);
+			ifcQuantityWeightEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(699);
 		}
 		return ifcQuantityWeightEClass;
 	}
@@ -24448,17 +23203,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcQuantityWeight_WeightValue() {
-		return (EAttribute) getIfcQuantityWeight().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcQuantityWeight_WeightValueAsString() {
-		return (EAttribute) getIfcQuantityWeight().getEStructuralFeatures().get(1);
+	public EReference getIfcQuantityWeight_WeightValue() {
+		return (EReference) getIfcQuantityWeight().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -24468,7 +23214,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRadiusDimension() {
 		if (ifcRadiusDimensionEClass == null) {
-			ifcRadiusDimensionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(682);
+			ifcRadiusDimensionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(700);
 		}
 		return ifcRadiusDimensionEClass;
 	}
@@ -24480,7 +23226,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRailing() {
 		if (ifcRailingEClass == null) {
-			ifcRailingEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(683);
+			ifcRailingEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(701);
 		}
 		return ifcRailingEClass;
 	}
@@ -24501,7 +23247,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRailingType() {
 		if (ifcRailingTypeEClass == null) {
-			ifcRailingTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(684);
+			ifcRailingTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(702);
 		}
 		return ifcRailingTypeEClass;
 	}
@@ -24522,7 +23268,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRamp() {
 		if (ifcRampEClass == null) {
-			ifcRampEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(685);
+			ifcRampEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(703);
 		}
 		return ifcRampEClass;
 	}
@@ -24543,7 +23289,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRampFlight() {
 		if (ifcRampFlightEClass == null) {
-			ifcRampFlightEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(686);
+			ifcRampFlightEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(704);
 		}
 		return ifcRampFlightEClass;
 	}
@@ -24555,7 +23301,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRampFlightType() {
 		if (ifcRampFlightTypeEClass == null) {
-			ifcRampFlightTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(687);
+			ifcRampFlightTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(705);
 		}
 		return ifcRampFlightTypeEClass;
 	}
@@ -24576,7 +23322,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRationalBezierCurve() {
 		if (ifcRationalBezierCurveEClass == null) {
-			ifcRationalBezierCurveEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(688);
+			ifcRationalBezierCurveEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(706);
 		}
 		return ifcRationalBezierCurveEClass;
 	}
@@ -24586,8 +23332,17 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRationalBezierCurve_WeightsData() {
-		return (EAttribute) getIfcRationalBezierCurve().getEStructuralFeatures().get(0);
+	public EReference getIfcRationalBezierCurve_WeightsData() {
+		return (EReference) getIfcRationalBezierCurve().getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getIfcRationalBezierCurve_Weights() {
+		return (EReference) getIfcRationalBezierCurve().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -24597,7 +23352,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRectangleHollowProfileDef() {
 		if (ifcRectangleHollowProfileDefEClass == null) {
-			ifcRectangleHollowProfileDefEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(689);
+			ifcRectangleHollowProfileDefEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(707);
 		}
 		return ifcRectangleHollowProfileDefEClass;
 	}
@@ -24607,8 +23362,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRectangleHollowProfileDef_WallThickness() {
-		return (EAttribute) getIfcRectangleHollowProfileDef().getEStructuralFeatures().get(0);
+	public EReference getIfcRectangleHollowProfileDef_WallThickness() {
+		return (EReference) getIfcRectangleHollowProfileDef().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -24616,8 +23371,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRectangleHollowProfileDef_WallThicknessAsString() {
-		return (EAttribute) getIfcRectangleHollowProfileDef().getEStructuralFeatures().get(1);
+	public EReference getIfcRectangleHollowProfileDef_InnerFilletRadius() {
+		return (EReference) getIfcRectangleHollowProfileDef().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -24625,35 +23380,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRectangleHollowProfileDef_InnerFilletRadius() {
-		return (EAttribute) getIfcRectangleHollowProfileDef().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcRectangleHollowProfileDef_InnerFilletRadiusAsString() {
-		return (EAttribute) getIfcRectangleHollowProfileDef().getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcRectangleHollowProfileDef_OuterFilletRadius() {
-		return (EAttribute) getIfcRectangleHollowProfileDef().getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcRectangleHollowProfileDef_OuterFilletRadiusAsString() {
-		return (EAttribute) getIfcRectangleHollowProfileDef().getEStructuralFeatures().get(5);
+	public EReference getIfcRectangleHollowProfileDef_OuterFilletRadius() {
+		return (EReference) getIfcRectangleHollowProfileDef().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -24663,7 +23391,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRectangleProfileDef() {
 		if (ifcRectangleProfileDefEClass == null) {
-			ifcRectangleProfileDefEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(690);
+			ifcRectangleProfileDefEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(708);
 		}
 		return ifcRectangleProfileDefEClass;
 	}
@@ -24673,8 +23401,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRectangleProfileDef_XDim() {
-		return (EAttribute) getIfcRectangleProfileDef().getEStructuralFeatures().get(0);
+	public EReference getIfcRectangleProfileDef_XDim() {
+		return (EReference) getIfcRectangleProfileDef().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -24682,26 +23410,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRectangleProfileDef_XDimAsString() {
-		return (EAttribute) getIfcRectangleProfileDef().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcRectangleProfileDef_YDim() {
-		return (EAttribute) getIfcRectangleProfileDef().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcRectangleProfileDef_YDimAsString() {
-		return (EAttribute) getIfcRectangleProfileDef().getEStructuralFeatures().get(3);
+	public EReference getIfcRectangleProfileDef_YDim() {
+		return (EReference) getIfcRectangleProfileDef().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -24711,7 +23421,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRectangularPyramid() {
 		if (ifcRectangularPyramidEClass == null) {
-			ifcRectangularPyramidEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(691);
+			ifcRectangularPyramidEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(709);
 		}
 		return ifcRectangularPyramidEClass;
 	}
@@ -24721,8 +23431,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRectangularPyramid_XLength() {
-		return (EAttribute) getIfcRectangularPyramid().getEStructuralFeatures().get(0);
+	public EReference getIfcRectangularPyramid_XLength() {
+		return (EReference) getIfcRectangularPyramid().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -24730,8 +23440,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRectangularPyramid_XLengthAsString() {
-		return (EAttribute) getIfcRectangularPyramid().getEStructuralFeatures().get(1);
+	public EReference getIfcRectangularPyramid_YLength() {
+		return (EReference) getIfcRectangularPyramid().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -24739,35 +23449,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRectangularPyramid_YLength() {
-		return (EAttribute) getIfcRectangularPyramid().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcRectangularPyramid_YLengthAsString() {
-		return (EAttribute) getIfcRectangularPyramid().getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcRectangularPyramid_Height() {
-		return (EAttribute) getIfcRectangularPyramid().getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcRectangularPyramid_HeightAsString() {
-		return (EAttribute) getIfcRectangularPyramid().getEStructuralFeatures().get(5);
+	public EReference getIfcRectangularPyramid_Height() {
+		return (EReference) getIfcRectangularPyramid().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -24777,7 +23460,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRectangularTrimmedSurface() {
 		if (ifcRectangularTrimmedSurfaceEClass == null) {
-			ifcRectangularTrimmedSurfaceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(692);
+			ifcRectangularTrimmedSurfaceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(710);
 		}
 		return ifcRectangularTrimmedSurfaceEClass;
 	}
@@ -24796,8 +23479,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRectangularTrimmedSurface_U1() {
-		return (EAttribute) getIfcRectangularTrimmedSurface().getEStructuralFeatures().get(1);
+	public EReference getIfcRectangularTrimmedSurface_U1() {
+		return (EReference) getIfcRectangularTrimmedSurface().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -24805,8 +23488,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRectangularTrimmedSurface_U1AsString() {
-		return (EAttribute) getIfcRectangularTrimmedSurface().getEStructuralFeatures().get(2);
+	public EReference getIfcRectangularTrimmedSurface_V1() {
+		return (EReference) getIfcRectangularTrimmedSurface().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -24814,8 +23497,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRectangularTrimmedSurface_V1() {
-		return (EAttribute) getIfcRectangularTrimmedSurface().getEStructuralFeatures().get(3);
+	public EReference getIfcRectangularTrimmedSurface_U2() {
+		return (EReference) getIfcRectangularTrimmedSurface().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -24823,8 +23506,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRectangularTrimmedSurface_V1AsString() {
-		return (EAttribute) getIfcRectangularTrimmedSurface().getEStructuralFeatures().get(4);
+	public EReference getIfcRectangularTrimmedSurface_V2() {
+		return (EReference) getIfcRectangularTrimmedSurface().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -24832,8 +23515,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRectangularTrimmedSurface_U2() {
-		return (EAttribute) getIfcRectangularTrimmedSurface().getEStructuralFeatures().get(5);
+	public EReference getIfcRectangularTrimmedSurface_Usense() {
+		return (EReference) getIfcRectangularTrimmedSurface().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -24841,8 +23524,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRectangularTrimmedSurface_U2AsString() {
-		return (EAttribute) getIfcRectangularTrimmedSurface().getEStructuralFeatures().get(6);
+	public EReference getIfcRectangularTrimmedSurface_Vsense() {
+		return (EReference) getIfcRectangularTrimmedSurface().getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -24850,44 +23533,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRectangularTrimmedSurface_V2() {
-		return (EAttribute) getIfcRectangularTrimmedSurface().getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcRectangularTrimmedSurface_V2AsString() {
-		return (EAttribute) getIfcRectangularTrimmedSurface().getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcRectangularTrimmedSurface_Usense() {
-		return (EAttribute) getIfcRectangularTrimmedSurface().getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcRectangularTrimmedSurface_Vsense() {
-		return (EAttribute) getIfcRectangularTrimmedSurface().getEStructuralFeatures().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcRectangularTrimmedSurface_Dim() {
-		return (EAttribute) getIfcRectangularTrimmedSurface().getEStructuralFeatures().get(11);
+	public EReference getIfcRectangularTrimmedSurface_Dim() {
+		return (EReference) getIfcRectangularTrimmedSurface().getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -24897,7 +23544,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcReferencesValueDocument() {
 		if (ifcReferencesValueDocumentEClass == null) {
-			ifcReferencesValueDocumentEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(693);
+			ifcReferencesValueDocumentEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(711);
 		}
 		return ifcReferencesValueDocumentEClass;
 	}
@@ -24925,8 +23572,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcReferencesValueDocument_Name() {
-		return (EAttribute) getIfcReferencesValueDocument().getEStructuralFeatures().get(2);
+	public EReference getIfcReferencesValueDocument_Name() {
+		return (EReference) getIfcReferencesValueDocument().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -24934,8 +23581,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcReferencesValueDocument_Description() {
-		return (EAttribute) getIfcReferencesValueDocument().getEStructuralFeatures().get(3);
+	public EReference getIfcReferencesValueDocument_Description() {
+		return (EReference) getIfcReferencesValueDocument().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -24945,7 +23592,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRegularTimeSeries() {
 		if (ifcRegularTimeSeriesEClass == null) {
-			ifcRegularTimeSeriesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(694);
+			ifcRegularTimeSeriesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(712);
 		}
 		return ifcRegularTimeSeriesEClass;
 	}
@@ -24955,17 +23602,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRegularTimeSeries_TimeStep() {
-		return (EAttribute) getIfcRegularTimeSeries().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcRegularTimeSeries_TimeStepAsString() {
-		return (EAttribute) getIfcRegularTimeSeries().getEStructuralFeatures().get(1);
+	public EReference getIfcRegularTimeSeries_TimeStep() {
+		return (EReference) getIfcRegularTimeSeries().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -24974,7 +23612,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EReference getIfcRegularTimeSeries_Values() {
-		return (EReference) getIfcRegularTimeSeries().getEStructuralFeatures().get(2);
+		return (EReference) getIfcRegularTimeSeries().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -24984,7 +23622,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcReinforcementBarProperties() {
 		if (ifcReinforcementBarPropertiesEClass == null) {
-			ifcReinforcementBarPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(695);
+			ifcReinforcementBarPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(713);
 		}
 		return ifcReinforcementBarPropertiesEClass;
 	}
@@ -24994,8 +23632,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcReinforcementBarProperties_TotalCrossSectionArea() {
-		return (EAttribute) getIfcReinforcementBarProperties().getEStructuralFeatures().get(0);
+	public EReference getIfcReinforcementBarProperties_TotalCrossSectionArea() {
+		return (EReference) getIfcReinforcementBarProperties().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -25003,17 +23641,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcReinforcementBarProperties_TotalCrossSectionAreaAsString() {
-		return (EAttribute) getIfcReinforcementBarProperties().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcReinforcementBarProperties_SteelGrade() {
-		return (EAttribute) getIfcReinforcementBarProperties().getEStructuralFeatures().get(2);
+	public EReference getIfcReinforcementBarProperties_SteelGrade() {
+		return (EReference) getIfcReinforcementBarProperties().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -25022,7 +23651,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EAttribute getIfcReinforcementBarProperties_BarSurface() {
-		return (EAttribute) getIfcReinforcementBarProperties().getEStructuralFeatures().get(3);
+		return (EAttribute) getIfcReinforcementBarProperties().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -25030,8 +23659,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcReinforcementBarProperties_EffectiveDepth() {
-		return (EAttribute) getIfcReinforcementBarProperties().getEStructuralFeatures().get(4);
+	public EReference getIfcReinforcementBarProperties_EffectiveDepth() {
+		return (EReference) getIfcReinforcementBarProperties().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -25039,8 +23668,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcReinforcementBarProperties_EffectiveDepthAsString() {
-		return (EAttribute) getIfcReinforcementBarProperties().getEStructuralFeatures().get(5);
+	public EReference getIfcReinforcementBarProperties_NominalBarDiameter() {
+		return (EReference) getIfcReinforcementBarProperties().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -25048,35 +23677,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcReinforcementBarProperties_NominalBarDiameter() {
-		return (EAttribute) getIfcReinforcementBarProperties().getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcReinforcementBarProperties_NominalBarDiameterAsString() {
-		return (EAttribute) getIfcReinforcementBarProperties().getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcReinforcementBarProperties_BarCount() {
-		return (EAttribute) getIfcReinforcementBarProperties().getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcReinforcementBarProperties_BarCountAsString() {
-		return (EAttribute) getIfcReinforcementBarProperties().getEStructuralFeatures().get(9);
+	public EReference getIfcReinforcementBarProperties_BarCount() {
+		return (EReference) getIfcReinforcementBarProperties().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -25086,7 +23688,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcReinforcementDefinitionProperties() {
 		if (ifcReinforcementDefinitionPropertiesEClass == null) {
-			ifcReinforcementDefinitionPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(696);
+			ifcReinforcementDefinitionPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(714);
 		}
 		return ifcReinforcementDefinitionPropertiesEClass;
 	}
@@ -25096,8 +23698,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcReinforcementDefinitionProperties_DefinitionType() {
-		return (EAttribute) getIfcReinforcementDefinitionProperties().getEStructuralFeatures().get(0);
+	public EReference getIfcReinforcementDefinitionProperties_DefinitionType() {
+		return (EReference) getIfcReinforcementDefinitionProperties().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -25116,7 +23718,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcReinforcingBar() {
 		if (ifcReinforcingBarEClass == null) {
-			ifcReinforcingBarEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(697);
+			ifcReinforcingBarEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(715);
 		}
 		return ifcReinforcingBarEClass;
 	}
@@ -25126,8 +23728,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcReinforcingBar_NominalDiameter() {
-		return (EAttribute) getIfcReinforcingBar().getEStructuralFeatures().get(0);
+	public EReference getIfcReinforcingBar_NominalDiameter() {
+		return (EReference) getIfcReinforcingBar().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -25135,8 +23737,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcReinforcingBar_NominalDiameterAsString() {
-		return (EAttribute) getIfcReinforcingBar().getEStructuralFeatures().get(1);
+	public EReference getIfcReinforcingBar_CrossSectionArea() {
+		return (EReference) getIfcReinforcingBar().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -25144,35 +23746,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcReinforcingBar_CrossSectionArea() {
-		return (EAttribute) getIfcReinforcingBar().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcReinforcingBar_CrossSectionAreaAsString() {
-		return (EAttribute) getIfcReinforcingBar().getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcReinforcingBar_BarLength() {
-		return (EAttribute) getIfcReinforcingBar().getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcReinforcingBar_BarLengthAsString() {
-		return (EAttribute) getIfcReinforcingBar().getEStructuralFeatures().get(5);
+	public EReference getIfcReinforcingBar_BarLength() {
+		return (EReference) getIfcReinforcingBar().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -25181,7 +23756,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EAttribute getIfcReinforcingBar_BarRole() {
-		return (EAttribute) getIfcReinforcingBar().getEStructuralFeatures().get(6);
+		return (EAttribute) getIfcReinforcingBar().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -25190,7 +23765,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EAttribute getIfcReinforcingBar_BarSurface() {
-		return (EAttribute) getIfcReinforcingBar().getEStructuralFeatures().get(7);
+		return (EAttribute) getIfcReinforcingBar().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -25200,7 +23775,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcReinforcingElement() {
 		if (ifcReinforcingElementEClass == null) {
-			ifcReinforcingElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(698);
+			ifcReinforcingElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(716);
 		}
 		return ifcReinforcingElementEClass;
 	}
@@ -25210,8 +23785,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcReinforcingElement_SteelGrade() {
-		return (EAttribute) getIfcReinforcingElement().getEStructuralFeatures().get(0);
+	public EReference getIfcReinforcingElement_SteelGrade() {
+		return (EReference) getIfcReinforcingElement().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -25221,7 +23796,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcReinforcingMesh() {
 		if (ifcReinforcingMeshEClass == null) {
-			ifcReinforcingMeshEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(699);
+			ifcReinforcingMeshEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(717);
 		}
 		return ifcReinforcingMeshEClass;
 	}
@@ -25231,8 +23806,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcReinforcingMesh_MeshLength() {
-		return (EAttribute) getIfcReinforcingMesh().getEStructuralFeatures().get(0);
+	public EReference getIfcReinforcingMesh_MeshLength() {
+		return (EReference) getIfcReinforcingMesh().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -25240,8 +23815,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcReinforcingMesh_MeshLengthAsString() {
-		return (EAttribute) getIfcReinforcingMesh().getEStructuralFeatures().get(1);
+	public EReference getIfcReinforcingMesh_MeshWidth() {
+		return (EReference) getIfcReinforcingMesh().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -25249,8 +23824,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcReinforcingMesh_MeshWidth() {
-		return (EAttribute) getIfcReinforcingMesh().getEStructuralFeatures().get(2);
+	public EReference getIfcReinforcingMesh_LongitudinalBarNominalDiameter() {
+		return (EReference) getIfcReinforcingMesh().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -25258,8 +23833,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcReinforcingMesh_MeshWidthAsString() {
-		return (EAttribute) getIfcReinforcingMesh().getEStructuralFeatures().get(3);
+	public EReference getIfcReinforcingMesh_TransverseBarNominalDiameter() {
+		return (EReference) getIfcReinforcingMesh().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -25267,8 +23842,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcReinforcingMesh_LongitudinalBarNominalDiameter() {
-		return (EAttribute) getIfcReinforcingMesh().getEStructuralFeatures().get(4);
+	public EReference getIfcReinforcingMesh_LongitudinalBarCrossSectionArea() {
+		return (EReference) getIfcReinforcingMesh().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -25276,8 +23851,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcReinforcingMesh_LongitudinalBarNominalDiameterAsString() {
-		return (EAttribute) getIfcReinforcingMesh().getEStructuralFeatures().get(5);
+	public EReference getIfcReinforcingMesh_TransverseBarCrossSectionArea() {
+		return (EReference) getIfcReinforcingMesh().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -25285,8 +23860,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcReinforcingMesh_TransverseBarNominalDiameter() {
-		return (EAttribute) getIfcReinforcingMesh().getEStructuralFeatures().get(6);
+	public EReference getIfcReinforcingMesh_LongitudinalBarSpacing() {
+		return (EReference) getIfcReinforcingMesh().getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -25294,80 +23869,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcReinforcingMesh_TransverseBarNominalDiameterAsString() {
-		return (EAttribute) getIfcReinforcingMesh().getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcReinforcingMesh_LongitudinalBarCrossSectionArea() {
-		return (EAttribute) getIfcReinforcingMesh().getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcReinforcingMesh_LongitudinalBarCrossSectionAreaAsString() {
-		return (EAttribute) getIfcReinforcingMesh().getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcReinforcingMesh_TransverseBarCrossSectionArea() {
-		return (EAttribute) getIfcReinforcingMesh().getEStructuralFeatures().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcReinforcingMesh_TransverseBarCrossSectionAreaAsString() {
-		return (EAttribute) getIfcReinforcingMesh().getEStructuralFeatures().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcReinforcingMesh_LongitudinalBarSpacing() {
-		return (EAttribute) getIfcReinforcingMesh().getEStructuralFeatures().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcReinforcingMesh_LongitudinalBarSpacingAsString() {
-		return (EAttribute) getIfcReinforcingMesh().getEStructuralFeatures().get(13);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcReinforcingMesh_TransverseBarSpacing() {
-		return (EAttribute) getIfcReinforcingMesh().getEStructuralFeatures().get(14);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcReinforcingMesh_TransverseBarSpacingAsString() {
-		return (EAttribute) getIfcReinforcingMesh().getEStructuralFeatures().get(15);
+	public EReference getIfcReinforcingMesh_TransverseBarSpacing() {
+		return (EReference) getIfcReinforcingMesh().getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -25377,7 +23880,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelAggregates() {
 		if (ifcRelAggregatesEClass == null) {
-			ifcRelAggregatesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(700);
+			ifcRelAggregatesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(718);
 		}
 		return ifcRelAggregatesEClass;
 	}
@@ -25389,7 +23892,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelAssigns() {
 		if (ifcRelAssignsEClass == null) {
-			ifcRelAssignsEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(701);
+			ifcRelAssignsEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(719);
 		}
 		return ifcRelAssignsEClass;
 	}
@@ -25419,7 +23922,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelAssignsTasks() {
 		if (ifcRelAssignsTasksEClass == null) {
-			ifcRelAssignsTasksEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(702);
+			ifcRelAssignsTasksEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(720);
 		}
 		return ifcRelAssignsTasksEClass;
 	}
@@ -25440,7 +23943,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelAssignsToActor() {
 		if (ifcRelAssignsToActorEClass == null) {
-			ifcRelAssignsToActorEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(703);
+			ifcRelAssignsToActorEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(721);
 		}
 		return ifcRelAssignsToActorEClass;
 	}
@@ -25470,7 +23973,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelAssignsToControl() {
 		if (ifcRelAssignsToControlEClass == null) {
-			ifcRelAssignsToControlEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(704);
+			ifcRelAssignsToControlEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(722);
 		}
 		return ifcRelAssignsToControlEClass;
 	}
@@ -25491,7 +23994,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelAssignsToGroup() {
 		if (ifcRelAssignsToGroupEClass == null) {
-			ifcRelAssignsToGroupEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(705);
+			ifcRelAssignsToGroupEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(723);
 		}
 		return ifcRelAssignsToGroupEClass;
 	}
@@ -25512,7 +24015,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelAssignsToProcess() {
 		if (ifcRelAssignsToProcessEClass == null) {
-			ifcRelAssignsToProcessEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(706);
+			ifcRelAssignsToProcessEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(724);
 		}
 		return ifcRelAssignsToProcessEClass;
 	}
@@ -25542,7 +24045,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelAssignsToProduct() {
 		if (ifcRelAssignsToProductEClass == null) {
-			ifcRelAssignsToProductEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(707);
+			ifcRelAssignsToProductEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(725);
 		}
 		return ifcRelAssignsToProductEClass;
 	}
@@ -25563,7 +24066,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelAssignsToProjectOrder() {
 		if (ifcRelAssignsToProjectOrderEClass == null) {
-			ifcRelAssignsToProjectOrderEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(708);
+			ifcRelAssignsToProjectOrderEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(726);
 		}
 		return ifcRelAssignsToProjectOrderEClass;
 	}
@@ -25575,7 +24078,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelAssignsToResource() {
 		if (ifcRelAssignsToResourceEClass == null) {
-			ifcRelAssignsToResourceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(709);
+			ifcRelAssignsToResourceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(727);
 		}
 		return ifcRelAssignsToResourceEClass;
 	}
@@ -25596,7 +24099,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelAssociates() {
 		if (ifcRelAssociatesEClass == null) {
-			ifcRelAssociatesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(710);
+			ifcRelAssociatesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(728);
 		}
 		return ifcRelAssociatesEClass;
 	}
@@ -25617,7 +24120,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelAssociatesAppliedValue() {
 		if (ifcRelAssociatesAppliedValueEClass == null) {
-			ifcRelAssociatesAppliedValueEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(711);
+			ifcRelAssociatesAppliedValueEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(729);
 		}
 		return ifcRelAssociatesAppliedValueEClass;
 	}
@@ -25638,7 +24141,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelAssociatesApproval() {
 		if (ifcRelAssociatesApprovalEClass == null) {
-			ifcRelAssociatesApprovalEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(712);
+			ifcRelAssociatesApprovalEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(730);
 		}
 		return ifcRelAssociatesApprovalEClass;
 	}
@@ -25659,7 +24162,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelAssociatesClassification() {
 		if (ifcRelAssociatesClassificationEClass == null) {
-			ifcRelAssociatesClassificationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(713);
+			ifcRelAssociatesClassificationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(731);
 		}
 		return ifcRelAssociatesClassificationEClass;
 	}
@@ -25680,7 +24183,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelAssociatesConstraint() {
 		if (ifcRelAssociatesConstraintEClass == null) {
-			ifcRelAssociatesConstraintEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(714);
+			ifcRelAssociatesConstraintEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(732);
 		}
 		return ifcRelAssociatesConstraintEClass;
 	}
@@ -25690,8 +24193,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRelAssociatesConstraint_Intent() {
-		return (EAttribute) getIfcRelAssociatesConstraint().getEStructuralFeatures().get(0);
+	public EReference getIfcRelAssociatesConstraint_Intent() {
+		return (EReference) getIfcRelAssociatesConstraint().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -25710,7 +24213,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelAssociatesDocument() {
 		if (ifcRelAssociatesDocumentEClass == null) {
-			ifcRelAssociatesDocumentEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(715);
+			ifcRelAssociatesDocumentEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(733);
 		}
 		return ifcRelAssociatesDocumentEClass;
 	}
@@ -25731,7 +24234,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelAssociatesLibrary() {
 		if (ifcRelAssociatesLibraryEClass == null) {
-			ifcRelAssociatesLibraryEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(716);
+			ifcRelAssociatesLibraryEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(734);
 		}
 		return ifcRelAssociatesLibraryEClass;
 	}
@@ -25752,7 +24255,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelAssociatesMaterial() {
 		if (ifcRelAssociatesMaterialEClass == null) {
-			ifcRelAssociatesMaterialEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(717);
+			ifcRelAssociatesMaterialEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(735);
 		}
 		return ifcRelAssociatesMaterialEClass;
 	}
@@ -25773,7 +24276,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelAssociatesProfileProperties() {
 		if (ifcRelAssociatesProfilePropertiesEClass == null) {
-			ifcRelAssociatesProfilePropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(718);
+			ifcRelAssociatesProfilePropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(736);
 		}
 		return ifcRelAssociatesProfilePropertiesEClass;
 	}
@@ -25812,7 +24315,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelConnects() {
 		if (ifcRelConnectsEClass == null) {
-			ifcRelConnectsEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(719);
+			ifcRelConnectsEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(737);
 		}
 		return ifcRelConnectsEClass;
 	}
@@ -25824,7 +24327,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelConnectsElements() {
 		if (ifcRelConnectsElementsEClass == null) {
-			ifcRelConnectsElementsEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(720);
+			ifcRelConnectsElementsEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(738);
 		}
 		return ifcRelConnectsElementsEClass;
 	}
@@ -25863,7 +24366,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelConnectsPathElements() {
 		if (ifcRelConnectsPathElementsEClass == null) {
-			ifcRelConnectsPathElementsEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(721);
+			ifcRelConnectsPathElementsEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(739);
 		}
 		return ifcRelConnectsPathElementsEClass;
 	}
@@ -25873,8 +24376,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRelConnectsPathElements_RelatingPriorities() {
-		return (EAttribute) getIfcRelConnectsPathElements().getEStructuralFeatures().get(0);
+	public EReference getIfcRelConnectsPathElements_RelatingPriorities() {
+		return (EReference) getIfcRelConnectsPathElements().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -25882,8 +24385,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRelConnectsPathElements_RelatedPriorities() {
-		return (EAttribute) getIfcRelConnectsPathElements().getEStructuralFeatures().get(1);
+	public EReference getIfcRelConnectsPathElements_RelatedPriorities() {
+		return (EReference) getIfcRelConnectsPathElements().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -25909,9 +24412,27 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getIfcRelConnectsPathElements_RelatingLayerCount() {
+		return (EReference) getIfcRelConnectsPathElements().getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getIfcRelConnectsPathElements_RelatedLayerCount() {
+		return (EReference) getIfcRelConnectsPathElements().getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getIfcRelConnectsPortToElement() {
 		if (ifcRelConnectsPortToElementEClass == null) {
-			ifcRelConnectsPortToElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(722);
+			ifcRelConnectsPortToElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(740);
 		}
 		return ifcRelConnectsPortToElementEClass;
 	}
@@ -25941,7 +24462,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelConnectsPorts() {
 		if (ifcRelConnectsPortsEClass == null) {
-			ifcRelConnectsPortsEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(723);
+			ifcRelConnectsPortsEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(741);
 		}
 		return ifcRelConnectsPortsEClass;
 	}
@@ -25980,7 +24501,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelConnectsStructuralActivity() {
 		if (ifcRelConnectsStructuralActivityEClass == null) {
-			ifcRelConnectsStructuralActivityEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(724);
+			ifcRelConnectsStructuralActivityEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(742);
 		}
 		return ifcRelConnectsStructuralActivityEClass;
 	}
@@ -26010,7 +24531,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelConnectsStructuralElement() {
 		if (ifcRelConnectsStructuralElementEClass == null) {
-			ifcRelConnectsStructuralElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(725);
+			ifcRelConnectsStructuralElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(743);
 		}
 		return ifcRelConnectsStructuralElementEClass;
 	}
@@ -26040,7 +24561,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelConnectsStructuralMember() {
 		if (ifcRelConnectsStructuralMemberEClass == null) {
-			ifcRelConnectsStructuralMemberEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(726);
+			ifcRelConnectsStructuralMemberEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(744);
 		}
 		return ifcRelConnectsStructuralMemberEClass;
 	}
@@ -26086,17 +24607,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRelConnectsStructuralMember_SupportedLength() {
-		return (EAttribute) getIfcRelConnectsStructuralMember().getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcRelConnectsStructuralMember_SupportedLengthAsString() {
-		return (EAttribute) getIfcRelConnectsStructuralMember().getEStructuralFeatures().get(5);
+	public EReference getIfcRelConnectsStructuralMember_SupportedLength() {
+		return (EReference) getIfcRelConnectsStructuralMember().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -26105,7 +24617,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EReference getIfcRelConnectsStructuralMember_ConditionCoordinateSystem() {
-		return (EReference) getIfcRelConnectsStructuralMember().getEStructuralFeatures().get(6);
+		return (EReference) getIfcRelConnectsStructuralMember().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -26115,7 +24627,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelConnectsWithEccentricity() {
 		if (ifcRelConnectsWithEccentricityEClass == null) {
-			ifcRelConnectsWithEccentricityEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(727);
+			ifcRelConnectsWithEccentricityEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(745);
 		}
 		return ifcRelConnectsWithEccentricityEClass;
 	}
@@ -26136,7 +24648,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelConnectsWithRealizingElements() {
 		if (ifcRelConnectsWithRealizingElementsEClass == null) {
-			ifcRelConnectsWithRealizingElementsEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(728);
+			ifcRelConnectsWithRealizingElementsEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(746);
 		}
 		return ifcRelConnectsWithRealizingElementsEClass;
 	}
@@ -26155,8 +24667,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRelConnectsWithRealizingElements_ConnectionType() {
-		return (EAttribute) getIfcRelConnectsWithRealizingElements().getEStructuralFeatures().get(1);
+	public EReference getIfcRelConnectsWithRealizingElements_ConnectionType() {
+		return (EReference) getIfcRelConnectsWithRealizingElements().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -26166,7 +24678,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelContainedInSpatialStructure() {
 		if (ifcRelContainedInSpatialStructureEClass == null) {
-			ifcRelContainedInSpatialStructureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(729);
+			ifcRelContainedInSpatialStructureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(747);
 		}
 		return ifcRelContainedInSpatialStructureEClass;
 	}
@@ -26196,7 +24708,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelCoversBldgElements() {
 		if (ifcRelCoversBldgElementsEClass == null) {
-			ifcRelCoversBldgElementsEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(730);
+			ifcRelCoversBldgElementsEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(748);
 		}
 		return ifcRelCoversBldgElementsEClass;
 	}
@@ -26226,7 +24738,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelCoversSpaces() {
 		if (ifcRelCoversSpacesEClass == null) {
-			ifcRelCoversSpacesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(731);
+			ifcRelCoversSpacesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(749);
 		}
 		return ifcRelCoversSpacesEClass;
 	}
@@ -26256,7 +24768,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelDecomposes() {
 		if (ifcRelDecomposesEClass == null) {
-			ifcRelDecomposesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(732);
+			ifcRelDecomposesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(750);
 		}
 		return ifcRelDecomposesEClass;
 	}
@@ -26286,7 +24798,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelDefines() {
 		if (ifcRelDefinesEClass == null) {
-			ifcRelDefinesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(733);
+			ifcRelDefinesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(751);
 		}
 		return ifcRelDefinesEClass;
 	}
@@ -26307,7 +24819,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelDefinesByProperties() {
 		if (ifcRelDefinesByPropertiesEClass == null) {
-			ifcRelDefinesByPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(734);
+			ifcRelDefinesByPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(752);
 		}
 		return ifcRelDefinesByPropertiesEClass;
 	}
@@ -26328,7 +24840,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelDefinesByType() {
 		if (ifcRelDefinesByTypeEClass == null) {
-			ifcRelDefinesByTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(735);
+			ifcRelDefinesByTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(753);
 		}
 		return ifcRelDefinesByTypeEClass;
 	}
@@ -26349,7 +24861,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelFillsElement() {
 		if (ifcRelFillsElementEClass == null) {
-			ifcRelFillsElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(736);
+			ifcRelFillsElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(754);
 		}
 		return ifcRelFillsElementEClass;
 	}
@@ -26379,7 +24891,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelFlowControlElements() {
 		if (ifcRelFlowControlElementsEClass == null) {
-			ifcRelFlowControlElementsEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(737);
+			ifcRelFlowControlElementsEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(755);
 		}
 		return ifcRelFlowControlElementsEClass;
 	}
@@ -26409,7 +24921,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelInteractionRequirements() {
 		if (ifcRelInteractionRequirementsEClass == null) {
-			ifcRelInteractionRequirementsEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(738);
+			ifcRelInteractionRequirementsEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(756);
 		}
 		return ifcRelInteractionRequirementsEClass;
 	}
@@ -26419,8 +24931,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRelInteractionRequirements_DailyInteraction() {
-		return (EAttribute) getIfcRelInteractionRequirements().getEStructuralFeatures().get(0);
+	public EReference getIfcRelInteractionRequirements_DailyInteraction() {
+		return (EReference) getIfcRelInteractionRequirements().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -26428,26 +24940,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRelInteractionRequirements_DailyInteractionAsString() {
-		return (EAttribute) getIfcRelInteractionRequirements().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcRelInteractionRequirements_ImportanceRating() {
-		return (EAttribute) getIfcRelInteractionRequirements().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcRelInteractionRequirements_ImportanceRatingAsString() {
-		return (EAttribute) getIfcRelInteractionRequirements().getEStructuralFeatures().get(3);
+	public EReference getIfcRelInteractionRequirements_ImportanceRating() {
+		return (EReference) getIfcRelInteractionRequirements().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -26456,7 +24950,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EReference getIfcRelInteractionRequirements_LocationOfInteraction() {
-		return (EReference) getIfcRelInteractionRequirements().getEStructuralFeatures().get(4);
+		return (EReference) getIfcRelInteractionRequirements().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -26465,7 +24959,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EReference getIfcRelInteractionRequirements_RelatedSpaceProgram() {
-		return (EReference) getIfcRelInteractionRequirements().getEStructuralFeatures().get(5);
+		return (EReference) getIfcRelInteractionRequirements().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -26474,7 +24968,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EReference getIfcRelInteractionRequirements_RelatingSpaceProgram() {
-		return (EReference) getIfcRelInteractionRequirements().getEStructuralFeatures().get(6);
+		return (EReference) getIfcRelInteractionRequirements().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -26484,7 +24978,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelNests() {
 		if (ifcRelNestsEClass == null) {
-			ifcRelNestsEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(739);
+			ifcRelNestsEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(757);
 		}
 		return ifcRelNestsEClass;
 	}
@@ -26496,7 +24990,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelOccupiesSpaces() {
 		if (ifcRelOccupiesSpacesEClass == null) {
-			ifcRelOccupiesSpacesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(740);
+			ifcRelOccupiesSpacesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(758);
 		}
 		return ifcRelOccupiesSpacesEClass;
 	}
@@ -26508,7 +25002,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelOverridesProperties() {
 		if (ifcRelOverridesPropertiesEClass == null) {
-			ifcRelOverridesPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(741);
+			ifcRelOverridesPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(759);
 		}
 		return ifcRelOverridesPropertiesEClass;
 	}
@@ -26529,7 +25023,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelProjectsElement() {
 		if (ifcRelProjectsElementEClass == null) {
-			ifcRelProjectsElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(742);
+			ifcRelProjectsElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(760);
 		}
 		return ifcRelProjectsElementEClass;
 	}
@@ -26559,7 +25053,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelReferencedInSpatialStructure() {
 		if (ifcRelReferencedInSpatialStructureEClass == null) {
-			ifcRelReferencedInSpatialStructureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(743);
+			ifcRelReferencedInSpatialStructureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(761);
 		}
 		return ifcRelReferencedInSpatialStructureEClass;
 	}
@@ -26589,7 +25083,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelSchedulesCostItems() {
 		if (ifcRelSchedulesCostItemsEClass == null) {
-			ifcRelSchedulesCostItemsEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(744);
+			ifcRelSchedulesCostItemsEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(762);
 		}
 		return ifcRelSchedulesCostItemsEClass;
 	}
@@ -26601,7 +25095,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelSequence() {
 		if (ifcRelSequenceEClass == null) {
-			ifcRelSequenceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(745);
+			ifcRelSequenceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(763);
 		}
 		return ifcRelSequenceEClass;
 	}
@@ -26629,17 +25123,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRelSequence_TimeLag() {
-		return (EAttribute) getIfcRelSequence().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcRelSequence_TimeLagAsString() {
-		return (EAttribute) getIfcRelSequence().getEStructuralFeatures().get(3);
+	public EReference getIfcRelSequence_TimeLag() {
+		return (EReference) getIfcRelSequence().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -26648,7 +25133,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EAttribute getIfcRelSequence_SequenceType() {
-		return (EAttribute) getIfcRelSequence().getEStructuralFeatures().get(4);
+		return (EAttribute) getIfcRelSequence().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -26658,7 +25143,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelServicesBuildings() {
 		if (ifcRelServicesBuildingsEClass == null) {
-			ifcRelServicesBuildingsEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(746);
+			ifcRelServicesBuildingsEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(764);
 		}
 		return ifcRelServicesBuildingsEClass;
 	}
@@ -26688,7 +25173,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelSpaceBoundary() {
 		if (ifcRelSpaceBoundaryEClass == null) {
-			ifcRelSpaceBoundaryEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(747);
+			ifcRelSpaceBoundaryEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(765);
 		}
 		return ifcRelSpaceBoundaryEClass;
 	}
@@ -26745,7 +25230,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelVoidsElement() {
 		if (ifcRelVoidsElementEClass == null) {
-			ifcRelVoidsElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(748);
+			ifcRelVoidsElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(766);
 		}
 		return ifcRelVoidsElementEClass;
 	}
@@ -26775,7 +25260,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelationship() {
 		if (ifcRelationshipEClass == null) {
-			ifcRelationshipEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(749);
+			ifcRelationshipEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(767);
 		}
 		return ifcRelationshipEClass;
 	}
@@ -26787,7 +25272,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRelaxation() {
 		if (ifcRelaxationEClass == null) {
-			ifcRelaxationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(750);
+			ifcRelaxationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(768);
 		}
 		return ifcRelaxationEClass;
 	}
@@ -26797,8 +25282,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRelaxation_RelaxationValue() {
-		return (EAttribute) getIfcRelaxation().getEStructuralFeatures().get(0);
+	public EReference getIfcRelaxation_RelaxationValue() {
+		return (EReference) getIfcRelaxation().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -26806,26 +25291,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRelaxation_RelaxationValueAsString() {
-		return (EAttribute) getIfcRelaxation().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcRelaxation_InitialStress() {
-		return (EAttribute) getIfcRelaxation().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcRelaxation_InitialStressAsString() {
-		return (EAttribute) getIfcRelaxation().getEStructuralFeatures().get(3);
+	public EReference getIfcRelaxation_InitialStress() {
+		return (EReference) getIfcRelaxation().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -26835,7 +25302,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRepresentation() {
 		if (ifcRepresentationEClass == null) {
-			ifcRepresentationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(751);
+			ifcRepresentationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(769);
 		}
 		return ifcRepresentationEClass;
 	}
@@ -26854,8 +25321,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRepresentation_RepresentationIdentifier() {
-		return (EAttribute) getIfcRepresentation().getEStructuralFeatures().get(1);
+	public EReference getIfcRepresentation_RepresentationIdentifier() {
+		return (EReference) getIfcRepresentation().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -26863,8 +25330,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRepresentation_RepresentationType() {
-		return (EAttribute) getIfcRepresentation().getEStructuralFeatures().get(2);
+	public EReference getIfcRepresentation_RepresentationType() {
+		return (EReference) getIfcRepresentation().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -26901,7 +25368,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRepresentationContext() {
 		if (ifcRepresentationContextEClass == null) {
-			ifcRepresentationContextEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(752);
+			ifcRepresentationContextEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(770);
 		}
 		return ifcRepresentationContextEClass;
 	}
@@ -26911,8 +25378,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRepresentationContext_ContextIdentifier() {
-		return (EAttribute) getIfcRepresentationContext().getEStructuralFeatures().get(0);
+	public EReference getIfcRepresentationContext_ContextIdentifier() {
+		return (EReference) getIfcRepresentationContext().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -26920,8 +25387,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRepresentationContext_ContextType() {
-		return (EAttribute) getIfcRepresentationContext().getEStructuralFeatures().get(1);
+	public EReference getIfcRepresentationContext_ContextType() {
+		return (EReference) getIfcRepresentationContext().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -26940,7 +25407,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRepresentationItem() {
 		if (ifcRepresentationItemEClass == null) {
-			ifcRepresentationItemEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(753);
+			ifcRepresentationItemEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(771);
 		}
 		return ifcRepresentationItemEClass;
 	}
@@ -26970,7 +25437,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRepresentationMap() {
 		if (ifcRepresentationMapEClass == null) {
-			ifcRepresentationMapEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(754);
+			ifcRepresentationMapEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(772);
 		}
 		return ifcRepresentationMapEClass;
 	}
@@ -27009,7 +25476,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcResource() {
 		if (ifcResourceEClass == null) {
-			ifcResourceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(755);
+			ifcResourceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(773);
 		}
 		return ifcResourceEClass;
 	}
@@ -27030,7 +25497,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRevolvedAreaSolid() {
 		if (ifcRevolvedAreaSolidEClass == null) {
-			ifcRevolvedAreaSolidEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(756);
+			ifcRevolvedAreaSolidEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(774);
 		}
 		return ifcRevolvedAreaSolidEClass;
 	}
@@ -27049,8 +25516,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRevolvedAreaSolid_Angle() {
-		return (EAttribute) getIfcRevolvedAreaSolid().getEStructuralFeatures().get(1);
+	public EReference getIfcRevolvedAreaSolid_Angle() {
+		return (EReference) getIfcRevolvedAreaSolid().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -27058,8 +25525,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRevolvedAreaSolid_AngleAsString() {
-		return (EAttribute) getIfcRevolvedAreaSolid().getEStructuralFeatures().get(2);
+	public EReference getIfcRevolvedAreaSolid_AxisLine() {
+		return (EReference) getIfcRevolvedAreaSolid().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -27069,7 +25536,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRibPlateProfileProperties() {
 		if (ifcRibPlateProfilePropertiesEClass == null) {
-			ifcRibPlateProfilePropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(757);
+			ifcRibPlateProfilePropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(775);
 		}
 		return ifcRibPlateProfilePropertiesEClass;
 	}
@@ -27079,8 +25546,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRibPlateProfileProperties_Thickness() {
-		return (EAttribute) getIfcRibPlateProfileProperties().getEStructuralFeatures().get(0);
+	public EReference getIfcRibPlateProfileProperties_Thickness() {
+		return (EReference) getIfcRibPlateProfileProperties().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -27088,8 +25555,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRibPlateProfileProperties_ThicknessAsString() {
-		return (EAttribute) getIfcRibPlateProfileProperties().getEStructuralFeatures().get(1);
+	public EReference getIfcRibPlateProfileProperties_RibHeight() {
+		return (EReference) getIfcRibPlateProfileProperties().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -27097,8 +25564,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRibPlateProfileProperties_RibHeight() {
-		return (EAttribute) getIfcRibPlateProfileProperties().getEStructuralFeatures().get(2);
+	public EReference getIfcRibPlateProfileProperties_RibWidth() {
+		return (EReference) getIfcRibPlateProfileProperties().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -27106,44 +25573,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRibPlateProfileProperties_RibHeightAsString() {
-		return (EAttribute) getIfcRibPlateProfileProperties().getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcRibPlateProfileProperties_RibWidth() {
-		return (EAttribute) getIfcRibPlateProfileProperties().getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcRibPlateProfileProperties_RibWidthAsString() {
-		return (EAttribute) getIfcRibPlateProfileProperties().getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcRibPlateProfileProperties_RibSpacing() {
-		return (EAttribute) getIfcRibPlateProfileProperties().getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcRibPlateProfileProperties_RibSpacingAsString() {
-		return (EAttribute) getIfcRibPlateProfileProperties().getEStructuralFeatures().get(7);
+	public EReference getIfcRibPlateProfileProperties_RibSpacing() {
+		return (EReference) getIfcRibPlateProfileProperties().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -27152,7 +25583,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EAttribute getIfcRibPlateProfileProperties_Direction() {
-		return (EAttribute) getIfcRibPlateProfileProperties().getEStructuralFeatures().get(8);
+		return (EAttribute) getIfcRibPlateProfileProperties().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -27162,7 +25593,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRightCircularCone() {
 		if (ifcRightCircularConeEClass == null) {
-			ifcRightCircularConeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(758);
+			ifcRightCircularConeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(776);
 		}
 		return ifcRightCircularConeEClass;
 	}
@@ -27172,8 +25603,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRightCircularCone_Height() {
-		return (EAttribute) getIfcRightCircularCone().getEStructuralFeatures().get(0);
+	public EReference getIfcRightCircularCone_Height() {
+		return (EReference) getIfcRightCircularCone().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -27181,26 +25612,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRightCircularCone_HeightAsString() {
-		return (EAttribute) getIfcRightCircularCone().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcRightCircularCone_BottomRadius() {
-		return (EAttribute) getIfcRightCircularCone().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcRightCircularCone_BottomRadiusAsString() {
-		return (EAttribute) getIfcRightCircularCone().getEStructuralFeatures().get(3);
+	public EReference getIfcRightCircularCone_BottomRadius() {
+		return (EReference) getIfcRightCircularCone().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -27210,7 +25623,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRightCircularCylinder() {
 		if (ifcRightCircularCylinderEClass == null) {
-			ifcRightCircularCylinderEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(759);
+			ifcRightCircularCylinderEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(777);
 		}
 		return ifcRightCircularCylinderEClass;
 	}
@@ -27220,8 +25633,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRightCircularCylinder_Height() {
-		return (EAttribute) getIfcRightCircularCylinder().getEStructuralFeatures().get(0);
+	public EReference getIfcRightCircularCylinder_Height() {
+		return (EReference) getIfcRightCircularCylinder().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -27229,26 +25642,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRightCircularCylinder_HeightAsString() {
-		return (EAttribute) getIfcRightCircularCylinder().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcRightCircularCylinder_Radius() {
-		return (EAttribute) getIfcRightCircularCylinder().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcRightCircularCylinder_RadiusAsString() {
-		return (EAttribute) getIfcRightCircularCylinder().getEStructuralFeatures().get(3);
+	public EReference getIfcRightCircularCylinder_Radius() {
+		return (EReference) getIfcRightCircularCylinder().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -27258,7 +25653,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRoof() {
 		if (ifcRoofEClass == null) {
-			ifcRoofEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(760);
+			ifcRoofEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(778);
 		}
 		return ifcRoofEClass;
 	}
@@ -27279,7 +25674,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRoot() {
 		if (ifcRootEClass == null) {
-			ifcRootEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(761);
+			ifcRootEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(779);
 		}
 		return ifcRootEClass;
 	}
@@ -27307,8 +25702,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRoot_Name() {
-		return (EAttribute) getIfcRoot().getEStructuralFeatures().get(2);
+	public EReference getIfcRoot_Name() {
+		return (EReference) getIfcRoot().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -27316,8 +25711,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRoot_Description() {
-		return (EAttribute) getIfcRoot().getEStructuralFeatures().get(3);
+	public EReference getIfcRoot_Description() {
+		return (EReference) getIfcRoot().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -27327,7 +25722,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRoundedEdgeFeature() {
 		if (ifcRoundedEdgeFeatureEClass == null) {
-			ifcRoundedEdgeFeatureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(762);
+			ifcRoundedEdgeFeatureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(780);
 		}
 		return ifcRoundedEdgeFeatureEClass;
 	}
@@ -27337,17 +25732,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRoundedEdgeFeature_Radius() {
-		return (EAttribute) getIfcRoundedEdgeFeature().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcRoundedEdgeFeature_RadiusAsString() {
-		return (EAttribute) getIfcRoundedEdgeFeature().getEStructuralFeatures().get(1);
+	public EReference getIfcRoundedEdgeFeature_Radius() {
+		return (EReference) getIfcRoundedEdgeFeature().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -27357,7 +25743,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcRoundedRectangleProfileDef() {
 		if (ifcRoundedRectangleProfileDefEClass == null) {
-			ifcRoundedRectangleProfileDefEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(763);
+			ifcRoundedRectangleProfileDefEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(781);
 		}
 		return ifcRoundedRectangleProfileDefEClass;
 	}
@@ -27367,17 +25753,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcRoundedRectangleProfileDef_RoundingRadius() {
-		return (EAttribute) getIfcRoundedRectangleProfileDef().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcRoundedRectangleProfileDef_RoundingRadiusAsString() {
-		return (EAttribute) getIfcRoundedRectangleProfileDef().getEStructuralFeatures().get(1);
+	public EReference getIfcRoundedRectangleProfileDef_RoundingRadius() {
+		return (EReference) getIfcRoundedRectangleProfileDef().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -27387,7 +25764,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSIUnit() {
 		if (ifcSIUnitEClass == null) {
-			ifcSIUnitEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(764);
+			ifcSIUnitEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(782);
 		}
 		return ifcSIUnitEClass;
 	}
@@ -27417,7 +25794,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSanitaryTerminalType() {
 		if (ifcSanitaryTerminalTypeEClass == null) {
-			ifcSanitaryTerminalTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(765);
+			ifcSanitaryTerminalTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(783);
 		}
 		return ifcSanitaryTerminalTypeEClass;
 	}
@@ -27438,7 +25815,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcScheduleTimeControl() {
 		if (ifcScheduleTimeControlEClass == null) {
-			ifcScheduleTimeControlEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(766);
+			ifcScheduleTimeControlEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(784);
 		}
 		return ifcScheduleTimeControlEClass;
 	}
@@ -27520,8 +25897,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcScheduleTimeControl_ScheduleDuration() {
-		return (EAttribute) getIfcScheduleTimeControl().getEStructuralFeatures().get(8);
+	public EReference getIfcScheduleTimeControl_ScheduleDuration() {
+		return (EReference) getIfcScheduleTimeControl().getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -27529,8 +25906,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcScheduleTimeControl_ScheduleDurationAsString() {
-		return (EAttribute) getIfcScheduleTimeControl().getEStructuralFeatures().get(9);
+	public EReference getIfcScheduleTimeControl_ActualDuration() {
+		return (EReference) getIfcScheduleTimeControl().getEStructuralFeatures().get(9);
 	}
 
 	/**
@@ -27538,8 +25915,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcScheduleTimeControl_ActualDuration() {
-		return (EAttribute) getIfcScheduleTimeControl().getEStructuralFeatures().get(10);
+	public EReference getIfcScheduleTimeControl_RemainingTime() {
+		return (EReference) getIfcScheduleTimeControl().getEStructuralFeatures().get(10);
 	}
 
 	/**
@@ -27547,8 +25924,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcScheduleTimeControl_ActualDurationAsString() {
-		return (EAttribute) getIfcScheduleTimeControl().getEStructuralFeatures().get(11);
+	public EReference getIfcScheduleTimeControl_FreeFloat() {
+		return (EReference) getIfcScheduleTimeControl().getEStructuralFeatures().get(11);
 	}
 
 	/**
@@ -27556,8 +25933,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcScheduleTimeControl_RemainingTime() {
-		return (EAttribute) getIfcScheduleTimeControl().getEStructuralFeatures().get(12);
+	public EReference getIfcScheduleTimeControl_TotalFloat() {
+		return (EReference) getIfcScheduleTimeControl().getEStructuralFeatures().get(12);
 	}
 
 	/**
@@ -27565,53 +25942,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcScheduleTimeControl_RemainingTimeAsString() {
-		return (EAttribute) getIfcScheduleTimeControl().getEStructuralFeatures().get(13);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcScheduleTimeControl_FreeFloat() {
-		return (EAttribute) getIfcScheduleTimeControl().getEStructuralFeatures().get(14);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcScheduleTimeControl_FreeFloatAsString() {
-		return (EAttribute) getIfcScheduleTimeControl().getEStructuralFeatures().get(15);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcScheduleTimeControl_TotalFloat() {
-		return (EAttribute) getIfcScheduleTimeControl().getEStructuralFeatures().get(16);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcScheduleTimeControl_TotalFloatAsString() {
-		return (EAttribute) getIfcScheduleTimeControl().getEStructuralFeatures().get(17);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcScheduleTimeControl_IsCritical() {
-		return (EAttribute) getIfcScheduleTimeControl().getEStructuralFeatures().get(18);
+	public EReference getIfcScheduleTimeControl_IsCritical() {
+		return (EReference) getIfcScheduleTimeControl().getEStructuralFeatures().get(13);
 	}
 
 	/**
@@ -27620,7 +25952,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EReference getIfcScheduleTimeControl_StatusTime() {
-		return (EReference) getIfcScheduleTimeControl().getEStructuralFeatures().get(19);
+		return (EReference) getIfcScheduleTimeControl().getEStructuralFeatures().get(14);
 	}
 
 	/**
@@ -27628,8 +25960,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcScheduleTimeControl_StartFloat() {
-		return (EAttribute) getIfcScheduleTimeControl().getEStructuralFeatures().get(20);
+	public EReference getIfcScheduleTimeControl_StartFloat() {
+		return (EReference) getIfcScheduleTimeControl().getEStructuralFeatures().get(15);
 	}
 
 	/**
@@ -27637,8 +25969,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcScheduleTimeControl_StartFloatAsString() {
-		return (EAttribute) getIfcScheduleTimeControl().getEStructuralFeatures().get(21);
+	public EReference getIfcScheduleTimeControl_FinishFloat() {
+		return (EReference) getIfcScheduleTimeControl().getEStructuralFeatures().get(16);
 	}
 
 	/**
@@ -27646,35 +25978,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcScheduleTimeControl_FinishFloat() {
-		return (EAttribute) getIfcScheduleTimeControl().getEStructuralFeatures().get(22);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcScheduleTimeControl_FinishFloatAsString() {
-		return (EAttribute) getIfcScheduleTimeControl().getEStructuralFeatures().get(23);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcScheduleTimeControl_Completion() {
-		return (EAttribute) getIfcScheduleTimeControl().getEStructuralFeatures().get(24);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcScheduleTimeControl_CompletionAsString() {
-		return (EAttribute) getIfcScheduleTimeControl().getEStructuralFeatures().get(25);
+	public EReference getIfcScheduleTimeControl_Completion() {
+		return (EReference) getIfcScheduleTimeControl().getEStructuralFeatures().get(17);
 	}
 
 	/**
@@ -27683,7 +25988,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EReference getIfcScheduleTimeControl_ScheduleTimeControlAssigned() {
-		return (EReference) getIfcScheduleTimeControl().getEStructuralFeatures().get(26);
+		return (EReference) getIfcScheduleTimeControl().getEStructuralFeatures().get(18);
 	}
 
 	/**
@@ -27693,7 +25998,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSectionProperties() {
 		if (ifcSectionPropertiesEClass == null) {
-			ifcSectionPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(767);
+			ifcSectionPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(785);
 		}
 		return ifcSectionPropertiesEClass;
 	}
@@ -27732,7 +26037,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSectionReinforcementProperties() {
 		if (ifcSectionReinforcementPropertiesEClass == null) {
-			ifcSectionReinforcementPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(768);
+			ifcSectionReinforcementPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(786);
 		}
 		return ifcSectionReinforcementPropertiesEClass;
 	}
@@ -27742,8 +26047,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSectionReinforcementProperties_LongitudinalStartPosition() {
-		return (EAttribute) getIfcSectionReinforcementProperties().getEStructuralFeatures().get(0);
+	public EReference getIfcSectionReinforcementProperties_LongitudinalStartPosition() {
+		return (EReference) getIfcSectionReinforcementProperties().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -27751,8 +26056,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSectionReinforcementProperties_LongitudinalStartPositionAsString() {
-		return (EAttribute) getIfcSectionReinforcementProperties().getEStructuralFeatures().get(1);
+	public EReference getIfcSectionReinforcementProperties_LongitudinalEndPosition() {
+		return (EReference) getIfcSectionReinforcementProperties().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -27760,35 +26065,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSectionReinforcementProperties_LongitudinalEndPosition() {
-		return (EAttribute) getIfcSectionReinforcementProperties().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcSectionReinforcementProperties_LongitudinalEndPositionAsString() {
-		return (EAttribute) getIfcSectionReinforcementProperties().getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcSectionReinforcementProperties_TransversePosition() {
-		return (EAttribute) getIfcSectionReinforcementProperties().getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcSectionReinforcementProperties_TransversePositionAsString() {
-		return (EAttribute) getIfcSectionReinforcementProperties().getEStructuralFeatures().get(5);
+	public EReference getIfcSectionReinforcementProperties_TransversePosition() {
+		return (EReference) getIfcSectionReinforcementProperties().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -27797,7 +26075,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EAttribute getIfcSectionReinforcementProperties_ReinforcementRole() {
-		return (EAttribute) getIfcSectionReinforcementProperties().getEStructuralFeatures().get(6);
+		return (EAttribute) getIfcSectionReinforcementProperties().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -27806,7 +26084,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EReference getIfcSectionReinforcementProperties_SectionDefinition() {
-		return (EReference) getIfcSectionReinforcementProperties().getEStructuralFeatures().get(7);
+		return (EReference) getIfcSectionReinforcementProperties().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -27815,7 +26093,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EReference getIfcSectionReinforcementProperties_CrossSectionReinforcementDefinitions() {
-		return (EReference) getIfcSectionReinforcementProperties().getEStructuralFeatures().get(8);
+		return (EReference) getIfcSectionReinforcementProperties().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -27825,7 +26103,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSectionedSpine() {
 		if (ifcSectionedSpineEClass == null) {
-			ifcSectionedSpineEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(769);
+			ifcSectionedSpineEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(787);
 		}
 		return ifcSectionedSpineEClass;
 	}
@@ -27862,8 +26140,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSectionedSpine_Dim() {
-		return (EAttribute) getIfcSectionedSpine().getEStructuralFeatures().get(3);
+	public EReference getIfcSectionedSpine_Dim() {
+		return (EReference) getIfcSectionedSpine().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -27873,7 +26151,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSensorType() {
 		if (ifcSensorTypeEClass == null) {
-			ifcSensorTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(770);
+			ifcSensorTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(788);
 		}
 		return ifcSensorTypeEClass;
 	}
@@ -27894,7 +26172,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcServiceLife() {
 		if (ifcServiceLifeEClass == null) {
-			ifcServiceLifeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(771);
+			ifcServiceLifeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(789);
 		}
 		return ifcServiceLifeEClass;
 	}
@@ -27913,17 +26191,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcServiceLife_ServiceLifeDuration() {
-		return (EAttribute) getIfcServiceLife().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcServiceLife_ServiceLifeDurationAsString() {
-		return (EAttribute) getIfcServiceLife().getEStructuralFeatures().get(2);
+	public EReference getIfcServiceLife_ServiceLifeDuration() {
+		return (EReference) getIfcServiceLife().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -27933,7 +26202,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcServiceLifeFactor() {
 		if (ifcServiceLifeFactorEClass == null) {
-			ifcServiceLifeFactorEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(772);
+			ifcServiceLifeFactorEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(790);
 		}
 		return ifcServiceLifeFactorEClass;
 	}
@@ -27981,7 +26250,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcShapeAspect() {
 		if (ifcShapeAspectEClass == null) {
-			ifcShapeAspectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(773);
+			ifcShapeAspectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(791);
 		}
 		return ifcShapeAspectEClass;
 	}
@@ -28000,8 +26269,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcShapeAspect_Name() {
-		return (EAttribute) getIfcShapeAspect().getEStructuralFeatures().get(1);
+	public EReference getIfcShapeAspect_Name() {
+		return (EReference) getIfcShapeAspect().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -28009,8 +26278,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcShapeAspect_Description() {
-		return (EAttribute) getIfcShapeAspect().getEStructuralFeatures().get(2);
+	public EReference getIfcShapeAspect_Description() {
+		return (EReference) getIfcShapeAspect().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -28018,8 +26287,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcShapeAspect_ProductDefinitional() {
-		return (EAttribute) getIfcShapeAspect().getEStructuralFeatures().get(3);
+	public EReference getIfcShapeAspect_ProductDefinitional() {
+		return (EReference) getIfcShapeAspect().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -28038,7 +26307,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcShapeModel() {
 		if (ifcShapeModelEClass == null) {
-			ifcShapeModelEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(774);
+			ifcShapeModelEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(792);
 		}
 		return ifcShapeModelEClass;
 	}
@@ -28059,7 +26328,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcShapeRepresentation() {
 		if (ifcShapeRepresentationEClass == null) {
-			ifcShapeRepresentationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(775);
+			ifcShapeRepresentationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(793);
 		}
 		return ifcShapeRepresentationEClass;
 	}
@@ -28071,7 +26340,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcShellBasedSurfaceModel() {
 		if (ifcShellBasedSurfaceModelEClass == null) {
-			ifcShellBasedSurfaceModelEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(776);
+			ifcShellBasedSurfaceModelEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(794);
 		}
 		return ifcShellBasedSurfaceModelEClass;
 	}
@@ -28090,8 +26359,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcShellBasedSurfaceModel_Dim() {
-		return (EAttribute) getIfcShellBasedSurfaceModel().getEStructuralFeatures().get(1);
+	public EReference getIfcShellBasedSurfaceModel_Dim() {
+		return (EReference) getIfcShellBasedSurfaceModel().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -28101,7 +26370,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSimpleProperty() {
 		if (ifcSimplePropertyEClass == null) {
-			ifcSimplePropertyEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(777);
+			ifcSimplePropertyEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(795);
 		}
 		return ifcSimplePropertyEClass;
 	}
@@ -28113,7 +26382,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSite() {
 		if (ifcSiteEClass == null) {
-			ifcSiteEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(778);
+			ifcSiteEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(796);
 		}
 		return ifcSiteEClass;
 	}
@@ -28123,8 +26392,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSite_RefLatitude() {
-		return (EAttribute) getIfcSite().getEStructuralFeatures().get(0);
+	public EReference getIfcSite_RefLatitude() {
+		return (EReference) getIfcSite().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -28132,8 +26401,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSite_RefLongitude() {
-		return (EAttribute) getIfcSite().getEStructuralFeatures().get(1);
+	public EReference getIfcSite_RefLongitude() {
+		return (EReference) getIfcSite().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -28141,8 +26410,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSite_RefElevation() {
-		return (EAttribute) getIfcSite().getEStructuralFeatures().get(2);
+	public EReference getIfcSite_RefElevation() {
+		return (EReference) getIfcSite().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -28150,17 +26419,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSite_RefElevationAsString() {
-		return (EAttribute) getIfcSite().getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcSite_LandTitleNumber() {
-		return (EAttribute) getIfcSite().getEStructuralFeatures().get(4);
+	public EReference getIfcSite_LandTitleNumber() {
+		return (EReference) getIfcSite().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -28169,7 +26429,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EReference getIfcSite_SiteAddress() {
-		return (EReference) getIfcSite().getEStructuralFeatures().get(5);
+		return (EReference) getIfcSite().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -28179,7 +26439,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSlab() {
 		if (ifcSlabEClass == null) {
-			ifcSlabEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(779);
+			ifcSlabEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(797);
 		}
 		return ifcSlabEClass;
 	}
@@ -28200,7 +26460,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSlabType() {
 		if (ifcSlabTypeEClass == null) {
-			ifcSlabTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(780);
+			ifcSlabTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(798);
 		}
 		return ifcSlabTypeEClass;
 	}
@@ -28221,7 +26481,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSlippageConnectionCondition() {
 		if (ifcSlippageConnectionConditionEClass == null) {
-			ifcSlippageConnectionConditionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(781);
+			ifcSlippageConnectionConditionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(799);
 		}
 		return ifcSlippageConnectionConditionEClass;
 	}
@@ -28231,8 +26491,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSlippageConnectionCondition_SlippageX() {
-		return (EAttribute) getIfcSlippageConnectionCondition().getEStructuralFeatures().get(0);
+	public EReference getIfcSlippageConnectionCondition_SlippageX() {
+		return (EReference) getIfcSlippageConnectionCondition().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -28240,8 +26500,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSlippageConnectionCondition_SlippageXAsString() {
-		return (EAttribute) getIfcSlippageConnectionCondition().getEStructuralFeatures().get(1);
+	public EReference getIfcSlippageConnectionCondition_SlippageY() {
+		return (EReference) getIfcSlippageConnectionCondition().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -28249,35 +26509,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSlippageConnectionCondition_SlippageY() {
-		return (EAttribute) getIfcSlippageConnectionCondition().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcSlippageConnectionCondition_SlippageYAsString() {
-		return (EAttribute) getIfcSlippageConnectionCondition().getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcSlippageConnectionCondition_SlippageZ() {
-		return (EAttribute) getIfcSlippageConnectionCondition().getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcSlippageConnectionCondition_SlippageZAsString() {
-		return (EAttribute) getIfcSlippageConnectionCondition().getEStructuralFeatures().get(5);
+	public EReference getIfcSlippageConnectionCondition_SlippageZ() {
+		return (EReference) getIfcSlippageConnectionCondition().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -28287,7 +26520,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSolidModel() {
 		if (ifcSolidModelEClass == null) {
-			ifcSolidModelEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(782);
+			ifcSolidModelEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(800);
 		}
 		return ifcSolidModelEClass;
 	}
@@ -28297,8 +26530,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSolidModel_Dim() {
-		return (EAttribute) getIfcSolidModel().getEStructuralFeatures().get(0);
+	public EReference getIfcSolidModel_Dim() {
+		return (EReference) getIfcSolidModel().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -28308,7 +26541,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSoundProperties() {
 		if (ifcSoundPropertiesEClass == null) {
-			ifcSoundPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(783);
+			ifcSoundPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(801);
 		}
 		return ifcSoundPropertiesEClass;
 	}
@@ -28318,8 +26551,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSoundProperties_IsAttenuating() {
-		return (EAttribute) getIfcSoundProperties().getEStructuralFeatures().get(0);
+	public EReference getIfcSoundProperties_IsAttenuating() {
+		return (EReference) getIfcSoundProperties().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -28347,7 +26580,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSoundValue() {
 		if (ifcSoundValueEClass == null) {
-			ifcSoundValueEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(784);
+			ifcSoundValueEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(802);
 		}
 		return ifcSoundValueEClass;
 	}
@@ -28366,17 +26599,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSoundValue_Frequency() {
-		return (EAttribute) getIfcSoundValue().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcSoundValue_FrequencyAsString() {
-		return (EAttribute) getIfcSoundValue().getEStructuralFeatures().get(2);
+	public EReference getIfcSoundValue_Frequency() {
+		return (EReference) getIfcSoundValue().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -28385,7 +26609,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EReference getIfcSoundValue_SoundLevelSingleValue() {
-		return (EReference) getIfcSoundValue().getEStructuralFeatures().get(3);
+		return (EReference) getIfcSoundValue().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -28395,7 +26619,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSpace() {
 		if (ifcSpaceEClass == null) {
-			ifcSpaceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(785);
+			ifcSpaceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(803);
 		}
 		return ifcSpaceEClass;
 	}
@@ -28414,17 +26638,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSpace_ElevationWithFlooring() {
-		return (EAttribute) getIfcSpace().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcSpace_ElevationWithFlooringAsString() {
-		return (EAttribute) getIfcSpace().getEStructuralFeatures().get(2);
+	public EReference getIfcSpace_ElevationWithFlooring() {
+		return (EReference) getIfcSpace().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -28433,7 +26648,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EReference getIfcSpace_HasCoverings() {
-		return (EReference) getIfcSpace().getEStructuralFeatures().get(3);
+		return (EReference) getIfcSpace().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -28442,7 +26657,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EReference getIfcSpace_BoundedBy() {
-		return (EReference) getIfcSpace().getEStructuralFeatures().get(4);
+		return (EReference) getIfcSpace().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -28452,7 +26667,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSpaceHeaterType() {
 		if (ifcSpaceHeaterTypeEClass == null) {
-			ifcSpaceHeaterTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(786);
+			ifcSpaceHeaterTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(804);
 		}
 		return ifcSpaceHeaterTypeEClass;
 	}
@@ -28473,7 +26688,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSpaceProgram() {
 		if (ifcSpaceProgramEClass == null) {
-			ifcSpaceProgramEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(787);
+			ifcSpaceProgramEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(805);
 		}
 		return ifcSpaceProgramEClass;
 	}
@@ -28483,8 +26698,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSpaceProgram_SpaceProgramIdentifier() {
-		return (EAttribute) getIfcSpaceProgram().getEStructuralFeatures().get(0);
+	public EReference getIfcSpaceProgram_SpaceProgramIdentifier() {
+		return (EReference) getIfcSpaceProgram().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -28492,8 +26707,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSpaceProgram_MaxRequiredArea() {
-		return (EAttribute) getIfcSpaceProgram().getEStructuralFeatures().get(1);
+	public EReference getIfcSpaceProgram_MaxRequiredArea() {
+		return (EReference) getIfcSpaceProgram().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -28501,26 +26716,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSpaceProgram_MaxRequiredAreaAsString() {
-		return (EAttribute) getIfcSpaceProgram().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcSpaceProgram_MinRequiredArea() {
-		return (EAttribute) getIfcSpaceProgram().getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcSpaceProgram_MinRequiredAreaAsString() {
-		return (EAttribute) getIfcSpaceProgram().getEStructuralFeatures().get(4);
+	public EReference getIfcSpaceProgram_MinRequiredArea() {
+		return (EReference) getIfcSpaceProgram().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -28529,7 +26726,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EReference getIfcSpaceProgram_RequestedLocation() {
-		return (EReference) getIfcSpaceProgram().getEStructuralFeatures().get(5);
+		return (EReference) getIfcSpaceProgram().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -28537,17 +26734,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSpaceProgram_StandardRequiredArea() {
-		return (EAttribute) getIfcSpaceProgram().getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcSpaceProgram_StandardRequiredAreaAsString() {
-		return (EAttribute) getIfcSpaceProgram().getEStructuralFeatures().get(7);
+	public EReference getIfcSpaceProgram_StandardRequiredArea() {
+		return (EReference) getIfcSpaceProgram().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -28556,7 +26744,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EReference getIfcSpaceProgram_HasInteractionReqsFrom() {
-		return (EReference) getIfcSpaceProgram().getEStructuralFeatures().get(8);
+		return (EReference) getIfcSpaceProgram().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -28565,7 +26753,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EReference getIfcSpaceProgram_HasInteractionReqsTo() {
-		return (EReference) getIfcSpaceProgram().getEStructuralFeatures().get(9);
+		return (EReference) getIfcSpaceProgram().getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -28575,7 +26763,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSpaceThermalLoadProperties() {
 		if (ifcSpaceThermalLoadPropertiesEClass == null) {
-			ifcSpaceThermalLoadPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(788);
+			ifcSpaceThermalLoadPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(806);
 		}
 		return ifcSpaceThermalLoadPropertiesEClass;
 	}
@@ -28585,17 +26773,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSpaceThermalLoadProperties_ApplicableValueRatio() {
-		return (EAttribute) getIfcSpaceThermalLoadProperties().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcSpaceThermalLoadProperties_ApplicableValueRatioAsString() {
-		return (EAttribute) getIfcSpaceThermalLoadProperties().getEStructuralFeatures().get(1);
+	public EReference getIfcSpaceThermalLoadProperties_ApplicableValueRatio() {
+		return (EReference) getIfcSpaceThermalLoadProperties().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -28604,7 +26783,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EAttribute getIfcSpaceThermalLoadProperties_ThermalLoadSource() {
-		return (EAttribute) getIfcSpaceThermalLoadProperties().getEStructuralFeatures().get(2);
+		return (EAttribute) getIfcSpaceThermalLoadProperties().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -28613,7 +26792,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EAttribute getIfcSpaceThermalLoadProperties_PropertySource() {
-		return (EAttribute) getIfcSpaceThermalLoadProperties().getEStructuralFeatures().get(3);
+		return (EAttribute) getIfcSpaceThermalLoadProperties().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -28621,8 +26800,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSpaceThermalLoadProperties_SourceDescription() {
-		return (EAttribute) getIfcSpaceThermalLoadProperties().getEStructuralFeatures().get(4);
+	public EReference getIfcSpaceThermalLoadProperties_SourceDescription() {
+		return (EReference) getIfcSpaceThermalLoadProperties().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -28630,8 +26809,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSpaceThermalLoadProperties_MaximumValue() {
-		return (EAttribute) getIfcSpaceThermalLoadProperties().getEStructuralFeatures().get(5);
+	public EReference getIfcSpaceThermalLoadProperties_MaximumValue() {
+		return (EReference) getIfcSpaceThermalLoadProperties().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -28639,26 +26818,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSpaceThermalLoadProperties_MaximumValueAsString() {
-		return (EAttribute) getIfcSpaceThermalLoadProperties().getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcSpaceThermalLoadProperties_MinimumValue() {
-		return (EAttribute) getIfcSpaceThermalLoadProperties().getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcSpaceThermalLoadProperties_MinimumValueAsString() {
-		return (EAttribute) getIfcSpaceThermalLoadProperties().getEStructuralFeatures().get(8);
+	public EReference getIfcSpaceThermalLoadProperties_MinimumValue() {
+		return (EReference) getIfcSpaceThermalLoadProperties().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -28667,7 +26828,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EReference getIfcSpaceThermalLoadProperties_ThermalLoadTimeSeriesValues() {
-		return (EReference) getIfcSpaceThermalLoadProperties().getEStructuralFeatures().get(9);
+		return (EReference) getIfcSpaceThermalLoadProperties().getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -28675,8 +26836,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSpaceThermalLoadProperties_UserDefinedThermalLoadSource() {
-		return (EAttribute) getIfcSpaceThermalLoadProperties().getEStructuralFeatures().get(10);
+	public EReference getIfcSpaceThermalLoadProperties_UserDefinedThermalLoadSource() {
+		return (EReference) getIfcSpaceThermalLoadProperties().getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -28684,8 +26845,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSpaceThermalLoadProperties_UserDefinedPropertySource() {
-		return (EAttribute) getIfcSpaceThermalLoadProperties().getEStructuralFeatures().get(11);
+	public EReference getIfcSpaceThermalLoadProperties_UserDefinedPropertySource() {
+		return (EReference) getIfcSpaceThermalLoadProperties().getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -28694,7 +26855,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EAttribute getIfcSpaceThermalLoadProperties_ThermalLoadType() {
-		return (EAttribute) getIfcSpaceThermalLoadProperties().getEStructuralFeatures().get(12);
+		return (EAttribute) getIfcSpaceThermalLoadProperties().getEStructuralFeatures().get(9);
 	}
 
 	/**
@@ -28704,7 +26865,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSpaceType() {
 		if (ifcSpaceTypeEClass == null) {
-			ifcSpaceTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(789);
+			ifcSpaceTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(807);
 		}
 		return ifcSpaceTypeEClass;
 	}
@@ -28725,7 +26886,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSpatialStructureElement() {
 		if (ifcSpatialStructureElementEClass == null) {
-			ifcSpatialStructureElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(790);
+			ifcSpatialStructureElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(808);
 		}
 		return ifcSpatialStructureElementEClass;
 	}
@@ -28735,8 +26896,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSpatialStructureElement_LongName() {
-		return (EAttribute) getIfcSpatialStructureElement().getEStructuralFeatures().get(0);
+	public EReference getIfcSpatialStructureElement_LongName() {
+		return (EReference) getIfcSpatialStructureElement().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -28782,7 +26943,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSpatialStructureElementType() {
 		if (ifcSpatialStructureElementTypeEClass == null) {
-			ifcSpatialStructureElementTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(791);
+			ifcSpatialStructureElementTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(809);
 		}
 		return ifcSpatialStructureElementTypeEClass;
 	}
@@ -28794,7 +26955,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSphere() {
 		if (ifcSphereEClass == null) {
-			ifcSphereEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(792);
+			ifcSphereEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(810);
 		}
 		return ifcSphereEClass;
 	}
@@ -28804,17 +26965,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSphere_Radius() {
-		return (EAttribute) getIfcSphere().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcSphere_RadiusAsString() {
-		return (EAttribute) getIfcSphere().getEStructuralFeatures().get(1);
+	public EReference getIfcSphere_Radius() {
+		return (EReference) getIfcSphere().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -28824,7 +26976,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcStackTerminalType() {
 		if (ifcStackTerminalTypeEClass == null) {
-			ifcStackTerminalTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(793);
+			ifcStackTerminalTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(811);
 		}
 		return ifcStackTerminalTypeEClass;
 	}
@@ -28845,7 +26997,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcStair() {
 		if (ifcStairEClass == null) {
-			ifcStairEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(794);
+			ifcStairEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(812);
 		}
 		return ifcStairEClass;
 	}
@@ -28866,7 +27018,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcStairFlight() {
 		if (ifcStairFlightEClass == null) {
-			ifcStairFlightEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(795);
+			ifcStairFlightEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(813);
 		}
 		return ifcStairFlightEClass;
 	}
@@ -28876,8 +27028,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStairFlight_NumberOfRiser() {
-		return (EAttribute) getIfcStairFlight().getEStructuralFeatures().get(0);
+	public EReference getIfcStairFlight_NumberOfRiser() {
+		return (EReference) getIfcStairFlight().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -28885,8 +27037,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStairFlight_NumberOfTreads() {
-		return (EAttribute) getIfcStairFlight().getEStructuralFeatures().get(1);
+	public EReference getIfcStairFlight_NumberOfTreads() {
+		return (EReference) getIfcStairFlight().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -28894,8 +27046,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStairFlight_RiserHeight() {
-		return (EAttribute) getIfcStairFlight().getEStructuralFeatures().get(2);
+	public EReference getIfcStairFlight_RiserHeight() {
+		return (EReference) getIfcStairFlight().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -28903,26 +27055,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStairFlight_RiserHeightAsString() {
-		return (EAttribute) getIfcStairFlight().getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStairFlight_TreadLength() {
-		return (EAttribute) getIfcStairFlight().getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStairFlight_TreadLengthAsString() {
-		return (EAttribute) getIfcStairFlight().getEStructuralFeatures().get(5);
+	public EReference getIfcStairFlight_TreadLength() {
+		return (EReference) getIfcStairFlight().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -28932,7 +27066,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcStairFlightType() {
 		if (ifcStairFlightTypeEClass == null) {
-			ifcStairFlightTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(796);
+			ifcStairFlightTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(814);
 		}
 		return ifcStairFlightTypeEClass;
 	}
@@ -28953,7 +27087,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcStructuralAction() {
 		if (ifcStructuralActionEClass == null) {
-			ifcStructuralActionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(797);
+			ifcStructuralActionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(815);
 		}
 		return ifcStructuralActionEClass;
 	}
@@ -28963,8 +27097,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralAction_DestabilizingLoad() {
-		return (EAttribute) getIfcStructuralAction().getEStructuralFeatures().get(0);
+	public EReference getIfcStructuralAction_DestabilizingLoad() {
+		return (EReference) getIfcStructuralAction().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -28983,7 +27117,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcStructuralActivity() {
 		if (ifcStructuralActivityEClass == null) {
-			ifcStructuralActivityEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(798);
+			ifcStructuralActivityEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(816);
 		}
 		return ifcStructuralActivityEClass;
 	}
@@ -29022,7 +27156,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcStructuralAnalysisModel() {
 		if (ifcStructuralAnalysisModelEClass == null) {
-			ifcStructuralAnalysisModelEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(799);
+			ifcStructuralAnalysisModelEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(817);
 		}
 		return ifcStructuralAnalysisModelEClass;
 	}
@@ -29070,7 +27204,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcStructuralConnection() {
 		if (ifcStructuralConnectionEClass == null) {
-			ifcStructuralConnectionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(800);
+			ifcStructuralConnectionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(818);
 		}
 		return ifcStructuralConnectionEClass;
 	}
@@ -29100,7 +27234,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcStructuralConnectionCondition() {
 		if (ifcStructuralConnectionConditionEClass == null) {
-			ifcStructuralConnectionConditionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(801);
+			ifcStructuralConnectionConditionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(819);
 		}
 		return ifcStructuralConnectionConditionEClass;
 	}
@@ -29110,8 +27244,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralConnectionCondition_Name() {
-		return (EAttribute) getIfcStructuralConnectionCondition().getEStructuralFeatures().get(0);
+	public EReference getIfcStructuralConnectionCondition_Name() {
+		return (EReference) getIfcStructuralConnectionCondition().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -29121,7 +27255,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcStructuralCurveConnection() {
 		if (ifcStructuralCurveConnectionEClass == null) {
-			ifcStructuralCurveConnectionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(802);
+			ifcStructuralCurveConnectionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(820);
 		}
 		return ifcStructuralCurveConnectionEClass;
 	}
@@ -29133,7 +27267,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcStructuralCurveMember() {
 		if (ifcStructuralCurveMemberEClass == null) {
-			ifcStructuralCurveMemberEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(803);
+			ifcStructuralCurveMemberEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(821);
 		}
 		return ifcStructuralCurveMemberEClass;
 	}
@@ -29154,7 +27288,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcStructuralCurveMemberVarying() {
 		if (ifcStructuralCurveMemberVaryingEClass == null) {
-			ifcStructuralCurveMemberVaryingEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(804);
+			ifcStructuralCurveMemberVaryingEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(822);
 		}
 		return ifcStructuralCurveMemberVaryingEClass;
 	}
@@ -29166,7 +27300,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcStructuralItem() {
 		if (ifcStructuralItemEClass == null) {
-			ifcStructuralItemEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(805);
+			ifcStructuralItemEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(823);
 		}
 		return ifcStructuralItemEClass;
 	}
@@ -29187,7 +27321,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcStructuralLinearAction() {
 		if (ifcStructuralLinearActionEClass == null) {
-			ifcStructuralLinearActionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(806);
+			ifcStructuralLinearActionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(824);
 		}
 		return ifcStructuralLinearActionEClass;
 	}
@@ -29208,7 +27342,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcStructuralLinearActionVarying() {
 		if (ifcStructuralLinearActionVaryingEClass == null) {
-			ifcStructuralLinearActionVaryingEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(807);
+			ifcStructuralLinearActionVaryingEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(825);
 		}
 		return ifcStructuralLinearActionVaryingEClass;
 	}
@@ -29236,9 +27370,18 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getIfcStructuralLinearActionVarying_VaryingAppliedLoads() {
+		return (EReference) getIfcStructuralLinearActionVarying().getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getIfcStructuralLoad() {
 		if (ifcStructuralLoadEClass == null) {
-			ifcStructuralLoadEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(808);
+			ifcStructuralLoadEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(826);
 		}
 		return ifcStructuralLoadEClass;
 	}
@@ -29248,8 +27391,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralLoad_Name() {
-		return (EAttribute) getIfcStructuralLoad().getEStructuralFeatures().get(0);
+	public EReference getIfcStructuralLoad_Name() {
+		return (EReference) getIfcStructuralLoad().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -29259,7 +27402,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcStructuralLoadGroup() {
 		if (ifcStructuralLoadGroupEClass == null) {
-			ifcStructuralLoadGroupEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(809);
+			ifcStructuralLoadGroupEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(827);
 		}
 		return ifcStructuralLoadGroupEClass;
 	}
@@ -29296,8 +27439,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralLoadGroup_Coefficient() {
-		return (EAttribute) getIfcStructuralLoadGroup().getEStructuralFeatures().get(3);
+	public EReference getIfcStructuralLoadGroup_Coefficient() {
+		return (EReference) getIfcStructuralLoadGroup().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -29305,17 +27448,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralLoadGroup_CoefficientAsString() {
-		return (EAttribute) getIfcStructuralLoadGroup().getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralLoadGroup_Purpose() {
-		return (EAttribute) getIfcStructuralLoadGroup().getEStructuralFeatures().get(5);
+	public EReference getIfcStructuralLoadGroup_Purpose() {
+		return (EReference) getIfcStructuralLoadGroup().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -29324,7 +27458,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EReference getIfcStructuralLoadGroup_SourceOfResultGroup() {
-		return (EReference) getIfcStructuralLoadGroup().getEStructuralFeatures().get(6);
+		return (EReference) getIfcStructuralLoadGroup().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -29333,7 +27467,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EReference getIfcStructuralLoadGroup_LoadGroupFor() {
-		return (EReference) getIfcStructuralLoadGroup().getEStructuralFeatures().get(7);
+		return (EReference) getIfcStructuralLoadGroup().getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -29343,7 +27477,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcStructuralLoadLinearForce() {
 		if (ifcStructuralLoadLinearForceEClass == null) {
-			ifcStructuralLoadLinearForceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(810);
+			ifcStructuralLoadLinearForceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(828);
 		}
 		return ifcStructuralLoadLinearForceEClass;
 	}
@@ -29353,8 +27487,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralLoadLinearForce_LinearForceX() {
-		return (EAttribute) getIfcStructuralLoadLinearForce().getEStructuralFeatures().get(0);
+	public EReference getIfcStructuralLoadLinearForce_LinearForceX() {
+		return (EReference) getIfcStructuralLoadLinearForce().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -29362,8 +27496,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralLoadLinearForce_LinearForceXAsString() {
-		return (EAttribute) getIfcStructuralLoadLinearForce().getEStructuralFeatures().get(1);
+	public EReference getIfcStructuralLoadLinearForce_LinearForceY() {
+		return (EReference) getIfcStructuralLoadLinearForce().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -29371,8 +27505,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralLoadLinearForce_LinearForceY() {
-		return (EAttribute) getIfcStructuralLoadLinearForce().getEStructuralFeatures().get(2);
+	public EReference getIfcStructuralLoadLinearForce_LinearForceZ() {
+		return (EReference) getIfcStructuralLoadLinearForce().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -29380,8 +27514,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralLoadLinearForce_LinearForceYAsString() {
-		return (EAttribute) getIfcStructuralLoadLinearForce().getEStructuralFeatures().get(3);
+	public EReference getIfcStructuralLoadLinearForce_LinearMomentX() {
+		return (EReference) getIfcStructuralLoadLinearForce().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -29389,8 +27523,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralLoadLinearForce_LinearForceZ() {
-		return (EAttribute) getIfcStructuralLoadLinearForce().getEStructuralFeatures().get(4);
+	public EReference getIfcStructuralLoadLinearForce_LinearMomentY() {
+		return (EReference) getIfcStructuralLoadLinearForce().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -29398,62 +27532,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralLoadLinearForce_LinearForceZAsString() {
-		return (EAttribute) getIfcStructuralLoadLinearForce().getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralLoadLinearForce_LinearMomentX() {
-		return (EAttribute) getIfcStructuralLoadLinearForce().getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralLoadLinearForce_LinearMomentXAsString() {
-		return (EAttribute) getIfcStructuralLoadLinearForce().getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralLoadLinearForce_LinearMomentY() {
-		return (EAttribute) getIfcStructuralLoadLinearForce().getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralLoadLinearForce_LinearMomentYAsString() {
-		return (EAttribute) getIfcStructuralLoadLinearForce().getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralLoadLinearForce_LinearMomentZ() {
-		return (EAttribute) getIfcStructuralLoadLinearForce().getEStructuralFeatures().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralLoadLinearForce_LinearMomentZAsString() {
-		return (EAttribute) getIfcStructuralLoadLinearForce().getEStructuralFeatures().get(11);
+	public EReference getIfcStructuralLoadLinearForce_LinearMomentZ() {
+		return (EReference) getIfcStructuralLoadLinearForce().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -29463,7 +27543,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcStructuralLoadPlanarForce() {
 		if (ifcStructuralLoadPlanarForceEClass == null) {
-			ifcStructuralLoadPlanarForceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(811);
+			ifcStructuralLoadPlanarForceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(829);
 		}
 		return ifcStructuralLoadPlanarForceEClass;
 	}
@@ -29473,8 +27553,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralLoadPlanarForce_PlanarForceX() {
-		return (EAttribute) getIfcStructuralLoadPlanarForce().getEStructuralFeatures().get(0);
+	public EReference getIfcStructuralLoadPlanarForce_PlanarForceX() {
+		return (EReference) getIfcStructuralLoadPlanarForce().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -29482,8 +27562,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralLoadPlanarForce_PlanarForceXAsString() {
-		return (EAttribute) getIfcStructuralLoadPlanarForce().getEStructuralFeatures().get(1);
+	public EReference getIfcStructuralLoadPlanarForce_PlanarForceY() {
+		return (EReference) getIfcStructuralLoadPlanarForce().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -29491,35 +27571,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralLoadPlanarForce_PlanarForceY() {
-		return (EAttribute) getIfcStructuralLoadPlanarForce().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralLoadPlanarForce_PlanarForceYAsString() {
-		return (EAttribute) getIfcStructuralLoadPlanarForce().getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralLoadPlanarForce_PlanarForceZ() {
-		return (EAttribute) getIfcStructuralLoadPlanarForce().getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralLoadPlanarForce_PlanarForceZAsString() {
-		return (EAttribute) getIfcStructuralLoadPlanarForce().getEStructuralFeatures().get(5);
+	public EReference getIfcStructuralLoadPlanarForce_PlanarForceZ() {
+		return (EReference) getIfcStructuralLoadPlanarForce().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -29529,7 +27582,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcStructuralLoadSingleDisplacement() {
 		if (ifcStructuralLoadSingleDisplacementEClass == null) {
-			ifcStructuralLoadSingleDisplacementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(812);
+			ifcStructuralLoadSingleDisplacementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(830);
 		}
 		return ifcStructuralLoadSingleDisplacementEClass;
 	}
@@ -29539,8 +27592,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralLoadSingleDisplacement_DisplacementX() {
-		return (EAttribute) getIfcStructuralLoadSingleDisplacement().getEStructuralFeatures().get(0);
+	public EReference getIfcStructuralLoadSingleDisplacement_DisplacementX() {
+		return (EReference) getIfcStructuralLoadSingleDisplacement().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -29548,8 +27601,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralLoadSingleDisplacement_DisplacementXAsString() {
-		return (EAttribute) getIfcStructuralLoadSingleDisplacement().getEStructuralFeatures().get(1);
+	public EReference getIfcStructuralLoadSingleDisplacement_DisplacementY() {
+		return (EReference) getIfcStructuralLoadSingleDisplacement().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -29557,8 +27610,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralLoadSingleDisplacement_DisplacementY() {
-		return (EAttribute) getIfcStructuralLoadSingleDisplacement().getEStructuralFeatures().get(2);
+	public EReference getIfcStructuralLoadSingleDisplacement_DisplacementZ() {
+		return (EReference) getIfcStructuralLoadSingleDisplacement().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -29566,8 +27619,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralLoadSingleDisplacement_DisplacementYAsString() {
-		return (EAttribute) getIfcStructuralLoadSingleDisplacement().getEStructuralFeatures().get(3);
+	public EReference getIfcStructuralLoadSingleDisplacement_RotationalDisplacementRX() {
+		return (EReference) getIfcStructuralLoadSingleDisplacement().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -29575,8 +27628,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralLoadSingleDisplacement_DisplacementZ() {
-		return (EAttribute) getIfcStructuralLoadSingleDisplacement().getEStructuralFeatures().get(4);
+	public EReference getIfcStructuralLoadSingleDisplacement_RotationalDisplacementRY() {
+		return (EReference) getIfcStructuralLoadSingleDisplacement().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -29584,62 +27637,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralLoadSingleDisplacement_DisplacementZAsString() {
-		return (EAttribute) getIfcStructuralLoadSingleDisplacement().getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralLoadSingleDisplacement_RotationalDisplacementRX() {
-		return (EAttribute) getIfcStructuralLoadSingleDisplacement().getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralLoadSingleDisplacement_RotationalDisplacementRXAsString() {
-		return (EAttribute) getIfcStructuralLoadSingleDisplacement().getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralLoadSingleDisplacement_RotationalDisplacementRY() {
-		return (EAttribute) getIfcStructuralLoadSingleDisplacement().getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralLoadSingleDisplacement_RotationalDisplacementRYAsString() {
-		return (EAttribute) getIfcStructuralLoadSingleDisplacement().getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralLoadSingleDisplacement_RotationalDisplacementRZ() {
-		return (EAttribute) getIfcStructuralLoadSingleDisplacement().getEStructuralFeatures().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralLoadSingleDisplacement_RotationalDisplacementRZAsString() {
-		return (EAttribute) getIfcStructuralLoadSingleDisplacement().getEStructuralFeatures().get(11);
+	public EReference getIfcStructuralLoadSingleDisplacement_RotationalDisplacementRZ() {
+		return (EReference) getIfcStructuralLoadSingleDisplacement().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -29649,7 +27648,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcStructuralLoadSingleDisplacementDistortion() {
 		if (ifcStructuralLoadSingleDisplacementDistortionEClass == null) {
-			ifcStructuralLoadSingleDisplacementDistortionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(813);
+			ifcStructuralLoadSingleDisplacementDistortionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(831);
 		}
 		return ifcStructuralLoadSingleDisplacementDistortionEClass;
 	}
@@ -29659,17 +27658,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralLoadSingleDisplacementDistortion_Distortion() {
-		return (EAttribute) getIfcStructuralLoadSingleDisplacementDistortion().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralLoadSingleDisplacementDistortion_DistortionAsString() {
-		return (EAttribute) getIfcStructuralLoadSingleDisplacementDistortion().getEStructuralFeatures().get(1);
+	public EReference getIfcStructuralLoadSingleDisplacementDistortion_Distortion() {
+		return (EReference) getIfcStructuralLoadSingleDisplacementDistortion().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -29679,7 +27669,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcStructuralLoadSingleForce() {
 		if (ifcStructuralLoadSingleForceEClass == null) {
-			ifcStructuralLoadSingleForceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(814);
+			ifcStructuralLoadSingleForceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(832);
 		}
 		return ifcStructuralLoadSingleForceEClass;
 	}
@@ -29689,8 +27679,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralLoadSingleForce_ForceX() {
-		return (EAttribute) getIfcStructuralLoadSingleForce().getEStructuralFeatures().get(0);
+	public EReference getIfcStructuralLoadSingleForce_ForceX() {
+		return (EReference) getIfcStructuralLoadSingleForce().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -29698,8 +27688,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralLoadSingleForce_ForceXAsString() {
-		return (EAttribute) getIfcStructuralLoadSingleForce().getEStructuralFeatures().get(1);
+	public EReference getIfcStructuralLoadSingleForce_ForceY() {
+		return (EReference) getIfcStructuralLoadSingleForce().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -29707,8 +27697,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralLoadSingleForce_ForceY() {
-		return (EAttribute) getIfcStructuralLoadSingleForce().getEStructuralFeatures().get(2);
+	public EReference getIfcStructuralLoadSingleForce_ForceZ() {
+		return (EReference) getIfcStructuralLoadSingleForce().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -29716,8 +27706,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralLoadSingleForce_ForceYAsString() {
-		return (EAttribute) getIfcStructuralLoadSingleForce().getEStructuralFeatures().get(3);
+	public EReference getIfcStructuralLoadSingleForce_MomentX() {
+		return (EReference) getIfcStructuralLoadSingleForce().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -29725,8 +27715,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralLoadSingleForce_ForceZ() {
-		return (EAttribute) getIfcStructuralLoadSingleForce().getEStructuralFeatures().get(4);
+	public EReference getIfcStructuralLoadSingleForce_MomentY() {
+		return (EReference) getIfcStructuralLoadSingleForce().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -29734,62 +27724,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralLoadSingleForce_ForceZAsString() {
-		return (EAttribute) getIfcStructuralLoadSingleForce().getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralLoadSingleForce_MomentX() {
-		return (EAttribute) getIfcStructuralLoadSingleForce().getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralLoadSingleForce_MomentXAsString() {
-		return (EAttribute) getIfcStructuralLoadSingleForce().getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralLoadSingleForce_MomentY() {
-		return (EAttribute) getIfcStructuralLoadSingleForce().getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralLoadSingleForce_MomentYAsString() {
-		return (EAttribute) getIfcStructuralLoadSingleForce().getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralLoadSingleForce_MomentZ() {
-		return (EAttribute) getIfcStructuralLoadSingleForce().getEStructuralFeatures().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralLoadSingleForce_MomentZAsString() {
-		return (EAttribute) getIfcStructuralLoadSingleForce().getEStructuralFeatures().get(11);
+	public EReference getIfcStructuralLoadSingleForce_MomentZ() {
+		return (EReference) getIfcStructuralLoadSingleForce().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -29799,7 +27735,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcStructuralLoadSingleForceWarping() {
 		if (ifcStructuralLoadSingleForceWarpingEClass == null) {
-			ifcStructuralLoadSingleForceWarpingEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(815);
+			ifcStructuralLoadSingleForceWarpingEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(833);
 		}
 		return ifcStructuralLoadSingleForceWarpingEClass;
 	}
@@ -29809,17 +27745,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralLoadSingleForceWarping_WarpingMoment() {
-		return (EAttribute) getIfcStructuralLoadSingleForceWarping().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralLoadSingleForceWarping_WarpingMomentAsString() {
-		return (EAttribute) getIfcStructuralLoadSingleForceWarping().getEStructuralFeatures().get(1);
+	public EReference getIfcStructuralLoadSingleForceWarping_WarpingMoment() {
+		return (EReference) getIfcStructuralLoadSingleForceWarping().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -29829,7 +27756,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcStructuralLoadStatic() {
 		if (ifcStructuralLoadStaticEClass == null) {
-			ifcStructuralLoadStaticEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(816);
+			ifcStructuralLoadStaticEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(834);
 		}
 		return ifcStructuralLoadStaticEClass;
 	}
@@ -29841,7 +27768,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcStructuralLoadTemperature() {
 		if (ifcStructuralLoadTemperatureEClass == null) {
-			ifcStructuralLoadTemperatureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(817);
+			ifcStructuralLoadTemperatureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(835);
 		}
 		return ifcStructuralLoadTemperatureEClass;
 	}
@@ -29851,8 +27778,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralLoadTemperature_DeltaT_Constant() {
-		return (EAttribute) getIfcStructuralLoadTemperature().getEStructuralFeatures().get(0);
+	public EReference getIfcStructuralLoadTemperature_DeltaT_Constant() {
+		return (EReference) getIfcStructuralLoadTemperature().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -29860,8 +27787,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralLoadTemperature_DeltaT_ConstantAsString() {
-		return (EAttribute) getIfcStructuralLoadTemperature().getEStructuralFeatures().get(1);
+	public EReference getIfcStructuralLoadTemperature_DeltaT_Y() {
+		return (EReference) getIfcStructuralLoadTemperature().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -29869,35 +27796,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralLoadTemperature_DeltaT_Y() {
-		return (EAttribute) getIfcStructuralLoadTemperature().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralLoadTemperature_DeltaT_YAsString() {
-		return (EAttribute) getIfcStructuralLoadTemperature().getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralLoadTemperature_DeltaT_Z() {
-		return (EAttribute) getIfcStructuralLoadTemperature().getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralLoadTemperature_DeltaT_ZAsString() {
-		return (EAttribute) getIfcStructuralLoadTemperature().getEStructuralFeatures().get(5);
+	public EReference getIfcStructuralLoadTemperature_DeltaT_Z() {
+		return (EReference) getIfcStructuralLoadTemperature().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -29907,7 +27807,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcStructuralMember() {
 		if (ifcStructuralMemberEClass == null) {
-			ifcStructuralMemberEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(818);
+			ifcStructuralMemberEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(836);
 		}
 		return ifcStructuralMemberEClass;
 	}
@@ -29937,7 +27837,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcStructuralPlanarAction() {
 		if (ifcStructuralPlanarActionEClass == null) {
-			ifcStructuralPlanarActionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(819);
+			ifcStructuralPlanarActionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(837);
 		}
 		return ifcStructuralPlanarActionEClass;
 	}
@@ -29958,7 +27858,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcStructuralPlanarActionVarying() {
 		if (ifcStructuralPlanarActionVaryingEClass == null) {
-			ifcStructuralPlanarActionVaryingEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(820);
+			ifcStructuralPlanarActionVaryingEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(838);
 		}
 		return ifcStructuralPlanarActionVaryingEClass;
 	}
@@ -29986,9 +27886,18 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getIfcStructuralPlanarActionVarying_VaryingAppliedLoads() {
+		return (EReference) getIfcStructuralPlanarActionVarying().getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getIfcStructuralPointAction() {
 		if (ifcStructuralPointActionEClass == null) {
-			ifcStructuralPointActionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(821);
+			ifcStructuralPointActionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(839);
 		}
 		return ifcStructuralPointActionEClass;
 	}
@@ -30000,7 +27909,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcStructuralPointConnection() {
 		if (ifcStructuralPointConnectionEClass == null) {
-			ifcStructuralPointConnectionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(822);
+			ifcStructuralPointConnectionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(840);
 		}
 		return ifcStructuralPointConnectionEClass;
 	}
@@ -30012,7 +27921,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcStructuralPointReaction() {
 		if (ifcStructuralPointReactionEClass == null) {
-			ifcStructuralPointReactionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(823);
+			ifcStructuralPointReactionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(841);
 		}
 		return ifcStructuralPointReactionEClass;
 	}
@@ -30024,7 +27933,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcStructuralProfileProperties() {
 		if (ifcStructuralProfilePropertiesEClass == null) {
-			ifcStructuralProfilePropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(824);
+			ifcStructuralProfilePropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(842);
 		}
 		return ifcStructuralProfilePropertiesEClass;
 	}
@@ -30034,8 +27943,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralProfileProperties_TorsionalConstantX() {
-		return (EAttribute) getIfcStructuralProfileProperties().getEStructuralFeatures().get(0);
+	public EReference getIfcStructuralProfileProperties_TorsionalConstantX() {
+		return (EReference) getIfcStructuralProfileProperties().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -30043,8 +27952,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralProfileProperties_TorsionalConstantXAsString() {
-		return (EAttribute) getIfcStructuralProfileProperties().getEStructuralFeatures().get(1);
+	public EReference getIfcStructuralProfileProperties_MomentOfInertiaYZ() {
+		return (EReference) getIfcStructuralProfileProperties().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -30052,8 +27961,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralProfileProperties_MomentOfInertiaYZ() {
-		return (EAttribute) getIfcStructuralProfileProperties().getEStructuralFeatures().get(2);
+	public EReference getIfcStructuralProfileProperties_MomentOfInertiaY() {
+		return (EReference) getIfcStructuralProfileProperties().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -30061,8 +27970,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralProfileProperties_MomentOfInertiaYZAsString() {
-		return (EAttribute) getIfcStructuralProfileProperties().getEStructuralFeatures().get(3);
+	public EReference getIfcStructuralProfileProperties_MomentOfInertiaZ() {
+		return (EReference) getIfcStructuralProfileProperties().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -30070,8 +27979,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralProfileProperties_MomentOfInertiaY() {
-		return (EAttribute) getIfcStructuralProfileProperties().getEStructuralFeatures().get(4);
+	public EReference getIfcStructuralProfileProperties_WarpingConstant() {
+		return (EReference) getIfcStructuralProfileProperties().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -30079,8 +27988,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralProfileProperties_MomentOfInertiaYAsString() {
-		return (EAttribute) getIfcStructuralProfileProperties().getEStructuralFeatures().get(5);
+	public EReference getIfcStructuralProfileProperties_ShearCentreZ() {
+		return (EReference) getIfcStructuralProfileProperties().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -30088,8 +27997,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralProfileProperties_MomentOfInertiaZ() {
-		return (EAttribute) getIfcStructuralProfileProperties().getEStructuralFeatures().get(6);
+	public EReference getIfcStructuralProfileProperties_ShearCentreY() {
+		return (EReference) getIfcStructuralProfileProperties().getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -30097,8 +28006,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralProfileProperties_MomentOfInertiaZAsString() {
-		return (EAttribute) getIfcStructuralProfileProperties().getEStructuralFeatures().get(7);
+	public EReference getIfcStructuralProfileProperties_ShearDeformationAreaZ() {
+		return (EReference) getIfcStructuralProfileProperties().getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -30106,8 +28015,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralProfileProperties_WarpingConstant() {
-		return (EAttribute) getIfcStructuralProfileProperties().getEStructuralFeatures().get(8);
+	public EReference getIfcStructuralProfileProperties_ShearDeformationAreaY() {
+		return (EReference) getIfcStructuralProfileProperties().getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -30115,8 +28024,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralProfileProperties_WarpingConstantAsString() {
-		return (EAttribute) getIfcStructuralProfileProperties().getEStructuralFeatures().get(9);
+	public EReference getIfcStructuralProfileProperties_MaximumSectionModulusY() {
+		return (EReference) getIfcStructuralProfileProperties().getEStructuralFeatures().get(9);
 	}
 
 	/**
@@ -30124,8 +28033,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralProfileProperties_ShearCentreZ() {
-		return (EAttribute) getIfcStructuralProfileProperties().getEStructuralFeatures().get(10);
+	public EReference getIfcStructuralProfileProperties_MinimumSectionModulusY() {
+		return (EReference) getIfcStructuralProfileProperties().getEStructuralFeatures().get(10);
 	}
 
 	/**
@@ -30133,8 +28042,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralProfileProperties_ShearCentreZAsString() {
-		return (EAttribute) getIfcStructuralProfileProperties().getEStructuralFeatures().get(11);
+	public EReference getIfcStructuralProfileProperties_MaximumSectionModulusZ() {
+		return (EReference) getIfcStructuralProfileProperties().getEStructuralFeatures().get(11);
 	}
 
 	/**
@@ -30142,8 +28051,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralProfileProperties_ShearCentreY() {
-		return (EAttribute) getIfcStructuralProfileProperties().getEStructuralFeatures().get(12);
+	public EReference getIfcStructuralProfileProperties_MinimumSectionModulusZ() {
+		return (EReference) getIfcStructuralProfileProperties().getEStructuralFeatures().get(12);
 	}
 
 	/**
@@ -30151,8 +28060,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralProfileProperties_ShearCentreYAsString() {
-		return (EAttribute) getIfcStructuralProfileProperties().getEStructuralFeatures().get(13);
+	public EReference getIfcStructuralProfileProperties_TorsionalSectionModulus() {
+		return (EReference) getIfcStructuralProfileProperties().getEStructuralFeatures().get(13);
 	}
 
 	/**
@@ -30160,8 +28069,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralProfileProperties_ShearDeformationAreaZ() {
-		return (EAttribute) getIfcStructuralProfileProperties().getEStructuralFeatures().get(14);
+	public EReference getIfcStructuralProfileProperties_CentreOfGravityInX() {
+		return (EReference) getIfcStructuralProfileProperties().getEStructuralFeatures().get(14);
 	}
 
 	/**
@@ -30169,152 +28078,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralProfileProperties_ShearDeformationAreaZAsString() {
-		return (EAttribute) getIfcStructuralProfileProperties().getEStructuralFeatures().get(15);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralProfileProperties_ShearDeformationAreaY() {
-		return (EAttribute) getIfcStructuralProfileProperties().getEStructuralFeatures().get(16);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralProfileProperties_ShearDeformationAreaYAsString() {
-		return (EAttribute) getIfcStructuralProfileProperties().getEStructuralFeatures().get(17);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralProfileProperties_MaximumSectionModulusY() {
-		return (EAttribute) getIfcStructuralProfileProperties().getEStructuralFeatures().get(18);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralProfileProperties_MaximumSectionModulusYAsString() {
-		return (EAttribute) getIfcStructuralProfileProperties().getEStructuralFeatures().get(19);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralProfileProperties_MinimumSectionModulusY() {
-		return (EAttribute) getIfcStructuralProfileProperties().getEStructuralFeatures().get(20);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralProfileProperties_MinimumSectionModulusYAsString() {
-		return (EAttribute) getIfcStructuralProfileProperties().getEStructuralFeatures().get(21);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralProfileProperties_MaximumSectionModulusZ() {
-		return (EAttribute) getIfcStructuralProfileProperties().getEStructuralFeatures().get(22);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralProfileProperties_MaximumSectionModulusZAsString() {
-		return (EAttribute) getIfcStructuralProfileProperties().getEStructuralFeatures().get(23);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralProfileProperties_MinimumSectionModulusZ() {
-		return (EAttribute) getIfcStructuralProfileProperties().getEStructuralFeatures().get(24);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralProfileProperties_MinimumSectionModulusZAsString() {
-		return (EAttribute) getIfcStructuralProfileProperties().getEStructuralFeatures().get(25);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralProfileProperties_TorsionalSectionModulus() {
-		return (EAttribute) getIfcStructuralProfileProperties().getEStructuralFeatures().get(26);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralProfileProperties_TorsionalSectionModulusAsString() {
-		return (EAttribute) getIfcStructuralProfileProperties().getEStructuralFeatures().get(27);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralProfileProperties_CentreOfGravityInX() {
-		return (EAttribute) getIfcStructuralProfileProperties().getEStructuralFeatures().get(28);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralProfileProperties_CentreOfGravityInXAsString() {
-		return (EAttribute) getIfcStructuralProfileProperties().getEStructuralFeatures().get(29);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralProfileProperties_CentreOfGravityInY() {
-		return (EAttribute) getIfcStructuralProfileProperties().getEStructuralFeatures().get(30);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralProfileProperties_CentreOfGravityInYAsString() {
-		return (EAttribute) getIfcStructuralProfileProperties().getEStructuralFeatures().get(31);
+	public EReference getIfcStructuralProfileProperties_CentreOfGravityInY() {
+		return (EReference) getIfcStructuralProfileProperties().getEStructuralFeatures().get(15);
 	}
 
 	/**
@@ -30324,7 +28089,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcStructuralReaction() {
 		if (ifcStructuralReactionEClass == null) {
-			ifcStructuralReactionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(825);
+			ifcStructuralReactionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(843);
 		}
 		return ifcStructuralReactionEClass;
 	}
@@ -30345,7 +28110,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcStructuralResultGroup() {
 		if (ifcStructuralResultGroupEClass == null) {
-			ifcStructuralResultGroupEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(826);
+			ifcStructuralResultGroupEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(844);
 		}
 		return ifcStructuralResultGroupEClass;
 	}
@@ -30373,8 +28138,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralResultGroup_IsLinear() {
-		return (EAttribute) getIfcStructuralResultGroup().getEStructuralFeatures().get(2);
+	public EReference getIfcStructuralResultGroup_IsLinear() {
+		return (EReference) getIfcStructuralResultGroup().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -30393,7 +28158,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcStructuralSteelProfileProperties() {
 		if (ifcStructuralSteelProfilePropertiesEClass == null) {
-			ifcStructuralSteelProfilePropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(827);
+			ifcStructuralSteelProfilePropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(845);
 		}
 		return ifcStructuralSteelProfilePropertiesEClass;
 	}
@@ -30403,8 +28168,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralSteelProfileProperties_ShearAreaZ() {
-		return (EAttribute) getIfcStructuralSteelProfileProperties().getEStructuralFeatures().get(0);
+	public EReference getIfcStructuralSteelProfileProperties_ShearAreaZ() {
+		return (EReference) getIfcStructuralSteelProfileProperties().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -30412,8 +28177,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralSteelProfileProperties_ShearAreaZAsString() {
-		return (EAttribute) getIfcStructuralSteelProfileProperties().getEStructuralFeatures().get(1);
+	public EReference getIfcStructuralSteelProfileProperties_ShearAreaY() {
+		return (EReference) getIfcStructuralSteelProfileProperties().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -30421,8 +28186,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralSteelProfileProperties_ShearAreaY() {
-		return (EAttribute) getIfcStructuralSteelProfileProperties().getEStructuralFeatures().get(2);
+	public EReference getIfcStructuralSteelProfileProperties_PlasticShapeFactorY() {
+		return (EReference) getIfcStructuralSteelProfileProperties().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -30430,44 +28195,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralSteelProfileProperties_ShearAreaYAsString() {
-		return (EAttribute) getIfcStructuralSteelProfileProperties().getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralSteelProfileProperties_PlasticShapeFactorY() {
-		return (EAttribute) getIfcStructuralSteelProfileProperties().getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralSteelProfileProperties_PlasticShapeFactorYAsString() {
-		return (EAttribute) getIfcStructuralSteelProfileProperties().getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralSteelProfileProperties_PlasticShapeFactorZ() {
-		return (EAttribute) getIfcStructuralSteelProfileProperties().getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralSteelProfileProperties_PlasticShapeFactorZAsString() {
-		return (EAttribute) getIfcStructuralSteelProfileProperties().getEStructuralFeatures().get(7);
+	public EReference getIfcStructuralSteelProfileProperties_PlasticShapeFactorZ() {
+		return (EReference) getIfcStructuralSteelProfileProperties().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -30477,7 +28206,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcStructuralSurfaceConnection() {
 		if (ifcStructuralSurfaceConnectionEClass == null) {
-			ifcStructuralSurfaceConnectionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(828);
+			ifcStructuralSurfaceConnectionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(846);
 		}
 		return ifcStructuralSurfaceConnectionEClass;
 	}
@@ -30489,7 +28218,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcStructuralSurfaceMember() {
 		if (ifcStructuralSurfaceMemberEClass == null) {
-			ifcStructuralSurfaceMemberEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(829);
+			ifcStructuralSurfaceMemberEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(847);
 		}
 		return ifcStructuralSurfaceMemberEClass;
 	}
@@ -30508,17 +28237,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralSurfaceMember_Thickness() {
-		return (EAttribute) getIfcStructuralSurfaceMember().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralSurfaceMember_ThicknessAsString() {
-		return (EAttribute) getIfcStructuralSurfaceMember().getEStructuralFeatures().get(2);
+	public EReference getIfcStructuralSurfaceMember_Thickness() {
+		return (EReference) getIfcStructuralSurfaceMember().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -30528,7 +28248,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcStructuralSurfaceMemberVarying() {
 		if (ifcStructuralSurfaceMemberVaryingEClass == null) {
-			ifcStructuralSurfaceMemberVaryingEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(830);
+			ifcStructuralSurfaceMemberVaryingEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(848);
 		}
 		return ifcStructuralSurfaceMemberVaryingEClass;
 	}
@@ -30538,17 +28258,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStructuralSurfaceMemberVarying_SubsequentThickness() {
-		return (EAttribute) getIfcStructuralSurfaceMemberVarying().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralSurfaceMemberVarying_SubsequentThicknessAsString() {
-		return (EAttribute) getIfcStructuralSurfaceMemberVarying().getEStructuralFeatures().get(1);
+	public EReference getIfcStructuralSurfaceMemberVarying_SubsequentThickness() {
+		return (EReference) getIfcStructuralSurfaceMemberVarying().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -30557,25 +28268,16 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EReference getIfcStructuralSurfaceMemberVarying_VaryingThicknessLocation() {
+		return (EReference) getIfcStructuralSurfaceMemberVarying().getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getIfcStructuralSurfaceMemberVarying_VaryingThickness() {
 		return (EReference) getIfcStructuralSurfaceMemberVarying().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralSurfaceMemberVarying_VaryingThickness() {
-		return (EAttribute) getIfcStructuralSurfaceMemberVarying().getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcStructuralSurfaceMemberVarying_VaryingThicknessAsString() {
-		return (EAttribute) getIfcStructuralSurfaceMemberVarying().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -30585,7 +28287,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcStructuredDimensionCallout() {
 		if (ifcStructuredDimensionCalloutEClass == null) {
-			ifcStructuredDimensionCalloutEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(831);
+			ifcStructuredDimensionCalloutEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(849);
 		}
 		return ifcStructuredDimensionCalloutEClass;
 	}
@@ -30597,7 +28299,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcStyleModel() {
 		if (ifcStyleModelEClass == null) {
-			ifcStyleModelEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(832);
+			ifcStyleModelEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(850);
 		}
 		return ifcStyleModelEClass;
 	}
@@ -30609,7 +28311,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcStyledItem() {
 		if (ifcStyledItemEClass == null) {
-			ifcStyledItemEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(833);
+			ifcStyledItemEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(851);
 		}
 		return ifcStyledItemEClass;
 	}
@@ -30637,8 +28339,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcStyledItem_Name() {
-		return (EAttribute) getIfcStyledItem().getEStructuralFeatures().get(2);
+	public EReference getIfcStyledItem_Name() {
+		return (EReference) getIfcStyledItem().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -30648,7 +28350,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcStyledRepresentation() {
 		if (ifcStyledRepresentationEClass == null) {
-			ifcStyledRepresentationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(834);
+			ifcStyledRepresentationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(852);
 		}
 		return ifcStyledRepresentationEClass;
 	}
@@ -30660,7 +28362,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSubContractResource() {
 		if (ifcSubContractResourceEClass == null) {
-			ifcSubContractResourceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(835);
+			ifcSubContractResourceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(853);
 		}
 		return ifcSubContractResourceEClass;
 	}
@@ -30679,8 +28381,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSubContractResource_JobDescription() {
-		return (EAttribute) getIfcSubContractResource().getEStructuralFeatures().get(1);
+	public EReference getIfcSubContractResource_JobDescription() {
+		return (EReference) getIfcSubContractResource().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -30690,7 +28392,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSubedge() {
 		if (ifcSubedgeEClass == null) {
-			ifcSubedgeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(836);
+			ifcSubedgeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(854);
 		}
 		return ifcSubedgeEClass;
 	}
@@ -30711,7 +28413,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSurface() {
 		if (ifcSurfaceEClass == null) {
-			ifcSurfaceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(837);
+			ifcSurfaceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(855);
 		}
 		return ifcSurfaceEClass;
 	}
@@ -30723,7 +28425,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSurfaceCurveSweptAreaSolid() {
 		if (ifcSurfaceCurveSweptAreaSolidEClass == null) {
-			ifcSurfaceCurveSweptAreaSolidEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(838);
+			ifcSurfaceCurveSweptAreaSolidEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(856);
 		}
 		return ifcSurfaceCurveSweptAreaSolidEClass;
 	}
@@ -30742,8 +28444,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSurfaceCurveSweptAreaSolid_StartParam() {
-		return (EAttribute) getIfcSurfaceCurveSweptAreaSolid().getEStructuralFeatures().get(1);
+	public EReference getIfcSurfaceCurveSweptAreaSolid_StartParam() {
+		return (EReference) getIfcSurfaceCurveSweptAreaSolid().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -30751,26 +28453,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSurfaceCurveSweptAreaSolid_StartParamAsString() {
-		return (EAttribute) getIfcSurfaceCurveSweptAreaSolid().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcSurfaceCurveSweptAreaSolid_EndParam() {
-		return (EAttribute) getIfcSurfaceCurveSweptAreaSolid().getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcSurfaceCurveSweptAreaSolid_EndParamAsString() {
-		return (EAttribute) getIfcSurfaceCurveSweptAreaSolid().getEStructuralFeatures().get(4);
+	public EReference getIfcSurfaceCurveSweptAreaSolid_EndParam() {
+		return (EReference) getIfcSurfaceCurveSweptAreaSolid().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -30779,7 +28463,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EReference getIfcSurfaceCurveSweptAreaSolid_ReferenceSurface() {
-		return (EReference) getIfcSurfaceCurveSweptAreaSolid().getEStructuralFeatures().get(5);
+		return (EReference) getIfcSurfaceCurveSweptAreaSolid().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -30789,7 +28473,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSurfaceOfLinearExtrusion() {
 		if (ifcSurfaceOfLinearExtrusionEClass == null) {
-			ifcSurfaceOfLinearExtrusionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(839);
+			ifcSurfaceOfLinearExtrusionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(857);
 		}
 		return ifcSurfaceOfLinearExtrusionEClass;
 	}
@@ -30808,8 +28492,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSurfaceOfLinearExtrusion_Depth() {
-		return (EAttribute) getIfcSurfaceOfLinearExtrusion().getEStructuralFeatures().get(1);
+	public EReference getIfcSurfaceOfLinearExtrusion_Depth() {
+		return (EReference) getIfcSurfaceOfLinearExtrusion().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -30817,8 +28501,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSurfaceOfLinearExtrusion_DepthAsString() {
-		return (EAttribute) getIfcSurfaceOfLinearExtrusion().getEStructuralFeatures().get(2);
+	public EReference getIfcSurfaceOfLinearExtrusion_ExtrusionAxis() {
+		return (EReference) getIfcSurfaceOfLinearExtrusion().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -30828,7 +28512,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSurfaceOfRevolution() {
 		if (ifcSurfaceOfRevolutionEClass == null) {
-			ifcSurfaceOfRevolutionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(840);
+			ifcSurfaceOfRevolutionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(858);
 		}
 		return ifcSurfaceOfRevolutionEClass;
 	}
@@ -30847,9 +28531,18 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getIfcSurfaceOfRevolution_AxisLine() {
+		return (EReference) getIfcSurfaceOfRevolution().getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getIfcSurfaceStyle() {
 		if (ifcSurfaceStyleEClass == null) {
-			ifcSurfaceStyleEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(841);
+			ifcSurfaceStyleEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(859);
 		}
 		return ifcSurfaceStyleEClass;
 	}
@@ -30879,7 +28572,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSurfaceStyleLighting() {
 		if (ifcSurfaceStyleLightingEClass == null) {
-			ifcSurfaceStyleLightingEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(842);
+			ifcSurfaceStyleLightingEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(860);
 		}
 		return ifcSurfaceStyleLightingEClass;
 	}
@@ -30927,7 +28620,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSurfaceStyleRefraction() {
 		if (ifcSurfaceStyleRefractionEClass == null) {
-			ifcSurfaceStyleRefractionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(843);
+			ifcSurfaceStyleRefractionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(861);
 		}
 		return ifcSurfaceStyleRefractionEClass;
 	}
@@ -30937,8 +28630,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSurfaceStyleRefraction_RefractionIndex() {
-		return (EAttribute) getIfcSurfaceStyleRefraction().getEStructuralFeatures().get(0);
+	public EReference getIfcSurfaceStyleRefraction_RefractionIndex() {
+		return (EReference) getIfcSurfaceStyleRefraction().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -30946,26 +28639,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSurfaceStyleRefraction_RefractionIndexAsString() {
-		return (EAttribute) getIfcSurfaceStyleRefraction().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcSurfaceStyleRefraction_DispersionFactor() {
-		return (EAttribute) getIfcSurfaceStyleRefraction().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcSurfaceStyleRefraction_DispersionFactorAsString() {
-		return (EAttribute) getIfcSurfaceStyleRefraction().getEStructuralFeatures().get(3);
+	public EReference getIfcSurfaceStyleRefraction_DispersionFactor() {
+		return (EReference) getIfcSurfaceStyleRefraction().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -30975,7 +28650,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSurfaceStyleRendering() {
 		if (ifcSurfaceStyleRenderingEClass == null) {
-			ifcSurfaceStyleRenderingEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(844);
+			ifcSurfaceStyleRenderingEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(862);
 		}
 		return ifcSurfaceStyleRenderingEClass;
 	}
@@ -30985,17 +28660,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSurfaceStyleRendering_Transparency() {
-		return (EAttribute) getIfcSurfaceStyleRendering().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcSurfaceStyleRendering_TransparencyAsString() {
-		return (EAttribute) getIfcSurfaceStyleRendering().getEStructuralFeatures().get(1);
+	public EReference getIfcSurfaceStyleRendering_Transparency() {
+		return (EReference) getIfcSurfaceStyleRendering().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -31004,7 +28670,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EReference getIfcSurfaceStyleRendering_DiffuseColour() {
-		return (EReference) getIfcSurfaceStyleRendering().getEStructuralFeatures().get(2);
+		return (EReference) getIfcSurfaceStyleRendering().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -31013,7 +28679,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EReference getIfcSurfaceStyleRendering_TransmissionColour() {
-		return (EReference) getIfcSurfaceStyleRendering().getEStructuralFeatures().get(3);
+		return (EReference) getIfcSurfaceStyleRendering().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -31022,7 +28688,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EReference getIfcSurfaceStyleRendering_DiffuseTransmissionColour() {
-		return (EReference) getIfcSurfaceStyleRendering().getEStructuralFeatures().get(4);
+		return (EReference) getIfcSurfaceStyleRendering().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -31031,7 +28697,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EReference getIfcSurfaceStyleRendering_ReflectionColour() {
-		return (EReference) getIfcSurfaceStyleRendering().getEStructuralFeatures().get(5);
+		return (EReference) getIfcSurfaceStyleRendering().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -31040,7 +28706,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EReference getIfcSurfaceStyleRendering_SpecularColour() {
-		return (EReference) getIfcSurfaceStyleRendering().getEStructuralFeatures().get(6);
+		return (EReference) getIfcSurfaceStyleRendering().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -31049,7 +28715,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EReference getIfcSurfaceStyleRendering_SpecularHighlight() {
-		return (EReference) getIfcSurfaceStyleRendering().getEStructuralFeatures().get(7);
+		return (EReference) getIfcSurfaceStyleRendering().getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -31058,7 +28724,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EAttribute getIfcSurfaceStyleRendering_ReflectanceMethod() {
-		return (EAttribute) getIfcSurfaceStyleRendering().getEStructuralFeatures().get(8);
+		return (EAttribute) getIfcSurfaceStyleRendering().getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -31068,7 +28734,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSurfaceStyleShading() {
 		if (ifcSurfaceStyleShadingEClass == null) {
-			ifcSurfaceStyleShadingEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(845);
+			ifcSurfaceStyleShadingEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(863);
 		}
 		return ifcSurfaceStyleShadingEClass;
 	}
@@ -31089,7 +28755,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSurfaceStyleWithTextures() {
 		if (ifcSurfaceStyleWithTexturesEClass == null) {
-			ifcSurfaceStyleWithTexturesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(846);
+			ifcSurfaceStyleWithTexturesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(864);
 		}
 		return ifcSurfaceStyleWithTexturesEClass;
 	}
@@ -31110,7 +28776,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSurfaceTexture() {
 		if (ifcSurfaceTextureEClass == null) {
-			ifcSurfaceTextureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(847);
+			ifcSurfaceTextureEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(865);
 		}
 		return ifcSurfaceTextureEClass;
 	}
@@ -31120,8 +28786,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSurfaceTexture_RepeatS() {
-		return (EAttribute) getIfcSurfaceTexture().getEStructuralFeatures().get(0);
+	public EReference getIfcSurfaceTexture_RepeatS() {
+		return (EReference) getIfcSurfaceTexture().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -31129,8 +28795,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSurfaceTexture_RepeatT() {
-		return (EAttribute) getIfcSurfaceTexture().getEStructuralFeatures().get(1);
+	public EReference getIfcSurfaceTexture_RepeatT() {
+		return (EReference) getIfcSurfaceTexture().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -31158,7 +28824,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSweptAreaSolid() {
 		if (ifcSweptAreaSolidEClass == null) {
-			ifcSweptAreaSolidEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(848);
+			ifcSweptAreaSolidEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(866);
 		}
 		return ifcSweptAreaSolidEClass;
 	}
@@ -31188,7 +28854,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSweptDiskSolid() {
 		if (ifcSweptDiskSolidEClass == null) {
-			ifcSweptDiskSolidEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(849);
+			ifcSweptDiskSolidEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(867);
 		}
 		return ifcSweptDiskSolidEClass;
 	}
@@ -31207,8 +28873,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSweptDiskSolid_Radius() {
-		return (EAttribute) getIfcSweptDiskSolid().getEStructuralFeatures().get(1);
+	public EReference getIfcSweptDiskSolid_Radius() {
+		return (EReference) getIfcSweptDiskSolid().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -31216,8 +28882,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSweptDiskSolid_RadiusAsString() {
-		return (EAttribute) getIfcSweptDiskSolid().getEStructuralFeatures().get(2);
+	public EReference getIfcSweptDiskSolid_InnerRadius() {
+		return (EReference) getIfcSweptDiskSolid().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -31225,8 +28891,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSweptDiskSolid_InnerRadius() {
-		return (EAttribute) getIfcSweptDiskSolid().getEStructuralFeatures().get(3);
+	public EReference getIfcSweptDiskSolid_StartParam() {
+		return (EReference) getIfcSweptDiskSolid().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -31234,44 +28900,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSweptDiskSolid_InnerRadiusAsString() {
-		return (EAttribute) getIfcSweptDiskSolid().getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcSweptDiskSolid_StartParam() {
-		return (EAttribute) getIfcSweptDiskSolid().getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcSweptDiskSolid_StartParamAsString() {
-		return (EAttribute) getIfcSweptDiskSolid().getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcSweptDiskSolid_EndParam() {
-		return (EAttribute) getIfcSweptDiskSolid().getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcSweptDiskSolid_EndParamAsString() {
-		return (EAttribute) getIfcSweptDiskSolid().getEStructuralFeatures().get(8);
+	public EReference getIfcSweptDiskSolid_EndParam() {
+		return (EReference) getIfcSweptDiskSolid().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -31281,7 +28911,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSweptSurface() {
 		if (ifcSweptSurfaceEClass == null) {
-			ifcSweptSurfaceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(850);
+			ifcSweptSurfaceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(868);
 		}
 		return ifcSweptSurfaceEClass;
 	}
@@ -31309,8 +28939,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcSweptSurface_Dim() {
-		return (EAttribute) getIfcSweptSurface().getEStructuralFeatures().get(2);
+	public EReference getIfcSweptSurface_Dim() {
+		return (EReference) getIfcSweptSurface().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -31320,7 +28950,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSwitchingDeviceType() {
 		if (ifcSwitchingDeviceTypeEClass == null) {
-			ifcSwitchingDeviceTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(851);
+			ifcSwitchingDeviceTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(869);
 		}
 		return ifcSwitchingDeviceTypeEClass;
 	}
@@ -31341,7 +28971,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSymbolStyle() {
 		if (ifcSymbolStyleEClass == null) {
-			ifcSymbolStyleEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(852);
+			ifcSymbolStyleEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(870);
 		}
 		return ifcSymbolStyleEClass;
 	}
@@ -31362,7 +28992,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSystem() {
 		if (ifcSystemEClass == null) {
-			ifcSystemEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(853);
+			ifcSystemEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(871);
 		}
 		return ifcSystemEClass;
 	}
@@ -31383,7 +29013,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSystemFurnitureElementType() {
 		if (ifcSystemFurnitureElementTypeEClass == null) {
-			ifcSystemFurnitureElementTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(854);
+			ifcSystemFurnitureElementTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(872);
 		}
 		return ifcSystemFurnitureElementTypeEClass;
 	}
@@ -31395,7 +29025,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcTShapeProfileDef() {
 		if (ifcTShapeProfileDefEClass == null) {
-			ifcTShapeProfileDefEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(855);
+			ifcTShapeProfileDefEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(873);
 		}
 		return ifcTShapeProfileDefEClass;
 	}
@@ -31405,8 +29035,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTShapeProfileDef_Depth() {
-		return (EAttribute) getIfcTShapeProfileDef().getEStructuralFeatures().get(0);
+	public EReference getIfcTShapeProfileDef_Depth() {
+		return (EReference) getIfcTShapeProfileDef().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -31414,8 +29044,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTShapeProfileDef_DepthAsString() {
-		return (EAttribute) getIfcTShapeProfileDef().getEStructuralFeatures().get(1);
+	public EReference getIfcTShapeProfileDef_FlangeWidth() {
+		return (EReference) getIfcTShapeProfileDef().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -31423,8 +29053,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTShapeProfileDef_FlangeWidth() {
-		return (EAttribute) getIfcTShapeProfileDef().getEStructuralFeatures().get(2);
+	public EReference getIfcTShapeProfileDef_WebThickness() {
+		return (EReference) getIfcTShapeProfileDef().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -31432,8 +29062,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTShapeProfileDef_FlangeWidthAsString() {
-		return (EAttribute) getIfcTShapeProfileDef().getEStructuralFeatures().get(3);
+	public EReference getIfcTShapeProfileDef_FlangeThickness() {
+		return (EReference) getIfcTShapeProfileDef().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -31441,8 +29071,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTShapeProfileDef_WebThickness() {
-		return (EAttribute) getIfcTShapeProfileDef().getEStructuralFeatures().get(4);
+	public EReference getIfcTShapeProfileDef_FilletRadius() {
+		return (EReference) getIfcTShapeProfileDef().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -31450,8 +29080,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTShapeProfileDef_WebThicknessAsString() {
-		return (EAttribute) getIfcTShapeProfileDef().getEStructuralFeatures().get(5);
+	public EReference getIfcTShapeProfileDef_FlangeEdgeRadius() {
+		return (EReference) getIfcTShapeProfileDef().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -31459,8 +29089,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTShapeProfileDef_FlangeThickness() {
-		return (EAttribute) getIfcTShapeProfileDef().getEStructuralFeatures().get(6);
+	public EReference getIfcTShapeProfileDef_WebEdgeRadius() {
+		return (EReference) getIfcTShapeProfileDef().getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -31468,8 +29098,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTShapeProfileDef_FlangeThicknessAsString() {
-		return (EAttribute) getIfcTShapeProfileDef().getEStructuralFeatures().get(7);
+	public EReference getIfcTShapeProfileDef_WebSlope() {
+		return (EReference) getIfcTShapeProfileDef().getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -31477,8 +29107,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTShapeProfileDef_FilletRadius() {
-		return (EAttribute) getIfcTShapeProfileDef().getEStructuralFeatures().get(8);
+	public EReference getIfcTShapeProfileDef_FlangeSlope() {
+		return (EReference) getIfcTShapeProfileDef().getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -31486,98 +29116,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTShapeProfileDef_FilletRadiusAsString() {
-		return (EAttribute) getIfcTShapeProfileDef().getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcTShapeProfileDef_FlangeEdgeRadius() {
-		return (EAttribute) getIfcTShapeProfileDef().getEStructuralFeatures().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcTShapeProfileDef_FlangeEdgeRadiusAsString() {
-		return (EAttribute) getIfcTShapeProfileDef().getEStructuralFeatures().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcTShapeProfileDef_WebEdgeRadius() {
-		return (EAttribute) getIfcTShapeProfileDef().getEStructuralFeatures().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcTShapeProfileDef_WebEdgeRadiusAsString() {
-		return (EAttribute) getIfcTShapeProfileDef().getEStructuralFeatures().get(13);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcTShapeProfileDef_WebSlope() {
-		return (EAttribute) getIfcTShapeProfileDef().getEStructuralFeatures().get(14);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcTShapeProfileDef_WebSlopeAsString() {
-		return (EAttribute) getIfcTShapeProfileDef().getEStructuralFeatures().get(15);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcTShapeProfileDef_FlangeSlope() {
-		return (EAttribute) getIfcTShapeProfileDef().getEStructuralFeatures().get(16);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcTShapeProfileDef_FlangeSlopeAsString() {
-		return (EAttribute) getIfcTShapeProfileDef().getEStructuralFeatures().get(17);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcTShapeProfileDef_CentreOfGravityInY() {
-		return (EAttribute) getIfcTShapeProfileDef().getEStructuralFeatures().get(18);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcTShapeProfileDef_CentreOfGravityInYAsString() {
-		return (EAttribute) getIfcTShapeProfileDef().getEStructuralFeatures().get(19);
+	public EReference getIfcTShapeProfileDef_CentreOfGravityInY() {
+		return (EReference) getIfcTShapeProfileDef().getEStructuralFeatures().get(9);
 	}
 
 	/**
@@ -31587,7 +29127,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcTable() {
 		if (ifcTableEClass == null) {
-			ifcTableEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(856);
+			ifcTableEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(874);
 		}
 		return ifcTableEClass;
 	}
@@ -31597,8 +29137,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTable_Name() {
-		return (EAttribute) getIfcTable().getEStructuralFeatures().get(0);
+	public EReference getIfcTable_Rows() {
+		return (EReference) getIfcTable().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -31606,8 +29146,26 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getIfcTable_Rows() {
+	public EReference getIfcTable_NumberOfHeadings() {
 		return (EReference) getIfcTable().getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getIfcTable_NumberOfDataRows() {
+		return (EReference) getIfcTable().getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getIfcTable_NumberOfCellsInRow() {
+		return (EReference) getIfcTable().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -31617,7 +29175,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcTableRow() {
 		if (ifcTableRowEClass == null) {
-			ifcTableRowEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(857);
+			ifcTableRowEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(875);
 		}
 		return ifcTableRowEClass;
 	}
@@ -31636,8 +29194,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTableRow_IsHeading() {
-		return (EAttribute) getIfcTableRow().getEStructuralFeatures().get(1);
+	public EReference getIfcTableRow_IsHeading() {
+		return (EReference) getIfcTableRow().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -31656,7 +29214,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcTankType() {
 		if (ifcTankTypeEClass == null) {
-			ifcTankTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(858);
+			ifcTankTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(876);
 		}
 		return ifcTankTypeEClass;
 	}
@@ -31677,7 +29235,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcTask() {
 		if (ifcTaskEClass == null) {
-			ifcTaskEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(859);
+			ifcTaskEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(877);
 		}
 		return ifcTaskEClass;
 	}
@@ -31687,8 +29245,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTask_TaskId() {
-		return (EAttribute) getIfcTask().getEStructuralFeatures().get(0);
+	public EReference getIfcTask_TaskId() {
+		return (EReference) getIfcTask().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -31696,8 +29254,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTask_Status() {
-		return (EAttribute) getIfcTask().getEStructuralFeatures().get(1);
+	public EReference getIfcTask_Status() {
+		return (EReference) getIfcTask().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -31705,8 +29263,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTask_WorkMethod() {
-		return (EAttribute) getIfcTask().getEStructuralFeatures().get(2);
+	public EReference getIfcTask_WorkMethod() {
+		return (EReference) getIfcTask().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -31714,8 +29272,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTask_IsMilestone() {
-		return (EAttribute) getIfcTask().getEStructuralFeatures().get(3);
+	public EReference getIfcTask_IsMilestone() {
+		return (EReference) getIfcTask().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -31723,8 +29281,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTask_Priority() {
-		return (EAttribute) getIfcTask().getEStructuralFeatures().get(4);
+	public EReference getIfcTask_Priority() {
+		return (EReference) getIfcTask().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -31734,7 +29292,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcTelecomAddress() {
 		if (ifcTelecomAddressEClass == null) {
-			ifcTelecomAddressEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(860);
+			ifcTelecomAddressEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(878);
 		}
 		return ifcTelecomAddressEClass;
 	}
@@ -31744,8 +29302,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTelecomAddress_TelephoneNumbers() {
-		return (EAttribute) getIfcTelecomAddress().getEStructuralFeatures().get(0);
+	public EReference getIfcTelecomAddress_TelephoneNumbers() {
+		return (EReference) getIfcTelecomAddress().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -31753,8 +29311,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTelecomAddress_FacsimileNumbers() {
-		return (EAttribute) getIfcTelecomAddress().getEStructuralFeatures().get(1);
+	public EReference getIfcTelecomAddress_FacsimileNumbers() {
+		return (EReference) getIfcTelecomAddress().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -31762,8 +29320,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTelecomAddress_PagerNumber() {
-		return (EAttribute) getIfcTelecomAddress().getEStructuralFeatures().get(2);
+	public EReference getIfcTelecomAddress_PagerNumber() {
+		return (EReference) getIfcTelecomAddress().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -31771,8 +29329,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTelecomAddress_ElectronicMailAddresses() {
-		return (EAttribute) getIfcTelecomAddress().getEStructuralFeatures().get(3);
+	public EReference getIfcTelecomAddress_ElectronicMailAddresses() {
+		return (EReference) getIfcTelecomAddress().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -31780,8 +29338,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTelecomAddress_WWWHomePageURL() {
-		return (EAttribute) getIfcTelecomAddress().getEStructuralFeatures().get(4);
+	public EReference getIfcTelecomAddress_WWWHomePageURL() {
+		return (EReference) getIfcTelecomAddress().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -31791,7 +29349,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcTendon() {
 		if (ifcTendonEClass == null) {
-			ifcTendonEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(861);
+			ifcTendonEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(879);
 		}
 		return ifcTendonEClass;
 	}
@@ -31810,8 +29368,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTendon_NominalDiameter() {
-		return (EAttribute) getIfcTendon().getEStructuralFeatures().get(1);
+	public EReference getIfcTendon_NominalDiameter() {
+		return (EReference) getIfcTendon().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -31819,8 +29377,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTendon_NominalDiameterAsString() {
-		return (EAttribute) getIfcTendon().getEStructuralFeatures().get(2);
+	public EReference getIfcTendon_CrossSectionArea() {
+		return (EReference) getIfcTendon().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -31828,8 +29386,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTendon_CrossSectionArea() {
-		return (EAttribute) getIfcTendon().getEStructuralFeatures().get(3);
+	public EReference getIfcTendon_TensionForce() {
+		return (EReference) getIfcTendon().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -31837,8 +29395,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTendon_CrossSectionAreaAsString() {
-		return (EAttribute) getIfcTendon().getEStructuralFeatures().get(4);
+	public EReference getIfcTendon_PreStress() {
+		return (EReference) getIfcTendon().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -31846,8 +29404,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTendon_TensionForce() {
-		return (EAttribute) getIfcTendon().getEStructuralFeatures().get(5);
+	public EReference getIfcTendon_FrictionCoefficient() {
+		return (EReference) getIfcTendon().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -31855,8 +29413,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTendon_TensionForceAsString() {
-		return (EAttribute) getIfcTendon().getEStructuralFeatures().get(6);
+	public EReference getIfcTendon_AnchorageSlip() {
+		return (EReference) getIfcTendon().getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -31864,71 +29422,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTendon_PreStress() {
-		return (EAttribute) getIfcTendon().getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcTendon_PreStressAsString() {
-		return (EAttribute) getIfcTendon().getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcTendon_FrictionCoefficient() {
-		return (EAttribute) getIfcTendon().getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcTendon_FrictionCoefficientAsString() {
-		return (EAttribute) getIfcTendon().getEStructuralFeatures().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcTendon_AnchorageSlip() {
-		return (EAttribute) getIfcTendon().getEStructuralFeatures().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcTendon_AnchorageSlipAsString() {
-		return (EAttribute) getIfcTendon().getEStructuralFeatures().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcTendon_MinCurvatureRadius() {
-		return (EAttribute) getIfcTendon().getEStructuralFeatures().get(13);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcTendon_MinCurvatureRadiusAsString() {
-		return (EAttribute) getIfcTendon().getEStructuralFeatures().get(14);
+	public EReference getIfcTendon_MinCurvatureRadius() {
+		return (EReference) getIfcTendon().getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -31938,7 +29433,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcTendonAnchor() {
 		if (ifcTendonAnchorEClass == null) {
-			ifcTendonAnchorEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(862);
+			ifcTendonAnchorEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(880);
 		}
 		return ifcTendonAnchorEClass;
 	}
@@ -31950,7 +29445,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcTerminatorSymbol() {
 		if (ifcTerminatorSymbolEClass == null) {
-			ifcTerminatorSymbolEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(863);
+			ifcTerminatorSymbolEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(881);
 		}
 		return ifcTerminatorSymbolEClass;
 	}
@@ -31971,7 +29466,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcTextLiteral() {
 		if (ifcTextLiteralEClass == null) {
-			ifcTextLiteralEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(864);
+			ifcTextLiteralEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(882);
 		}
 		return ifcTextLiteralEClass;
 	}
@@ -31981,8 +29476,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTextLiteral_Literal() {
-		return (EAttribute) getIfcTextLiteral().getEStructuralFeatures().get(0);
+	public EReference getIfcTextLiteral_Literal() {
+		return (EReference) getIfcTextLiteral().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -32010,7 +29505,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcTextLiteralWithExtent() {
 		if (ifcTextLiteralWithExtentEClass == null) {
-			ifcTextLiteralWithExtentEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(865);
+			ifcTextLiteralWithExtentEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(883);
 		}
 		return ifcTextLiteralWithExtentEClass;
 	}
@@ -32029,8 +29524,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTextLiteralWithExtent_BoxAlignment() {
-		return (EAttribute) getIfcTextLiteralWithExtent().getEStructuralFeatures().get(1);
+	public EReference getIfcTextLiteralWithExtent_BoxAlignment() {
+		return (EReference) getIfcTextLiteralWithExtent().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -32040,7 +29535,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcTextStyle() {
 		if (ifcTextStyleEClass == null) {
-			ifcTextStyleEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(866);
+			ifcTextStyleEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(884);
 		}
 		return ifcTextStyleEClass;
 	}
@@ -32079,7 +29574,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcTextStyleFontModel() {
 		if (ifcTextStyleFontModelEClass == null) {
-			ifcTextStyleFontModelEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(867);
+			ifcTextStyleFontModelEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(885);
 		}
 		return ifcTextStyleFontModelEClass;
 	}
@@ -32089,8 +29584,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTextStyleFontModel_FontFamily() {
-		return (EAttribute) getIfcTextStyleFontModel().getEStructuralFeatures().get(0);
+	public EReference getIfcTextStyleFontModel_FontFamily() {
+		return (EReference) getIfcTextStyleFontModel().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -32098,8 +29593,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTextStyleFontModel_FontStyle() {
-		return (EAttribute) getIfcTextStyleFontModel().getEStructuralFeatures().get(1);
+	public EReference getIfcTextStyleFontModel_FontStyle() {
+		return (EReference) getIfcTextStyleFontModel().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -32107,8 +29602,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTextStyleFontModel_FontVariant() {
-		return (EAttribute) getIfcTextStyleFontModel().getEStructuralFeatures().get(2);
+	public EReference getIfcTextStyleFontModel_FontVariant() {
+		return (EReference) getIfcTextStyleFontModel().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -32116,8 +29611,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTextStyleFontModel_FontWeight() {
-		return (EAttribute) getIfcTextStyleFontModel().getEStructuralFeatures().get(3);
+	public EReference getIfcTextStyleFontModel_FontWeight() {
+		return (EReference) getIfcTextStyleFontModel().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -32136,7 +29631,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcTextStyleForDefinedFont() {
 		if (ifcTextStyleForDefinedFontEClass == null) {
-			ifcTextStyleForDefinedFontEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(868);
+			ifcTextStyleForDefinedFontEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(886);
 		}
 		return ifcTextStyleForDefinedFontEClass;
 	}
@@ -32166,7 +29661,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcTextStyleTextModel() {
 		if (ifcTextStyleTextModelEClass == null) {
-			ifcTextStyleTextModelEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(869);
+			ifcTextStyleTextModelEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(887);
 		}
 		return ifcTextStyleTextModelEClass;
 	}
@@ -32185,8 +29680,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTextStyleTextModel_TextAlign() {
-		return (EAttribute) getIfcTextStyleTextModel().getEStructuralFeatures().get(1);
+	public EReference getIfcTextStyleTextModel_TextAlign() {
+		return (EReference) getIfcTextStyleTextModel().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -32194,8 +29689,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTextStyleTextModel_TextDecoration() {
-		return (EAttribute) getIfcTextStyleTextModel().getEStructuralFeatures().get(2);
+	public EReference getIfcTextStyleTextModel_TextDecoration() {
+		return (EReference) getIfcTextStyleTextModel().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -32221,8 +29716,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTextStyleTextModel_TextTransform() {
-		return (EAttribute) getIfcTextStyleTextModel().getEStructuralFeatures().get(5);
+	public EReference getIfcTextStyleTextModel_TextTransform() {
+		return (EReference) getIfcTextStyleTextModel().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -32241,7 +29736,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcTextStyleWithBoxCharacteristics() {
 		if (ifcTextStyleWithBoxCharacteristicsEClass == null) {
-			ifcTextStyleWithBoxCharacteristicsEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(870);
+			ifcTextStyleWithBoxCharacteristicsEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(888);
 		}
 		return ifcTextStyleWithBoxCharacteristicsEClass;
 	}
@@ -32251,8 +29746,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTextStyleWithBoxCharacteristics_BoxHeight() {
-		return (EAttribute) getIfcTextStyleWithBoxCharacteristics().getEStructuralFeatures().get(0);
+	public EReference getIfcTextStyleWithBoxCharacteristics_BoxHeight() {
+		return (EReference) getIfcTextStyleWithBoxCharacteristics().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -32260,8 +29755,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTextStyleWithBoxCharacteristics_BoxHeightAsString() {
-		return (EAttribute) getIfcTextStyleWithBoxCharacteristics().getEStructuralFeatures().get(1);
+	public EReference getIfcTextStyleWithBoxCharacteristics_BoxWidth() {
+		return (EReference) getIfcTextStyleWithBoxCharacteristics().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -32269,8 +29764,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTextStyleWithBoxCharacteristics_BoxWidth() {
-		return (EAttribute) getIfcTextStyleWithBoxCharacteristics().getEStructuralFeatures().get(2);
+	public EReference getIfcTextStyleWithBoxCharacteristics_BoxSlantAngle() {
+		return (EReference) getIfcTextStyleWithBoxCharacteristics().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -32278,44 +29773,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTextStyleWithBoxCharacteristics_BoxWidthAsString() {
-		return (EAttribute) getIfcTextStyleWithBoxCharacteristics().getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcTextStyleWithBoxCharacteristics_BoxSlantAngle() {
-		return (EAttribute) getIfcTextStyleWithBoxCharacteristics().getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcTextStyleWithBoxCharacteristics_BoxSlantAngleAsString() {
-		return (EAttribute) getIfcTextStyleWithBoxCharacteristics().getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcTextStyleWithBoxCharacteristics_BoxRotateAngle() {
-		return (EAttribute) getIfcTextStyleWithBoxCharacteristics().getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcTextStyleWithBoxCharacteristics_BoxRotateAngleAsString() {
-		return (EAttribute) getIfcTextStyleWithBoxCharacteristics().getEStructuralFeatures().get(7);
+	public EReference getIfcTextStyleWithBoxCharacteristics_BoxRotateAngle() {
+		return (EReference) getIfcTextStyleWithBoxCharacteristics().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -32324,7 +29783,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EReference getIfcTextStyleWithBoxCharacteristics_CharacterSpacing() {
-		return (EReference) getIfcTextStyleWithBoxCharacteristics().getEStructuralFeatures().get(8);
+		return (EReference) getIfcTextStyleWithBoxCharacteristics().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -32334,7 +29793,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcTextureCoordinate() {
 		if (ifcTextureCoordinateEClass == null) {
-			ifcTextureCoordinateEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(871);
+			ifcTextureCoordinateEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(889);
 		}
 		return ifcTextureCoordinateEClass;
 	}
@@ -32355,7 +29814,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcTextureCoordinateGenerator() {
 		if (ifcTextureCoordinateGeneratorEClass == null) {
-			ifcTextureCoordinateGeneratorEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(872);
+			ifcTextureCoordinateGeneratorEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(890);
 		}
 		return ifcTextureCoordinateGeneratorEClass;
 	}
@@ -32365,8 +29824,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTextureCoordinateGenerator_Mode() {
-		return (EAttribute) getIfcTextureCoordinateGenerator().getEStructuralFeatures().get(0);
+	public EReference getIfcTextureCoordinateGenerator_Mode() {
+		return (EReference) getIfcTextureCoordinateGenerator().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -32385,7 +29844,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcTextureMap() {
 		if (ifcTextureMapEClass == null) {
-			ifcTextureMapEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(873);
+			ifcTextureMapEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(891);
 		}
 		return ifcTextureMapEClass;
 	}
@@ -32406,7 +29865,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcTextureVertex() {
 		if (ifcTextureVertexEClass == null) {
-			ifcTextureVertexEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(874);
+			ifcTextureVertexEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(892);
 		}
 		return ifcTextureVertexEClass;
 	}
@@ -32416,17 +29875,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTextureVertex_Coordinates() {
-		return (EAttribute) getIfcTextureVertex().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcTextureVertex_CoordinatesAsString() {
-		return (EAttribute) getIfcTextureVertex().getEStructuralFeatures().get(1);
+	public EReference getIfcTextureVertex_Coordinates() {
+		return (EReference) getIfcTextureVertex().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -32436,7 +29886,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcThermalMaterialProperties() {
 		if (ifcThermalMaterialPropertiesEClass == null) {
-			ifcThermalMaterialPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(875);
+			ifcThermalMaterialPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(893);
 		}
 		return ifcThermalMaterialPropertiesEClass;
 	}
@@ -32446,8 +29896,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcThermalMaterialProperties_SpecificHeatCapacity() {
-		return (EAttribute) getIfcThermalMaterialProperties().getEStructuralFeatures().get(0);
+	public EReference getIfcThermalMaterialProperties_SpecificHeatCapacity() {
+		return (EReference) getIfcThermalMaterialProperties().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -32455,8 +29905,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcThermalMaterialProperties_SpecificHeatCapacityAsString() {
-		return (EAttribute) getIfcThermalMaterialProperties().getEStructuralFeatures().get(1);
+	public EReference getIfcThermalMaterialProperties_BoilingPoint() {
+		return (EReference) getIfcThermalMaterialProperties().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -32464,8 +29914,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcThermalMaterialProperties_BoilingPoint() {
-		return (EAttribute) getIfcThermalMaterialProperties().getEStructuralFeatures().get(2);
+	public EReference getIfcThermalMaterialProperties_FreezingPoint() {
+		return (EReference) getIfcThermalMaterialProperties().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -32473,44 +29923,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcThermalMaterialProperties_BoilingPointAsString() {
-		return (EAttribute) getIfcThermalMaterialProperties().getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcThermalMaterialProperties_FreezingPoint() {
-		return (EAttribute) getIfcThermalMaterialProperties().getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcThermalMaterialProperties_FreezingPointAsString() {
-		return (EAttribute) getIfcThermalMaterialProperties().getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcThermalMaterialProperties_ThermalConductivity() {
-		return (EAttribute) getIfcThermalMaterialProperties().getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcThermalMaterialProperties_ThermalConductivityAsString() {
-		return (EAttribute) getIfcThermalMaterialProperties().getEStructuralFeatures().get(7);
+	public EReference getIfcThermalMaterialProperties_ThermalConductivity() {
+		return (EReference) getIfcThermalMaterialProperties().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -32520,7 +29934,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcTimeSeries() {
 		if (ifcTimeSeriesEClass == null) {
-			ifcTimeSeriesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(876);
+			ifcTimeSeriesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(894);
 		}
 		return ifcTimeSeriesEClass;
 	}
@@ -32530,8 +29944,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTimeSeries_Name() {
-		return (EAttribute) getIfcTimeSeries().getEStructuralFeatures().get(0);
+	public EReference getIfcTimeSeries_Name() {
+		return (EReference) getIfcTimeSeries().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -32539,8 +29953,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTimeSeries_Description() {
-		return (EAttribute) getIfcTimeSeries().getEStructuralFeatures().get(1);
+	public EReference getIfcTimeSeries_Description() {
+		return (EReference) getIfcTimeSeries().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -32584,8 +29998,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTimeSeries_UserDefinedDataOrigin() {
-		return (EAttribute) getIfcTimeSeries().getEStructuralFeatures().get(6);
+	public EReference getIfcTimeSeries_UserDefinedDataOrigin() {
+		return (EReference) getIfcTimeSeries().getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -32613,7 +30027,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcTimeSeriesReferenceRelationship() {
 		if (ifcTimeSeriesReferenceRelationshipEClass == null) {
-			ifcTimeSeriesReferenceRelationshipEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(877);
+			ifcTimeSeriesReferenceRelationshipEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(895);
 		}
 		return ifcTimeSeriesReferenceRelationshipEClass;
 	}
@@ -32643,7 +30057,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcTimeSeriesSchedule() {
 		if (ifcTimeSeriesScheduleEClass == null) {
-			ifcTimeSeriesScheduleEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(878);
+			ifcTimeSeriesScheduleEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(896);
 		}
 		return ifcTimeSeriesScheduleEClass;
 	}
@@ -32682,7 +30096,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcTimeSeriesValue() {
 		if (ifcTimeSeriesValueEClass == null) {
-			ifcTimeSeriesValueEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(879);
+			ifcTimeSeriesValueEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(897);
 		}
 		return ifcTimeSeriesValueEClass;
 	}
@@ -32703,7 +30117,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcTopologicalRepresentationItem() {
 		if (ifcTopologicalRepresentationItemEClass == null) {
-			ifcTopologicalRepresentationItemEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(880);
+			ifcTopologicalRepresentationItemEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(898);
 		}
 		return ifcTopologicalRepresentationItemEClass;
 	}
@@ -32715,7 +30129,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcTopologyRepresentation() {
 		if (ifcTopologyRepresentationEClass == null) {
-			ifcTopologyRepresentationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(881);
+			ifcTopologyRepresentationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(899);
 		}
 		return ifcTopologyRepresentationEClass;
 	}
@@ -32727,7 +30141,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcTransformerType() {
 		if (ifcTransformerTypeEClass == null) {
-			ifcTransformerTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(882);
+			ifcTransformerTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(900);
 		}
 		return ifcTransformerTypeEClass;
 	}
@@ -32748,7 +30162,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcTransportElement() {
 		if (ifcTransportElementEClass == null) {
-			ifcTransportElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(883);
+			ifcTransportElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(901);
 		}
 		return ifcTransportElementEClass;
 	}
@@ -32767,8 +30181,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTransportElement_CapacityByWeight() {
-		return (EAttribute) getIfcTransportElement().getEStructuralFeatures().get(1);
+	public EReference getIfcTransportElement_CapacityByWeight() {
+		return (EReference) getIfcTransportElement().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -32776,26 +30190,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTransportElement_CapacityByWeightAsString() {
-		return (EAttribute) getIfcTransportElement().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcTransportElement_CapacityByNumber() {
-		return (EAttribute) getIfcTransportElement().getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcTransportElement_CapacityByNumberAsString() {
-		return (EAttribute) getIfcTransportElement().getEStructuralFeatures().get(4);
+	public EReference getIfcTransportElement_CapacityByNumber() {
+		return (EReference) getIfcTransportElement().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -32805,7 +30201,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcTransportElementType() {
 		if (ifcTransportElementTypeEClass == null) {
-			ifcTransportElementTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(884);
+			ifcTransportElementTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(902);
 		}
 		return ifcTransportElementTypeEClass;
 	}
@@ -32826,7 +30222,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcTrapeziumProfileDef() {
 		if (ifcTrapeziumProfileDefEClass == null) {
-			ifcTrapeziumProfileDefEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(885);
+			ifcTrapeziumProfileDefEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(903);
 		}
 		return ifcTrapeziumProfileDefEClass;
 	}
@@ -32836,8 +30232,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTrapeziumProfileDef_BottomXDim() {
-		return (EAttribute) getIfcTrapeziumProfileDef().getEStructuralFeatures().get(0);
+	public EReference getIfcTrapeziumProfileDef_BottomXDim() {
+		return (EReference) getIfcTrapeziumProfileDef().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -32845,8 +30241,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTrapeziumProfileDef_BottomXDimAsString() {
-		return (EAttribute) getIfcTrapeziumProfileDef().getEStructuralFeatures().get(1);
+	public EReference getIfcTrapeziumProfileDef_TopXDim() {
+		return (EReference) getIfcTrapeziumProfileDef().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -32854,8 +30250,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTrapeziumProfileDef_TopXDim() {
-		return (EAttribute) getIfcTrapeziumProfileDef().getEStructuralFeatures().get(2);
+	public EReference getIfcTrapeziumProfileDef_YDim() {
+		return (EReference) getIfcTrapeziumProfileDef().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -32863,44 +30259,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTrapeziumProfileDef_TopXDimAsString() {
-		return (EAttribute) getIfcTrapeziumProfileDef().getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcTrapeziumProfileDef_YDim() {
-		return (EAttribute) getIfcTrapeziumProfileDef().getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcTrapeziumProfileDef_YDimAsString() {
-		return (EAttribute) getIfcTrapeziumProfileDef().getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcTrapeziumProfileDef_TopXOffset() {
-		return (EAttribute) getIfcTrapeziumProfileDef().getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcTrapeziumProfileDef_TopXOffsetAsString() {
-		return (EAttribute) getIfcTrapeziumProfileDef().getEStructuralFeatures().get(7);
+	public EReference getIfcTrapeziumProfileDef_TopXOffset() {
+		return (EReference) getIfcTrapeziumProfileDef().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -32910,7 +30270,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcTrimmedCurve() {
 		if (ifcTrimmedCurveEClass == null) {
-			ifcTrimmedCurveEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(886);
+			ifcTrimmedCurveEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(904);
 		}
 		return ifcTrimmedCurveEClass;
 	}
@@ -32947,8 +30307,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTrimmedCurve_SenseAgreement() {
-		return (EAttribute) getIfcTrimmedCurve().getEStructuralFeatures().get(3);
+	public EReference getIfcTrimmedCurve_SenseAgreement() {
+		return (EReference) getIfcTrimmedCurve().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -32967,7 +30327,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcTubeBundleType() {
 		if (ifcTubeBundleTypeEClass == null) {
-			ifcTubeBundleTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(887);
+			ifcTubeBundleTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(905);
 		}
 		return ifcTubeBundleTypeEClass;
 	}
@@ -32988,7 +30348,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcTwoDirectionRepeatFactor() {
 		if (ifcTwoDirectionRepeatFactorEClass == null) {
-			ifcTwoDirectionRepeatFactorEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(888);
+			ifcTwoDirectionRepeatFactorEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(906);
 		}
 		return ifcTwoDirectionRepeatFactorEClass;
 	}
@@ -33009,7 +30369,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcTypeObject() {
 		if (ifcTypeObjectEClass == null) {
-			ifcTypeObjectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(889);
+			ifcTypeObjectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(907);
 		}
 		return ifcTypeObjectEClass;
 	}
@@ -33019,8 +30379,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTypeObject_ApplicableOccurrence() {
-		return (EAttribute) getIfcTypeObject().getEStructuralFeatures().get(0);
+	public EReference getIfcTypeObject_ApplicableOccurrence() {
+		return (EReference) getIfcTypeObject().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -33048,7 +30408,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcTypeProduct() {
 		if (ifcTypeProductEClass == null) {
-			ifcTypeProductEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(890);
+			ifcTypeProductEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(908);
 		}
 		return ifcTypeProductEClass;
 	}
@@ -33067,8 +30427,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcTypeProduct_Tag() {
-		return (EAttribute) getIfcTypeProduct().getEStructuralFeatures().get(1);
+	public EReference getIfcTypeProduct_Tag() {
+		return (EReference) getIfcTypeProduct().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -33078,7 +30438,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcUShapeProfileDef() {
 		if (ifcUShapeProfileDefEClass == null) {
-			ifcUShapeProfileDefEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(891);
+			ifcUShapeProfileDefEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(909);
 		}
 		return ifcUShapeProfileDefEClass;
 	}
@@ -33088,8 +30448,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcUShapeProfileDef_Depth() {
-		return (EAttribute) getIfcUShapeProfileDef().getEStructuralFeatures().get(0);
+	public EReference getIfcUShapeProfileDef_Depth() {
+		return (EReference) getIfcUShapeProfileDef().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -33097,8 +30457,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcUShapeProfileDef_DepthAsString() {
-		return (EAttribute) getIfcUShapeProfileDef().getEStructuralFeatures().get(1);
+	public EReference getIfcUShapeProfileDef_FlangeWidth() {
+		return (EReference) getIfcUShapeProfileDef().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -33106,8 +30466,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcUShapeProfileDef_FlangeWidth() {
-		return (EAttribute) getIfcUShapeProfileDef().getEStructuralFeatures().get(2);
+	public EReference getIfcUShapeProfileDef_WebThickness() {
+		return (EReference) getIfcUShapeProfileDef().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -33115,8 +30475,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcUShapeProfileDef_FlangeWidthAsString() {
-		return (EAttribute) getIfcUShapeProfileDef().getEStructuralFeatures().get(3);
+	public EReference getIfcUShapeProfileDef_FlangeThickness() {
+		return (EReference) getIfcUShapeProfileDef().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -33124,8 +30484,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcUShapeProfileDef_WebThickness() {
-		return (EAttribute) getIfcUShapeProfileDef().getEStructuralFeatures().get(4);
+	public EReference getIfcUShapeProfileDef_FilletRadius() {
+		return (EReference) getIfcUShapeProfileDef().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -33133,8 +30493,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcUShapeProfileDef_WebThicknessAsString() {
-		return (EAttribute) getIfcUShapeProfileDef().getEStructuralFeatures().get(5);
+	public EReference getIfcUShapeProfileDef_EdgeRadius() {
+		return (EReference) getIfcUShapeProfileDef().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -33142,8 +30502,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcUShapeProfileDef_FlangeThickness() {
-		return (EAttribute) getIfcUShapeProfileDef().getEStructuralFeatures().get(6);
+	public EReference getIfcUShapeProfileDef_FlangeSlope() {
+		return (EReference) getIfcUShapeProfileDef().getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -33151,80 +30511,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcUShapeProfileDef_FlangeThicknessAsString() {
-		return (EAttribute) getIfcUShapeProfileDef().getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcUShapeProfileDef_FilletRadius() {
-		return (EAttribute) getIfcUShapeProfileDef().getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcUShapeProfileDef_FilletRadiusAsString() {
-		return (EAttribute) getIfcUShapeProfileDef().getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcUShapeProfileDef_EdgeRadius() {
-		return (EAttribute) getIfcUShapeProfileDef().getEStructuralFeatures().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcUShapeProfileDef_EdgeRadiusAsString() {
-		return (EAttribute) getIfcUShapeProfileDef().getEStructuralFeatures().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcUShapeProfileDef_FlangeSlope() {
-		return (EAttribute) getIfcUShapeProfileDef().getEStructuralFeatures().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcUShapeProfileDef_FlangeSlopeAsString() {
-		return (EAttribute) getIfcUShapeProfileDef().getEStructuralFeatures().get(13);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcUShapeProfileDef_CentreOfGravityInX() {
-		return (EAttribute) getIfcUShapeProfileDef().getEStructuralFeatures().get(14);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcUShapeProfileDef_CentreOfGravityInXAsString() {
-		return (EAttribute) getIfcUShapeProfileDef().getEStructuralFeatures().get(15);
+	public EReference getIfcUShapeProfileDef_CentreOfGravityInX() {
+		return (EReference) getIfcUShapeProfileDef().getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -33234,7 +30522,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcUnitAssignment() {
 		if (ifcUnitAssignmentEClass == null) {
-			ifcUnitAssignmentEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(892);
+			ifcUnitAssignmentEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(910);
 		}
 		return ifcUnitAssignmentEClass;
 	}
@@ -33255,7 +30543,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcUnitaryEquipmentType() {
 		if (ifcUnitaryEquipmentTypeEClass == null) {
-			ifcUnitaryEquipmentTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(893);
+			ifcUnitaryEquipmentTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(911);
 		}
 		return ifcUnitaryEquipmentTypeEClass;
 	}
@@ -33276,7 +30564,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcValveType() {
 		if (ifcValveTypeEClass == null) {
-			ifcValveTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(894);
+			ifcValveTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(912);
 		}
 		return ifcValveTypeEClass;
 	}
@@ -33297,7 +30585,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcVector() {
 		if (ifcVectorEClass == null) {
-			ifcVectorEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(895);
+			ifcVectorEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(913);
 		}
 		return ifcVectorEClass;
 	}
@@ -33316,8 +30604,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcVector_Magnitude() {
-		return (EAttribute) getIfcVector().getEStructuralFeatures().get(1);
+	public EReference getIfcVector_Magnitude() {
+		return (EReference) getIfcVector().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -33325,17 +30613,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcVector_MagnitudeAsString() {
-		return (EAttribute) getIfcVector().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcVector_Dim() {
-		return (EAttribute) getIfcVector().getEStructuralFeatures().get(3);
+	public EReference getIfcVector_Dim() {
+		return (EReference) getIfcVector().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -33345,7 +30624,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcVertex() {
 		if (ifcVertexEClass == null) {
-			ifcVertexEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(896);
+			ifcVertexEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(914);
 		}
 		return ifcVertexEClass;
 	}
@@ -33357,7 +30636,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcVertexBasedTextureMap() {
 		if (ifcVertexBasedTextureMapEClass == null) {
-			ifcVertexBasedTextureMapEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(897);
+			ifcVertexBasedTextureMapEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(915);
 		}
 		return ifcVertexBasedTextureMapEClass;
 	}
@@ -33387,7 +30666,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcVertexLoop() {
 		if (ifcVertexLoopEClass == null) {
-			ifcVertexLoopEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(898);
+			ifcVertexLoopEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(916);
 		}
 		return ifcVertexLoopEClass;
 	}
@@ -33408,7 +30687,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcVertexPoint() {
 		if (ifcVertexPointEClass == null) {
-			ifcVertexPointEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(899);
+			ifcVertexPointEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(917);
 		}
 		return ifcVertexPointEClass;
 	}
@@ -33429,7 +30708,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcVibrationIsolatorType() {
 		if (ifcVibrationIsolatorTypeEClass == null) {
-			ifcVibrationIsolatorTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(900);
+			ifcVibrationIsolatorTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(918);
 		}
 		return ifcVibrationIsolatorTypeEClass;
 	}
@@ -33450,7 +30729,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcVirtualElement() {
 		if (ifcVirtualElementEClass == null) {
-			ifcVirtualElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(901);
+			ifcVirtualElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(919);
 		}
 		return ifcVirtualElementEClass;
 	}
@@ -33462,7 +30741,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcVirtualGridIntersection() {
 		if (ifcVirtualGridIntersectionEClass == null) {
-			ifcVirtualGridIntersectionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(902);
+			ifcVirtualGridIntersectionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(920);
 		}
 		return ifcVirtualGridIntersectionEClass;
 	}
@@ -33481,17 +30760,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcVirtualGridIntersection_OffsetDistances() {
-		return (EAttribute) getIfcVirtualGridIntersection().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcVirtualGridIntersection_OffsetDistancesAsString() {
-		return (EAttribute) getIfcVirtualGridIntersection().getEStructuralFeatures().get(2);
+	public EReference getIfcVirtualGridIntersection_OffsetDistances() {
+		return (EReference) getIfcVirtualGridIntersection().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -33501,7 +30771,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcWall() {
 		if (ifcWallEClass == null) {
-			ifcWallEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(903);
+			ifcWallEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(921);
 		}
 		return ifcWallEClass;
 	}
@@ -33513,7 +30783,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcWallStandardCase() {
 		if (ifcWallStandardCaseEClass == null) {
-			ifcWallStandardCaseEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(904);
+			ifcWallStandardCaseEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(922);
 		}
 		return ifcWallStandardCaseEClass;
 	}
@@ -33525,7 +30795,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcWallType() {
 		if (ifcWallTypeEClass == null) {
-			ifcWallTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(905);
+			ifcWallTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(923);
 		}
 		return ifcWallTypeEClass;
 	}
@@ -33546,7 +30816,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcWasteTerminalType() {
 		if (ifcWasteTerminalTypeEClass == null) {
-			ifcWasteTerminalTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(906);
+			ifcWasteTerminalTypeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(924);
 		}
 		return ifcWasteTerminalTypeEClass;
 	}
@@ -33567,7 +30837,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcWaterProperties() {
 		if (ifcWaterPropertiesEClass == null) {
-			ifcWaterPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(907);
+			ifcWaterPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(925);
 		}
 		return ifcWaterPropertiesEClass;
 	}
@@ -33577,8 +30847,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcWaterProperties_IsPotable() {
-		return (EAttribute) getIfcWaterProperties().getEStructuralFeatures().get(0);
+	public EReference getIfcWaterProperties_IsPotable() {
+		return (EReference) getIfcWaterProperties().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -33586,8 +30856,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcWaterProperties_Hardness() {
-		return (EAttribute) getIfcWaterProperties().getEStructuralFeatures().get(1);
+	public EReference getIfcWaterProperties_Hardness() {
+		return (EReference) getIfcWaterProperties().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -33595,8 +30865,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcWaterProperties_HardnessAsString() {
-		return (EAttribute) getIfcWaterProperties().getEStructuralFeatures().get(2);
+	public EReference getIfcWaterProperties_AlkalinityConcentration() {
+		return (EReference) getIfcWaterProperties().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -33604,8 +30874,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcWaterProperties_AlkalinityConcentration() {
-		return (EAttribute) getIfcWaterProperties().getEStructuralFeatures().get(3);
+	public EReference getIfcWaterProperties_AcidityConcentration() {
+		return (EReference) getIfcWaterProperties().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -33613,8 +30883,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcWaterProperties_AlkalinityConcentrationAsString() {
-		return (EAttribute) getIfcWaterProperties().getEStructuralFeatures().get(4);
+	public EReference getIfcWaterProperties_ImpuritiesContent() {
+		return (EReference) getIfcWaterProperties().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -33622,8 +30892,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcWaterProperties_AcidityConcentration() {
-		return (EAttribute) getIfcWaterProperties().getEStructuralFeatures().get(5);
+	public EReference getIfcWaterProperties_PHLevel() {
+		return (EReference) getIfcWaterProperties().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -33631,62 +30901,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcWaterProperties_AcidityConcentrationAsString() {
-		return (EAttribute) getIfcWaterProperties().getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcWaterProperties_ImpuritiesContent() {
-		return (EAttribute) getIfcWaterProperties().getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcWaterProperties_ImpuritiesContentAsString() {
-		return (EAttribute) getIfcWaterProperties().getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcWaterProperties_PHLevel() {
-		return (EAttribute) getIfcWaterProperties().getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcWaterProperties_PHLevelAsString() {
-		return (EAttribute) getIfcWaterProperties().getEStructuralFeatures().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcWaterProperties_DissolvedSolidsContent() {
-		return (EAttribute) getIfcWaterProperties().getEStructuralFeatures().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcWaterProperties_DissolvedSolidsContentAsString() {
-		return (EAttribute) getIfcWaterProperties().getEStructuralFeatures().get(12);
+	public EReference getIfcWaterProperties_DissolvedSolidsContent() {
+		return (EReference) getIfcWaterProperties().getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -33696,7 +30912,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcWindow() {
 		if (ifcWindowEClass == null) {
-			ifcWindowEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(908);
+			ifcWindowEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(926);
 		}
 		return ifcWindowEClass;
 	}
@@ -33706,8 +30922,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcWindow_OverallHeight() {
-		return (EAttribute) getIfcWindow().getEStructuralFeatures().get(0);
+	public EReference getIfcWindow_OverallHeight() {
+		return (EReference) getIfcWindow().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -33715,26 +30931,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcWindow_OverallHeightAsString() {
-		return (EAttribute) getIfcWindow().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcWindow_OverallWidth() {
-		return (EAttribute) getIfcWindow().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcWindow_OverallWidthAsString() {
-		return (EAttribute) getIfcWindow().getEStructuralFeatures().get(3);
+	public EReference getIfcWindow_OverallWidth() {
+		return (EReference) getIfcWindow().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -33744,7 +30942,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcWindowLiningProperties() {
 		if (ifcWindowLiningPropertiesEClass == null) {
-			ifcWindowLiningPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(909);
+			ifcWindowLiningPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(927);
 		}
 		return ifcWindowLiningPropertiesEClass;
 	}
@@ -33754,8 +30952,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcWindowLiningProperties_LiningDepth() {
-		return (EAttribute) getIfcWindowLiningProperties().getEStructuralFeatures().get(0);
+	public EReference getIfcWindowLiningProperties_LiningDepth() {
+		return (EReference) getIfcWindowLiningProperties().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -33763,8 +30961,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcWindowLiningProperties_LiningDepthAsString() {
-		return (EAttribute) getIfcWindowLiningProperties().getEStructuralFeatures().get(1);
+	public EReference getIfcWindowLiningProperties_LiningThickness() {
+		return (EReference) getIfcWindowLiningProperties().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -33772,8 +30970,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcWindowLiningProperties_LiningThickness() {
-		return (EAttribute) getIfcWindowLiningProperties().getEStructuralFeatures().get(2);
+	public EReference getIfcWindowLiningProperties_TransomThickness() {
+		return (EReference) getIfcWindowLiningProperties().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -33781,8 +30979,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcWindowLiningProperties_LiningThicknessAsString() {
-		return (EAttribute) getIfcWindowLiningProperties().getEStructuralFeatures().get(3);
+	public EReference getIfcWindowLiningProperties_MullionThickness() {
+		return (EReference) getIfcWindowLiningProperties().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -33790,8 +30988,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcWindowLiningProperties_TransomThickness() {
-		return (EAttribute) getIfcWindowLiningProperties().getEStructuralFeatures().get(4);
+	public EReference getIfcWindowLiningProperties_FirstTransomOffset() {
+		return (EReference) getIfcWindowLiningProperties().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -33799,8 +30997,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcWindowLiningProperties_TransomThicknessAsString() {
-		return (EAttribute) getIfcWindowLiningProperties().getEStructuralFeatures().get(5);
+	public EReference getIfcWindowLiningProperties_SecondTransomOffset() {
+		return (EReference) getIfcWindowLiningProperties().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -33808,8 +31006,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcWindowLiningProperties_MullionThickness() {
-		return (EAttribute) getIfcWindowLiningProperties().getEStructuralFeatures().get(6);
+	public EReference getIfcWindowLiningProperties_FirstMullionOffset() {
+		return (EReference) getIfcWindowLiningProperties().getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -33817,80 +31015,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcWindowLiningProperties_MullionThicknessAsString() {
-		return (EAttribute) getIfcWindowLiningProperties().getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcWindowLiningProperties_FirstTransomOffset() {
-		return (EAttribute) getIfcWindowLiningProperties().getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcWindowLiningProperties_FirstTransomOffsetAsString() {
-		return (EAttribute) getIfcWindowLiningProperties().getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcWindowLiningProperties_SecondTransomOffset() {
-		return (EAttribute) getIfcWindowLiningProperties().getEStructuralFeatures().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcWindowLiningProperties_SecondTransomOffsetAsString() {
-		return (EAttribute) getIfcWindowLiningProperties().getEStructuralFeatures().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcWindowLiningProperties_FirstMullionOffset() {
-		return (EAttribute) getIfcWindowLiningProperties().getEStructuralFeatures().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcWindowLiningProperties_FirstMullionOffsetAsString() {
-		return (EAttribute) getIfcWindowLiningProperties().getEStructuralFeatures().get(13);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcWindowLiningProperties_SecondMullionOffset() {
-		return (EAttribute) getIfcWindowLiningProperties().getEStructuralFeatures().get(14);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcWindowLiningProperties_SecondMullionOffsetAsString() {
-		return (EAttribute) getIfcWindowLiningProperties().getEStructuralFeatures().get(15);
+	public EReference getIfcWindowLiningProperties_SecondMullionOffset() {
+		return (EReference) getIfcWindowLiningProperties().getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -33899,7 +31025,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EReference getIfcWindowLiningProperties_ShapeAspectStyle() {
-		return (EReference) getIfcWindowLiningProperties().getEStructuralFeatures().get(16);
+		return (EReference) getIfcWindowLiningProperties().getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -33909,7 +31035,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcWindowPanelProperties() {
 		if (ifcWindowPanelPropertiesEClass == null) {
-			ifcWindowPanelPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(910);
+			ifcWindowPanelPropertiesEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(928);
 		}
 		return ifcWindowPanelPropertiesEClass;
 	}
@@ -33937,8 +31063,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcWindowPanelProperties_FrameDepth() {
-		return (EAttribute) getIfcWindowPanelProperties().getEStructuralFeatures().get(2);
+	public EReference getIfcWindowPanelProperties_FrameDepth() {
+		return (EReference) getIfcWindowPanelProperties().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -33946,26 +31072,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcWindowPanelProperties_FrameDepthAsString() {
-		return (EAttribute) getIfcWindowPanelProperties().getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcWindowPanelProperties_FrameThickness() {
-		return (EAttribute) getIfcWindowPanelProperties().getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcWindowPanelProperties_FrameThicknessAsString() {
-		return (EAttribute) getIfcWindowPanelProperties().getEStructuralFeatures().get(5);
+	public EReference getIfcWindowPanelProperties_FrameThickness() {
+		return (EReference) getIfcWindowPanelProperties().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -33974,7 +31082,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EReference getIfcWindowPanelProperties_ShapeAspectStyle() {
-		return (EReference) getIfcWindowPanelProperties().getEStructuralFeatures().get(6);
+		return (EReference) getIfcWindowPanelProperties().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -33984,7 +31092,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcWindowStyle() {
 		if (ifcWindowStyleEClass == null) {
-			ifcWindowStyleEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(911);
+			ifcWindowStyleEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(929);
 		}
 		return ifcWindowStyleEClass;
 	}
@@ -34012,8 +31120,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcWindowStyle_ParameterTakesPrecedence() {
-		return (EAttribute) getIfcWindowStyle().getEStructuralFeatures().get(2);
+	public EReference getIfcWindowStyle_ParameterTakesPrecedence() {
+		return (EReference) getIfcWindowStyle().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -34021,8 +31129,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcWindowStyle_Sizeable() {
-		return (EAttribute) getIfcWindowStyle().getEStructuralFeatures().get(3);
+	public EReference getIfcWindowStyle_Sizeable() {
+		return (EReference) getIfcWindowStyle().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -34032,7 +31140,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcWorkControl() {
 		if (ifcWorkControlEClass == null) {
-			ifcWorkControlEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(912);
+			ifcWorkControlEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(930);
 		}
 		return ifcWorkControlEClass;
 	}
@@ -34042,8 +31150,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcWorkControl_Identifier() {
-		return (EAttribute) getIfcWorkControl().getEStructuralFeatures().get(0);
+	public EReference getIfcWorkControl_Identifier() {
+		return (EReference) getIfcWorkControl().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -34069,8 +31177,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcWorkControl_Purpose() {
-		return (EAttribute) getIfcWorkControl().getEStructuralFeatures().get(3);
+	public EReference getIfcWorkControl_Purpose() {
+		return (EReference) getIfcWorkControl().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -34078,8 +31186,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcWorkControl_Duration() {
-		return (EAttribute) getIfcWorkControl().getEStructuralFeatures().get(4);
+	public EReference getIfcWorkControl_Duration() {
+		return (EReference) getIfcWorkControl().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -34087,26 +31195,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcWorkControl_DurationAsString() {
-		return (EAttribute) getIfcWorkControl().getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcWorkControl_TotalFloat() {
-		return (EAttribute) getIfcWorkControl().getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcWorkControl_TotalFloatAsString() {
-		return (EAttribute) getIfcWorkControl().getEStructuralFeatures().get(7);
+	public EReference getIfcWorkControl_TotalFloat() {
+		return (EReference) getIfcWorkControl().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -34115,7 +31205,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EReference getIfcWorkControl_StartTime() {
-		return (EReference) getIfcWorkControl().getEStructuralFeatures().get(8);
+		return (EReference) getIfcWorkControl().getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -34124,7 +31214,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EReference getIfcWorkControl_FinishTime() {
-		return (EReference) getIfcWorkControl().getEStructuralFeatures().get(9);
+		return (EReference) getIfcWorkControl().getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -34133,7 +31223,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * @generated
 	 */
 	public EAttribute getIfcWorkControl_WorkControlType() {
-		return (EAttribute) getIfcWorkControl().getEStructuralFeatures().get(10);
+		return (EAttribute) getIfcWorkControl().getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -34141,8 +31231,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcWorkControl_UserDefinedControlType() {
-		return (EAttribute) getIfcWorkControl().getEStructuralFeatures().get(11);
+	public EReference getIfcWorkControl_UserDefinedControlType() {
+		return (EReference) getIfcWorkControl().getEStructuralFeatures().get(9);
 	}
 
 	/**
@@ -34152,7 +31242,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcWorkPlan() {
 		if (ifcWorkPlanEClass == null) {
-			ifcWorkPlanEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(913);
+			ifcWorkPlanEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(931);
 		}
 		return ifcWorkPlanEClass;
 	}
@@ -34164,7 +31254,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcWorkSchedule() {
 		if (ifcWorkScheduleEClass == null) {
-			ifcWorkScheduleEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(914);
+			ifcWorkScheduleEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(932);
 		}
 		return ifcWorkScheduleEClass;
 	}
@@ -34176,7 +31266,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcZShapeProfileDef() {
 		if (ifcZShapeProfileDefEClass == null) {
-			ifcZShapeProfileDefEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(915);
+			ifcZShapeProfileDefEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(933);
 		}
 		return ifcZShapeProfileDefEClass;
 	}
@@ -34186,8 +31276,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcZShapeProfileDef_Depth() {
-		return (EAttribute) getIfcZShapeProfileDef().getEStructuralFeatures().get(0);
+	public EReference getIfcZShapeProfileDef_Depth() {
+		return (EReference) getIfcZShapeProfileDef().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -34195,8 +31285,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcZShapeProfileDef_DepthAsString() {
-		return (EAttribute) getIfcZShapeProfileDef().getEStructuralFeatures().get(1);
+	public EReference getIfcZShapeProfileDef_FlangeWidth() {
+		return (EReference) getIfcZShapeProfileDef().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -34204,8 +31294,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcZShapeProfileDef_FlangeWidth() {
-		return (EAttribute) getIfcZShapeProfileDef().getEStructuralFeatures().get(2);
+	public EReference getIfcZShapeProfileDef_WebThickness() {
+		return (EReference) getIfcZShapeProfileDef().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -34213,8 +31303,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcZShapeProfileDef_FlangeWidthAsString() {
-		return (EAttribute) getIfcZShapeProfileDef().getEStructuralFeatures().get(3);
+	public EReference getIfcZShapeProfileDef_FlangeThickness() {
+		return (EReference) getIfcZShapeProfileDef().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -34222,8 +31312,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcZShapeProfileDef_WebThickness() {
-		return (EAttribute) getIfcZShapeProfileDef().getEStructuralFeatures().get(4);
+	public EReference getIfcZShapeProfileDef_FilletRadius() {
+		return (EReference) getIfcZShapeProfileDef().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -34231,62 +31321,8 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIfcZShapeProfileDef_WebThicknessAsString() {
-		return (EAttribute) getIfcZShapeProfileDef().getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcZShapeProfileDef_FlangeThickness() {
-		return (EAttribute) getIfcZShapeProfileDef().getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcZShapeProfileDef_FlangeThicknessAsString() {
-		return (EAttribute) getIfcZShapeProfileDef().getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcZShapeProfileDef_FilletRadius() {
-		return (EAttribute) getIfcZShapeProfileDef().getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcZShapeProfileDef_FilletRadiusAsString() {
-		return (EAttribute) getIfcZShapeProfileDef().getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcZShapeProfileDef_EdgeRadius() {
-		return (EAttribute) getIfcZShapeProfileDef().getEStructuralFeatures().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIfcZShapeProfileDef_EdgeRadiusAsString() {
-		return (EAttribute) getIfcZShapeProfileDef().getEStructuralFeatures().get(11);
+	public EReference getIfcZShapeProfileDef_EdgeRadius() {
+		return (EReference) getIfcZShapeProfileDef().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -34296,7 +31332,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcZone() {
 		if (ifcZoneEClass == null) {
-			ifcZoneEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(916);
+			ifcZoneEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(934);
 		}
 		return ifcZoneEClass;
 	}
@@ -34308,7 +31344,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcActorSelect() {
 		if (ifcActorSelectEClass == null) {
-			ifcActorSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(917);
+			ifcActorSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(935);
 		}
 		return ifcActorSelectEClass;
 	}
@@ -34320,7 +31356,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcAppliedValueSelect() {
 		if (ifcAppliedValueSelectEClass == null) {
-			ifcAppliedValueSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(918);
+			ifcAppliedValueSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(936);
 		}
 		return ifcAppliedValueSelectEClass;
 	}
@@ -34332,7 +31368,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcAxis2Placement() {
 		if (ifcAxis2PlacementEClass == null) {
-			ifcAxis2PlacementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(919);
+			ifcAxis2PlacementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(937);
 		}
 		return ifcAxis2PlacementEClass;
 	}
@@ -34344,7 +31380,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcBooleanOperand() {
 		if (ifcBooleanOperandEClass == null) {
-			ifcBooleanOperandEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(920);
+			ifcBooleanOperandEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(938);
 		}
 		return ifcBooleanOperandEClass;
 	}
@@ -34356,7 +31392,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcCharacterStyleSelect() {
 		if (ifcCharacterStyleSelectEClass == null) {
-			ifcCharacterStyleSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(921);
+			ifcCharacterStyleSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(939);
 		}
 		return ifcCharacterStyleSelectEClass;
 	}
@@ -34368,7 +31404,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcClassificationNotationSelect() {
 		if (ifcClassificationNotationSelectEClass == null) {
-			ifcClassificationNotationSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(922);
+			ifcClassificationNotationSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(940);
 		}
 		return ifcClassificationNotationSelectEClass;
 	}
@@ -34380,7 +31416,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcColour() {
 		if (ifcColourEClass == null) {
-			ifcColourEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(923);
+			ifcColourEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(941);
 		}
 		return ifcColourEClass;
 	}
@@ -34392,7 +31428,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcColourOrFactor() {
 		if (ifcColourOrFactorEClass == null) {
-			ifcColourOrFactorEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(924);
+			ifcColourOrFactorEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(942);
 		}
 		return ifcColourOrFactorEClass;
 	}
@@ -34404,7 +31440,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcConditionCriterionSelect() {
 		if (ifcConditionCriterionSelectEClass == null) {
-			ifcConditionCriterionSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(925);
+			ifcConditionCriterionSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(943);
 		}
 		return ifcConditionCriterionSelectEClass;
 	}
@@ -34416,7 +31452,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcCsgSelect() {
 		if (ifcCsgSelectEClass == null) {
-			ifcCsgSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(926);
+			ifcCsgSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(944);
 		}
 		return ifcCsgSelectEClass;
 	}
@@ -34428,7 +31464,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcCurveFontOrScaledCurveFontSelect() {
 		if (ifcCurveFontOrScaledCurveFontSelectEClass == null) {
-			ifcCurveFontOrScaledCurveFontSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(927);
+			ifcCurveFontOrScaledCurveFontSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(945);
 		}
 		return ifcCurveFontOrScaledCurveFontSelectEClass;
 	}
@@ -34440,7 +31476,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcCurveOrEdgeCurve() {
 		if (ifcCurveOrEdgeCurveEClass == null) {
-			ifcCurveOrEdgeCurveEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(928);
+			ifcCurveOrEdgeCurveEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(946);
 		}
 		return ifcCurveOrEdgeCurveEClass;
 	}
@@ -34452,7 +31488,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcCurveStyleFontSelect() {
 		if (ifcCurveStyleFontSelectEClass == null) {
-			ifcCurveStyleFontSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(929);
+			ifcCurveStyleFontSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(947);
 		}
 		return ifcCurveStyleFontSelectEClass;
 	}
@@ -34464,7 +31500,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcDateTimeSelect() {
 		if (ifcDateTimeSelectEClass == null) {
-			ifcDateTimeSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(930);
+			ifcDateTimeSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(948);
 		}
 		return ifcDateTimeSelectEClass;
 	}
@@ -34476,7 +31512,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcDefinedSymbolSelect() {
 		if (ifcDefinedSymbolSelectEClass == null) {
-			ifcDefinedSymbolSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(931);
+			ifcDefinedSymbolSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(949);
 		}
 		return ifcDefinedSymbolSelectEClass;
 	}
@@ -34488,7 +31524,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcDerivedMeasureValue() {
 		if (ifcDerivedMeasureValueEClass == null) {
-			ifcDerivedMeasureValueEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(932);
+			ifcDerivedMeasureValueEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(950);
 		}
 		return ifcDerivedMeasureValueEClass;
 	}
@@ -34500,7 +31536,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcDocumentSelect() {
 		if (ifcDocumentSelectEClass == null) {
-			ifcDocumentSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(933);
+			ifcDocumentSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(951);
 		}
 		return ifcDocumentSelectEClass;
 	}
@@ -34512,7 +31548,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcDraughtingCalloutElement() {
 		if (ifcDraughtingCalloutElementEClass == null) {
-			ifcDraughtingCalloutElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(934);
+			ifcDraughtingCalloutElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(952);
 		}
 		return ifcDraughtingCalloutElementEClass;
 	}
@@ -34524,7 +31560,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcFillAreaStyleTileShapeSelect() {
 		if (ifcFillAreaStyleTileShapeSelectEClass == null) {
-			ifcFillAreaStyleTileShapeSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(935);
+			ifcFillAreaStyleTileShapeSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(953);
 		}
 		return ifcFillAreaStyleTileShapeSelectEClass;
 	}
@@ -34536,7 +31572,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcFillStyleSelect() {
 		if (ifcFillStyleSelectEClass == null) {
-			ifcFillStyleSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(936);
+			ifcFillStyleSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(954);
 		}
 		return ifcFillStyleSelectEClass;
 	}
@@ -34548,7 +31584,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcGeometricSetSelect() {
 		if (ifcGeometricSetSelectEClass == null) {
-			ifcGeometricSetSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(937);
+			ifcGeometricSetSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(955);
 		}
 		return ifcGeometricSetSelectEClass;
 	}
@@ -34560,7 +31596,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcHatchLineDistanceSelect() {
 		if (ifcHatchLineDistanceSelectEClass == null) {
-			ifcHatchLineDistanceSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(938);
+			ifcHatchLineDistanceSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(956);
 		}
 		return ifcHatchLineDistanceSelectEClass;
 	}
@@ -34572,7 +31608,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcLayeredItem() {
 		if (ifcLayeredItemEClass == null) {
-			ifcLayeredItemEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(939);
+			ifcLayeredItemEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(957);
 		}
 		return ifcLayeredItemEClass;
 	}
@@ -34584,7 +31620,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcLibrarySelect() {
 		if (ifcLibrarySelectEClass == null) {
-			ifcLibrarySelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(940);
+			ifcLibrarySelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(958);
 		}
 		return ifcLibrarySelectEClass;
 	}
@@ -34596,7 +31632,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcLightDistributionDataSourceSelect() {
 		if (ifcLightDistributionDataSourceSelectEClass == null) {
-			ifcLightDistributionDataSourceSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(941);
+			ifcLightDistributionDataSourceSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(959);
 		}
 		return ifcLightDistributionDataSourceSelectEClass;
 	}
@@ -34608,7 +31644,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcMaterialSelect() {
 		if (ifcMaterialSelectEClass == null) {
-			ifcMaterialSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(942);
+			ifcMaterialSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(960);
 		}
 		return ifcMaterialSelectEClass;
 	}
@@ -34620,7 +31656,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcMeasureValue() {
 		if (ifcMeasureValueEClass == null) {
-			ifcMeasureValueEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(943);
+			ifcMeasureValueEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(961);
 		}
 		return ifcMeasureValueEClass;
 	}
@@ -34632,7 +31668,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcMetricValueSelect() {
 		if (ifcMetricValueSelectEClass == null) {
-			ifcMetricValueSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(944);
+			ifcMetricValueSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(962);
 		}
 		return ifcMetricValueSelectEClass;
 	}
@@ -34644,7 +31680,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcObjectReferenceSelect() {
 		if (ifcObjectReferenceSelectEClass == null) {
-			ifcObjectReferenceSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(945);
+			ifcObjectReferenceSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(963);
 		}
 		return ifcObjectReferenceSelectEClass;
 	}
@@ -34656,7 +31692,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcOrientationSelect() {
 		if (ifcOrientationSelectEClass == null) {
-			ifcOrientationSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(946);
+			ifcOrientationSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(964);
 		}
 		return ifcOrientationSelectEClass;
 	}
@@ -34668,7 +31704,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPointOrVertexPoint() {
 		if (ifcPointOrVertexPointEClass == null) {
-			ifcPointOrVertexPointEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(947);
+			ifcPointOrVertexPointEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(965);
 		}
 		return ifcPointOrVertexPointEClass;
 	}
@@ -34680,7 +31716,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcPresentationStyleSelect() {
 		if (ifcPresentationStyleSelectEClass == null) {
-			ifcPresentationStyleSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(948);
+			ifcPresentationStyleSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(966);
 		}
 		return ifcPresentationStyleSelectEClass;
 	}
@@ -34692,7 +31728,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcShell() {
 		if (ifcShellEClass == null) {
-			ifcShellEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(949);
+			ifcShellEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(967);
 		}
 		return ifcShellEClass;
 	}
@@ -34704,7 +31740,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSimpleValue() {
 		if (ifcSimpleValueEClass == null) {
-			ifcSimpleValueEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(950);
+			ifcSimpleValueEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(968);
 		}
 		return ifcSimpleValueEClass;
 	}
@@ -34716,7 +31752,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSizeSelect() {
 		if (ifcSizeSelectEClass == null) {
-			ifcSizeSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(951);
+			ifcSizeSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(969);
 		}
 		return ifcSizeSelectEClass;
 	}
@@ -34728,7 +31764,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSpecularHighlightSelect() {
 		if (ifcSpecularHighlightSelectEClass == null) {
-			ifcSpecularHighlightSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(952);
+			ifcSpecularHighlightSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(970);
 		}
 		return ifcSpecularHighlightSelectEClass;
 	}
@@ -34740,7 +31776,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcStructuralActivityAssignmentSelect() {
 		if (ifcStructuralActivityAssignmentSelectEClass == null) {
-			ifcStructuralActivityAssignmentSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(953);
+			ifcStructuralActivityAssignmentSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(971);
 		}
 		return ifcStructuralActivityAssignmentSelectEClass;
 	}
@@ -34752,7 +31788,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSurfaceOrFaceSurface() {
 		if (ifcSurfaceOrFaceSurfaceEClass == null) {
-			ifcSurfaceOrFaceSurfaceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(954);
+			ifcSurfaceOrFaceSurfaceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(972);
 		}
 		return ifcSurfaceOrFaceSurfaceEClass;
 	}
@@ -34764,7 +31800,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSurfaceStyleElementSelect() {
 		if (ifcSurfaceStyleElementSelectEClass == null) {
-			ifcSurfaceStyleElementSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(955);
+			ifcSurfaceStyleElementSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(973);
 		}
 		return ifcSurfaceStyleElementSelectEClass;
 	}
@@ -34776,7 +31812,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcSymbolStyleSelect() {
 		if (ifcSymbolStyleSelectEClass == null) {
-			ifcSymbolStyleSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(956);
+			ifcSymbolStyleSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(974);
 		}
 		return ifcSymbolStyleSelectEClass;
 	}
@@ -34788,7 +31824,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcTextFontSelect() {
 		if (ifcTextFontSelectEClass == null) {
-			ifcTextFontSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(957);
+			ifcTextFontSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(975);
 		}
 		return ifcTextFontSelectEClass;
 	}
@@ -34800,7 +31836,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcTextStyleSelect() {
 		if (ifcTextStyleSelectEClass == null) {
-			ifcTextStyleSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(958);
+			ifcTextStyleSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(976);
 		}
 		return ifcTextStyleSelectEClass;
 	}
@@ -34812,7 +31848,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcTrimmingSelect() {
 		if (ifcTrimmingSelectEClass == null) {
-			ifcTrimmingSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(959);
+			ifcTrimmingSelectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(977);
 		}
 		return ifcTrimmingSelectEClass;
 	}
@@ -34824,7 +31860,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcUnit() {
 		if (ifcUnitEClass == null) {
-			ifcUnitEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(960);
+			ifcUnitEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(978);
 		}
 		return ifcUnitEClass;
 	}
@@ -34836,7 +31872,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcValue() {
 		if (ifcValueEClass == null) {
-			ifcValueEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(961);
+			ifcValueEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(979);
 		}
 		return ifcValueEClass;
 	}
@@ -34848,7 +31884,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EClass getIfcVectorOrDirection() {
 		if (ifcVectorOrDirectionEClass == null) {
-			ifcVectorOrDirectionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(962);
+			ifcVectorOrDirectionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(980);
 		}
 		return ifcVectorOrDirectionEClass;
 	}
@@ -34872,7 +31908,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcActionSourceTypeEnum() {
 		if (ifcActionSourceTypeEnumEEnum == null) {
-			ifcActionSourceTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(100);
+			ifcActionSourceTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(118);
 		}
 		return ifcActionSourceTypeEnumEEnum;
 	}
@@ -34884,7 +31920,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcActionTypeEnum() {
 		if (ifcActionTypeEnumEEnum == null) {
-			ifcActionTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(101);
+			ifcActionTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(119);
 		}
 		return ifcActionTypeEnumEEnum;
 	}
@@ -34896,7 +31932,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcActuatorTypeEnum() {
 		if (ifcActuatorTypeEnumEEnum == null) {
-			ifcActuatorTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(102);
+			ifcActuatorTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(120);
 		}
 		return ifcActuatorTypeEnumEEnum;
 	}
@@ -34908,7 +31944,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcAddressTypeEnum() {
 		if (ifcAddressTypeEnumEEnum == null) {
-			ifcAddressTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(103);
+			ifcAddressTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(121);
 		}
 		return ifcAddressTypeEnumEEnum;
 	}
@@ -34920,7 +31956,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcAheadOrBehind() {
 		if (ifcAheadOrBehindEEnum == null) {
-			ifcAheadOrBehindEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(104);
+			ifcAheadOrBehindEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(122);
 		}
 		return ifcAheadOrBehindEEnum;
 	}
@@ -34932,7 +31968,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcAirTerminalBoxTypeEnum() {
 		if (ifcAirTerminalBoxTypeEnumEEnum == null) {
-			ifcAirTerminalBoxTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(105);
+			ifcAirTerminalBoxTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(123);
 		}
 		return ifcAirTerminalBoxTypeEnumEEnum;
 	}
@@ -34944,7 +31980,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcAirTerminalTypeEnum() {
 		if (ifcAirTerminalTypeEnumEEnum == null) {
-			ifcAirTerminalTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(106);
+			ifcAirTerminalTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(124);
 		}
 		return ifcAirTerminalTypeEnumEEnum;
 	}
@@ -34956,7 +31992,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcAirToAirHeatRecoveryTypeEnum() {
 		if (ifcAirToAirHeatRecoveryTypeEnumEEnum == null) {
-			ifcAirToAirHeatRecoveryTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(107);
+			ifcAirToAirHeatRecoveryTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(125);
 		}
 		return ifcAirToAirHeatRecoveryTypeEnumEEnum;
 	}
@@ -34968,7 +32004,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcAlarmTypeEnum() {
 		if (ifcAlarmTypeEnumEEnum == null) {
-			ifcAlarmTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(108);
+			ifcAlarmTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(126);
 		}
 		return ifcAlarmTypeEnumEEnum;
 	}
@@ -34980,7 +32016,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcAnalysisModelTypeEnum() {
 		if (ifcAnalysisModelTypeEnumEEnum == null) {
-			ifcAnalysisModelTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(109);
+			ifcAnalysisModelTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(127);
 		}
 		return ifcAnalysisModelTypeEnumEEnum;
 	}
@@ -34992,7 +32028,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcAnalysisTheoryTypeEnum() {
 		if (ifcAnalysisTheoryTypeEnumEEnum == null) {
-			ifcAnalysisTheoryTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(110);
+			ifcAnalysisTheoryTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(128);
 		}
 		return ifcAnalysisTheoryTypeEnumEEnum;
 	}
@@ -35004,7 +32040,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcArithmeticOperatorEnum() {
 		if (ifcArithmeticOperatorEnumEEnum == null) {
-			ifcArithmeticOperatorEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(111);
+			ifcArithmeticOperatorEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(129);
 		}
 		return ifcArithmeticOperatorEnumEEnum;
 	}
@@ -35016,7 +32052,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcAssemblyPlaceEnum() {
 		if (ifcAssemblyPlaceEnumEEnum == null) {
-			ifcAssemblyPlaceEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(112);
+			ifcAssemblyPlaceEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(130);
 		}
 		return ifcAssemblyPlaceEnumEEnum;
 	}
@@ -35028,7 +32064,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcBSplineCurveForm() {
 		if (ifcBSplineCurveFormEEnum == null) {
-			ifcBSplineCurveFormEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(113);
+			ifcBSplineCurveFormEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(131);
 		}
 		return ifcBSplineCurveFormEEnum;
 	}
@@ -35040,7 +32076,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcBeamTypeEnum() {
 		if (ifcBeamTypeEnumEEnum == null) {
-			ifcBeamTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(114);
+			ifcBeamTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(132);
 		}
 		return ifcBeamTypeEnumEEnum;
 	}
@@ -35052,7 +32088,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcBenchmarkEnum() {
 		if (ifcBenchmarkEnumEEnum == null) {
-			ifcBenchmarkEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(115);
+			ifcBenchmarkEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(133);
 		}
 		return ifcBenchmarkEnumEEnum;
 	}
@@ -35064,7 +32100,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcBoilerTypeEnum() {
 		if (ifcBoilerTypeEnumEEnum == null) {
-			ifcBoilerTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(116);
+			ifcBoilerTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(134);
 		}
 		return ifcBoilerTypeEnumEEnum;
 	}
@@ -35076,7 +32112,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcBooleanOperator() {
 		if (ifcBooleanOperatorEEnum == null) {
-			ifcBooleanOperatorEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(117);
+			ifcBooleanOperatorEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(135);
 		}
 		return ifcBooleanOperatorEEnum;
 	}
@@ -35088,7 +32124,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcBuildingElementProxyTypeEnum() {
 		if (ifcBuildingElementProxyTypeEnumEEnum == null) {
-			ifcBuildingElementProxyTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(118);
+			ifcBuildingElementProxyTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(136);
 		}
 		return ifcBuildingElementProxyTypeEnumEEnum;
 	}
@@ -35100,7 +32136,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcCableCarrierFittingTypeEnum() {
 		if (ifcCableCarrierFittingTypeEnumEEnum == null) {
-			ifcCableCarrierFittingTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(119);
+			ifcCableCarrierFittingTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(137);
 		}
 		return ifcCableCarrierFittingTypeEnumEEnum;
 	}
@@ -35112,7 +32148,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcCableCarrierSegmentTypeEnum() {
 		if (ifcCableCarrierSegmentTypeEnumEEnum == null) {
-			ifcCableCarrierSegmentTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(120);
+			ifcCableCarrierSegmentTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(138);
 		}
 		return ifcCableCarrierSegmentTypeEnumEEnum;
 	}
@@ -35124,7 +32160,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcCableSegmentTypeEnum() {
 		if (ifcCableSegmentTypeEnumEEnum == null) {
-			ifcCableSegmentTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(121);
+			ifcCableSegmentTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(139);
 		}
 		return ifcCableSegmentTypeEnumEEnum;
 	}
@@ -35136,7 +32172,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcChangeActionEnum() {
 		if (ifcChangeActionEnumEEnum == null) {
-			ifcChangeActionEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(122);
+			ifcChangeActionEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(140);
 		}
 		return ifcChangeActionEnumEEnum;
 	}
@@ -35148,7 +32184,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcChillerTypeEnum() {
 		if (ifcChillerTypeEnumEEnum == null) {
-			ifcChillerTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(123);
+			ifcChillerTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(141);
 		}
 		return ifcChillerTypeEnumEEnum;
 	}
@@ -35160,7 +32196,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcCoilTypeEnum() {
 		if (ifcCoilTypeEnumEEnum == null) {
-			ifcCoilTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(124);
+			ifcCoilTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(142);
 		}
 		return ifcCoilTypeEnumEEnum;
 	}
@@ -35172,7 +32208,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcColumnTypeEnum() {
 		if (ifcColumnTypeEnumEEnum == null) {
-			ifcColumnTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(125);
+			ifcColumnTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(143);
 		}
 		return ifcColumnTypeEnumEEnum;
 	}
@@ -35184,7 +32220,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcCompressorTypeEnum() {
 		if (ifcCompressorTypeEnumEEnum == null) {
-			ifcCompressorTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(126);
+			ifcCompressorTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(144);
 		}
 		return ifcCompressorTypeEnumEEnum;
 	}
@@ -35196,7 +32232,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcCondenserTypeEnum() {
 		if (ifcCondenserTypeEnumEEnum == null) {
-			ifcCondenserTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(127);
+			ifcCondenserTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(145);
 		}
 		return ifcCondenserTypeEnumEEnum;
 	}
@@ -35208,7 +32244,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcConnectionTypeEnum() {
 		if (ifcConnectionTypeEnumEEnum == null) {
-			ifcConnectionTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(128);
+			ifcConnectionTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(146);
 		}
 		return ifcConnectionTypeEnumEEnum;
 	}
@@ -35220,7 +32256,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcConstraintEnum() {
 		if (ifcConstraintEnumEEnum == null) {
-			ifcConstraintEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(129);
+			ifcConstraintEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(147);
 		}
 		return ifcConstraintEnumEEnum;
 	}
@@ -35232,7 +32268,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcControllerTypeEnum() {
 		if (ifcControllerTypeEnumEEnum == null) {
-			ifcControllerTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(130);
+			ifcControllerTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(148);
 		}
 		return ifcControllerTypeEnumEEnum;
 	}
@@ -35244,7 +32280,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcCooledBeamTypeEnum() {
 		if (ifcCooledBeamTypeEnumEEnum == null) {
-			ifcCooledBeamTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(131);
+			ifcCooledBeamTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(149);
 		}
 		return ifcCooledBeamTypeEnumEEnum;
 	}
@@ -35256,7 +32292,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcCoolingTowerTypeEnum() {
 		if (ifcCoolingTowerTypeEnumEEnum == null) {
-			ifcCoolingTowerTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(132);
+			ifcCoolingTowerTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(150);
 		}
 		return ifcCoolingTowerTypeEnumEEnum;
 	}
@@ -35268,7 +32304,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcCostScheduleTypeEnum() {
 		if (ifcCostScheduleTypeEnumEEnum == null) {
-			ifcCostScheduleTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(133);
+			ifcCostScheduleTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(151);
 		}
 		return ifcCostScheduleTypeEnumEEnum;
 	}
@@ -35280,7 +32316,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcCoveringTypeEnum() {
 		if (ifcCoveringTypeEnumEEnum == null) {
-			ifcCoveringTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(134);
+			ifcCoveringTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(152);
 		}
 		return ifcCoveringTypeEnumEEnum;
 	}
@@ -35292,7 +32328,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcCurrencyEnum() {
 		if (ifcCurrencyEnumEEnum == null) {
-			ifcCurrencyEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(135);
+			ifcCurrencyEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(153);
 		}
 		return ifcCurrencyEnumEEnum;
 	}
@@ -35304,7 +32340,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcCurtainWallTypeEnum() {
 		if (ifcCurtainWallTypeEnumEEnum == null) {
-			ifcCurtainWallTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(136);
+			ifcCurtainWallTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(154);
 		}
 		return ifcCurtainWallTypeEnumEEnum;
 	}
@@ -35316,7 +32352,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcDamperTypeEnum() {
 		if (ifcDamperTypeEnumEEnum == null) {
-			ifcDamperTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(137);
+			ifcDamperTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(155);
 		}
 		return ifcDamperTypeEnumEEnum;
 	}
@@ -35328,7 +32364,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcDataOriginEnum() {
 		if (ifcDataOriginEnumEEnum == null) {
-			ifcDataOriginEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(138);
+			ifcDataOriginEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(156);
 		}
 		return ifcDataOriginEnumEEnum;
 	}
@@ -35340,7 +32376,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcDerivedUnitEnum() {
 		if (ifcDerivedUnitEnumEEnum == null) {
-			ifcDerivedUnitEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(139);
+			ifcDerivedUnitEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(157);
 		}
 		return ifcDerivedUnitEnumEEnum;
 	}
@@ -35352,7 +32388,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcDimensionExtentUsage() {
 		if (ifcDimensionExtentUsageEEnum == null) {
-			ifcDimensionExtentUsageEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(140);
+			ifcDimensionExtentUsageEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(158);
 		}
 		return ifcDimensionExtentUsageEEnum;
 	}
@@ -35364,7 +32400,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcDirectionSenseEnum() {
 		if (ifcDirectionSenseEnumEEnum == null) {
-			ifcDirectionSenseEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(141);
+			ifcDirectionSenseEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(159);
 		}
 		return ifcDirectionSenseEnumEEnum;
 	}
@@ -35376,7 +32412,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcDistributionChamberElementTypeEnum() {
 		if (ifcDistributionChamberElementTypeEnumEEnum == null) {
-			ifcDistributionChamberElementTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(142);
+			ifcDistributionChamberElementTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(160);
 		}
 		return ifcDistributionChamberElementTypeEnumEEnum;
 	}
@@ -35388,7 +32424,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcDocumentConfidentialityEnum() {
 		if (ifcDocumentConfidentialityEnumEEnum == null) {
-			ifcDocumentConfidentialityEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(143);
+			ifcDocumentConfidentialityEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(161);
 		}
 		return ifcDocumentConfidentialityEnumEEnum;
 	}
@@ -35400,7 +32436,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcDocumentStatusEnum() {
 		if (ifcDocumentStatusEnumEEnum == null) {
-			ifcDocumentStatusEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(144);
+			ifcDocumentStatusEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(162);
 		}
 		return ifcDocumentStatusEnumEEnum;
 	}
@@ -35412,7 +32448,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcDoorPanelOperationEnum() {
 		if (ifcDoorPanelOperationEnumEEnum == null) {
-			ifcDoorPanelOperationEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(145);
+			ifcDoorPanelOperationEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(163);
 		}
 		return ifcDoorPanelOperationEnumEEnum;
 	}
@@ -35424,7 +32460,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcDoorPanelPositionEnum() {
 		if (ifcDoorPanelPositionEnumEEnum == null) {
-			ifcDoorPanelPositionEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(146);
+			ifcDoorPanelPositionEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(164);
 		}
 		return ifcDoorPanelPositionEnumEEnum;
 	}
@@ -35436,7 +32472,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcDoorStyleConstructionEnum() {
 		if (ifcDoorStyleConstructionEnumEEnum == null) {
-			ifcDoorStyleConstructionEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(147);
+			ifcDoorStyleConstructionEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(165);
 		}
 		return ifcDoorStyleConstructionEnumEEnum;
 	}
@@ -35448,7 +32484,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcDoorStyleOperationEnum() {
 		if (ifcDoorStyleOperationEnumEEnum == null) {
-			ifcDoorStyleOperationEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(148);
+			ifcDoorStyleOperationEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(166);
 		}
 		return ifcDoorStyleOperationEnumEEnum;
 	}
@@ -35460,7 +32496,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcDuctFittingTypeEnum() {
 		if (ifcDuctFittingTypeEnumEEnum == null) {
-			ifcDuctFittingTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(149);
+			ifcDuctFittingTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(167);
 		}
 		return ifcDuctFittingTypeEnumEEnum;
 	}
@@ -35472,7 +32508,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcDuctSegmentTypeEnum() {
 		if (ifcDuctSegmentTypeEnumEEnum == null) {
-			ifcDuctSegmentTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(150);
+			ifcDuctSegmentTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(168);
 		}
 		return ifcDuctSegmentTypeEnumEEnum;
 	}
@@ -35484,7 +32520,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcDuctSilencerTypeEnum() {
 		if (ifcDuctSilencerTypeEnumEEnum == null) {
-			ifcDuctSilencerTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(151);
+			ifcDuctSilencerTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(169);
 		}
 		return ifcDuctSilencerTypeEnumEEnum;
 	}
@@ -35496,7 +32532,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcElectricApplianceTypeEnum() {
 		if (ifcElectricApplianceTypeEnumEEnum == null) {
-			ifcElectricApplianceTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(152);
+			ifcElectricApplianceTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(170);
 		}
 		return ifcElectricApplianceTypeEnumEEnum;
 	}
@@ -35508,7 +32544,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcElectricCurrentEnum() {
 		if (ifcElectricCurrentEnumEEnum == null) {
-			ifcElectricCurrentEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(153);
+			ifcElectricCurrentEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(171);
 		}
 		return ifcElectricCurrentEnumEEnum;
 	}
@@ -35520,7 +32556,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcElectricDistributionPointFunctionEnum() {
 		if (ifcElectricDistributionPointFunctionEnumEEnum == null) {
-			ifcElectricDistributionPointFunctionEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(154);
+			ifcElectricDistributionPointFunctionEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(172);
 		}
 		return ifcElectricDistributionPointFunctionEnumEEnum;
 	}
@@ -35532,7 +32568,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcElectricFlowStorageDeviceTypeEnum() {
 		if (ifcElectricFlowStorageDeviceTypeEnumEEnum == null) {
-			ifcElectricFlowStorageDeviceTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(155);
+			ifcElectricFlowStorageDeviceTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(173);
 		}
 		return ifcElectricFlowStorageDeviceTypeEnumEEnum;
 	}
@@ -35544,7 +32580,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcElectricGeneratorTypeEnum() {
 		if (ifcElectricGeneratorTypeEnumEEnum == null) {
-			ifcElectricGeneratorTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(156);
+			ifcElectricGeneratorTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(174);
 		}
 		return ifcElectricGeneratorTypeEnumEEnum;
 	}
@@ -35556,7 +32592,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcElectricHeaterTypeEnum() {
 		if (ifcElectricHeaterTypeEnumEEnum == null) {
-			ifcElectricHeaterTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(157);
+			ifcElectricHeaterTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(175);
 		}
 		return ifcElectricHeaterTypeEnumEEnum;
 	}
@@ -35568,7 +32604,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcElectricMotorTypeEnum() {
 		if (ifcElectricMotorTypeEnumEEnum == null) {
-			ifcElectricMotorTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(158);
+			ifcElectricMotorTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(176);
 		}
 		return ifcElectricMotorTypeEnumEEnum;
 	}
@@ -35580,7 +32616,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcElectricTimeControlTypeEnum() {
 		if (ifcElectricTimeControlTypeEnumEEnum == null) {
-			ifcElectricTimeControlTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(159);
+			ifcElectricTimeControlTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(177);
 		}
 		return ifcElectricTimeControlTypeEnumEEnum;
 	}
@@ -35592,7 +32628,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcElementAssemblyTypeEnum() {
 		if (ifcElementAssemblyTypeEnumEEnum == null) {
-			ifcElementAssemblyTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(160);
+			ifcElementAssemblyTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(178);
 		}
 		return ifcElementAssemblyTypeEnumEEnum;
 	}
@@ -35604,7 +32640,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcElementCompositionEnum() {
 		if (ifcElementCompositionEnumEEnum == null) {
-			ifcElementCompositionEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(161);
+			ifcElementCompositionEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(179);
 		}
 		return ifcElementCompositionEnumEEnum;
 	}
@@ -35616,7 +32652,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcEnergySequenceEnum() {
 		if (ifcEnergySequenceEnumEEnum == null) {
-			ifcEnergySequenceEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(162);
+			ifcEnergySequenceEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(180);
 		}
 		return ifcEnergySequenceEnumEEnum;
 	}
@@ -35628,7 +32664,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcEnvironmentalImpactCategoryEnum() {
 		if (ifcEnvironmentalImpactCategoryEnumEEnum == null) {
-			ifcEnvironmentalImpactCategoryEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(163);
+			ifcEnvironmentalImpactCategoryEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(181);
 		}
 		return ifcEnvironmentalImpactCategoryEnumEEnum;
 	}
@@ -35640,7 +32676,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcEvaporativeCoolerTypeEnum() {
 		if (ifcEvaporativeCoolerTypeEnumEEnum == null) {
-			ifcEvaporativeCoolerTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(164);
+			ifcEvaporativeCoolerTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(182);
 		}
 		return ifcEvaporativeCoolerTypeEnumEEnum;
 	}
@@ -35652,7 +32688,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcEvaporatorTypeEnum() {
 		if (ifcEvaporatorTypeEnumEEnum == null) {
-			ifcEvaporatorTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(165);
+			ifcEvaporatorTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(183);
 		}
 		return ifcEvaporatorTypeEnumEEnum;
 	}
@@ -35664,7 +32700,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcFanTypeEnum() {
 		if (ifcFanTypeEnumEEnum == null) {
-			ifcFanTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(166);
+			ifcFanTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(184);
 		}
 		return ifcFanTypeEnumEEnum;
 	}
@@ -35676,7 +32712,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcFilterTypeEnum() {
 		if (ifcFilterTypeEnumEEnum == null) {
-			ifcFilterTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(167);
+			ifcFilterTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(185);
 		}
 		return ifcFilterTypeEnumEEnum;
 	}
@@ -35688,7 +32724,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcFireSuppressionTerminalTypeEnum() {
 		if (ifcFireSuppressionTerminalTypeEnumEEnum == null) {
-			ifcFireSuppressionTerminalTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(168);
+			ifcFireSuppressionTerminalTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(186);
 		}
 		return ifcFireSuppressionTerminalTypeEnumEEnum;
 	}
@@ -35700,7 +32736,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcFlowDirectionEnum() {
 		if (ifcFlowDirectionEnumEEnum == null) {
-			ifcFlowDirectionEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(169);
+			ifcFlowDirectionEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(187);
 		}
 		return ifcFlowDirectionEnumEEnum;
 	}
@@ -35712,7 +32748,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcFlowInstrumentTypeEnum() {
 		if (ifcFlowInstrumentTypeEnumEEnum == null) {
-			ifcFlowInstrumentTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(170);
+			ifcFlowInstrumentTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(188);
 		}
 		return ifcFlowInstrumentTypeEnumEEnum;
 	}
@@ -35724,7 +32760,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcFlowMeterTypeEnum() {
 		if (ifcFlowMeterTypeEnumEEnum == null) {
-			ifcFlowMeterTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(171);
+			ifcFlowMeterTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(189);
 		}
 		return ifcFlowMeterTypeEnumEEnum;
 	}
@@ -35736,7 +32772,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcFootingTypeEnum() {
 		if (ifcFootingTypeEnumEEnum == null) {
-			ifcFootingTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(172);
+			ifcFootingTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(190);
 		}
 		return ifcFootingTypeEnumEEnum;
 	}
@@ -35748,7 +32784,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcGasTerminalTypeEnum() {
 		if (ifcGasTerminalTypeEnumEEnum == null) {
-			ifcGasTerminalTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(173);
+			ifcGasTerminalTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(191);
 		}
 		return ifcGasTerminalTypeEnumEEnum;
 	}
@@ -35760,7 +32796,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcGeometricProjectionEnum() {
 		if (ifcGeometricProjectionEnumEEnum == null) {
-			ifcGeometricProjectionEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(174);
+			ifcGeometricProjectionEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(192);
 		}
 		return ifcGeometricProjectionEnumEEnum;
 	}
@@ -35772,7 +32808,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcGlobalOrLocalEnum() {
 		if (ifcGlobalOrLocalEnumEEnum == null) {
-			ifcGlobalOrLocalEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(175);
+			ifcGlobalOrLocalEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(193);
 		}
 		return ifcGlobalOrLocalEnumEEnum;
 	}
@@ -35784,7 +32820,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcHeatExchangerTypeEnum() {
 		if (ifcHeatExchangerTypeEnumEEnum == null) {
-			ifcHeatExchangerTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(176);
+			ifcHeatExchangerTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(194);
 		}
 		return ifcHeatExchangerTypeEnumEEnum;
 	}
@@ -35796,7 +32832,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcHumidifierTypeEnum() {
 		if (ifcHumidifierTypeEnumEEnum == null) {
-			ifcHumidifierTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(177);
+			ifcHumidifierTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(195);
 		}
 		return ifcHumidifierTypeEnumEEnum;
 	}
@@ -35808,7 +32844,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcInternalOrExternalEnum() {
 		if (ifcInternalOrExternalEnumEEnum == null) {
-			ifcInternalOrExternalEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(178);
+			ifcInternalOrExternalEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(196);
 		}
 		return ifcInternalOrExternalEnumEEnum;
 	}
@@ -35820,7 +32856,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcInventoryTypeEnum() {
 		if (ifcInventoryTypeEnumEEnum == null) {
-			ifcInventoryTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(179);
+			ifcInventoryTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(197);
 		}
 		return ifcInventoryTypeEnumEEnum;
 	}
@@ -35832,7 +32868,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcJunctionBoxTypeEnum() {
 		if (ifcJunctionBoxTypeEnumEEnum == null) {
-			ifcJunctionBoxTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(180);
+			ifcJunctionBoxTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(198);
 		}
 		return ifcJunctionBoxTypeEnumEEnum;
 	}
@@ -35844,7 +32880,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcLampTypeEnum() {
 		if (ifcLampTypeEnumEEnum == null) {
-			ifcLampTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(181);
+			ifcLampTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(199);
 		}
 		return ifcLampTypeEnumEEnum;
 	}
@@ -35856,7 +32892,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcLayerSetDirectionEnum() {
 		if (ifcLayerSetDirectionEnumEEnum == null) {
-			ifcLayerSetDirectionEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(182);
+			ifcLayerSetDirectionEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(200);
 		}
 		return ifcLayerSetDirectionEnumEEnum;
 	}
@@ -35868,7 +32904,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcLightDistributionCurveEnum() {
 		if (ifcLightDistributionCurveEnumEEnum == null) {
-			ifcLightDistributionCurveEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(183);
+			ifcLightDistributionCurveEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(201);
 		}
 		return ifcLightDistributionCurveEnumEEnum;
 	}
@@ -35880,7 +32916,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcLightEmissionSourceEnum() {
 		if (ifcLightEmissionSourceEnumEEnum == null) {
-			ifcLightEmissionSourceEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(184);
+			ifcLightEmissionSourceEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(202);
 		}
 		return ifcLightEmissionSourceEnumEEnum;
 	}
@@ -35892,7 +32928,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcLightFixtureTypeEnum() {
 		if (ifcLightFixtureTypeEnumEEnum == null) {
-			ifcLightFixtureTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(185);
+			ifcLightFixtureTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(203);
 		}
 		return ifcLightFixtureTypeEnumEEnum;
 	}
@@ -35904,7 +32940,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcLoadGroupTypeEnum() {
 		if (ifcLoadGroupTypeEnumEEnum == null) {
-			ifcLoadGroupTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(186);
+			ifcLoadGroupTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(204);
 		}
 		return ifcLoadGroupTypeEnumEEnum;
 	}
@@ -35916,7 +32952,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcLogicalOperatorEnum() {
 		if (ifcLogicalOperatorEnumEEnum == null) {
-			ifcLogicalOperatorEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(187);
+			ifcLogicalOperatorEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(205);
 		}
 		return ifcLogicalOperatorEnumEEnum;
 	}
@@ -35928,7 +32964,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcMemberTypeEnum() {
 		if (ifcMemberTypeEnumEEnum == null) {
-			ifcMemberTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(188);
+			ifcMemberTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(206);
 		}
 		return ifcMemberTypeEnumEEnum;
 	}
@@ -35940,7 +32976,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcMotorConnectionTypeEnum() {
 		if (ifcMotorConnectionTypeEnumEEnum == null) {
-			ifcMotorConnectionTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(189);
+			ifcMotorConnectionTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(207);
 		}
 		return ifcMotorConnectionTypeEnumEEnum;
 	}
@@ -35952,7 +32988,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcNullStyle() {
 		if (ifcNullStyleEEnum == null) {
-			ifcNullStyleEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(190);
+			ifcNullStyleEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(208);
 		}
 		return ifcNullStyleEEnum;
 	}
@@ -35964,7 +33000,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcObjectTypeEnum() {
 		if (ifcObjectTypeEnumEEnum == null) {
-			ifcObjectTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(191);
+			ifcObjectTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(209);
 		}
 		return ifcObjectTypeEnumEEnum;
 	}
@@ -35976,7 +33012,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcObjectiveEnum() {
 		if (ifcObjectiveEnumEEnum == null) {
-			ifcObjectiveEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(192);
+			ifcObjectiveEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(210);
 		}
 		return ifcObjectiveEnumEEnum;
 	}
@@ -35988,7 +33024,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcOccupantTypeEnum() {
 		if (ifcOccupantTypeEnumEEnum == null) {
-			ifcOccupantTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(193);
+			ifcOccupantTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(211);
 		}
 		return ifcOccupantTypeEnumEEnum;
 	}
@@ -36000,7 +33036,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcOutletTypeEnum() {
 		if (ifcOutletTypeEnumEEnum == null) {
-			ifcOutletTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(194);
+			ifcOutletTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(212);
 		}
 		return ifcOutletTypeEnumEEnum;
 	}
@@ -36012,7 +33048,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcPermeableCoveringOperationEnum() {
 		if (ifcPermeableCoveringOperationEnumEEnum == null) {
-			ifcPermeableCoveringOperationEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(195);
+			ifcPermeableCoveringOperationEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(213);
 		}
 		return ifcPermeableCoveringOperationEnumEEnum;
 	}
@@ -36024,7 +33060,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcPhysicalOrVirtualEnum() {
 		if (ifcPhysicalOrVirtualEnumEEnum == null) {
-			ifcPhysicalOrVirtualEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(196);
+			ifcPhysicalOrVirtualEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(214);
 		}
 		return ifcPhysicalOrVirtualEnumEEnum;
 	}
@@ -36036,7 +33072,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcPileConstructionEnum() {
 		if (ifcPileConstructionEnumEEnum == null) {
-			ifcPileConstructionEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(197);
+			ifcPileConstructionEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(215);
 		}
 		return ifcPileConstructionEnumEEnum;
 	}
@@ -36048,7 +33084,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcPileTypeEnum() {
 		if (ifcPileTypeEnumEEnum == null) {
-			ifcPileTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(198);
+			ifcPileTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(216);
 		}
 		return ifcPileTypeEnumEEnum;
 	}
@@ -36060,7 +33096,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcPipeFittingTypeEnum() {
 		if (ifcPipeFittingTypeEnumEEnum == null) {
-			ifcPipeFittingTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(199);
+			ifcPipeFittingTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(217);
 		}
 		return ifcPipeFittingTypeEnumEEnum;
 	}
@@ -36072,7 +33108,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcPipeSegmentTypeEnum() {
 		if (ifcPipeSegmentTypeEnumEEnum == null) {
-			ifcPipeSegmentTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(200);
+			ifcPipeSegmentTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(218);
 		}
 		return ifcPipeSegmentTypeEnumEEnum;
 	}
@@ -36084,7 +33120,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcPlateTypeEnum() {
 		if (ifcPlateTypeEnumEEnum == null) {
-			ifcPlateTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(201);
+			ifcPlateTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(219);
 		}
 		return ifcPlateTypeEnumEEnum;
 	}
@@ -36096,7 +33132,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcProcedureTypeEnum() {
 		if (ifcProcedureTypeEnumEEnum == null) {
-			ifcProcedureTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(202);
+			ifcProcedureTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(220);
 		}
 		return ifcProcedureTypeEnumEEnum;
 	}
@@ -36108,7 +33144,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcProfileTypeEnum() {
 		if (ifcProfileTypeEnumEEnum == null) {
-			ifcProfileTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(203);
+			ifcProfileTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(221);
 		}
 		return ifcProfileTypeEnumEEnum;
 	}
@@ -36120,7 +33156,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcProjectOrderRecordTypeEnum() {
 		if (ifcProjectOrderRecordTypeEnumEEnum == null) {
-			ifcProjectOrderRecordTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(204);
+			ifcProjectOrderRecordTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(222);
 		}
 		return ifcProjectOrderRecordTypeEnumEEnum;
 	}
@@ -36132,7 +33168,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcProjectOrderTypeEnum() {
 		if (ifcProjectOrderTypeEnumEEnum == null) {
-			ifcProjectOrderTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(205);
+			ifcProjectOrderTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(223);
 		}
 		return ifcProjectOrderTypeEnumEEnum;
 	}
@@ -36144,7 +33180,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcProjectedOrTrueLengthEnum() {
 		if (ifcProjectedOrTrueLengthEnumEEnum == null) {
-			ifcProjectedOrTrueLengthEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(206);
+			ifcProjectedOrTrueLengthEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(224);
 		}
 		return ifcProjectedOrTrueLengthEnumEEnum;
 	}
@@ -36156,7 +33192,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcPropertySourceEnum() {
 		if (ifcPropertySourceEnumEEnum == null) {
-			ifcPropertySourceEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(207);
+			ifcPropertySourceEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(225);
 		}
 		return ifcPropertySourceEnumEEnum;
 	}
@@ -36168,7 +33204,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcProtectiveDeviceTypeEnum() {
 		if (ifcProtectiveDeviceTypeEnumEEnum == null) {
-			ifcProtectiveDeviceTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(208);
+			ifcProtectiveDeviceTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(226);
 		}
 		return ifcProtectiveDeviceTypeEnumEEnum;
 	}
@@ -36180,7 +33216,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcPumpTypeEnum() {
 		if (ifcPumpTypeEnumEEnum == null) {
-			ifcPumpTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(209);
+			ifcPumpTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(227);
 		}
 		return ifcPumpTypeEnumEEnum;
 	}
@@ -36192,7 +33228,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcRailingTypeEnum() {
 		if (ifcRailingTypeEnumEEnum == null) {
-			ifcRailingTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(210);
+			ifcRailingTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(228);
 		}
 		return ifcRailingTypeEnumEEnum;
 	}
@@ -36204,7 +33240,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcRampFlightTypeEnum() {
 		if (ifcRampFlightTypeEnumEEnum == null) {
-			ifcRampFlightTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(211);
+			ifcRampFlightTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(229);
 		}
 		return ifcRampFlightTypeEnumEEnum;
 	}
@@ -36216,7 +33252,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcRampTypeEnum() {
 		if (ifcRampTypeEnumEEnum == null) {
-			ifcRampTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(212);
+			ifcRampTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(230);
 		}
 		return ifcRampTypeEnumEEnum;
 	}
@@ -36228,7 +33264,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcReflectanceMethodEnum() {
 		if (ifcReflectanceMethodEnumEEnum == null) {
-			ifcReflectanceMethodEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(213);
+			ifcReflectanceMethodEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(231);
 		}
 		return ifcReflectanceMethodEnumEEnum;
 	}
@@ -36240,7 +33276,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcReinforcingBarRoleEnum() {
 		if (ifcReinforcingBarRoleEnumEEnum == null) {
-			ifcReinforcingBarRoleEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(214);
+			ifcReinforcingBarRoleEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(232);
 		}
 		return ifcReinforcingBarRoleEnumEEnum;
 	}
@@ -36252,7 +33288,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcReinforcingBarSurfaceEnum() {
 		if (ifcReinforcingBarSurfaceEnumEEnum == null) {
-			ifcReinforcingBarSurfaceEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(215);
+			ifcReinforcingBarSurfaceEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(233);
 		}
 		return ifcReinforcingBarSurfaceEnumEEnum;
 	}
@@ -36264,7 +33300,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcResourceConsumptionEnum() {
 		if (ifcResourceConsumptionEnumEEnum == null) {
-			ifcResourceConsumptionEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(216);
+			ifcResourceConsumptionEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(234);
 		}
 		return ifcResourceConsumptionEnumEEnum;
 	}
@@ -36276,7 +33312,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcRibPlateDirectionEnum() {
 		if (ifcRibPlateDirectionEnumEEnum == null) {
-			ifcRibPlateDirectionEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(217);
+			ifcRibPlateDirectionEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(235);
 		}
 		return ifcRibPlateDirectionEnumEEnum;
 	}
@@ -36288,7 +33324,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcRoleEnum() {
 		if (ifcRoleEnumEEnum == null) {
-			ifcRoleEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(218);
+			ifcRoleEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(236);
 		}
 		return ifcRoleEnumEEnum;
 	}
@@ -36300,7 +33336,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcRoofTypeEnum() {
 		if (ifcRoofTypeEnumEEnum == null) {
-			ifcRoofTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(219);
+			ifcRoofTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(237);
 		}
 		return ifcRoofTypeEnumEEnum;
 	}
@@ -36312,7 +33348,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcSIPrefix() {
 		if (ifcSIPrefixEEnum == null) {
-			ifcSIPrefixEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(220);
+			ifcSIPrefixEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(238);
 		}
 		return ifcSIPrefixEEnum;
 	}
@@ -36324,7 +33360,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcSIUnitName() {
 		if (ifcSIUnitNameEEnum == null) {
-			ifcSIUnitNameEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(221);
+			ifcSIUnitNameEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(239);
 		}
 		return ifcSIUnitNameEEnum;
 	}
@@ -36336,7 +33372,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcSanitaryTerminalTypeEnum() {
 		if (ifcSanitaryTerminalTypeEnumEEnum == null) {
-			ifcSanitaryTerminalTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(222);
+			ifcSanitaryTerminalTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(240);
 		}
 		return ifcSanitaryTerminalTypeEnumEEnum;
 	}
@@ -36348,7 +33384,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcSectionTypeEnum() {
 		if (ifcSectionTypeEnumEEnum == null) {
-			ifcSectionTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(223);
+			ifcSectionTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(241);
 		}
 		return ifcSectionTypeEnumEEnum;
 	}
@@ -36360,7 +33396,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcSensorTypeEnum() {
 		if (ifcSensorTypeEnumEEnum == null) {
-			ifcSensorTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(224);
+			ifcSensorTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(242);
 		}
 		return ifcSensorTypeEnumEEnum;
 	}
@@ -36372,7 +33408,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcSequenceEnum() {
 		if (ifcSequenceEnumEEnum == null) {
-			ifcSequenceEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(225);
+			ifcSequenceEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(243);
 		}
 		return ifcSequenceEnumEEnum;
 	}
@@ -36384,7 +33420,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcServiceLifeFactorTypeEnum() {
 		if (ifcServiceLifeFactorTypeEnumEEnum == null) {
-			ifcServiceLifeFactorTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(226);
+			ifcServiceLifeFactorTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(244);
 		}
 		return ifcServiceLifeFactorTypeEnumEEnum;
 	}
@@ -36396,7 +33432,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcServiceLifeTypeEnum() {
 		if (ifcServiceLifeTypeEnumEEnum == null) {
-			ifcServiceLifeTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(227);
+			ifcServiceLifeTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(245);
 		}
 		return ifcServiceLifeTypeEnumEEnum;
 	}
@@ -36408,7 +33444,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcSlabTypeEnum() {
 		if (ifcSlabTypeEnumEEnum == null) {
-			ifcSlabTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(228);
+			ifcSlabTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(246);
 		}
 		return ifcSlabTypeEnumEEnum;
 	}
@@ -36420,7 +33456,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcSoundScaleEnum() {
 		if (ifcSoundScaleEnumEEnum == null) {
-			ifcSoundScaleEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(229);
+			ifcSoundScaleEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(247);
 		}
 		return ifcSoundScaleEnumEEnum;
 	}
@@ -36432,7 +33468,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcSpaceHeaterTypeEnum() {
 		if (ifcSpaceHeaterTypeEnumEEnum == null) {
-			ifcSpaceHeaterTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(230);
+			ifcSpaceHeaterTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(248);
 		}
 		return ifcSpaceHeaterTypeEnumEEnum;
 	}
@@ -36444,7 +33480,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcSpaceTypeEnum() {
 		if (ifcSpaceTypeEnumEEnum == null) {
-			ifcSpaceTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(231);
+			ifcSpaceTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(249);
 		}
 		return ifcSpaceTypeEnumEEnum;
 	}
@@ -36456,7 +33492,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcStackTerminalTypeEnum() {
 		if (ifcStackTerminalTypeEnumEEnum == null) {
-			ifcStackTerminalTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(232);
+			ifcStackTerminalTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(250);
 		}
 		return ifcStackTerminalTypeEnumEEnum;
 	}
@@ -36468,7 +33504,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcStairFlightTypeEnum() {
 		if (ifcStairFlightTypeEnumEEnum == null) {
-			ifcStairFlightTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(233);
+			ifcStairFlightTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(251);
 		}
 		return ifcStairFlightTypeEnumEEnum;
 	}
@@ -36480,7 +33516,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcStairTypeEnum() {
 		if (ifcStairTypeEnumEEnum == null) {
-			ifcStairTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(234);
+			ifcStairTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(252);
 		}
 		return ifcStairTypeEnumEEnum;
 	}
@@ -36492,7 +33528,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcStateEnum() {
 		if (ifcStateEnumEEnum == null) {
-			ifcStateEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(235);
+			ifcStateEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(253);
 		}
 		return ifcStateEnumEEnum;
 	}
@@ -36504,7 +33540,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcStructuralCurveTypeEnum() {
 		if (ifcStructuralCurveTypeEnumEEnum == null) {
-			ifcStructuralCurveTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(236);
+			ifcStructuralCurveTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(254);
 		}
 		return ifcStructuralCurveTypeEnumEEnum;
 	}
@@ -36516,7 +33552,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcStructuralSurfaceTypeEnum() {
 		if (ifcStructuralSurfaceTypeEnumEEnum == null) {
-			ifcStructuralSurfaceTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(237);
+			ifcStructuralSurfaceTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(255);
 		}
 		return ifcStructuralSurfaceTypeEnumEEnum;
 	}
@@ -36528,7 +33564,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcSurfaceSide() {
 		if (ifcSurfaceSideEEnum == null) {
-			ifcSurfaceSideEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(238);
+			ifcSurfaceSideEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(256);
 		}
 		return ifcSurfaceSideEEnum;
 	}
@@ -36540,7 +33576,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcSurfaceTextureEnum() {
 		if (ifcSurfaceTextureEnumEEnum == null) {
-			ifcSurfaceTextureEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(239);
+			ifcSurfaceTextureEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(257);
 		}
 		return ifcSurfaceTextureEnumEEnum;
 	}
@@ -36552,7 +33588,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcSwitchingDeviceTypeEnum() {
 		if (ifcSwitchingDeviceTypeEnumEEnum == null) {
-			ifcSwitchingDeviceTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(240);
+			ifcSwitchingDeviceTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(258);
 		}
 		return ifcSwitchingDeviceTypeEnumEEnum;
 	}
@@ -36564,7 +33600,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcTankTypeEnum() {
 		if (ifcTankTypeEnumEEnum == null) {
-			ifcTankTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(241);
+			ifcTankTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(259);
 		}
 		return ifcTankTypeEnumEEnum;
 	}
@@ -36576,7 +33612,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcTendonTypeEnum() {
 		if (ifcTendonTypeEnumEEnum == null) {
-			ifcTendonTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(242);
+			ifcTendonTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(260);
 		}
 		return ifcTendonTypeEnumEEnum;
 	}
@@ -36588,7 +33624,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcTextPath() {
 		if (ifcTextPathEEnum == null) {
-			ifcTextPathEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(243);
+			ifcTextPathEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(261);
 		}
 		return ifcTextPathEEnum;
 	}
@@ -36600,7 +33636,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcThermalLoadSourceEnum() {
 		if (ifcThermalLoadSourceEnumEEnum == null) {
-			ifcThermalLoadSourceEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(244);
+			ifcThermalLoadSourceEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(262);
 		}
 		return ifcThermalLoadSourceEnumEEnum;
 	}
@@ -36612,7 +33648,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcThermalLoadTypeEnum() {
 		if (ifcThermalLoadTypeEnumEEnum == null) {
-			ifcThermalLoadTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(245);
+			ifcThermalLoadTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(263);
 		}
 		return ifcThermalLoadTypeEnumEEnum;
 	}
@@ -36624,7 +33660,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcTimeSeriesDataTypeEnum() {
 		if (ifcTimeSeriesDataTypeEnumEEnum == null) {
-			ifcTimeSeriesDataTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(246);
+			ifcTimeSeriesDataTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(264);
 		}
 		return ifcTimeSeriesDataTypeEnumEEnum;
 	}
@@ -36636,7 +33672,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcTimeSeriesScheduleTypeEnum() {
 		if (ifcTimeSeriesScheduleTypeEnumEEnum == null) {
-			ifcTimeSeriesScheduleTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(247);
+			ifcTimeSeriesScheduleTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(265);
 		}
 		return ifcTimeSeriesScheduleTypeEnumEEnum;
 	}
@@ -36648,7 +33684,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcTransformerTypeEnum() {
 		if (ifcTransformerTypeEnumEEnum == null) {
-			ifcTransformerTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(248);
+			ifcTransformerTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(266);
 		}
 		return ifcTransformerTypeEnumEEnum;
 	}
@@ -36660,7 +33696,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcTransitionCode() {
 		if (ifcTransitionCodeEEnum == null) {
-			ifcTransitionCodeEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(249);
+			ifcTransitionCodeEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(267);
 		}
 		return ifcTransitionCodeEEnum;
 	}
@@ -36672,7 +33708,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcTransportElementTypeEnum() {
 		if (ifcTransportElementTypeEnumEEnum == null) {
-			ifcTransportElementTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(250);
+			ifcTransportElementTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(268);
 		}
 		return ifcTransportElementTypeEnumEEnum;
 	}
@@ -36684,7 +33720,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcTrimmingPreference() {
 		if (ifcTrimmingPreferenceEEnum == null) {
-			ifcTrimmingPreferenceEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(251);
+			ifcTrimmingPreferenceEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(269);
 		}
 		return ifcTrimmingPreferenceEEnum;
 	}
@@ -36696,7 +33732,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcTubeBundleTypeEnum() {
 		if (ifcTubeBundleTypeEnumEEnum == null) {
-			ifcTubeBundleTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(252);
+			ifcTubeBundleTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(270);
 		}
 		return ifcTubeBundleTypeEnumEEnum;
 	}
@@ -36708,7 +33744,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcUnitEnum() {
 		if (ifcUnitEnumEEnum == null) {
-			ifcUnitEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(253);
+			ifcUnitEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(271);
 		}
 		return ifcUnitEnumEEnum;
 	}
@@ -36720,7 +33756,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcUnitaryEquipmentTypeEnum() {
 		if (ifcUnitaryEquipmentTypeEnumEEnum == null) {
-			ifcUnitaryEquipmentTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(254);
+			ifcUnitaryEquipmentTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(272);
 		}
 		return ifcUnitaryEquipmentTypeEnumEEnum;
 	}
@@ -36732,7 +33768,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcValveTypeEnum() {
 		if (ifcValveTypeEnumEEnum == null) {
-			ifcValveTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(255);
+			ifcValveTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(273);
 		}
 		return ifcValveTypeEnumEEnum;
 	}
@@ -36744,7 +33780,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcVibrationIsolatorTypeEnum() {
 		if (ifcVibrationIsolatorTypeEnumEEnum == null) {
-			ifcVibrationIsolatorTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(256);
+			ifcVibrationIsolatorTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(274);
 		}
 		return ifcVibrationIsolatorTypeEnumEEnum;
 	}
@@ -36756,7 +33792,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcWallTypeEnum() {
 		if (ifcWallTypeEnumEEnum == null) {
-			ifcWallTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(257);
+			ifcWallTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(275);
 		}
 		return ifcWallTypeEnumEEnum;
 	}
@@ -36768,7 +33804,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcWasteTerminalTypeEnum() {
 		if (ifcWasteTerminalTypeEnumEEnum == null) {
-			ifcWasteTerminalTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(258);
+			ifcWasteTerminalTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(276);
 		}
 		return ifcWasteTerminalTypeEnumEEnum;
 	}
@@ -36780,7 +33816,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcWindowPanelOperationEnum() {
 		if (ifcWindowPanelOperationEnumEEnum == null) {
-			ifcWindowPanelOperationEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(259);
+			ifcWindowPanelOperationEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(277);
 		}
 		return ifcWindowPanelOperationEnumEEnum;
 	}
@@ -36792,7 +33828,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcWindowPanelPositionEnum() {
 		if (ifcWindowPanelPositionEnumEEnum == null) {
-			ifcWindowPanelPositionEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(260);
+			ifcWindowPanelPositionEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(278);
 		}
 		return ifcWindowPanelPositionEnumEEnum;
 	}
@@ -36804,7 +33840,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcWindowStyleConstructionEnum() {
 		if (ifcWindowStyleConstructionEnumEEnum == null) {
-			ifcWindowStyleConstructionEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(261);
+			ifcWindowStyleConstructionEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(279);
 		}
 		return ifcWindowStyleConstructionEnumEEnum;
 	}
@@ -36816,7 +33852,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcWindowStyleOperationEnum() {
 		if (ifcWindowStyleOperationEnumEEnum == null) {
-			ifcWindowStyleOperationEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(262);
+			ifcWindowStyleOperationEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(280);
 		}
 		return ifcWindowStyleOperationEnumEEnum;
 	}
@@ -36828,7 +33864,7 @@ public class Ifc2x3PackageImpl extends EPackageImpl implements Ifc2x3Package {
 	 */
 	public EEnum getIfcWorkControlTypeEnum() {
 		if (ifcWorkControlTypeEnumEEnum == null) {
-			ifcWorkControlTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(263);
+			ifcWorkControlTypeEnumEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3Package.eNS_URI).getEClassifiers().get(281);
 		}
 		return ifcWorkControlTypeEnumEEnum;
 	}

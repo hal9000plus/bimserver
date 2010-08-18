@@ -36,7 +36,7 @@ public class ErrorMessages {
 	public void print(JspWriter out) {
 		for (String message : messages) {
 			try {
-				out.println("<div class=\"error\">" + message + "</div>");
+				out.println("<div class=\"errormessage\">" + message + "</div>");
 			} catch (IOException e) {
 				e.printStackTrace();
 			}

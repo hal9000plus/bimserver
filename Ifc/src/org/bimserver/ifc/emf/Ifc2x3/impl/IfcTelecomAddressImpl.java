@@ -23,8 +23,11 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
 import org.bimserver.ifc.emf.Ifc2x3.IfcTelecomAddress;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -70,8 +73,8 @@ public class IfcTelecomAddressImpl extends IfcAddressImpl implements IfcTelecomA
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<String> getTelephoneNumbers() {
-		return (EList<String>) eGet(Ifc2x3Package.eINSTANCE.getIfcTelecomAddress_TelephoneNumbers(), true);
+	public EList<IfcLabel> getTelephoneNumbers() {
+		return (EList<IfcLabel>) eGet(Ifc2x3Package.eINSTANCE.getIfcTelecomAddress_TelephoneNumbers(), true);
 	}
 
 	/**
@@ -98,8 +101,8 @@ public class IfcTelecomAddressImpl extends IfcAddressImpl implements IfcTelecomA
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<String> getFacsimileNumbers() {
-		return (EList<String>) eGet(Ifc2x3Package.eINSTANCE.getIfcTelecomAddress_FacsimileNumbers(), true);
+	public EList<IfcLabel> getFacsimileNumbers() {
+		return (EList<IfcLabel>) eGet(Ifc2x3Package.eINSTANCE.getIfcTelecomAddress_FacsimileNumbers(), true);
 	}
 
 	/**
@@ -125,8 +128,8 @@ public class IfcTelecomAddressImpl extends IfcAddressImpl implements IfcTelecomA
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getPagerNumber() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcTelecomAddress_PagerNumber(), true);
+	public IfcLabel getPagerNumber() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcTelecomAddress_PagerNumber(), true);
 	}
 
 	/**
@@ -134,7 +137,7 @@ public class IfcTelecomAddressImpl extends IfcAddressImpl implements IfcTelecomA
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPagerNumber(String newPagerNumber) {
+	public void setPagerNumber(IfcLabel newPagerNumber) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcTelecomAddress_PagerNumber(), newPagerNumber);
 	}
 
@@ -162,8 +165,8 @@ public class IfcTelecomAddressImpl extends IfcAddressImpl implements IfcTelecomA
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<String> getElectronicMailAddresses() {
-		return (EList<String>) eGet(Ifc2x3Package.eINSTANCE.getIfcTelecomAddress_ElectronicMailAddresses(), true);
+	public EList<IfcLabel> getElectronicMailAddresses() {
+		return (EList<IfcLabel>) eGet(Ifc2x3Package.eINSTANCE.getIfcTelecomAddress_ElectronicMailAddresses(), true);
 	}
 
 	/**
@@ -189,8 +192,8 @@ public class IfcTelecomAddressImpl extends IfcAddressImpl implements IfcTelecomA
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getWWWHomePageURL() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcTelecomAddress_WWWHomePageURL(), true);
+	public IfcLabel getWWWHomePageURL() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcTelecomAddress_WWWHomePageURL(), true);
 	}
 
 	/**
@@ -198,7 +201,7 @@ public class IfcTelecomAddressImpl extends IfcAddressImpl implements IfcTelecomA
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setWWWHomePageURL(String newWWWHomePageURL) {
+	public void setWWWHomePageURL(IfcLabel newWWWHomePageURL) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcTelecomAddress_WWWHomePageURL(), newWWWHomePageURL);
 	}
 

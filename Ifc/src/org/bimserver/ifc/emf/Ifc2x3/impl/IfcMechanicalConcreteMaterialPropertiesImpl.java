@@ -24,6 +24,11 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties;
+import org.bimserver.ifc.emf.Ifc2x3.IfcNormalisedRatioMeasure;
+import org.bimserver.ifc.emf.Ifc2x3.IfcPositiveLengthMeasure;
+import org.bimserver.ifc.emf.Ifc2x3.IfcPressureMeasure;
+import org.bimserver.ifc.emf.Ifc2x3.IfcText;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -34,13 +39,10 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcMechanicalConcreteMaterialPropertiesImpl#getCompressiveStrength <em>Compressive Strength</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcMechanicalConcreteMaterialPropertiesImpl#getCompressiveStrengthAsString <em>Compressive Strength As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcMechanicalConcreteMaterialPropertiesImpl#getMaxAggregateSize <em>Max Aggregate Size</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcMechanicalConcreteMaterialPropertiesImpl#getMaxAggregateSizeAsString <em>Max Aggregate Size As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcMechanicalConcreteMaterialPropertiesImpl#getAdmixturesDescription <em>Admixtures Description</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcMechanicalConcreteMaterialPropertiesImpl#getWorkability <em>Workability</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcMechanicalConcreteMaterialPropertiesImpl#getProtectivePoreRatio <em>Protective Pore Ratio</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcMechanicalConcreteMaterialPropertiesImpl#getProtectivePoreRatioAsString <em>Protective Pore Ratio As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcMechanicalConcreteMaterialPropertiesImpl#getWaterImpermeability <em>Water Impermeability</em>}</li>
  * </ul>
  * </p>
@@ -72,8 +74,8 @@ public class IfcMechanicalConcreteMaterialPropertiesImpl extends IfcMechanicalMa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getCompressiveStrength() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcMechanicalConcreteMaterialProperties_CompressiveStrength(), true);
+	public IfcPressureMeasure getCompressiveStrength() {
+		return (IfcPressureMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcMechanicalConcreteMaterialProperties_CompressiveStrength(), true);
 	}
 
 	/**
@@ -81,7 +83,7 @@ public class IfcMechanicalConcreteMaterialPropertiesImpl extends IfcMechanicalMa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCompressiveStrength(float newCompressiveStrength) {
+	public void setCompressiveStrength(IfcPressureMeasure newCompressiveStrength) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcMechanicalConcreteMaterialProperties_CompressiveStrength(), newCompressiveStrength);
 	}
 
@@ -108,8 +110,8 @@ public class IfcMechanicalConcreteMaterialPropertiesImpl extends IfcMechanicalMa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getCompressiveStrengthAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcMechanicalConcreteMaterialProperties_CompressiveStrengthAsString(), true);
+	public IfcPositiveLengthMeasure getMaxAggregateSize() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcMechanicalConcreteMaterialProperties_MaxAggregateSize(), true);
 	}
 
 	/**
@@ -117,43 +119,7 @@ public class IfcMechanicalConcreteMaterialPropertiesImpl extends IfcMechanicalMa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCompressiveStrengthAsString(String newCompressiveStrengthAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcMechanicalConcreteMaterialProperties_CompressiveStrengthAsString(), newCompressiveStrengthAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetCompressiveStrengthAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcMechanicalConcreteMaterialProperties_CompressiveStrengthAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetCompressiveStrengthAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcMechanicalConcreteMaterialProperties_CompressiveStrengthAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getMaxAggregateSize() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcMechanicalConcreteMaterialProperties_MaxAggregateSize(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setMaxAggregateSize(float newMaxAggregateSize) {
+	public void setMaxAggregateSize(IfcPositiveLengthMeasure newMaxAggregateSize) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcMechanicalConcreteMaterialProperties_MaxAggregateSize(), newMaxAggregateSize);
 	}
 
@@ -180,8 +146,8 @@ public class IfcMechanicalConcreteMaterialPropertiesImpl extends IfcMechanicalMa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getMaxAggregateSizeAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcMechanicalConcreteMaterialProperties_MaxAggregateSizeAsString(), true);
+	public IfcText getAdmixturesDescription() {
+		return (IfcText) eGet(Ifc2x3Package.eINSTANCE.getIfcMechanicalConcreteMaterialProperties_AdmixturesDescription(), true);
 	}
 
 	/**
@@ -189,43 +155,7 @@ public class IfcMechanicalConcreteMaterialPropertiesImpl extends IfcMechanicalMa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMaxAggregateSizeAsString(String newMaxAggregateSizeAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcMechanicalConcreteMaterialProperties_MaxAggregateSizeAsString(), newMaxAggregateSizeAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetMaxAggregateSizeAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcMechanicalConcreteMaterialProperties_MaxAggregateSizeAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetMaxAggregateSizeAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcMechanicalConcreteMaterialProperties_MaxAggregateSizeAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getAdmixturesDescription() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcMechanicalConcreteMaterialProperties_AdmixturesDescription(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setAdmixturesDescription(String newAdmixturesDescription) {
+	public void setAdmixturesDescription(IfcText newAdmixturesDescription) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcMechanicalConcreteMaterialProperties_AdmixturesDescription(), newAdmixturesDescription);
 	}
 
@@ -252,8 +182,8 @@ public class IfcMechanicalConcreteMaterialPropertiesImpl extends IfcMechanicalMa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getWorkability() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcMechanicalConcreteMaterialProperties_Workability(), true);
+	public IfcText getWorkability() {
+		return (IfcText) eGet(Ifc2x3Package.eINSTANCE.getIfcMechanicalConcreteMaterialProperties_Workability(), true);
 	}
 
 	/**
@@ -261,7 +191,7 @@ public class IfcMechanicalConcreteMaterialPropertiesImpl extends IfcMechanicalMa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setWorkability(String newWorkability) {
+	public void setWorkability(IfcText newWorkability) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcMechanicalConcreteMaterialProperties_Workability(), newWorkability);
 	}
 
@@ -288,8 +218,8 @@ public class IfcMechanicalConcreteMaterialPropertiesImpl extends IfcMechanicalMa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getProtectivePoreRatio() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcMechanicalConcreteMaterialProperties_ProtectivePoreRatio(), true);
+	public IfcNormalisedRatioMeasure getProtectivePoreRatio() {
+		return (IfcNormalisedRatioMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcMechanicalConcreteMaterialProperties_ProtectivePoreRatio(), true);
 	}
 
 	/**
@@ -297,7 +227,7 @@ public class IfcMechanicalConcreteMaterialPropertiesImpl extends IfcMechanicalMa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setProtectivePoreRatio(float newProtectivePoreRatio) {
+	public void setProtectivePoreRatio(IfcNormalisedRatioMeasure newProtectivePoreRatio) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcMechanicalConcreteMaterialProperties_ProtectivePoreRatio(), newProtectivePoreRatio);
 	}
 
@@ -324,8 +254,8 @@ public class IfcMechanicalConcreteMaterialPropertiesImpl extends IfcMechanicalMa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getProtectivePoreRatioAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcMechanicalConcreteMaterialProperties_ProtectivePoreRatioAsString(), true);
+	public IfcText getWaterImpermeability() {
+		return (IfcText) eGet(Ifc2x3Package.eINSTANCE.getIfcMechanicalConcreteMaterialProperties_WaterImpermeability(), true);
 	}
 
 	/**
@@ -333,43 +263,7 @@ public class IfcMechanicalConcreteMaterialPropertiesImpl extends IfcMechanicalMa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setProtectivePoreRatioAsString(String newProtectivePoreRatioAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcMechanicalConcreteMaterialProperties_ProtectivePoreRatioAsString(), newProtectivePoreRatioAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetProtectivePoreRatioAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcMechanicalConcreteMaterialProperties_ProtectivePoreRatioAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetProtectivePoreRatioAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcMechanicalConcreteMaterialProperties_ProtectivePoreRatioAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getWaterImpermeability() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcMechanicalConcreteMaterialProperties_WaterImpermeability(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setWaterImpermeability(String newWaterImpermeability) {
+	public void setWaterImpermeability(IfcText newWaterImpermeability) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcMechanicalConcreteMaterialProperties_WaterImpermeability(), newWaterImpermeability);
 	}
 

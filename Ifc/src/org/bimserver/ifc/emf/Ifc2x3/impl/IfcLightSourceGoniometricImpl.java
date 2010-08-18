@@ -28,6 +28,9 @@ import org.bimserver.ifc.emf.Ifc2x3.IfcColourRgb;
 import org.bimserver.ifc.emf.Ifc2x3.IfcLightDistributionDataSourceSelect;
 import org.bimserver.ifc.emf.Ifc2x3.IfcLightEmissionSourceEnum;
 import org.bimserver.ifc.emf.Ifc2x3.IfcLightSourceGoniometric;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLuminousFluxMeasure;
+import org.bimserver.ifc.emf.Ifc2x3.IfcThermodynamicTemperatureMeasure;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -40,9 +43,7 @@ import org.eclipse.emf.ecore.EClass;
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcLightSourceGoniometricImpl#getPosition <em>Position</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcLightSourceGoniometricImpl#getColourAppearance <em>Colour Appearance</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcLightSourceGoniometricImpl#getColourTemperature <em>Colour Temperature</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcLightSourceGoniometricImpl#getColourTemperatureAsString <em>Colour Temperature As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcLightSourceGoniometricImpl#getLuminousFlux <em>Luminous Flux</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcLightSourceGoniometricImpl#getLuminousFluxAsString <em>Luminous Flux As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcLightSourceGoniometricImpl#getLightEmissionSource <em>Light Emission Source</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcLightSourceGoniometricImpl#getLightDistributionDataSource <em>Light Distribution Data Source</em>}</li>
  * </ul>
@@ -129,8 +130,8 @@ public class IfcLightSourceGoniometricImpl extends IfcLightSourceImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getColourTemperature() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcLightSourceGoniometric_ColourTemperature(), true);
+	public IfcThermodynamicTemperatureMeasure getColourTemperature() {
+		return (IfcThermodynamicTemperatureMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcLightSourceGoniometric_ColourTemperature(), true);
 	}
 
 	/**
@@ -138,7 +139,7 @@ public class IfcLightSourceGoniometricImpl extends IfcLightSourceImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setColourTemperature(float newColourTemperature) {
+	public void setColourTemperature(IfcThermodynamicTemperatureMeasure newColourTemperature) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcLightSourceGoniometric_ColourTemperature(), newColourTemperature);
 	}
 
@@ -147,8 +148,8 @@ public class IfcLightSourceGoniometricImpl extends IfcLightSourceImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getColourTemperatureAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcLightSourceGoniometric_ColourTemperatureAsString(), true);
+	public IfcLuminousFluxMeasure getLuminousFlux() {
+		return (IfcLuminousFluxMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcLightSourceGoniometric_LuminousFlux(), true);
 	}
 
 	/**
@@ -156,44 +157,8 @@ public class IfcLightSourceGoniometricImpl extends IfcLightSourceImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setColourTemperatureAsString(String newColourTemperatureAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcLightSourceGoniometric_ColourTemperatureAsString(), newColourTemperatureAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getLuminousFlux() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcLightSourceGoniometric_LuminousFlux(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setLuminousFlux(float newLuminousFlux) {
+	public void setLuminousFlux(IfcLuminousFluxMeasure newLuminousFlux) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcLightSourceGoniometric_LuminousFlux(), newLuminousFlux);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getLuminousFluxAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcLightSourceGoniometric_LuminousFluxAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setLuminousFluxAsString(String newLuminousFluxAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcLightSourceGoniometric_LuminousFluxAsString(), newLuminousFluxAsString);
 	}
 
 	/**

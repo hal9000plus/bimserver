@@ -32,7 +32,6 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSoundValue#getSoundLevelTimeSeries <em>Sound Level Time Series</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSoundValue#getFrequency <em>Frequency</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSoundValue#getFrequencyAsString <em>Frequency As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSoundValue#getSoundLevelSingleValue <em>Sound Level Single Value</em>}</li>
  * </ul>
  * </p>
@@ -96,56 +95,30 @@ public interface IfcSoundValue extends IfcPropertySetDefinition {
 	boolean isSetSoundLevelTimeSeries();
 
 	/**
-	 * Returns the value of the '<em><b>Frequency</b></em>' attribute.
+	 * Returns the value of the '<em><b>Frequency</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Frequency</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Frequency</em>' attribute.
-	 * @see #setFrequency(float)
+	 * @return the value of the '<em>Frequency</em>' reference.
+	 * @see #setFrequency(IfcFrequencyMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSoundValue_Frequency()
 	 * @model
 	 * @generated
 	 */
-	float getFrequency();
+	IfcFrequencyMeasure getFrequency();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSoundValue#getFrequency <em>Frequency</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSoundValue#getFrequency <em>Frequency</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Frequency</em>' attribute.
+	 * @param value the new value of the '<em>Frequency</em>' reference.
 	 * @see #getFrequency()
 	 * @generated
 	 */
-	void setFrequency(float value);
-
-	/**
-	 * Returns the value of the '<em><b>Frequency As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Frequency As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Frequency As String</em>' attribute.
-	 * @see #setFrequencyAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSoundValue_FrequencyAsString()
-	 * @model
-	 * @generated
-	 */
-	String getFrequencyAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSoundValue#getFrequencyAsString <em>Frequency As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Frequency As String</em>' attribute.
-	 * @see #getFrequencyAsString()
-	 * @generated
-	 */
-	void setFrequencyAsString(String value);
+	void setFrequency(IfcFrequencyMeasure value);
 
 	/**
 	 * Returns the value of the '<em><b>Sound Level Single Value</b></em>' reference.

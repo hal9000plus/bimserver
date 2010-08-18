@@ -22,8 +22,9 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3;
 
-import org.bimserver.emf.IdEObject;
 import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -45,59 +46,58 @@ import org.eclipse.emf.common.util.EList;
  *
  * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcGridAxis()
  * @model
- * @extends IdEObject
  * @generated
  */
-public interface IfcGridAxis extends IdEObject {
+public interface IfcGridAxis extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Axis Tag</b></em>' attribute.
+	 * Returns the value of the '<em><b>Axis Tag</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Axis Tag</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Axis Tag</em>' attribute.
+	 * @return the value of the '<em>Axis Tag</em>' reference.
 	 * @see #isSetAxisTag()
 	 * @see #unsetAxisTag()
-	 * @see #setAxisTag(String)
+	 * @see #setAxisTag(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcGridAxis_AxisTag()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getAxisTag();
+	IfcLabel getAxisTag();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGridAxis#getAxisTag <em>Axis Tag</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGridAxis#getAxisTag <em>Axis Tag</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Axis Tag</em>' attribute.
+	 * @param value the new value of the '<em>Axis Tag</em>' reference.
 	 * @see #isSetAxisTag()
 	 * @see #unsetAxisTag()
 	 * @see #getAxisTag()
 	 * @generated
 	 */
-	void setAxisTag(String value);
+	void setAxisTag(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGridAxis#getAxisTag <em>Axis Tag</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGridAxis#getAxisTag <em>Axis Tag</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetAxisTag()
 	 * @see #getAxisTag()
-	 * @see #setAxisTag(String)
+	 * @see #setAxisTag(IfcLabel)
 	 * @generated
 	 */
 	void unsetAxisTag();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGridAxis#getAxisTag <em>Axis Tag</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGridAxis#getAxisTag <em>Axis Tag</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Axis Tag</em>' attribute is set.
+	 * @return whether the value of the '<em>Axis Tag</em>' reference is set.
 	 * @see #unsetAxisTag()
 	 * @see #getAxisTag()
-	 * @see #setAxisTag(String)
+	 * @see #setAxisTag(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetAxisTag();
@@ -129,33 +129,30 @@ public interface IfcGridAxis extends IdEObject {
 	void setAxisCurve(IfcCurve value);
 
 	/**
-	 * Returns the value of the '<em><b>Same Sense</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.bimserver.ifc.emf.Ifc2x3.Tristate}.
+	 * Returns the value of the '<em><b>Same Sense</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Same Sense</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Same Sense</em>' attribute.
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Tristate
-	 * @see #setSameSense(Tristate)
+	 * @return the value of the '<em>Same Sense</em>' reference.
+	 * @see #setSameSense(IfcBoolean)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcGridAxis_SameSense()
 	 * @model
 	 * @generated
 	 */
-	Tristate getSameSense();
+	IfcBoolean getSameSense();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGridAxis#getSameSense <em>Same Sense</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGridAxis#getSameSense <em>Same Sense</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Same Sense</em>' attribute.
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Tristate
+	 * @param value the new value of the '<em>Same Sense</em>' reference.
 	 * @see #getSameSense()
 	 * @generated
 	 */
-	void setSameSense(Tristate value);
+	void setSameSense(IfcBoolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Part Of W</b></em>' reference list.

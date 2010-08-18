@@ -24,6 +24,8 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcBuildingStorey;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLengthMeasure;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -34,7 +36,6 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcBuildingStoreyImpl#getElevation <em>Elevation</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcBuildingStoreyImpl#getElevationAsString <em>Elevation As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -65,8 +66,8 @@ public class IfcBuildingStoreyImpl extends IfcSpatialStructureElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getElevation() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcBuildingStorey_Elevation(), true);
+	public IfcLengthMeasure getElevation() {
+		return (IfcLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcBuildingStorey_Elevation(), true);
 	}
 
 	/**
@@ -74,7 +75,7 @@ public class IfcBuildingStoreyImpl extends IfcSpatialStructureElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setElevation(float newElevation) {
+	public void setElevation(IfcLengthMeasure newElevation) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcBuildingStorey_Elevation(), newElevation);
 	}
 
@@ -94,42 +95,6 @@ public class IfcBuildingStoreyImpl extends IfcSpatialStructureElementImpl implem
 	 */
 	public boolean isSetElevation() {
 		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcBuildingStorey_Elevation());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getElevationAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcBuildingStorey_ElevationAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setElevationAsString(String newElevationAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcBuildingStorey_ElevationAsString(), newElevationAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetElevationAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcBuildingStorey_ElevationAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetElevationAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcBuildingStorey_ElevationAsString());
 	}
 
 } //IfcBuildingStoreyImpl

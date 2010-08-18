@@ -26,6 +26,9 @@ import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcGeometricProjectionEnum;
 import org.bimserver.ifc.emf.Ifc2x3.IfcGeometricRepresentationContext;
 import org.bimserver.ifc.emf.Ifc2x3.IfcGeometricRepresentationSubContext;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
+import org.bimserver.ifc.emf.Ifc2x3.IfcPositiveRatioMeasure;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -37,7 +40,6 @@ import org.eclipse.emf.ecore.EClass;
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcGeometricRepresentationSubContextImpl#getParentContext <em>Parent Context</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcGeometricRepresentationSubContextImpl#getTargetScale <em>Target Scale</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcGeometricRepresentationSubContextImpl#getTargetScaleAsString <em>Target Scale As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcGeometricRepresentationSubContextImpl#getTargetView <em>Target View</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcGeometricRepresentationSubContextImpl#getUserDefinedTargetView <em>User Defined Target View</em>}</li>
  * </ul>
@@ -88,8 +90,8 @@ public class IfcGeometricRepresentationSubContextImpl extends IfcGeometricRepres
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getTargetScale() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcGeometricRepresentationSubContext_TargetScale(), true);
+	public IfcPositiveRatioMeasure getTargetScale() {
+		return (IfcPositiveRatioMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcGeometricRepresentationSubContext_TargetScale(), true);
 	}
 
 	/**
@@ -97,7 +99,7 @@ public class IfcGeometricRepresentationSubContextImpl extends IfcGeometricRepres
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTargetScale(float newTargetScale) {
+	public void setTargetScale(IfcPositiveRatioMeasure newTargetScale) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcGeometricRepresentationSubContext_TargetScale(), newTargetScale);
 	}
 
@@ -124,42 +126,6 @@ public class IfcGeometricRepresentationSubContextImpl extends IfcGeometricRepres
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getTargetScaleAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcGeometricRepresentationSubContext_TargetScaleAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTargetScaleAsString(String newTargetScaleAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcGeometricRepresentationSubContext_TargetScaleAsString(), newTargetScaleAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetTargetScaleAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcGeometricRepresentationSubContext_TargetScaleAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetTargetScaleAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcGeometricRepresentationSubContext_TargetScaleAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public IfcGeometricProjectionEnum getTargetView() {
 		return (IfcGeometricProjectionEnum) eGet(Ifc2x3Package.eINSTANCE.getIfcGeometricRepresentationSubContext_TargetView(), true);
 	}
@@ -178,8 +144,8 @@ public class IfcGeometricRepresentationSubContextImpl extends IfcGeometricRepres
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getUserDefinedTargetView() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcGeometricRepresentationSubContext_UserDefinedTargetView(), true);
+	public IfcLabel getUserDefinedTargetView() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcGeometricRepresentationSubContext_UserDefinedTargetView(), true);
 	}
 
 	/**
@@ -187,7 +153,7 @@ public class IfcGeometricRepresentationSubContextImpl extends IfcGeometricRepres
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUserDefinedTargetView(String newUserDefinedTargetView) {
+	public void setUserDefinedTargetView(IfcLabel newUserDefinedTargetView) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcGeometricRepresentationSubContext_UserDefinedTargetView(), newUserDefinedTargetView);
 	}
 

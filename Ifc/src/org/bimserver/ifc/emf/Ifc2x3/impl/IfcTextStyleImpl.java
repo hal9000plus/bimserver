@@ -27,6 +27,7 @@ import org.bimserver.ifc.emf.Ifc2x3.IfcCharacterStyleSelect;
 import org.bimserver.ifc.emf.Ifc2x3.IfcTextFontSelect;
 import org.bimserver.ifc.emf.Ifc2x3.IfcTextStyle;
 import org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleSelect;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

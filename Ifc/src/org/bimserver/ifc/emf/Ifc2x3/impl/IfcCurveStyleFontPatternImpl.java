@@ -22,10 +22,15 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
-import org.bimserver.emf.IdEObjectImpl;
+import org.bimserver.ifc.IfcRootObject;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcCurveStyleFontPattern;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLengthMeasure;
+import org.bimserver.ifc.emf.Ifc2x3.IfcPositiveLengthMeasure;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,15 +40,13 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcCurveStyleFontPatternImpl#getVisibleSegmentLength <em>Visible Segment Length</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcCurveStyleFontPatternImpl#getVisibleSegmentLengthAsString <em>Visible Segment Length As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcCurveStyleFontPatternImpl#getInvisibleSegmentLength <em>Invisible Segment Length</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcCurveStyleFontPatternImpl#getInvisibleSegmentLengthAsString <em>Invisible Segment Length As String</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class IfcCurveStyleFontPatternImpl extends IdEObjectImpl implements IfcCurveStyleFontPattern {
+public class IfcCurveStyleFontPatternImpl extends IfcRootObject implements IfcCurveStyleFontPattern {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -78,8 +81,8 @@ public class IfcCurveStyleFontPatternImpl extends IdEObjectImpl implements IfcCu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getVisibleSegmentLength() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcCurveStyleFontPattern_VisibleSegmentLength(), true);
+	public IfcLengthMeasure getVisibleSegmentLength() {
+		return (IfcLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcCurveStyleFontPattern_VisibleSegmentLength(), true);
 	}
 
 	/**
@@ -87,7 +90,7 @@ public class IfcCurveStyleFontPatternImpl extends IdEObjectImpl implements IfcCu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setVisibleSegmentLength(float newVisibleSegmentLength) {
+	public void setVisibleSegmentLength(IfcLengthMeasure newVisibleSegmentLength) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcCurveStyleFontPattern_VisibleSegmentLength(), newVisibleSegmentLength);
 	}
 
@@ -96,8 +99,8 @@ public class IfcCurveStyleFontPatternImpl extends IdEObjectImpl implements IfcCu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getVisibleSegmentLengthAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcCurveStyleFontPattern_VisibleSegmentLengthAsString(), true);
+	public IfcPositiveLengthMeasure getInvisibleSegmentLength() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcCurveStyleFontPattern_InvisibleSegmentLength(), true);
 	}
 
 	/**
@@ -105,44 +108,8 @@ public class IfcCurveStyleFontPatternImpl extends IdEObjectImpl implements IfcCu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setVisibleSegmentLengthAsString(String newVisibleSegmentLengthAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcCurveStyleFontPattern_VisibleSegmentLengthAsString(), newVisibleSegmentLengthAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getInvisibleSegmentLength() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcCurveStyleFontPattern_InvisibleSegmentLength(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setInvisibleSegmentLength(float newInvisibleSegmentLength) {
+	public void setInvisibleSegmentLength(IfcPositiveLengthMeasure newInvisibleSegmentLength) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcCurveStyleFontPattern_InvisibleSegmentLength(), newInvisibleSegmentLength);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getInvisibleSegmentLengthAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcCurveStyleFontPattern_InvisibleSegmentLengthAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setInvisibleSegmentLengthAsString(String newInvisibleSegmentLengthAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcCurveStyleFontPattern_InvisibleSegmentLengthAsString(), newInvisibleSegmentLengthAsString);
 	}
 
 } //IfcCurveStyleFontPatternImpl

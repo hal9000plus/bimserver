@@ -28,8 +28,9 @@ import org.bimserver.ifc.emf.Ifc2x3.IfcLogical;
 import org.bimserver.ifc.emf.Ifc2x3.IfcStructuralAnalysisModel;
 import org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadGroup;
 import org.bimserver.ifc.emf.Ifc2x3.IfcStructuralResultGroup;
-import org.bimserver.ifc.emf.Ifc2x3.Tristate;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -127,8 +128,8 @@ public class IfcStructuralResultGroupImpl extends IfcGroupImpl implements IfcStr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Tristate getIsLinear() {
-		return (Tristate) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralResultGroup_IsLinear(), true);
+	public IfcLogical getIsLinear() {
+		return (IfcLogical) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralResultGroup_IsLinear(), true);
 	}
 
 	/**
@@ -136,7 +137,7 @@ public class IfcStructuralResultGroupImpl extends IfcGroupImpl implements IfcStr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIsLinear(Tristate newIsLinear) {
+	public void setIsLinear(IfcLogical newIsLinear) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcStructuralResultGroup_IsLinear(), newIsLinear);
 	}
 

@@ -31,17 +31,11 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getForceX <em>Force X</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getForceXAsString <em>Force XAs String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getForceY <em>Force Y</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getForceYAsString <em>Force YAs String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getForceZ <em>Force Z</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getForceZAsString <em>Force ZAs String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getMomentX <em>Moment X</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getMomentXAsString <em>Moment XAs String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getMomentY <em>Moment Y</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getMomentYAsString <em>Moment YAs String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getMomentZ <em>Moment Z</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getMomentZAsString <em>Moment ZAs String</em>}</li>
  * </ul>
  * </p>
  *
@@ -51,639 +45,321 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcStructuralLoadSingleForce extends IfcStructuralLoadStatic {
 	/**
-	 * Returns the value of the '<em><b>Force X</b></em>' attribute.
+	 * Returns the value of the '<em><b>Force X</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Force X</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Force X</em>' attribute.
+	 * @return the value of the '<em>Force X</em>' reference.
 	 * @see #isSetForceX()
 	 * @see #unsetForceX()
-	 * @see #setForceX(float)
+	 * @see #setForceX(IfcForceMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoadSingleForce_ForceX()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getForceX();
+	IfcForceMeasure getForceX();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getForceX <em>Force X</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getForceX <em>Force X</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Force X</em>' attribute.
+	 * @param value the new value of the '<em>Force X</em>' reference.
 	 * @see #isSetForceX()
 	 * @see #unsetForceX()
 	 * @see #getForceX()
 	 * @generated
 	 */
-	void setForceX(float value);
+	void setForceX(IfcForceMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getForceX <em>Force X</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getForceX <em>Force X</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetForceX()
 	 * @see #getForceX()
-	 * @see #setForceX(float)
+	 * @see #setForceX(IfcForceMeasure)
 	 * @generated
 	 */
 	void unsetForceX();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getForceX <em>Force X</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getForceX <em>Force X</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Force X</em>' attribute is set.
+	 * @return whether the value of the '<em>Force X</em>' reference is set.
 	 * @see #unsetForceX()
 	 * @see #getForceX()
-	 * @see #setForceX(float)
+	 * @see #setForceX(IfcForceMeasure)
 	 * @generated
 	 */
 	boolean isSetForceX();
 
 	/**
-	 * Returns the value of the '<em><b>Force XAs String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Force XAs String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Force XAs String</em>' attribute.
-	 * @see #isSetForceXAsString()
-	 * @see #unsetForceXAsString()
-	 * @see #setForceXAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoadSingleForce_ForceXAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getForceXAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getForceXAsString <em>Force XAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Force XAs String</em>' attribute.
-	 * @see #isSetForceXAsString()
-	 * @see #unsetForceXAsString()
-	 * @see #getForceXAsString()
-	 * @generated
-	 */
-	void setForceXAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getForceXAsString <em>Force XAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetForceXAsString()
-	 * @see #getForceXAsString()
-	 * @see #setForceXAsString(String)
-	 * @generated
-	 */
-	void unsetForceXAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getForceXAsString <em>Force XAs String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Force XAs String</em>' attribute is set.
-	 * @see #unsetForceXAsString()
-	 * @see #getForceXAsString()
-	 * @see #setForceXAsString(String)
-	 * @generated
-	 */
-	boolean isSetForceXAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Force Y</b></em>' attribute.
+	 * Returns the value of the '<em><b>Force Y</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Force Y</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Force Y</em>' attribute.
+	 * @return the value of the '<em>Force Y</em>' reference.
 	 * @see #isSetForceY()
 	 * @see #unsetForceY()
-	 * @see #setForceY(float)
+	 * @see #setForceY(IfcForceMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoadSingleForce_ForceY()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getForceY();
+	IfcForceMeasure getForceY();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getForceY <em>Force Y</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getForceY <em>Force Y</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Force Y</em>' attribute.
+	 * @param value the new value of the '<em>Force Y</em>' reference.
 	 * @see #isSetForceY()
 	 * @see #unsetForceY()
 	 * @see #getForceY()
 	 * @generated
 	 */
-	void setForceY(float value);
+	void setForceY(IfcForceMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getForceY <em>Force Y</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getForceY <em>Force Y</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetForceY()
 	 * @see #getForceY()
-	 * @see #setForceY(float)
+	 * @see #setForceY(IfcForceMeasure)
 	 * @generated
 	 */
 	void unsetForceY();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getForceY <em>Force Y</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getForceY <em>Force Y</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Force Y</em>' attribute is set.
+	 * @return whether the value of the '<em>Force Y</em>' reference is set.
 	 * @see #unsetForceY()
 	 * @see #getForceY()
-	 * @see #setForceY(float)
+	 * @see #setForceY(IfcForceMeasure)
 	 * @generated
 	 */
 	boolean isSetForceY();
 
 	/**
-	 * Returns the value of the '<em><b>Force YAs String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Force YAs String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Force YAs String</em>' attribute.
-	 * @see #isSetForceYAsString()
-	 * @see #unsetForceYAsString()
-	 * @see #setForceYAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoadSingleForce_ForceYAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getForceYAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getForceYAsString <em>Force YAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Force YAs String</em>' attribute.
-	 * @see #isSetForceYAsString()
-	 * @see #unsetForceYAsString()
-	 * @see #getForceYAsString()
-	 * @generated
-	 */
-	void setForceYAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getForceYAsString <em>Force YAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetForceYAsString()
-	 * @see #getForceYAsString()
-	 * @see #setForceYAsString(String)
-	 * @generated
-	 */
-	void unsetForceYAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getForceYAsString <em>Force YAs String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Force YAs String</em>' attribute is set.
-	 * @see #unsetForceYAsString()
-	 * @see #getForceYAsString()
-	 * @see #setForceYAsString(String)
-	 * @generated
-	 */
-	boolean isSetForceYAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Force Z</b></em>' attribute.
+	 * Returns the value of the '<em><b>Force Z</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Force Z</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Force Z</em>' attribute.
+	 * @return the value of the '<em>Force Z</em>' reference.
 	 * @see #isSetForceZ()
 	 * @see #unsetForceZ()
-	 * @see #setForceZ(float)
+	 * @see #setForceZ(IfcForceMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoadSingleForce_ForceZ()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getForceZ();
+	IfcForceMeasure getForceZ();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getForceZ <em>Force Z</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getForceZ <em>Force Z</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Force Z</em>' attribute.
+	 * @param value the new value of the '<em>Force Z</em>' reference.
 	 * @see #isSetForceZ()
 	 * @see #unsetForceZ()
 	 * @see #getForceZ()
 	 * @generated
 	 */
-	void setForceZ(float value);
+	void setForceZ(IfcForceMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getForceZ <em>Force Z</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getForceZ <em>Force Z</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetForceZ()
 	 * @see #getForceZ()
-	 * @see #setForceZ(float)
+	 * @see #setForceZ(IfcForceMeasure)
 	 * @generated
 	 */
 	void unsetForceZ();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getForceZ <em>Force Z</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getForceZ <em>Force Z</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Force Z</em>' attribute is set.
+	 * @return whether the value of the '<em>Force Z</em>' reference is set.
 	 * @see #unsetForceZ()
 	 * @see #getForceZ()
-	 * @see #setForceZ(float)
+	 * @see #setForceZ(IfcForceMeasure)
 	 * @generated
 	 */
 	boolean isSetForceZ();
 
 	/**
-	 * Returns the value of the '<em><b>Force ZAs String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Force ZAs String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Force ZAs String</em>' attribute.
-	 * @see #isSetForceZAsString()
-	 * @see #unsetForceZAsString()
-	 * @see #setForceZAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoadSingleForce_ForceZAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getForceZAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getForceZAsString <em>Force ZAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Force ZAs String</em>' attribute.
-	 * @see #isSetForceZAsString()
-	 * @see #unsetForceZAsString()
-	 * @see #getForceZAsString()
-	 * @generated
-	 */
-	void setForceZAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getForceZAsString <em>Force ZAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetForceZAsString()
-	 * @see #getForceZAsString()
-	 * @see #setForceZAsString(String)
-	 * @generated
-	 */
-	void unsetForceZAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getForceZAsString <em>Force ZAs String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Force ZAs String</em>' attribute is set.
-	 * @see #unsetForceZAsString()
-	 * @see #getForceZAsString()
-	 * @see #setForceZAsString(String)
-	 * @generated
-	 */
-	boolean isSetForceZAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Moment X</b></em>' attribute.
+	 * Returns the value of the '<em><b>Moment X</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Moment X</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Moment X</em>' attribute.
+	 * @return the value of the '<em>Moment X</em>' reference.
 	 * @see #isSetMomentX()
 	 * @see #unsetMomentX()
-	 * @see #setMomentX(float)
+	 * @see #setMomentX(IfcTorqueMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoadSingleForce_MomentX()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getMomentX();
+	IfcTorqueMeasure getMomentX();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getMomentX <em>Moment X</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getMomentX <em>Moment X</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Moment X</em>' attribute.
+	 * @param value the new value of the '<em>Moment X</em>' reference.
 	 * @see #isSetMomentX()
 	 * @see #unsetMomentX()
 	 * @see #getMomentX()
 	 * @generated
 	 */
-	void setMomentX(float value);
+	void setMomentX(IfcTorqueMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getMomentX <em>Moment X</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getMomentX <em>Moment X</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetMomentX()
 	 * @see #getMomentX()
-	 * @see #setMomentX(float)
+	 * @see #setMomentX(IfcTorqueMeasure)
 	 * @generated
 	 */
 	void unsetMomentX();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getMomentX <em>Moment X</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getMomentX <em>Moment X</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Moment X</em>' attribute is set.
+	 * @return whether the value of the '<em>Moment X</em>' reference is set.
 	 * @see #unsetMomentX()
 	 * @see #getMomentX()
-	 * @see #setMomentX(float)
+	 * @see #setMomentX(IfcTorqueMeasure)
 	 * @generated
 	 */
 	boolean isSetMomentX();
 
 	/**
-	 * Returns the value of the '<em><b>Moment XAs String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Moment XAs String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Moment XAs String</em>' attribute.
-	 * @see #isSetMomentXAsString()
-	 * @see #unsetMomentXAsString()
-	 * @see #setMomentXAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoadSingleForce_MomentXAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getMomentXAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getMomentXAsString <em>Moment XAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Moment XAs String</em>' attribute.
-	 * @see #isSetMomentXAsString()
-	 * @see #unsetMomentXAsString()
-	 * @see #getMomentXAsString()
-	 * @generated
-	 */
-	void setMomentXAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getMomentXAsString <em>Moment XAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetMomentXAsString()
-	 * @see #getMomentXAsString()
-	 * @see #setMomentXAsString(String)
-	 * @generated
-	 */
-	void unsetMomentXAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getMomentXAsString <em>Moment XAs String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Moment XAs String</em>' attribute is set.
-	 * @see #unsetMomentXAsString()
-	 * @see #getMomentXAsString()
-	 * @see #setMomentXAsString(String)
-	 * @generated
-	 */
-	boolean isSetMomentXAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Moment Y</b></em>' attribute.
+	 * Returns the value of the '<em><b>Moment Y</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Moment Y</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Moment Y</em>' attribute.
+	 * @return the value of the '<em>Moment Y</em>' reference.
 	 * @see #isSetMomentY()
 	 * @see #unsetMomentY()
-	 * @see #setMomentY(float)
+	 * @see #setMomentY(IfcTorqueMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoadSingleForce_MomentY()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getMomentY();
+	IfcTorqueMeasure getMomentY();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getMomentY <em>Moment Y</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getMomentY <em>Moment Y</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Moment Y</em>' attribute.
+	 * @param value the new value of the '<em>Moment Y</em>' reference.
 	 * @see #isSetMomentY()
 	 * @see #unsetMomentY()
 	 * @see #getMomentY()
 	 * @generated
 	 */
-	void setMomentY(float value);
+	void setMomentY(IfcTorqueMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getMomentY <em>Moment Y</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getMomentY <em>Moment Y</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetMomentY()
 	 * @see #getMomentY()
-	 * @see #setMomentY(float)
+	 * @see #setMomentY(IfcTorqueMeasure)
 	 * @generated
 	 */
 	void unsetMomentY();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getMomentY <em>Moment Y</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getMomentY <em>Moment Y</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Moment Y</em>' attribute is set.
+	 * @return whether the value of the '<em>Moment Y</em>' reference is set.
 	 * @see #unsetMomentY()
 	 * @see #getMomentY()
-	 * @see #setMomentY(float)
+	 * @see #setMomentY(IfcTorqueMeasure)
 	 * @generated
 	 */
 	boolean isSetMomentY();
 
 	/**
-	 * Returns the value of the '<em><b>Moment YAs String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Moment YAs String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Moment YAs String</em>' attribute.
-	 * @see #isSetMomentYAsString()
-	 * @see #unsetMomentYAsString()
-	 * @see #setMomentYAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoadSingleForce_MomentYAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getMomentYAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getMomentYAsString <em>Moment YAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Moment YAs String</em>' attribute.
-	 * @see #isSetMomentYAsString()
-	 * @see #unsetMomentYAsString()
-	 * @see #getMomentYAsString()
-	 * @generated
-	 */
-	void setMomentYAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getMomentYAsString <em>Moment YAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetMomentYAsString()
-	 * @see #getMomentYAsString()
-	 * @see #setMomentYAsString(String)
-	 * @generated
-	 */
-	void unsetMomentYAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getMomentYAsString <em>Moment YAs String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Moment YAs String</em>' attribute is set.
-	 * @see #unsetMomentYAsString()
-	 * @see #getMomentYAsString()
-	 * @see #setMomentYAsString(String)
-	 * @generated
-	 */
-	boolean isSetMomentYAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Moment Z</b></em>' attribute.
+	 * Returns the value of the '<em><b>Moment Z</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Moment Z</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Moment Z</em>' attribute.
+	 * @return the value of the '<em>Moment Z</em>' reference.
 	 * @see #isSetMomentZ()
 	 * @see #unsetMomentZ()
-	 * @see #setMomentZ(float)
+	 * @see #setMomentZ(IfcTorqueMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoadSingleForce_MomentZ()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getMomentZ();
+	IfcTorqueMeasure getMomentZ();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getMomentZ <em>Moment Z</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getMomentZ <em>Moment Z</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Moment Z</em>' attribute.
+	 * @param value the new value of the '<em>Moment Z</em>' reference.
 	 * @see #isSetMomentZ()
 	 * @see #unsetMomentZ()
 	 * @see #getMomentZ()
 	 * @generated
 	 */
-	void setMomentZ(float value);
+	void setMomentZ(IfcTorqueMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getMomentZ <em>Moment Z</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getMomentZ <em>Moment Z</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetMomentZ()
 	 * @see #getMomentZ()
-	 * @see #setMomentZ(float)
+	 * @see #setMomentZ(IfcTorqueMeasure)
 	 * @generated
 	 */
 	void unsetMomentZ();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getMomentZ <em>Moment Z</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getMomentZ <em>Moment Z</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Moment Z</em>' attribute is set.
+	 * @return whether the value of the '<em>Moment Z</em>' reference is set.
 	 * @see #unsetMomentZ()
 	 * @see #getMomentZ()
-	 * @see #setMomentZ(float)
+	 * @see #setMomentZ(IfcTorqueMeasure)
 	 * @generated
 	 */
 	boolean isSetMomentZ();
-
-	/**
-	 * Returns the value of the '<em><b>Moment ZAs String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Moment ZAs String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Moment ZAs String</em>' attribute.
-	 * @see #isSetMomentZAsString()
-	 * @see #unsetMomentZAsString()
-	 * @see #setMomentZAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoadSingleForce_MomentZAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getMomentZAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getMomentZAsString <em>Moment ZAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Moment ZAs String</em>' attribute.
-	 * @see #isSetMomentZAsString()
-	 * @see #unsetMomentZAsString()
-	 * @see #getMomentZAsString()
-	 * @generated
-	 */
-	void setMomentZAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getMomentZAsString <em>Moment ZAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetMomentZAsString()
-	 * @see #getMomentZAsString()
-	 * @see #setMomentZAsString(String)
-	 * @generated
-	 */
-	void unsetMomentZAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleForce#getMomentZAsString <em>Moment ZAs String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Moment ZAs String</em>' attribute is set.
-	 * @see #unsetMomentZAsString()
-	 * @see #getMomentZAsString()
-	 * @see #setMomentZAsString(String)
-	 * @generated
-	 */
-	boolean isSetMomentZAsString();
 
 } // IfcStructuralLoadSingleForce

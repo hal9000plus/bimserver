@@ -20,8 +20,6 @@ package org.bimserver;
  * long with Bimserver.org . If not, see <http://www.gnu.org/licenses/>.
  *****************************************************************************/
 
-import java.util.Date;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -30,20 +28,22 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name = "version")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Version {
-	@XmlElement(name = "version")
-	private String version;
-	
-	@XmlElement(name = "date")
-	private Date date;
-
+	@XmlElement(name = "latest")
+	private String latest;
 	@XmlElement(name = "download")
 	private String downloadUrl;
-	
 	@XmlElement(name = "support")
 	private String supportUrl;
-	
 	@XmlElement(name = "info")
 	private String supportEmail;
+
+	public String getLatest() {
+		return latest;
+	}
+
+	public void setLatest(String latest) {
+		this.latest = latest;
+	}
 
 	public String getDownloadUrl() {
 		return downloadUrl;
@@ -67,21 +67,5 @@ public class Version {
 
 	public void setSupportEmail(String supportEmail) {
 		this.supportEmail = supportEmail;
-	}
-
-	public void setVersion(String version) {
-		this.version = version;
-	}
-
-	public String getVersion() {
-		return version;
-	}
-
-	public void setDate(Date date) {
-		this.date = date;
-	}
-
-	public Date getDate() {
-		return date;
 	}
 }

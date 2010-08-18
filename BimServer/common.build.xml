@@ -1,0 +1,181 @@
+<project name="BIMserver Common">
+	<target name="buildjar">
+		<mkdir dir="builds" />
+		<copy todir="BuildJar">
+			<fileset file="deploy/shared/gpl.txt" />
+		</copy>
+		<copy todir="BuildJar/www">
+			<fileset dir="www" />
+		</copy>
+		<copy todir="BuildJar/root">
+			<fileset dir="root" />
+		</copy>
+		<copy todir="BuildJar/www/WEB-INF" overwrite="true">
+			<fileset file="deploy/shared/IFC2X3_FINAL.exp" />
+			<fileset file="deploy/shared/version.xml" />
+			<fileset file="deploy/shared/ignore.xml" />
+			<fileset file="${deploydir}/web.xml" />
+			<fileset file="${deploydir}/settings.xml" />
+		</copy>
+		<copy todir="BuildJar/www/META-INF" overwrite="true">
+			<fileset file="deploy/shared/context.xml" />
+		</copy>
+		<replace file="BuildJar/www/WEB-INF/version.xml" token="@VERSION@" value="${version}" />
+		<replace file="BuildJar/www/WEB-INF/web.xml" token="@VERSION@" value="${version}" />
+		<copy todir="BuildJar/classes">
+			<fileset file="${deploydir}/log4j.xml" />
+		</copy>
+		<copy tofile="BuildJar/classes/org/bimserver/ifc/emf/Ifc2x3/impl/Ifc2x3.ecore">
+			<fileset file="../Ifc/model/IFC2X3.ecore" />
+		</copy>
+		<copy todir="BuildJar/lib">
+			<fileset dir="lib">
+				<include name="*.jar" />
+			</fileset>
+			<fileset dir="../buildingSMARTLibrary/lib">
+				<include name="*.jar" />
+			</fileset>
+			<fileset dir="../Utils/lib">
+				<include name="*.jar" />
+			</fileset>
+			<fileset dir="../CityGML/lib">
+				<include name="*.jar" />
+			</fileset>
+			<fileset dir="warlibs">
+				<include name="*.jar" />
+			</fileset>
+		</copy>
+		<javac srcdir="src" destdir="BuildJar/classes" debug="on" fork="true" memorymaximumsize="512m">
+			<src path="../buildingSMARTLibrary/src" />
+			<src path="../Ifc/src" />
+			<src path="../Utils/src" />
+			<src path="../Emf/src" />
+			<src path="../Shared/src" />
+			<src path="../CityGML/src" />
+			<src path="../Collada/src" />
+			<src path="../CityGML/src-gen" />
+			<src path="../TestData/src" />
+			<classpath>
+				<fileset dir="lib">
+					<include name="*.jar" />
+				</fileset>
+				<fileset dir="../buildingSMARTLibrary/lib">
+					<include name="*.jar" />
+				</fileset>
+				<fileset dir="../Utils/lib">
+					<include name="*.jar" />
+				</fileset>
+				<fileset dir="../CityGML/lib">
+					<include name="*.jar" />
+				</fileset>
+				<fileset dir="warlibs">
+					<include name="*.jar" />
+				</fileset>
+			</classpath>
+		</javac>
+		<jar jarfile="BuildJar/lib/bimserver.jar" manifest="${deploydir}/MAIN-MANIFEST.MF">
+			<fileset dir="BuildJar/classes"/>
+		</jar>
+		<delete dir="BuildJar/classes"/>
+		<javac destdir="BuildJar" debug="on" srcdir="expander/src" />
+		<copy todir="BuildJar/org/bimserver">
+			<fileset dir="expander/src/org/bimserver">
+				<include name="*.png" />
+			</fileset>
+		</copy>
+		<jar jarfile="builds/bimserver-${version}.jar" manifest="${deploydir}/MANIFEST.MF">
+			<fileset dir="BuildJar" />
+		</jar>
+		<delete dir="BuildJar" />
+	</target>
+	<target name="buildwar">
+		<mkdir dir="builds" />
+		<mkdir dir="BuildWar"/>
+		<copy todir="BuildWar">
+			<fileset file="deploy/shared/gpl.txt" />
+		</copy>
+		<mkdir dir="BuildWar/WEB-INF/classes" />
+		<copy todir="BuildWar/">
+			<fileset dir="www" />
+		</copy>
+		<copy todir="BuildWar/WEB-INF" overwrite="true">
+			<fileset file="deploy/shared/IFC2X3_FINAL.exp" />
+			<fileset file="deploy/shared/version.xml" />
+			<fileset file="deploy/shared/ignore.xml" />
+			<fileset file="${deploydir}/web.xml" />
+		</copy>
+		<copy todir="BuildWar/META-INF" overwrite="true">
+			<fileset file="deploy/shared/context.xml" />
+		</copy>
+		<replace file="BuildWar/WEB-INF/version.xml" token="@VERSION@" value="${version}" />
+		<replace file="BuildWar/WEB-INF/web.xml" token="@VERSION@" value="${version}" />
+		<copy todir="BuildWar/WEB-INF/classes">
+			<fileset file="${deploydir}/log4j.xml" />
+		</copy>
+		<copy tofile="BuildWar/WEB-INF/classes/org/bimserver/ifc/emf/Ifc2x3/impl/Ifc2x3.ecore">
+			<fileset file="../Ifc/model/IFC2X3.ecore" />
+		</copy>
+		<copy todir="BuildWar" overwrite="true">
+			<fileset dir="${deploydir}/jsp"/>
+		</copy>
+		<copy todir="BuildWar/images" overwrite="true">
+			<fileset dir="${deploydir}/images"/>
+		</copy>
+		<copy todir="BuildWar/WEB-INF/templates" overwrite="true">
+			<fileset dir="${deploydir}/templates"/>
+		</copy>
+		<copy todir="BuildWar/WEB-INF" overwrite="true">
+			<fileset file="${deploydir}/settings.xml" />
+		</copy>
+		<copy todir="BuildWar/WEB-INF/lib">
+			<fileset dir="lib">
+				<exclude name="jetty-6.1.14.jar" />
+				<exclude name="jetty-util-6.1.14.jar" />
+				<exclude name="servlet-api-2.5-6.1.14.jar" />
+				<exclude name="jsp-api-2.1.jar" />
+				<exclude name="jsp-2.1.jar" />
+				<exclude name="ant-1.6.5.jar" />
+				<exclude name="core-3.1.1.jar" />
+				<exclude name="geronimo-servlet_2.5_spec-1.2.jar" />
+			</fileset>
+			<fileset dir="../buildingSMARTLibrary/lib" />
+			<fileset dir="../Utils/lib" />
+			<fileset dir="../CityGML/lib" />
+			<fileset dir="warlibs" />
+		</copy>
+		<javac srcdir="src" destdir="BuildWar/WEB-INF/classes" debug="on" fork="true" memorymaximumsize="512m">
+			<src path="../buildingSMARTLibrary/src"/>
+			<src path="../Ifc/src"/>
+			<src path="../Utils/src"/>
+			<src path="../Shared/src" />
+			<src path="../Emf/src" />
+			<src path="../TestData/src" />
+			<src path="../Collada/src" />
+			<src path="../CityGML/src" />
+			<src path="../CityGML/src-gen" />
+			<classpath>
+				<fileset dir="lib">
+					<include name="*.jar" />
+				</fileset>
+				<fileset dir="../buildingSMARTLibrary/lib">
+					<include name="*.jar" />
+				</fileset>
+				<fileset dir="../Utils/lib">
+					<include name="*.jar" />
+				</fileset>
+				<fileset dir="../CityGML/lib">
+					<include name="*.jar" />
+				</fileset>
+				<fileset dir="warlibs">
+					<include name="*.jar" />
+				</fileset>
+			</classpath>
+		</javac>
+		<jar destfile="builds/bimserver-${version}.war" manifest="www/META-INF/MANIFEST.MF">
+			<fileset dir="BuildWar">
+				<exclude name="*.svn" />
+			</fileset>
+		</jar>
+		<delete dir="BuildWar" />
+	</target>
+</project>

@@ -1,25 +1,15 @@
 <%@page import="java.util.List" %>
+<%@page import="org.bimserver.shared.SUser" %>
 <%@page import="java.util.Collections"%>
 <%@page import="java.text.DateFormat"%>
 <%@page import="java.text.SimpleDateFormat"%>
-<%@page import="org.bimserver.interfaces.objects.SUser"%>
 <%@ include file="header.jsp" %>
-
-<%@page import="org.bimserver.shared.SUserNameComparator"%>
-<%@page import="org.bimserver.interfaces.objects.SUserType"%>
-<%@page import="org.bimserver.interfaces.objects.SObjectState"%>
-<% if (loginManager.isLoggedIn() && loginManager.getUserType() == SUserType.ADMIN) {
+<h1>Users</h1>
+<% if (loginManager.isLoggedIn() && loginManager.getUserType().equals("ADMIN")) {
 		DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm");
 %>
-
-<div class="sidebar">
- <h4>Submenu</h4>
- <a href="adduser.jsp">Add user</a>
-</div>
-
-<div class="content">
-<h1>Users</h1>
 <fieldset>
+<a href="adduser.jsp">Add user</a><br/><br/>
 <table class="formatted">
 <tr>
 	<th>Name</th>
@@ -29,25 +19,25 @@
 	<th>Actions</th>
 </tr>
 <%
-	List<SUser> users = loginManager.getService().getAllUsers();
-	Collections.sort(users, new SUserNameComparator());
+	List<SUser> users = loginManager.getService().getAllUsers().getUsers();
+	Collections.sort(users, new SUser.UserComparator());
 	for (SUser user : users) {
 %>
-<tr<%= user.getState() == SObjectState.DELETED ? " class=\"deleted\"" : "" %>>
-	<td><a href="user.jsp?uoid=<%=user.getOid() %>"><%=user.getName() %></a></td>
-	<td><a href="user.jsp?uoid=<%=user.getOid() %>"><%=user.getUsername() %></a></td>
+<tr<%= user.getState().equals("DELETED") ? " class=\"deleted\"" : "" %>>
+	<td><a href="user.jsp?id=<%=user.getId() %>"><%=user.getName() %></a></td>
+	<td><a href="user.jsp?id=<%=user.getId() %>"><%=user.getUsername() %></a></td>
 	<td><%=dateFormat.format(user.getCreatedOn()) %></td>
 	<td><%=dateFormat.format(user.getLastSeen()) %></td>
 	<td>
 <%
-	if (user.getUserType() != SUserType.ADMIN && user.getUserType() != SUserType.ANONYMOUS) {
-		if (user.getState() == SObjectState.ACTIVE) {
+	if (!user.isAdmin() && !user.isAnonymous()) {
+		if (user.getState().equals("ACTIVE")) {
 			%>
-			<a href="deleteuser.jsp?uoid=<%=user.getOid() %>">delete</a>
+			<a href="deleteuser.jsp?id=<%=user.getId() %>">delete</a>
 			<%
-		} else if (user.getState() == SObjectState.DELETED) {
+		} else if (user.getState().equals("DELETED")) {
 			%>
-			<a href="undeleteuser.jsp?uoid=<%=user.getOid() %>">undelete</a>
+			<a href="undeleteuser.jsp?id=<%=user.getId() %>">undelete</a>
 			<%	
 		}
 	}
@@ -63,5 +53,4 @@
 }
 %>
 </fieldset>
-</div>
 <%@ include file="footer.jsp" %>

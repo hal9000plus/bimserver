@@ -20,19 +20,9 @@ package org.bimserver.shared;
  * long with Bimserver.org . If not, see <http://www.gnu.org/licenses/>.
  *****************************************************************************/
 
-import java.util.List;
-import java.util.Set;
-
 import javax.activation.DataHandler;
 
-import org.bimserver.interfaces.objects.SCheckout;
-import org.bimserver.interfaces.objects.SClash;
-import org.bimserver.interfaces.objects.SClashDetectionSettings;
-import org.bimserver.interfaces.objects.SGeoTag;
-import org.bimserver.interfaces.objects.SLogAction;
-import org.bimserver.interfaces.objects.SProject;
-import org.bimserver.interfaces.objects.SRevision;
-import org.bimserver.interfaces.objects.SUser;
+import org.bimserver.ifc.file.compare.CompareResult;
 
 public class AuthenticatedServiceWrapper {
 	private final ServiceInterface service;
@@ -53,136 +43,140 @@ public class AuthenticatedServiceWrapper {
 		return user;
 	}
 
-	public SProject addProject(String name) throws UserException {
-		return service.addProject(token, name);
+	public int addProject(String name, SGeoTag geoTag) throws UserException {
+		return service.addProject(token, name, geoTag);
 	}
 
-	public SProject addProject(String name, long parentPoid) throws UserException {
-		return service.addProject(token, name, parentPoid);
+	public int addProject(String name, int parentProjectId, SGeoTag geoTag) throws UserException {
+		return service.addProject(token, name, parentProjectId, geoTag);
 	}
 
-	public long addUser(String username, String password, String name) throws UserException {
+	public int addUser(String username, String password, String name) throws UserException {
 		return service.addUser(token, username, password, name);
 	}
 
-	public CheckinResult checkinSync(long poid, String comment, long fileSize, DataHandler ifcFile) throws UserException {
-		return service.checkinSync(token, poid, comment, fileSize, ifcFile);
+	public SRevision getLastRevision(int pid) throws UserException {
+		return service.getLastRevision(token, pid);
 	}
 
-	public CheckinResult checkinAsync(long poid, String comment, long fileSize, DataHandler ifcFile) throws UserException {
-		return service.checkinAsync(token, poid, comment, fileSize, ifcFile);
+	public CheckinResult checkin(int pid, String comment, long fileSize, DataHandler ifcFile) throws UserException {
+		return service.checkin(token, pid, comment, fileSize, ifcFile);
 	}
 
-	public CheckoutResult checkout(long roid, ResultType resultType) throws UserException {
-		return service.checkout(token, roid, resultType);
+	public CheckoutResult checkout(int pid, int rid, ResultType resultType) throws UserException {
+		return service.checkout(token, pid, rid, resultType);
 	}
 
-	public List<SCheckout> getAllCheckoutsOfProject(long poid) throws UserException {
-		return service.getAllCheckoutsOfProject(token, poid);
+	public SCheckoutList getAllCheckoutsOfProject(int pid) throws UserException {
+		return service.getAllCheckoutsOfProject(token, pid);
 	}
 
-	public List<SProject> getAllProjects() throws UserException {
+	public ProjectList getAllProjects() throws UserException {
 		return service.getAllProjects(token);
 	}
 
-	public List<SRevision> getAllRevisionsOfProject(long poid) throws UserException {
-		return service.getAllRevisionsOfProject(token, poid);
+	public SRevisionList getAllRevisionsOfProject(int pid) throws UserException {
+		return service.getAllRevisionsOfProject(token, pid);
 	}
 
-	public List<SUser> getAllUsers() throws UserException {
+	public UserList getAllUsers() throws UserException {
 		return service.getAllUsers(token);
 	}
 
-	public CheckoutResult download(long roid, ResultType resultType) throws UserException {
-		return service.download(token, roid, resultType);
+	public CheckoutResult download(int pid, int rid, ResultType resultType) throws UserException {
+		return service.download(token, pid, rid, resultType);
 	}
 
-	public CheckoutResult downloadProjects(Set<Long> roids, ResultType resultType) throws UserException {
-		return service.downloadProjects(token, roids, resultType);
+	public CheckoutResult downloadOfType(int pid, int rid, String className, ResultType resultType) throws UserException {
+		return service.downloadOfType(token, pid, rid, className, resultType);
 	}
 
-	public CheckoutResult downloadOfType(long roid, String className, ResultType resultType) throws UserException {
-		return service.downloadOfType(token, roid, className, resultType);
+	public CheckoutResult downloadById(int pid, int rid, int oid, ResultType resultType) throws UserException {
+		return service.downloadByOid(token, pid, rid, oid, resultType);
 	}
 
-	public CheckoutResult downloadById(long roid, int oid, ResultType resultType) throws UserException {
-		return service.downloadByOid(token, roid, oid, resultType);
+	public SProject getProjectById(int pid) throws UserException {
+		return service.getProjectById(token, pid);
 	}
 
-	public SUser getUserByUoid(long uoid) throws UserException {
-		return service.getUserByUoid(token, uoid);
+	public UserList getAllAuthorizedUsers(int pid) throws UserException {
+		return service.getAllAuthorizedUsersOfProject(token, pid);
 	}
 
-	public List<SRevision> getAllRevisionsByUser(long uoid) throws UserException {
-		return service.getAllRevisionsByUser(token, uoid);
+	public UserList getAllNonAuthorizedUsers(int pid) throws UserException {
+		return service.getAllNonAuthorizedUsersOfProject(token, pid);
 	}
 
-	public List<SCheckout> getAllCheckoutsByUser(long uoid) throws UserException {
-		return service.getAllCheckoutsByUser(token, uoid);
+	public SUser getUserById(int uid) throws UserException {
+		return service.getUserById(token, uid);
 	}
 
-	public List<SCheckout> getAllCheckoutsOfRevision(long roid) throws UserException {
-		return service.getAllCheckoutsOfRevision(token, roid);
+	public SRevisionList getAllRevisionsByUser(int uid) throws UserException {
+		return service.getAllRevisionsByUser(token, uid);
 	}
 
-	public SRevision getRevision(long roid) throws UserException {
-		return service.getRevision(token, roid);
+	public SCheckoutList getAllCheckoutsByUser(int uid) throws UserException {
+		return service.getAllCheckoutsByUser(token, uid);
 	}
 
-	public List<String> getAvailableClasses() throws UserException {
+	public SCheckoutList getAllCheckoutsOfRevision(int pid, int rid) throws UserException {
+		return service.getAllCheckoutsOfRevision(token, pid, rid);
+	}
+
+	public ProjectList getUsersProjects(int uid) throws UserException {
+		return service.getProjectsOfUser(token, uid);
+	}
+
+	public SRevision getRevision(int pid, int rid) throws UserException {
+		return service.getRevision(token, pid, rid);
+	}
+
+	public ClassList getAvailableClasses() throws UserException {
 		return service.getAvailableClasses(token);
 	}
 
-	public void addUserToProject(long uoid, long poid) throws UserException {
-		service.addUserToProject(token, uoid, poid);
+	public void addUserToProject(int uid, int pid) throws UserException {
+		service.addUserToProject(token, uid, pid);
 	}
 
-	public void removeUserFromProject(long uoid, long poid) throws UserException {
-		service.removeUserFromProject(token, uoid, poid);
+	public void removeUserFromProject(int uid, int pid) throws UserException {
+		service.removeUserFromProject(token, uid, pid);
 	}
 
-	public boolean deleteProject(long poid) throws UserException {
-		return service.deleteProject(token, poid);
+	public boolean deleteProject(int pid) throws UserException {
+		return service.deleteProject(token, pid);
 	}
 
-	public boolean deleteUser(long uoid) throws UserException {
-		return service.deleteUser(token, uoid);
+	public boolean deleteUser(int uid) throws UserException {
+		return service.deleteUser(token, user.getId(), uid);
 	}
 
-	public boolean undeleteProject(long poid) throws UserException {
-		return service.undeleteProject(token, poid);
+	public boolean undeleteProject(int pid) throws UserException {
+		return service.undeleteProject(token, pid);
 	}
 
-	public boolean undeleteUser(long uoid) throws UserException {
-		return service.undeleteUser(token, uoid);
+	public boolean undeleteUser(int uid) throws UserException {
+		return service.undeleteUser(token, uid);
 	}
 
 	public DatabaseInformation getDatabaseInformation() throws UserException {
 		return service.getDatabaseInformation(token);
 	}
 
-	public CheckoutResult downloadByGuids(Set<Long> roids, Set<String> guids, ResultType resultType) throws UserException {
-		return service.downloadByGuids(token, roids, guids, resultType);
+	public CheckoutResult downloadByGuid(int pid, int rid, String guid, ResultType resultType) throws UserException {
+		return service.downloadByGuid(token, pid, rid, guid, resultType);
 	}
 
-	public ChangeSetResult processChangeSet(long poid, String comment, ChangeSet changeSet) throws UserException {
-		return service.processChangeSet(token, changeSet, poid, comment);
+	public ChangeSetResult processChangeSet(int pid, String comment, ChangeSet changeSet) throws UserException {
+		return service.processChangeSet(token, changeSet, pid, comment);
 	}
 
 	public ChangeSetResult processChangeSetFile(int pid, String comment, DataHandler changeSetFile) throws UserException {
 		return service.processChangeSetFile(token, pid, comment, changeSetFile);
 	}
 
-	public List<SProject> getAllNonAuthorizedProjectsOfUser(long uoid) throws UserException {
-		return service.getAllNonAuthorizedProjectsOfUser(token, uoid);
-	}
-
-	public List<SUser> getAllNonAuthorizedUsersOfProject(long poid) throws UserException {
-		return service.getAllNonAuthorizedUsersOfProject(token, poid);
-	}
-
-	public List<SUser> getAllAuthorizedUsersOfProject(long poid) throws UserException {
-		return service.getAllAuthorizedUsersOfProject(token, poid);
+	public ProjectList getAllNonAuthorizedProjectsOfUser(int uid) throws UserException {
+		return service.getAllNonAuthorizedProjectsOfUser(token, uid);
 	}
 
 	public SUser getLoggedInUser() throws UserException {
@@ -192,104 +186,24 @@ public class AuthenticatedServiceWrapper {
 	public void logout() {
 		service.logout(token);
 	}
-
-	public boolean changePassword(long uoid, String oldPassword, String newPassword) throws UserException {
-		return service.changePassword(token, uoid, oldPassword, newPassword);
+	
+	public boolean changePassword(int uid, String oldPassword, String newPassword) throws UserException {
+		return service.changePassword(token, uid, oldPassword, newPassword);
 	}
-
-	public void updateProject(SProject sProject) throws UserException {
-		service.updateProject(token, sProject);
+	
+	public void updateProject(int pid, String description, SGeoTag geoTag) throws UserException {
+		service.updateProject(token, pid, description, geoTag);
 	}
-
-	public void updateRevision(SRevision sRevision) throws UserException {
-		service.updateRevision(token, sRevision);
+	
+	public CompareResult compare(int pid, int rid1, int rid2) throws UserException {
+		return service.compare(token, pid, user.getId(), rid1, rid2);
 	}
-
-	public SCompareResult compare(long roid1, long roid2) throws UserException {
-		return service.compare(token, user.getOid(), roid1, roid2);
+	
+	public SRevisionSummary getRevisionSummary(int pid, int rid) throws UserException {
+		return service.getRevisionSummary(token, pid, rid);
 	}
-
-	public SRevisionSummary getRevisionSummary(long roid) throws UserException {
-		return service.getRevisionSummary(token, roid);
-	}
-
-	public boolean userHasCheckinRights(long poid) throws UserException {
-		return service.userHasCheckinRights(token, user.getOid(), poid);
-	}
-
-	public String getShowCheckoutWarning(long poid, long uoid) throws UserException {
-		return service.getShowCheckoutWarning(token, poid, uoid);
-	}
-
-	public boolean userHasRights(long poid) throws UserException {
-		return service.userHasRights(token, poid);
-	}
-
-	public DataObject getDataObjectByOid(long roid, long oid, String className) throws UserException {
-		return service.getDataObjectByOid(token, roid, oid, className);
-	}
-
-	public DataObject getDataObjectByGuid(long roid, String guid) throws UserException {
-		return service.getDataObjectByGuid(token, roid, guid);
-	}
-
-	public List<DataObject> getDataObjectsByType(long roid, String className) throws UserException {
-		return service.getDataObjectsByType(token, roid, className);
-	}
-
-	public String resetPassword(String emailAddress) throws UserException {
-		return service.resetPassword(emailAddress);
-	}
-
-	public List<SClash> findClashes(SClashDetectionSettings sClashDetectionSettings) throws UserException {
-		return service.findClashes(token, sClashDetectionSettings);
-	}
-
-	public CheckinResult branch(long roid, String projectName, String comment) throws UserException {
-		return service.branchToNewProject(token, roid, projectName, comment);
-	}
-
-	public CheckinResult branch(long roid, long destPoid, String comment) throws UserException {
-		return service.branchToExistingProject(token, roid, destPoid, comment);
-	}
-
-	public List<SLogAction> getLogs() throws UserException {
-		return service.getLogs(token);
-	}
-
-	public SGeoTag getGeoTag(long goid) throws UserException {
-		return service.getGeoTag(token, goid);
-	}
-
-	public void updateGeoTag(SGeoTag geoTag) throws UserException {
-		service.updateGeoTag(token, geoTag);
-	}
-
-	public SClashDetectionSettings getClashDetectionSettings(long cdsoid) throws UserException {
-		return service.getClashDetectionSettings(token, cdsoid);
-	}
-
-	public void updateClashDetectionSettings(SClashDetectionSettings sClashDetectionSettings) throws UserException {
-		service.updateClashDetectionSettings(token, sClashDetectionSettings);
-	}
-
-	public List<SProject> getUsersProjects(long uoid) {
-		return service.getUsersProjects(uoid);
-	}
-
-	public SProject getProjectByPoid(long poid) throws UserException {
-		return service.getProjectByPoid(token, poid);
-	}
-
-	public SUser getAnonymousUser() {
-		return service.getAnonymousUser(token);
-	}
-
-	public SUser getUserByUsername(String username) throws UserException {
-		return service.getUserByUserName(username);
-	}
-
-	public void setRevisionTag(long roid, String tag) throws UserException {
-		service.setRevisionTag(roid, tag);
+	
+	public boolean userHasCheckinRights(int pid) throws UserException {
+		return service.userHasCheckinRights(token, user.getId(), pid);
 	}
 }

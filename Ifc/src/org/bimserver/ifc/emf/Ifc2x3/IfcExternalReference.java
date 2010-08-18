@@ -42,160 +42,160 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcExternalReference extends IfcLightDistributionDataSourceSelect, IfcObjectReferenceSelect {
 	/**
-	 * Returns the value of the '<em><b>Location</b></em>' attribute.
+	 * Returns the value of the '<em><b>Location</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Location</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Location</em>' attribute.
+	 * @return the value of the '<em>Location</em>' reference.
 	 * @see #isSetLocation()
 	 * @see #unsetLocation()
-	 * @see #setLocation(String)
+	 * @see #setLocation(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcExternalReference_Location()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getLocation();
+	IfcLabel getLocation();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcExternalReference#getLocation <em>Location</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcExternalReference#getLocation <em>Location</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Location</em>' attribute.
+	 * @param value the new value of the '<em>Location</em>' reference.
 	 * @see #isSetLocation()
 	 * @see #unsetLocation()
 	 * @see #getLocation()
 	 * @generated
 	 */
-	void setLocation(String value);
+	void setLocation(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcExternalReference#getLocation <em>Location</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcExternalReference#getLocation <em>Location</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetLocation()
 	 * @see #getLocation()
-	 * @see #setLocation(String)
+	 * @see #setLocation(IfcLabel)
 	 * @generated
 	 */
 	void unsetLocation();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcExternalReference#getLocation <em>Location</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcExternalReference#getLocation <em>Location</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Location</em>' attribute is set.
+	 * @return whether the value of the '<em>Location</em>' reference is set.
 	 * @see #unsetLocation()
 	 * @see #getLocation()
-	 * @see #setLocation(String)
+	 * @see #setLocation(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetLocation();
 
 	/**
-	 * Returns the value of the '<em><b>Item Reference</b></em>' attribute.
+	 * Returns the value of the '<em><b>Item Reference</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Item Reference</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Item Reference</em>' attribute.
+	 * @return the value of the '<em>Item Reference</em>' reference.
 	 * @see #isSetItemReference()
 	 * @see #unsetItemReference()
-	 * @see #setItemReference(String)
+	 * @see #setItemReference(IfcIdentifier)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcExternalReference_ItemReference()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getItemReference();
+	IfcIdentifier getItemReference();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcExternalReference#getItemReference <em>Item Reference</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcExternalReference#getItemReference <em>Item Reference</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Item Reference</em>' attribute.
+	 * @param value the new value of the '<em>Item Reference</em>' reference.
 	 * @see #isSetItemReference()
 	 * @see #unsetItemReference()
 	 * @see #getItemReference()
 	 * @generated
 	 */
-	void setItemReference(String value);
+	void setItemReference(IfcIdentifier value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcExternalReference#getItemReference <em>Item Reference</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcExternalReference#getItemReference <em>Item Reference</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetItemReference()
 	 * @see #getItemReference()
-	 * @see #setItemReference(String)
+	 * @see #setItemReference(IfcIdentifier)
 	 * @generated
 	 */
 	void unsetItemReference();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcExternalReference#getItemReference <em>Item Reference</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcExternalReference#getItemReference <em>Item Reference</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Item Reference</em>' attribute is set.
+	 * @return whether the value of the '<em>Item Reference</em>' reference is set.
 	 * @see #unsetItemReference()
 	 * @see #getItemReference()
-	 * @see #setItemReference(String)
+	 * @see #setItemReference(IfcIdentifier)
 	 * @generated
 	 */
 	boolean isSetItemReference();
 
 	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * Returns the value of the '<em><b>Name</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Name</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
+	 * @return the value of the '<em>Name</em>' reference.
 	 * @see #isSetName()
 	 * @see #unsetName()
-	 * @see #setName(String)
+	 * @see #setName(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcExternalReference_Name()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getName();
+	IfcLabel getName();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcExternalReference#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcExternalReference#getName <em>Name</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @param value the new value of the '<em>Name</em>' reference.
 	 * @see #isSetName()
 	 * @see #unsetName()
 	 * @see #getName()
 	 * @generated
 	 */
-	void setName(String value);
+	void setName(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcExternalReference#getName <em>Name</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcExternalReference#getName <em>Name</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetName()
 	 * @see #getName()
-	 * @see #setName(String)
+	 * @see #setName(IfcLabel)
 	 * @generated
 	 */
 	void unsetName();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcExternalReference#getName <em>Name</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcExternalReference#getName <em>Name</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Name</em>' attribute is set.
+	 * @return whether the value of the '<em>Name</em>' reference is set.
 	 * @see #unsetName()
 	 * @see #getName()
-	 * @see #setName(String)
+	 * @see #setName(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetName();

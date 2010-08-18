@@ -24,7 +24,7 @@ import java.util.Enumeration;
 
 import javax.swing.tree.TreeNode;
 
-import org.bimserver.interfaces.objects.SUser;
+import org.bimserver.shared.SUser;
 
 public class UserTreeNode implements TreeNode {
 

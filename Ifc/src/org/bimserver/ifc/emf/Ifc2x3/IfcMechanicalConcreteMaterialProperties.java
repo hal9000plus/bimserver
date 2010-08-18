@@ -31,13 +31,10 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getCompressiveStrength <em>Compressive Strength</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getCompressiveStrengthAsString <em>Compressive Strength As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getMaxAggregateSize <em>Max Aggregate Size</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getMaxAggregateSizeAsString <em>Max Aggregate Size As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getAdmixturesDescription <em>Admixtures Description</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getWorkability <em>Workability</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getProtectivePoreRatio <em>Protective Pore Ratio</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getProtectivePoreRatioAsString <em>Protective Pore Ratio As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getWaterImpermeability <em>Water Impermeability</em>}</li>
  * </ul>
  * </p>
@@ -48,478 +45,319 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcMechanicalConcreteMaterialProperties extends IfcMechanicalMaterialProperties {
 	/**
-	 * Returns the value of the '<em><b>Compressive Strength</b></em>' attribute.
+	 * Returns the value of the '<em><b>Compressive Strength</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Compressive Strength</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Compressive Strength</em>' attribute.
+	 * @return the value of the '<em>Compressive Strength</em>' reference.
 	 * @see #isSetCompressiveStrength()
 	 * @see #unsetCompressiveStrength()
-	 * @see #setCompressiveStrength(float)
+	 * @see #setCompressiveStrength(IfcPressureMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcMechanicalConcreteMaterialProperties_CompressiveStrength()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getCompressiveStrength();
+	IfcPressureMeasure getCompressiveStrength();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getCompressiveStrength <em>Compressive Strength</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getCompressiveStrength <em>Compressive Strength</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Compressive Strength</em>' attribute.
+	 * @param value the new value of the '<em>Compressive Strength</em>' reference.
 	 * @see #isSetCompressiveStrength()
 	 * @see #unsetCompressiveStrength()
 	 * @see #getCompressiveStrength()
 	 * @generated
 	 */
-	void setCompressiveStrength(float value);
+	void setCompressiveStrength(IfcPressureMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getCompressiveStrength <em>Compressive Strength</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getCompressiveStrength <em>Compressive Strength</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetCompressiveStrength()
 	 * @see #getCompressiveStrength()
-	 * @see #setCompressiveStrength(float)
+	 * @see #setCompressiveStrength(IfcPressureMeasure)
 	 * @generated
 	 */
 	void unsetCompressiveStrength();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getCompressiveStrength <em>Compressive Strength</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getCompressiveStrength <em>Compressive Strength</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Compressive Strength</em>' attribute is set.
+	 * @return whether the value of the '<em>Compressive Strength</em>' reference is set.
 	 * @see #unsetCompressiveStrength()
 	 * @see #getCompressiveStrength()
-	 * @see #setCompressiveStrength(float)
+	 * @see #setCompressiveStrength(IfcPressureMeasure)
 	 * @generated
 	 */
 	boolean isSetCompressiveStrength();
 
 	/**
-	 * Returns the value of the '<em><b>Compressive Strength As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Compressive Strength As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Compressive Strength As String</em>' attribute.
-	 * @see #isSetCompressiveStrengthAsString()
-	 * @see #unsetCompressiveStrengthAsString()
-	 * @see #setCompressiveStrengthAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcMechanicalConcreteMaterialProperties_CompressiveStrengthAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getCompressiveStrengthAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getCompressiveStrengthAsString <em>Compressive Strength As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Compressive Strength As String</em>' attribute.
-	 * @see #isSetCompressiveStrengthAsString()
-	 * @see #unsetCompressiveStrengthAsString()
-	 * @see #getCompressiveStrengthAsString()
-	 * @generated
-	 */
-	void setCompressiveStrengthAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getCompressiveStrengthAsString <em>Compressive Strength As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetCompressiveStrengthAsString()
-	 * @see #getCompressiveStrengthAsString()
-	 * @see #setCompressiveStrengthAsString(String)
-	 * @generated
-	 */
-	void unsetCompressiveStrengthAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getCompressiveStrengthAsString <em>Compressive Strength As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Compressive Strength As String</em>' attribute is set.
-	 * @see #unsetCompressiveStrengthAsString()
-	 * @see #getCompressiveStrengthAsString()
-	 * @see #setCompressiveStrengthAsString(String)
-	 * @generated
-	 */
-	boolean isSetCompressiveStrengthAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Max Aggregate Size</b></em>' attribute.
+	 * Returns the value of the '<em><b>Max Aggregate Size</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Max Aggregate Size</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Max Aggregate Size</em>' attribute.
+	 * @return the value of the '<em>Max Aggregate Size</em>' reference.
 	 * @see #isSetMaxAggregateSize()
 	 * @see #unsetMaxAggregateSize()
-	 * @see #setMaxAggregateSize(float)
+	 * @see #setMaxAggregateSize(IfcPositiveLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcMechanicalConcreteMaterialProperties_MaxAggregateSize()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getMaxAggregateSize();
+	IfcPositiveLengthMeasure getMaxAggregateSize();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getMaxAggregateSize <em>Max Aggregate Size</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getMaxAggregateSize <em>Max Aggregate Size</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Max Aggregate Size</em>' attribute.
+	 * @param value the new value of the '<em>Max Aggregate Size</em>' reference.
 	 * @see #isSetMaxAggregateSize()
 	 * @see #unsetMaxAggregateSize()
 	 * @see #getMaxAggregateSize()
 	 * @generated
 	 */
-	void setMaxAggregateSize(float value);
+	void setMaxAggregateSize(IfcPositiveLengthMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getMaxAggregateSize <em>Max Aggregate Size</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getMaxAggregateSize <em>Max Aggregate Size</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetMaxAggregateSize()
 	 * @see #getMaxAggregateSize()
-	 * @see #setMaxAggregateSize(float)
+	 * @see #setMaxAggregateSize(IfcPositiveLengthMeasure)
 	 * @generated
 	 */
 	void unsetMaxAggregateSize();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getMaxAggregateSize <em>Max Aggregate Size</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getMaxAggregateSize <em>Max Aggregate Size</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Max Aggregate Size</em>' attribute is set.
+	 * @return whether the value of the '<em>Max Aggregate Size</em>' reference is set.
 	 * @see #unsetMaxAggregateSize()
 	 * @see #getMaxAggregateSize()
-	 * @see #setMaxAggregateSize(float)
+	 * @see #setMaxAggregateSize(IfcPositiveLengthMeasure)
 	 * @generated
 	 */
 	boolean isSetMaxAggregateSize();
 
 	/**
-	 * Returns the value of the '<em><b>Max Aggregate Size As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Max Aggregate Size As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Max Aggregate Size As String</em>' attribute.
-	 * @see #isSetMaxAggregateSizeAsString()
-	 * @see #unsetMaxAggregateSizeAsString()
-	 * @see #setMaxAggregateSizeAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcMechanicalConcreteMaterialProperties_MaxAggregateSizeAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getMaxAggregateSizeAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getMaxAggregateSizeAsString <em>Max Aggregate Size As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Max Aggregate Size As String</em>' attribute.
-	 * @see #isSetMaxAggregateSizeAsString()
-	 * @see #unsetMaxAggregateSizeAsString()
-	 * @see #getMaxAggregateSizeAsString()
-	 * @generated
-	 */
-	void setMaxAggregateSizeAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getMaxAggregateSizeAsString <em>Max Aggregate Size As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetMaxAggregateSizeAsString()
-	 * @see #getMaxAggregateSizeAsString()
-	 * @see #setMaxAggregateSizeAsString(String)
-	 * @generated
-	 */
-	void unsetMaxAggregateSizeAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getMaxAggregateSizeAsString <em>Max Aggregate Size As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Max Aggregate Size As String</em>' attribute is set.
-	 * @see #unsetMaxAggregateSizeAsString()
-	 * @see #getMaxAggregateSizeAsString()
-	 * @see #setMaxAggregateSizeAsString(String)
-	 * @generated
-	 */
-	boolean isSetMaxAggregateSizeAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Admixtures Description</b></em>' attribute.
+	 * Returns the value of the '<em><b>Admixtures Description</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Admixtures Description</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Admixtures Description</em>' attribute.
+	 * @return the value of the '<em>Admixtures Description</em>' reference.
 	 * @see #isSetAdmixturesDescription()
 	 * @see #unsetAdmixturesDescription()
-	 * @see #setAdmixturesDescription(String)
+	 * @see #setAdmixturesDescription(IfcText)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcMechanicalConcreteMaterialProperties_AdmixturesDescription()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getAdmixturesDescription();
+	IfcText getAdmixturesDescription();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getAdmixturesDescription <em>Admixtures Description</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getAdmixturesDescription <em>Admixtures Description</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Admixtures Description</em>' attribute.
+	 * @param value the new value of the '<em>Admixtures Description</em>' reference.
 	 * @see #isSetAdmixturesDescription()
 	 * @see #unsetAdmixturesDescription()
 	 * @see #getAdmixturesDescription()
 	 * @generated
 	 */
-	void setAdmixturesDescription(String value);
+	void setAdmixturesDescription(IfcText value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getAdmixturesDescription <em>Admixtures Description</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getAdmixturesDescription <em>Admixtures Description</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetAdmixturesDescription()
 	 * @see #getAdmixturesDescription()
-	 * @see #setAdmixturesDescription(String)
+	 * @see #setAdmixturesDescription(IfcText)
 	 * @generated
 	 */
 	void unsetAdmixturesDescription();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getAdmixturesDescription <em>Admixtures Description</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getAdmixturesDescription <em>Admixtures Description</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Admixtures Description</em>' attribute is set.
+	 * @return whether the value of the '<em>Admixtures Description</em>' reference is set.
 	 * @see #unsetAdmixturesDescription()
 	 * @see #getAdmixturesDescription()
-	 * @see #setAdmixturesDescription(String)
+	 * @see #setAdmixturesDescription(IfcText)
 	 * @generated
 	 */
 	boolean isSetAdmixturesDescription();
 
 	/**
-	 * Returns the value of the '<em><b>Workability</b></em>' attribute.
+	 * Returns the value of the '<em><b>Workability</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Workability</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Workability</em>' attribute.
+	 * @return the value of the '<em>Workability</em>' reference.
 	 * @see #isSetWorkability()
 	 * @see #unsetWorkability()
-	 * @see #setWorkability(String)
+	 * @see #setWorkability(IfcText)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcMechanicalConcreteMaterialProperties_Workability()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getWorkability();
+	IfcText getWorkability();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getWorkability <em>Workability</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getWorkability <em>Workability</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Workability</em>' attribute.
+	 * @param value the new value of the '<em>Workability</em>' reference.
 	 * @see #isSetWorkability()
 	 * @see #unsetWorkability()
 	 * @see #getWorkability()
 	 * @generated
 	 */
-	void setWorkability(String value);
+	void setWorkability(IfcText value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getWorkability <em>Workability</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getWorkability <em>Workability</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetWorkability()
 	 * @see #getWorkability()
-	 * @see #setWorkability(String)
+	 * @see #setWorkability(IfcText)
 	 * @generated
 	 */
 	void unsetWorkability();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getWorkability <em>Workability</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getWorkability <em>Workability</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Workability</em>' attribute is set.
+	 * @return whether the value of the '<em>Workability</em>' reference is set.
 	 * @see #unsetWorkability()
 	 * @see #getWorkability()
-	 * @see #setWorkability(String)
+	 * @see #setWorkability(IfcText)
 	 * @generated
 	 */
 	boolean isSetWorkability();
 
 	/**
-	 * Returns the value of the '<em><b>Protective Pore Ratio</b></em>' attribute.
+	 * Returns the value of the '<em><b>Protective Pore Ratio</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Protective Pore Ratio</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Protective Pore Ratio</em>' attribute.
+	 * @return the value of the '<em>Protective Pore Ratio</em>' reference.
 	 * @see #isSetProtectivePoreRatio()
 	 * @see #unsetProtectivePoreRatio()
-	 * @see #setProtectivePoreRatio(float)
+	 * @see #setProtectivePoreRatio(IfcNormalisedRatioMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcMechanicalConcreteMaterialProperties_ProtectivePoreRatio()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getProtectivePoreRatio();
+	IfcNormalisedRatioMeasure getProtectivePoreRatio();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getProtectivePoreRatio <em>Protective Pore Ratio</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getProtectivePoreRatio <em>Protective Pore Ratio</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Protective Pore Ratio</em>' attribute.
+	 * @param value the new value of the '<em>Protective Pore Ratio</em>' reference.
 	 * @see #isSetProtectivePoreRatio()
 	 * @see #unsetProtectivePoreRatio()
 	 * @see #getProtectivePoreRatio()
 	 * @generated
 	 */
-	void setProtectivePoreRatio(float value);
+	void setProtectivePoreRatio(IfcNormalisedRatioMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getProtectivePoreRatio <em>Protective Pore Ratio</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getProtectivePoreRatio <em>Protective Pore Ratio</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetProtectivePoreRatio()
 	 * @see #getProtectivePoreRatio()
-	 * @see #setProtectivePoreRatio(float)
+	 * @see #setProtectivePoreRatio(IfcNormalisedRatioMeasure)
 	 * @generated
 	 */
 	void unsetProtectivePoreRatio();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getProtectivePoreRatio <em>Protective Pore Ratio</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getProtectivePoreRatio <em>Protective Pore Ratio</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Protective Pore Ratio</em>' attribute is set.
+	 * @return whether the value of the '<em>Protective Pore Ratio</em>' reference is set.
 	 * @see #unsetProtectivePoreRatio()
 	 * @see #getProtectivePoreRatio()
-	 * @see #setProtectivePoreRatio(float)
+	 * @see #setProtectivePoreRatio(IfcNormalisedRatioMeasure)
 	 * @generated
 	 */
 	boolean isSetProtectivePoreRatio();
 
 	/**
-	 * Returns the value of the '<em><b>Protective Pore Ratio As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Protective Pore Ratio As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Protective Pore Ratio As String</em>' attribute.
-	 * @see #isSetProtectivePoreRatioAsString()
-	 * @see #unsetProtectivePoreRatioAsString()
-	 * @see #setProtectivePoreRatioAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcMechanicalConcreteMaterialProperties_ProtectivePoreRatioAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getProtectivePoreRatioAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getProtectivePoreRatioAsString <em>Protective Pore Ratio As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Protective Pore Ratio As String</em>' attribute.
-	 * @see #isSetProtectivePoreRatioAsString()
-	 * @see #unsetProtectivePoreRatioAsString()
-	 * @see #getProtectivePoreRatioAsString()
-	 * @generated
-	 */
-	void setProtectivePoreRatioAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getProtectivePoreRatioAsString <em>Protective Pore Ratio As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetProtectivePoreRatioAsString()
-	 * @see #getProtectivePoreRatioAsString()
-	 * @see #setProtectivePoreRatioAsString(String)
-	 * @generated
-	 */
-	void unsetProtectivePoreRatioAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getProtectivePoreRatioAsString <em>Protective Pore Ratio As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Protective Pore Ratio As String</em>' attribute is set.
-	 * @see #unsetProtectivePoreRatioAsString()
-	 * @see #getProtectivePoreRatioAsString()
-	 * @see #setProtectivePoreRatioAsString(String)
-	 * @generated
-	 */
-	boolean isSetProtectivePoreRatioAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Water Impermeability</b></em>' attribute.
+	 * Returns the value of the '<em><b>Water Impermeability</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Water Impermeability</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Water Impermeability</em>' attribute.
+	 * @return the value of the '<em>Water Impermeability</em>' reference.
 	 * @see #isSetWaterImpermeability()
 	 * @see #unsetWaterImpermeability()
-	 * @see #setWaterImpermeability(String)
+	 * @see #setWaterImpermeability(IfcText)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcMechanicalConcreteMaterialProperties_WaterImpermeability()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getWaterImpermeability();
+	IfcText getWaterImpermeability();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getWaterImpermeability <em>Water Impermeability</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getWaterImpermeability <em>Water Impermeability</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Water Impermeability</em>' attribute.
+	 * @param value the new value of the '<em>Water Impermeability</em>' reference.
 	 * @see #isSetWaterImpermeability()
 	 * @see #unsetWaterImpermeability()
 	 * @see #getWaterImpermeability()
 	 * @generated
 	 */
-	void setWaterImpermeability(String value);
+	void setWaterImpermeability(IfcText value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getWaterImpermeability <em>Water Impermeability</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getWaterImpermeability <em>Water Impermeability</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetWaterImpermeability()
 	 * @see #getWaterImpermeability()
-	 * @see #setWaterImpermeability(String)
+	 * @see #setWaterImpermeability(IfcText)
 	 * @generated
 	 */
 	void unsetWaterImpermeability();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getWaterImpermeability <em>Water Impermeability</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMechanicalConcreteMaterialProperties#getWaterImpermeability <em>Water Impermeability</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Water Impermeability</em>' attribute is set.
+	 * @return whether the value of the '<em>Water Impermeability</em>' reference is set.
 	 * @see #unsetWaterImpermeability()
 	 * @see #getWaterImpermeability()
-	 * @see #setWaterImpermeability(String)
+	 * @see #setWaterImpermeability(IfcText)
 	 * @generated
 	 */
 	boolean isSetWaterImpermeability();

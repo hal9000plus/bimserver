@@ -23,9 +23,15 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcFontStyle;
+import org.bimserver.ifc.emf.Ifc2x3.IfcFontVariant;
+import org.bimserver.ifc.emf.Ifc2x3.IfcFontWeight;
 import org.bimserver.ifc.emf.Ifc2x3.IfcSizeSelect;
+import org.bimserver.ifc.emf.Ifc2x3.IfcTextFontName;
 import org.bimserver.ifc.emf.Ifc2x3.IfcTextStyleFontModel;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -71,8 +77,8 @@ public class IfcTextStyleFontModelImpl extends IfcPreDefinedTextFontImpl impleme
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<String> getFontFamily() {
-		return (EList<String>) eGet(Ifc2x3Package.eINSTANCE.getIfcTextStyleFontModel_FontFamily(), true);
+	public EList<IfcTextFontName> getFontFamily() {
+		return (EList<IfcTextFontName>) eGet(Ifc2x3Package.eINSTANCE.getIfcTextStyleFontModel_FontFamily(), true);
 	}
 
 	/**
@@ -98,8 +104,8 @@ public class IfcTextStyleFontModelImpl extends IfcPreDefinedTextFontImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getFontStyle() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcTextStyleFontModel_FontStyle(), true);
+	public IfcFontStyle getFontStyle() {
+		return (IfcFontStyle) eGet(Ifc2x3Package.eINSTANCE.getIfcTextStyleFontModel_FontStyle(), true);
 	}
 
 	/**
@@ -107,7 +113,7 @@ public class IfcTextStyleFontModelImpl extends IfcPreDefinedTextFontImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFontStyle(String newFontStyle) {
+	public void setFontStyle(IfcFontStyle newFontStyle) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcTextStyleFontModel_FontStyle(), newFontStyle);
 	}
 
@@ -134,8 +140,8 @@ public class IfcTextStyleFontModelImpl extends IfcPreDefinedTextFontImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getFontVariant() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcTextStyleFontModel_FontVariant(), true);
+	public IfcFontVariant getFontVariant() {
+		return (IfcFontVariant) eGet(Ifc2x3Package.eINSTANCE.getIfcTextStyleFontModel_FontVariant(), true);
 	}
 
 	/**
@@ -143,7 +149,7 @@ public class IfcTextStyleFontModelImpl extends IfcPreDefinedTextFontImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFontVariant(String newFontVariant) {
+	public void setFontVariant(IfcFontVariant newFontVariant) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcTextStyleFontModel_FontVariant(), newFontVariant);
 	}
 
@@ -170,8 +176,8 @@ public class IfcTextStyleFontModelImpl extends IfcPreDefinedTextFontImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getFontWeight() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcTextStyleFontModel_FontWeight(), true);
+	public IfcFontWeight getFontWeight() {
+		return (IfcFontWeight) eGet(Ifc2x3Package.eINSTANCE.getIfcTextStyleFontModel_FontWeight(), true);
 	}
 
 	/**
@@ -179,7 +185,7 @@ public class IfcTextStyleFontModelImpl extends IfcPreDefinedTextFontImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFontWeight(String newFontWeight) {
+	public void setFontWeight(IfcFontWeight newFontWeight) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcTextStyleFontModel_FontWeight(), newFontWeight);
 	}
 

@@ -22,12 +22,15 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
-import org.bimserver.emf.IdEObjectImpl;
+import org.bimserver.ifc.IfcRootObject;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcDerivedUnitElement;
 import org.bimserver.ifc.emf.Ifc2x3.IfcInteger;
 import org.bimserver.ifc.emf.Ifc2x3.IfcNamedUnit;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -43,7 +46,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class IfcDerivedUnitElementImpl extends IdEObjectImpl implements IfcDerivedUnitElement {
+public class IfcDerivedUnitElementImpl extends IfcRootObject implements IfcDerivedUnitElement {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -96,8 +99,8 @@ public class IfcDerivedUnitElementImpl extends IdEObjectImpl implements IfcDeriv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getExponent() {
-		return (Integer) eGet(Ifc2x3Package.eINSTANCE.getIfcDerivedUnitElement_Exponent(), true);
+	public IfcInteger getExponent() {
+		return (IfcInteger) eGet(Ifc2x3Package.eINSTANCE.getIfcDerivedUnitElement_Exponent(), true);
 	}
 
 	/**
@@ -105,7 +108,7 @@ public class IfcDerivedUnitElementImpl extends IdEObjectImpl implements IfcDeriv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setExponent(int newExponent) {
+	public void setExponent(IfcInteger newExponent) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcDerivedUnitElement_Exponent(), newExponent);
 	}
 

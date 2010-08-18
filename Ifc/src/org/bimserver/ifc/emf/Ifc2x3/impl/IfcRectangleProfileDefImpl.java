@@ -23,7 +23,9 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcPositiveLengthMeasure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRectangleProfileDef;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -34,9 +36,7 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRectangleProfileDefImpl#getXDim <em>XDim</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRectangleProfileDefImpl#getXDimAsString <em>XDim As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRectangleProfileDefImpl#getYDim <em>YDim</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRectangleProfileDefImpl#getYDimAsString <em>YDim As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -67,8 +67,8 @@ public class IfcRectangleProfileDefImpl extends IfcParameterizedProfileDefImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getXDim() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcRectangleProfileDef_XDim(), true);
+	public IfcPositiveLengthMeasure getXDim() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcRectangleProfileDef_XDim(), true);
 	}
 
 	/**
@@ -76,7 +76,7 @@ public class IfcRectangleProfileDefImpl extends IfcParameterizedProfileDefImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setXDim(float newXDim) {
+	public void setXDim(IfcPositiveLengthMeasure newXDim) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcRectangleProfileDef_XDim(), newXDim);
 	}
 
@@ -85,8 +85,8 @@ public class IfcRectangleProfileDefImpl extends IfcParameterizedProfileDefImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getXDimAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcRectangleProfileDef_XDimAsString(), true);
+	public IfcPositiveLengthMeasure getYDim() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcRectangleProfileDef_YDim(), true);
 	}
 
 	/**
@@ -94,44 +94,8 @@ public class IfcRectangleProfileDefImpl extends IfcParameterizedProfileDefImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setXDimAsString(String newXDimAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcRectangleProfileDef_XDimAsString(), newXDimAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getYDim() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcRectangleProfileDef_YDim(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setYDim(float newYDim) {
+	public void setYDim(IfcPositiveLengthMeasure newYDim) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcRectangleProfileDef_YDim(), newYDim);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getYDimAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcRectangleProfileDef_YDimAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setYDimAsString(String newYDimAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcRectangleProfileDef_YDimAsString(), newYDimAsString);
 	}
 
 } //IfcRectangleProfileDefImpl

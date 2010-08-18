@@ -24,6 +24,9 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcCostValue;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
+import org.bimserver.ifc.emf.Ifc2x3.IfcText;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -65,8 +68,8 @@ public class IfcCostValueImpl extends IfcAppliedValueImpl implements IfcCostValu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getCostType() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcCostValue_CostType(), true);
+	public IfcLabel getCostType() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcCostValue_CostType(), true);
 	}
 
 	/**
@@ -74,7 +77,7 @@ public class IfcCostValueImpl extends IfcAppliedValueImpl implements IfcCostValu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCostType(String newCostType) {
+	public void setCostType(IfcLabel newCostType) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcCostValue_CostType(), newCostType);
 	}
 
@@ -83,8 +86,8 @@ public class IfcCostValueImpl extends IfcAppliedValueImpl implements IfcCostValu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getCondition() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcCostValue_Condition(), true);
+	public IfcText getCondition() {
+		return (IfcText) eGet(Ifc2x3Package.eINSTANCE.getIfcCostValue_Condition(), true);
 	}
 
 	/**
@@ -92,7 +95,7 @@ public class IfcCostValueImpl extends IfcAppliedValueImpl implements IfcCostValu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCondition(String newCondition) {
+	public void setCondition(IfcText newCondition) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcCostValue_Condition(), newCondition);
 	}
 

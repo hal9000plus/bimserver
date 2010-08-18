@@ -22,15 +22,18 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
-import org.bimserver.emf.IdEObjectImpl;
+import org.bimserver.ifc.IfcRootObject;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcLogical;
 import org.bimserver.ifc.emf.Ifc2x3.IfcTable;
 import org.bimserver.ifc.emf.Ifc2x3.IfcTableRow;
 import org.bimserver.ifc.emf.Ifc2x3.IfcValue;
-import org.bimserver.ifc.emf.Ifc2x3.Tristate;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -47,7 +50,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class IfcTableRowImpl extends IdEObjectImpl implements IfcTableRow {
+public class IfcTableRowImpl extends IfcRootObject implements IfcTableRow {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -92,8 +95,8 @@ public class IfcTableRowImpl extends IdEObjectImpl implements IfcTableRow {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Tristate getIsHeading() {
-		return (Tristate) eGet(Ifc2x3Package.eINSTANCE.getIfcTableRow_IsHeading(), true);
+	public IfcLogical getIsHeading() {
+		return (IfcLogical) eGet(Ifc2x3Package.eINSTANCE.getIfcTableRow_IsHeading(), true);
 	}
 
 	/**
@@ -101,7 +104,7 @@ public class IfcTableRowImpl extends IdEObjectImpl implements IfcTableRow {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIsHeading(Tristate newIsHeading) {
+	public void setIsHeading(IfcLogical newIsHeading) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcTableRow_IsHeading(), newIsHeading);
 	}
 

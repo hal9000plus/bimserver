@@ -25,8 +25,6 @@ import java.util.Enumeration;
 
 import javax.swing.tree.TreeNode;
 
-import org.bimserver.utils.ListEnumeration;
-
 public class ServerTreeNode implements TreeNode {
 
 	private final String server;

@@ -29,7 +29,7 @@ import org.bimserver.database.SearchingRecordIterator;
 import com.sleepycat.je.Cursor;
 import com.sleepycat.je.DatabaseEntry;
 import com.sleepycat.je.DatabaseException;
-import com.sleepycat.je.LockConflictException;
+import com.sleepycat.je.DeadlockException;
 import com.sleepycat.je.LockMode;
 import com.sleepycat.je.OperationStatus;
 
@@ -58,7 +58,7 @@ public class BerkeleySearchingRecordIterator implements SearchingRecordIterator 
 					return new BerkeleyRecord(key, value);
 				}
 			}
-		} catch (LockConflictException e) {
+		} catch (DeadlockException e) {
 			throw new BimDeadlockException(e);
 		} catch (DatabaseException e) {
 			e.printStackTrace();
@@ -82,7 +82,7 @@ public class BerkeleySearchingRecordIterator implements SearchingRecordIterator 
 					return new BerkeleyRecord(key, value);
 				}
 			}
-		} catch (LockConflictException e) {
+		} catch (DeadlockException e) {
 			throw new BimDeadlockException(e);
 		} catch (DatabaseException e) {
 			e.printStackTrace();

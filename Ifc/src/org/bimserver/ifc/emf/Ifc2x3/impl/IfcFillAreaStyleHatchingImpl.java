@@ -27,6 +27,8 @@ import org.bimserver.ifc.emf.Ifc2x3.IfcCartesianPoint;
 import org.bimserver.ifc.emf.Ifc2x3.IfcCurveStyle;
 import org.bimserver.ifc.emf.Ifc2x3.IfcFillAreaStyleHatching;
 import org.bimserver.ifc.emf.Ifc2x3.IfcHatchLineDistanceSelect;
+import org.bimserver.ifc.emf.Ifc2x3.IfcPlaneAngleMeasure;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -41,7 +43,6 @@ import org.eclipse.emf.ecore.EClass;
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcFillAreaStyleHatchingImpl#getPointOfReferenceHatchLine <em>Point Of Reference Hatch Line</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcFillAreaStyleHatchingImpl#getPatternStart <em>Pattern Start</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcFillAreaStyleHatchingImpl#getHatchLineAngle <em>Hatch Line Angle</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcFillAreaStyleHatchingImpl#getHatchLineAngleAsString <em>Hatch Line Angle As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -180,8 +181,8 @@ public class IfcFillAreaStyleHatchingImpl extends IfcGeometricRepresentationItem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getHatchLineAngle() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcFillAreaStyleHatching_HatchLineAngle(), true);
+	public IfcPlaneAngleMeasure getHatchLineAngle() {
+		return (IfcPlaneAngleMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcFillAreaStyleHatching_HatchLineAngle(), true);
 	}
 
 	/**
@@ -189,26 +190,8 @@ public class IfcFillAreaStyleHatchingImpl extends IfcGeometricRepresentationItem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setHatchLineAngle(float newHatchLineAngle) {
+	public void setHatchLineAngle(IfcPlaneAngleMeasure newHatchLineAngle) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcFillAreaStyleHatching_HatchLineAngle(), newHatchLineAngle);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getHatchLineAngleAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcFillAreaStyleHatching_HatchLineAngleAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setHatchLineAngleAsString(String newHatchLineAngleAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcFillAreaStyleHatching_HatchLineAngleAsString(), newHatchLineAngleAsString);
 	}
 
 } //IfcFillAreaStyleHatchingImpl

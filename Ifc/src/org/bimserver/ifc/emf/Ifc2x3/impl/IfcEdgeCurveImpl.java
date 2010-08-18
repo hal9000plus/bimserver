@@ -25,8 +25,8 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcCurve;
 import org.bimserver.ifc.emf.Ifc2x3.IfcEdgeCurve;
-import org.bimserver.ifc.emf.Ifc2x3.Tristate;
 import org.bimserver.ifc.emf.Ifc2x3.IfcLogical;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -86,8 +86,8 @@ public class IfcEdgeCurveImpl extends IfcEdgeImpl implements IfcEdgeCurve {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Tristate getSameSense() {
-		return (Tristate) eGet(Ifc2x3Package.eINSTANCE.getIfcEdgeCurve_SameSense(), true);
+	public IfcLogical getSameSense() {
+		return (IfcLogical) eGet(Ifc2x3Package.eINSTANCE.getIfcEdgeCurve_SameSense(), true);
 	}
 
 	/**
@@ -95,7 +95,7 @@ public class IfcEdgeCurveImpl extends IfcEdgeImpl implements IfcEdgeCurve {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSameSense(Tristate newSameSense) {
+	public void setSameSense(IfcLogical newSameSense) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcEdgeCurve_SameSense(), newSameSense);
 	}
 

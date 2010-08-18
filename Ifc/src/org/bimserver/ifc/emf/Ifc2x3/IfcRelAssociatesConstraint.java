@@ -41,30 +41,30 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcRelAssociatesConstraint extends IfcRelAssociates {
 	/**
-	 * Returns the value of the '<em><b>Intent</b></em>' attribute.
+	 * Returns the value of the '<em><b>Intent</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Intent</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Intent</em>' attribute.
-	 * @see #setIntent(String)
+	 * @return the value of the '<em>Intent</em>' reference.
+	 * @see #setIntent(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRelAssociatesConstraint_Intent()
 	 * @model
 	 * @generated
 	 */
-	String getIntent();
+	IfcLabel getIntent();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelAssociatesConstraint#getIntent <em>Intent</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRelAssociatesConstraint#getIntent <em>Intent</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Intent</em>' attribute.
+	 * @param value the new value of the '<em>Intent</em>' reference.
 	 * @see #getIntent()
 	 * @generated
 	 */
-	void setIntent(String value);
+	void setIntent(IfcLabel value);
 
 	/**
 	 * Returns the value of the '<em><b>Relating Constraint</b></em>' reference.

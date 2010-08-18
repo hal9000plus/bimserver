@@ -35,7 +35,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcMaterialLayerSet#getMaterialLayers <em>Material Layers</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcMaterialLayerSet#getLayerSetName <em>Layer Set Name</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcMaterialLayerSet#getTotalThickness <em>Total Thickness</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcMaterialLayerSet#getTotalThicknessAsString <em>Total Thickness As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -63,108 +62,83 @@ public interface IfcMaterialLayerSet extends IfcMaterialSelect {
 	EList<IfcMaterialLayer> getMaterialLayers();
 
 	/**
-	 * Returns the value of the '<em><b>Layer Set Name</b></em>' attribute.
+	 * Returns the value of the '<em><b>Layer Set Name</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Layer Set Name</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Layer Set Name</em>' attribute.
+	 * @return the value of the '<em>Layer Set Name</em>' reference.
 	 * @see #isSetLayerSetName()
 	 * @see #unsetLayerSetName()
-	 * @see #setLayerSetName(String)
+	 * @see #setLayerSetName(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcMaterialLayerSet_LayerSetName()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getLayerSetName();
+	IfcLabel getLayerSetName();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMaterialLayerSet#getLayerSetName <em>Layer Set Name</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMaterialLayerSet#getLayerSetName <em>Layer Set Name</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Layer Set Name</em>' attribute.
+	 * @param value the new value of the '<em>Layer Set Name</em>' reference.
 	 * @see #isSetLayerSetName()
 	 * @see #unsetLayerSetName()
 	 * @see #getLayerSetName()
 	 * @generated
 	 */
-	void setLayerSetName(String value);
+	void setLayerSetName(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMaterialLayerSet#getLayerSetName <em>Layer Set Name</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMaterialLayerSet#getLayerSetName <em>Layer Set Name</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetLayerSetName()
 	 * @see #getLayerSetName()
-	 * @see #setLayerSetName(String)
+	 * @see #setLayerSetName(IfcLabel)
 	 * @generated
 	 */
 	void unsetLayerSetName();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMaterialLayerSet#getLayerSetName <em>Layer Set Name</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMaterialLayerSet#getLayerSetName <em>Layer Set Name</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Layer Set Name</em>' attribute is set.
+	 * @return whether the value of the '<em>Layer Set Name</em>' reference is set.
 	 * @see #unsetLayerSetName()
 	 * @see #getLayerSetName()
-	 * @see #setLayerSetName(String)
+	 * @see #setLayerSetName(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetLayerSetName();
 
 	/**
-	 * Returns the value of the '<em><b>Total Thickness</b></em>' attribute.
+	 * Returns the value of the '<em><b>Total Thickness</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Total Thickness</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Total Thickness</em>' attribute.
-	 * @see #setTotalThickness(float)
+	 * @return the value of the '<em>Total Thickness</em>' reference.
+	 * @see #setTotalThickness(IfcLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcMaterialLayerSet_TotalThickness()
-	 * @model derived="true"
+	 * @model transient="true" volatile="true" derived="true"
+	 *        annotation="http://www.iso.org/iso10303-11/EXPRESS code=' IfcMlsTotalThickness(SELF);'"
 	 * @generated
 	 */
-	float getTotalThickness();
+	IfcLengthMeasure getTotalThickness();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMaterialLayerSet#getTotalThickness <em>Total Thickness</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMaterialLayerSet#getTotalThickness <em>Total Thickness</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Total Thickness</em>' attribute.
+	 * @param value the new value of the '<em>Total Thickness</em>' reference.
 	 * @see #getTotalThickness()
 	 * @generated
 	 */
-	void setTotalThickness(float value);
-
-	/**
-	 * Returns the value of the '<em><b>Total Thickness As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Total Thickness As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Total Thickness As String</em>' attribute.
-	 * @see #setTotalThicknessAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcMaterialLayerSet_TotalThicknessAsString()
-	 * @model
-	 * @generated
-	 */
-	String getTotalThicknessAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcMaterialLayerSet#getTotalThicknessAsString <em>Total Thickness As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Total Thickness As String</em>' attribute.
-	 * @see #getTotalThicknessAsString()
-	 * @generated
-	 */
-	void setTotalThicknessAsString(String value);
+	void setTotalThickness(IfcLengthMeasure value);
 
 } // IfcMaterialLayerSet

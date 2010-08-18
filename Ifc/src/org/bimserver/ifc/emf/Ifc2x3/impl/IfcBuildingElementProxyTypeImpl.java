@@ -25,6 +25,7 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcBuildingElementProxyType;
 import org.bimserver.ifc.emf.Ifc2x3.IfcBuildingElementProxyTypeEnum;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

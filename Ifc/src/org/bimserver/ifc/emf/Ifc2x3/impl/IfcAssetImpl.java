@@ -27,7 +27,9 @@ import org.bimserver.ifc.emf.Ifc2x3.IfcActorSelect;
 import org.bimserver.ifc.emf.Ifc2x3.IfcAsset;
 import org.bimserver.ifc.emf.Ifc2x3.IfcCalendarDate;
 import org.bimserver.ifc.emf.Ifc2x3.IfcCostValue;
+import org.bimserver.ifc.emf.Ifc2x3.IfcIdentifier;
 import org.bimserver.ifc.emf.Ifc2x3.IfcPerson;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -76,8 +78,8 @@ public class IfcAssetImpl extends IfcGroupImpl implements IfcAsset {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getAssetID() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcAsset_AssetID(), true);
+	public IfcIdentifier getAssetID() {
+		return (IfcIdentifier) eGet(Ifc2x3Package.eINSTANCE.getIfcAsset_AssetID(), true);
 	}
 
 	/**
@@ -85,7 +87,7 @@ public class IfcAssetImpl extends IfcGroupImpl implements IfcAsset {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAssetID(String newAssetID) {
+	public void setAssetID(IfcIdentifier newAssetID) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcAsset_AssetID(), newAssetID);
 	}
 

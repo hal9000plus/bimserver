@@ -26,6 +26,7 @@ import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcCartesianPoint;
 import org.bimserver.ifc.emf.Ifc2x3.IfcLine;
 import org.bimserver.ifc.emf.Ifc2x3.IfcVector;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

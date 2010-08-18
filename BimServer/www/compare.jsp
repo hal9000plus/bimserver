@@ -6,52 +6,60 @@
 <%@page import="java.util.Map"%>
 <%@page import="java.io.PrintStream"%>
 <%@page import="org.bimserver.ifc.file.compare.CompareResult"%>
-<%@page import="org.bimserver.JspHelper"%>
-<%@page import="org.bimserver.shared.SCompareResult"%>
-<%@page import="org.bimserver.interfaces.objects.SProject"%>
-<%@page import="org.bimserver.interfaces.objects.SRevision"%>
+<%@page import="org.bimserver.shared.SRevision"%>
+<%@page import="org.bimserver.shared.SProject"%>
 <%@ include file="header.jsp" %>
 <%
 	if (request.getParameter("compare") != null) {
-		long roid1 = Long.parseLong(request.getParameter("roid1"));
-		long roid2 = Long.parseLong(request.getParameter("roid2"));
-		long poid = Long.parseLong(request.getParameter("poid"));
-		SProject project = loginManager.getService().getProjectByPoid(poid);
-		SRevision revision1 = loginManager.getService().getRevision(roid1);
-		SRevision revision2 = loginManager.getService().getRevision(roid2);
-		SCompareResult compareResult = loginManager.getService().compare(roid1, roid2);
+		int rid1 = Integer.parseInt(request.getParameter("rid1"));
+		int rid2 = Integer.parseInt(request.getParameter("rid2"));
+		int pid = Integer.parseInt(request.getParameter("pid"));
+		SProject project = loginManager.getService().getProjectById(pid);
+		SRevision revision1 = loginManager.getService().getRevision(pid, rid1);
+		SRevision revision2 = loginManager.getService().getRevision(pid, rid2);
+		CompareResult compareResult = loginManager.getService().compare(pid, rid1, rid2);
+		Map<EClass, List<CompareResult.Item>> items = compareResult.getItems();
 %>
-Back to 
-<a href="project.jsp?poid=<%=poid %>">project '<%= project.getName() %>'</a><br/><br/>
-  <a href="#" id="emaillink">E-mail summary</a>
-  <div id="emailform">
-	<div id="emailajaxloader">
-	E-mailing compare results... <img src="images/ajax-loader.gif"/>
-	</div>
-  	<form method="post" action="sendcompareemail.jsp" id="emailcompareform">
-  		Send summary to <input type="text" id="address" name="address"/>
-  		<input type="hidden" name="poid" value="<%=poid %>"/>
-  		<input type="hidden" name="roid1" value="<%=roid1 %>"/>
-  		<input type="hidden" name="roid2" value="<%=roid2 %>"/>
-  		<input type="submit" name="email" value="Send"/>
-  	</form>
-  </div>
-<%= JspHelper.writeCompareResult(compareResult, revision1.getId(), revision2.getId(), project) %>
-<script>
-	$(document).ready(function(){
-		$("#emailform").hide();
-		$("#emailajaxloader").hide();
-	});
-	$("#emaillink").click(function(){
-		$("#emaillink").hide();
-		$("#emailform").show();
-		$("#address").focus();
-	});
-	$("#emailcompareform").submit(function(){
-		$("#emailcompareform").hide();
-		$("#emailajaxloader").show();
-		$("#emailform").load("sendcompareemail.jsp?poid=<%=poid%>&roid1=<%=roid1%>&roid2=<%=roid2%>&address=" + $("#address").val());
-		return false;
-	});
-</script>
-<%}%>
+Back to <a href="project.jsp?id=<%=pid %>">project '<%= project.getName() %>'</a><br/><br/>
+<h1>Building Model Comparator</h1>
+Compare results for revisions '<%=rid1 %>' and '<%=rid2 %>' of project '<%=project.getName() %>'<br/>
+Total number of differences: <%=compareResult.size() %><br/> 
+<table class="formatted">
+	<tr>
+		<th>Type</th>
+		<th>Guid</th>
+		<th>Name</th>
+		<th>Difference</th>
+	</tr>
+<%
+		for (EClass eClass : items.keySet()) {
+			for (Item item : items.get(eClass)) {
+				String name = "";
+				String guid = "";
+				if (item.eObject instanceof IfcRoot) {
+					IfcRoot ifcRoot = (IfcRoot) item.eObject;
+					if (ifcRoot.getName() != null) {
+						name = ifcRoot.getName().getWrappedValue();
+					}
+					if (ifcRoot.getGlobalId() != null) {
+						guid = ifcRoot.getGlobalId().getWrappedValue();
+					}
+				}
+				out.append("<tr>");
+				if (item.type == CompareResult.Type.ADDED) {
+					out.append("<td>" + item.eObject.eClass().getName() + "</td>");
+					out.append("<td>" + guid + "</td>");
+					out.append("<td>" + name + "</td>");
+					out.append("<td>Added</td>");
+				} else if (item.type == Type.DELETED) {
+					out.append("<td>" + item.eObject.eClass().getName() + "</td>");
+					out.append("<td>" + guid + "</td>");
+					out.append("<td>" + name + "</td>");
+					out.append("<td>Deleted</td>");
+				}
+				out.append("</tr>");
+			}
+		}
+	}
+%>
+</table>

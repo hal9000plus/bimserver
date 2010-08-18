@@ -22,13 +22,17 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
-import org.bimserver.emf.IdEObjectImpl;
+import org.bimserver.ifc.IfcRootObject;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLogical;
 import org.bimserver.ifc.emf.Ifc2x3.IfcMaterial;
 import org.bimserver.ifc.emf.Ifc2x3.IfcMaterialLayer;
 import org.bimserver.ifc.emf.Ifc2x3.IfcMaterialLayerSet;
-import org.bimserver.ifc.emf.Ifc2x3.Tristate;
+import org.bimserver.ifc.emf.Ifc2x3.IfcPositiveLengthMeasure;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -39,7 +43,6 @@ import org.eclipse.emf.ecore.EClass;
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcMaterialLayerImpl#getMaterial <em>Material</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcMaterialLayerImpl#getLayerThickness <em>Layer Thickness</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcMaterialLayerImpl#getLayerThicknessAsString <em>Layer Thickness As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcMaterialLayerImpl#getIsVentilated <em>Is Ventilated</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcMaterialLayerImpl#getToMaterialLayerSet <em>To Material Layer Set</em>}</li>
  * </ul>
@@ -47,7 +50,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class IfcMaterialLayerImpl extends IdEObjectImpl implements IfcMaterialLayer {
+public class IfcMaterialLayerImpl extends IfcRootObject implements IfcMaterialLayer {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -118,8 +121,8 @@ public class IfcMaterialLayerImpl extends IdEObjectImpl implements IfcMaterialLa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getLayerThickness() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcMaterialLayer_LayerThickness(), true);
+	public IfcPositiveLengthMeasure getLayerThickness() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcMaterialLayer_LayerThickness(), true);
 	}
 
 	/**
@@ -127,7 +130,7 @@ public class IfcMaterialLayerImpl extends IdEObjectImpl implements IfcMaterialLa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLayerThickness(float newLayerThickness) {
+	public void setLayerThickness(IfcPositiveLengthMeasure newLayerThickness) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcMaterialLayer_LayerThickness(), newLayerThickness);
 	}
 
@@ -136,8 +139,8 @@ public class IfcMaterialLayerImpl extends IdEObjectImpl implements IfcMaterialLa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getLayerThicknessAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcMaterialLayer_LayerThicknessAsString(), true);
+	public IfcLogical getIsVentilated() {
+		return (IfcLogical) eGet(Ifc2x3Package.eINSTANCE.getIfcMaterialLayer_IsVentilated(), true);
 	}
 
 	/**
@@ -145,25 +148,7 @@ public class IfcMaterialLayerImpl extends IdEObjectImpl implements IfcMaterialLa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLayerThicknessAsString(String newLayerThicknessAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcMaterialLayer_LayerThicknessAsString(), newLayerThicknessAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Tristate getIsVentilated() {
-		return (Tristate) eGet(Ifc2x3Package.eINSTANCE.getIfcMaterialLayer_IsVentilated(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setIsVentilated(Tristate newIsVentilated) {
+	public void setIsVentilated(IfcLogical newIsVentilated) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcMaterialLayer_IsVentilated(), newIsVentilated);
 	}
 

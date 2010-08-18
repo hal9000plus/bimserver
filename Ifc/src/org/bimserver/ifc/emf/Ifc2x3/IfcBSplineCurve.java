@@ -35,8 +35,10 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcBSplineCurve#getDegree <em>Degree</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcBSplineCurve#getControlPointsList <em>Control Points List</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcBSplineCurve#getCurveForm <em>Curve Form</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcBSplineCurve#isClosedCurve <em>Closed Curve</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcBSplineCurve#isSelfIntersect <em>Self Intersect</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcBSplineCurve#getClosedCurve <em>Closed Curve</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcBSplineCurve#getSelfIntersect <em>Self Intersect</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcBSplineCurve#getUpperIndexOnControlPoints <em>Upper Index On Control Points</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcBSplineCurve#getControlPoints <em>Control Points</em>}</li>
  * </ul>
  * </p>
  *
@@ -46,30 +48,30 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface IfcBSplineCurve extends IfcBoundedCurve {
 	/**
-	 * Returns the value of the '<em><b>Degree</b></em>' attribute.
+	 * Returns the value of the '<em><b>Degree</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Degree</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Degree</em>' attribute.
-	 * @see #setDegree(int)
+	 * @return the value of the '<em>Degree</em>' reference.
+	 * @see #setDegree(IfcInteger)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcBSplineCurve_Degree()
 	 * @model
 	 * @generated
 	 */
-	int getDegree();
+	IfcInteger getDegree();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBSplineCurve#getDegree <em>Degree</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBSplineCurve#getDegree <em>Degree</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Degree</em>' attribute.
+	 * @param value the new value of the '<em>Degree</em>' reference.
 	 * @see #getDegree()
 	 * @generated
 	 */
-	void setDegree(int value);
+	void setDegree(IfcInteger value);
 
 	/**
 	 * Returns the value of the '<em><b>Control Points List</b></em>' reference list.
@@ -117,55 +119,99 @@ public interface IfcBSplineCurve extends IfcBoundedCurve {
 	void setCurveForm(IfcBSplineCurveForm value);
 
 	/**
-	 * Returns the value of the '<em><b>Closed Curve</b></em>' attribute.
+	 * Returns the value of the '<em><b>Closed Curve</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Closed Curve</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Closed Curve</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Closed Curve</em>' attribute.
-	 * @see #setClosedCurve(boolean)
+	 * @return the value of the '<em>Closed Curve</em>' reference.
+	 * @see #setClosedCurve(IfcLogical)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcBSplineCurve_ClosedCurve()
 	 * @model
 	 * @generated
 	 */
-	boolean isClosedCurve();
+	IfcLogical getClosedCurve();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBSplineCurve#isClosedCurve <em>Closed Curve</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBSplineCurve#getClosedCurve <em>Closed Curve</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Closed Curve</em>' attribute.
-	 * @see #isClosedCurve()
+	 * @param value the new value of the '<em>Closed Curve</em>' reference.
+	 * @see #getClosedCurve()
 	 * @generated
 	 */
-	void setClosedCurve(boolean value);
+	void setClosedCurve(IfcLogical value);
 
 	/**
-	 * Returns the value of the '<em><b>Self Intersect</b></em>' attribute.
+	 * Returns the value of the '<em><b>Self Intersect</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Self Intersect</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Self Intersect</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Self Intersect</em>' attribute.
-	 * @see #setSelfIntersect(boolean)
+	 * @return the value of the '<em>Self Intersect</em>' reference.
+	 * @see #setSelfIntersect(IfcLogical)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcBSplineCurve_SelfIntersect()
 	 * @model
 	 * @generated
 	 */
-	boolean isSelfIntersect();
+	IfcLogical getSelfIntersect();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBSplineCurve#isSelfIntersect <em>Self Intersect</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBSplineCurve#getSelfIntersect <em>Self Intersect</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Self Intersect</em>' attribute.
-	 * @see #isSelfIntersect()
+	 * @param value the new value of the '<em>Self Intersect</em>' reference.
+	 * @see #getSelfIntersect()
 	 * @generated
 	 */
-	void setSelfIntersect(boolean value);
+	void setSelfIntersect(IfcLogical value);
+
+	/**
+	 * Returns the value of the '<em><b>Upper Index On Control Points</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Upper Index On Control Points</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Upper Index On Control Points</em>' reference.
+	 * @see #setUpperIndexOnControlPoints(IfcInteger)
+	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcBSplineCurve_UpperIndexOnControlPoints()
+	 * @model transient="true" volatile="true" derived="true"
+	 *        annotation="http://www.iso.org/iso10303-11/EXPRESS code=' (SIZEOF(ControlPointsList) - 1);'"
+	 * @generated
+	 */
+	IfcInteger getUpperIndexOnControlPoints();
+
+	/**
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBSplineCurve#getUpperIndexOnControlPoints <em>Upper Index On Control Points</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Upper Index On Control Points</em>' reference.
+	 * @see #getUpperIndexOnControlPoints()
+	 * @generated
+	 */
+	void setUpperIndexOnControlPoints(IfcInteger value);
+
+	/**
+	 * Returns the value of the '<em><b>Control Points</b></em>' reference list.
+	 * The list contents are of type {@link org.bimserver.ifc.emf.Ifc2x3.IfcCartesianPoint}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Control Points</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Control Points</em>' reference list.
+	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcBSplineCurve_ControlPoints()
+	 * @model transient="true" volatile="true" derived="true"
+	 *        annotation="http://www.iso.org/iso10303-11/EXPRESS code=' IfcListToArray(ControlPointsList,0,UpperIndexOnControlPoints);'"
+	 * @generated
+	 */
+	EList<IfcCartesianPoint> getControlPoints();
 
 } // IfcBSplineCurve

@@ -34,7 +34,6 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeometricRepresentationContext#getCoordinateSpaceDimension <em>Coordinate Space Dimension</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeometricRepresentationContext#getPrecision <em>Precision</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeometricRepresentationContext#getPrecisionAsString <em>Precision As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeometricRepresentationContext#getWorldCoordinateSystem <em>World Coordinate System</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeometricRepresentationContext#getTrueNorth <em>True North</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeometricRepresentationContext#getHasSubContexts <em>Has Sub Contexts</em>}</li>
@@ -47,82 +46,56 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface IfcGeometricRepresentationContext extends IfcRepresentationContext {
 	/**
-	 * Returns the value of the '<em><b>Coordinate Space Dimension</b></em>' attribute.
+	 * Returns the value of the '<em><b>Coordinate Space Dimension</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Coordinate Space Dimension</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Coordinate Space Dimension</em>' attribute.
-	 * @see #setCoordinateSpaceDimension(int)
+	 * @return the value of the '<em>Coordinate Space Dimension</em>' reference.
+	 * @see #setCoordinateSpaceDimension(IfcDimensionCount)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcGeometricRepresentationContext_CoordinateSpaceDimension()
 	 * @model
 	 * @generated
 	 */
-	int getCoordinateSpaceDimension();
+	IfcDimensionCount getCoordinateSpaceDimension();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeometricRepresentationContext#getCoordinateSpaceDimension <em>Coordinate Space Dimension</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeometricRepresentationContext#getCoordinateSpaceDimension <em>Coordinate Space Dimension</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Coordinate Space Dimension</em>' attribute.
+	 * @param value the new value of the '<em>Coordinate Space Dimension</em>' reference.
 	 * @see #getCoordinateSpaceDimension()
 	 * @generated
 	 */
-	void setCoordinateSpaceDimension(int value);
+	void setCoordinateSpaceDimension(IfcDimensionCount value);
 
 	/**
-	 * Returns the value of the '<em><b>Precision</b></em>' attribute.
+	 * Returns the value of the '<em><b>Precision</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Precision</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Precision</em>' attribute.
-	 * @see #setPrecision(float)
+	 * @return the value of the '<em>Precision</em>' reference.
+	 * @see #setPrecision(IfcReal)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcGeometricRepresentationContext_Precision()
 	 * @model
 	 * @generated
 	 */
-	float getPrecision();
+	IfcReal getPrecision();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeometricRepresentationContext#getPrecision <em>Precision</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeometricRepresentationContext#getPrecision <em>Precision</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Precision</em>' attribute.
+	 * @param value the new value of the '<em>Precision</em>' reference.
 	 * @see #getPrecision()
 	 * @generated
 	 */
-	void setPrecision(float value);
-
-	/**
-	 * Returns the value of the '<em><b>Precision As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Precision As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Precision As String</em>' attribute.
-	 * @see #setPrecisionAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcGeometricRepresentationContext_PrecisionAsString()
-	 * @model
-	 * @generated
-	 */
-	String getPrecisionAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcGeometricRepresentationContext#getPrecisionAsString <em>Precision As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Precision As String</em>' attribute.
-	 * @see #getPrecisionAsString()
-	 * @generated
-	 */
-	void setPrecisionAsString(String value);
+	void setPrecision(IfcReal value);
 
 	/**
 	 * Returns the value of the '<em><b>World Coordinate System</b></em>' reference.

@@ -25,6 +25,8 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcDirection;
 import org.bimserver.ifc.emf.Ifc2x3.IfcExtrudedAreaSolid;
+import org.bimserver.ifc.emf.Ifc2x3.IfcPositiveLengthMeasure;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -36,7 +38,6 @@ import org.eclipse.emf.ecore.EClass;
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcExtrudedAreaSolidImpl#getExtrudedDirection <em>Extruded Direction</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcExtrudedAreaSolidImpl#getDepth <em>Depth</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcExtrudedAreaSolidImpl#getDepthAsString <em>Depth As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -85,8 +86,8 @@ public class IfcExtrudedAreaSolidImpl extends IfcSweptAreaSolidImpl implements I
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getDepth() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcExtrudedAreaSolid_Depth(), true);
+	public IfcPositiveLengthMeasure getDepth() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcExtrudedAreaSolid_Depth(), true);
 	}
 
 	/**
@@ -94,26 +95,8 @@ public class IfcExtrudedAreaSolidImpl extends IfcSweptAreaSolidImpl implements I
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDepth(float newDepth) {
+	public void setDepth(IfcPositiveLengthMeasure newDepth) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcExtrudedAreaSolid_Depth(), newDepth);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getDepthAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcExtrudedAreaSolid_DepthAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDepthAsString(String newDepthAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcExtrudedAreaSolid_DepthAsString(), newDepthAsString);
 	}
 
 } //IfcExtrudedAreaSolidImpl

@@ -22,7 +22,7 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3;
 
-import org.bimserver.emf.IdEObject;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -40,10 +40,9 @@ import org.bimserver.emf.IdEObject;
  *
  * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcApprovalActorRelationship()
  * @model
- * @extends IdEObject
  * @generated
  */
-public interface IfcApprovalActorRelationship extends IdEObject {
+public interface IfcApprovalActorRelationship extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Actor</b></em>' reference.
 	 * <!-- begin-user-doc -->

@@ -22,7 +22,7 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3;
 
-import org.bimserver.emf.IdEObject;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,59 +38,58 @@ import org.bimserver.emf.IdEObject;
  *
  * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoad()
  * @model
- * @extends IdEObject
  * @generated
  */
-public interface IfcStructuralLoad extends IdEObject {
+public interface IfcStructuralLoad extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * Returns the value of the '<em><b>Name</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Name</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
+	 * @return the value of the '<em>Name</em>' reference.
 	 * @see #isSetName()
 	 * @see #unsetName()
-	 * @see #setName(String)
+	 * @see #setName(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoad_Name()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getName();
+	IfcLabel getName();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoad#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoad#getName <em>Name</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @param value the new value of the '<em>Name</em>' reference.
 	 * @see #isSetName()
 	 * @see #unsetName()
 	 * @see #getName()
 	 * @generated
 	 */
-	void setName(String value);
+	void setName(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoad#getName <em>Name</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoad#getName <em>Name</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetName()
 	 * @see #getName()
-	 * @see #setName(String)
+	 * @see #setName(IfcLabel)
 	 * @generated
 	 */
 	void unsetName();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoad#getName <em>Name</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoad#getName <em>Name</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Name</em>' attribute is set.
+	 * @return whether the value of the '<em>Name</em>' reference is set.
 	 * @see #unsetName()
 	 * @see #getName()
-	 * @see #setName(String)
+	 * @see #setName(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetName();

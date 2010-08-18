@@ -75,107 +75,107 @@ public interface IfcRepresentation extends IfcLayeredItem {
 	void setContextOfItems(IfcRepresentationContext value);
 
 	/**
-	 * Returns the value of the '<em><b>Representation Identifier</b></em>' attribute.
+	 * Returns the value of the '<em><b>Representation Identifier</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Representation Identifier</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Representation Identifier</em>' attribute.
+	 * @return the value of the '<em>Representation Identifier</em>' reference.
 	 * @see #isSetRepresentationIdentifier()
 	 * @see #unsetRepresentationIdentifier()
-	 * @see #setRepresentationIdentifier(String)
+	 * @see #setRepresentationIdentifier(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRepresentation_RepresentationIdentifier()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getRepresentationIdentifier();
+	IfcLabel getRepresentationIdentifier();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRepresentation#getRepresentationIdentifier <em>Representation Identifier</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRepresentation#getRepresentationIdentifier <em>Representation Identifier</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Representation Identifier</em>' attribute.
+	 * @param value the new value of the '<em>Representation Identifier</em>' reference.
 	 * @see #isSetRepresentationIdentifier()
 	 * @see #unsetRepresentationIdentifier()
 	 * @see #getRepresentationIdentifier()
 	 * @generated
 	 */
-	void setRepresentationIdentifier(String value);
+	void setRepresentationIdentifier(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRepresentation#getRepresentationIdentifier <em>Representation Identifier</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRepresentation#getRepresentationIdentifier <em>Representation Identifier</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetRepresentationIdentifier()
 	 * @see #getRepresentationIdentifier()
-	 * @see #setRepresentationIdentifier(String)
+	 * @see #setRepresentationIdentifier(IfcLabel)
 	 * @generated
 	 */
 	void unsetRepresentationIdentifier();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRepresentation#getRepresentationIdentifier <em>Representation Identifier</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRepresentation#getRepresentationIdentifier <em>Representation Identifier</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Representation Identifier</em>' attribute is set.
+	 * @return whether the value of the '<em>Representation Identifier</em>' reference is set.
 	 * @see #unsetRepresentationIdentifier()
 	 * @see #getRepresentationIdentifier()
-	 * @see #setRepresentationIdentifier(String)
+	 * @see #setRepresentationIdentifier(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetRepresentationIdentifier();
 
 	/**
-	 * Returns the value of the '<em><b>Representation Type</b></em>' attribute.
+	 * Returns the value of the '<em><b>Representation Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Representation Type</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Representation Type</em>' attribute.
+	 * @return the value of the '<em>Representation Type</em>' reference.
 	 * @see #isSetRepresentationType()
 	 * @see #unsetRepresentationType()
-	 * @see #setRepresentationType(String)
+	 * @see #setRepresentationType(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRepresentation_RepresentationType()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getRepresentationType();
+	IfcLabel getRepresentationType();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRepresentation#getRepresentationType <em>Representation Type</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRepresentation#getRepresentationType <em>Representation Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Representation Type</em>' attribute.
+	 * @param value the new value of the '<em>Representation Type</em>' reference.
 	 * @see #isSetRepresentationType()
 	 * @see #unsetRepresentationType()
 	 * @see #getRepresentationType()
 	 * @generated
 	 */
-	void setRepresentationType(String value);
+	void setRepresentationType(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRepresentation#getRepresentationType <em>Representation Type</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRepresentation#getRepresentationType <em>Representation Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetRepresentationType()
 	 * @see #getRepresentationType()
-	 * @see #setRepresentationType(String)
+	 * @see #setRepresentationType(IfcLabel)
 	 * @generated
 	 */
 	void unsetRepresentationType();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRepresentation#getRepresentationType <em>Representation Type</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRepresentation#getRepresentationType <em>Representation Type</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Representation Type</em>' attribute is set.
+	 * @return whether the value of the '<em>Representation Type</em>' reference is set.
 	 * @see #unsetRepresentationType()
 	 * @see #getRepresentationType()
-	 * @see #setRepresentationType(String)
+	 * @see #setRepresentationType(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetRepresentationType();

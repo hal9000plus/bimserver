@@ -22,12 +22,17 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
-import org.bimserver.emf.IdEObjectImpl;
+import org.bimserver.ifc.IfcRootObject;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcInteger;
 import org.bimserver.ifc.emf.Ifc2x3.IfcTable;
 import org.bimserver.ifc.emf.Ifc2x3.IfcTableRow;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,14 +41,16 @@ import org.eclipse.emf.ecore.EClass;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcTableImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcTableImpl#getRows <em>Rows</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcTableImpl#getNumberOfHeadings <em>Number Of Headings</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcTableImpl#getNumberOfDataRows <em>Number Of Data Rows</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcTableImpl#getNumberOfCellsInRow <em>Number Of Cells In Row</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class IfcTableImpl extends IdEObjectImpl implements IfcTable {
+public class IfcTableImpl extends IfcRootObject implements IfcTable {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -78,27 +85,63 @@ public class IfcTableImpl extends IdEObjectImpl implements IfcTable {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcTable_Name(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcTable_Name(), newName);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@SuppressWarnings("unchecked")
 	public EList<IfcTableRow> getRows() {
 		return (EList<IfcTableRow>) eGet(Ifc2x3Package.eINSTANCE.getIfcTable_Rows(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IfcInteger getNumberOfHeadings() {
+		return (IfcInteger) eGet(Ifc2x3Package.eINSTANCE.getIfcTable_NumberOfHeadings(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNumberOfHeadings(IfcInteger newNumberOfHeadings) {
+		eSet(Ifc2x3Package.eINSTANCE.getIfcTable_NumberOfHeadings(), newNumberOfHeadings);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IfcInteger getNumberOfDataRows() {
+		return (IfcInteger) eGet(Ifc2x3Package.eINSTANCE.getIfcTable_NumberOfDataRows(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNumberOfDataRows(IfcInteger newNumberOfDataRows) {
+		eSet(Ifc2x3Package.eINSTANCE.getIfcTable_NumberOfDataRows(), newNumberOfDataRows);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IfcInteger getNumberOfCellsInRow() {
+		return (IfcInteger) eGet(Ifc2x3Package.eINSTANCE.getIfcTable_NumberOfCellsInRow(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNumberOfCellsInRow(IfcInteger newNumberOfCellsInRow) {
+		eSet(Ifc2x3Package.eINSTANCE.getIfcTable_NumberOfCellsInRow(), newNumberOfCellsInRow);
 	}
 
 } //IfcTableImpl

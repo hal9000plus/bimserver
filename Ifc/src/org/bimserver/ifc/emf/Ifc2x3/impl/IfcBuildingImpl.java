@@ -24,7 +24,9 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcBuilding;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLengthMeasure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcPostalAddress;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -35,9 +37,7 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcBuildingImpl#getElevationOfRefHeight <em>Elevation Of Ref Height</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcBuildingImpl#getElevationOfRefHeightAsString <em>Elevation Of Ref Height As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcBuildingImpl#getElevationOfTerrain <em>Elevation Of Terrain</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcBuildingImpl#getElevationOfTerrainAsString <em>Elevation Of Terrain As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcBuildingImpl#getBuildingAddress <em>Building Address</em>}</li>
  * </ul>
  * </p>
@@ -69,8 +69,8 @@ public class IfcBuildingImpl extends IfcSpatialStructureElementImpl implements I
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getElevationOfRefHeight() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcBuilding_ElevationOfRefHeight(), true);
+	public IfcLengthMeasure getElevationOfRefHeight() {
+		return (IfcLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcBuilding_ElevationOfRefHeight(), true);
 	}
 
 	/**
@@ -78,7 +78,7 @@ public class IfcBuildingImpl extends IfcSpatialStructureElementImpl implements I
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setElevationOfRefHeight(float newElevationOfRefHeight) {
+	public void setElevationOfRefHeight(IfcLengthMeasure newElevationOfRefHeight) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcBuilding_ElevationOfRefHeight(), newElevationOfRefHeight);
 	}
 
@@ -105,8 +105,8 @@ public class IfcBuildingImpl extends IfcSpatialStructureElementImpl implements I
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getElevationOfRefHeightAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcBuilding_ElevationOfRefHeightAsString(), true);
+	public IfcLengthMeasure getElevationOfTerrain() {
+		return (IfcLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcBuilding_ElevationOfTerrain(), true);
 	}
 
 	/**
@@ -114,43 +114,7 @@ public class IfcBuildingImpl extends IfcSpatialStructureElementImpl implements I
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setElevationOfRefHeightAsString(String newElevationOfRefHeightAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcBuilding_ElevationOfRefHeightAsString(), newElevationOfRefHeightAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetElevationOfRefHeightAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcBuilding_ElevationOfRefHeightAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetElevationOfRefHeightAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcBuilding_ElevationOfRefHeightAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getElevationOfTerrain() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcBuilding_ElevationOfTerrain(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setElevationOfTerrain(float newElevationOfTerrain) {
+	public void setElevationOfTerrain(IfcLengthMeasure newElevationOfTerrain) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcBuilding_ElevationOfTerrain(), newElevationOfTerrain);
 	}
 
@@ -170,42 +134,6 @@ public class IfcBuildingImpl extends IfcSpatialStructureElementImpl implements I
 	 */
 	public boolean isSetElevationOfTerrain() {
 		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcBuilding_ElevationOfTerrain());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getElevationOfTerrainAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcBuilding_ElevationOfTerrainAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setElevationOfTerrainAsString(String newElevationOfTerrainAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcBuilding_ElevationOfTerrainAsString(), newElevationOfTerrainAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetElevationOfTerrainAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcBuilding_ElevationOfTerrainAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetElevationOfTerrainAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcBuilding_ElevationOfTerrainAsString());
 	}
 
 	/**

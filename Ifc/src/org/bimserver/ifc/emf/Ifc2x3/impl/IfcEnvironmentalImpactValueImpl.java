@@ -25,6 +25,8 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcEnvironmentalImpactCategoryEnum;
 import org.bimserver.ifc.emf.Ifc2x3.IfcEnvironmentalImpactValue;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -67,8 +69,8 @@ public class IfcEnvironmentalImpactValueImpl extends IfcAppliedValueImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getImpactType() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcEnvironmentalImpactValue_ImpactType(), true);
+	public IfcLabel getImpactType() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcEnvironmentalImpactValue_ImpactType(), true);
 	}
 
 	/**
@@ -76,7 +78,7 @@ public class IfcEnvironmentalImpactValueImpl extends IfcAppliedValueImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setImpactType(String newImpactType) {
+	public void setImpactType(IfcLabel newImpactType) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcEnvironmentalImpactValue_ImpactType(), newImpactType);
 	}
 
@@ -103,8 +105,8 @@ public class IfcEnvironmentalImpactValueImpl extends IfcAppliedValueImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getUserDefinedCategory() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcEnvironmentalImpactValue_UserDefinedCategory(), true);
+	public IfcLabel getUserDefinedCategory() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcEnvironmentalImpactValue_UserDefinedCategory(), true);
 	}
 
 	/**
@@ -112,7 +114,7 @@ public class IfcEnvironmentalImpactValueImpl extends IfcAppliedValueImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUserDefinedCategory(String newUserDefinedCategory) {
+	public void setUserDefinedCategory(IfcLabel newUserDefinedCategory) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcEnvironmentalImpactValue_UserDefinedCategory(), newUserDefinedCategory);
 	}
 

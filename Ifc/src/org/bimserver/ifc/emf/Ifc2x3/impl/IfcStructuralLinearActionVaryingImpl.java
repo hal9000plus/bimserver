@@ -26,7 +26,9 @@ import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcShapeAspect;
 import org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLinearActionVarying;
 import org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoad;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -38,6 +40,7 @@ import org.eclipse.emf.ecore.EClass;
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcStructuralLinearActionVaryingImpl#getVaryingAppliedLoadLocation <em>Varying Applied Load Location</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcStructuralLinearActionVaryingImpl#getSubsequentAppliedLoads <em>Subsequent Applied Loads</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcStructuralLinearActionVaryingImpl#getVaryingAppliedLoads <em>Varying Applied Loads</em>}</li>
  * </ul>
  * </p>
  *
@@ -89,6 +92,16 @@ public class IfcStructuralLinearActionVaryingImpl extends IfcStructuralLinearAct
 	@SuppressWarnings("unchecked")
 	public EList<IfcStructuralLoad> getSubsequentAppliedLoads() {
 		return (EList<IfcStructuralLoad>) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralLinearActionVarying_SubsequentAppliedLoads(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<IfcStructuralLoad> getVaryingAppliedLoads() {
+		return (EList<IfcStructuralLoad>) eGet(Ifc2x3Package.eINSTANCE.getIfcStructuralLinearActionVarying_VaryingAppliedLoads(), true);
 	}
 
 } //IfcStructuralLinearActionVaryingImpl

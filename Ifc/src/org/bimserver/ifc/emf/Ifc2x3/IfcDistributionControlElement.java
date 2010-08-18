@@ -43,54 +43,54 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface IfcDistributionControlElement extends IfcDistributionElement {
 	/**
-	 * Returns the value of the '<em><b>Control Element Id</b></em>' attribute.
+	 * Returns the value of the '<em><b>Control Element Id</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Control Element Id</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Control Element Id</em>' attribute.
+	 * @return the value of the '<em>Control Element Id</em>' reference.
 	 * @see #isSetControlElementId()
 	 * @see #unsetControlElementId()
-	 * @see #setControlElementId(String)
+	 * @see #setControlElementId(IfcIdentifier)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcDistributionControlElement_ControlElementId()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getControlElementId();
+	IfcIdentifier getControlElementId();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDistributionControlElement#getControlElementId <em>Control Element Id</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDistributionControlElement#getControlElementId <em>Control Element Id</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Control Element Id</em>' attribute.
+	 * @param value the new value of the '<em>Control Element Id</em>' reference.
 	 * @see #isSetControlElementId()
 	 * @see #unsetControlElementId()
 	 * @see #getControlElementId()
 	 * @generated
 	 */
-	void setControlElementId(String value);
+	void setControlElementId(IfcIdentifier value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDistributionControlElement#getControlElementId <em>Control Element Id</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDistributionControlElement#getControlElementId <em>Control Element Id</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetControlElementId()
 	 * @see #getControlElementId()
-	 * @see #setControlElementId(String)
+	 * @see #setControlElementId(IfcIdentifier)
 	 * @generated
 	 */
 	void unsetControlElementId();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDistributionControlElement#getControlElementId <em>Control Element Id</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDistributionControlElement#getControlElementId <em>Control Element Id</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Control Element Id</em>' attribute is set.
+	 * @return whether the value of the '<em>Control Element Id</em>' reference is set.
 	 * @see #unsetControlElementId()
 	 * @see #getControlElementId()
-	 * @see #setControlElementId(String)
+	 * @see #setControlElementId(IfcIdentifier)
 	 * @generated
 	 */
 	boolean isSetControlElementId();

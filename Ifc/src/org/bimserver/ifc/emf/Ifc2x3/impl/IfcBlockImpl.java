@@ -24,6 +24,8 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcBlock;
+import org.bimserver.ifc.emf.Ifc2x3.IfcPositiveLengthMeasure;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -34,11 +36,8 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcBlockImpl#getXLength <em>XLength</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcBlockImpl#getXLengthAsString <em>XLength As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcBlockImpl#getYLength <em>YLength</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcBlockImpl#getYLengthAsString <em>YLength As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcBlockImpl#getZLength <em>ZLength</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcBlockImpl#getZLengthAsString <em>ZLength As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -69,8 +68,8 @@ public class IfcBlockImpl extends IfcCsgPrimitive3DImpl implements IfcBlock {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getXLength() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcBlock_XLength(), true);
+	public IfcPositiveLengthMeasure getXLength() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcBlock_XLength(), true);
 	}
 
 	/**
@@ -78,7 +77,7 @@ public class IfcBlockImpl extends IfcCsgPrimitive3DImpl implements IfcBlock {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setXLength(float newXLength) {
+	public void setXLength(IfcPositiveLengthMeasure newXLength) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcBlock_XLength(), newXLength);
 	}
 
@@ -87,8 +86,8 @@ public class IfcBlockImpl extends IfcCsgPrimitive3DImpl implements IfcBlock {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getXLengthAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcBlock_XLengthAsString(), true);
+	public IfcPositiveLengthMeasure getYLength() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcBlock_YLength(), true);
 	}
 
 	/**
@@ -96,25 +95,7 @@ public class IfcBlockImpl extends IfcCsgPrimitive3DImpl implements IfcBlock {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setXLengthAsString(String newXLengthAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcBlock_XLengthAsString(), newXLengthAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getYLength() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcBlock_YLength(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setYLength(float newYLength) {
+	public void setYLength(IfcPositiveLengthMeasure newYLength) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcBlock_YLength(), newYLength);
 	}
 
@@ -123,8 +104,8 @@ public class IfcBlockImpl extends IfcCsgPrimitive3DImpl implements IfcBlock {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getYLengthAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcBlock_YLengthAsString(), true);
+	public IfcPositiveLengthMeasure getZLength() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcBlock_ZLength(), true);
 	}
 
 	/**
@@ -132,44 +113,8 @@ public class IfcBlockImpl extends IfcCsgPrimitive3DImpl implements IfcBlock {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setYLengthAsString(String newYLengthAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcBlock_YLengthAsString(), newYLengthAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getZLength() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcBlock_ZLength(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setZLength(float newZLength) {
+	public void setZLength(IfcPositiveLengthMeasure newZLength) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcBlock_ZLength(), newZLength);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getZLengthAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcBlock_ZLengthAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setZLengthAsString(String newZLengthAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcBlock_ZLengthAsString(), newZLengthAsString);
 	}
 
 } //IfcBlockImpl

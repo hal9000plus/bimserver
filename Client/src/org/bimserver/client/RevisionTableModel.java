@@ -24,16 +24,17 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import javax.swing.event.TableModelEvent;
 import javax.swing.event.TableModelListener;
 import javax.swing.table.AbstractTableModel;
 
-import org.bimserver.interfaces.objects.SProject;
-import org.bimserver.interfaces.objects.SRevision;
-import org.bimserver.interfaces.objects.SUser;
-import org.bimserver.shared.SRevisionIdComparator;
+import org.bimserver.shared.SProject;
+import org.bimserver.shared.SRevision;
+import org.bimserver.shared.SRevisionList;
+import org.bimserver.shared.SUser;
 import org.bimserver.shared.UserException;
 
 public class RevisionTableModel extends AbstractTableModel {
@@ -65,23 +66,29 @@ public class RevisionTableModel extends AbstractTableModel {
 			return revision.getId();
 		case 1:
 			return dateFormat.format(revision.getDate());
-//		case 2:
-//			return revision.getUsername();
+		case 2:
+			return revision.getUsername();
 		case 3:
 			return revision.getComment();
 		case 4:
 			return revision.getSize();
 		}
-		return "";
+		return null;
 	}
 
 	public void showProject(SProject project) {
+		SRevisionList revisionList;
 		try {
-			List<SRevision> revisions = serviceHolder.getService().getAllRevisionsOfProject(project.getOid());
-			if (revisions == null) {
+			revisionList = serviceHolder.getService().getAllRevisionsOfProject(project.getId());
+			if (revisionList == null) {
 				this.allRevisions.clear();
 			} else {
-				Collections.sort(revisions, new SRevisionIdComparator(true));
+				List<SRevision> revisions = revisionList.getRevisions();
+				Collections.sort(revisions, new Comparator<SRevision>(){
+					@Override
+					public int compare(SRevision o1, SRevision o2) {
+						return o1.getId() - o2.getId();
+					}});
 				this.allRevisions = revisions;
 			}
 			update();
@@ -114,11 +121,16 @@ public class RevisionTableModel extends AbstractTableModel {
 
 	public void showUser(SUser user) {
 		try {
-			List<SRevision> revisions = serviceHolder.getService().getAllRevisionsByUser(user.getOid());
-			if (revisions == null) {
+			SRevisionList revisionList = serviceHolder.getService().getAllRevisionsByUser(user.getId());
+			if (revisionList == null) {
 				this.allRevisions.clear();
 			} else {
-				Collections.sort(revisions, new SRevisionIdComparator(true));
+				List<SRevision> revisions = revisionList.getRevisions();
+				Collections.sort(revisions, new Comparator<SRevision>(){
+					@Override
+					public int compare(SRevision o1, SRevision o2) {
+						return o1.getId() - o2.getId();
+					}});
 				this.allRevisions = revisions;
 			}
 			update();

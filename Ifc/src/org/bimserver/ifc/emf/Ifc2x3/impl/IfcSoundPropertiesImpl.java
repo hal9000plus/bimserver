@@ -23,11 +23,13 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcBoolean;
 import org.bimserver.ifc.emf.Ifc2x3.IfcSoundProperties;
 import org.bimserver.ifc.emf.Ifc2x3.IfcSoundScaleEnum;
 import org.bimserver.ifc.emf.Ifc2x3.IfcSoundValue;
-import org.bimserver.ifc.emf.Ifc2x3.Tristate;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -70,8 +72,8 @@ public class IfcSoundPropertiesImpl extends IfcPropertySetDefinitionImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Tristate getIsAttenuating() {
-		return (Tristate) eGet(Ifc2x3Package.eINSTANCE.getIfcSoundProperties_IsAttenuating(), true);
+	public IfcBoolean getIsAttenuating() {
+		return (IfcBoolean) eGet(Ifc2x3Package.eINSTANCE.getIfcSoundProperties_IsAttenuating(), true);
 	}
 
 	/**
@@ -79,7 +81,7 @@ public class IfcSoundPropertiesImpl extends IfcPropertySetDefinitionImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIsAttenuating(Tristate newIsAttenuating) {
+	public void setIsAttenuating(IfcBoolean newIsAttenuating) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcSoundProperties_IsAttenuating(), newIsAttenuating);
 	}
 

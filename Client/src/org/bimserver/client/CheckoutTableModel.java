@@ -31,9 +31,10 @@ import javax.swing.event.TableModelEvent;
 import javax.swing.event.TableModelListener;
 import javax.swing.table.AbstractTableModel;
 
-import org.bimserver.interfaces.objects.SCheckout;
-import org.bimserver.interfaces.objects.SProject;
-import org.bimserver.interfaces.objects.SUser;
+import org.bimserver.shared.SCheckoutList;
+import org.bimserver.shared.SCheckout;
+import org.bimserver.shared.SProject;
+import org.bimserver.shared.SUser;
 import org.bimserver.shared.UserException;
 
 public class CheckoutTableModel extends AbstractTableModel {
@@ -66,18 +67,20 @@ public class CheckoutTableModel extends AbstractTableModel {
 			return checkout.getRevisionId();
 		case 1:
 			return dateFormat.format(checkout.getDate());
-//		case 2:
-//			return checkout.getUsername();
+		case 2:
+			return checkout.getUsername();
 		}
-		return "";
+		return null;
 	}
 
 	public void showProject(SProject project) {
+		SCheckoutList checkoutList;
 		try {
-			List<SCheckout> checkouts = serviceHolder.getService().getAllCheckoutsOfProject(project.getId());
-			if (checkouts == null) {
+			checkoutList = serviceHolder.getService().getAllCheckoutsOfProject(project.getId());
+			if (checkoutList == null) {
 				this.allCheckouts.clear();
 			} else {
+				List<SCheckout> checkouts = checkoutList.getCheckouts();
 				Collections.sort(checkouts, new Comparator<SCheckout>(){
 					@Override
 					public int compare(SCheckout o1, SCheckout o2) {
@@ -112,11 +115,13 @@ public class CheckoutTableModel extends AbstractTableModel {
 	}
 
 	public void showUser(SUser user) {
+		SCheckoutList checkoutList;
 		try {
-			List<SCheckout> checkouts = serviceHolder.getService().getAllCheckoutsByUser(user.getOid());
-			if (checkouts == null) {
+			checkoutList = serviceHolder.getService().getAllCheckoutsByUser(user.getId());
+			if (checkoutList == null) {
 				this.allCheckouts.clear();
 			} else {
+				List<SCheckout> checkouts = checkoutList.getCheckouts();
 				Collections.sort(checkouts, new Comparator<SCheckout>(){
 					@Override
 					public int compare(SCheckout o1, SCheckout o2) {

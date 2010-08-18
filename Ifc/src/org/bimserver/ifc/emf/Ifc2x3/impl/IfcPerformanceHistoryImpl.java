@@ -23,7 +23,9 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
 import org.bimserver.ifc.emf.Ifc2x3.IfcPerformanceHistory;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -64,8 +66,8 @@ public class IfcPerformanceHistoryImpl extends IfcControlImpl implements IfcPerf
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getLifeCyclePhase() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcPerformanceHistory_LifeCyclePhase(), true);
+	public IfcLabel getLifeCyclePhase() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcPerformanceHistory_LifeCyclePhase(), true);
 	}
 
 	/**
@@ -73,7 +75,7 @@ public class IfcPerformanceHistoryImpl extends IfcControlImpl implements IfcPerf
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLifeCyclePhase(String newLifeCyclePhase) {
+	public void setLifeCyclePhase(IfcLabel newLifeCyclePhase) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcPerformanceHistory_LifeCyclePhase(), newLifeCyclePhase);
 	}
 

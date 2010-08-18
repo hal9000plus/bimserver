@@ -13,7 +13,6 @@ import org.apache.velocity.exception.ParseErrorException;
 import org.apache.velocity.exception.ResourceNotFoundException;
 import org.apache.velocity.runtime.RuntimeConstants;
 import org.apache.velocity.runtime.resource.loader.URLResourceLoader;
-import org.bimserver.utils.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -49,7 +48,7 @@ public class TemplateEngine {
 	}
 
 	public void init(URL resource) {
-		LOGGER.info("Using \"" + StringUtils.getPrettyFileUrl(resource) + "\" as template dir");
+		LOGGER.info("Using " + resource + " as template dir");
 		velocityEngine = new VelocityEngine();
 		velocityEngine.setProperty(VelocityEngine.RESOURCE_LOADER, "url");
 		velocityEngine.setProperty("url.resource.loader.class", URLResourceLoader.class.getName());

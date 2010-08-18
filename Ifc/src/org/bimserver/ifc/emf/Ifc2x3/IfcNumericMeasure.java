@@ -31,7 +31,7 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcNumericMeasure#getWrappedValue <em>Wrapped Value</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcNumericMeasure#getWrappedValueAsString <em>Wrapped Value As String</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcNumericMeasure#getStringValuewrappedValue <em>String Valuewrapped Value</em>}</li>
  * </ul>
  * </p>
  *
@@ -67,29 +67,29 @@ public interface IfcNumericMeasure extends WrappedValue, IfcMeasureValue {
 	void setWrappedValue(float value);
 
 	/**
-	 * Returns the value of the '<em><b>Wrapped Value As String</b></em>' attribute.
+	 * Returns the value of the '<em><b>String Valuewrapped Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Wrapped Value As String</em>' attribute isn't clear,
+	 * If the meaning of the '<em>String Valuewrapped Value</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Wrapped Value As String</em>' attribute.
-	 * @see #setWrappedValueAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcNumericMeasure_WrappedValueAsString()
+	 * @return the value of the '<em>String Valuewrapped Value</em>' attribute.
+	 * @see #setStringValuewrappedValue(String)
+	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcNumericMeasure_StringValuewrappedValue()
 	 * @model
 	 * @generated
 	 */
-	String getWrappedValueAsString();
+	String getStringValuewrappedValue();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcNumericMeasure#getWrappedValueAsString <em>Wrapped Value As String</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcNumericMeasure#getStringValuewrappedValue <em>String Valuewrapped Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Wrapped Value As String</em>' attribute.
-	 * @see #getWrappedValueAsString()
+	 * @param value the new value of the '<em>String Valuewrapped Value</em>' attribute.
+	 * @see #getStringValuewrappedValue()
 	 * @generated
 	 */
-	void setWrappedValueAsString(String value);
+	void setStringValuewrappedValue(String value);
 
 } // IfcNumericMeasure

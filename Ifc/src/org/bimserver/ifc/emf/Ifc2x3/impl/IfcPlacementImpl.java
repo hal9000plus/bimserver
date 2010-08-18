@@ -24,7 +24,9 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcCartesianPoint;
+import org.bimserver.ifc.emf.Ifc2x3.IfcDimensionCount;
 import org.bimserver.ifc.emf.Ifc2x3.IfcPlacement;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -84,8 +86,8 @@ public class IfcPlacementImpl extends IfcGeometricRepresentationItemImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getDim() {
-		return (Integer) eGet(Ifc2x3Package.eINSTANCE.getIfcPlacement_Dim(), true);
+	public IfcDimensionCount getDim() {
+		return (IfcDimensionCount) eGet(Ifc2x3Package.eINSTANCE.getIfcPlacement_Dim(), true);
 	}
 
 	/**
@@ -93,7 +95,7 @@ public class IfcPlacementImpl extends IfcGeometricRepresentationItemImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDim(int newDim) {
+	public void setDim(IfcDimensionCount newDim) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcPlacement_Dim(), newDim);
 	}
 

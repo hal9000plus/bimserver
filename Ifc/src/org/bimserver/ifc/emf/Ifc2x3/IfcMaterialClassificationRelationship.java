@@ -22,8 +22,9 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3;
 
-import org.bimserver.emf.IdEObject;
 import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -40,10 +41,9 @@ import org.eclipse.emf.common.util.EList;
  *
  * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcMaterialClassificationRelationship()
  * @model
- * @extends IdEObject
  * @generated
  */
-public interface IfcMaterialClassificationRelationship extends IdEObject {
+public interface IfcMaterialClassificationRelationship extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Material Classifications</b></em>' reference list.
 	 * The list contents are of type {@link org.bimserver.ifc.emf.Ifc2x3.IfcClassificationNotationSelect}.

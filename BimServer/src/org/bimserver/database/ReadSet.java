@@ -20,16 +20,13 @@ package org.bimserver.database;
  * long with Bimserver.org . If not, see <http://www.gnu.org/licenses/>.
  *****************************************************************************/
 
-import java.util.Collection;
-import java.util.Set;
+import java.util.HashMap;
+import java.util.Map;
 
-import org.bimserver.emf.IdEObject;
-
-import com.google.common.collect.BiMap;
-import com.google.common.collect.HashBiMap;
+import org.eclipse.emf.ecore.EObject;
 
 public class ReadSet {
-	private final BiMap<Long, IdEObject> reading = HashBiMap.create();
+	private final Map<Long, EObject> reading = new HashMap<Long, EObject>();
 	private final int pid;
 	private final int rid;
 
@@ -46,7 +43,7 @@ public class ReadSet {
 		return pid;
 	}
 
-	public void put(long oid, IdEObject object) {
+	public void setReading(long oid, EObject object) {
 		reading.put(oid, object);
 	}
 
@@ -54,27 +51,7 @@ public class ReadSet {
 		return reading.containsKey(oid);
 	}
 
-	public IdEObject get(long oid) {
+	public EObject get(long oid) {
 		return reading.get(oid);
-	}
-
-	public long get(IdEObject eObject) {
-		return reading.inverse().get(eObject);
-	}
-
-	public Set<Long> keySet() {
-		return reading.keySet();
-	}
-
-	public Collection<IdEObject> values() {
-		return reading.values();
-	}
-
-	public int size() {
-		return reading.size();
-	}
-
-	public BiMap<Long, IdEObject> getMap() {
-		return reading;
 	}
 }

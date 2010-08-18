@@ -1,7 +1,5 @@
 package org.bimserver.shared;
 
-import java.util.Date;
-
 /******************************************************************************
  * (c) Copyright bimserver.org 2009
  * Licensed under GNU GPLv3
@@ -22,28 +20,25 @@ import java.util.Date;
  * long with Bimserver.org . If not, see <http://www.gnu.org/licenses/>.
  *****************************************************************************/
 
+import java.util.Date;
+
 public class Token {
 	private String tokenString;
-	private long expires;
+	private Date expires;
 
 	public Token() {
 	}
 
-	public Token(String tokenString, Long expires) {
-		this.tokenString = tokenString;
-		this.expires = expires;
-	}
-
 	public Token(String tokenString, Date expires) {
 		this.tokenString = tokenString;
-		this.expires = expires.getTime();
+		this.expires = expires;
 	}
 
 	public void setTokenString(String tokenString) {
 		this.tokenString = tokenString;
 	}
 
-	public void setExpires(long expires) {
+	public void setExpires(Date expires) {
 		this.expires = expires;
 	}
 
@@ -51,24 +46,15 @@ public class Token {
 		return tokenString;
 	}
 
-	public long getExpires() {
+	public Date getExpires() {
 		return expires;
-	}
-
-	public Date getExpiresAsDate() {
-		return new Date(expires);
-	}
-
-	@Override
-	public String toString() {
-		return tokenString + ", " + expires;
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + (int) (expires ^ (expires >>> 32));
+		result = prime * result + ((expires == null) ? 0 : expires.hashCode());
 		result = prime * result + ((tokenString == null) ? 0 : tokenString.hashCode());
 		return result;
 	}
@@ -82,7 +68,10 @@ public class Token {
 		if (getClass() != obj.getClass())
 			return false;
 		Token other = (Token) obj;
-		if (expires != other.expires)
+		if (expires == null) {
+			if (other.expires != null)
+				return false;
+		} else if (!expires.equals(other.expires))
 			return false;
 		if (tokenString == null) {
 			if (other.tokenString != null)

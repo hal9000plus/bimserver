@@ -1,7 +1,5 @@
 package org.bimserver;
 
-import java.util.Properties;
-
 import org.bimserver.services.TokenManager;
 import org.quartz.JobDetail;
 import org.quartz.Scheduler;
@@ -11,19 +9,16 @@ import org.quartz.SimpleTrigger;
 import org.quartz.impl.StdSchedulerFactory;
 
 public class BimScheduler {
-	private SchedulerFactory sf;
+	private final SchedulerFactory sf;
 	private static final int CLEAN_INTERVAL = 60 * 60 * 1000; // 1 hour
 	private Scheduler sched;
 
 	public BimScheduler() {
+		sf = new StdSchedulerFactory();
 		try {
-			Properties properties = new Properties();
-			properties.setProperty("org.quartz.threadPool.class", "org.quartz.simpl.SimpleThreadPool");
-			properties.setProperty("org.quartz.threadPool.threadCount", "1");
-			sf = new StdSchedulerFactory(properties);
 			sched = sf.getScheduler();
-		} catch (SchedulerException e1) {
-			e1.printStackTrace();
+		} catch (SchedulerException e) {
+			e.printStackTrace();
 		}
 	}
 

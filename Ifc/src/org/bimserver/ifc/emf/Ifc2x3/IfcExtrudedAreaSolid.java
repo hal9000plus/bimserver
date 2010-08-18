@@ -32,7 +32,6 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcExtrudedAreaSolid#getExtrudedDirection <em>Extruded Direction</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcExtrudedAreaSolid#getDepth <em>Depth</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcExtrudedAreaSolid#getDepthAsString <em>Depth As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -68,55 +67,29 @@ public interface IfcExtrudedAreaSolid extends IfcSweptAreaSolid {
 	void setExtrudedDirection(IfcDirection value);
 
 	/**
-	 * Returns the value of the '<em><b>Depth</b></em>' attribute.
+	 * Returns the value of the '<em><b>Depth</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Depth</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Depth</em>' attribute.
-	 * @see #setDepth(float)
+	 * @return the value of the '<em>Depth</em>' reference.
+	 * @see #setDepth(IfcPositiveLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcExtrudedAreaSolid_Depth()
 	 * @model
 	 * @generated
 	 */
-	float getDepth();
+	IfcPositiveLengthMeasure getDepth();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcExtrudedAreaSolid#getDepth <em>Depth</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcExtrudedAreaSolid#getDepth <em>Depth</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Depth</em>' attribute.
+	 * @param value the new value of the '<em>Depth</em>' reference.
 	 * @see #getDepth()
 	 * @generated
 	 */
-	void setDepth(float value);
-
-	/**
-	 * Returns the value of the '<em><b>Depth As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Depth As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Depth As String</em>' attribute.
-	 * @see #setDepthAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcExtrudedAreaSolid_DepthAsString()
-	 * @model
-	 * @generated
-	 */
-	String getDepthAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcExtrudedAreaSolid#getDepthAsString <em>Depth As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Depth As String</em>' attribute.
-	 * @see #getDepthAsString()
-	 * @generated
-	 */
-	void setDepthAsString(String value);
+	void setDepth(IfcPositiveLengthMeasure value);
 
 } // IfcExtrudedAreaSolid

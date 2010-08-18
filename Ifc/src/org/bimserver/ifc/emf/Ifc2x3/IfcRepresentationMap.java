@@ -22,8 +22,9 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3;
 
-import org.bimserver.emf.IdEObject;
 import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -41,10 +42,9 @@ import org.eclipse.emf.common.util.EList;
  *
  * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRepresentationMap()
  * @model
- * @extends IdEObject
  * @generated
  */
-public interface IfcRepresentationMap extends IdEObject {
+public interface IfcRepresentationMap extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Mapping Origin</b></em>' reference.
 	 * <!-- begin-user-doc -->

@@ -22,8 +22,9 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3;
 
-import org.bimserver.emf.IdEObject;
 import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -41,10 +42,9 @@ import org.eclipse.emf.common.util.EList;
  *
  * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTableRow()
  * @model
- * @extends IdEObject
  * @generated
  */
-public interface IfcTableRow extends IdEObject {
+public interface IfcTableRow extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Row Cells</b></em>' reference list.
 	 * The list contents are of type {@link org.bimserver.ifc.emf.Ifc2x3.IfcValue}.
@@ -62,33 +62,30 @@ public interface IfcTableRow extends IdEObject {
 	EList<IfcValue> getRowCells();
 
 	/**
-	 * Returns the value of the '<em><b>Is Heading</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.bimserver.ifc.emf.Ifc2x3.Tristate}.
+	 * Returns the value of the '<em><b>Is Heading</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Is Heading</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Is Heading</em>' attribute.
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Tristate
-	 * @see #setIsHeading(Tristate)
+	 * @return the value of the '<em>Is Heading</em>' reference.
+	 * @see #setIsHeading(IfcLogical)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTableRow_IsHeading()
 	 * @model
 	 * @generated
 	 */
-	Tristate getIsHeading();
+	IfcLogical getIsHeading();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTableRow#getIsHeading <em>Is Heading</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTableRow#getIsHeading <em>Is Heading</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Is Heading</em>' attribute.
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Tristate
+	 * @param value the new value of the '<em>Is Heading</em>' reference.
 	 * @see #getIsHeading()
 	 * @generated
 	 */
-	void setIsHeading(Tristate value);
+	void setIsHeading(IfcLogical value);
 
 	/**
 	 * Returns the value of the '<em><b>Of Table</b></em>' reference.

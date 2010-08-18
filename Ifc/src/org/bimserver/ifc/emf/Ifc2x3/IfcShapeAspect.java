@@ -22,8 +22,9 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3;
 
-import org.bimserver.emf.IdEObject;
 import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,17 +37,16 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcShapeAspect#getShapeRepresentations <em>Shape Representations</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcShapeAspect#getName <em>Name</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcShapeAspect#getDescription <em>Description</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcShapeAspect#isProductDefinitional <em>Product Definitional</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcShapeAspect#getProductDefinitional <em>Product Definitional</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcShapeAspect#getPartOfProductDefinitionShape <em>Part Of Product Definition Shape</em>}</li>
  * </ul>
  * </p>
  *
  * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcShapeAspect()
  * @model
- * @extends IdEObject
  * @generated
  */
-public interface IfcShapeAspect extends IdEObject {
+public interface IfcShapeAspect extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Shape Representations</b></em>' reference list.
 	 * The list contents are of type {@link org.bimserver.ifc.emf.Ifc2x3.IfcShapeModel}.
@@ -66,136 +66,136 @@ public interface IfcShapeAspect extends IdEObject {
 	EList<IfcShapeModel> getShapeRepresentations();
 
 	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * Returns the value of the '<em><b>Name</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Name</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
+	 * @return the value of the '<em>Name</em>' reference.
 	 * @see #isSetName()
 	 * @see #unsetName()
-	 * @see #setName(String)
+	 * @see #setName(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcShapeAspect_Name()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getName();
+	IfcLabel getName();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcShapeAspect#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcShapeAspect#getName <em>Name</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @param value the new value of the '<em>Name</em>' reference.
 	 * @see #isSetName()
 	 * @see #unsetName()
 	 * @see #getName()
 	 * @generated
 	 */
-	void setName(String value);
+	void setName(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcShapeAspect#getName <em>Name</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcShapeAspect#getName <em>Name</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetName()
 	 * @see #getName()
-	 * @see #setName(String)
+	 * @see #setName(IfcLabel)
 	 * @generated
 	 */
 	void unsetName();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcShapeAspect#getName <em>Name</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcShapeAspect#getName <em>Name</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Name</em>' attribute is set.
+	 * @return whether the value of the '<em>Name</em>' reference is set.
 	 * @see #unsetName()
 	 * @see #getName()
-	 * @see #setName(String)
+	 * @see #setName(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetName();
 
 	/**
-	 * Returns the value of the '<em><b>Description</b></em>' attribute.
+	 * Returns the value of the '<em><b>Description</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Description</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Description</em>' attribute.
+	 * @return the value of the '<em>Description</em>' reference.
 	 * @see #isSetDescription()
 	 * @see #unsetDescription()
-	 * @see #setDescription(String)
+	 * @see #setDescription(IfcText)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcShapeAspect_Description()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getDescription();
+	IfcText getDescription();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcShapeAspect#getDescription <em>Description</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcShapeAspect#getDescription <em>Description</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Description</em>' attribute.
+	 * @param value the new value of the '<em>Description</em>' reference.
 	 * @see #isSetDescription()
 	 * @see #unsetDescription()
 	 * @see #getDescription()
 	 * @generated
 	 */
-	void setDescription(String value);
+	void setDescription(IfcText value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcShapeAspect#getDescription <em>Description</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcShapeAspect#getDescription <em>Description</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetDescription()
 	 * @see #getDescription()
-	 * @see #setDescription(String)
+	 * @see #setDescription(IfcText)
 	 * @generated
 	 */
 	void unsetDescription();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcShapeAspect#getDescription <em>Description</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcShapeAspect#getDescription <em>Description</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Description</em>' attribute is set.
+	 * @return whether the value of the '<em>Description</em>' reference is set.
 	 * @see #unsetDescription()
 	 * @see #getDescription()
-	 * @see #setDescription(String)
+	 * @see #setDescription(IfcText)
 	 * @generated
 	 */
 	boolean isSetDescription();
 
 	/**
-	 * Returns the value of the '<em><b>Product Definitional</b></em>' attribute.
+	 * Returns the value of the '<em><b>Product Definitional</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Product Definitional</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Product Definitional</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Product Definitional</em>' attribute.
-	 * @see #setProductDefinitional(boolean)
+	 * @return the value of the '<em>Product Definitional</em>' reference.
+	 * @see #setProductDefinitional(IfcLogical)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcShapeAspect_ProductDefinitional()
 	 * @model
 	 * @generated
 	 */
-	boolean isProductDefinitional();
+	IfcLogical getProductDefinitional();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcShapeAspect#isProductDefinitional <em>Product Definitional</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcShapeAspect#getProductDefinitional <em>Product Definitional</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Product Definitional</em>' attribute.
-	 * @see #isProductDefinitional()
+	 * @param value the new value of the '<em>Product Definitional</em>' reference.
+	 * @see #getProductDefinitional()
 	 * @generated
 	 */
-	void setProductDefinitional(boolean value);
+	void setProductDefinitional(IfcLogical value);
 
 	/**
 	 * Returns the value of the '<em><b>Part Of Product Definition Shape</b></em>' reference.

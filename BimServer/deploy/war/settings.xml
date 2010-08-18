@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <settings>
 	<showVersionUpgradeAvailable>false</showVersionUpgradeAvailable>
-	<registrationAddition></registrationAddition>
+	<registrationAddition>By using this demo server you agree to the &lt;a href="useragreement.html"&gt;user agreement&lt;/a&gt;</registrationAddition>
 	<smtpServer>smtp.xs4all.nl</smtpServer>
-	<sendConfirmationEmailAfterRegistration>true
-	</sendConfirmationEmailAfterRegistration>
+	<sendConfirmationEmailAfterRegistration>true</sendConfirmationEmailAfterRegistration>
 	<emailSenderAddress>no-reply@bimserver.org</emailSenderAddress>
 	<databaseLocation>database</databaseLocation>
-	<enabledExportTypes>IFC, IFCXML, CITYGML, COLLADA, KML, KMZ
-	</enabledExportTypes>
-	<allowSelfRegistration>false</allowSelfRegistration>
-	<autoTestClashes>false</autoTestClashes>
-	<useSecondEngineJvm>true</useSecondEngineJvm>
-	<intelligentMerging>true</intelligentMerging>
+	<enabledExportTypes>IFC</enabledExportTypes>
 </settings>

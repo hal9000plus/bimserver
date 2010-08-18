@@ -20,9 +20,6 @@ package org.bimserver.client;
  * long with Bimserver.org . If not, see <http://www.gnu.org/licenses/>.
  *****************************************************************************/
 
-import java.util.HashMap;
-import java.util.Map;
-
 import javax.xml.ws.soap.SOAPFaultException;
 
 import org.apache.cxf.endpoint.Client;
@@ -41,9 +38,9 @@ import org.slf4j.LoggerFactory;
 public class ServiceHolder {
 	private AuthenticatedServiceWrapper service;
 	private static final Logger LOGGER = LoggerFactory.getLogger(ServiceHolder.class);
-	private String username = "anonymous";
-	private String password = "anonymous";
-	private String address = "http://localhost:8082/services/soap";
+	private String username = "admin";
+	private String password = "admin";
+	private String address = "http://localhost:8081/bimserver/services/anonymous";
 
 	public AuthenticatedServiceWrapper getService() {
 		return service;
@@ -57,10 +54,6 @@ public class ServiceHolder {
 		LOGGER.info("Connecting to " + address);
 		cpfb.setServiceClass(ServiceInterface.class);
 		cpfb.setAddress(address);
-		Map<String,Object> properties = new HashMap<String, Object>();
-		properties.put("mtom-enabled", Boolean.TRUE);
-		cpfb.setProperties(properties);
-
 		ServiceInterface remoteService = (ServiceInterface) cpfb.create();
 
 		Client client = ClientProxy.getClient(remoteService);
@@ -73,9 +66,8 @@ public class ServiceHolder {
 
 		boolean connected = false;
 		try {
-			if (remoteService.ping("test").equals("test")) {
-				connected = true;
-			}
+			remoteService.ping();
+			connected = true;
 		} catch (Exception e) {
 			LOGGER.info("Error connecting to " + address);
 		}

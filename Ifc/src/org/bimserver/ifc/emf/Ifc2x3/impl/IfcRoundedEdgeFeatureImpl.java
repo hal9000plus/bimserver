@@ -23,7 +23,9 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcPositiveLengthMeasure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRoundedEdgeFeature;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -34,7 +36,6 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRoundedEdgeFeatureImpl#getRadius <em>Radius</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRoundedEdgeFeatureImpl#getRadiusAsString <em>Radius As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -65,8 +66,8 @@ public class IfcRoundedEdgeFeatureImpl extends IfcEdgeFeatureImpl implements Ifc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getRadius() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcRoundedEdgeFeature_Radius(), true);
+	public IfcPositiveLengthMeasure getRadius() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcRoundedEdgeFeature_Radius(), true);
 	}
 
 	/**
@@ -74,7 +75,7 @@ public class IfcRoundedEdgeFeatureImpl extends IfcEdgeFeatureImpl implements Ifc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRadius(float newRadius) {
+	public void setRadius(IfcPositiveLengthMeasure newRadius) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcRoundedEdgeFeature_Radius(), newRadius);
 	}
 
@@ -94,42 +95,6 @@ public class IfcRoundedEdgeFeatureImpl extends IfcEdgeFeatureImpl implements Ifc
 	 */
 	public boolean isSetRadius() {
 		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcRoundedEdgeFeature_Radius());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getRadiusAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcRoundedEdgeFeature_RadiusAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRadiusAsString(String newRadiusAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcRoundedEdgeFeature_RadiusAsString(), newRadiusAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetRadiusAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcRoundedEdgeFeature_RadiusAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetRadiusAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcRoundedEdgeFeature_RadiusAsString());
 	}
 
 } //IfcRoundedEdgeFeatureImpl

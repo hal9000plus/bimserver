@@ -31,7 +31,6 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcQuantityTime#getTimeValue <em>Time Value</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcQuantityTime#getTimeValueAsString <em>Time Value As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -41,55 +40,29 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcQuantityTime extends IfcPhysicalSimpleQuantity {
 	/**
-	 * Returns the value of the '<em><b>Time Value</b></em>' attribute.
+	 * Returns the value of the '<em><b>Time Value</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Time Value</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Time Value</em>' attribute.
-	 * @see #setTimeValue(float)
+	 * @return the value of the '<em>Time Value</em>' reference.
+	 * @see #setTimeValue(IfcTimeMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcQuantityTime_TimeValue()
 	 * @model
 	 * @generated
 	 */
-	float getTimeValue();
+	IfcTimeMeasure getTimeValue();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcQuantityTime#getTimeValue <em>Time Value</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcQuantityTime#getTimeValue <em>Time Value</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Time Value</em>' attribute.
+	 * @param value the new value of the '<em>Time Value</em>' reference.
 	 * @see #getTimeValue()
 	 * @generated
 	 */
-	void setTimeValue(float value);
-
-	/**
-	 * Returns the value of the '<em><b>Time Value As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Time Value As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Time Value As String</em>' attribute.
-	 * @see #setTimeValueAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcQuantityTime_TimeValueAsString()
-	 * @model
-	 * @generated
-	 */
-	String getTimeValueAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcQuantityTime#getTimeValueAsString <em>Time Value As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Time Value As String</em>' attribute.
-	 * @see #getTimeValueAsString()
-	 * @generated
-	 */
-	void setTimeValueAsString(String value);
+	void setTimeValue(IfcTimeMeasure value);
 
 } // IfcQuantityTime

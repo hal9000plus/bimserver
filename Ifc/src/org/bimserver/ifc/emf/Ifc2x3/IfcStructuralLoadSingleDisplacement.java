@@ -31,17 +31,11 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getDisplacementX <em>Displacement X</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getDisplacementXAsString <em>Displacement XAs String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getDisplacementY <em>Displacement Y</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getDisplacementYAsString <em>Displacement YAs String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getDisplacementZ <em>Displacement Z</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getDisplacementZAsString <em>Displacement ZAs String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getRotationalDisplacementRX <em>Rotational Displacement RX</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getRotationalDisplacementRXAsString <em>Rotational Displacement RX As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getRotationalDisplacementRY <em>Rotational Displacement RY</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getRotationalDisplacementRYAsString <em>Rotational Displacement RY As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getRotationalDisplacementRZ <em>Rotational Displacement RZ</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getRotationalDisplacementRZAsString <em>Rotational Displacement RZ As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -51,639 +45,321 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcStructuralLoadSingleDisplacement extends IfcStructuralLoadStatic {
 	/**
-	 * Returns the value of the '<em><b>Displacement X</b></em>' attribute.
+	 * Returns the value of the '<em><b>Displacement X</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Displacement X</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Displacement X</em>' attribute.
+	 * @return the value of the '<em>Displacement X</em>' reference.
 	 * @see #isSetDisplacementX()
 	 * @see #unsetDisplacementX()
-	 * @see #setDisplacementX(float)
+	 * @see #setDisplacementX(IfcLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoadSingleDisplacement_DisplacementX()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getDisplacementX();
+	IfcLengthMeasure getDisplacementX();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getDisplacementX <em>Displacement X</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getDisplacementX <em>Displacement X</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Displacement X</em>' attribute.
+	 * @param value the new value of the '<em>Displacement X</em>' reference.
 	 * @see #isSetDisplacementX()
 	 * @see #unsetDisplacementX()
 	 * @see #getDisplacementX()
 	 * @generated
 	 */
-	void setDisplacementX(float value);
+	void setDisplacementX(IfcLengthMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getDisplacementX <em>Displacement X</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getDisplacementX <em>Displacement X</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetDisplacementX()
 	 * @see #getDisplacementX()
-	 * @see #setDisplacementX(float)
+	 * @see #setDisplacementX(IfcLengthMeasure)
 	 * @generated
 	 */
 	void unsetDisplacementX();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getDisplacementX <em>Displacement X</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getDisplacementX <em>Displacement X</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Displacement X</em>' attribute is set.
+	 * @return whether the value of the '<em>Displacement X</em>' reference is set.
 	 * @see #unsetDisplacementX()
 	 * @see #getDisplacementX()
-	 * @see #setDisplacementX(float)
+	 * @see #setDisplacementX(IfcLengthMeasure)
 	 * @generated
 	 */
 	boolean isSetDisplacementX();
 
 	/**
-	 * Returns the value of the '<em><b>Displacement XAs String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Displacement XAs String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Displacement XAs String</em>' attribute.
-	 * @see #isSetDisplacementXAsString()
-	 * @see #unsetDisplacementXAsString()
-	 * @see #setDisplacementXAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoadSingleDisplacement_DisplacementXAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getDisplacementXAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getDisplacementXAsString <em>Displacement XAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Displacement XAs String</em>' attribute.
-	 * @see #isSetDisplacementXAsString()
-	 * @see #unsetDisplacementXAsString()
-	 * @see #getDisplacementXAsString()
-	 * @generated
-	 */
-	void setDisplacementXAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getDisplacementXAsString <em>Displacement XAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetDisplacementXAsString()
-	 * @see #getDisplacementXAsString()
-	 * @see #setDisplacementXAsString(String)
-	 * @generated
-	 */
-	void unsetDisplacementXAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getDisplacementXAsString <em>Displacement XAs String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Displacement XAs String</em>' attribute is set.
-	 * @see #unsetDisplacementXAsString()
-	 * @see #getDisplacementXAsString()
-	 * @see #setDisplacementXAsString(String)
-	 * @generated
-	 */
-	boolean isSetDisplacementXAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Displacement Y</b></em>' attribute.
+	 * Returns the value of the '<em><b>Displacement Y</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Displacement Y</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Displacement Y</em>' attribute.
+	 * @return the value of the '<em>Displacement Y</em>' reference.
 	 * @see #isSetDisplacementY()
 	 * @see #unsetDisplacementY()
-	 * @see #setDisplacementY(float)
+	 * @see #setDisplacementY(IfcLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoadSingleDisplacement_DisplacementY()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getDisplacementY();
+	IfcLengthMeasure getDisplacementY();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getDisplacementY <em>Displacement Y</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getDisplacementY <em>Displacement Y</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Displacement Y</em>' attribute.
+	 * @param value the new value of the '<em>Displacement Y</em>' reference.
 	 * @see #isSetDisplacementY()
 	 * @see #unsetDisplacementY()
 	 * @see #getDisplacementY()
 	 * @generated
 	 */
-	void setDisplacementY(float value);
+	void setDisplacementY(IfcLengthMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getDisplacementY <em>Displacement Y</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getDisplacementY <em>Displacement Y</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetDisplacementY()
 	 * @see #getDisplacementY()
-	 * @see #setDisplacementY(float)
+	 * @see #setDisplacementY(IfcLengthMeasure)
 	 * @generated
 	 */
 	void unsetDisplacementY();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getDisplacementY <em>Displacement Y</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getDisplacementY <em>Displacement Y</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Displacement Y</em>' attribute is set.
+	 * @return whether the value of the '<em>Displacement Y</em>' reference is set.
 	 * @see #unsetDisplacementY()
 	 * @see #getDisplacementY()
-	 * @see #setDisplacementY(float)
+	 * @see #setDisplacementY(IfcLengthMeasure)
 	 * @generated
 	 */
 	boolean isSetDisplacementY();
 
 	/**
-	 * Returns the value of the '<em><b>Displacement YAs String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Displacement YAs String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Displacement YAs String</em>' attribute.
-	 * @see #isSetDisplacementYAsString()
-	 * @see #unsetDisplacementYAsString()
-	 * @see #setDisplacementYAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoadSingleDisplacement_DisplacementYAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getDisplacementYAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getDisplacementYAsString <em>Displacement YAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Displacement YAs String</em>' attribute.
-	 * @see #isSetDisplacementYAsString()
-	 * @see #unsetDisplacementYAsString()
-	 * @see #getDisplacementYAsString()
-	 * @generated
-	 */
-	void setDisplacementYAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getDisplacementYAsString <em>Displacement YAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetDisplacementYAsString()
-	 * @see #getDisplacementYAsString()
-	 * @see #setDisplacementYAsString(String)
-	 * @generated
-	 */
-	void unsetDisplacementYAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getDisplacementYAsString <em>Displacement YAs String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Displacement YAs String</em>' attribute is set.
-	 * @see #unsetDisplacementYAsString()
-	 * @see #getDisplacementYAsString()
-	 * @see #setDisplacementYAsString(String)
-	 * @generated
-	 */
-	boolean isSetDisplacementYAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Displacement Z</b></em>' attribute.
+	 * Returns the value of the '<em><b>Displacement Z</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Displacement Z</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Displacement Z</em>' attribute.
+	 * @return the value of the '<em>Displacement Z</em>' reference.
 	 * @see #isSetDisplacementZ()
 	 * @see #unsetDisplacementZ()
-	 * @see #setDisplacementZ(float)
+	 * @see #setDisplacementZ(IfcLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoadSingleDisplacement_DisplacementZ()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getDisplacementZ();
+	IfcLengthMeasure getDisplacementZ();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getDisplacementZ <em>Displacement Z</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getDisplacementZ <em>Displacement Z</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Displacement Z</em>' attribute.
+	 * @param value the new value of the '<em>Displacement Z</em>' reference.
 	 * @see #isSetDisplacementZ()
 	 * @see #unsetDisplacementZ()
 	 * @see #getDisplacementZ()
 	 * @generated
 	 */
-	void setDisplacementZ(float value);
+	void setDisplacementZ(IfcLengthMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getDisplacementZ <em>Displacement Z</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getDisplacementZ <em>Displacement Z</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetDisplacementZ()
 	 * @see #getDisplacementZ()
-	 * @see #setDisplacementZ(float)
+	 * @see #setDisplacementZ(IfcLengthMeasure)
 	 * @generated
 	 */
 	void unsetDisplacementZ();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getDisplacementZ <em>Displacement Z</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getDisplacementZ <em>Displacement Z</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Displacement Z</em>' attribute is set.
+	 * @return whether the value of the '<em>Displacement Z</em>' reference is set.
 	 * @see #unsetDisplacementZ()
 	 * @see #getDisplacementZ()
-	 * @see #setDisplacementZ(float)
+	 * @see #setDisplacementZ(IfcLengthMeasure)
 	 * @generated
 	 */
 	boolean isSetDisplacementZ();
 
 	/**
-	 * Returns the value of the '<em><b>Displacement ZAs String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Displacement ZAs String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Displacement ZAs String</em>' attribute.
-	 * @see #isSetDisplacementZAsString()
-	 * @see #unsetDisplacementZAsString()
-	 * @see #setDisplacementZAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoadSingleDisplacement_DisplacementZAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getDisplacementZAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getDisplacementZAsString <em>Displacement ZAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Displacement ZAs String</em>' attribute.
-	 * @see #isSetDisplacementZAsString()
-	 * @see #unsetDisplacementZAsString()
-	 * @see #getDisplacementZAsString()
-	 * @generated
-	 */
-	void setDisplacementZAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getDisplacementZAsString <em>Displacement ZAs String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetDisplacementZAsString()
-	 * @see #getDisplacementZAsString()
-	 * @see #setDisplacementZAsString(String)
-	 * @generated
-	 */
-	void unsetDisplacementZAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getDisplacementZAsString <em>Displacement ZAs String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Displacement ZAs String</em>' attribute is set.
-	 * @see #unsetDisplacementZAsString()
-	 * @see #getDisplacementZAsString()
-	 * @see #setDisplacementZAsString(String)
-	 * @generated
-	 */
-	boolean isSetDisplacementZAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Rotational Displacement RX</b></em>' attribute.
+	 * Returns the value of the '<em><b>Rotational Displacement RX</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Rotational Displacement RX</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Rotational Displacement RX</em>' attribute.
+	 * @return the value of the '<em>Rotational Displacement RX</em>' reference.
 	 * @see #isSetRotationalDisplacementRX()
 	 * @see #unsetRotationalDisplacementRX()
-	 * @see #setRotationalDisplacementRX(float)
+	 * @see #setRotationalDisplacementRX(IfcPlaneAngleMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoadSingleDisplacement_RotationalDisplacementRX()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getRotationalDisplacementRX();
+	IfcPlaneAngleMeasure getRotationalDisplacementRX();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getRotationalDisplacementRX <em>Rotational Displacement RX</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getRotationalDisplacementRX <em>Rotational Displacement RX</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Rotational Displacement RX</em>' attribute.
+	 * @param value the new value of the '<em>Rotational Displacement RX</em>' reference.
 	 * @see #isSetRotationalDisplacementRX()
 	 * @see #unsetRotationalDisplacementRX()
 	 * @see #getRotationalDisplacementRX()
 	 * @generated
 	 */
-	void setRotationalDisplacementRX(float value);
+	void setRotationalDisplacementRX(IfcPlaneAngleMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getRotationalDisplacementRX <em>Rotational Displacement RX</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getRotationalDisplacementRX <em>Rotational Displacement RX</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetRotationalDisplacementRX()
 	 * @see #getRotationalDisplacementRX()
-	 * @see #setRotationalDisplacementRX(float)
+	 * @see #setRotationalDisplacementRX(IfcPlaneAngleMeasure)
 	 * @generated
 	 */
 	void unsetRotationalDisplacementRX();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getRotationalDisplacementRX <em>Rotational Displacement RX</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getRotationalDisplacementRX <em>Rotational Displacement RX</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Rotational Displacement RX</em>' attribute is set.
+	 * @return whether the value of the '<em>Rotational Displacement RX</em>' reference is set.
 	 * @see #unsetRotationalDisplacementRX()
 	 * @see #getRotationalDisplacementRX()
-	 * @see #setRotationalDisplacementRX(float)
+	 * @see #setRotationalDisplacementRX(IfcPlaneAngleMeasure)
 	 * @generated
 	 */
 	boolean isSetRotationalDisplacementRX();
 
 	/**
-	 * Returns the value of the '<em><b>Rotational Displacement RX As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Rotational Displacement RX As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Rotational Displacement RX As String</em>' attribute.
-	 * @see #isSetRotationalDisplacementRXAsString()
-	 * @see #unsetRotationalDisplacementRXAsString()
-	 * @see #setRotationalDisplacementRXAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoadSingleDisplacement_RotationalDisplacementRXAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getRotationalDisplacementRXAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getRotationalDisplacementRXAsString <em>Rotational Displacement RX As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Rotational Displacement RX As String</em>' attribute.
-	 * @see #isSetRotationalDisplacementRXAsString()
-	 * @see #unsetRotationalDisplacementRXAsString()
-	 * @see #getRotationalDisplacementRXAsString()
-	 * @generated
-	 */
-	void setRotationalDisplacementRXAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getRotationalDisplacementRXAsString <em>Rotational Displacement RX As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetRotationalDisplacementRXAsString()
-	 * @see #getRotationalDisplacementRXAsString()
-	 * @see #setRotationalDisplacementRXAsString(String)
-	 * @generated
-	 */
-	void unsetRotationalDisplacementRXAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getRotationalDisplacementRXAsString <em>Rotational Displacement RX As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Rotational Displacement RX As String</em>' attribute is set.
-	 * @see #unsetRotationalDisplacementRXAsString()
-	 * @see #getRotationalDisplacementRXAsString()
-	 * @see #setRotationalDisplacementRXAsString(String)
-	 * @generated
-	 */
-	boolean isSetRotationalDisplacementRXAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Rotational Displacement RY</b></em>' attribute.
+	 * Returns the value of the '<em><b>Rotational Displacement RY</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Rotational Displacement RY</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Rotational Displacement RY</em>' attribute.
+	 * @return the value of the '<em>Rotational Displacement RY</em>' reference.
 	 * @see #isSetRotationalDisplacementRY()
 	 * @see #unsetRotationalDisplacementRY()
-	 * @see #setRotationalDisplacementRY(float)
+	 * @see #setRotationalDisplacementRY(IfcPlaneAngleMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoadSingleDisplacement_RotationalDisplacementRY()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getRotationalDisplacementRY();
+	IfcPlaneAngleMeasure getRotationalDisplacementRY();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getRotationalDisplacementRY <em>Rotational Displacement RY</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getRotationalDisplacementRY <em>Rotational Displacement RY</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Rotational Displacement RY</em>' attribute.
+	 * @param value the new value of the '<em>Rotational Displacement RY</em>' reference.
 	 * @see #isSetRotationalDisplacementRY()
 	 * @see #unsetRotationalDisplacementRY()
 	 * @see #getRotationalDisplacementRY()
 	 * @generated
 	 */
-	void setRotationalDisplacementRY(float value);
+	void setRotationalDisplacementRY(IfcPlaneAngleMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getRotationalDisplacementRY <em>Rotational Displacement RY</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getRotationalDisplacementRY <em>Rotational Displacement RY</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetRotationalDisplacementRY()
 	 * @see #getRotationalDisplacementRY()
-	 * @see #setRotationalDisplacementRY(float)
+	 * @see #setRotationalDisplacementRY(IfcPlaneAngleMeasure)
 	 * @generated
 	 */
 	void unsetRotationalDisplacementRY();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getRotationalDisplacementRY <em>Rotational Displacement RY</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getRotationalDisplacementRY <em>Rotational Displacement RY</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Rotational Displacement RY</em>' attribute is set.
+	 * @return whether the value of the '<em>Rotational Displacement RY</em>' reference is set.
 	 * @see #unsetRotationalDisplacementRY()
 	 * @see #getRotationalDisplacementRY()
-	 * @see #setRotationalDisplacementRY(float)
+	 * @see #setRotationalDisplacementRY(IfcPlaneAngleMeasure)
 	 * @generated
 	 */
 	boolean isSetRotationalDisplacementRY();
 
 	/**
-	 * Returns the value of the '<em><b>Rotational Displacement RY As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Rotational Displacement RY As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Rotational Displacement RY As String</em>' attribute.
-	 * @see #isSetRotationalDisplacementRYAsString()
-	 * @see #unsetRotationalDisplacementRYAsString()
-	 * @see #setRotationalDisplacementRYAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoadSingleDisplacement_RotationalDisplacementRYAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getRotationalDisplacementRYAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getRotationalDisplacementRYAsString <em>Rotational Displacement RY As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Rotational Displacement RY As String</em>' attribute.
-	 * @see #isSetRotationalDisplacementRYAsString()
-	 * @see #unsetRotationalDisplacementRYAsString()
-	 * @see #getRotationalDisplacementRYAsString()
-	 * @generated
-	 */
-	void setRotationalDisplacementRYAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getRotationalDisplacementRYAsString <em>Rotational Displacement RY As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetRotationalDisplacementRYAsString()
-	 * @see #getRotationalDisplacementRYAsString()
-	 * @see #setRotationalDisplacementRYAsString(String)
-	 * @generated
-	 */
-	void unsetRotationalDisplacementRYAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getRotationalDisplacementRYAsString <em>Rotational Displacement RY As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Rotational Displacement RY As String</em>' attribute is set.
-	 * @see #unsetRotationalDisplacementRYAsString()
-	 * @see #getRotationalDisplacementRYAsString()
-	 * @see #setRotationalDisplacementRYAsString(String)
-	 * @generated
-	 */
-	boolean isSetRotationalDisplacementRYAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Rotational Displacement RZ</b></em>' attribute.
+	 * Returns the value of the '<em><b>Rotational Displacement RZ</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Rotational Displacement RZ</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Rotational Displacement RZ</em>' attribute.
+	 * @return the value of the '<em>Rotational Displacement RZ</em>' reference.
 	 * @see #isSetRotationalDisplacementRZ()
 	 * @see #unsetRotationalDisplacementRZ()
-	 * @see #setRotationalDisplacementRZ(float)
+	 * @see #setRotationalDisplacementRZ(IfcPlaneAngleMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoadSingleDisplacement_RotationalDisplacementRZ()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getRotationalDisplacementRZ();
+	IfcPlaneAngleMeasure getRotationalDisplacementRZ();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getRotationalDisplacementRZ <em>Rotational Displacement RZ</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getRotationalDisplacementRZ <em>Rotational Displacement RZ</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Rotational Displacement RZ</em>' attribute.
+	 * @param value the new value of the '<em>Rotational Displacement RZ</em>' reference.
 	 * @see #isSetRotationalDisplacementRZ()
 	 * @see #unsetRotationalDisplacementRZ()
 	 * @see #getRotationalDisplacementRZ()
 	 * @generated
 	 */
-	void setRotationalDisplacementRZ(float value);
+	void setRotationalDisplacementRZ(IfcPlaneAngleMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getRotationalDisplacementRZ <em>Rotational Displacement RZ</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getRotationalDisplacementRZ <em>Rotational Displacement RZ</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetRotationalDisplacementRZ()
 	 * @see #getRotationalDisplacementRZ()
-	 * @see #setRotationalDisplacementRZ(float)
+	 * @see #setRotationalDisplacementRZ(IfcPlaneAngleMeasure)
 	 * @generated
 	 */
 	void unsetRotationalDisplacementRZ();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getRotationalDisplacementRZ <em>Rotational Displacement RZ</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getRotationalDisplacementRZ <em>Rotational Displacement RZ</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Rotational Displacement RZ</em>' attribute is set.
+	 * @return whether the value of the '<em>Rotational Displacement RZ</em>' reference is set.
 	 * @see #unsetRotationalDisplacementRZ()
 	 * @see #getRotationalDisplacementRZ()
-	 * @see #setRotationalDisplacementRZ(float)
+	 * @see #setRotationalDisplacementRZ(IfcPlaneAngleMeasure)
 	 * @generated
 	 */
 	boolean isSetRotationalDisplacementRZ();
-
-	/**
-	 * Returns the value of the '<em><b>Rotational Displacement RZ As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Rotational Displacement RZ As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Rotational Displacement RZ As String</em>' attribute.
-	 * @see #isSetRotationalDisplacementRZAsString()
-	 * @see #unsetRotationalDisplacementRZAsString()
-	 * @see #setRotationalDisplacementRZAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoadSingleDisplacement_RotationalDisplacementRZAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getRotationalDisplacementRZAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getRotationalDisplacementRZAsString <em>Rotational Displacement RZ As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Rotational Displacement RZ As String</em>' attribute.
-	 * @see #isSetRotationalDisplacementRZAsString()
-	 * @see #unsetRotationalDisplacementRZAsString()
-	 * @see #getRotationalDisplacementRZAsString()
-	 * @generated
-	 */
-	void setRotationalDisplacementRZAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getRotationalDisplacementRZAsString <em>Rotational Displacement RZ As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetRotationalDisplacementRZAsString()
-	 * @see #getRotationalDisplacementRZAsString()
-	 * @see #setRotationalDisplacementRZAsString(String)
-	 * @generated
-	 */
-	void unsetRotationalDisplacementRZAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadSingleDisplacement#getRotationalDisplacementRZAsString <em>Rotational Displacement RZ As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Rotational Displacement RZ As String</em>' attribute is set.
-	 * @see #unsetRotationalDisplacementRZAsString()
-	 * @see #getRotationalDisplacementRZAsString()
-	 * @see #setRotationalDisplacementRZAsString(String)
-	 * @generated
-	 */
-	boolean isSetRotationalDisplacementRZAsString();
 
 } // IfcStructuralLoadSingleDisplacement

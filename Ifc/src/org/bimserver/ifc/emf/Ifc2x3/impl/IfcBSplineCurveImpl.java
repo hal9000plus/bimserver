@@ -28,7 +28,9 @@ import org.bimserver.ifc.emf.Ifc2x3.IfcBSplineCurveForm;
 import org.bimserver.ifc.emf.Ifc2x3.IfcCartesianPoint;
 import org.bimserver.ifc.emf.Ifc2x3.IfcInteger;
 import org.bimserver.ifc.emf.Ifc2x3.IfcLogical;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -41,8 +43,10 @@ import org.eclipse.emf.ecore.EClass;
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcBSplineCurveImpl#getDegree <em>Degree</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcBSplineCurveImpl#getControlPointsList <em>Control Points List</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcBSplineCurveImpl#getCurveForm <em>Curve Form</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcBSplineCurveImpl#isClosedCurve <em>Closed Curve</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcBSplineCurveImpl#isSelfIntersect <em>Self Intersect</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcBSplineCurveImpl#getClosedCurve <em>Closed Curve</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcBSplineCurveImpl#getSelfIntersect <em>Self Intersect</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcBSplineCurveImpl#getUpperIndexOnControlPoints <em>Upper Index On Control Points</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcBSplineCurveImpl#getControlPoints <em>Control Points</em>}</li>
  * </ul>
  * </p>
  *
@@ -73,8 +77,8 @@ public class IfcBSplineCurveImpl extends IfcBoundedCurveImpl implements IfcBSpli
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getDegree() {
-		return (Integer) eGet(Ifc2x3Package.eINSTANCE.getIfcBSplineCurve_Degree(), true);
+	public IfcInteger getDegree() {
+		return (IfcInteger) eGet(Ifc2x3Package.eINSTANCE.getIfcBSplineCurve_Degree(), true);
 	}
 
 	/**
@@ -82,7 +86,7 @@ public class IfcBSplineCurveImpl extends IfcBoundedCurveImpl implements IfcBSpli
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDegree(int newDegree) {
+	public void setDegree(IfcInteger newDegree) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcBSplineCurve_Degree(), newDegree);
 	}
 
@@ -119,8 +123,8 @@ public class IfcBSplineCurveImpl extends IfcBoundedCurveImpl implements IfcBSpli
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isClosedCurve() {
-		return (Boolean) eGet(Ifc2x3Package.eINSTANCE.getIfcBSplineCurve_ClosedCurve(), true);
+	public IfcLogical getClosedCurve() {
+		return (IfcLogical) eGet(Ifc2x3Package.eINSTANCE.getIfcBSplineCurve_ClosedCurve(), true);
 	}
 
 	/**
@@ -128,7 +132,7 @@ public class IfcBSplineCurveImpl extends IfcBoundedCurveImpl implements IfcBSpli
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setClosedCurve(boolean newClosedCurve) {
+	public void setClosedCurve(IfcLogical newClosedCurve) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcBSplineCurve_ClosedCurve(), newClosedCurve);
 	}
 
@@ -137,8 +141,8 @@ public class IfcBSplineCurveImpl extends IfcBoundedCurveImpl implements IfcBSpli
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isSelfIntersect() {
-		return (Boolean) eGet(Ifc2x3Package.eINSTANCE.getIfcBSplineCurve_SelfIntersect(), true);
+	public IfcLogical getSelfIntersect() {
+		return (IfcLogical) eGet(Ifc2x3Package.eINSTANCE.getIfcBSplineCurve_SelfIntersect(), true);
 	}
 
 	/**
@@ -146,8 +150,36 @@ public class IfcBSplineCurveImpl extends IfcBoundedCurveImpl implements IfcBSpli
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSelfIntersect(boolean newSelfIntersect) {
+	public void setSelfIntersect(IfcLogical newSelfIntersect) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcBSplineCurve_SelfIntersect(), newSelfIntersect);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IfcInteger getUpperIndexOnControlPoints() {
+		return (IfcInteger) eGet(Ifc2x3Package.eINSTANCE.getIfcBSplineCurve_UpperIndexOnControlPoints(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUpperIndexOnControlPoints(IfcInteger newUpperIndexOnControlPoints) {
+		eSet(Ifc2x3Package.eINSTANCE.getIfcBSplineCurve_UpperIndexOnControlPoints(), newUpperIndexOnControlPoints);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<IfcCartesianPoint> getControlPoints() {
+		return (EList<IfcCartesianPoint>) eGet(Ifc2x3Package.eINSTANCE.getIfcBSplineCurve_ControlPoints(), true);
 	}
 
 } //IfcBSplineCurveImpl

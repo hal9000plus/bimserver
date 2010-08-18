@@ -48,30 +48,30 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcAsset extends IfcGroup {
 	/**
-	 * Returns the value of the '<em><b>Asset ID</b></em>' attribute.
+	 * Returns the value of the '<em><b>Asset ID</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Asset ID</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Asset ID</em>' attribute.
-	 * @see #setAssetID(String)
+	 * @return the value of the '<em>Asset ID</em>' reference.
+	 * @see #setAssetID(IfcIdentifier)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcAsset_AssetID()
 	 * @model
 	 * @generated
 	 */
-	String getAssetID();
+	IfcIdentifier getAssetID();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcAsset#getAssetID <em>Asset ID</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcAsset#getAssetID <em>Asset ID</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Asset ID</em>' attribute.
+	 * @param value the new value of the '<em>Asset ID</em>' reference.
 	 * @see #getAssetID()
 	 * @generated
 	 */
-	void setAssetID(String value);
+	void setAssetID(IfcIdentifier value);
 
 	/**
 	 * Returns the value of the '<em><b>Original Value</b></em>' reference.

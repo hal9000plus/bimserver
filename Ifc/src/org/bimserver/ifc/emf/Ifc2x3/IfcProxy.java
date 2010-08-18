@@ -70,54 +70,54 @@ public interface IfcProxy extends IfcProduct {
 	void setProxyType(IfcObjectTypeEnum value);
 
 	/**
-	 * Returns the value of the '<em><b>Tag</b></em>' attribute.
+	 * Returns the value of the '<em><b>Tag</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Tag</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Tag</em>' attribute.
+	 * @return the value of the '<em>Tag</em>' reference.
 	 * @see #isSetTag()
 	 * @see #unsetTag()
-	 * @see #setTag(String)
+	 * @see #setTag(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcProxy_Tag()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getTag();
+	IfcLabel getTag();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProxy#getTag <em>Tag</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProxy#getTag <em>Tag</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Tag</em>' attribute.
+	 * @param value the new value of the '<em>Tag</em>' reference.
 	 * @see #isSetTag()
 	 * @see #unsetTag()
 	 * @see #getTag()
 	 * @generated
 	 */
-	void setTag(String value);
+	void setTag(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProxy#getTag <em>Tag</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProxy#getTag <em>Tag</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetTag()
 	 * @see #getTag()
-	 * @see #setTag(String)
+	 * @see #setTag(IfcLabel)
 	 * @generated
 	 */
 	void unsetTag();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProxy#getTag <em>Tag</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcProxy#getTag <em>Tag</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Tag</em>' attribute is set.
+	 * @return whether the value of the '<em>Tag</em>' reference is set.
 	 * @see #unsetTag()
 	 * @see #getTag()
-	 * @see #setTag(String)
+	 * @see #setTag(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetTag();

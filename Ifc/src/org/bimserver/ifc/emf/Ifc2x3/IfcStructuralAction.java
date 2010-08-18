@@ -41,33 +41,30 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcStructuralAction extends IfcStructuralActivity {
 	/**
-	 * Returns the value of the '<em><b>Destabilizing Load</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.bimserver.ifc.emf.Ifc2x3.Tristate}.
+	 * Returns the value of the '<em><b>Destabilizing Load</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Destabilizing Load</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Destabilizing Load</em>' attribute.
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Tristate
-	 * @see #setDestabilizingLoad(Tristate)
+	 * @return the value of the '<em>Destabilizing Load</em>' reference.
+	 * @see #setDestabilizingLoad(IfcLogical)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralAction_DestabilizingLoad()
 	 * @model
 	 * @generated
 	 */
-	Tristate getDestabilizingLoad();
+	IfcLogical getDestabilizingLoad();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralAction#getDestabilizingLoad <em>Destabilizing Load</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralAction#getDestabilizingLoad <em>Destabilizing Load</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Destabilizing Load</em>' attribute.
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Tristate
+	 * @param value the new value of the '<em>Destabilizing Load</em>' reference.
 	 * @see #getDestabilizingLoad()
 	 * @generated
 	 */
-	void setDestabilizingLoad(Tristate value);
+	void setDestabilizingLoad(IfcLogical value);
 
 	/**
 	 * Returns the value of the '<em><b>Caused By</b></em>' reference.

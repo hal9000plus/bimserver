@@ -24,8 +24,10 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcBenchmarkEnum;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
 import org.bimserver.ifc.emf.Ifc2x3.IfcMetric;
 import org.bimserver.ifc.emf.Ifc2x3.IfcMetricValueSelect;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -86,8 +88,8 @@ public class IfcMetricImpl extends IfcConstraintImpl implements IfcMetric {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getValueSource() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcMetric_ValueSource(), true);
+	public IfcLabel getValueSource() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcMetric_ValueSource(), true);
 	}
 
 	/**
@@ -95,7 +97,7 @@ public class IfcMetricImpl extends IfcConstraintImpl implements IfcMetric {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValueSource(String newValueSource) {
+	public void setValueSource(IfcLabel newValueSource) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcMetric_ValueSource(), newValueSource);
 	}
 

@@ -24,7 +24,10 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcCurve;
+import org.bimserver.ifc.emf.Ifc2x3.IfcParameterValue;
+import org.bimserver.ifc.emf.Ifc2x3.IfcPositiveLengthMeasure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcSweptDiskSolid;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -36,13 +39,9 @@ import org.eclipse.emf.ecore.EClass;
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSweptDiskSolidImpl#getDirectrix <em>Directrix</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSweptDiskSolidImpl#getRadius <em>Radius</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSweptDiskSolidImpl#getRadiusAsString <em>Radius As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSweptDiskSolidImpl#getInnerRadius <em>Inner Radius</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSweptDiskSolidImpl#getInnerRadiusAsString <em>Inner Radius As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSweptDiskSolidImpl#getStartParam <em>Start Param</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSweptDiskSolidImpl#getStartParamAsString <em>Start Param As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSweptDiskSolidImpl#getEndParam <em>End Param</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSweptDiskSolidImpl#getEndParamAsString <em>End Param As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -91,8 +90,8 @@ public class IfcSweptDiskSolidImpl extends IfcSolidModelImpl implements IfcSwept
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getRadius() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcSweptDiskSolid_Radius(), true);
+	public IfcPositiveLengthMeasure getRadius() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcSweptDiskSolid_Radius(), true);
 	}
 
 	/**
@@ -100,7 +99,7 @@ public class IfcSweptDiskSolidImpl extends IfcSolidModelImpl implements IfcSwept
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRadius(float newRadius) {
+	public void setRadius(IfcPositiveLengthMeasure newRadius) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcSweptDiskSolid_Radius(), newRadius);
 	}
 
@@ -109,8 +108,8 @@ public class IfcSweptDiskSolidImpl extends IfcSolidModelImpl implements IfcSwept
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getRadiusAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcSweptDiskSolid_RadiusAsString(), true);
+	public IfcPositiveLengthMeasure getInnerRadius() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcSweptDiskSolid_InnerRadius(), true);
 	}
 
 	/**
@@ -118,25 +117,7 @@ public class IfcSweptDiskSolidImpl extends IfcSolidModelImpl implements IfcSwept
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRadiusAsString(String newRadiusAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcSweptDiskSolid_RadiusAsString(), newRadiusAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getInnerRadius() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcSweptDiskSolid_InnerRadius(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setInnerRadius(float newInnerRadius) {
+	public void setInnerRadius(IfcPositiveLengthMeasure newInnerRadius) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcSweptDiskSolid_InnerRadius(), newInnerRadius);
 	}
 
@@ -163,8 +144,8 @@ public class IfcSweptDiskSolidImpl extends IfcSolidModelImpl implements IfcSwept
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getInnerRadiusAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcSweptDiskSolid_InnerRadiusAsString(), true);
+	public IfcParameterValue getStartParam() {
+		return (IfcParameterValue) eGet(Ifc2x3Package.eINSTANCE.getIfcSweptDiskSolid_StartParam(), true);
 	}
 
 	/**
@@ -172,43 +153,7 @@ public class IfcSweptDiskSolidImpl extends IfcSolidModelImpl implements IfcSwept
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setInnerRadiusAsString(String newInnerRadiusAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcSweptDiskSolid_InnerRadiusAsString(), newInnerRadiusAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetInnerRadiusAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcSweptDiskSolid_InnerRadiusAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetInnerRadiusAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcSweptDiskSolid_InnerRadiusAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getStartParam() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcSweptDiskSolid_StartParam(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setStartParam(float newStartParam) {
+	public void setStartParam(IfcParameterValue newStartParam) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcSweptDiskSolid_StartParam(), newStartParam);
 	}
 
@@ -217,8 +162,8 @@ public class IfcSweptDiskSolidImpl extends IfcSolidModelImpl implements IfcSwept
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getStartParamAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcSweptDiskSolid_StartParamAsString(), true);
+	public IfcParameterValue getEndParam() {
+		return (IfcParameterValue) eGet(Ifc2x3Package.eINSTANCE.getIfcSweptDiskSolid_EndParam(), true);
 	}
 
 	/**
@@ -226,44 +171,8 @@ public class IfcSweptDiskSolidImpl extends IfcSolidModelImpl implements IfcSwept
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setStartParamAsString(String newStartParamAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcSweptDiskSolid_StartParamAsString(), newStartParamAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getEndParam() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcSweptDiskSolid_EndParam(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setEndParam(float newEndParam) {
+	public void setEndParam(IfcParameterValue newEndParam) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcSweptDiskSolid_EndParam(), newEndParam);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getEndParamAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcSweptDiskSolid_EndParamAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setEndParamAsString(String newEndParamAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcSweptDiskSolid_EndParamAsString(), newEndParamAsString);
 	}
 
 } //IfcSweptDiskSolidImpl

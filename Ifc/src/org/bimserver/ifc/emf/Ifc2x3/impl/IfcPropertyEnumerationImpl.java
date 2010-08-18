@@ -22,13 +22,18 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
-import org.bimserver.emf.IdEObjectImpl;
+import org.bimserver.ifc.IfcRootObject;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
 import org.bimserver.ifc.emf.Ifc2x3.IfcPropertyEnumeration;
 import org.bimserver.ifc.emf.Ifc2x3.IfcUnit;
 import org.bimserver.ifc.emf.Ifc2x3.IfcValue;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -45,7 +50,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class IfcPropertyEnumerationImpl extends IdEObjectImpl implements IfcPropertyEnumeration {
+public class IfcPropertyEnumerationImpl extends IfcRootObject implements IfcPropertyEnumeration {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -80,8 +85,8 @@ public class IfcPropertyEnumerationImpl extends IdEObjectImpl implements IfcProp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcPropertyEnumeration_Name(), true);
+	public IfcLabel getName() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcPropertyEnumeration_Name(), true);
 	}
 
 	/**
@@ -89,7 +94,7 @@ public class IfcPropertyEnumerationImpl extends IdEObjectImpl implements IfcProp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(String newName) {
+	public void setName(IfcLabel newName) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcPropertyEnumeration_Name(), newName);
 	}
 

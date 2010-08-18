@@ -24,6 +24,8 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcQuantityVolume;
+import org.bimserver.ifc.emf.Ifc2x3.IfcVolumeMeasure;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -34,7 +36,6 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcQuantityVolumeImpl#getVolumeValue <em>Volume Value</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcQuantityVolumeImpl#getVolumeValueAsString <em>Volume Value As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -65,8 +66,8 @@ public class IfcQuantityVolumeImpl extends IfcPhysicalSimpleQuantityImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getVolumeValue() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcQuantityVolume_VolumeValue(), true);
+	public IfcVolumeMeasure getVolumeValue() {
+		return (IfcVolumeMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcQuantityVolume_VolumeValue(), true);
 	}
 
 	/**
@@ -74,26 +75,8 @@ public class IfcQuantityVolumeImpl extends IfcPhysicalSimpleQuantityImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setVolumeValue(float newVolumeValue) {
+	public void setVolumeValue(IfcVolumeMeasure newVolumeValue) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcQuantityVolume_VolumeValue(), newVolumeValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getVolumeValueAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcQuantityVolume_VolumeValueAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setVolumeValueAsString(String newVolumeValueAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcQuantityVolume_VolumeValueAsString(), newVolumeValueAsString);
 	}
 
 } //IfcQuantityVolumeImpl

@@ -22,6 +22,8 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3;
 
+import org.eclipse.emf.ecore.EObject;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Ifc Globally Unique Id</b></em>'.

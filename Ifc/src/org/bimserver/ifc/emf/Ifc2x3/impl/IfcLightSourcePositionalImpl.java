@@ -25,6 +25,9 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcCartesianPoint;
 import org.bimserver.ifc.emf.Ifc2x3.IfcLightSourcePositional;
+import org.bimserver.ifc.emf.Ifc2x3.IfcPositiveLengthMeasure;
+import org.bimserver.ifc.emf.Ifc2x3.IfcReal;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -36,13 +39,9 @@ import org.eclipse.emf.ecore.EClass;
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcLightSourcePositionalImpl#getPosition <em>Position</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcLightSourcePositionalImpl#getRadius <em>Radius</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcLightSourcePositionalImpl#getRadiusAsString <em>Radius As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcLightSourcePositionalImpl#getConstantAttenuation <em>Constant Attenuation</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcLightSourcePositionalImpl#getConstantAttenuationAsString <em>Constant Attenuation As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcLightSourcePositionalImpl#getDistanceAttenuation <em>Distance Attenuation</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcLightSourcePositionalImpl#getDistanceAttenuationAsString <em>Distance Attenuation As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcLightSourcePositionalImpl#getQuadricAttenuation <em>Quadric Attenuation</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcLightSourcePositionalImpl#getQuadricAttenuationAsString <em>Quadric Attenuation As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -91,8 +90,8 @@ public class IfcLightSourcePositionalImpl extends IfcLightSourceImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getRadius() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcLightSourcePositional_Radius(), true);
+	public IfcPositiveLengthMeasure getRadius() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcLightSourcePositional_Radius(), true);
 	}
 
 	/**
@@ -100,7 +99,7 @@ public class IfcLightSourcePositionalImpl extends IfcLightSourceImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRadius(float newRadius) {
+	public void setRadius(IfcPositiveLengthMeasure newRadius) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcLightSourcePositional_Radius(), newRadius);
 	}
 
@@ -109,8 +108,8 @@ public class IfcLightSourcePositionalImpl extends IfcLightSourceImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getRadiusAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcLightSourcePositional_RadiusAsString(), true);
+	public IfcReal getConstantAttenuation() {
+		return (IfcReal) eGet(Ifc2x3Package.eINSTANCE.getIfcLightSourcePositional_ConstantAttenuation(), true);
 	}
 
 	/**
@@ -118,25 +117,7 @@ public class IfcLightSourcePositionalImpl extends IfcLightSourceImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRadiusAsString(String newRadiusAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcLightSourcePositional_RadiusAsString(), newRadiusAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getConstantAttenuation() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcLightSourcePositional_ConstantAttenuation(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setConstantAttenuation(float newConstantAttenuation) {
+	public void setConstantAttenuation(IfcReal newConstantAttenuation) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcLightSourcePositional_ConstantAttenuation(), newConstantAttenuation);
 	}
 
@@ -145,8 +126,8 @@ public class IfcLightSourcePositionalImpl extends IfcLightSourceImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getConstantAttenuationAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcLightSourcePositional_ConstantAttenuationAsString(), true);
+	public IfcReal getDistanceAttenuation() {
+		return (IfcReal) eGet(Ifc2x3Package.eINSTANCE.getIfcLightSourcePositional_DistanceAttenuation(), true);
 	}
 
 	/**
@@ -154,25 +135,7 @@ public class IfcLightSourcePositionalImpl extends IfcLightSourceImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setConstantAttenuationAsString(String newConstantAttenuationAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcLightSourcePositional_ConstantAttenuationAsString(), newConstantAttenuationAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getDistanceAttenuation() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcLightSourcePositional_DistanceAttenuation(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDistanceAttenuation(float newDistanceAttenuation) {
+	public void setDistanceAttenuation(IfcReal newDistanceAttenuation) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcLightSourcePositional_DistanceAttenuation(), newDistanceAttenuation);
 	}
 
@@ -181,8 +144,8 @@ public class IfcLightSourcePositionalImpl extends IfcLightSourceImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getDistanceAttenuationAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcLightSourcePositional_DistanceAttenuationAsString(), true);
+	public IfcReal getQuadricAttenuation() {
+		return (IfcReal) eGet(Ifc2x3Package.eINSTANCE.getIfcLightSourcePositional_QuadricAttenuation(), true);
 	}
 
 	/**
@@ -190,44 +153,8 @@ public class IfcLightSourcePositionalImpl extends IfcLightSourceImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDistanceAttenuationAsString(String newDistanceAttenuationAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcLightSourcePositional_DistanceAttenuationAsString(), newDistanceAttenuationAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getQuadricAttenuation() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcLightSourcePositional_QuadricAttenuation(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setQuadricAttenuation(float newQuadricAttenuation) {
+	public void setQuadricAttenuation(IfcReal newQuadricAttenuation) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcLightSourcePositional_QuadricAttenuation(), newQuadricAttenuation);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getQuadricAttenuationAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcLightSourcePositional_QuadricAttenuationAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setQuadricAttenuationAsString(String newQuadricAttenuationAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcLightSourcePositional_QuadricAttenuationAsString(), newQuadricAttenuationAsString);
 	}
 
 } //IfcLightSourcePositionalImpl

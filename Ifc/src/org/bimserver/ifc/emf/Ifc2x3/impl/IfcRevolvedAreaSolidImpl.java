@@ -24,7 +24,10 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcAxis1Placement;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLine;
+import org.bimserver.ifc.emf.Ifc2x3.IfcPlaneAngleMeasure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRevolvedAreaSolid;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -36,7 +39,7 @@ import org.eclipse.emf.ecore.EClass;
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRevolvedAreaSolidImpl#getAxis <em>Axis</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRevolvedAreaSolidImpl#getAngle <em>Angle</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRevolvedAreaSolidImpl#getAngleAsString <em>Angle As String</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRevolvedAreaSolidImpl#getAxisLine <em>Axis Line</em>}</li>
  * </ul>
  * </p>
  *
@@ -85,8 +88,8 @@ public class IfcRevolvedAreaSolidImpl extends IfcSweptAreaSolidImpl implements I
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getAngle() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcRevolvedAreaSolid_Angle(), true);
+	public IfcPlaneAngleMeasure getAngle() {
+		return (IfcPlaneAngleMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcRevolvedAreaSolid_Angle(), true);
 	}
 
 	/**
@@ -94,7 +97,7 @@ public class IfcRevolvedAreaSolidImpl extends IfcSweptAreaSolidImpl implements I
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAngle(float newAngle) {
+	public void setAngle(IfcPlaneAngleMeasure newAngle) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcRevolvedAreaSolid_Angle(), newAngle);
 	}
 
@@ -103,8 +106,8 @@ public class IfcRevolvedAreaSolidImpl extends IfcSweptAreaSolidImpl implements I
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getAngleAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcRevolvedAreaSolid_AngleAsString(), true);
+	public IfcLine getAxisLine() {
+		return (IfcLine) eGet(Ifc2x3Package.eINSTANCE.getIfcRevolvedAreaSolid_AxisLine(), true);
 	}
 
 	/**
@@ -112,8 +115,8 @@ public class IfcRevolvedAreaSolidImpl extends IfcSweptAreaSolidImpl implements I
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAngleAsString(String newAngleAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcRevolvedAreaSolid_AngleAsString(), newAngleAsString);
+	public void setAxisLine(IfcLine newAxisLine) {
+		eSet(Ifc2x3Package.eINSTANCE.getIfcRevolvedAreaSolid_AxisLine(), newAxisLine);
 	}
 
 } //IfcRevolvedAreaSolidImpl

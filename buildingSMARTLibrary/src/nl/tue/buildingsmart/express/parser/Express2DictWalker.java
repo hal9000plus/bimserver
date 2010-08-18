@@ -2,44 +2,32 @@
 
     package nl.tue.buildingsmart.express.parser;
 
+    import java.io.*;
     import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+    import java.util.List;
+    import java.util.Vector;
+    import java.util.Hashtable;
+    import java.util.Collection;
+    import java.util.Iterator;
+	import org.slf4j.Logger;
+	import org.slf4j.LoggerFactory;
 
-import nl.tue.buildingsmart.express.dictionary.AggregationType;
-import nl.tue.buildingsmart.express.dictionary.ArrayType;
-import nl.tue.buildingsmart.express.dictionary.BagType;
-import nl.tue.buildingsmart.express.dictionary.BaseType;
-import nl.tue.buildingsmart.express.dictionary.BinaryType;
-import nl.tue.buildingsmart.express.dictionary.BooleanType;
-import nl.tue.buildingsmart.express.dictionary.Bound;
-import nl.tue.buildingsmart.express.dictionary.DefinedType;
-import nl.tue.buildingsmart.express.dictionary.EntityDefinition;
-import nl.tue.buildingsmart.express.dictionary.EnumerationType;
-import nl.tue.buildingsmart.express.dictionary.ExplicitAttribute;
-import nl.tue.buildingsmart.express.dictionary.IntegerBound;
-import nl.tue.buildingsmart.express.dictionary.IntegerType;
-import nl.tue.buildingsmart.express.dictionary.InverseAttribute;
-import nl.tue.buildingsmart.express.dictionary.ListType;
-import nl.tue.buildingsmart.express.dictionary.LogicalType;
-import nl.tue.buildingsmart.express.dictionary.NamedType;
-import nl.tue.buildingsmart.express.dictionary.NumberType;
-import nl.tue.buildingsmart.express.dictionary.RealType;
-import nl.tue.buildingsmart.express.dictionary.SchemaDefinition;
-import nl.tue.buildingsmart.express.dictionary.SelectType;
-import nl.tue.buildingsmart.express.dictionary.SetType;
-import nl.tue.buildingsmart.express.dictionary.SimpleType;
-import nl.tue.buildingsmart.express.dictionary.StringType;
-import nl.tue.buildingsmart.express.dictionary.UnderlyingType;
-import nl.tue.buildingsmart.express.dictionary.VariableSizeAggregationType;
+    import net.sourceforge.osexpress.parser.*;
+    
+    import nl.tue.buildingsmart.express.dictionary.*;
+  
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import antlr.ASTPair;
-import antlr.NoViableAltException;
-import antlr.RecognitionException;
+import antlr.TreeParser;
+import antlr.Token;
 import antlr.collections.AST;
+import antlr.RecognitionException;
+import antlr.ANTLRException;
+import antlr.NoViableAltException;
+import antlr.MismatchedTokenException;
+import antlr.SemanticException;
+import antlr.collections.impl.BitSet;
+import antlr.ASTPair;
+import antlr.collections.impl.ASTArray;
 
 
 public class Express2DictWalker extends antlr.TreeParser       implements Express2DictWalkerTokenTypes

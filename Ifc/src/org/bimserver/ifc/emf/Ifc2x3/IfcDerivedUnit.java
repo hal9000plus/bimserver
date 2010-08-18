@@ -35,6 +35,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcDerivedUnit#getElements <em>Elements</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcDerivedUnit#getUnitType <em>Unit Type</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcDerivedUnit#getUserDefinedType <em>User Defined Type</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcDerivedUnit#getDimensions <em>Dimensions</em>}</li>
  * </ul>
  * </p>
  *
@@ -89,56 +90,83 @@ public interface IfcDerivedUnit extends IfcUnit {
 	void setUnitType(IfcDerivedUnitEnum value);
 
 	/**
-	 * Returns the value of the '<em><b>User Defined Type</b></em>' attribute.
+	 * Returns the value of the '<em><b>User Defined Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>User Defined Type</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>User Defined Type</em>' attribute.
+	 * @return the value of the '<em>User Defined Type</em>' reference.
 	 * @see #isSetUserDefinedType()
 	 * @see #unsetUserDefinedType()
-	 * @see #setUserDefinedType(String)
+	 * @see #setUserDefinedType(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcDerivedUnit_UserDefinedType()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getUserDefinedType();
+	IfcLabel getUserDefinedType();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDerivedUnit#getUserDefinedType <em>User Defined Type</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDerivedUnit#getUserDefinedType <em>User Defined Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>User Defined Type</em>' attribute.
+	 * @param value the new value of the '<em>User Defined Type</em>' reference.
 	 * @see #isSetUserDefinedType()
 	 * @see #unsetUserDefinedType()
 	 * @see #getUserDefinedType()
 	 * @generated
 	 */
-	void setUserDefinedType(String value);
+	void setUserDefinedType(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDerivedUnit#getUserDefinedType <em>User Defined Type</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDerivedUnit#getUserDefinedType <em>User Defined Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetUserDefinedType()
 	 * @see #getUserDefinedType()
-	 * @see #setUserDefinedType(String)
+	 * @see #setUserDefinedType(IfcLabel)
 	 * @generated
 	 */
 	void unsetUserDefinedType();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDerivedUnit#getUserDefinedType <em>User Defined Type</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDerivedUnit#getUserDefinedType <em>User Defined Type</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>User Defined Type</em>' attribute is set.
+	 * @return whether the value of the '<em>User Defined Type</em>' reference is set.
 	 * @see #unsetUserDefinedType()
 	 * @see #getUserDefinedType()
-	 * @see #setUserDefinedType(String)
+	 * @see #setUserDefinedType(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetUserDefinedType();
+
+	/**
+	 * Returns the value of the '<em><b>Dimensions</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Dimensions</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Dimensions</em>' reference.
+	 * @see #setDimensions(IfcDimensionalExponents)
+	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcDerivedUnit_Dimensions()
+	 * @model transient="true" volatile="true" derived="true"
+	 *        annotation="http://www.iso.org/iso10303-11/EXPRESS code=' IfcDeriveDimensionalExponents(SELF);'"
+	 * @generated
+	 */
+	IfcDimensionalExponents getDimensions();
+
+	/**
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcDerivedUnit#getDimensions <em>Dimensions</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Dimensions</em>' reference.
+	 * @see #getDimensions()
+	 * @generated
+	 */
+	void setDimensions(IfcDimensionalExponents value);
 
 } // IfcDerivedUnit

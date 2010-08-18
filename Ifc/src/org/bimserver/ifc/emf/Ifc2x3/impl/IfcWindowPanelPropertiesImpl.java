@@ -23,10 +23,12 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcPositiveLengthMeasure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcShapeAspect;
 import org.bimserver.ifc.emf.Ifc2x3.IfcWindowPanelOperationEnum;
 import org.bimserver.ifc.emf.Ifc2x3.IfcWindowPanelPositionEnum;
 import org.bimserver.ifc.emf.Ifc2x3.IfcWindowPanelProperties;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -39,9 +41,7 @@ import org.eclipse.emf.ecore.EClass;
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcWindowPanelPropertiesImpl#getOperationType <em>Operation Type</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcWindowPanelPropertiesImpl#getPanelPosition <em>Panel Position</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcWindowPanelPropertiesImpl#getFrameDepth <em>Frame Depth</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcWindowPanelPropertiesImpl#getFrameDepthAsString <em>Frame Depth As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcWindowPanelPropertiesImpl#getFrameThickness <em>Frame Thickness</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcWindowPanelPropertiesImpl#getFrameThicknessAsString <em>Frame Thickness As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcWindowPanelPropertiesImpl#getShapeAspectStyle <em>Shape Aspect Style</em>}</li>
  * </ul>
  * </p>
@@ -109,8 +109,8 @@ public class IfcWindowPanelPropertiesImpl extends IfcPropertySetDefinitionImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getFrameDepth() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcWindowPanelProperties_FrameDepth(), true);
+	public IfcPositiveLengthMeasure getFrameDepth() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcWindowPanelProperties_FrameDepth(), true);
 	}
 
 	/**
@@ -118,7 +118,7 @@ public class IfcWindowPanelPropertiesImpl extends IfcPropertySetDefinitionImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFrameDepth(float newFrameDepth) {
+	public void setFrameDepth(IfcPositiveLengthMeasure newFrameDepth) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcWindowPanelProperties_FrameDepth(), newFrameDepth);
 	}
 
@@ -145,8 +145,8 @@ public class IfcWindowPanelPropertiesImpl extends IfcPropertySetDefinitionImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getFrameDepthAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcWindowPanelProperties_FrameDepthAsString(), true);
+	public IfcPositiveLengthMeasure getFrameThickness() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcWindowPanelProperties_FrameThickness(), true);
 	}
 
 	/**
@@ -154,43 +154,7 @@ public class IfcWindowPanelPropertiesImpl extends IfcPropertySetDefinitionImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFrameDepthAsString(String newFrameDepthAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcWindowPanelProperties_FrameDepthAsString(), newFrameDepthAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetFrameDepthAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcWindowPanelProperties_FrameDepthAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetFrameDepthAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcWindowPanelProperties_FrameDepthAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getFrameThickness() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcWindowPanelProperties_FrameThickness(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setFrameThickness(float newFrameThickness) {
+	public void setFrameThickness(IfcPositiveLengthMeasure newFrameThickness) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcWindowPanelProperties_FrameThickness(), newFrameThickness);
 	}
 
@@ -210,42 +174,6 @@ public class IfcWindowPanelPropertiesImpl extends IfcPropertySetDefinitionImpl i
 	 */
 	public boolean isSetFrameThickness() {
 		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcWindowPanelProperties_FrameThickness());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getFrameThicknessAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcWindowPanelProperties_FrameThicknessAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setFrameThicknessAsString(String newFrameThicknessAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcWindowPanelProperties_FrameThicknessAsString(), newFrameThicknessAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetFrameThicknessAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcWindowPanelProperties_FrameThicknessAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetFrameThicknessAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcWindowPanelProperties_FrameThicknessAsString());
 	}
 
 	/**

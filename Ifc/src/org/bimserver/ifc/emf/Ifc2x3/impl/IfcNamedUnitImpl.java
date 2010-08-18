@@ -22,12 +22,15 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
-import org.bimserver.emf.IdEObjectImpl;
+import org.bimserver.ifc.IfcRootObject;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcDimensionalExponents;
 import org.bimserver.ifc.emf.Ifc2x3.IfcNamedUnit;
 import org.bimserver.ifc.emf.Ifc2x3.IfcUnitEnum;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -43,7 +46,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class IfcNamedUnitImpl extends IdEObjectImpl implements IfcNamedUnit {
+public class IfcNamedUnitImpl extends IfcRootObject implements IfcNamedUnit {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -31,11 +31,8 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangularPyramid#getXLength <em>XLength</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangularPyramid#getXLengthAsString <em>XLength As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangularPyramid#getYLength <em>YLength</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangularPyramid#getYLengthAsString <em>YLength As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangularPyramid#getHeight <em>Height</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangularPyramid#getHeightAsString <em>Height As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -45,159 +42,81 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcRectangularPyramid extends IfcCsgPrimitive3D {
 	/**
-	 * Returns the value of the '<em><b>XLength</b></em>' attribute.
+	 * Returns the value of the '<em><b>XLength</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>XLength</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>XLength</em>' attribute.
-	 * @see #setXLength(float)
+	 * @return the value of the '<em>XLength</em>' reference.
+	 * @see #setXLength(IfcPositiveLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRectangularPyramid_XLength()
 	 * @model
 	 * @generated
 	 */
-	float getXLength();
+	IfcPositiveLengthMeasure getXLength();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangularPyramid#getXLength <em>XLength</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangularPyramid#getXLength <em>XLength</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>XLength</em>' attribute.
+	 * @param value the new value of the '<em>XLength</em>' reference.
 	 * @see #getXLength()
 	 * @generated
 	 */
-	void setXLength(float value);
+	void setXLength(IfcPositiveLengthMeasure value);
 
 	/**
-	 * Returns the value of the '<em><b>XLength As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>XLength As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>XLength As String</em>' attribute.
-	 * @see #setXLengthAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRectangularPyramid_XLengthAsString()
-	 * @model
-	 * @generated
-	 */
-	String getXLengthAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangularPyramid#getXLengthAsString <em>XLength As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>XLength As String</em>' attribute.
-	 * @see #getXLengthAsString()
-	 * @generated
-	 */
-	void setXLengthAsString(String value);
-
-	/**
-	 * Returns the value of the '<em><b>YLength</b></em>' attribute.
+	 * Returns the value of the '<em><b>YLength</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>YLength</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>YLength</em>' attribute.
-	 * @see #setYLength(float)
+	 * @return the value of the '<em>YLength</em>' reference.
+	 * @see #setYLength(IfcPositiveLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRectangularPyramid_YLength()
 	 * @model
 	 * @generated
 	 */
-	float getYLength();
+	IfcPositiveLengthMeasure getYLength();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangularPyramid#getYLength <em>YLength</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangularPyramid#getYLength <em>YLength</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>YLength</em>' attribute.
+	 * @param value the new value of the '<em>YLength</em>' reference.
 	 * @see #getYLength()
 	 * @generated
 	 */
-	void setYLength(float value);
+	void setYLength(IfcPositiveLengthMeasure value);
 
 	/**
-	 * Returns the value of the '<em><b>YLength As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>YLength As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>YLength As String</em>' attribute.
-	 * @see #setYLengthAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRectangularPyramid_YLengthAsString()
-	 * @model
-	 * @generated
-	 */
-	String getYLengthAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangularPyramid#getYLengthAsString <em>YLength As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>YLength As String</em>' attribute.
-	 * @see #getYLengthAsString()
-	 * @generated
-	 */
-	void setYLengthAsString(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Height</b></em>' attribute.
+	 * Returns the value of the '<em><b>Height</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Height</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Height</em>' attribute.
-	 * @see #setHeight(float)
+	 * @return the value of the '<em>Height</em>' reference.
+	 * @see #setHeight(IfcPositiveLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRectangularPyramid_Height()
 	 * @model
 	 * @generated
 	 */
-	float getHeight();
+	IfcPositiveLengthMeasure getHeight();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangularPyramid#getHeight <em>Height</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangularPyramid#getHeight <em>Height</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Height</em>' attribute.
+	 * @param value the new value of the '<em>Height</em>' reference.
 	 * @see #getHeight()
 	 * @generated
 	 */
-	void setHeight(float value);
-
-	/**
-	 * Returns the value of the '<em><b>Height As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Height As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Height As String</em>' attribute.
-	 * @see #setHeightAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRectangularPyramid_HeightAsString()
-	 * @model
-	 * @generated
-	 */
-	String getHeightAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRectangularPyramid#getHeightAsString <em>Height As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Height As String</em>' attribute.
-	 * @see #getHeightAsString()
-	 * @generated
-	 */
-	void setHeightAsString(String value);
+	void setHeight(IfcPositiveLengthMeasure value);
 
 } // IfcRectangularPyramid

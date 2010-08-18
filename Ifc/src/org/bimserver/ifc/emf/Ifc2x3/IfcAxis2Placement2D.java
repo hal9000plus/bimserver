@@ -22,6 +22,8 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3;
 
+import org.eclipse.emf.common.util.EList;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Ifc Axis2 Placement2 D</b></em>'.
@@ -31,6 +33,7 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcAxis2Placement2D#getRefDirection <em>Ref Direction</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcAxis2Placement2D#getP <em>P</em>}</li>
  * </ul>
  * </p>
  *
@@ -91,5 +94,22 @@ public interface IfcAxis2Placement2D extends IfcPlacement, IfcAxis2Placement {
 	 * @generated
 	 */
 	boolean isSetRefDirection();
+
+	/**
+	 * Returns the value of the '<em><b>P</b></em>' reference list.
+	 * The list contents are of type {@link org.bimserver.ifc.emf.Ifc2x3.IfcDirection}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>P</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>P</em>' reference list.
+	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcAxis2Placement2D_P()
+	 * @model transient="true" volatile="true" derived="true"
+	 *        annotation="http://www.iso.org/iso10303-11/EXPRESS code=' IfcBuild2Axes(RefDirection);'"
+	 * @generated
+	 */
+	EList<IfcDirection> getP();
 
 } // IfcAxis2Placement2D

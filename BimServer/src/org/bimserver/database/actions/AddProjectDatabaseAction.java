@@ -2,97 +2,71 @@ package org.bimserver.database.actions;
 
 import java.util.Date;
 
+import org.bimserver.BimDatabaseAction;
 import org.bimserver.database.BimDatabaseException;
 import org.bimserver.database.BimDatabaseSession;
 import org.bimserver.database.BimDeadlockException;
 import org.bimserver.database.CommitSet;
 import org.bimserver.database.Database;
-import org.bimserver.database.store.ClashDetectionSettings;
 import org.bimserver.database.store.GeoTag;
 import org.bimserver.database.store.Project;
-import org.bimserver.database.store.SIPrefix;
 import org.bimserver.database.store.StoreFactory;
 import org.bimserver.database.store.User;
-import org.bimserver.database.store.UserType;
-import org.bimserver.database.store.log.AccessMethod;
-import org.bimserver.database.store.log.LogFactory;
-import org.bimserver.database.store.log.NewProjectAdded;
+import org.bimserver.shared.SGeoTag;
 import org.bimserver.shared.UserException;
 
-public class AddProjectDatabaseAction extends BimDatabaseAction<Project> {
+public class AddProjectDatabaseAction extends BimDatabaseAction<Integer> {
 
 	private final String name;
-	private final long owningUoid;
-	private final long parentPoid;
+	private final int owningUid;
+	private final SGeoTag geoTag;
+	private final int parentProjectId;
 
-	public AddProjectDatabaseAction(AccessMethod accessMethod, String name, long owningUoid) {
-		this(accessMethod, name, -1, owningUoid);
+	public AddProjectDatabaseAction(String name, int owningUid, SGeoTag geoTag) {
+		this(name, -1, owningUid, geoTag);
 	}
 
-	public AddProjectDatabaseAction(AccessMethod accessMethod, String projectName, long parentPoid, long owningUoid) {
-		super(accessMethod);
+	public AddProjectDatabaseAction(String projectName, int parentProjectId, int owningUid, SGeoTag geoTag) {
 		this.name = projectName;
-		this.parentPoid = parentPoid;
-		this.owningUoid = owningUoid;
+		this.owningUid = owningUid;
+		this.geoTag = geoTag;
+		this.parentProjectId = parentProjectId;
 	}
 
 	@Override
-	public Project execute(BimDatabaseSession bimDatabaseSession) throws UserException, BimDatabaseException, BimDeadlockException {
-		User actingUser = bimDatabaseSession.getUserByUoid(owningUoid);
-		if (actingUser.getUserType() == UserType.ANONYMOUS) {
-			throw new UserException("Anonymous user cannot create new projects");
-		}
+	public Integer execute(BimDatabaseSession bimDatabaseSession) throws UserException, BimDatabaseException, BimDeadlockException {
 		if (name == null || name.trim().equals("")) {
 			throw new UserException("Invalid project name");
 		}
+		if (bimDatabaseSession.getProjectByName(name) != null) {
+			throw new UserException("A project with the name " + name + " already exists");
+		}
 		final Project project = StoreFactory.eINSTANCE.createProject();
-		if (parentPoid != -1) {
-			project.setParent(bimDatabaseSession.getProjectByPoid(parentPoid));
+		if (geoTag != null) {
+			final GeoTag geoTag = StoreFactory.eINSTANCE.createGeoTag();
+			geoTag.setX1(this.geoTag.getX1());
+			geoTag.setY1(this.geoTag.getY1());
+			geoTag.setZ1(this.geoTag.getZ1());
+			geoTag.setX2(this.geoTag.getX2());
+			geoTag.setY2(this.geoTag.getY2());
+			geoTag.setZ2(this.geoTag.getZ2());
+			geoTag.setEpsg(this.geoTag.getEpsg());
+			project.setGeoTag(geoTag);
 		}
-		if (project.getParent() == null) {
-			for (Project p : bimDatabaseSession.getProjectsByName(name)) {
-				if (p.getParent() == null) {
-					throw new UserException("Project name must be unique");
-				}
-			}
-		} else {
-			Project parent = project.getParent();
-			for (Project subProject : parent.getSubProjects()) {
-				if (subProject.getName().equals(name) && subProject != project) {
-					throw new UserException("Project name must be unique within parent project (" + parent.getName() + ")");
-				}
-			}
-			project.setClashDetectionSettings(parent.getClashDetectionSettings());
-			project.setGeoTag(parent.getGeoTag());
+		final int pid = bimDatabaseSession.newPid();
+		User user = bimDatabaseSession.getUserById(owningUid);
+		if (parentProjectId != -1) {
+			project.setParent(bimDatabaseSession.getProjectById(parentProjectId));
 		}
-		NewProjectAdded newProjectAdded = LogFactory.eINSTANCE.createNewProjectAdded();
-		newProjectAdded.setDate(new Date());
-		newProjectAdded.setExecutor(actingUser);
-		newProjectAdded.setProject(project);
-		newProjectAdded.setAccessMethod(getAccessMethod());
-		project.setId(bimDatabaseSession.newPid());
+		project.setId(pid);
 		project.setName(name);
 		project.getHasAuthorizedUsers().add(bimDatabaseSession.getAdminUser());
-		project.getHasAuthorizedUsers().add(actingUser);
-		project.setCreatedBy(actingUser);
+		project.getHasAuthorizedUsers().add(user);
+		project.setCreatedBy(user);
 		project.setCreatedDate(new Date());
-		project.setDescription("");
-		project.setExportLengthMeasurePrefix(SIPrefix.METER);
-		CommitSet commitSet = new CommitSet(Database.STORE_PROJECT_ID, -1);
-		if (project.getParent() == null) {
-			GeoTag geoTag = StoreFactory.eINSTANCE.createGeoTag();
-			geoTag.setEnabled(false);
-			project.setGeoTag(geoTag);
-			ClashDetectionSettings clashDetectionSettings = StoreFactory.eINSTANCE.createClashDetectionSettings();
-			clashDetectionSettings.setEnabled(false);
-			project.setClashDetectionSettings(clashDetectionSettings);
-			bimDatabaseSession.store(geoTag, commitSet);
-			bimDatabaseSession.store(clashDetectionSettings, commitSet);
-		}
-		bimDatabaseSession.store(project, commitSet);
-		bimDatabaseSession.store(newProjectAdded, commitSet);
+		bimDatabaseSession.store(project, new CommitSet(Database.STORE_PROJECT_ID, -1));
 		bimDatabaseSession.savePidCounter();
 		bimDatabaseSession.saveOidCounter();
-		return project;
+		return pid;
 	}
 }

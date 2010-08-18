@@ -1,16 +1,16 @@
-<%@page import="org.bimserver.shared.UserException"%>
-<%@ include file="header.jsp" %>
+
+<%@page import="org.bimserver.shared.UserException"%><%@ include file="header.jsp" %>
 <%
 	if (loginManager.isLoggedIn()) {
 		try {
-			long uoid = Integer.parseInt(request.getParameter("uoid"));
-			if (loginManager.getService().undeleteUser(uoid)) {
+			int uid = Integer.parseInt(request.getParameter("id"));
+			if (loginManager.getService().undeleteUser(uid)) {
 				response.sendRedirect("users.jsp");
 			} else {
 				out.println("Error");
 			}
 		} catch (UserException e) {
-			out.println("<div class=\"error\">" + e.getUserMessage() + "</div>");
+			out.println("<div class=\"errormessage\">" + e.getUserMessage() + "</div>");
 		}
 	}
 %>

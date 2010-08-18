@@ -31,7 +31,6 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcCenterLineProfileDef#getThickness <em>Thickness</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcCenterLineProfileDef#getThicknessAsString <em>Thickness As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -41,55 +40,29 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcCenterLineProfileDef extends IfcArbitraryOpenProfileDef {
 	/**
-	 * Returns the value of the '<em><b>Thickness</b></em>' attribute.
+	 * Returns the value of the '<em><b>Thickness</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Thickness</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Thickness</em>' attribute.
-	 * @see #setThickness(float)
+	 * @return the value of the '<em>Thickness</em>' reference.
+	 * @see #setThickness(IfcPositiveLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcCenterLineProfileDef_Thickness()
 	 * @model
 	 * @generated
 	 */
-	float getThickness();
+	IfcPositiveLengthMeasure getThickness();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCenterLineProfileDef#getThickness <em>Thickness</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCenterLineProfileDef#getThickness <em>Thickness</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Thickness</em>' attribute.
+	 * @param value the new value of the '<em>Thickness</em>' reference.
 	 * @see #getThickness()
 	 * @generated
 	 */
-	void setThickness(float value);
-
-	/**
-	 * Returns the value of the '<em><b>Thickness As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Thickness As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Thickness As String</em>' attribute.
-	 * @see #setThicknessAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcCenterLineProfileDef_ThicknessAsString()
-	 * @model
-	 * @generated
-	 */
-	String getThicknessAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCenterLineProfileDef#getThicknessAsString <em>Thickness As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Thickness As String</em>' attribute.
-	 * @see #getThicknessAsString()
-	 * @generated
-	 */
-	void setThicknessAsString(String value);
+	void setThickness(IfcPositiveLengthMeasure value);
 
 } // IfcCenterLineProfileDef

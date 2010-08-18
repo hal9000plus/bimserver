@@ -24,8 +24,10 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcAxis2Placement;
+import org.bimserver.ifc.emf.Ifc2x3.IfcPresentableText;
 import org.bimserver.ifc.emf.Ifc2x3.IfcTextLiteral;
 import org.bimserver.ifc.emf.Ifc2x3.IfcTextPath;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -68,8 +70,8 @@ public class IfcTextLiteralImpl extends IfcGeometricRepresentationItemImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getLiteral() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcTextLiteral_Literal(), true);
+	public IfcPresentableText getLiteral() {
+		return (IfcPresentableText) eGet(Ifc2x3Package.eINSTANCE.getIfcTextLiteral_Literal(), true);
 	}
 
 	/**
@@ -77,7 +79,7 @@ public class IfcTextLiteralImpl extends IfcGeometricRepresentationItemImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLiteral(String newLiteral) {
+	public void setLiteral(IfcPresentableText newLiteral) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcTextLiteral_Literal(), newLiteral);
 	}
 

@@ -36,16 +36,19 @@ public class TokenManager implements Job {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(TokenManager.class);
 	private static final int TOKEN_TTL_SECONDS = 60*60; // one hour
-	private final HashMap<Token, Long> tokens = new HashMap<Token, Long>();
+	private final HashMap<Token, Integer> tokens = new HashMap<Token, Integer>();
 
-	public synchronized long getUoid(Token token) {
+	public TokenManager() {
+	}
+	
+	public synchronized int getUid(Token token) {
 		return tokens.get(token);
 	}
 
-	public synchronized Token newToken(long uoid) {
+	public synchronized Token newToken(int uid) {
 		Date expires = new Date(new Date().getTime() + (TOKEN_TTL_SECONDS * 1000));
 		Token token = new Token(GeneratorUtils.generateToken(), expires);
-		tokens.put(token, uoid);
+		tokens.put(token, uid);
 		return token;
 	}
 
@@ -55,7 +58,7 @@ public class TokenManager implements Job {
 		Iterator<Token> iterator = tokens.keySet().iterator();
 		while (iterator.hasNext()) {
 			Token token = iterator.next();
-			if (token.getExpiresAsDate().before(now)) {
+			if (token.getExpires().before(now)) {
 				LOGGER.info("Removing token " + token.getTokenString() + " because it is expired");
 				iterator.remove();
 			}
@@ -67,11 +70,11 @@ public class TokenManager implements Job {
 		cleanup();
 	}
 
-	public synchronized int getNumberOfTokens() {
+	public int getNumberOfTokens() {
 		return tokens.size();
 	}
 
-	public synchronized void remove(Token token) {
+	public void remove(Token token) {
 		tokens.remove(token);
 	}
 }

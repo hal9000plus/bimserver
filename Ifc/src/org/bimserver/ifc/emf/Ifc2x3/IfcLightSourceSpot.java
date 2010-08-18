@@ -32,11 +32,8 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourceSpot#getOrientation <em>Orientation</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourceSpot#getConcentrationExponent <em>Concentration Exponent</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourceSpot#getConcentrationExponentAsString <em>Concentration Exponent As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourceSpot#getSpreadAngle <em>Spread Angle</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourceSpot#getSpreadAngleAsString <em>Spread Angle As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourceSpot#getBeamWidthAngle <em>Beam Width Angle</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourceSpot#getBeamWidthAngleAsString <em>Beam Width Angle As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -72,213 +69,108 @@ public interface IfcLightSourceSpot extends IfcLightSourcePositional {
 	void setOrientation(IfcDirection value);
 
 	/**
-	 * Returns the value of the '<em><b>Concentration Exponent</b></em>' attribute.
+	 * Returns the value of the '<em><b>Concentration Exponent</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Concentration Exponent</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Concentration Exponent</em>' attribute.
+	 * @return the value of the '<em>Concentration Exponent</em>' reference.
 	 * @see #isSetConcentrationExponent()
 	 * @see #unsetConcentrationExponent()
-	 * @see #setConcentrationExponent(float)
+	 * @see #setConcentrationExponent(IfcReal)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcLightSourceSpot_ConcentrationExponent()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getConcentrationExponent();
+	IfcReal getConcentrationExponent();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourceSpot#getConcentrationExponent <em>Concentration Exponent</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourceSpot#getConcentrationExponent <em>Concentration Exponent</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Concentration Exponent</em>' attribute.
+	 * @param value the new value of the '<em>Concentration Exponent</em>' reference.
 	 * @see #isSetConcentrationExponent()
 	 * @see #unsetConcentrationExponent()
 	 * @see #getConcentrationExponent()
 	 * @generated
 	 */
-	void setConcentrationExponent(float value);
+	void setConcentrationExponent(IfcReal value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourceSpot#getConcentrationExponent <em>Concentration Exponent</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourceSpot#getConcentrationExponent <em>Concentration Exponent</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetConcentrationExponent()
 	 * @see #getConcentrationExponent()
-	 * @see #setConcentrationExponent(float)
+	 * @see #setConcentrationExponent(IfcReal)
 	 * @generated
 	 */
 	void unsetConcentrationExponent();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourceSpot#getConcentrationExponent <em>Concentration Exponent</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourceSpot#getConcentrationExponent <em>Concentration Exponent</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Concentration Exponent</em>' attribute is set.
+	 * @return whether the value of the '<em>Concentration Exponent</em>' reference is set.
 	 * @see #unsetConcentrationExponent()
 	 * @see #getConcentrationExponent()
-	 * @see #setConcentrationExponent(float)
+	 * @see #setConcentrationExponent(IfcReal)
 	 * @generated
 	 */
 	boolean isSetConcentrationExponent();
 
 	/**
-	 * Returns the value of the '<em><b>Concentration Exponent As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Concentration Exponent As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Concentration Exponent As String</em>' attribute.
-	 * @see #isSetConcentrationExponentAsString()
-	 * @see #unsetConcentrationExponentAsString()
-	 * @see #setConcentrationExponentAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcLightSourceSpot_ConcentrationExponentAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getConcentrationExponentAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourceSpot#getConcentrationExponentAsString <em>Concentration Exponent As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Concentration Exponent As String</em>' attribute.
-	 * @see #isSetConcentrationExponentAsString()
-	 * @see #unsetConcentrationExponentAsString()
-	 * @see #getConcentrationExponentAsString()
-	 * @generated
-	 */
-	void setConcentrationExponentAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourceSpot#getConcentrationExponentAsString <em>Concentration Exponent As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetConcentrationExponentAsString()
-	 * @see #getConcentrationExponentAsString()
-	 * @see #setConcentrationExponentAsString(String)
-	 * @generated
-	 */
-	void unsetConcentrationExponentAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourceSpot#getConcentrationExponentAsString <em>Concentration Exponent As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Concentration Exponent As String</em>' attribute is set.
-	 * @see #unsetConcentrationExponentAsString()
-	 * @see #getConcentrationExponentAsString()
-	 * @see #setConcentrationExponentAsString(String)
-	 * @generated
-	 */
-	boolean isSetConcentrationExponentAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Spread Angle</b></em>' attribute.
+	 * Returns the value of the '<em><b>Spread Angle</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Spread Angle</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Spread Angle</em>' attribute.
-	 * @see #setSpreadAngle(float)
+	 * @return the value of the '<em>Spread Angle</em>' reference.
+	 * @see #setSpreadAngle(IfcPositivePlaneAngleMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcLightSourceSpot_SpreadAngle()
 	 * @model
 	 * @generated
 	 */
-	float getSpreadAngle();
+	IfcPositivePlaneAngleMeasure getSpreadAngle();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourceSpot#getSpreadAngle <em>Spread Angle</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourceSpot#getSpreadAngle <em>Spread Angle</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Spread Angle</em>' attribute.
+	 * @param value the new value of the '<em>Spread Angle</em>' reference.
 	 * @see #getSpreadAngle()
 	 * @generated
 	 */
-	void setSpreadAngle(float value);
+	void setSpreadAngle(IfcPositivePlaneAngleMeasure value);
 
 	/**
-	 * Returns the value of the '<em><b>Spread Angle As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Spread Angle As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Spread Angle As String</em>' attribute.
-	 * @see #setSpreadAngleAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcLightSourceSpot_SpreadAngleAsString()
-	 * @model
-	 * @generated
-	 */
-	String getSpreadAngleAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourceSpot#getSpreadAngleAsString <em>Spread Angle As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Spread Angle As String</em>' attribute.
-	 * @see #getSpreadAngleAsString()
-	 * @generated
-	 */
-	void setSpreadAngleAsString(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Beam Width Angle</b></em>' attribute.
+	 * Returns the value of the '<em><b>Beam Width Angle</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Beam Width Angle</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Beam Width Angle</em>' attribute.
-	 * @see #setBeamWidthAngle(float)
+	 * @return the value of the '<em>Beam Width Angle</em>' reference.
+	 * @see #setBeamWidthAngle(IfcPositivePlaneAngleMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcLightSourceSpot_BeamWidthAngle()
 	 * @model
 	 * @generated
 	 */
-	float getBeamWidthAngle();
+	IfcPositivePlaneAngleMeasure getBeamWidthAngle();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourceSpot#getBeamWidthAngle <em>Beam Width Angle</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourceSpot#getBeamWidthAngle <em>Beam Width Angle</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Beam Width Angle</em>' attribute.
+	 * @param value the new value of the '<em>Beam Width Angle</em>' reference.
 	 * @see #getBeamWidthAngle()
 	 * @generated
 	 */
-	void setBeamWidthAngle(float value);
-
-	/**
-	 * Returns the value of the '<em><b>Beam Width Angle As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Beam Width Angle As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Beam Width Angle As String</em>' attribute.
-	 * @see #setBeamWidthAngleAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcLightSourceSpot_BeamWidthAngleAsString()
-	 * @model
-	 * @generated
-	 */
-	String getBeamWidthAngleAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcLightSourceSpot#getBeamWidthAngleAsString <em>Beam Width Angle As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Beam Width Angle As String</em>' attribute.
-	 * @see #getBeamWidthAngleAsString()
-	 * @generated
-	 */
-	void setBeamWidthAngleAsString(String value);
+	void setBeamWidthAngle(IfcPositivePlaneAngleMeasure value);
 
 } // IfcLightSourceSpot

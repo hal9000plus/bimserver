@@ -1,4 +1,6 @@
-<% response.setContentType("application/xhtml+xml"); %>
+<%
+	response.setContentType("application/xhtml+xml");
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
@@ -17,10 +19,7 @@
 	}
 %>
 <script src="js/main.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
-<link rel="stylesheet" href="css/lightwindow.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="css/thickbox.css" type="text/css" media="screen" />
+<script src="js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
 	/************************************************************
 	 * (c) Copyright bimserver.org
@@ -28,31 +27,26 @@
 	 * http://www.gnu.org/licenses/gpl-3.0.txt
 	 * For more information mail to license@bimserver.org
 	 ***********************************************************/
-	 var o3dcounter = 0;
 
 	var tabberOptions = {
 		'cookie' :"tabber",
 		'onLoad' : function(argsObj) {
 			var t = argsObj.tabber;
+			var i;
 			if (t.id) {
 				t.cookie = t.id + t.cookie;
 			}
-			cookie = getCookie(t.cookie);
-			for (i in t.tabs) {
-				if (t.tabs[i].div.id == cookie) {
-					t.tabShow(i);
-					break;
-				}
+			i = parseInt(getCookie(t.cookie));
+			if (isNaN(i)) {
+				return;
 			}
-		<%
-			if (request.getParameter("tab") != null && request.getParameter("tab").equals("cd")) {
-				%>t.tabShow(4)<%
-			}
-		%>
+			t.tabShow(i);
 		},
 
 		'onClick' : function(argsObj) {
-			setCookie(argsObj.tabber.cookie, argsObj.tabber.tabs[argsObj.index].div.id);
+			var c = argsObj.tabber.cookie;
+			var i = argsObj.index;
+			setCookie(c, i);
 		}
 	};
 

@@ -26,8 +26,8 @@ import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcDoorStyle;
 import org.bimserver.ifc.emf.Ifc2x3.IfcDoorStyleConstructionEnum;
 import org.bimserver.ifc.emf.Ifc2x3.IfcDoorStyleOperationEnum;
-import org.bimserver.ifc.emf.Ifc2x3.Tristate;
 import org.bimserver.ifc.emf.Ifc2x3.IfcLogical;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -107,8 +107,8 @@ public class IfcDoorStyleImpl extends IfcTypeProductImpl implements IfcDoorStyle
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Tristate getParameterTakesPrecedence() {
-		return (Tristate) eGet(Ifc2x3Package.eINSTANCE.getIfcDoorStyle_ParameterTakesPrecedence(), true);
+	public IfcLogical getParameterTakesPrecedence() {
+		return (IfcLogical) eGet(Ifc2x3Package.eINSTANCE.getIfcDoorStyle_ParameterTakesPrecedence(), true);
 	}
 
 	/**
@@ -116,7 +116,7 @@ public class IfcDoorStyleImpl extends IfcTypeProductImpl implements IfcDoorStyle
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setParameterTakesPrecedence(Tristate newParameterTakesPrecedence) {
+	public void setParameterTakesPrecedence(IfcLogical newParameterTakesPrecedence) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcDoorStyle_ParameterTakesPrecedence(), newParameterTakesPrecedence);
 	}
 
@@ -125,8 +125,8 @@ public class IfcDoorStyleImpl extends IfcTypeProductImpl implements IfcDoorStyle
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Tristate getSizeable() {
-		return (Tristate) eGet(Ifc2x3Package.eINSTANCE.getIfcDoorStyle_Sizeable(), true);
+	public IfcLogical getSizeable() {
+		return (IfcLogical) eGet(Ifc2x3Package.eINSTANCE.getIfcDoorStyle_Sizeable(), true);
 	}
 
 	/**
@@ -134,7 +134,7 @@ public class IfcDoorStyleImpl extends IfcTypeProductImpl implements IfcDoorStyle
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSizeable(Tristate newSizeable) {
+	public void setSizeable(IfcLogical newSizeable) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcDoorStyle_Sizeable(), newSizeable);
 	}
 

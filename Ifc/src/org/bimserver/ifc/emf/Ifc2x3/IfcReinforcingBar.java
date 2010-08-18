@@ -31,11 +31,8 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcReinforcingBar#getNominalDiameter <em>Nominal Diameter</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcReinforcingBar#getNominalDiameterAsString <em>Nominal Diameter As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcReinforcingBar#getCrossSectionArea <em>Cross Section Area</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcReinforcingBar#getCrossSectionAreaAsString <em>Cross Section Area As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcReinforcingBar#getBarLength <em>Bar Length</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcReinforcingBar#getBarLengthAsString <em>Bar Length As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcReinforcingBar#getBarRole <em>Bar Role</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcReinforcingBar#getBarSurface <em>Bar Surface</em>}</li>
  * </ul>
@@ -47,214 +44,109 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcReinforcingBar extends IfcReinforcingElement {
 	/**
-	 * Returns the value of the '<em><b>Nominal Diameter</b></em>' attribute.
+	 * Returns the value of the '<em><b>Nominal Diameter</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Nominal Diameter</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Nominal Diameter</em>' attribute.
-	 * @see #setNominalDiameter(float)
+	 * @return the value of the '<em>Nominal Diameter</em>' reference.
+	 * @see #setNominalDiameter(IfcPositiveLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcReinforcingBar_NominalDiameter()
 	 * @model
 	 * @generated
 	 */
-	float getNominalDiameter();
+	IfcPositiveLengthMeasure getNominalDiameter();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcReinforcingBar#getNominalDiameter <em>Nominal Diameter</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcReinforcingBar#getNominalDiameter <em>Nominal Diameter</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Nominal Diameter</em>' attribute.
+	 * @param value the new value of the '<em>Nominal Diameter</em>' reference.
 	 * @see #getNominalDiameter()
 	 * @generated
 	 */
-	void setNominalDiameter(float value);
+	void setNominalDiameter(IfcPositiveLengthMeasure value);
 
 	/**
-	 * Returns the value of the '<em><b>Nominal Diameter As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Nominal Diameter As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Nominal Diameter As String</em>' attribute.
-	 * @see #setNominalDiameterAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcReinforcingBar_NominalDiameterAsString()
-	 * @model
-	 * @generated
-	 */
-	String getNominalDiameterAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcReinforcingBar#getNominalDiameterAsString <em>Nominal Diameter As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Nominal Diameter As String</em>' attribute.
-	 * @see #getNominalDiameterAsString()
-	 * @generated
-	 */
-	void setNominalDiameterAsString(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Cross Section Area</b></em>' attribute.
+	 * Returns the value of the '<em><b>Cross Section Area</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Cross Section Area</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Cross Section Area</em>' attribute.
-	 * @see #setCrossSectionArea(float)
+	 * @return the value of the '<em>Cross Section Area</em>' reference.
+	 * @see #setCrossSectionArea(IfcAreaMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcReinforcingBar_CrossSectionArea()
 	 * @model
 	 * @generated
 	 */
-	float getCrossSectionArea();
+	IfcAreaMeasure getCrossSectionArea();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcReinforcingBar#getCrossSectionArea <em>Cross Section Area</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcReinforcingBar#getCrossSectionArea <em>Cross Section Area</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Cross Section Area</em>' attribute.
+	 * @param value the new value of the '<em>Cross Section Area</em>' reference.
 	 * @see #getCrossSectionArea()
 	 * @generated
 	 */
-	void setCrossSectionArea(float value);
+	void setCrossSectionArea(IfcAreaMeasure value);
 
 	/**
-	 * Returns the value of the '<em><b>Cross Section Area As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Cross Section Area As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Cross Section Area As String</em>' attribute.
-	 * @see #setCrossSectionAreaAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcReinforcingBar_CrossSectionAreaAsString()
-	 * @model
-	 * @generated
-	 */
-	String getCrossSectionAreaAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcReinforcingBar#getCrossSectionAreaAsString <em>Cross Section Area As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Cross Section Area As String</em>' attribute.
-	 * @see #getCrossSectionAreaAsString()
-	 * @generated
-	 */
-	void setCrossSectionAreaAsString(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Bar Length</b></em>' attribute.
+	 * Returns the value of the '<em><b>Bar Length</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Bar Length</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Bar Length</em>' attribute.
+	 * @return the value of the '<em>Bar Length</em>' reference.
 	 * @see #isSetBarLength()
 	 * @see #unsetBarLength()
-	 * @see #setBarLength(float)
+	 * @see #setBarLength(IfcPositiveLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcReinforcingBar_BarLength()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getBarLength();
+	IfcPositiveLengthMeasure getBarLength();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcReinforcingBar#getBarLength <em>Bar Length</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcReinforcingBar#getBarLength <em>Bar Length</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Bar Length</em>' attribute.
+	 * @param value the new value of the '<em>Bar Length</em>' reference.
 	 * @see #isSetBarLength()
 	 * @see #unsetBarLength()
 	 * @see #getBarLength()
 	 * @generated
 	 */
-	void setBarLength(float value);
+	void setBarLength(IfcPositiveLengthMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcReinforcingBar#getBarLength <em>Bar Length</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcReinforcingBar#getBarLength <em>Bar Length</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetBarLength()
 	 * @see #getBarLength()
-	 * @see #setBarLength(float)
+	 * @see #setBarLength(IfcPositiveLengthMeasure)
 	 * @generated
 	 */
 	void unsetBarLength();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcReinforcingBar#getBarLength <em>Bar Length</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcReinforcingBar#getBarLength <em>Bar Length</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Bar Length</em>' attribute is set.
+	 * @return whether the value of the '<em>Bar Length</em>' reference is set.
 	 * @see #unsetBarLength()
 	 * @see #getBarLength()
-	 * @see #setBarLength(float)
+	 * @see #setBarLength(IfcPositiveLengthMeasure)
 	 * @generated
 	 */
 	boolean isSetBarLength();
-
-	/**
-	 * Returns the value of the '<em><b>Bar Length As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Bar Length As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Bar Length As String</em>' attribute.
-	 * @see #isSetBarLengthAsString()
-	 * @see #unsetBarLengthAsString()
-	 * @see #setBarLengthAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcReinforcingBar_BarLengthAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getBarLengthAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcReinforcingBar#getBarLengthAsString <em>Bar Length As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Bar Length As String</em>' attribute.
-	 * @see #isSetBarLengthAsString()
-	 * @see #unsetBarLengthAsString()
-	 * @see #getBarLengthAsString()
-	 * @generated
-	 */
-	void setBarLengthAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcReinforcingBar#getBarLengthAsString <em>Bar Length As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetBarLengthAsString()
-	 * @see #getBarLengthAsString()
-	 * @see #setBarLengthAsString(String)
-	 * @generated
-	 */
-	void unsetBarLengthAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcReinforcingBar#getBarLengthAsString <em>Bar Length As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Bar Length As String</em>' attribute is set.
-	 * @see #unsetBarLengthAsString()
-	 * @see #getBarLengthAsString()
-	 * @see #setBarLengthAsString(String)
-	 * @generated
-	 */
-	boolean isSetBarLengthAsString();
 
 	/**
 	 * Returns the value of the '<em><b>Bar Role</b></em>' attribute.

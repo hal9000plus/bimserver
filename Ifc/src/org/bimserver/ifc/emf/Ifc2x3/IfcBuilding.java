@@ -31,9 +31,7 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcBuilding#getElevationOfRefHeight <em>Elevation Of Ref Height</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcBuilding#getElevationOfRefHeightAsString <em>Elevation Of Ref Height As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcBuilding#getElevationOfTerrain <em>Elevation Of Terrain</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcBuilding#getElevationOfTerrainAsString <em>Elevation Of Terrain As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcBuilding#getBuildingAddress <em>Building Address</em>}</li>
  * </ul>
  * </p>
@@ -44,216 +42,110 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcBuilding extends IfcSpatialStructureElement {
 	/**
-	 * Returns the value of the '<em><b>Elevation Of Ref Height</b></em>' attribute.
+	 * Returns the value of the '<em><b>Elevation Of Ref Height</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Elevation Of Ref Height</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Elevation Of Ref Height</em>' attribute.
+	 * @return the value of the '<em>Elevation Of Ref Height</em>' reference.
 	 * @see #isSetElevationOfRefHeight()
 	 * @see #unsetElevationOfRefHeight()
-	 * @see #setElevationOfRefHeight(float)
+	 * @see #setElevationOfRefHeight(IfcLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcBuilding_ElevationOfRefHeight()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getElevationOfRefHeight();
+	IfcLengthMeasure getElevationOfRefHeight();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBuilding#getElevationOfRefHeight <em>Elevation Of Ref Height</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBuilding#getElevationOfRefHeight <em>Elevation Of Ref Height</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Elevation Of Ref Height</em>' attribute.
+	 * @param value the new value of the '<em>Elevation Of Ref Height</em>' reference.
 	 * @see #isSetElevationOfRefHeight()
 	 * @see #unsetElevationOfRefHeight()
 	 * @see #getElevationOfRefHeight()
 	 * @generated
 	 */
-	void setElevationOfRefHeight(float value);
+	void setElevationOfRefHeight(IfcLengthMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBuilding#getElevationOfRefHeight <em>Elevation Of Ref Height</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBuilding#getElevationOfRefHeight <em>Elevation Of Ref Height</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetElevationOfRefHeight()
 	 * @see #getElevationOfRefHeight()
-	 * @see #setElevationOfRefHeight(float)
+	 * @see #setElevationOfRefHeight(IfcLengthMeasure)
 	 * @generated
 	 */
 	void unsetElevationOfRefHeight();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBuilding#getElevationOfRefHeight <em>Elevation Of Ref Height</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBuilding#getElevationOfRefHeight <em>Elevation Of Ref Height</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Elevation Of Ref Height</em>' attribute is set.
+	 * @return whether the value of the '<em>Elevation Of Ref Height</em>' reference is set.
 	 * @see #unsetElevationOfRefHeight()
 	 * @see #getElevationOfRefHeight()
-	 * @see #setElevationOfRefHeight(float)
+	 * @see #setElevationOfRefHeight(IfcLengthMeasure)
 	 * @generated
 	 */
 	boolean isSetElevationOfRefHeight();
 
 	/**
-	 * Returns the value of the '<em><b>Elevation Of Ref Height As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Elevation Of Ref Height As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Elevation Of Ref Height As String</em>' attribute.
-	 * @see #isSetElevationOfRefHeightAsString()
-	 * @see #unsetElevationOfRefHeightAsString()
-	 * @see #setElevationOfRefHeightAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcBuilding_ElevationOfRefHeightAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getElevationOfRefHeightAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBuilding#getElevationOfRefHeightAsString <em>Elevation Of Ref Height As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Elevation Of Ref Height As String</em>' attribute.
-	 * @see #isSetElevationOfRefHeightAsString()
-	 * @see #unsetElevationOfRefHeightAsString()
-	 * @see #getElevationOfRefHeightAsString()
-	 * @generated
-	 */
-	void setElevationOfRefHeightAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBuilding#getElevationOfRefHeightAsString <em>Elevation Of Ref Height As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetElevationOfRefHeightAsString()
-	 * @see #getElevationOfRefHeightAsString()
-	 * @see #setElevationOfRefHeightAsString(String)
-	 * @generated
-	 */
-	void unsetElevationOfRefHeightAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBuilding#getElevationOfRefHeightAsString <em>Elevation Of Ref Height As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Elevation Of Ref Height As String</em>' attribute is set.
-	 * @see #unsetElevationOfRefHeightAsString()
-	 * @see #getElevationOfRefHeightAsString()
-	 * @see #setElevationOfRefHeightAsString(String)
-	 * @generated
-	 */
-	boolean isSetElevationOfRefHeightAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Elevation Of Terrain</b></em>' attribute.
+	 * Returns the value of the '<em><b>Elevation Of Terrain</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Elevation Of Terrain</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Elevation Of Terrain</em>' attribute.
+	 * @return the value of the '<em>Elevation Of Terrain</em>' reference.
 	 * @see #isSetElevationOfTerrain()
 	 * @see #unsetElevationOfTerrain()
-	 * @see #setElevationOfTerrain(float)
+	 * @see #setElevationOfTerrain(IfcLengthMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcBuilding_ElevationOfTerrain()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getElevationOfTerrain();
+	IfcLengthMeasure getElevationOfTerrain();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBuilding#getElevationOfTerrain <em>Elevation Of Terrain</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBuilding#getElevationOfTerrain <em>Elevation Of Terrain</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Elevation Of Terrain</em>' attribute.
+	 * @param value the new value of the '<em>Elevation Of Terrain</em>' reference.
 	 * @see #isSetElevationOfTerrain()
 	 * @see #unsetElevationOfTerrain()
 	 * @see #getElevationOfTerrain()
 	 * @generated
 	 */
-	void setElevationOfTerrain(float value);
+	void setElevationOfTerrain(IfcLengthMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBuilding#getElevationOfTerrain <em>Elevation Of Terrain</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBuilding#getElevationOfTerrain <em>Elevation Of Terrain</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetElevationOfTerrain()
 	 * @see #getElevationOfTerrain()
-	 * @see #setElevationOfTerrain(float)
+	 * @see #setElevationOfTerrain(IfcLengthMeasure)
 	 * @generated
 	 */
 	void unsetElevationOfTerrain();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBuilding#getElevationOfTerrain <em>Elevation Of Terrain</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBuilding#getElevationOfTerrain <em>Elevation Of Terrain</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Elevation Of Terrain</em>' attribute is set.
+	 * @return whether the value of the '<em>Elevation Of Terrain</em>' reference is set.
 	 * @see #unsetElevationOfTerrain()
 	 * @see #getElevationOfTerrain()
-	 * @see #setElevationOfTerrain(float)
+	 * @see #setElevationOfTerrain(IfcLengthMeasure)
 	 * @generated
 	 */
 	boolean isSetElevationOfTerrain();
-
-	/**
-	 * Returns the value of the '<em><b>Elevation Of Terrain As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Elevation Of Terrain As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Elevation Of Terrain As String</em>' attribute.
-	 * @see #isSetElevationOfTerrainAsString()
-	 * @see #unsetElevationOfTerrainAsString()
-	 * @see #setElevationOfTerrainAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcBuilding_ElevationOfTerrainAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getElevationOfTerrainAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBuilding#getElevationOfTerrainAsString <em>Elevation Of Terrain As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Elevation Of Terrain As String</em>' attribute.
-	 * @see #isSetElevationOfTerrainAsString()
-	 * @see #unsetElevationOfTerrainAsString()
-	 * @see #getElevationOfTerrainAsString()
-	 * @generated
-	 */
-	void setElevationOfTerrainAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBuilding#getElevationOfTerrainAsString <em>Elevation Of Terrain As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetElevationOfTerrainAsString()
-	 * @see #getElevationOfTerrainAsString()
-	 * @see #setElevationOfTerrainAsString(String)
-	 * @generated
-	 */
-	void unsetElevationOfTerrainAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcBuilding#getElevationOfTerrainAsString <em>Elevation Of Terrain As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Elevation Of Terrain As String</em>' attribute is set.
-	 * @see #unsetElevationOfTerrainAsString()
-	 * @see #getElevationOfTerrainAsString()
-	 * @see #setElevationOfTerrainAsString(String)
-	 * @generated
-	 */
-	boolean isSetElevationOfTerrainAsString();
 
 	/**
 	 * Returns the value of the '<em><b>Building Address</b></em>' reference.

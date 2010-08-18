@@ -22,8 +22,9 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3;
 
-import org.bimserver.emf.IdEObject;
 import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -43,10 +44,9 @@ import org.eclipse.emf.common.util.EList;
  *
  * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcClassificationItem()
  * @model
- * @extends IdEObject
  * @generated
  */
-public interface IfcClassificationItem extends IdEObject {
+public interface IfcClassificationItem extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Notation</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -129,30 +129,30 @@ public interface IfcClassificationItem extends IdEObject {
 	boolean isSetItemOf();
 
 	/**
-	 * Returns the value of the '<em><b>Title</b></em>' attribute.
+	 * Returns the value of the '<em><b>Title</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Title</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Title</em>' attribute.
-	 * @see #setTitle(String)
+	 * @return the value of the '<em>Title</em>' reference.
+	 * @see #setTitle(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcClassificationItem_Title()
 	 * @model
 	 * @generated
 	 */
-	String getTitle();
+	IfcLabel getTitle();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcClassificationItem#getTitle <em>Title</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcClassificationItem#getTitle <em>Title</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Title</em>' attribute.
+	 * @param value the new value of the '<em>Title</em>' reference.
 	 * @see #getTitle()
 	 * @generated
 	 */
-	void setTitle(String value);
+	void setTitle(IfcLabel value);
 
 	/**
 	 * Returns the value of the '<em><b>Is Classified Item In</b></em>' reference list.

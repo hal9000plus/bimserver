@@ -2,7 +2,20 @@
 
     package nl.tue.buildingsmart.express.parser;
 
-      
+    import java.io.*;
+    import java.util.ArrayList;
+    import java.util.List;
+    import java.util.Vector;
+    import java.util.Hashtable;
+    import java.util.Collection;
+    import java.util.Iterator;
+	import org.slf4j.Logger;
+	import org.slf4j.LoggerFactory;
+
+    import net.sourceforge.osexpress.parser.*;
+    
+    import nl.tue.buildingsmart.express.dictionary.*;
+  
 
 public interface Express2DictWalkerTokenTypes {
 	int EOF = 1;

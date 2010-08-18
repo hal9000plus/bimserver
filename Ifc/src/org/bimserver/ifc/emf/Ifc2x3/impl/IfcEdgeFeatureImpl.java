@@ -24,6 +24,8 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcEdgeFeature;
+import org.bimserver.ifc.emf.Ifc2x3.IfcPositiveLengthMeasure;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -34,7 +36,6 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcEdgeFeatureImpl#getFeatureLength <em>Feature Length</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcEdgeFeatureImpl#getFeatureLengthAsString <em>Feature Length As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -65,8 +66,8 @@ public class IfcEdgeFeatureImpl extends IfcFeatureElementSubtractionImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getFeatureLength() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcEdgeFeature_FeatureLength(), true);
+	public IfcPositiveLengthMeasure getFeatureLength() {
+		return (IfcPositiveLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcEdgeFeature_FeatureLength(), true);
 	}
 
 	/**
@@ -74,7 +75,7 @@ public class IfcEdgeFeatureImpl extends IfcFeatureElementSubtractionImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFeatureLength(float newFeatureLength) {
+	public void setFeatureLength(IfcPositiveLengthMeasure newFeatureLength) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcEdgeFeature_FeatureLength(), newFeatureLength);
 	}
 
@@ -94,42 +95,6 @@ public class IfcEdgeFeatureImpl extends IfcFeatureElementSubtractionImpl impleme
 	 */
 	public boolean isSetFeatureLength() {
 		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcEdgeFeature_FeatureLength());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getFeatureLengthAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcEdgeFeature_FeatureLengthAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setFeatureLengthAsString(String newFeatureLengthAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcEdgeFeature_FeatureLengthAsString(), newFeatureLengthAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetFeatureLengthAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcEdgeFeature_FeatureLengthAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetFeatureLengthAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcEdgeFeature_FeatureLengthAsString());
 	}
 
 } //IfcEdgeFeatureImpl

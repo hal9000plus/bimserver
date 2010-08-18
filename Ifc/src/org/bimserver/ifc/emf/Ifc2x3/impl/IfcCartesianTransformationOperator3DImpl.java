@@ -25,6 +25,9 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcCartesianTransformationOperator3D;
 import org.bimserver.ifc.emf.Ifc2x3.IfcDirection;
+
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -35,6 +38,7 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcCartesianTransformationOperator3DImpl#getAxis3 <em>Axis3</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcCartesianTransformationOperator3DImpl#getU <em>U</em>}</li>
  * </ul>
  * </p>
  *
@@ -94,6 +98,16 @@ public class IfcCartesianTransformationOperator3DImpl extends IfcCartesianTransf
 	 */
 	public boolean isSetAxis3() {
 		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcCartesianTransformationOperator3D_Axis3());
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<IfcDirection> getU() {
+		return (EList<IfcDirection>) eGet(Ifc2x3Package.eINSTANCE.getIfcCartesianTransformationOperator3D_U(), true);
 	}
 
 } //IfcCartesianTransformationOperator3DImpl

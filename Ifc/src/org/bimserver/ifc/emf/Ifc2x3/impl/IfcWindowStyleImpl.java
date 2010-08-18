@@ -27,7 +27,7 @@ import org.bimserver.ifc.emf.Ifc2x3.IfcLogical;
 import org.bimserver.ifc.emf.Ifc2x3.IfcWindowStyle;
 import org.bimserver.ifc.emf.Ifc2x3.IfcWindowStyleConstructionEnum;
 import org.bimserver.ifc.emf.Ifc2x3.IfcWindowStyleOperationEnum;
-import org.bimserver.ifc.emf.Ifc2x3.Tristate;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -107,8 +107,8 @@ public class IfcWindowStyleImpl extends IfcTypeProductImpl implements IfcWindowS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Tristate getParameterTakesPrecedence() {
-		return (Tristate) eGet(Ifc2x3Package.eINSTANCE.getIfcWindowStyle_ParameterTakesPrecedence(), true);
+	public IfcLogical getParameterTakesPrecedence() {
+		return (IfcLogical) eGet(Ifc2x3Package.eINSTANCE.getIfcWindowStyle_ParameterTakesPrecedence(), true);
 	}
 
 	/**
@@ -116,7 +116,7 @@ public class IfcWindowStyleImpl extends IfcTypeProductImpl implements IfcWindowS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setParameterTakesPrecedence(Tristate newParameterTakesPrecedence) {
+	public void setParameterTakesPrecedence(IfcLogical newParameterTakesPrecedence) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcWindowStyle_ParameterTakesPrecedence(), newParameterTakesPrecedence);
 	}
 
@@ -125,8 +125,8 @@ public class IfcWindowStyleImpl extends IfcTypeProductImpl implements IfcWindowS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Tristate getSizeable() {
-		return (Tristate) eGet(Ifc2x3Package.eINSTANCE.getIfcWindowStyle_Sizeable(), true);
+	public IfcLogical getSizeable() {
+		return (IfcLogical) eGet(Ifc2x3Package.eINSTANCE.getIfcWindowStyle_Sizeable(), true);
 	}
 
 	/**
@@ -134,7 +134,7 @@ public class IfcWindowStyleImpl extends IfcTypeProductImpl implements IfcWindowS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSizeable(Tristate newSizeable) {
+	public void setSizeable(IfcLogical newSizeable) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcWindowStyle_Sizeable(), newSizeable);
 	}
 

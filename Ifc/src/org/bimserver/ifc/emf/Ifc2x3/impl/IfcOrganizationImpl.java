@@ -22,15 +22,22 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
-import org.bimserver.emf.IdEObjectImpl;
+import org.bimserver.ifc.IfcRootObject;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcActorRole;
 import org.bimserver.ifc.emf.Ifc2x3.IfcAddress;
+import org.bimserver.ifc.emf.Ifc2x3.IfcIdentifier;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
 import org.bimserver.ifc.emf.Ifc2x3.IfcOrganization;
 import org.bimserver.ifc.emf.Ifc2x3.IfcOrganizationRelationship;
 import org.bimserver.ifc.emf.Ifc2x3.IfcPersonAndOrganization;
+import org.bimserver.ifc.emf.Ifc2x3.IfcText;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -52,7 +59,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class IfcOrganizationImpl extends IdEObjectImpl implements IfcOrganization {
+public class IfcOrganizationImpl extends IfcRootObject implements IfcOrganization {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -87,8 +94,8 @@ public class IfcOrganizationImpl extends IdEObjectImpl implements IfcOrganizatio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getId() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcOrganization_Id(), true);
+	public IfcIdentifier getId() {
+		return (IfcIdentifier) eGet(Ifc2x3Package.eINSTANCE.getIfcOrganization_Id(), true);
 	}
 
 	/**
@@ -96,7 +103,7 @@ public class IfcOrganizationImpl extends IdEObjectImpl implements IfcOrganizatio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setId(String newId) {
+	public void setId(IfcIdentifier newId) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcOrganization_Id(), newId);
 	}
 
@@ -123,8 +130,8 @@ public class IfcOrganizationImpl extends IdEObjectImpl implements IfcOrganizatio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcOrganization_Name(), true);
+	public IfcLabel getName() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcOrganization_Name(), true);
 	}
 
 	/**
@@ -132,7 +139,7 @@ public class IfcOrganizationImpl extends IdEObjectImpl implements IfcOrganizatio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(String newName) {
+	public void setName(IfcLabel newName) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcOrganization_Name(), newName);
 	}
 
@@ -141,8 +148,8 @@ public class IfcOrganizationImpl extends IdEObjectImpl implements IfcOrganizatio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getDescription() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcOrganization_Description(), true);
+	public IfcText getDescription() {
+		return (IfcText) eGet(Ifc2x3Package.eINSTANCE.getIfcOrganization_Description(), true);
 	}
 
 	/**
@@ -150,7 +157,7 @@ public class IfcOrganizationImpl extends IdEObjectImpl implements IfcOrganizatio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDescription(String newDescription) {
+	public void setDescription(IfcText newDescription) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcOrganization_Description(), newDescription);
 	}
 

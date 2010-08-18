@@ -33,7 +33,6 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRegularTimeSeries#getTimeStep <em>Time Step</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRegularTimeSeries#getTimeStepAsString <em>Time Step As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcRegularTimeSeries#getValues <em>Values</em>}</li>
  * </ul>
  * </p>
@@ -44,56 +43,30 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface IfcRegularTimeSeries extends IfcTimeSeries {
 	/**
-	 * Returns the value of the '<em><b>Time Step</b></em>' attribute.
+	 * Returns the value of the '<em><b>Time Step</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Time Step</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Time Step</em>' attribute.
-	 * @see #setTimeStep(float)
+	 * @return the value of the '<em>Time Step</em>' reference.
+	 * @see #setTimeStep(IfcTimeMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRegularTimeSeries_TimeStep()
 	 * @model
 	 * @generated
 	 */
-	float getTimeStep();
+	IfcTimeMeasure getTimeStep();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRegularTimeSeries#getTimeStep <em>Time Step</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRegularTimeSeries#getTimeStep <em>Time Step</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Time Step</em>' attribute.
+	 * @param value the new value of the '<em>Time Step</em>' reference.
 	 * @see #getTimeStep()
 	 * @generated
 	 */
-	void setTimeStep(float value);
-
-	/**
-	 * Returns the value of the '<em><b>Time Step As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Time Step As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Time Step As String</em>' attribute.
-	 * @see #setTimeStepAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcRegularTimeSeries_TimeStepAsString()
-	 * @model
-	 * @generated
-	 */
-	String getTimeStepAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcRegularTimeSeries#getTimeStepAsString <em>Time Step As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Time Step As String</em>' attribute.
-	 * @see #getTimeStepAsString()
-	 * @generated
-	 */
-	void setTimeStepAsString(String value);
+	void setTimeStep(IfcTimeMeasure value);
 
 	/**
 	 * Returns the value of the '<em><b>Values</b></em>' reference list.

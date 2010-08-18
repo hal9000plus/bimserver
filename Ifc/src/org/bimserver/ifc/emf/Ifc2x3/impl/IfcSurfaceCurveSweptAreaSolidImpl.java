@@ -24,8 +24,10 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcCurve;
+import org.bimserver.ifc.emf.Ifc2x3.IfcParameterValue;
 import org.bimserver.ifc.emf.Ifc2x3.IfcSurface;
 import org.bimserver.ifc.emf.Ifc2x3.IfcSurfaceCurveSweptAreaSolid;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -37,9 +39,7 @@ import org.eclipse.emf.ecore.EClass;
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSurfaceCurveSweptAreaSolidImpl#getDirectrix <em>Directrix</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSurfaceCurveSweptAreaSolidImpl#getStartParam <em>Start Param</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSurfaceCurveSweptAreaSolidImpl#getStartParamAsString <em>Start Param As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSurfaceCurveSweptAreaSolidImpl#getEndParam <em>End Param</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSurfaceCurveSweptAreaSolidImpl#getEndParamAsString <em>End Param As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcSurfaceCurveSweptAreaSolidImpl#getReferenceSurface <em>Reference Surface</em>}</li>
  * </ul>
  * </p>
@@ -89,8 +89,8 @@ public class IfcSurfaceCurveSweptAreaSolidImpl extends IfcSweptAreaSolidImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getStartParam() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcSurfaceCurveSweptAreaSolid_StartParam(), true);
+	public IfcParameterValue getStartParam() {
+		return (IfcParameterValue) eGet(Ifc2x3Package.eINSTANCE.getIfcSurfaceCurveSweptAreaSolid_StartParam(), true);
 	}
 
 	/**
@@ -98,7 +98,7 @@ public class IfcSurfaceCurveSweptAreaSolidImpl extends IfcSweptAreaSolidImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setStartParam(float newStartParam) {
+	public void setStartParam(IfcParameterValue newStartParam) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcSurfaceCurveSweptAreaSolid_StartParam(), newStartParam);
 	}
 
@@ -107,8 +107,8 @@ public class IfcSurfaceCurveSweptAreaSolidImpl extends IfcSweptAreaSolidImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getStartParamAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcSurfaceCurveSweptAreaSolid_StartParamAsString(), true);
+	public IfcParameterValue getEndParam() {
+		return (IfcParameterValue) eGet(Ifc2x3Package.eINSTANCE.getIfcSurfaceCurveSweptAreaSolid_EndParam(), true);
 	}
 
 	/**
@@ -116,44 +116,8 @@ public class IfcSurfaceCurveSweptAreaSolidImpl extends IfcSweptAreaSolidImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setStartParamAsString(String newStartParamAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcSurfaceCurveSweptAreaSolid_StartParamAsString(), newStartParamAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getEndParam() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcSurfaceCurveSweptAreaSolid_EndParam(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setEndParam(float newEndParam) {
+	public void setEndParam(IfcParameterValue newEndParam) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcSurfaceCurveSweptAreaSolid_EndParam(), newEndParam);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getEndParamAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcSurfaceCurveSweptAreaSolid_EndParamAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setEndParamAsString(String newEndParamAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcSurfaceCurveSweptAreaSolid_EndParamAsString(), newEndParamAsString);
 	}
 
 	/**

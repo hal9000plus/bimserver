@@ -24,11 +24,14 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcElementCompositionEnum;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRelContainedInSpatialStructure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRelReferencedInSpatialStructure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRelServicesBuildings;
 import org.bimserver.ifc.emf.Ifc2x3.IfcSpatialStructureElement;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -73,8 +76,8 @@ public class IfcSpatialStructureElementImpl extends IfcProductImpl implements If
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getLongName() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcSpatialStructureElement_LongName(), true);
+	public IfcLabel getLongName() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcSpatialStructureElement_LongName(), true);
 	}
 
 	/**
@@ -82,7 +85,7 @@ public class IfcSpatialStructureElementImpl extends IfcProductImpl implements If
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLongName(String newLongName) {
+	public void setLongName(IfcLabel newLongName) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcSpatialStructureElement_LongName(), newLongName);
 	}
 

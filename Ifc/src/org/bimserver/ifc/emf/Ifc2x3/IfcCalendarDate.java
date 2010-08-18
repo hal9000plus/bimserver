@@ -42,81 +42,81 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcCalendarDate extends IfcDateTimeSelect, IfcObjectReferenceSelect {
 	/**
-	 * Returns the value of the '<em><b>Day Component</b></em>' attribute.
+	 * Returns the value of the '<em><b>Day Component</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Day Component</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Day Component</em>' attribute.
-	 * @see #setDayComponent(int)
+	 * @return the value of the '<em>Day Component</em>' reference.
+	 * @see #setDayComponent(IfcDayInMonthNumber)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcCalendarDate_DayComponent()
 	 * @model
 	 * @generated
 	 */
-	int getDayComponent();
+	IfcDayInMonthNumber getDayComponent();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCalendarDate#getDayComponent <em>Day Component</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCalendarDate#getDayComponent <em>Day Component</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Day Component</em>' attribute.
+	 * @param value the new value of the '<em>Day Component</em>' reference.
 	 * @see #getDayComponent()
 	 * @generated
 	 */
-	void setDayComponent(int value);
+	void setDayComponent(IfcDayInMonthNumber value);
 
 	/**
-	 * Returns the value of the '<em><b>Month Component</b></em>' attribute.
+	 * Returns the value of the '<em><b>Month Component</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Month Component</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Month Component</em>' attribute.
-	 * @see #setMonthComponent(int)
+	 * @return the value of the '<em>Month Component</em>' reference.
+	 * @see #setMonthComponent(IfcMonthInYearNumber)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcCalendarDate_MonthComponent()
 	 * @model
 	 * @generated
 	 */
-	int getMonthComponent();
+	IfcMonthInYearNumber getMonthComponent();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCalendarDate#getMonthComponent <em>Month Component</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCalendarDate#getMonthComponent <em>Month Component</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Month Component</em>' attribute.
+	 * @param value the new value of the '<em>Month Component</em>' reference.
 	 * @see #getMonthComponent()
 	 * @generated
 	 */
-	void setMonthComponent(int value);
+	void setMonthComponent(IfcMonthInYearNumber value);
 
 	/**
-	 * Returns the value of the '<em><b>Year Component</b></em>' attribute.
+	 * Returns the value of the '<em><b>Year Component</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Year Component</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Year Component</em>' attribute.
-	 * @see #setYearComponent(int)
+	 * @return the value of the '<em>Year Component</em>' reference.
+	 * @see #setYearComponent(IfcYearNumber)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcCalendarDate_YearComponent()
 	 * @model
 	 * @generated
 	 */
-	int getYearComponent();
+	IfcYearNumber getYearComponent();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCalendarDate#getYearComponent <em>Year Component</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcCalendarDate#getYearComponent <em>Year Component</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Year Component</em>' attribute.
+	 * @param value the new value of the '<em>Year Component</em>' reference.
 	 * @see #getYearComponent()
 	 * @generated
 	 */
-	void setYearComponent(int value);
+	void setYearComponent(IfcYearNumber value);
 
 } // IfcCalendarDate

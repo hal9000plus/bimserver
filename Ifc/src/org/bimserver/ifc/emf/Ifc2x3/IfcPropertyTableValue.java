@@ -78,54 +78,54 @@ public interface IfcPropertyTableValue extends IfcSimpleProperty {
 	EList<IfcValue> getDefinedValues();
 
 	/**
-	 * Returns the value of the '<em><b>Expression</b></em>' attribute.
+	 * Returns the value of the '<em><b>Expression</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Expression</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Expression</em>' attribute.
+	 * @return the value of the '<em>Expression</em>' reference.
 	 * @see #isSetExpression()
 	 * @see #unsetExpression()
-	 * @see #setExpression(String)
+	 * @see #setExpression(IfcText)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcPropertyTableValue_Expression()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getExpression();
+	IfcText getExpression();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPropertyTableValue#getExpression <em>Expression</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPropertyTableValue#getExpression <em>Expression</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Expression</em>' attribute.
+	 * @param value the new value of the '<em>Expression</em>' reference.
 	 * @see #isSetExpression()
 	 * @see #unsetExpression()
 	 * @see #getExpression()
 	 * @generated
 	 */
-	void setExpression(String value);
+	void setExpression(IfcText value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPropertyTableValue#getExpression <em>Expression</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPropertyTableValue#getExpression <em>Expression</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetExpression()
 	 * @see #getExpression()
-	 * @see #setExpression(String)
+	 * @see #setExpression(IfcText)
 	 * @generated
 	 */
 	void unsetExpression();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPropertyTableValue#getExpression <em>Expression</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPropertyTableValue#getExpression <em>Expression</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Expression</em>' attribute is set.
+	 * @return whether the value of the '<em>Expression</em>' reference is set.
 	 * @see #unsetExpression()
 	 * @see #getExpression()
-	 * @see #setExpression(String)
+	 * @see #setExpression(IfcText)
 	 * @generated
 	 */
 	boolean isSetExpression();

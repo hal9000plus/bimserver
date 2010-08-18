@@ -22,11 +22,15 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
-import org.bimserver.emf.IdEObjectImpl;
+import org.bimserver.ifc.IfcRootObject;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
 import org.bimserver.ifc.emf.Ifc2x3.IfcProfileDef;
 import org.bimserver.ifc.emf.Ifc2x3.IfcProfileProperties;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -42,7 +46,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class IfcProfilePropertiesImpl extends IdEObjectImpl implements IfcProfileProperties {
+public class IfcProfilePropertiesImpl extends IfcRootObject implements IfcProfileProperties {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -77,8 +81,8 @@ public class IfcProfilePropertiesImpl extends IdEObjectImpl implements IfcProfil
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getProfileName() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcProfileProperties_ProfileName(), true);
+	public IfcLabel getProfileName() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcProfileProperties_ProfileName(), true);
 	}
 
 	/**
@@ -86,7 +90,7 @@ public class IfcProfilePropertiesImpl extends IdEObjectImpl implements IfcProfil
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setProfileName(String newProfileName) {
+	public void setProfileName(IfcLabel newProfileName) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcProfileProperties_ProfileName(), newProfileName);
 	}
 

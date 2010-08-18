@@ -40,29 +40,29 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcActionRequest extends IfcControl {
 	/**
-	 * Returns the value of the '<em><b>Request ID</b></em>' attribute.
+	 * Returns the value of the '<em><b>Request ID</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Request ID</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Request ID</em>' attribute.
-	 * @see #setRequestID(String)
+	 * @return the value of the '<em>Request ID</em>' reference.
+	 * @see #setRequestID(IfcIdentifier)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcActionRequest_RequestID()
 	 * @model
 	 * @generated
 	 */
-	String getRequestID();
+	IfcIdentifier getRequestID();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcActionRequest#getRequestID <em>Request ID</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcActionRequest#getRequestID <em>Request ID</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Request ID</em>' attribute.
+	 * @param value the new value of the '<em>Request ID</em>' reference.
 	 * @see #getRequestID()
 	 * @generated
 	 */
-	void setRequestID(String value);
+	void setRequestID(IfcIdentifier value);
 
 } // IfcActionRequest

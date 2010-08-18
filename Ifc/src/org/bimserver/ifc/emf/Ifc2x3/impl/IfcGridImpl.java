@@ -26,7 +26,9 @@ import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcGrid;
 import org.bimserver.ifc.emf.Ifc2x3.IfcGridAxis;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRelContainedInSpatialStructure;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

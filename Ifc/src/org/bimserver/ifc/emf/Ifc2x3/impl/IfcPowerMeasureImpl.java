@@ -22,9 +22,13 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
+import org.bimserver.ifc.IfcRootObject;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcPowerMeasure;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,7 +38,7 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcPowerMeasureImpl#getWrappedValue <em>Wrapped Value</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcPowerMeasureImpl#getWrappedValueAsString <em>Wrapped Value As String</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcPowerMeasureImpl#getStringValuewrappedValue <em>String Valuewrapped Value</em>}</li>
  * </ul>
  * </p>
  *
@@ -83,8 +87,8 @@ public class IfcPowerMeasureImpl extends WrappedValueImpl implements IfcPowerMea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getWrappedValueAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcPowerMeasure_WrappedValueAsString(), true);
+	public String getStringValuewrappedValue() {
+		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcPowerMeasure_StringValuewrappedValue(), true);
 	}
 
 	/**
@@ -92,8 +96,8 @@ public class IfcPowerMeasureImpl extends WrappedValueImpl implements IfcPowerMea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setWrappedValueAsString(String newWrappedValueAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcPowerMeasure_WrappedValueAsString(), newWrappedValueAsString);
+	public void setStringValuewrappedValue(String newStringValuewrappedValue) {
+		eSet(Ifc2x3Package.eINSTANCE.getIfcPowerMeasure_StringValuewrappedValue(), newStringValuewrappedValue);
 	}
 
 } //IfcPowerMeasureImpl

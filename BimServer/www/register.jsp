@@ -22,73 +22,73 @@
 <jsp:include page="htmlheader.jsp" />
 <jsp:useBean id="loginManager" scope="session" class="org.bimserver.LoginManager" />
 <%
-	if (ServerSettings.getSettings().isAllowSelfRegistration()) {
-		List<String> errorMessages = new ArrayList<String>();
-		Version version = VersionChecker.getInstance().getLocalVersion();
-		boolean succes = false;
-		if (request.getParameter("register") != null) {
-			String name = request.getParameter("register_name");
-			String username = request.getParameter("register_username");
-			String password = request.getParameter("register_password");
+	List<String> errorMessages = new ArrayList<String>();
+	Version version = VersionChecker.getInstance(getServletContext()).getLocalVersion();
+	boolean succes = false;
+	if (request.getParameter("register") != null) {
+		String name = request.getParameter("register_name");
+		String username = request.getParameter("register_username");
+		String password = request.getParameter("register_password");
+		try {
+			int uid = loginManager.getAdminService().addUser(username, password, name);
+		} catch (UserException e) {
+			errorMessages.add(e.getUserMessage());
+		}
+		if (errorMessages.size() == 0) {
 			try {
-				long uoid = loginManager.getAdminService().addUser(username, password, name);
-			} catch (UserException e) {
-				errorMessages.add(e.getUserMessage());
-			}
-			if (errorMessages.size() == 0) {
-				try {
-					if (ServerSettings.getSettings().isSendConfirmationEmailAfterRegistration()) {
-						Properties props = new Properties();
-						props.put("mail.smtp.host", ServerSettings.getSettings().getSmtpServer());
-			
-						Session mailSession = Session.getDefaultInstance(props);
+				if (ServerSettings.getSettings().isSendConfirmationEmailAfterRegistration()) {
+					Properties props = new Properties();
+					props.put("mail.smtp.host", ServerSettings.getSettings().getSmtpServer());
 		
-						Message msg = new MimeMessage(mailSession);
+					Session mailSession = Session.getDefaultInstance(props);
 	
-						InternetAddress addressFrom = new InternetAddress(ServerSettings.getSettings().getEmailSenderAddress());
-						msg.setFrom(addressFrom);
-	
-						InternetAddress[] addressTo = new InternetAddress[1];
-						InternetAddress[] addressBcc = new InternetAddress[1];
-						addressTo[0] = new InternetAddress(username);
-						addressBcc[0] = new InternetAddress("register@bimserver.org");
-						msg.setRecipients(Message.RecipientType.TO, addressTo);
-						msg.setRecipients(Message.RecipientType.BCC, addressBcc);
-	
-						Map<String, Object> context = new HashMap<String, Object>();
-						context.put("name", name);
-						context.put("username", username);
-						context.put("password", password);
-						String body = TemplateEngine.getTemplateEngine().process(context, TemplateIdentifier.REGISTRATION_EMAIL_BODY);
-						String subject = TemplateEngine.getTemplateEngine().process(context, TemplateIdentifier.REGISTRATION_EMAIL_SUBJECT);
-						msg.setContent(body, "text/plain");
-						msg.setSubject(subject.trim());
-						Transport.send(msg);
-					}
-				} catch (Exception e) {
-					errorMessages.add(e.getMessage());
+					Message msg = new MimeMessage(mailSession);
+
+					InternetAddress addressFrom = new InternetAddress(ServerSettings.getSettings().getEmailSenderAddress());
+					msg.setFrom(addressFrom);
+
+					InternetAddress[] addressTo = new InternetAddress[1];
+					InternetAddress[] addressBcc = new InternetAddress[1];
+					addressTo[0] = new InternetAddress(username);
+					addressBcc[0] = new InternetAddress("register@bimserver.org");
+					msg.setRecipients(Message.RecipientType.TO, addressTo);
+					msg.setRecipients(Message.RecipientType.BCC, addressBcc);
+
+					Map<String, Object> context = new HashMap<String, Object>();
+					context.put("name", name);
+					context.put("username", username);
+					context.put("password", password);
+					String body = TemplateEngine.getTemplateEngine().process(context, TemplateIdentifier.REGISTRATION_EMAIL_BODY);
+					String subject = TemplateEngine.getTemplateEngine().process(context, TemplateIdentifier.REGISTRATION_EMAIL_SUBJECT);
+					msg.setContent(body, "text/plain");
+					msg.setSubject(subject.trim());
+					Transport.send(msg);
 				}
-			}
-			if (errorMessages.size() == 0) {
-				succes = true;
+			} catch (Exception e) {
+				errorMessages.add(e.getMessage());
 			}
 		}
+		if (errorMessages.size() == 0) {
+			succes = true;
+		}
+	}
 %>
 <div class="loginwrapper">
-<div class="header"><a href="main.jsp"><img src="images/fulllogo.gif" title="BIM Server <%=version.getVersion() %>"/></a></div>
-<div>
+<div class="header"><a href="main.jsp"><img
+	class="headerimage" src="images/logo.gif" title="BIM Server <%=version.getLatest() %>"/></a></div>
+<div class="main">
 <%
 String addition = ServerSettings.getSettings().getRegistrationAddition();
 out.print(addition + "<br/><br/>");
 if (errorMessages.size() > 0) {
-	out.println("<div class=\"error\">");
+	out.println("<div class=\"errormessage\">");
 	for (String message : errorMessages) {
 		out.println(message + "<br/>");
 	}
 	out.println("</div>");
 } else {
 	if (request.getParameter("register") != null) {
-		out.println("<div class=\"succes\">Your account has been created, an e-mail has been sent to your address to confirm. Please click <a href=\"login.jsp?username=" + request.getParameter("register_username") + "\">here</a> to login.</div>");
+		out.println("<div class=\"succesmessage\">Your account has been created, an e-mail has been sent to your address to confirm. Please click <a href=\"login.jsp?username=" + request.getParameter("register_username") + "\">here</a> to login.</div>");
 	}
 }
 if (!succes) {
@@ -117,11 +117,6 @@ like. A confirmation will be send to your e-mail address.
 <script type="text/javascript">
 document.registerForm.register_name.focus();
 </script>
-<%
-	}
-} else {
-%>
-<div class="error">Registration not enabled, please contact site administrator</div>
 <%
 }
 %>

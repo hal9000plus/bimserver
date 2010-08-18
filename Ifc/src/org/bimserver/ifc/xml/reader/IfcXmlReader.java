@@ -47,6 +47,10 @@ public class IfcXmlReader {
 			while (reader.hasNext()) {
 				switch (reader.getEventType()) {
 				case XMLStreamReader.START_ELEMENT:
+					// System.out.println(reader.getLocalName());
+					if (reader.getLocalName().equals("IfcProject")) {
+						System.out.println();
+					}
 					EClassifier classifier = Ifc2x3Package.eINSTANCE.getEClassifier(reader.getLocalName());
 					if (classifier != null) {
 						object = Ifc2x3Factory.eINSTANCE.create((EClass) classifier);

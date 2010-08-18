@@ -23,9 +23,12 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
 import org.bimserver.ifc.emf.Ifc2x3.IfcSimpleValue;
 import org.bimserver.ifc.emf.Ifc2x3.IfcTextureCoordinateGenerator;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -67,8 +70,8 @@ public class IfcTextureCoordinateGeneratorImpl extends IfcTextureCoordinateImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getMode() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcTextureCoordinateGenerator_Mode(), true);
+	public IfcLabel getMode() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcTextureCoordinateGenerator_Mode(), true);
 	}
 
 	/**
@@ -76,7 +79,7 @@ public class IfcTextureCoordinateGeneratorImpl extends IfcTextureCoordinateImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMode(String newMode) {
+	public void setMode(IfcLabel newMode) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcTextureCoordinateGenerator_Mode(), newMode);
 	}
 

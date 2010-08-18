@@ -22,13 +22,18 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
-import org.bimserver.emf.IdEObjectImpl;
+import org.bimserver.ifc.IfcRootObject;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcCalendarDate;
 import org.bimserver.ifc.emf.Ifc2x3.IfcClassification;
 import org.bimserver.ifc.emf.Ifc2x3.IfcClassificationItem;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -47,7 +52,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class IfcClassificationImpl extends IdEObjectImpl implements IfcClassification {
+public class IfcClassificationImpl extends IfcRootObject implements IfcClassification {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -82,8 +87,8 @@ public class IfcClassificationImpl extends IdEObjectImpl implements IfcClassific
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getSource() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcClassification_Source(), true);
+	public IfcLabel getSource() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcClassification_Source(), true);
 	}
 
 	/**
@@ -91,7 +96,7 @@ public class IfcClassificationImpl extends IdEObjectImpl implements IfcClassific
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSource(String newSource) {
+	public void setSource(IfcLabel newSource) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcClassification_Source(), newSource);
 	}
 
@@ -100,8 +105,8 @@ public class IfcClassificationImpl extends IdEObjectImpl implements IfcClassific
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getEdition() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcClassification_Edition(), true);
+	public IfcLabel getEdition() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcClassification_Edition(), true);
 	}
 
 	/**
@@ -109,7 +114,7 @@ public class IfcClassificationImpl extends IdEObjectImpl implements IfcClassific
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setEdition(String newEdition) {
+	public void setEdition(IfcLabel newEdition) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcClassification_Edition(), newEdition);
 	}
 
@@ -154,8 +159,8 @@ public class IfcClassificationImpl extends IdEObjectImpl implements IfcClassific
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcClassification_Name(), true);
+	public IfcLabel getName() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcClassification_Name(), true);
 	}
 
 	/**
@@ -163,7 +168,7 @@ public class IfcClassificationImpl extends IdEObjectImpl implements IfcClassific
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(String newName) {
+	public void setName(IfcLabel newName) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcClassification_Name(), newName);
 	}
 

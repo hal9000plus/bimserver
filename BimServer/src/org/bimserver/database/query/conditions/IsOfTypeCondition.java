@@ -23,7 +23,6 @@ package org.bimserver.database.query.conditions;
 import java.util.Set;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EObject;
 
 public class IsOfTypeCondition extends Condition {
@@ -36,18 +35,11 @@ public class IsOfTypeCondition extends Condition {
 
 	@Override
 	public void getEClassRequirements(Set<EClass> classRequirements) {
-		for (EClassifier eClassifier : eClass.getEPackage().getEClassifiers()) {
-			if (eClassifier instanceof EClass) {
-				EClass foundEClass = (EClass)eClassifier;
-				if (eClass.isSuperTypeOf(foundEClass)) {
-					classRequirements.add(foundEClass);
-				}
-			}
-		}
+		classRequirements.add(eClass);
 	}
 
 	@Override
 	public boolean matches(EObject object) {
-		return eClass.isSuperTypeOf(object.eClass());
+		return object.eClass() == eClass;
 	}
 }

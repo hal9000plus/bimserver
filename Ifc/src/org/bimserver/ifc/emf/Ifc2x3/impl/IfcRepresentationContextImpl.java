@@ -22,12 +22,17 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
-import org.bimserver.emf.IdEObjectImpl;
+import org.bimserver.ifc.IfcRootObject;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRepresentation;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRepresentationContext;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -44,7 +49,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class IfcRepresentationContextImpl extends IdEObjectImpl implements IfcRepresentationContext {
+public class IfcRepresentationContextImpl extends IfcRootObject implements IfcRepresentationContext {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -79,8 +84,8 @@ public class IfcRepresentationContextImpl extends IdEObjectImpl implements IfcRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getContextIdentifier() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcRepresentationContext_ContextIdentifier(), true);
+	public IfcLabel getContextIdentifier() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcRepresentationContext_ContextIdentifier(), true);
 	}
 
 	/**
@@ -88,7 +93,7 @@ public class IfcRepresentationContextImpl extends IdEObjectImpl implements IfcRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setContextIdentifier(String newContextIdentifier) {
+	public void setContextIdentifier(IfcLabel newContextIdentifier) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcRepresentationContext_ContextIdentifier(), newContextIdentifier);
 	}
 
@@ -115,8 +120,8 @@ public class IfcRepresentationContextImpl extends IdEObjectImpl implements IfcRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getContextType() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcRepresentationContext_ContextType(), true);
+	public IfcLabel getContextType() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcRepresentationContext_ContextType(), true);
 	}
 
 	/**
@@ -124,7 +129,7 @@ public class IfcRepresentationContextImpl extends IdEObjectImpl implements IfcRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setContextType(String newContextType) {
+	public void setContextType(IfcLabel newContextType) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcRepresentationContext_ContextType(), newContextType);
 	}
 

@@ -26,7 +26,9 @@ import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcPropertySetDefinition;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRelDefinesByProperties;
 import org.bimserver.ifc.emf.Ifc2x3.IfcTypeObject;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

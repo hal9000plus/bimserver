@@ -22,10 +22,14 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
-import org.bimserver.emf.IdEObjectImpl;
+import org.bimserver.ifc.IfcRootObject;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcNormalisedRatioMeasure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRelaxation;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,15 +39,13 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRelaxationImpl#getRelaxationValue <em>Relaxation Value</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRelaxationImpl#getRelaxationValueAsString <em>Relaxation Value As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRelaxationImpl#getInitialStress <em>Initial Stress</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcRelaxationImpl#getInitialStressAsString <em>Initial Stress As String</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class IfcRelaxationImpl extends IdEObjectImpl implements IfcRelaxation {
+public class IfcRelaxationImpl extends IfcRootObject implements IfcRelaxation {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -78,8 +80,8 @@ public class IfcRelaxationImpl extends IdEObjectImpl implements IfcRelaxation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getRelaxationValue() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcRelaxation_RelaxationValue(), true);
+	public IfcNormalisedRatioMeasure getRelaxationValue() {
+		return (IfcNormalisedRatioMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcRelaxation_RelaxationValue(), true);
 	}
 
 	/**
@@ -87,7 +89,7 @@ public class IfcRelaxationImpl extends IdEObjectImpl implements IfcRelaxation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRelaxationValue(float newRelaxationValue) {
+	public void setRelaxationValue(IfcNormalisedRatioMeasure newRelaxationValue) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcRelaxation_RelaxationValue(), newRelaxationValue);
 	}
 
@@ -96,8 +98,8 @@ public class IfcRelaxationImpl extends IdEObjectImpl implements IfcRelaxation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getRelaxationValueAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcRelaxation_RelaxationValueAsString(), true);
+	public IfcNormalisedRatioMeasure getInitialStress() {
+		return (IfcNormalisedRatioMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcRelaxation_InitialStress(), true);
 	}
 
 	/**
@@ -105,44 +107,8 @@ public class IfcRelaxationImpl extends IdEObjectImpl implements IfcRelaxation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRelaxationValueAsString(String newRelaxationValueAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcRelaxation_RelaxationValueAsString(), newRelaxationValueAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getInitialStress() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcRelaxation_InitialStress(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setInitialStress(float newInitialStress) {
+	public void setInitialStress(IfcNormalisedRatioMeasure newInitialStress) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcRelaxation_InitialStress(), newInitialStress);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getInitialStressAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcRelaxation_InitialStressAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setInitialStressAsString(String newInitialStressAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcRelaxation_InitialStressAsString(), newInitialStressAsString);
 	}
 
 } //IfcRelaxationImpl

@@ -22,13 +22,19 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
-import org.bimserver.emf.IdEObjectImpl;
+import org.bimserver.ifc.IfcRootObject;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcComplexProperty;
+import org.bimserver.ifc.emf.Ifc2x3.IfcIdentifier;
 import org.bimserver.ifc.emf.Ifc2x3.IfcProperty;
 import org.bimserver.ifc.emf.Ifc2x3.IfcPropertyDependencyRelationship;
+import org.bimserver.ifc.emf.Ifc2x3.IfcText;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -47,7 +53,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class IfcPropertyImpl extends IdEObjectImpl implements IfcProperty {
+public class IfcPropertyImpl extends IfcRootObject implements IfcProperty {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -82,8 +88,8 @@ public class IfcPropertyImpl extends IdEObjectImpl implements IfcProperty {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcProperty_Name(), true);
+	public IfcIdentifier getName() {
+		return (IfcIdentifier) eGet(Ifc2x3Package.eINSTANCE.getIfcProperty_Name(), true);
 	}
 
 	/**
@@ -91,7 +97,7 @@ public class IfcPropertyImpl extends IdEObjectImpl implements IfcProperty {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(String newName) {
+	public void setName(IfcIdentifier newName) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcProperty_Name(), newName);
 	}
 
@@ -100,8 +106,8 @@ public class IfcPropertyImpl extends IdEObjectImpl implements IfcProperty {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getDescription() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcProperty_Description(), true);
+	public IfcText getDescription() {
+		return (IfcText) eGet(Ifc2x3Package.eINSTANCE.getIfcProperty_Description(), true);
 	}
 
 	/**
@@ -109,7 +115,7 @@ public class IfcPropertyImpl extends IdEObjectImpl implements IfcProperty {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDescription(String newDescription) {
+	public void setDescription(IfcText newDescription) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcProperty_Description(), newDescription);
 	}
 

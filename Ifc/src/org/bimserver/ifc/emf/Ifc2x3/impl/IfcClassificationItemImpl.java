@@ -22,14 +22,19 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
-import org.bimserver.emf.IdEObjectImpl;
+import org.bimserver.ifc.IfcRootObject;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcClassification;
 import org.bimserver.ifc.emf.Ifc2x3.IfcClassificationItem;
 import org.bimserver.ifc.emf.Ifc2x3.IfcClassificationItemRelationship;
 import org.bimserver.ifc.emf.Ifc2x3.IfcClassificationNotationFacet;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLabel;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -48,7 +53,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class IfcClassificationItemImpl extends IdEObjectImpl implements IfcClassificationItem {
+public class IfcClassificationItemImpl extends IfcRootObject implements IfcClassificationItem {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -137,8 +142,8 @@ public class IfcClassificationItemImpl extends IdEObjectImpl implements IfcClass
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getTitle() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcClassificationItem_Title(), true);
+	public IfcLabel getTitle() {
+		return (IfcLabel) eGet(Ifc2x3Package.eINSTANCE.getIfcClassificationItem_Title(), true);
 	}
 
 	/**
@@ -146,7 +151,7 @@ public class IfcClassificationItemImpl extends IdEObjectImpl implements IfcClass
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTitle(String newTitle) {
+	public void setTitle(IfcLabel newTitle) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcClassificationItem_Title(), newTitle);
 	}
 

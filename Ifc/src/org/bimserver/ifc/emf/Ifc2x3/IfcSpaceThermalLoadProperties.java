@@ -31,14 +31,11 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getApplicableValueRatio <em>Applicable Value Ratio</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getApplicableValueRatioAsString <em>Applicable Value Ratio As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getThermalLoadSource <em>Thermal Load Source</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getPropertySource <em>Property Source</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getSourceDescription <em>Source Description</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getMaximumValue <em>Maximum Value</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getMaximumValueAsString <em>Maximum Value As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getMinimumValue <em>Minimum Value</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getMinimumValueAsString <em>Minimum Value As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getThermalLoadTimeSeriesValues <em>Thermal Load Time Series Values</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getUserDefinedThermalLoadSource <em>User Defined Thermal Load Source</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getUserDefinedPropertySource <em>User Defined Property Source</em>}</li>
@@ -52,110 +49,57 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcSpaceThermalLoadProperties extends IfcPropertySetDefinition {
 	/**
-	 * Returns the value of the '<em><b>Applicable Value Ratio</b></em>' attribute.
+	 * Returns the value of the '<em><b>Applicable Value Ratio</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Applicable Value Ratio</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Applicable Value Ratio</em>' attribute.
+	 * @return the value of the '<em>Applicable Value Ratio</em>' reference.
 	 * @see #isSetApplicableValueRatio()
 	 * @see #unsetApplicableValueRatio()
-	 * @see #setApplicableValueRatio(float)
+	 * @see #setApplicableValueRatio(IfcPositiveRatioMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSpaceThermalLoadProperties_ApplicableValueRatio()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getApplicableValueRatio();
+	IfcPositiveRatioMeasure getApplicableValueRatio();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getApplicableValueRatio <em>Applicable Value Ratio</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getApplicableValueRatio <em>Applicable Value Ratio</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Applicable Value Ratio</em>' attribute.
+	 * @param value the new value of the '<em>Applicable Value Ratio</em>' reference.
 	 * @see #isSetApplicableValueRatio()
 	 * @see #unsetApplicableValueRatio()
 	 * @see #getApplicableValueRatio()
 	 * @generated
 	 */
-	void setApplicableValueRatio(float value);
+	void setApplicableValueRatio(IfcPositiveRatioMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getApplicableValueRatio <em>Applicable Value Ratio</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getApplicableValueRatio <em>Applicable Value Ratio</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetApplicableValueRatio()
 	 * @see #getApplicableValueRatio()
-	 * @see #setApplicableValueRatio(float)
+	 * @see #setApplicableValueRatio(IfcPositiveRatioMeasure)
 	 * @generated
 	 */
 	void unsetApplicableValueRatio();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getApplicableValueRatio <em>Applicable Value Ratio</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getApplicableValueRatio <em>Applicable Value Ratio</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Applicable Value Ratio</em>' attribute is set.
+	 * @return whether the value of the '<em>Applicable Value Ratio</em>' reference is set.
 	 * @see #unsetApplicableValueRatio()
 	 * @see #getApplicableValueRatio()
-	 * @see #setApplicableValueRatio(float)
+	 * @see #setApplicableValueRatio(IfcPositiveRatioMeasure)
 	 * @generated
 	 */
 	boolean isSetApplicableValueRatio();
-
-	/**
-	 * Returns the value of the '<em><b>Applicable Value Ratio As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Applicable Value Ratio As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Applicable Value Ratio As String</em>' attribute.
-	 * @see #isSetApplicableValueRatioAsString()
-	 * @see #unsetApplicableValueRatioAsString()
-	 * @see #setApplicableValueRatioAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSpaceThermalLoadProperties_ApplicableValueRatioAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getApplicableValueRatioAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getApplicableValueRatioAsString <em>Applicable Value Ratio As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Applicable Value Ratio As String</em>' attribute.
-	 * @see #isSetApplicableValueRatioAsString()
-	 * @see #unsetApplicableValueRatioAsString()
-	 * @see #getApplicableValueRatioAsString()
-	 * @generated
-	 */
-	void setApplicableValueRatioAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getApplicableValueRatioAsString <em>Applicable Value Ratio As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetApplicableValueRatioAsString()
-	 * @see #getApplicableValueRatioAsString()
-	 * @see #setApplicableValueRatioAsString(String)
-	 * @generated
-	 */
-	void unsetApplicableValueRatioAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getApplicableValueRatioAsString <em>Applicable Value Ratio As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Applicable Value Ratio As String</em>' attribute is set.
-	 * @see #unsetApplicableValueRatioAsString()
-	 * @see #getApplicableValueRatioAsString()
-	 * @see #setApplicableValueRatioAsString(String)
-	 * @generated
-	 */
-	boolean isSetApplicableValueRatioAsString();
 
 	/**
 	 * Returns the value of the '<em><b>Thermal Load Source</b></em>' attribute.
@@ -216,215 +160,136 @@ public interface IfcSpaceThermalLoadProperties extends IfcPropertySetDefinition 
 	void setPropertySource(IfcPropertySourceEnum value);
 
 	/**
-	 * Returns the value of the '<em><b>Source Description</b></em>' attribute.
+	 * Returns the value of the '<em><b>Source Description</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Source Description</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Source Description</em>' attribute.
+	 * @return the value of the '<em>Source Description</em>' reference.
 	 * @see #isSetSourceDescription()
 	 * @see #unsetSourceDescription()
-	 * @see #setSourceDescription(String)
+	 * @see #setSourceDescription(IfcText)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSpaceThermalLoadProperties_SourceDescription()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getSourceDescription();
+	IfcText getSourceDescription();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getSourceDescription <em>Source Description</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getSourceDescription <em>Source Description</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Source Description</em>' attribute.
+	 * @param value the new value of the '<em>Source Description</em>' reference.
 	 * @see #isSetSourceDescription()
 	 * @see #unsetSourceDescription()
 	 * @see #getSourceDescription()
 	 * @generated
 	 */
-	void setSourceDescription(String value);
+	void setSourceDescription(IfcText value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getSourceDescription <em>Source Description</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getSourceDescription <em>Source Description</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetSourceDescription()
 	 * @see #getSourceDescription()
-	 * @see #setSourceDescription(String)
+	 * @see #setSourceDescription(IfcText)
 	 * @generated
 	 */
 	void unsetSourceDescription();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getSourceDescription <em>Source Description</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getSourceDescription <em>Source Description</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Source Description</em>' attribute is set.
+	 * @return whether the value of the '<em>Source Description</em>' reference is set.
 	 * @see #unsetSourceDescription()
 	 * @see #getSourceDescription()
-	 * @see #setSourceDescription(String)
+	 * @see #setSourceDescription(IfcText)
 	 * @generated
 	 */
 	boolean isSetSourceDescription();
 
 	/**
-	 * Returns the value of the '<em><b>Maximum Value</b></em>' attribute.
+	 * Returns the value of the '<em><b>Maximum Value</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Maximum Value</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Maximum Value</em>' attribute.
-	 * @see #setMaximumValue(float)
+	 * @return the value of the '<em>Maximum Value</em>' reference.
+	 * @see #setMaximumValue(IfcPowerMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSpaceThermalLoadProperties_MaximumValue()
 	 * @model
 	 * @generated
 	 */
-	float getMaximumValue();
+	IfcPowerMeasure getMaximumValue();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getMaximumValue <em>Maximum Value</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getMaximumValue <em>Maximum Value</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Maximum Value</em>' attribute.
+	 * @param value the new value of the '<em>Maximum Value</em>' reference.
 	 * @see #getMaximumValue()
 	 * @generated
 	 */
-	void setMaximumValue(float value);
+	void setMaximumValue(IfcPowerMeasure value);
 
 	/**
-	 * Returns the value of the '<em><b>Maximum Value As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Maximum Value As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Maximum Value As String</em>' attribute.
-	 * @see #setMaximumValueAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSpaceThermalLoadProperties_MaximumValueAsString()
-	 * @model
-	 * @generated
-	 */
-	String getMaximumValueAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getMaximumValueAsString <em>Maximum Value As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Maximum Value As String</em>' attribute.
-	 * @see #getMaximumValueAsString()
-	 * @generated
-	 */
-	void setMaximumValueAsString(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Minimum Value</b></em>' attribute.
+	 * Returns the value of the '<em><b>Minimum Value</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Minimum Value</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Minimum Value</em>' attribute.
+	 * @return the value of the '<em>Minimum Value</em>' reference.
 	 * @see #isSetMinimumValue()
 	 * @see #unsetMinimumValue()
-	 * @see #setMinimumValue(float)
+	 * @see #setMinimumValue(IfcPowerMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSpaceThermalLoadProperties_MinimumValue()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getMinimumValue();
+	IfcPowerMeasure getMinimumValue();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getMinimumValue <em>Minimum Value</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getMinimumValue <em>Minimum Value</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Minimum Value</em>' attribute.
+	 * @param value the new value of the '<em>Minimum Value</em>' reference.
 	 * @see #isSetMinimumValue()
 	 * @see #unsetMinimumValue()
 	 * @see #getMinimumValue()
 	 * @generated
 	 */
-	void setMinimumValue(float value);
+	void setMinimumValue(IfcPowerMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getMinimumValue <em>Minimum Value</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getMinimumValue <em>Minimum Value</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetMinimumValue()
 	 * @see #getMinimumValue()
-	 * @see #setMinimumValue(float)
+	 * @see #setMinimumValue(IfcPowerMeasure)
 	 * @generated
 	 */
 	void unsetMinimumValue();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getMinimumValue <em>Minimum Value</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getMinimumValue <em>Minimum Value</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Minimum Value</em>' attribute is set.
+	 * @return whether the value of the '<em>Minimum Value</em>' reference is set.
 	 * @see #unsetMinimumValue()
 	 * @see #getMinimumValue()
-	 * @see #setMinimumValue(float)
+	 * @see #setMinimumValue(IfcPowerMeasure)
 	 * @generated
 	 */
 	boolean isSetMinimumValue();
-
-	/**
-	 * Returns the value of the '<em><b>Minimum Value As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Minimum Value As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Minimum Value As String</em>' attribute.
-	 * @see #isSetMinimumValueAsString()
-	 * @see #unsetMinimumValueAsString()
-	 * @see #setMinimumValueAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSpaceThermalLoadProperties_MinimumValueAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getMinimumValueAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getMinimumValueAsString <em>Minimum Value As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Minimum Value As String</em>' attribute.
-	 * @see #isSetMinimumValueAsString()
-	 * @see #unsetMinimumValueAsString()
-	 * @see #getMinimumValueAsString()
-	 * @generated
-	 */
-	void setMinimumValueAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getMinimumValueAsString <em>Minimum Value As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetMinimumValueAsString()
-	 * @see #getMinimumValueAsString()
-	 * @see #setMinimumValueAsString(String)
-	 * @generated
-	 */
-	void unsetMinimumValueAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getMinimumValueAsString <em>Minimum Value As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Minimum Value As String</em>' attribute is set.
-	 * @see #unsetMinimumValueAsString()
-	 * @see #getMinimumValueAsString()
-	 * @see #setMinimumValueAsString(String)
-	 * @generated
-	 */
-	boolean isSetMinimumValueAsString();
 
 	/**
 	 * Returns the value of the '<em><b>Thermal Load Time Series Values</b></em>' reference.
@@ -480,107 +345,107 @@ public interface IfcSpaceThermalLoadProperties extends IfcPropertySetDefinition 
 	boolean isSetThermalLoadTimeSeriesValues();
 
 	/**
-	 * Returns the value of the '<em><b>User Defined Thermal Load Source</b></em>' attribute.
+	 * Returns the value of the '<em><b>User Defined Thermal Load Source</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>User Defined Thermal Load Source</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>User Defined Thermal Load Source</em>' attribute.
+	 * @return the value of the '<em>User Defined Thermal Load Source</em>' reference.
 	 * @see #isSetUserDefinedThermalLoadSource()
 	 * @see #unsetUserDefinedThermalLoadSource()
-	 * @see #setUserDefinedThermalLoadSource(String)
+	 * @see #setUserDefinedThermalLoadSource(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSpaceThermalLoadProperties_UserDefinedThermalLoadSource()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getUserDefinedThermalLoadSource();
+	IfcLabel getUserDefinedThermalLoadSource();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getUserDefinedThermalLoadSource <em>User Defined Thermal Load Source</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getUserDefinedThermalLoadSource <em>User Defined Thermal Load Source</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>User Defined Thermal Load Source</em>' attribute.
+	 * @param value the new value of the '<em>User Defined Thermal Load Source</em>' reference.
 	 * @see #isSetUserDefinedThermalLoadSource()
 	 * @see #unsetUserDefinedThermalLoadSource()
 	 * @see #getUserDefinedThermalLoadSource()
 	 * @generated
 	 */
-	void setUserDefinedThermalLoadSource(String value);
+	void setUserDefinedThermalLoadSource(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getUserDefinedThermalLoadSource <em>User Defined Thermal Load Source</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getUserDefinedThermalLoadSource <em>User Defined Thermal Load Source</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetUserDefinedThermalLoadSource()
 	 * @see #getUserDefinedThermalLoadSource()
-	 * @see #setUserDefinedThermalLoadSource(String)
+	 * @see #setUserDefinedThermalLoadSource(IfcLabel)
 	 * @generated
 	 */
 	void unsetUserDefinedThermalLoadSource();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getUserDefinedThermalLoadSource <em>User Defined Thermal Load Source</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getUserDefinedThermalLoadSource <em>User Defined Thermal Load Source</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>User Defined Thermal Load Source</em>' attribute is set.
+	 * @return whether the value of the '<em>User Defined Thermal Load Source</em>' reference is set.
 	 * @see #unsetUserDefinedThermalLoadSource()
 	 * @see #getUserDefinedThermalLoadSource()
-	 * @see #setUserDefinedThermalLoadSource(String)
+	 * @see #setUserDefinedThermalLoadSource(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetUserDefinedThermalLoadSource();
 
 	/**
-	 * Returns the value of the '<em><b>User Defined Property Source</b></em>' attribute.
+	 * Returns the value of the '<em><b>User Defined Property Source</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>User Defined Property Source</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>User Defined Property Source</em>' attribute.
+	 * @return the value of the '<em>User Defined Property Source</em>' reference.
 	 * @see #isSetUserDefinedPropertySource()
 	 * @see #unsetUserDefinedPropertySource()
-	 * @see #setUserDefinedPropertySource(String)
+	 * @see #setUserDefinedPropertySource(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcSpaceThermalLoadProperties_UserDefinedPropertySource()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getUserDefinedPropertySource();
+	IfcLabel getUserDefinedPropertySource();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getUserDefinedPropertySource <em>User Defined Property Source</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getUserDefinedPropertySource <em>User Defined Property Source</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>User Defined Property Source</em>' attribute.
+	 * @param value the new value of the '<em>User Defined Property Source</em>' reference.
 	 * @see #isSetUserDefinedPropertySource()
 	 * @see #unsetUserDefinedPropertySource()
 	 * @see #getUserDefinedPropertySource()
 	 * @generated
 	 */
-	void setUserDefinedPropertySource(String value);
+	void setUserDefinedPropertySource(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getUserDefinedPropertySource <em>User Defined Property Source</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getUserDefinedPropertySource <em>User Defined Property Source</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetUserDefinedPropertySource()
 	 * @see #getUserDefinedPropertySource()
-	 * @see #setUserDefinedPropertySource(String)
+	 * @see #setUserDefinedPropertySource(IfcLabel)
 	 * @generated
 	 */
 	void unsetUserDefinedPropertySource();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getUserDefinedPropertySource <em>User Defined Property Source</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcSpaceThermalLoadProperties#getUserDefinedPropertySource <em>User Defined Property Source</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>User Defined Property Source</em>' attribute is set.
+	 * @return whether the value of the '<em>User Defined Property Source</em>' reference is set.
 	 * @see #unsetUserDefinedPropertySource()
 	 * @see #getUserDefinedPropertySource()
-	 * @see #setUserDefinedPropertySource(String)
+	 * @see #setUserDefinedPropertySource(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetUserDefinedPropertySource();

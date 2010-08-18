@@ -23,7 +23,11 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcSpecificHeatCapacityMeasure;
+import org.bimserver.ifc.emf.Ifc2x3.IfcThermalConductivityMeasure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcThermalMaterialProperties;
+import org.bimserver.ifc.emf.Ifc2x3.IfcThermodynamicTemperatureMeasure;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -34,13 +38,9 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcThermalMaterialPropertiesImpl#getSpecificHeatCapacity <em>Specific Heat Capacity</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcThermalMaterialPropertiesImpl#getSpecificHeatCapacityAsString <em>Specific Heat Capacity As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcThermalMaterialPropertiesImpl#getBoilingPoint <em>Boiling Point</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcThermalMaterialPropertiesImpl#getBoilingPointAsString <em>Boiling Point As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcThermalMaterialPropertiesImpl#getFreezingPoint <em>Freezing Point</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcThermalMaterialPropertiesImpl#getFreezingPointAsString <em>Freezing Point As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcThermalMaterialPropertiesImpl#getThermalConductivity <em>Thermal Conductivity</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcThermalMaterialPropertiesImpl#getThermalConductivityAsString <em>Thermal Conductivity As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -71,8 +71,8 @@ public class IfcThermalMaterialPropertiesImpl extends IfcMaterialPropertiesImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getSpecificHeatCapacity() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcThermalMaterialProperties_SpecificHeatCapacity(), true);
+	public IfcSpecificHeatCapacityMeasure getSpecificHeatCapacity() {
+		return (IfcSpecificHeatCapacityMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcThermalMaterialProperties_SpecificHeatCapacity(), true);
 	}
 
 	/**
@@ -80,7 +80,7 @@ public class IfcThermalMaterialPropertiesImpl extends IfcMaterialPropertiesImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSpecificHeatCapacity(float newSpecificHeatCapacity) {
+	public void setSpecificHeatCapacity(IfcSpecificHeatCapacityMeasure newSpecificHeatCapacity) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcThermalMaterialProperties_SpecificHeatCapacity(), newSpecificHeatCapacity);
 	}
 
@@ -107,8 +107,8 @@ public class IfcThermalMaterialPropertiesImpl extends IfcMaterialPropertiesImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getSpecificHeatCapacityAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcThermalMaterialProperties_SpecificHeatCapacityAsString(), true);
+	public IfcThermodynamicTemperatureMeasure getBoilingPoint() {
+		return (IfcThermodynamicTemperatureMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcThermalMaterialProperties_BoilingPoint(), true);
 	}
 
 	/**
@@ -116,43 +116,7 @@ public class IfcThermalMaterialPropertiesImpl extends IfcMaterialPropertiesImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSpecificHeatCapacityAsString(String newSpecificHeatCapacityAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcThermalMaterialProperties_SpecificHeatCapacityAsString(), newSpecificHeatCapacityAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetSpecificHeatCapacityAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcThermalMaterialProperties_SpecificHeatCapacityAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetSpecificHeatCapacityAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcThermalMaterialProperties_SpecificHeatCapacityAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getBoilingPoint() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcThermalMaterialProperties_BoilingPoint(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setBoilingPoint(float newBoilingPoint) {
+	public void setBoilingPoint(IfcThermodynamicTemperatureMeasure newBoilingPoint) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcThermalMaterialProperties_BoilingPoint(), newBoilingPoint);
 	}
 
@@ -179,8 +143,8 @@ public class IfcThermalMaterialPropertiesImpl extends IfcMaterialPropertiesImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getBoilingPointAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcThermalMaterialProperties_BoilingPointAsString(), true);
+	public IfcThermodynamicTemperatureMeasure getFreezingPoint() {
+		return (IfcThermodynamicTemperatureMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcThermalMaterialProperties_FreezingPoint(), true);
 	}
 
 	/**
@@ -188,43 +152,7 @@ public class IfcThermalMaterialPropertiesImpl extends IfcMaterialPropertiesImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setBoilingPointAsString(String newBoilingPointAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcThermalMaterialProperties_BoilingPointAsString(), newBoilingPointAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetBoilingPointAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcThermalMaterialProperties_BoilingPointAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetBoilingPointAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcThermalMaterialProperties_BoilingPointAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getFreezingPoint() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcThermalMaterialProperties_FreezingPoint(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setFreezingPoint(float newFreezingPoint) {
+	public void setFreezingPoint(IfcThermodynamicTemperatureMeasure newFreezingPoint) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcThermalMaterialProperties_FreezingPoint(), newFreezingPoint);
 	}
 
@@ -251,8 +179,8 @@ public class IfcThermalMaterialPropertiesImpl extends IfcMaterialPropertiesImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getFreezingPointAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcThermalMaterialProperties_FreezingPointAsString(), true);
+	public IfcThermalConductivityMeasure getThermalConductivity() {
+		return (IfcThermalConductivityMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcThermalMaterialProperties_ThermalConductivity(), true);
 	}
 
 	/**
@@ -260,43 +188,7 @@ public class IfcThermalMaterialPropertiesImpl extends IfcMaterialPropertiesImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFreezingPointAsString(String newFreezingPointAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcThermalMaterialProperties_FreezingPointAsString(), newFreezingPointAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetFreezingPointAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcThermalMaterialProperties_FreezingPointAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetFreezingPointAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcThermalMaterialProperties_FreezingPointAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getThermalConductivity() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcThermalMaterialProperties_ThermalConductivity(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setThermalConductivity(float newThermalConductivity) {
+	public void setThermalConductivity(IfcThermalConductivityMeasure newThermalConductivity) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcThermalMaterialProperties_ThermalConductivity(), newThermalConductivity);
 	}
 
@@ -316,42 +208,6 @@ public class IfcThermalMaterialPropertiesImpl extends IfcMaterialPropertiesImpl 
 	 */
 	public boolean isSetThermalConductivity() {
 		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcThermalMaterialProperties_ThermalConductivity());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getThermalConductivityAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcThermalMaterialProperties_ThermalConductivityAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setThermalConductivityAsString(String newThermalConductivityAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcThermalMaterialProperties_ThermalConductivityAsString(), newThermalConductivityAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetThermalConductivityAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcThermalMaterialProperties_ThermalConductivityAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetThermalConductivityAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcThermalMaterialProperties_ThermalConductivityAsString());
 	}
 
 } //IfcThermalMaterialPropertiesImpl

@@ -36,7 +36,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadGroup#getActionType <em>Action Type</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadGroup#getActionSource <em>Action Source</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadGroup#getCoefficient <em>Coefficient</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadGroup#getCoefficientAsString <em>Coefficient As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadGroup#getPurpose <em>Purpose</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadGroup#getSourceOfResultGroup <em>Source Of Result Group</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadGroup#getLoadGroupFor <em>Load Group For</em>}</li>
@@ -136,160 +135,107 @@ public interface IfcStructuralLoadGroup extends IfcGroup {
 	void setActionSource(IfcActionSourceTypeEnum value);
 
 	/**
-	 * Returns the value of the '<em><b>Coefficient</b></em>' attribute.
+	 * Returns the value of the '<em><b>Coefficient</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Coefficient</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Coefficient</em>' attribute.
+	 * @return the value of the '<em>Coefficient</em>' reference.
 	 * @see #isSetCoefficient()
 	 * @see #unsetCoefficient()
-	 * @see #setCoefficient(float)
+	 * @see #setCoefficient(IfcPositiveRatioMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoadGroup_Coefficient()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getCoefficient();
+	IfcPositiveRatioMeasure getCoefficient();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadGroup#getCoefficient <em>Coefficient</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadGroup#getCoefficient <em>Coefficient</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Coefficient</em>' attribute.
+	 * @param value the new value of the '<em>Coefficient</em>' reference.
 	 * @see #isSetCoefficient()
 	 * @see #unsetCoefficient()
 	 * @see #getCoefficient()
 	 * @generated
 	 */
-	void setCoefficient(float value);
+	void setCoefficient(IfcPositiveRatioMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadGroup#getCoefficient <em>Coefficient</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadGroup#getCoefficient <em>Coefficient</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetCoefficient()
 	 * @see #getCoefficient()
-	 * @see #setCoefficient(float)
+	 * @see #setCoefficient(IfcPositiveRatioMeasure)
 	 * @generated
 	 */
 	void unsetCoefficient();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadGroup#getCoefficient <em>Coefficient</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadGroup#getCoefficient <em>Coefficient</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Coefficient</em>' attribute is set.
+	 * @return whether the value of the '<em>Coefficient</em>' reference is set.
 	 * @see #unsetCoefficient()
 	 * @see #getCoefficient()
-	 * @see #setCoefficient(float)
+	 * @see #setCoefficient(IfcPositiveRatioMeasure)
 	 * @generated
 	 */
 	boolean isSetCoefficient();
 
 	/**
-	 * Returns the value of the '<em><b>Coefficient As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Coefficient As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Coefficient As String</em>' attribute.
-	 * @see #isSetCoefficientAsString()
-	 * @see #unsetCoefficientAsString()
-	 * @see #setCoefficientAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoadGroup_CoefficientAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getCoefficientAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadGroup#getCoefficientAsString <em>Coefficient As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Coefficient As String</em>' attribute.
-	 * @see #isSetCoefficientAsString()
-	 * @see #unsetCoefficientAsString()
-	 * @see #getCoefficientAsString()
-	 * @generated
-	 */
-	void setCoefficientAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadGroup#getCoefficientAsString <em>Coefficient As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetCoefficientAsString()
-	 * @see #getCoefficientAsString()
-	 * @see #setCoefficientAsString(String)
-	 * @generated
-	 */
-	void unsetCoefficientAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadGroup#getCoefficientAsString <em>Coefficient As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Coefficient As String</em>' attribute is set.
-	 * @see #unsetCoefficientAsString()
-	 * @see #getCoefficientAsString()
-	 * @see #setCoefficientAsString(String)
-	 * @generated
-	 */
-	boolean isSetCoefficientAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Purpose</b></em>' attribute.
+	 * Returns the value of the '<em><b>Purpose</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Purpose</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Purpose</em>' attribute.
+	 * @return the value of the '<em>Purpose</em>' reference.
 	 * @see #isSetPurpose()
 	 * @see #unsetPurpose()
-	 * @see #setPurpose(String)
+	 * @see #setPurpose(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcStructuralLoadGroup_Purpose()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getPurpose();
+	IfcLabel getPurpose();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadGroup#getPurpose <em>Purpose</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadGroup#getPurpose <em>Purpose</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Purpose</em>' attribute.
+	 * @param value the new value of the '<em>Purpose</em>' reference.
 	 * @see #isSetPurpose()
 	 * @see #unsetPurpose()
 	 * @see #getPurpose()
 	 * @generated
 	 */
-	void setPurpose(String value);
+	void setPurpose(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadGroup#getPurpose <em>Purpose</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadGroup#getPurpose <em>Purpose</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetPurpose()
 	 * @see #getPurpose()
-	 * @see #setPurpose(String)
+	 * @see #setPurpose(IfcLabel)
 	 * @generated
 	 */
 	void unsetPurpose();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadGroup#getPurpose <em>Purpose</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcStructuralLoadGroup#getPurpose <em>Purpose</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Purpose</em>' attribute is set.
+	 * @return whether the value of the '<em>Purpose</em>' reference is set.
 	 * @see #unsetPurpose()
 	 * @see #getPurpose()
-	 * @see #setPurpose(String)
+	 * @see #setPurpose(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetPurpose();

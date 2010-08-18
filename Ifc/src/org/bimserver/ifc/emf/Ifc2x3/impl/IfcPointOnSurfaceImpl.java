@@ -23,8 +23,11 @@
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
+import org.bimserver.ifc.emf.Ifc2x3.IfcDimensionCount;
+import org.bimserver.ifc.emf.Ifc2x3.IfcParameterValue;
 import org.bimserver.ifc.emf.Ifc2x3.IfcPointOnSurface;
 import org.bimserver.ifc.emf.Ifc2x3.IfcSurface;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -36,9 +39,7 @@ import org.eclipse.emf.ecore.EClass;
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcPointOnSurfaceImpl#getBasisSurface <em>Basis Surface</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcPointOnSurfaceImpl#getPointParameterU <em>Point Parameter U</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcPointOnSurfaceImpl#getPointParameterUAsString <em>Point Parameter UAs String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcPointOnSurfaceImpl#getPointParameterV <em>Point Parameter V</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcPointOnSurfaceImpl#getPointParameterVAsString <em>Point Parameter VAs String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcPointOnSurfaceImpl#getDim <em>Dim</em>}</li>
  * </ul>
  * </p>
@@ -88,8 +89,8 @@ public class IfcPointOnSurfaceImpl extends IfcPointImpl implements IfcPointOnSur
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getPointParameterU() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcPointOnSurface_PointParameterU(), true);
+	public IfcParameterValue getPointParameterU() {
+		return (IfcParameterValue) eGet(Ifc2x3Package.eINSTANCE.getIfcPointOnSurface_PointParameterU(), true);
 	}
 
 	/**
@@ -97,7 +98,7 @@ public class IfcPointOnSurfaceImpl extends IfcPointImpl implements IfcPointOnSur
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPointParameterU(float newPointParameterU) {
+	public void setPointParameterU(IfcParameterValue newPointParameterU) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcPointOnSurface_PointParameterU(), newPointParameterU);
 	}
 
@@ -106,8 +107,8 @@ public class IfcPointOnSurfaceImpl extends IfcPointImpl implements IfcPointOnSur
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getPointParameterUAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcPointOnSurface_PointParameterUAsString(), true);
+	public IfcParameterValue getPointParameterV() {
+		return (IfcParameterValue) eGet(Ifc2x3Package.eINSTANCE.getIfcPointOnSurface_PointParameterV(), true);
 	}
 
 	/**
@@ -115,25 +116,7 @@ public class IfcPointOnSurfaceImpl extends IfcPointImpl implements IfcPointOnSur
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPointParameterUAsString(String newPointParameterUAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcPointOnSurface_PointParameterUAsString(), newPointParameterUAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getPointParameterV() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcPointOnSurface_PointParameterV(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPointParameterV(float newPointParameterV) {
+	public void setPointParameterV(IfcParameterValue newPointParameterV) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcPointOnSurface_PointParameterV(), newPointParameterV);
 	}
 
@@ -142,8 +125,8 @@ public class IfcPointOnSurfaceImpl extends IfcPointImpl implements IfcPointOnSur
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getPointParameterVAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcPointOnSurface_PointParameterVAsString(), true);
+	public IfcDimensionCount getDim() {
+		return (IfcDimensionCount) eGet(Ifc2x3Package.eINSTANCE.getIfcPointOnSurface_Dim(), true);
 	}
 
 	/**
@@ -151,25 +134,7 @@ public class IfcPointOnSurfaceImpl extends IfcPointImpl implements IfcPointOnSur
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPointParameterVAsString(String newPointParameterVAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcPointOnSurface_PointParameterVAsString(), newPointParameterVAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int getDim() {
-		return (Integer) eGet(Ifc2x3Package.eINSTANCE.getIfcPointOnSurface_Dim(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDim(int newDim) {
+	public void setDim(IfcDimensionCount newDim) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcPointOnSurface_Dim(), newDim);
 	}
 

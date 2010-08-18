@@ -24,6 +24,8 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcQuantityTime;
+import org.bimserver.ifc.emf.Ifc2x3.IfcTimeMeasure;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -34,7 +36,6 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcQuantityTimeImpl#getTimeValue <em>Time Value</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcQuantityTimeImpl#getTimeValueAsString <em>Time Value As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -65,8 +66,8 @@ public class IfcQuantityTimeImpl extends IfcPhysicalSimpleQuantityImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getTimeValue() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcQuantityTime_TimeValue(), true);
+	public IfcTimeMeasure getTimeValue() {
+		return (IfcTimeMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcQuantityTime_TimeValue(), true);
 	}
 
 	/**
@@ -74,26 +75,8 @@ public class IfcQuantityTimeImpl extends IfcPhysicalSimpleQuantityImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTimeValue(float newTimeValue) {
+	public void setTimeValue(IfcTimeMeasure newTimeValue) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcQuantityTime_TimeValue(), newTimeValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getTimeValueAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcQuantityTime_TimeValueAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTimeValueAsString(String newTimeValueAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcQuantityTime_TimeValueAsString(), newTimeValueAsString);
 	}
 
 } //IfcQuantityTimeImpl

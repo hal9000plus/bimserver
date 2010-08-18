@@ -25,8 +25,10 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcCurve;
 import org.bimserver.ifc.emf.Ifc2x3.IfcDirection;
+import org.bimserver.ifc.emf.Ifc2x3.IfcLengthMeasure;
 import org.bimserver.ifc.emf.Ifc2x3.IfcLogical;
 import org.bimserver.ifc.emf.Ifc2x3.IfcOffsetCurve3D;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -38,8 +40,7 @@ import org.eclipse.emf.ecore.EClass;
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcOffsetCurve3DImpl#getBasisCurve <em>Basis Curve</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcOffsetCurve3DImpl#getDistance <em>Distance</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcOffsetCurve3DImpl#getDistanceAsString <em>Distance As String</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcOffsetCurve3DImpl#isSelfIntersect <em>Self Intersect</em>}</li>
+ *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcOffsetCurve3DImpl#getSelfIntersect <em>Self Intersect</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcOffsetCurve3DImpl#getRefDirection <em>Ref Direction</em>}</li>
  * </ul>
  * </p>
@@ -89,8 +90,8 @@ public class IfcOffsetCurve3DImpl extends IfcCurveImpl implements IfcOffsetCurve
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getDistance() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcOffsetCurve3D_Distance(), true);
+	public IfcLengthMeasure getDistance() {
+		return (IfcLengthMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcOffsetCurve3D_Distance(), true);
 	}
 
 	/**
@@ -98,7 +99,7 @@ public class IfcOffsetCurve3DImpl extends IfcCurveImpl implements IfcOffsetCurve
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDistance(float newDistance) {
+	public void setDistance(IfcLengthMeasure newDistance) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcOffsetCurve3D_Distance(), newDistance);
 	}
 
@@ -107,8 +108,8 @@ public class IfcOffsetCurve3DImpl extends IfcCurveImpl implements IfcOffsetCurve
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getDistanceAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcOffsetCurve3D_DistanceAsString(), true);
+	public IfcLogical getSelfIntersect() {
+		return (IfcLogical) eGet(Ifc2x3Package.eINSTANCE.getIfcOffsetCurve3D_SelfIntersect(), true);
 	}
 
 	/**
@@ -116,25 +117,7 @@ public class IfcOffsetCurve3DImpl extends IfcCurveImpl implements IfcOffsetCurve
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDistanceAsString(String newDistanceAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcOffsetCurve3D_DistanceAsString(), newDistanceAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSelfIntersect() {
-		return (Boolean) eGet(Ifc2x3Package.eINSTANCE.getIfcOffsetCurve3D_SelfIntersect(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSelfIntersect(boolean newSelfIntersect) {
+	public void setSelfIntersect(IfcLogical newSelfIntersect) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcOffsetCurve3D_SelfIntersect(), newSelfIntersect);
 	}
 

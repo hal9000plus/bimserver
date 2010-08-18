@@ -18,6 +18,7 @@ import nl.tue.buildingsmart.express.dictionary.ExplicitAttribute;
 import nl.tue.buildingsmart.express.dictionary.IntegerBound;
 import nl.tue.buildingsmart.express.dictionary.IntegerType;
 import nl.tue.buildingsmart.express.dictionary.InverseAttribute;
+import nl.tue.buildingsmart.express.dictionary.ListType;
 import nl.tue.buildingsmart.express.dictionary.LogicalType;
 import nl.tue.buildingsmart.express.dictionary.NamedType;
 import nl.tue.buildingsmart.express.dictionary.NumberType;
@@ -30,6 +31,7 @@ import nl.tue.buildingsmart.express.dictionary.UnderlyingType;
 import nl.tue.buildingsmart.express.parser.SchemaLoader;
 
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EAnnotation;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EClassifier;
@@ -38,6 +40,7 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EEnumLiteral;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.EcoreFactory;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.resource.Resource;
@@ -53,17 +56,16 @@ public class Express2EMF {
 	private final EcoreFactory eFactory;
 	private final EcorePackage ePackage;
 	private final EPackage schemaPack;
+	private final boolean createWrappedTypes;
 	private final Map<String, EDataType> simpleTypeReplacementMap = new HashMap<String, EDataType>();
-	private EClass wrappedValueSuperClass;
-	private EEnum tristate;
 
 	public static void main(String[] args) {
-		Express2EMF express2EMF = new Express2EMF(
-				".." + File.separator + "BimServer" + File.separator + "deploy" + File.separator + "shared" + File.separator + "IFC2X3_FINAL.exp", "Ifc2x3");
+		Express2EMF express2EMF = new Express2EMF("data" + File.separator + "IFC2X3_FINAL.exp", "Ifc2x3", true);
 		express2EMF.writeEMF(".." + File.separator + "Ifc" + File.separator + "model" + File.separator + "IFC2X3.ecore");
 	}
 
-	public Express2EMF(String schemaFileName, String modelName) {
+	public Express2EMF(String schemaFileName, String modelName, boolean createWrappedTypes) {
+		this.createWrappedTypes = createWrappedTypes;
 		schema = new SchemaLoader(schemaFileName).getSchema();
 		eFactory = EcoreFactory.eINSTANCE;
 		ePackage = EcorePackage.eINSTANCE;
@@ -79,7 +81,11 @@ public class Express2EMF {
 
 		createTristate();
 
-		addSimpleTypes();
+		if (createWrappedTypes) {
+			addSimpleTypes();
+		} else {
+			generateSimpleTypeReplacementMap();
+		}
 		addDerivedTypes();
 		addEnumerations();
 		addClasses();
@@ -99,115 +105,47 @@ public class Express2EMF {
 		guid.getEStructuralFeatures().add(ifcRootLink);
 
 		doRealDerivedAttributes();
-		clean();
-	}
-
-	private void clean() {
-		Iterator<EClassifier> iterator = schemaPack.getEClassifiers().iterator();
-		while (iterator.hasNext()) {
-			EClassifier eClassifier = iterator.next();
-			if (eClassifier instanceof EClass) {
-				EClass eClass = (EClass) eClassifier;
-				if (wrappedValueSuperClass.isSuperTypeOf(eClass) && !eClass.getName().equals("IfcGloballyUniqueId")) {
-					if (eClass.getESuperTypes().size() == 1) {
-						iterator.remove();
-					}
-				}
-			}
-		}
 	}
 
 	private void doRealDerivedAttributes() {
 		for (EntityDefinition entityDefinition : schema.getEntities()) {
 			for (DerivedAttribute2 attributeName : entityDefinition.getDerivedAttributes().values()) {
 				EClass eClass = (EClass) schemaPack.getEClassifier(entityDefinition.getName());
-				// EStructuralFeature derivedAttribute =
-				// eFactory.createEReference();
+				EStructuralFeature derivedAttribute = eFactory.createEReference();
 				if (attributeName.getType() != null) {
-					// if (attributeName.getType() instanceof EntityDefinition)
-					// {
-					// derivedAttribute.setEType(schemaPack.getEClassifier(((EntityDefinition)
-					// attributeName.getType()).getName()));
-					// } else if (attributeName.getType() instanceof
-					// IntegerType) {
-					// derivedAttribute.setEType(schemaPack.getEClassifier("IfcInteger"));
-					// } else if (attributeName.getType() instanceof RealType) {
-					// derivedAttribute.setEType(schemaPack.getEClassifier("IfcReal"));
-					// } else if (attributeName.getType() instanceof
-					// LogicalType) {
-					// derivedAttribute.setEType(schemaPack.getEClassifier("IfcLogical"));
-					if (attributeName.getType() instanceof DefinedType) {
-						EClassifier eType = schemaPack.getEClassifier(((DefinedType) attributeName.getType()).getName());
-						boolean found = false;
-						for (EClass eSuperType : eClass.getESuperTypes()) {
-							if (eSuperType.getEStructuralFeature(attributeName.getName()) != null) {
-								found = true;
-								break;
-							}
-						}
-						if (wrappedValueSuperClass.isSuperTypeOf((EClass) eType) && !eType.getName().equals("IfcGloballyUniqueId")) {
-							if (!found) {
-								EAttribute eAttribute = eFactory.createEAttribute();
-								eAttribute.setDerived(true);
-								eAttribute.setName(attributeName.getName());
-								if (eAttribute.getName().equals("RefLatitude") || eAttribute.getName().equals("RefLongitude")) {
-									eAttribute.setUpperBound(3);
-									eAttribute.setUnique(false);
-								}
-								EClassifier type = ((EClass) eType).getEStructuralFeature("wrappedValue").getEType();
-								eAttribute.setEType(type);
-								// eAttribute.setUnsettable(((ExplicitAttribute)
-								// attrib).isOptional());
-								eClass.getEStructuralFeatures().add(eAttribute);
-								if (type == EcorePackage.eINSTANCE.getEFloat() || type == EcorePackage.eINSTANCE.getEDouble()) {
-									EAttribute floatStringAttribute = eFactory.createEAttribute();
-									floatStringAttribute.setName(attributeName.getName() + "AsString");
-									floatStringAttribute.setEType(EcorePackage.eINSTANCE.getEString());
-									// floatStringAttribute.setUnsettable(((ExplicitAttribute)
-									// attrib).isOptional());
-									eClass.getEStructuralFeatures().add(floatStringAttribute);
-								}
-							}
-						} else {
-							if (!found) {
-								EReference eReference = eFactory.createEReference();
-								eReference.setName(attributeName.getName());
-								eReference.setDerived(true);
-								// Hardcoded hack to fix multiplicity for
-								// IfcSpatialStructureElement which references
-								// RefLatitude and RefLongitude
-								// eRef.setUnsettable(((ExplicitAttribute)
-								// attrib).isOptional());
-								eReference.setEType(eType);
-								eClass.getEStructuralFeatures().add(eReference);
-							}
-						}
-						// derivedAttribute.setEType(eType);
+					if (attributeName.getType() instanceof EntityDefinition) {
+						derivedAttribute.setEType(schemaPack.getEClassifier(((EntityDefinition) attributeName.getType()).getName()));
+					} else if (attributeName.getType() instanceof IntegerType) {
+						derivedAttribute.setEType(schemaPack.getEClassifier("IfcInteger"));
+					} else if (attributeName.getType() instanceof RealType) {
+						derivedAttribute.setEType(schemaPack.getEClassifier("IfcReal"));
+					} else if (attributeName.getType() instanceof LogicalType) {
+						derivedAttribute.setEType(schemaPack.getEClassifier("IfcLogical"));
+					} else if (attributeName.getType() instanceof DefinedType) {
+						derivedAttribute.setEType(schemaPack.getEClassifier(((DefinedType) attributeName.getType()).getName()));
 					}
 				}
-				// derivedAttribute.setName(attributeName.getName());
-				// derivedAttribute.setDerived(true);
-				// derivedAttribute.setTransient(true);
-				// derivedAttribute.setVolatile(true);
-				// if (attributeName.isCollection()) {
-				// derivedAttribute.setUpperBound(-1);
-				// }
-				// EAnnotation annotation = eFactory.createEAnnotation();
-				// annotation.setSource("http://www.iso.org/iso10303-11/EXPRESS");
-				// annotation.getDetails().put("code",
-				// attributeName.getExpressCode());
-				// derivedAttribute.getEAnnotations().add(annotation);
-				// if (eClass.getEStructuralFeature(derivedAttribute.getName())
-				// == null) {
-				// eClass.getEStructuralFeatures().add(derivedAttribute);
-				// }
+				derivedAttribute.setName(attributeName.getName());
+				derivedAttribute.setDerived(true);
+				derivedAttribute.setTransient(true);
+				derivedAttribute.setVolatile(true);
+				if (attributeName.isCollection()) {
+					derivedAttribute.setUpperBound(-1);
+				}
+				EAnnotation annotation = eFactory.createEAnnotation();
+				annotation.setSource("http://www.iso.org/iso10303-11/EXPRESS");
+				annotation.getDetails().put("code", attributeName.getExpressCode());
+				derivedAttribute.getEAnnotations().add(annotation);
+				if (eClass.getEStructuralFeature(derivedAttribute.getName()) == null) {
+					eClass.getEStructuralFeatures().add(derivedAttribute);
+				}
 			}
 		}
 	}
 
 	private void createTristate() {
-		tristate = eFactory.createEEnum();
-		tristate.setName("Tristate");
+		EEnum eEnum = eFactory.createEEnum();
+		eEnum.setName("Tristate");
 		EEnumLiteral trueLiteral = eFactory.createEEnumLiteral();
 		trueLiteral.setName("TRUE");
 		trueLiteral.setValue(0);
@@ -217,10 +155,35 @@ public class Express2EMF {
 		EEnumLiteral undefinedLiteral = eFactory.createEEnumLiteral();
 		undefinedLiteral.setName("UNDEFINED");
 		undefinedLiteral.setValue(2);
-		tristate.getELiterals().add(trueLiteral);
-		tristate.getELiterals().add(falseLiteral);
-		tristate.getELiterals().add(undefinedLiteral);
-		schemaPack.getEClassifiers().add(tristate);
+		eEnum.getELiterals().add(trueLiteral);
+		eEnum.getELiterals().add(falseLiteral);
+		eEnum.getELiterals().add(undefinedLiteral);
+		schemaPack.getEClassifiers().add(eEnum);
+	}
+
+	private void generateSimpleTypeReplacementMap() {
+		Iterator<DefinedType> typeIter = schema.getTypes().iterator();
+		while (typeIter.hasNext()) {
+			DefinedType type = typeIter.next();
+			UnderlyingType domain = type.getDomain();
+			EDataType eType = null;
+			if (domain instanceof SimpleType) {
+				if (type.getDomain() instanceof IntegerType)
+					eType = ePackage.getEInt();
+				else if (type.getDomain() instanceof RealType) {
+					eType = ePackage.getEFloat();
+				} else if (type.getDomain() instanceof StringType) {
+					eType = ePackage.getEString();
+				} else if (type.getDomain() instanceof BooleanType) {
+					eType = (EEnum) schemaPack.getEClassifier("Tristate");
+				} else if (type.getDomain() instanceof NumberType) {
+					eType = ePackage.getEFloat();
+				} else if (type.getDomain() instanceof LogicalType) {
+					eType = (EEnum) schemaPack.getEClassifier("Tristate");
+				}
+				simpleTypeReplacementMap.put(type.getName(), eType);
+			}
+		}
 	}
 
 	private void addInverses() {
@@ -285,12 +248,6 @@ public class Express2EMF {
 		String reverseName = inverseAttribute.getInverted_attr().getName();
 		EReference reference = (EReference) classifier.getEStructuralFeature(reverseName);
 		if (eRef.getEType() == classifier && reference.getEType() == cls) {
-			if (eRef.isMany()) {
-				eRef.setUnique(true);
-			}
-			if (reference.isMany()) {
-				reference.setUnique(true);
-			}
 			reference.setEOpposite(eRef);
 			eRef.setEOpposite(reference);
 		} else {
@@ -327,110 +284,104 @@ public class Express2EMF {
 				EClass cls = (EClass) schemaPack.getEClassifier(ent.getName());
 				cls.getEStructuralFeatures().add(enumAttrib);
 			} else {
+				// if (createWrappedTypes) {
 				EClassifier eType = schemaPack.getEClassifier(nt.getName());
-				EClass cls = (EClass) schemaPack.getEClassifier(ent.getName());
-				if (wrappedValueSuperClass.isSuperTypeOf((EClass) eType) && !eType.getName().equals("IfcGloballyUniqueId")) {
-					EAttribute eAttribute = eFactory.createEAttribute();
-					eAttribute.setName(attrib.getName());
-					if (eAttribute.getName().equals("RefLatitude") || eAttribute.getName().equals("RefLongitude")) {
-						eAttribute.setUpperBound(3);
-						eAttribute.setUnique(false);
-					}
-					EClassifier type = ((EClass) eType).getEStructuralFeature("wrappedValue").getEType();
-					eAttribute.setEType(type);
-					eAttribute.setUnsettable(((ExplicitAttribute) attrib).isOptional());
-					cls.getEStructuralFeatures().add(eAttribute);
-					if (type == EcorePackage.eINSTANCE.getEFloat() || type == EcorePackage.eINSTANCE.getEDouble()) {
-						EAttribute floatStringAttribute = eFactory.createEAttribute();
-						floatStringAttribute.setName(attrib.getName() + "AsString");
-						floatStringAttribute.setEType(EcorePackage.eINSTANCE.getEString());
-						floatStringAttribute.setUnsettable(((ExplicitAttribute) attrib).isOptional());
-						cls.getEStructuralFeatures().add(floatStringAttribute);
-					}
-				} else {
+				if (eType != null) {
 					EReference eRef = eFactory.createEReference();
 					eRef.setName(attrib.getName());
 					// Hardcoded hack to fix multiplicity for
 					// IfcSpatialStructureElement which references
 					// RefLatitude and RefLongitude
+					if (eRef.getName().equals("RefLatitude") || eRef.getName().equals("RefLongitude")) {
+						eRef.setUpperBound(3);
+					}
 					eRef.setUnsettable(((ExplicitAttribute) attrib).isOptional());
 					eRef.setEType(eType);
+					EClass cls = (EClass) schemaPack.getEClassifier(ent.getName());
 					cls.getEStructuralFeatures().add(eRef);
+				} else {
+					EClass cls = (EClass) schemaPack.getEClassifier(ent.getName());
+
+					EAttribute eAtt = eFactory.createEAttribute();
+					EClassifier eType2 = simpleTypeReplacementMap.get(nt.getName());
+					eAtt.setName(attrib.getName());
+					eAtt.setEType(eType2);
+					cls.getEStructuralFeatures().add(eAtt);
+
+					if (eType2 == ePackage.getEFloat()) {
+						// Hack for floating point values, create an extra field
+						// to store string representation
+						EAttribute eFloatStringAttibute = eFactory.createEAttribute();
+						eFloatStringAttibute.setName("stringValue" + attrib.getName());
+						eFloatStringAttibute.setEType(ePackage.getEString());
+						cls.getEStructuralFeatures().add(eFloatStringAttibute);
+					}
 				}
 			}
 		} else if (domain instanceof AggregationType) {
+			EReference eRef = eFactory.createEReference();
+			eRef.setName(attrib.getName());
+//			eRef.setUnique(false);
 			BaseType bt = ((AggregationType) domain).getElement_type();
+			eRef.setUpperBound(-1);
+			eRef.setUnsettable(expAttrib.isOptional());
 			EClass cls = (EClass) schemaPack.getEClassifier(ent.getName());
 			if (bt instanceof NamedType) {
 				NamedType nt = (NamedType) bt;
 				EClassifier eType = schemaPack.getEClassifier(nt.getName());
-				if (wrappedValueSuperClass.isSuperTypeOf((EClass) eType) && !eType.getName().equals("IfcGloballyUniqueId")) {
-					EAttribute eAttribute = eFactory.createEAttribute();
-					eAttribute.setName(attrib.getName());
-					if (eAttribute.getName().equals("RefLatitude") || eAttribute.getName().equals("RefLongitude")) {
-						eAttribute.setUpperBound(3);
-					} else {
-						eAttribute.setUpperBound(-1);
-					}
-					EClassifier type = ((EClass) eType).getEStructuralFeature("wrappedValue").getEType();
-					eAttribute.setEType(type);
-					eAttribute.setUnsettable(((ExplicitAttribute) attrib).isOptional());
-					eAttribute.setUnique(false);
-					cls.getEStructuralFeatures().add(eAttribute);
-					if (type == EcorePackage.eINSTANCE.getEFloat() || type == EcorePackage.eINSTANCE.getEDouble()) {
-						EAttribute floatStringAttribute = eFactory.createEAttribute();
-						floatStringAttribute.setName(attrib.getName() + "AsString");
-						floatStringAttribute.setEType(EcorePackage.eINSTANCE.getEString());
-						floatStringAttribute.setUnsettable(((ExplicitAttribute) attrib).isOptional());
-						floatStringAttribute.setUpperBound(eAttribute.getUpperBound());
-						floatStringAttribute.setUnique(false);
-						cls.getEStructuralFeatures().add(floatStringAttribute);
-					}
-				} else if (eType == EcorePackage.eINSTANCE.getEFloat()) {
-					EAttribute eAttribute = eFactory.createEAttribute();
-					eAttribute.setName(attrib.getName());
-					eAttribute.setUnique(false);
-					eAttribute.setEType(EcorePackage.eINSTANCE.getEAttribute());
-					cls.getEStructuralFeatures().add(eAttribute);
+				if (this.simpleTypeReplacementMap.containsKey(nt.getName())) {
+					EAttribute attribute = eFactory.createEAttribute();
+					attribute.setName(attrib.getName());
+					attribute.setEType(this.simpleTypeReplacementMap.get(nt.getName()));
+					attribute.setUpperBound(-1);
+					cls.getEStructuralFeatures().add(attribute);
 				} else {
-					EReference eRef = eFactory.createEReference();
-					eRef.setUpperBound(-1);
-					eRef.setName(attrib.getName());
-					// Hardcoded hack to fix multiplicity for
-					// IfcSpatialStructureElement which references
-					// RefLatitude and RefLongitude
-					eRef.setUnsettable(((ExplicitAttribute) attrib).isOptional());
 					eRef.setEType(eType);
-					eRef.setUnique(false);
-					// EClass cls = (EClass)
-					// schemaPack.getEClassifier(ent.getName());
 					cls.getEStructuralFeatures().add(eRef);
 				}
-
-				// EClassifier eType = schemaPack.getEClassifier(nt.getName());
-				// eRef.setEType(eType);
-				// cls.getEStructuralFeatures().add(eRef);
 			} else if (bt instanceof RealType) {
-				EAttribute eAttribute = eFactory.createEAttribute();
-				eAttribute.setName(attrib.getName());
-				eAttribute.setUpperBound(-1);
-				eAttribute.setUnique(false);
-				eAttribute.setEType(EcorePackage.eINSTANCE.getEFloat());
-				cls.getEStructuralFeatures().add(eAttribute);
+				if (createWrappedTypes) {
+					EClassifier eType = schemaPack.getEClassifier("IfcReal");
+					eRef.setEType(eType);
+					cls.getEStructuralFeatures().add(eRef);
+				} else {
+					EAttribute attribute = eFactory.createEAttribute();
+					attribute.setName(attrib.getName());
+					attribute.setEType(ePackage.getEFloat());
+					attribute.setUpperBound(-1);
+					cls.getEStructuralFeatures().add(attribute);
+
+					EAttribute stringAttribute = eFactory.createEAttribute();
+					stringAttribute.setName("stringValue" + attrib.getName());
+					stringAttribute.setEType(ePackage.getEString());
+					cls.getEStructuralFeatures().add(stringAttribute);
+				}
 			} else if (bt instanceof IntegerType) {
-				EAttribute eAttribute = eFactory.createEAttribute();
-				eAttribute.setName(attrib.getName());
-				eAttribute.setUpperBound(-1);
-				eAttribute.setUnique(false);
-				eAttribute.setEType(EcorePackage.eINSTANCE.getEInt());
-				cls.getEStructuralFeatures().add(eAttribute);
+				if (createWrappedTypes) {
+					EClassifier eType = schemaPack.getEClassifier("IfcInteger");
+					eRef.setEType(eType);
+					cls.getEStructuralFeatures().add(eRef);
+				} else {
+					EAttribute attribute = eFactory.createEAttribute();
+					attribute.setName(attrib.getName());
+					attribute.setEType(ePackage.getEInt());
+					attribute.setUpperBound(-1);
+					cls.getEStructuralFeatures().add(attribute);
+				}
 			} else if (bt instanceof LogicalType) {
-				EAttribute eAttribute = eFactory.createEAttribute();
-				eAttribute.setName(attrib.getName());
-				eAttribute.setUpperBound(-1);
-				eAttribute.setUnique(false);
-				eAttribute.setEType(EcorePackage.eINSTANCE.getEBoolean());
-				cls.getEStructuralFeatures().add(eAttribute);
+				if (createWrappedTypes) {
+					EClassifier eType = schemaPack.getEClassifier("IfcLogical");
+					eRef.setEType(eType);
+					cls.getEStructuralFeatures().add(eRef);
+				} else {
+					EAttribute attribute = eFactory.createEAttribute();
+					attribute.setName(attrib.getName());
+					attribute.setEType(ePackage.getEBoolean());
+					attribute.setUpperBound(-1);
+					cls.getEStructuralFeatures().add(attribute);
+				}
+			} else if (domain instanceof ListType || domain instanceof nl.tue.buildingsmart.express.dictionary.ArrayType) {
+				eRef.setOrdered(true);
 			}
 			if (domain instanceof nl.tue.buildingsmart.express.dictionary.ArrayType) {
 				// TODO this is not yet implmented in simpelSDAI
@@ -438,38 +389,54 @@ public class Express2EMF {
 				// .ArrayType)domain).getLower_index());
 			}
 		} else {
+			EReference eRef = eFactory.createEReference();
+			eRef.setName(attrib.getName());
 			EClass cls = (EClass) schemaPack.getEClassifier(ent.getName());
 			if (domain == null) {
-				EAttribute eAttribute = eFactory.createEAttribute();
-				eAttribute.setName(attrib.getName());
-				eAttribute.setEType(tristate);
-				cls.getEStructuralFeatures().add(eAttribute);
+				if (createWrappedTypes) {
+					eRef.setEType(schemaPack.getEClassifier("IfcLogical"));
+					cls.getEStructuralFeatures().add(eRef);
+				} else {
+					EAttribute attribute = eFactory.createEAttribute();
+					attribute.setName(attrib.getName());
+					attribute.setEType(schemaPack.getEClassifier("Tristate"));
+					cls.getEStructuralFeatures().add(attribute);
+				}
 			} else if (domain instanceof IntegerType) {
-				EAttribute eAttribute = eFactory.createEAttribute();
-				eAttribute.setName(attrib.getName());
-				eAttribute.setEType(EcorePackage.eINSTANCE.getEInt());
-				cls.getEStructuralFeatures().add(eAttribute);
+				if (createWrappedTypes) {
+					eRef.setEType(schemaPack.getEClassifier("IfcInteger"));
+					cls.getEStructuralFeatures().add(eRef);
+				} else {
+					EAttribute attribute = eFactory.createEAttribute();
+					attribute.setName(attrib.getName());
+					attribute.setEType(ePackage.getEInt());
+					cls.getEStructuralFeatures().add(attribute);
+				}
 			} else if (domain instanceof LogicalType) {
-				EAttribute eAttribute = eFactory.createEAttribute();
-				eAttribute.setName(attrib.getName());
-				eAttribute.setEType(EcorePackage.eINSTANCE.getEBoolean());
-				cls.getEStructuralFeatures().add(eAttribute);
+				if (createWrappedTypes) {
+					eRef.setEType(schemaPack.getEClassifier("IfcLogical"));
+					cls.getEStructuralFeatures().add(eRef);
+				} else {
+					EAttribute attribute = eFactory.createEAttribute();
+					attribute.setName(attrib.getName());
+					attribute.setEType(ePackage.getEBoolean());
+					cls.getEStructuralFeatures().add(attribute);
+				}
 			} else if (domain instanceof RealType) {
-				EAttribute eAttribute = eFactory.createEAttribute();
-				eAttribute.setName(attrib.getName());
-				eAttribute.setEType(EcorePackage.eINSTANCE.getEFloat());
-				cls.getEStructuralFeatures().add(eAttribute);
-				EAttribute eAttributeAsString = eFactory.createEAttribute();
-				eAttributeAsString.setName(attrib.getName() + "AsString");
-				eAttributeAsString.setEType(EcorePackage.eINSTANCE.getEString());
-				cls.getEStructuralFeatures().add(eAttributeAsString);
-			} else if (domain instanceof StringType) {
-				EAttribute eAttribute = eFactory.createEAttribute();
-				eAttribute.setName(attrib.getName());
-				eAttribute.setEType(EcorePackage.eINSTANCE.getEString());
-				cls.getEStructuralFeatures().add(eAttribute);
-			} else {
-				throw new RuntimeException("");
+				if (createWrappedTypes) {
+					eRef.setEType(schemaPack.getEClassifier("IfcReal"));
+					cls.getEStructuralFeatures().add(eRef);
+				} else {
+					EAttribute attribute = eFactory.createEAttribute();
+					attribute.setName(attrib.getName());
+					attribute.setEType(ePackage.getEFloat());
+					cls.getEStructuralFeatures().add(attribute);
+
+					EAttribute attibuteStringValue = eFactory.createEAttribute();
+					attibuteStringValue.setName(attrib.getName());
+					attibuteStringValue.setEType(ePackage.getEString());
+					cls.getEStructuralFeatures().add(attibuteStringValue);
+				}
 			}
 		}
 	}
@@ -516,15 +483,33 @@ public class Express2EMF {
 						UnderlyingType domain = ((DefinedType) nt).getDomain();
 						if (domain instanceof RealType || domain instanceof StringType || domain instanceof IntegerType || domain instanceof NumberType
 								|| domain instanceof LogicalType) {
-							EClass choice = (EClass) schemaPack.getEClassifier(nt.getName());
-							choice.getESuperTypes().add(selectType);
-						} else if (domain instanceof DefinedType) {
-							DefinedType dt2 = (DefinedType) (domain);
-							if (dt2.getDomain() instanceof RealType) {
+							if (createWrappedTypes) {
 								EClass choice = (EClass) schemaPack.getEClassifier(nt.getName());
 								choice.getESuperTypes().add(selectType);
 							}
+						} else if (domain instanceof DefinedType) {
+							DefinedType dt2 = (DefinedType) (domain);
+							if (dt2.getDomain() instanceof RealType) {
+								if (createWrappedTypes) {
+									EClass choice = (EClass) schemaPack.getEClassifier(nt.getName());
+									choice.getESuperTypes().add(selectType);
+								}
+							}
 						}
+						// debug
+						// (nt.getName()+" is a "+nt.getClass()+":base:"+dt.
+						// getDomain(true));
+						// if (dt.getDomain() instanceof SimpleType){
+						// EClass wrapper = eFactory.createEClass();
+						// wrapper.getESuperTypes().add((EClass)schemaPack.
+						// getEClassifier("SimpleTypeWrapper"));
+						// EReference eRef = eFactory.createEReference();
+						// eRef.setName("value");
+						// eRef.setEType(schemaPack.getEClassifier(dt.getDomain()
+						// .toString()));
+						// wrapper.getEStructuralFeatures().add(eRef);
+						// }
+
 					}
 				}
 			}
@@ -549,9 +534,9 @@ public class Express2EMF {
 	private void modifySimpleType(DefinedType type, EClass testType) {
 		EAttribute wrapperAttrib = eFactory.createEAttribute();
 		wrapperAttrib.setName("wrappedValue");
-		if (type.getDomain() instanceof IntegerType) {
+		if (type.getDomain() instanceof IntegerType)
 			wrapperAttrib.setEType(ePackage.getEInt());
-		} else if (type.getDomain() instanceof RealType) {
+		else if (type.getDomain() instanceof RealType) {
 			wrapperAttrib.setEType(ePackage.getEFloat());
 		} else if (type.getDomain() instanceof StringType) {
 			wrapperAttrib.setEType(ePackage.getEString());
@@ -563,17 +548,17 @@ public class Express2EMF {
 			wrapperAttrib.setEType(schemaPack.getEClassifier("Tristate"));
 		}
 		testType.getEStructuralFeatures().add(wrapperAttrib);
-		if (wrapperAttrib.getEType() == ePackage.getEFloat() || wrapperAttrib.getEType() == ePackage.getEDouble()) {
+		if (wrapperAttrib.getEType() == ePackage.getEFloat()) {
 			EAttribute stringAttribute = eFactory.createEAttribute();
 			stringAttribute.setEType(ePackage.getEString());
-			stringAttribute.setName("wrappedValueAsString");
+			stringAttribute.setName("stringValue" + wrapperAttrib.getName());
 			testType.getEStructuralFeatures().add(stringAttribute);
 		}
 	}
 
 	private void addSimpleTypes() {
 		Iterator<DefinedType> typeIter = schema.getTypes().iterator();
-		wrappedValueSuperClass = EcoreFactory.eINSTANCE.createEClass();
+		EClass wrappedValueSuperClass = EcoreFactory.eINSTANCE.createEClass();
 		wrappedValueSuperClass.setName("WrappedValue");
 		wrappedValueSuperClass.setAbstract(true);
 		schemaPack.getEClassifiers().add(wrappedValueSuperClass);
@@ -624,7 +609,6 @@ public class Express2EMF {
 				type2.setDomain(new IntegerType());
 				modifySimpleType(type2, testType);
 				schemaPack.getEClassifiers().add(testType);
-				testType.getESuperTypes().add(wrappedValueSuperClass);
 			} else if (type.getDomain() instanceof DefinedType) {
 				if (schemaPack.getEClassifier(type.getName()) != null) {
 					EClass testType = (EClass) schemaPack.getEClassifier(type.getName());

@@ -48,78 +48,78 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface IfcPostalAddress extends IfcAddress {
 	/**
-	 * Returns the value of the '<em><b>Internal Location</b></em>' attribute.
+	 * Returns the value of the '<em><b>Internal Location</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Internal Location</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Internal Location</em>' attribute.
+	 * @return the value of the '<em>Internal Location</em>' reference.
 	 * @see #isSetInternalLocation()
 	 * @see #unsetInternalLocation()
-	 * @see #setInternalLocation(String)
+	 * @see #setInternalLocation(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcPostalAddress_InternalLocation()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getInternalLocation();
+	IfcLabel getInternalLocation();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPostalAddress#getInternalLocation <em>Internal Location</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPostalAddress#getInternalLocation <em>Internal Location</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Internal Location</em>' attribute.
+	 * @param value the new value of the '<em>Internal Location</em>' reference.
 	 * @see #isSetInternalLocation()
 	 * @see #unsetInternalLocation()
 	 * @see #getInternalLocation()
 	 * @generated
 	 */
-	void setInternalLocation(String value);
+	void setInternalLocation(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPostalAddress#getInternalLocation <em>Internal Location</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPostalAddress#getInternalLocation <em>Internal Location</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetInternalLocation()
 	 * @see #getInternalLocation()
-	 * @see #setInternalLocation(String)
+	 * @see #setInternalLocation(IfcLabel)
 	 * @generated
 	 */
 	void unsetInternalLocation();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPostalAddress#getInternalLocation <em>Internal Location</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPostalAddress#getInternalLocation <em>Internal Location</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Internal Location</em>' attribute is set.
+	 * @return whether the value of the '<em>Internal Location</em>' reference is set.
 	 * @see #unsetInternalLocation()
 	 * @see #getInternalLocation()
-	 * @see #setInternalLocation(String)
+	 * @see #setInternalLocation(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetInternalLocation();
 
 	/**
-	 * Returns the value of the '<em><b>Address Lines</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
+	 * Returns the value of the '<em><b>Address Lines</b></em>' reference list.
+	 * The list contents are of type {@link org.bimserver.ifc.emf.Ifc2x3.IfcLabel}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Address Lines</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Address Lines</em>' attribute list.
+	 * @return the value of the '<em>Address Lines</em>' reference list.
 	 * @see #isSetAddressLines()
 	 * @see #unsetAddressLines()
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcPostalAddress_AddressLines()
-	 * @model unique="false" unsettable="true"
+	 * @model unsettable="true"
 	 * @generated
 	 */
-	EList<String> getAddressLines();
+	EList<IfcLabel> getAddressLines();
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPostalAddress#getAddressLines <em>Address Lines</em>}' attribute list.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPostalAddress#getAddressLines <em>Address Lines</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetAddressLines()
@@ -129,10 +129,10 @@ public interface IfcPostalAddress extends IfcAddress {
 	void unsetAddressLines();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPostalAddress#getAddressLines <em>Address Lines</em>}' attribute list is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPostalAddress#getAddressLines <em>Address Lines</em>}' reference list is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Address Lines</em>' attribute list is set.
+	 * @return whether the value of the '<em>Address Lines</em>' reference list is set.
 	 * @see #unsetAddressLines()
 	 * @see #getAddressLines()
 	 * @generated
@@ -140,266 +140,266 @@ public interface IfcPostalAddress extends IfcAddress {
 	boolean isSetAddressLines();
 
 	/**
-	 * Returns the value of the '<em><b>Postal Box</b></em>' attribute.
+	 * Returns the value of the '<em><b>Postal Box</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Postal Box</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Postal Box</em>' attribute.
+	 * @return the value of the '<em>Postal Box</em>' reference.
 	 * @see #isSetPostalBox()
 	 * @see #unsetPostalBox()
-	 * @see #setPostalBox(String)
+	 * @see #setPostalBox(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcPostalAddress_PostalBox()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getPostalBox();
+	IfcLabel getPostalBox();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPostalAddress#getPostalBox <em>Postal Box</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPostalAddress#getPostalBox <em>Postal Box</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Postal Box</em>' attribute.
+	 * @param value the new value of the '<em>Postal Box</em>' reference.
 	 * @see #isSetPostalBox()
 	 * @see #unsetPostalBox()
 	 * @see #getPostalBox()
 	 * @generated
 	 */
-	void setPostalBox(String value);
+	void setPostalBox(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPostalAddress#getPostalBox <em>Postal Box</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPostalAddress#getPostalBox <em>Postal Box</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetPostalBox()
 	 * @see #getPostalBox()
-	 * @see #setPostalBox(String)
+	 * @see #setPostalBox(IfcLabel)
 	 * @generated
 	 */
 	void unsetPostalBox();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPostalAddress#getPostalBox <em>Postal Box</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPostalAddress#getPostalBox <em>Postal Box</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Postal Box</em>' attribute is set.
+	 * @return whether the value of the '<em>Postal Box</em>' reference is set.
 	 * @see #unsetPostalBox()
 	 * @see #getPostalBox()
-	 * @see #setPostalBox(String)
+	 * @see #setPostalBox(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetPostalBox();
 
 	/**
-	 * Returns the value of the '<em><b>Town</b></em>' attribute.
+	 * Returns the value of the '<em><b>Town</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Town</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Town</em>' attribute.
+	 * @return the value of the '<em>Town</em>' reference.
 	 * @see #isSetTown()
 	 * @see #unsetTown()
-	 * @see #setTown(String)
+	 * @see #setTown(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcPostalAddress_Town()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getTown();
+	IfcLabel getTown();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPostalAddress#getTown <em>Town</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPostalAddress#getTown <em>Town</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Town</em>' attribute.
+	 * @param value the new value of the '<em>Town</em>' reference.
 	 * @see #isSetTown()
 	 * @see #unsetTown()
 	 * @see #getTown()
 	 * @generated
 	 */
-	void setTown(String value);
+	void setTown(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPostalAddress#getTown <em>Town</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPostalAddress#getTown <em>Town</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetTown()
 	 * @see #getTown()
-	 * @see #setTown(String)
+	 * @see #setTown(IfcLabel)
 	 * @generated
 	 */
 	void unsetTown();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPostalAddress#getTown <em>Town</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPostalAddress#getTown <em>Town</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Town</em>' attribute is set.
+	 * @return whether the value of the '<em>Town</em>' reference is set.
 	 * @see #unsetTown()
 	 * @see #getTown()
-	 * @see #setTown(String)
+	 * @see #setTown(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetTown();
 
 	/**
-	 * Returns the value of the '<em><b>Region</b></em>' attribute.
+	 * Returns the value of the '<em><b>Region</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Region</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Region</em>' attribute.
+	 * @return the value of the '<em>Region</em>' reference.
 	 * @see #isSetRegion()
 	 * @see #unsetRegion()
-	 * @see #setRegion(String)
+	 * @see #setRegion(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcPostalAddress_Region()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getRegion();
+	IfcLabel getRegion();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPostalAddress#getRegion <em>Region</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPostalAddress#getRegion <em>Region</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Region</em>' attribute.
+	 * @param value the new value of the '<em>Region</em>' reference.
 	 * @see #isSetRegion()
 	 * @see #unsetRegion()
 	 * @see #getRegion()
 	 * @generated
 	 */
-	void setRegion(String value);
+	void setRegion(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPostalAddress#getRegion <em>Region</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPostalAddress#getRegion <em>Region</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetRegion()
 	 * @see #getRegion()
-	 * @see #setRegion(String)
+	 * @see #setRegion(IfcLabel)
 	 * @generated
 	 */
 	void unsetRegion();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPostalAddress#getRegion <em>Region</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPostalAddress#getRegion <em>Region</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Region</em>' attribute is set.
+	 * @return whether the value of the '<em>Region</em>' reference is set.
 	 * @see #unsetRegion()
 	 * @see #getRegion()
-	 * @see #setRegion(String)
+	 * @see #setRegion(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetRegion();
 
 	/**
-	 * Returns the value of the '<em><b>Postal Code</b></em>' attribute.
+	 * Returns the value of the '<em><b>Postal Code</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Postal Code</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Postal Code</em>' attribute.
+	 * @return the value of the '<em>Postal Code</em>' reference.
 	 * @see #isSetPostalCode()
 	 * @see #unsetPostalCode()
-	 * @see #setPostalCode(String)
+	 * @see #setPostalCode(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcPostalAddress_PostalCode()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getPostalCode();
+	IfcLabel getPostalCode();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPostalAddress#getPostalCode <em>Postal Code</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPostalAddress#getPostalCode <em>Postal Code</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Postal Code</em>' attribute.
+	 * @param value the new value of the '<em>Postal Code</em>' reference.
 	 * @see #isSetPostalCode()
 	 * @see #unsetPostalCode()
 	 * @see #getPostalCode()
 	 * @generated
 	 */
-	void setPostalCode(String value);
+	void setPostalCode(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPostalAddress#getPostalCode <em>Postal Code</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPostalAddress#getPostalCode <em>Postal Code</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetPostalCode()
 	 * @see #getPostalCode()
-	 * @see #setPostalCode(String)
+	 * @see #setPostalCode(IfcLabel)
 	 * @generated
 	 */
 	void unsetPostalCode();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPostalAddress#getPostalCode <em>Postal Code</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPostalAddress#getPostalCode <em>Postal Code</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Postal Code</em>' attribute is set.
+	 * @return whether the value of the '<em>Postal Code</em>' reference is set.
 	 * @see #unsetPostalCode()
 	 * @see #getPostalCode()
-	 * @see #setPostalCode(String)
+	 * @see #setPostalCode(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetPostalCode();
 
 	/**
-	 * Returns the value of the '<em><b>Country</b></em>' attribute.
+	 * Returns the value of the '<em><b>Country</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Country</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Country</em>' attribute.
+	 * @return the value of the '<em>Country</em>' reference.
 	 * @see #isSetCountry()
 	 * @see #unsetCountry()
-	 * @see #setCountry(String)
+	 * @see #setCountry(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcPostalAddress_Country()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	String getCountry();
+	IfcLabel getCountry();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPostalAddress#getCountry <em>Country</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPostalAddress#getCountry <em>Country</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Country</em>' attribute.
+	 * @param value the new value of the '<em>Country</em>' reference.
 	 * @see #isSetCountry()
 	 * @see #unsetCountry()
 	 * @see #getCountry()
 	 * @generated
 	 */
-	void setCountry(String value);
+	void setCountry(IfcLabel value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPostalAddress#getCountry <em>Country</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPostalAddress#getCountry <em>Country</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetCountry()
 	 * @see #getCountry()
-	 * @see #setCountry(String)
+	 * @see #setCountry(IfcLabel)
 	 * @generated
 	 */
 	void unsetCountry();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPostalAddress#getCountry <em>Country</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcPostalAddress#getCountry <em>Country</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Country</em>' attribute is set.
+	 * @return whether the value of the '<em>Country</em>' reference is set.
 	 * @see #unsetCountry()
 	 * @see #getCountry()
-	 * @see #setCountry(String)
+	 * @see #setCountry(IfcLabel)
 	 * @generated
 	 */
 	boolean isSetCountry();

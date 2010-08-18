@@ -24,6 +24,9 @@ package org.bimserver.ifc.emf.Ifc2x3.impl;
 
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcBoundaryEdgeCondition;
+import org.bimserver.ifc.emf.Ifc2x3.IfcModulusOfLinearSubgradeReactionMeasure;
+import org.bimserver.ifc.emf.Ifc2x3.IfcModulusOfRotationalSubgradeReactionMeasure;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -34,17 +37,11 @@ import org.eclipse.emf.ecore.EClass;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcBoundaryEdgeConditionImpl#getLinearStiffnessByLengthX <em>Linear Stiffness By Length X</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcBoundaryEdgeConditionImpl#getLinearStiffnessByLengthXAsString <em>Linear Stiffness By Length XAs String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcBoundaryEdgeConditionImpl#getLinearStiffnessByLengthY <em>Linear Stiffness By Length Y</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcBoundaryEdgeConditionImpl#getLinearStiffnessByLengthYAsString <em>Linear Stiffness By Length YAs String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcBoundaryEdgeConditionImpl#getLinearStiffnessByLengthZ <em>Linear Stiffness By Length Z</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcBoundaryEdgeConditionImpl#getLinearStiffnessByLengthZAsString <em>Linear Stiffness By Length ZAs String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcBoundaryEdgeConditionImpl#getRotationalStiffnessByLengthX <em>Rotational Stiffness By Length X</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcBoundaryEdgeConditionImpl#getRotationalStiffnessByLengthXAsString <em>Rotational Stiffness By Length XAs String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcBoundaryEdgeConditionImpl#getRotationalStiffnessByLengthY <em>Rotational Stiffness By Length Y</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcBoundaryEdgeConditionImpl#getRotationalStiffnessByLengthYAsString <em>Rotational Stiffness By Length YAs String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcBoundaryEdgeConditionImpl#getRotationalStiffnessByLengthZ <em>Rotational Stiffness By Length Z</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.impl.IfcBoundaryEdgeConditionImpl#getRotationalStiffnessByLengthZAsString <em>Rotational Stiffness By Length ZAs String</em>}</li>
  * </ul>
  * </p>
  *
@@ -75,8 +72,8 @@ public class IfcBoundaryEdgeConditionImpl extends IfcBoundaryConditionImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getLinearStiffnessByLengthX() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcBoundaryEdgeCondition_LinearStiffnessByLengthX(), true);
+	public IfcModulusOfLinearSubgradeReactionMeasure getLinearStiffnessByLengthX() {
+		return (IfcModulusOfLinearSubgradeReactionMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcBoundaryEdgeCondition_LinearStiffnessByLengthX(), true);
 	}
 
 	/**
@@ -84,7 +81,7 @@ public class IfcBoundaryEdgeConditionImpl extends IfcBoundaryConditionImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLinearStiffnessByLengthX(float newLinearStiffnessByLengthX) {
+	public void setLinearStiffnessByLengthX(IfcModulusOfLinearSubgradeReactionMeasure newLinearStiffnessByLengthX) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcBoundaryEdgeCondition_LinearStiffnessByLengthX(), newLinearStiffnessByLengthX);
 	}
 
@@ -111,8 +108,8 @@ public class IfcBoundaryEdgeConditionImpl extends IfcBoundaryConditionImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getLinearStiffnessByLengthXAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcBoundaryEdgeCondition_LinearStiffnessByLengthXAsString(), true);
+	public IfcModulusOfLinearSubgradeReactionMeasure getLinearStiffnessByLengthY() {
+		return (IfcModulusOfLinearSubgradeReactionMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcBoundaryEdgeCondition_LinearStiffnessByLengthY(), true);
 	}
 
 	/**
@@ -120,43 +117,7 @@ public class IfcBoundaryEdgeConditionImpl extends IfcBoundaryConditionImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLinearStiffnessByLengthXAsString(String newLinearStiffnessByLengthXAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcBoundaryEdgeCondition_LinearStiffnessByLengthXAsString(), newLinearStiffnessByLengthXAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetLinearStiffnessByLengthXAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcBoundaryEdgeCondition_LinearStiffnessByLengthXAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetLinearStiffnessByLengthXAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcBoundaryEdgeCondition_LinearStiffnessByLengthXAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getLinearStiffnessByLengthY() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcBoundaryEdgeCondition_LinearStiffnessByLengthY(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setLinearStiffnessByLengthY(float newLinearStiffnessByLengthY) {
+	public void setLinearStiffnessByLengthY(IfcModulusOfLinearSubgradeReactionMeasure newLinearStiffnessByLengthY) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcBoundaryEdgeCondition_LinearStiffnessByLengthY(), newLinearStiffnessByLengthY);
 	}
 
@@ -183,8 +144,8 @@ public class IfcBoundaryEdgeConditionImpl extends IfcBoundaryConditionImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getLinearStiffnessByLengthYAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcBoundaryEdgeCondition_LinearStiffnessByLengthYAsString(), true);
+	public IfcModulusOfLinearSubgradeReactionMeasure getLinearStiffnessByLengthZ() {
+		return (IfcModulusOfLinearSubgradeReactionMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcBoundaryEdgeCondition_LinearStiffnessByLengthZ(), true);
 	}
 
 	/**
@@ -192,43 +153,7 @@ public class IfcBoundaryEdgeConditionImpl extends IfcBoundaryConditionImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLinearStiffnessByLengthYAsString(String newLinearStiffnessByLengthYAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcBoundaryEdgeCondition_LinearStiffnessByLengthYAsString(), newLinearStiffnessByLengthYAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetLinearStiffnessByLengthYAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcBoundaryEdgeCondition_LinearStiffnessByLengthYAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetLinearStiffnessByLengthYAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcBoundaryEdgeCondition_LinearStiffnessByLengthYAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getLinearStiffnessByLengthZ() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcBoundaryEdgeCondition_LinearStiffnessByLengthZ(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setLinearStiffnessByLengthZ(float newLinearStiffnessByLengthZ) {
+	public void setLinearStiffnessByLengthZ(IfcModulusOfLinearSubgradeReactionMeasure newLinearStiffnessByLengthZ) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcBoundaryEdgeCondition_LinearStiffnessByLengthZ(), newLinearStiffnessByLengthZ);
 	}
 
@@ -255,8 +180,8 @@ public class IfcBoundaryEdgeConditionImpl extends IfcBoundaryConditionImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getLinearStiffnessByLengthZAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcBoundaryEdgeCondition_LinearStiffnessByLengthZAsString(), true);
+	public IfcModulusOfRotationalSubgradeReactionMeasure getRotationalStiffnessByLengthX() {
+		return (IfcModulusOfRotationalSubgradeReactionMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcBoundaryEdgeCondition_RotationalStiffnessByLengthX(), true);
 	}
 
 	/**
@@ -264,43 +189,7 @@ public class IfcBoundaryEdgeConditionImpl extends IfcBoundaryConditionImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLinearStiffnessByLengthZAsString(String newLinearStiffnessByLengthZAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcBoundaryEdgeCondition_LinearStiffnessByLengthZAsString(), newLinearStiffnessByLengthZAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetLinearStiffnessByLengthZAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcBoundaryEdgeCondition_LinearStiffnessByLengthZAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetLinearStiffnessByLengthZAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcBoundaryEdgeCondition_LinearStiffnessByLengthZAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getRotationalStiffnessByLengthX() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcBoundaryEdgeCondition_RotationalStiffnessByLengthX(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRotationalStiffnessByLengthX(float newRotationalStiffnessByLengthX) {
+	public void setRotationalStiffnessByLengthX(IfcModulusOfRotationalSubgradeReactionMeasure newRotationalStiffnessByLengthX) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcBoundaryEdgeCondition_RotationalStiffnessByLengthX(), newRotationalStiffnessByLengthX);
 	}
 
@@ -327,8 +216,8 @@ public class IfcBoundaryEdgeConditionImpl extends IfcBoundaryConditionImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getRotationalStiffnessByLengthXAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcBoundaryEdgeCondition_RotationalStiffnessByLengthXAsString(), true);
+	public IfcModulusOfRotationalSubgradeReactionMeasure getRotationalStiffnessByLengthY() {
+		return (IfcModulusOfRotationalSubgradeReactionMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcBoundaryEdgeCondition_RotationalStiffnessByLengthY(), true);
 	}
 
 	/**
@@ -336,43 +225,7 @@ public class IfcBoundaryEdgeConditionImpl extends IfcBoundaryConditionImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRotationalStiffnessByLengthXAsString(String newRotationalStiffnessByLengthXAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcBoundaryEdgeCondition_RotationalStiffnessByLengthXAsString(), newRotationalStiffnessByLengthXAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetRotationalStiffnessByLengthXAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcBoundaryEdgeCondition_RotationalStiffnessByLengthXAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetRotationalStiffnessByLengthXAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcBoundaryEdgeCondition_RotationalStiffnessByLengthXAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getRotationalStiffnessByLengthY() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcBoundaryEdgeCondition_RotationalStiffnessByLengthY(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRotationalStiffnessByLengthY(float newRotationalStiffnessByLengthY) {
+	public void setRotationalStiffnessByLengthY(IfcModulusOfRotationalSubgradeReactionMeasure newRotationalStiffnessByLengthY) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcBoundaryEdgeCondition_RotationalStiffnessByLengthY(), newRotationalStiffnessByLengthY);
 	}
 
@@ -399,8 +252,8 @@ public class IfcBoundaryEdgeConditionImpl extends IfcBoundaryConditionImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getRotationalStiffnessByLengthYAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcBoundaryEdgeCondition_RotationalStiffnessByLengthYAsString(), true);
+	public IfcModulusOfRotationalSubgradeReactionMeasure getRotationalStiffnessByLengthZ() {
+		return (IfcModulusOfRotationalSubgradeReactionMeasure) eGet(Ifc2x3Package.eINSTANCE.getIfcBoundaryEdgeCondition_RotationalStiffnessByLengthZ(), true);
 	}
 
 	/**
@@ -408,43 +261,7 @@ public class IfcBoundaryEdgeConditionImpl extends IfcBoundaryConditionImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRotationalStiffnessByLengthYAsString(String newRotationalStiffnessByLengthYAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcBoundaryEdgeCondition_RotationalStiffnessByLengthYAsString(), newRotationalStiffnessByLengthYAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetRotationalStiffnessByLengthYAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcBoundaryEdgeCondition_RotationalStiffnessByLengthYAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetRotationalStiffnessByLengthYAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcBoundaryEdgeCondition_RotationalStiffnessByLengthYAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public float getRotationalStiffnessByLengthZ() {
-		return (Float) eGet(Ifc2x3Package.eINSTANCE.getIfcBoundaryEdgeCondition_RotationalStiffnessByLengthZ(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRotationalStiffnessByLengthZ(float newRotationalStiffnessByLengthZ) {
+	public void setRotationalStiffnessByLengthZ(IfcModulusOfRotationalSubgradeReactionMeasure newRotationalStiffnessByLengthZ) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcBoundaryEdgeCondition_RotationalStiffnessByLengthZ(), newRotationalStiffnessByLengthZ);
 	}
 
@@ -464,42 +281,6 @@ public class IfcBoundaryEdgeConditionImpl extends IfcBoundaryConditionImpl imple
 	 */
 	public boolean isSetRotationalStiffnessByLengthZ() {
 		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcBoundaryEdgeCondition_RotationalStiffnessByLengthZ());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getRotationalStiffnessByLengthZAsString() {
-		return (String) eGet(Ifc2x3Package.eINSTANCE.getIfcBoundaryEdgeCondition_RotationalStiffnessByLengthZAsString(), true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRotationalStiffnessByLengthZAsString(String newRotationalStiffnessByLengthZAsString) {
-		eSet(Ifc2x3Package.eINSTANCE.getIfcBoundaryEdgeCondition_RotationalStiffnessByLengthZAsString(), newRotationalStiffnessByLengthZAsString);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetRotationalStiffnessByLengthZAsString() {
-		eUnset(Ifc2x3Package.eINSTANCE.getIfcBoundaryEdgeCondition_RotationalStiffnessByLengthZAsString());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetRotationalStiffnessByLengthZAsString() {
-		return eIsSet(Ifc2x3Package.eINSTANCE.getIfcBoundaryEdgeCondition_RotationalStiffnessByLengthZAsString());
 	}
 
 } //IfcBoundaryEdgeConditionImpl

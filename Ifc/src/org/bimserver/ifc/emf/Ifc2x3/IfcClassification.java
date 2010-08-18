@@ -22,8 +22,9 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3;
 
-import org.bimserver.emf.IdEObject;
 import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -43,61 +44,60 @@ import org.eclipse.emf.common.util.EList;
  *
  * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcClassification()
  * @model
- * @extends IdEObject
  * @generated
  */
-public interface IfcClassification extends IdEObject {
+public interface IfcClassification extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Source</b></em>' attribute.
+	 * Returns the value of the '<em><b>Source</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Source</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Source</em>' attribute.
-	 * @see #setSource(String)
+	 * @return the value of the '<em>Source</em>' reference.
+	 * @see #setSource(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcClassification_Source()
 	 * @model
 	 * @generated
 	 */
-	String getSource();
+	IfcLabel getSource();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcClassification#getSource <em>Source</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcClassification#getSource <em>Source</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Source</em>' attribute.
+	 * @param value the new value of the '<em>Source</em>' reference.
 	 * @see #getSource()
 	 * @generated
 	 */
-	void setSource(String value);
+	void setSource(IfcLabel value);
 
 	/**
-	 * Returns the value of the '<em><b>Edition</b></em>' attribute.
+	 * Returns the value of the '<em><b>Edition</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Edition</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Edition</em>' attribute.
-	 * @see #setEdition(String)
+	 * @return the value of the '<em>Edition</em>' reference.
+	 * @see #setEdition(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcClassification_Edition()
 	 * @model
 	 * @generated
 	 */
-	String getEdition();
+	IfcLabel getEdition();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcClassification#getEdition <em>Edition</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcClassification#getEdition <em>Edition</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Edition</em>' attribute.
+	 * @param value the new value of the '<em>Edition</em>' reference.
 	 * @see #getEdition()
 	 * @generated
 	 */
-	void setEdition(String value);
+	void setEdition(IfcLabel value);
 
 	/**
 	 * Returns the value of the '<em><b>Edition Date</b></em>' reference.
@@ -153,30 +153,30 @@ public interface IfcClassification extends IdEObject {
 	boolean isSetEditionDate();
 
 	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * Returns the value of the '<em><b>Name</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Name</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
+	 * @return the value of the '<em>Name</em>' reference.
+	 * @see #setName(IfcLabel)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcClassification_Name()
 	 * @model
 	 * @generated
 	 */
-	String getName();
+	IfcLabel getName();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcClassification#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcClassification#getName <em>Name</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @param value the new value of the '<em>Name</em>' reference.
 	 * @see #getName()
 	 * @generated
 	 */
-	void setName(String value);
+	void setName(IfcLabel value);
 
 	/**
 	 * Returns the value of the '<em><b>Contains</b></em>' reference list.

@@ -22,14 +22,18 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3.impl;
 
-import org.bimserver.emf.IdEObjectImpl;
+import org.bimserver.ifc.IfcRootObject;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcApplication;
 import org.bimserver.ifc.emf.Ifc2x3.IfcChangeActionEnum;
 import org.bimserver.ifc.emf.Ifc2x3.IfcOwnerHistory;
 import org.bimserver.ifc.emf.Ifc2x3.IfcPersonAndOrganization;
 import org.bimserver.ifc.emf.Ifc2x3.IfcStateEnum;
+import org.bimserver.ifc.emf.Ifc2x3.IfcTimeStamp;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -51,7 +55,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class IfcOwnerHistoryImpl extends IdEObjectImpl implements IfcOwnerHistory {
+public class IfcOwnerHistoryImpl extends IfcRootObject implements IfcOwnerHistory {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -158,8 +162,8 @@ public class IfcOwnerHistoryImpl extends IdEObjectImpl implements IfcOwnerHistor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getLastModifiedDate() {
-		return (Integer) eGet(Ifc2x3Package.eINSTANCE.getIfcOwnerHistory_LastModifiedDate(), true);
+	public IfcTimeStamp getLastModifiedDate() {
+		return (IfcTimeStamp) eGet(Ifc2x3Package.eINSTANCE.getIfcOwnerHistory_LastModifiedDate(), true);
 	}
 
 	/**
@@ -167,7 +171,7 @@ public class IfcOwnerHistoryImpl extends IdEObjectImpl implements IfcOwnerHistor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLastModifiedDate(int newLastModifiedDate) {
+	public void setLastModifiedDate(IfcTimeStamp newLastModifiedDate) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcOwnerHistory_LastModifiedDate(), newLastModifiedDate);
 	}
 
@@ -266,8 +270,8 @@ public class IfcOwnerHistoryImpl extends IdEObjectImpl implements IfcOwnerHistor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getCreationDate() {
-		return (Integer) eGet(Ifc2x3Package.eINSTANCE.getIfcOwnerHistory_CreationDate(), true);
+	public IfcTimeStamp getCreationDate() {
+		return (IfcTimeStamp) eGet(Ifc2x3Package.eINSTANCE.getIfcOwnerHistory_CreationDate(), true);
 	}
 
 	/**
@@ -275,7 +279,7 @@ public class IfcOwnerHistoryImpl extends IdEObjectImpl implements IfcOwnerHistor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCreationDate(int newCreationDate) {
+	public void setCreationDate(IfcTimeStamp newCreationDate) {
 		eSet(Ifc2x3Package.eINSTANCE.getIfcOwnerHistory_CreationDate(), newCreationDate);
 	}
 

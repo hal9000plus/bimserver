@@ -20,7 +20,6 @@ package org.bimserver;
  * long with Bimserver.org . If not, see <http://www.gnu.org/licenses/>.
  *****************************************************************************/
 
-import org.bimserver.interfaces.objects.SUserType;
 import org.bimserver.shared.AuthenticatedServiceWrapper;
 import org.bimserver.shared.ServiceInterface;
 import org.bimserver.shared.Token;
@@ -50,18 +49,9 @@ public class LoginManager {
 		}
 		return loggedIn;
 	}
-	
-	public boolean autologin(String username, String hash) throws UserException {
-		Token token = service.autologin(username, hash);
-		loggedIn = token != null;
-		if (loggedIn) {
-			authenticatedServiceWrapper = new AuthenticatedServiceWrapper(service, token, false);
-		}
-		return loggedIn;
-	}
 
-	public long getUoid() {
-		return authenticatedServiceWrapper.getCurrentUser().getOid();
+	public int getUid() {
+		return authenticatedServiceWrapper.getCurrentUser().getId();
 	}
 
 	public boolean isLoggedIn() {
@@ -82,7 +72,7 @@ public class LoginManager {
 		return authenticatedServiceWrapper;
 	}
 
-	public SUserType getUserType() {
+	public String getUserType() {
 		return authenticatedServiceWrapper.getCurrentUser().getUserType();
 	}
 

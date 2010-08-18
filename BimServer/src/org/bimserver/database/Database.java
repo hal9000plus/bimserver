@@ -21,11 +21,8 @@ package org.bimserver.database;
  *****************************************************************************/
 
 import java.nio.ByteBuffer;
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -34,9 +31,6 @@ import org.bimserver.database.actions.CreateBaseProject;
 import org.bimserver.database.berkeley.DatabaseInitException;
 import org.bimserver.database.store.StorePackage;
 import org.bimserver.database.store.UserType;
-import org.bimserver.database.store.log.AccessMethod;
-import org.bimserver.database.store.log.LogPackage;
-import org.bimserver.emf.IdEObject;
 import org.bimserver.ifc.FieldIgnoreMap;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.shared.AbstractAttributeValuePair;
@@ -45,6 +39,7 @@ import org.bimserver.shared.AttributeList;
 import org.bimserver.shared.AttributeNewReferencePair;
 import org.bimserver.shared.AttributeReferencePair;
 import org.bimserver.shared.AttributeValuePair;
+import org.bimserver.shared.ClassList;
 import org.bimserver.shared.UserException;
 import org.bimserver.utils.BinUtils;
 import org.bimserver.utils.DoubleHashMap;
@@ -66,38 +61,32 @@ public class Database implements BimDatabase {
 	public static final String OID_COUNTER = "OID_COUNTER";
 	public static final String PID_COUNTER = "PID_COUNTER";
 	public static final String UID_COUNTER = "UID_COUNTER";
-	public static final String GID_COUNTER = "GID_COUNTER";
 	private static final String CLASS_LOOKUP_TABLE = "INT-ClassLookup";
 	public static final String STORE_PROJECT_NAME = "INT-Store";
 	public static final int STORE_PROJECT_ID = 1;
 	public static final String WRAPPED_VALUE = "wrappedValue";
 	public static final String SCHEMA_VERSION = "SCHEMA_VERSION";
-	private static final String DATE_CREATED = "DATE_CREATED";
 	private final Set<EPackage> emfPackages = new LinkedHashSet<EPackage>();
 	private final ColumnDatabase columnDatabase;
 	private final DoubleHashMap<Short, EClass> classifiers = new DoubleHashMap<Short, EClass>();
-	private final List<String> realClasses = new ArrayList<String>();
+	private final ClassList realClasses = new ClassList();
 	private volatile long oidCounter;
 	private volatile int pidCounter = 1;
-	private volatile int gidCounter = 1;
 	private volatile int uidCounter;
 	private final FieldIgnoreMap fieldIgnoreMap;
 	private final Registry registry;
-	private Date created;
-	private final Set<BimDatabaseSession> sessions = new HashSet<BimDatabaseSession>();
 	
 	/*  This variable should be _incremented_ with every (released) database-schema change
 	 *  Do not change this variable when nothing has changed in the schema!
 	 */
-	public static final int APPLICATION_SCHEMA_VERSION = 6;
+	public static final int APPLICATION_SCHEMA_VERSION = 3;
 
-	public Database(Set<? extends EPackage> emfPackages, ColumnDatabase columnDatabase, FieldIgnoreMap fieldIgnoreMap) throws DatabaseInitException {
+	public Database(HashSet<? extends EPackage> emfPackages, ColumnDatabase columnDatabase, FieldIgnoreMap fieldIgnoreMap) throws DatabaseInitException {
 		this.columnDatabase = columnDatabase;
 		this.fieldIgnoreMap = fieldIgnoreMap;
 		this.emfPackages.add(StorePackage.eINSTANCE);
-		this.emfPackages.add(LogPackage.eINSTANCE);
 		this.emfPackages.addAll(emfPackages);
-		this.registry = new Registry(columnDatabase);
+		registry = new Registry(columnDatabase);
 		init();
 	}
 
@@ -107,35 +96,25 @@ public class Database implements BimDatabase {
 			updateAndCheckStructure(databaseSession);
 			if (getColumnDatabase().isNew()) {
 				registry.save(SCHEMA_VERSION, APPLICATION_SCHEMA_VERSION, databaseSession);
-				created = new Date();
-				registry.save(DATE_CREATED, created, databaseSession);
-			} else {
-				created = registry.readDate(DATE_CREATED, databaseSession);
-				if (created == null) {
-					created = new Date();
-					registry.save(DATE_CREATED, created, databaseSession);
-				}
 			}
 			int databaseSchemaVersion = registry.readInt(SCHEMA_VERSION, databaseSession, -1);
 			if (databaseSchemaVersion != APPLICATION_SCHEMA_VERSION) {
-				databaseSession.close();
 				close();
 				throw new DatabaseInitException("Database schema version (" + databaseSchemaVersion + ") does not match application schema version (" + APPLICATION_SCHEMA_VERSION + ")");
 			}
 			getColumnDatabase().createTableIfNotExists(Database.STORE_PROJECT_NAME, databaseSession);
 			initInternalStructure(databaseSession);
 			if (getColumnDatabase().isNew()) {
-				new CreateBaseProject(AccessMethod.INTERNAL).execute(databaseSession);
-				new AddUserDatabaseAction(AccessMethod.INTERNAL, "admin", "admin", "Administrator", UserType.ADMIN, -1).execute(databaseSession);
-				new AddUserDatabaseAction(AccessMethod.INTERNAL, "anonymous", "anonymous", "Anonymous", UserType.ANONYMOUS, -1).execute(databaseSession);
+				new CreateBaseProject().execute(databaseSession);
+				Integer adminUid = new AddUserDatabaseAction("admin", "admin", "Administrator", UserType.ADMIN, -1).execute(databaseSession);
+				new AddUserDatabaseAction("anonymous", "anonymous", "Anonymous", UserType.ANONYMOUS, adminUid).execute(databaseSession);
 			} else {
 				initOidCounter(databaseSession);
 				initPidCounter(databaseSession);
 				initUidCounter(databaseSession);
-				initGidCounter(databaseSession);
 			}
 			for (EClass eClass : classifiers.keyBSet()) {
-				if (eClass.getEPackage() == Ifc2x3Package.eINSTANCE && eClass != Ifc2x3Package.eINSTANCE.getWrappedValue()) {
+				if (eClass.getEPackage() != StorePackage.eINSTANCE) {
 					realClasses.add(eClass.getName());
 				}
 			}
@@ -152,8 +131,6 @@ public class Database implements BimDatabase {
 			e.printStackTrace();
 			close();
 			throw new DatabaseInitException(e.getMessage());
-		} finally {
-			databaseSession.close();
 		}
 	}
 
@@ -283,10 +260,6 @@ public class Database implements BimDatabase {
 		pidCounter = registry.readInt(PID_COUNTER, databaseSession);
 	}
 
-	public void initGidCounter(DatabaseSession databaseSession) throws BimDeadlockException {
-		gidCounter = registry.readInt(GID_COUNTER, databaseSession);
-	}
-	
 	public void initUidCounter(DatabaseSession databaseSession) throws BimDeadlockException {
 		uidCounter = registry.readInt(UID_COUNTER, databaseSession);
 	}
@@ -297,6 +270,10 @@ public class Database implements BimDatabase {
 
 	public void close() {
 		columnDatabase.close();
+	}
+
+	public synchronized int newUid() {
+		return ++uidCounter;
 	}
 
 	public EClass getEClassForName(String className) {
@@ -344,7 +321,7 @@ public class Database implements BimDatabase {
 	}
 
 	@SuppressWarnings("unchecked")
-	public EObject convertAdditionToEObject(IdEObject object, Addition addition, Map<Long, IdEObject> processedAdditions, Map<Long, IdEObject> map) {
+	public EObject convertAdditionToEObject(EObject object, Addition addition, Map<Long, EObject> processedAdditions, Map<Long, EObject> map) {
 		for (AbstractAttributeValuePair aavp : addition.getAttributes()) {
 			EStructuralFeature feature = object.eClass().getEStructuralFeature(aavp.getName());
 			if (aavp instanceof AttributeValuePair) {
@@ -404,24 +381,20 @@ public class Database implements BimDatabase {
 		return object;
 	}
 
-	public List<String> getAvailableClasses() {
+	public ClassList getAvailableClasses() {
 		return realClasses;
 	}
 
 	public DatabaseSession createSession() {
-		DatabaseSession databaseSession = new DatabaseSession(this, columnDatabase.startTransaction(), false);
-		sessions.add(databaseSession);
-		return databaseSession;
+		return new DatabaseSession(this, columnDatabase.startTransaction());
+	}
+
+	public ColumnDatabase getColumnDatabase() {
+		return columnDatabase;
 	}
 
 	public BimDatabaseSession createReadOnlySession() {
-		DatabaseSession databaseSession = new DatabaseSession(this, columnDatabase.startTransaction(), true);
-		sessions.add(databaseSession);
-		return databaseSession;
-	}
-	
-	public ColumnDatabase getColumnDatabase() {
-		return columnDatabase;
+		return new DatabaseSession(this, columnDatabase.startTransaction());
 	}
 
 	public Set<EClass> getClasses() {
@@ -444,10 +417,6 @@ public class Database implements BimDatabase {
 		return pidCounter;
 	}
 
-	public int getGidCounter() {
-		return gidCounter;
-	}
-	
 	public int getUidCounter() {
 		return uidCounter;
 	}
@@ -462,13 +431,5 @@ public class Database implements BimDatabase {
 
 	public FieldIgnoreMap getFieldIgnoreMap() {
 		return fieldIgnoreMap;
-	}
-
-	public Date getCreated() {
-		return created;
-	}
-
-	public void unregisterSession(DatabaseSession databaseSession) {
-		sessions.remove(databaseSession);
 	}
 }

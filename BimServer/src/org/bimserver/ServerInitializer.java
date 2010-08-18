@@ -21,15 +21,15 @@ package org.bimserver;
  *****************************************************************************/
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.Date;
+import java.util.EnumSet;
 import java.util.GregorianCalendar;
-import java.util.Set;
+import java.util.HashSet;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
@@ -39,179 +39,165 @@ import nl.tue.buildingsmart.emf.DerivedReader;
 import nl.tue.buildingsmart.express.dictionary.SchemaDefinition;
 import nl.tue.buildingsmart.express.parser.ExpressSchemaParser;
 
+import org.bimserver.EmfSerializerFactory.EmfSerializerCreator;
+import org.bimserver.citygml.IfcToCityGML;
+import org.bimserver.collada.IfcToCollada;
+import org.bimserver.collada.KmzSerializer;
 import org.bimserver.database.BimDatabase;
-import org.bimserver.database.BimDatabaseSession;
-import org.bimserver.database.CommitSet;
 import org.bimserver.database.Database;
 import org.bimserver.database.berkeley.BerkeleyColumnDatabase;
-import org.bimserver.database.store.log.AccessMethod;
-import org.bimserver.database.store.log.LogFactory;
-import org.bimserver.database.store.log.ServerStarted;
-import org.bimserver.ifc.FieldIgnoreMap;
+import org.bimserver.emf.EmfModel;
+import org.bimserver.emf.EmfSerializer;
 import org.bimserver.ifc.FileFieldIgnoreMap;
+import org.bimserver.ifc.ResourceFetcher;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
-import org.bimserver.ifcengine.IfcEngineFactory;
+import org.bimserver.ifc.file.writer.IfcSerializer;
+import org.bimserver.ifc.xml.writer.IfcXmlSerializer;
 import org.bimserver.services.TokenManager;
-import org.bimserver.servlets.CompileServlet;
-import org.bimserver.shared.LocalDevelopmentResourceFetcher;
-import org.bimserver.shared.ResourceFetcher;
+import org.bimserver.shared.ResultType;
 import org.bimserver.shared.ServiceInterface;
 import org.bimserver.utils.CollectionUtils;
-import org.bimserver.utils.TempUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class ServerInitializer implements ServletContextListener {
 	private static final Logger LOGGER = LoggerFactory.getLogger(ServerInitializer.class);
 	private static GregorianCalendar serverStartTime;
-	private static BimDatabase bimDatabase;
+	private BimDatabase bimDatabase;
 	private BimScheduler bimScheduler;
-	private static ResourceFetcher resourceFetcher;
-	private static ServletContext servletContext;
-	private LongActionManager longActionManager;
 
 	@Override
 	public void contextInitialized(ServletContextEvent servletContextEvent) {
 		try {
 			LOGGER.info("Starting ServerInitializer");
-			ServerType serverType = detectServerType(servletContextEvent.getServletContext());
-			LOGGER.info("Detected server type: " + serverType + " (" + System.getProperty("os.name") + ", " + System.getProperty("sun.arch.data.model") + "bit)");
-			if (serverType == ServerType.UNKNOWN) {
-				LOGGER.error("Server type not detected, stopping initialization");
-				return;
-			}
-			servletContext = servletContextEvent.getServletContext();
-			resourceFetcher = createResourceFetcher(serverType, servletContext);
-			URL resource = resourceFetcher.getResource("settings.xml");
-			Settings settings = Settings.readFromUrl(resource);
+			final ServletContext servletContext = servletContextEvent.getServletContext();
+			Settings settings = Settings.readFromUrl(servletContext.getResource("/WEB-INF/settings.xml"));
 			ServerSettings.setSettings(settings);
 			serverStartTime = new GregorianCalendar();
-			SchemaDefinition schema = loadIfcSchema(resourceFetcher);
-			Set<Ifc2x3Package> packages = CollectionUtils.singleSet(Ifc2x3Package.eINSTANCE);
-
+			final SchemaDefinition schema = loadIfcSchema(servletContext);
+			HashSet<Ifc2x3Package> packages = CollectionUtils.singleSet(Ifc2x3Package.eINSTANCE);
+			ResourceFetcher resourceFetcher = new ResourceFetcher() {
+				@Override
+				public URL getResource(String name) {
+					try {
+						return servletContext.getResource("/WEB-INF/" + name);
+					} catch (MalformedURLException e) {
+						e.printStackTrace();
+					}
+					return null;
+				}
+			};
+			
 			bimScheduler = new BimScheduler();
 			bimScheduler.start();
-
-			longActionManager = new LongActionManager();
-			longActionManager.start();
 			
-			FieldIgnoreMap fieldIgnoreMap = new FileFieldIgnoreMap(packages, resourceFetcher);
+			String enabledExportTypesString = settings.getEnabledExportTypes();
+			String[] enabledExportTypes = enabledExportTypesString.split(",");
+			EnumSet<ResultType> enabled = EnumSet.of(ResultType.IFC);
+			for (String type : enabledExportTypes) {
+				enabled.add(ResultType.valueOf(type.trim().toUpperCase()));
+			}
+			
+			final FileFieldIgnoreMap fieldIgnoreMap = new FileFieldIgnoreMap(packages, resourceFetcher);
 			TokenManager tokenManager = new TokenManager();
-			TemplateEngine.getTemplateEngine().init(resourceFetcher.getResource("templates/"));
+			TemplateEngine.getTemplateEngine().init(servletContext.getResource("/WEB-INF/templates/"));
 			File databaseDir = new File(ServerSettings.getSettings().getDatabaseLocation());
 			BerkeleyColumnDatabase columnDatabase = new BerkeleyColumnDatabase(databaseDir);
 			bimDatabase = new Database(packages, columnDatabase, fieldIgnoreMap);
-			Version version = VersionChecker.init(resourceFetcher).getLocalVersion();
-
-			File schemaFile = resourceFetcher.getFile("IFC2X3_FINAL.exp").getAbsoluteFile();
-			LOGGER.info("Using " + schemaFile + " as engine schema");
-
-			File nativeFolder = resourceFetcher.getFile("lib/");
-			IfcEngineFactory ifcEngineFactory = new IfcEngineFactory(schemaFile, nativeFolder, resourceFetcher);
-
-			CompileServlet.database = bimDatabase;
-			
-			TempUtils.makeTempDir("bimserver");
 			EmfSerializerFactory emfSerializerFactory = EmfSerializerFactory.getInstance();
-			emfSerializerFactory.init(version, schema, fieldIgnoreMap, ifcEngineFactory);
-			emfSerializerFactory.initSerializers();
-			ServiceInterface soapService = new Service(bimDatabase, emfSerializerFactory, schema, tokenManager, longActionManager, AccessMethod.SOAP, ifcEngineFactory);
-			ServiceInterface webService = new Service(bimDatabase, emfSerializerFactory, schema, tokenManager, longActionManager, AccessMethod.WEB_INTERFACE, ifcEngineFactory);
-			servletContext.setAttribute("service", soapService);
-			LoginManager.setService(webService);
+			final Version version = VersionChecker.getInstance(servletContext).getLocalVersion();
 			
-			ServerStarted serverStarted = LogFactory.eINSTANCE.createServerStarted();
-			serverStarted.setDate(new Date());
-			serverStarted.setAccessMethod(AccessMethod.INTERNAL);
-			serverStarted.setExecutor(null);
-			BimDatabaseSession session = bimDatabase.createSession();
-			try {
-				session.store(serverStarted, new CommitSet(Database.STORE_PROJECT_ID, -1));
-				session.saveOidCounter();
-				session.commit();
-			} finally {
-				session.close();
+			final File tempSchemaFile = createTempSchema(servletContext);
+			
+			if (enabled.contains(ResultType.IFC)) {
+				emfSerializerFactory.register(ResultType.IFC, new EmfSerializerCreator() {
+					@Override
+					public EmfSerializer create(EmfModel<Long> model) {
+						IfcSerializer ifcSerializer = new IfcSerializer(model, schema);
+						ifcSerializer.setFileDescription("Bimserver.org " + version.getLatest() + " generated IFC file");
+						ifcSerializer.setPreProcessorVersion("Bimserver.org " + version.getLatest());
+						return ifcSerializer;
+					}
+				});
 			}
+			if (enabled.contains(ResultType.IFCXML)) {
+				emfSerializerFactory.register(ResultType.IFCXML, new EmfSerializerCreator() {
+					@Override
+					public EmfSerializer create(EmfModel<Long> model) {
+						return new IfcXmlSerializer(model);
+					}
+				});
+			}
+			if (enabled.contains(ResultType.CITYGML)) {
+				emfSerializerFactory.register(ResultType.CITYGML, new EmfSerializerCreator() {
+					@Override
+					public EmfSerializer create(EmfModel<Long> model) {
+						return new IfcToCityGML(model, schema, tempSchemaFile, fieldIgnoreMap);
+					}
+				});
+			}
+			if (enabled.contains(ResultType.COLLADA)) {
+				emfSerializerFactory.register(ResultType.COLLADA, new EmfSerializerCreator() {
+					@Override
+					public EmfSerializer create(EmfModel<Long> model) {
+						return new IfcToCollada(model, schema, tempSchemaFile, fieldIgnoreMap);
+					}
+				});
+			}
+			if (enabled.contains(ResultType.KMZ)) {
+				emfSerializerFactory.register(ResultType.KMZ, new EmfSerializerCreator() {
+					@Override
+					public EmfSerializer create(EmfModel<Long> model) {
+						return new KmzSerializer(model, schema, tempSchemaFile, fieldIgnoreMap);
+					}
+				});
+			}
+			if (enabled.contains(ResultType.O3D_JSON)) {
+				emfSerializerFactory.register(ResultType.O3D_JSON, new EmfSerializerCreator() {
+					@Override
+					public EmfSerializer create(EmfModel<Long> model) {
+						return new O3dJsonSerializer(model, fieldIgnoreMap, tempSchemaFile, schema);
+					}
+				});
+			}
+			ServiceInterface service = new Service(bimDatabase, emfSerializerFactory, schema, tokenManager);
+			servletContext.setAttribute("service", service);
+			LoginManager.setService(service);
 		} catch (Exception e) {
 			ServerInfo.setErrorMessage(e.getMessage());
 			LOGGER.error("", e);
 		}
 	}
 
-	public static BimDatabase getDatabase() {
-		return bimDatabase;
-	}
-	
-	public static ResourceFetcher getResourceFetcher() {
-		return resourceFetcher;
-	}
-
-	private ServerType detectServerType(ServletContext servletContext) {
-		String typeString = null;
+	private File createTempSchema(final ServletContext servletContext) throws MalformedURLException, IOException, FileNotFoundException {
+		File tempSchema = new File(System.getProperty("java.io.tmpdir") + File.separator + "IFC2X3_FINAL.exp");
+		if (tempSchema.exists()) {
+			return tempSchema;
+		}
+		URL resource = servletContext.getResource("/WEB-INF/IFC2X3_FINAL.exp");
+		InputStream in = resource.openStream();
 		try {
-			URL resource = servletContext.getResource("/servertype.txt");
-			if (resource != null) {
-				typeString = readUrl(resource);
+			byte[] buffer = new byte[1024];
+			int red = in.read(buffer);
+			FileOutputStream fos = new FileOutputStream(tempSchema);
+			try {
+				while (red != -1) {
+					fos.write(buffer, 0, red);
+					red = in.read(buffer);
+				}
+			} finally {
+				fos.close();
 			}
-		} catch (MalformedURLException e) {
-			e.printStackTrace();
+		} finally {
+			in.close();
 		}
-		if (typeString == null) {
-			File file = new File("servertype.txt");
-			typeString = readFile(file);
-		}
-		if (typeString == null) {
-			return ServerType.UNKNOWN;
-		}
-		return ServerType.valueOf(typeString);
+		return tempSchema;
 	}
 
-	private String readUrl(URL resource) {
+	private SchemaDefinition loadIfcSchema(ServletContext servletContext) throws Exception {
+		URL ifcSchemaFile = null;
 		try {
-			InputStream inputStream = resource.openStream();
-			byte[] buffer = new byte[100];
-			int red = inputStream.read(buffer);
-			String string = new String(buffer, 0, red, "UTF-8");
-			inputStream.close();
-			return string;
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		return null;
-	}
-
-	private String readFile(File file) {
-		FileInputStream fis;
-		try {
-			fis = new FileInputStream(file);
-			byte[] buffer = new byte[100];
-			int red = fis.read(buffer);
-			String string = new String(buffer, 0, red, "UTF-8");
-			fis.close();
-			return string;
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		return null;
-	}
-
-	private ResourceFetcher createResourceFetcher(ServerType serverType, final ServletContext servletContext) {
-		switch (serverType) {
-		case DEV_ENVIRONMENT:
-			return new LocalDevelopmentResourceFetcher();
-		case DEPLOYED_WAR:
-			return new WarResourceFetcher(servletContext);
-		case STANDALONE_JAR:
-			return new JarResourceFetcher();
-		}
-		return resourceFetcher;
-	}
-
-	private SchemaDefinition loadIfcSchema(ResourceFetcher resourceFetcher) throws Exception {
-		try {
-			URL ifcSchemaFile = resourceFetcher.getResource("IFC2X3_FINAL.exp");
+			ifcSchemaFile = servletContext.getResource("/WEB-INF/IFC2X3_FINAL.exp");
 			if (ifcSchemaFile == null) {
 				LOGGER.error("IFC-Schema file not found");
 			} else {
@@ -242,16 +228,9 @@ public class ServerInitializer implements ServletContextListener {
 		if (bimScheduler != null) {
 			bimScheduler.close();
 		}
-		if (longActionManager != null) {
-			longActionManager.shutdown();
-		}
 	}
 
 	public static GregorianCalendar getServerStartTime() {
 		return serverStartTime;
-	}
-
-	public static ServletContext getServletContext() {
-		return servletContext;
 	}
 }

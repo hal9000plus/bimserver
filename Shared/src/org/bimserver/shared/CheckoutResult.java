@@ -21,20 +21,10 @@ package org.bimserver.shared;
  *****************************************************************************/
 
 import javax.activation.DataHandler;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlMimeType;
 
-@XmlAccessorType(XmlAccessType.NONE)
 public class CheckoutResult {
-	@XmlMimeType("application/octet-stream")
 	private DataHandler file;
-
-	@XmlElement	
 	private String projectName;
-	
-	@XmlElement
 	private int revisionNr;
 
 	public String getProjectName() {
@@ -59,10 +49,5 @@ public class CheckoutResult {
 
 	public void setFile(DataHandler ifcFile) {
 		this.file = ifcFile;
-	}
-
-	public void setRevisionNr(String revisionNr2) {
-		// TODO Auto-generated method stub
-		
 	}
 }

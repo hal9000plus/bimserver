@@ -22,8 +22,9 @@
  */
 package org.bimserver.ifc.emf.Ifc2x3;
 
-import org.bimserver.emf.IdEObject;
 import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -40,10 +41,9 @@ import org.eclipse.emf.common.util.EList;
  *
  * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcTimeSeriesReferenceRelationship()
  * @model
- * @extends IdEObject
  * @generated
  */
-public interface IfcTimeSeriesReferenceRelationship extends IdEObject {
+public interface IfcTimeSeriesReferenceRelationship extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Referenced Time Series</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link org.bimserver.ifc.emf.Ifc2x3.IfcTimeSeries#getDocumentedBy <em>Documented By</em>}'.

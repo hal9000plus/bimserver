@@ -31,13 +31,9 @@ package org.bimserver.ifc.emf.Ifc2x3;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcThermalMaterialProperties#getSpecificHeatCapacity <em>Specific Heat Capacity</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcThermalMaterialProperties#getSpecificHeatCapacityAsString <em>Specific Heat Capacity As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcThermalMaterialProperties#getBoilingPoint <em>Boiling Point</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcThermalMaterialProperties#getBoilingPointAsString <em>Boiling Point As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcThermalMaterialProperties#getFreezingPoint <em>Freezing Point</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcThermalMaterialProperties#getFreezingPointAsString <em>Freezing Point As String</em>}</li>
  *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcThermalMaterialProperties#getThermalConductivity <em>Thermal Conductivity</em>}</li>
- *   <li>{@link org.bimserver.ifc.emf.Ifc2x3.IfcThermalMaterialProperties#getThermalConductivityAsString <em>Thermal Conductivity As String</em>}</li>
  * </ul>
  * </p>
  *
@@ -47,427 +43,215 @@ package org.bimserver.ifc.emf.Ifc2x3;
  */
 public interface IfcThermalMaterialProperties extends IfcMaterialProperties {
 	/**
-	 * Returns the value of the '<em><b>Specific Heat Capacity</b></em>' attribute.
+	 * Returns the value of the '<em><b>Specific Heat Capacity</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Specific Heat Capacity</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Specific Heat Capacity</em>' attribute.
+	 * @return the value of the '<em>Specific Heat Capacity</em>' reference.
 	 * @see #isSetSpecificHeatCapacity()
 	 * @see #unsetSpecificHeatCapacity()
-	 * @see #setSpecificHeatCapacity(float)
+	 * @see #setSpecificHeatCapacity(IfcSpecificHeatCapacityMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcThermalMaterialProperties_SpecificHeatCapacity()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getSpecificHeatCapacity();
+	IfcSpecificHeatCapacityMeasure getSpecificHeatCapacity();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcThermalMaterialProperties#getSpecificHeatCapacity <em>Specific Heat Capacity</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcThermalMaterialProperties#getSpecificHeatCapacity <em>Specific Heat Capacity</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Specific Heat Capacity</em>' attribute.
+	 * @param value the new value of the '<em>Specific Heat Capacity</em>' reference.
 	 * @see #isSetSpecificHeatCapacity()
 	 * @see #unsetSpecificHeatCapacity()
 	 * @see #getSpecificHeatCapacity()
 	 * @generated
 	 */
-	void setSpecificHeatCapacity(float value);
+	void setSpecificHeatCapacity(IfcSpecificHeatCapacityMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcThermalMaterialProperties#getSpecificHeatCapacity <em>Specific Heat Capacity</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcThermalMaterialProperties#getSpecificHeatCapacity <em>Specific Heat Capacity</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetSpecificHeatCapacity()
 	 * @see #getSpecificHeatCapacity()
-	 * @see #setSpecificHeatCapacity(float)
+	 * @see #setSpecificHeatCapacity(IfcSpecificHeatCapacityMeasure)
 	 * @generated
 	 */
 	void unsetSpecificHeatCapacity();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcThermalMaterialProperties#getSpecificHeatCapacity <em>Specific Heat Capacity</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcThermalMaterialProperties#getSpecificHeatCapacity <em>Specific Heat Capacity</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Specific Heat Capacity</em>' attribute is set.
+	 * @return whether the value of the '<em>Specific Heat Capacity</em>' reference is set.
 	 * @see #unsetSpecificHeatCapacity()
 	 * @see #getSpecificHeatCapacity()
-	 * @see #setSpecificHeatCapacity(float)
+	 * @see #setSpecificHeatCapacity(IfcSpecificHeatCapacityMeasure)
 	 * @generated
 	 */
 	boolean isSetSpecificHeatCapacity();
 
 	/**
-	 * Returns the value of the '<em><b>Specific Heat Capacity As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Specific Heat Capacity As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Specific Heat Capacity As String</em>' attribute.
-	 * @see #isSetSpecificHeatCapacityAsString()
-	 * @see #unsetSpecificHeatCapacityAsString()
-	 * @see #setSpecificHeatCapacityAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcThermalMaterialProperties_SpecificHeatCapacityAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getSpecificHeatCapacityAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcThermalMaterialProperties#getSpecificHeatCapacityAsString <em>Specific Heat Capacity As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Specific Heat Capacity As String</em>' attribute.
-	 * @see #isSetSpecificHeatCapacityAsString()
-	 * @see #unsetSpecificHeatCapacityAsString()
-	 * @see #getSpecificHeatCapacityAsString()
-	 * @generated
-	 */
-	void setSpecificHeatCapacityAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcThermalMaterialProperties#getSpecificHeatCapacityAsString <em>Specific Heat Capacity As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetSpecificHeatCapacityAsString()
-	 * @see #getSpecificHeatCapacityAsString()
-	 * @see #setSpecificHeatCapacityAsString(String)
-	 * @generated
-	 */
-	void unsetSpecificHeatCapacityAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcThermalMaterialProperties#getSpecificHeatCapacityAsString <em>Specific Heat Capacity As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Specific Heat Capacity As String</em>' attribute is set.
-	 * @see #unsetSpecificHeatCapacityAsString()
-	 * @see #getSpecificHeatCapacityAsString()
-	 * @see #setSpecificHeatCapacityAsString(String)
-	 * @generated
-	 */
-	boolean isSetSpecificHeatCapacityAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Boiling Point</b></em>' attribute.
+	 * Returns the value of the '<em><b>Boiling Point</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Boiling Point</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Boiling Point</em>' attribute.
+	 * @return the value of the '<em>Boiling Point</em>' reference.
 	 * @see #isSetBoilingPoint()
 	 * @see #unsetBoilingPoint()
-	 * @see #setBoilingPoint(float)
+	 * @see #setBoilingPoint(IfcThermodynamicTemperatureMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcThermalMaterialProperties_BoilingPoint()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getBoilingPoint();
+	IfcThermodynamicTemperatureMeasure getBoilingPoint();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcThermalMaterialProperties#getBoilingPoint <em>Boiling Point</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcThermalMaterialProperties#getBoilingPoint <em>Boiling Point</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Boiling Point</em>' attribute.
+	 * @param value the new value of the '<em>Boiling Point</em>' reference.
 	 * @see #isSetBoilingPoint()
 	 * @see #unsetBoilingPoint()
 	 * @see #getBoilingPoint()
 	 * @generated
 	 */
-	void setBoilingPoint(float value);
+	void setBoilingPoint(IfcThermodynamicTemperatureMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcThermalMaterialProperties#getBoilingPoint <em>Boiling Point</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcThermalMaterialProperties#getBoilingPoint <em>Boiling Point</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetBoilingPoint()
 	 * @see #getBoilingPoint()
-	 * @see #setBoilingPoint(float)
+	 * @see #setBoilingPoint(IfcThermodynamicTemperatureMeasure)
 	 * @generated
 	 */
 	void unsetBoilingPoint();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcThermalMaterialProperties#getBoilingPoint <em>Boiling Point</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcThermalMaterialProperties#getBoilingPoint <em>Boiling Point</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Boiling Point</em>' attribute is set.
+	 * @return whether the value of the '<em>Boiling Point</em>' reference is set.
 	 * @see #unsetBoilingPoint()
 	 * @see #getBoilingPoint()
-	 * @see #setBoilingPoint(float)
+	 * @see #setBoilingPoint(IfcThermodynamicTemperatureMeasure)
 	 * @generated
 	 */
 	boolean isSetBoilingPoint();
 
 	/**
-	 * Returns the value of the '<em><b>Boiling Point As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Boiling Point As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Boiling Point As String</em>' attribute.
-	 * @see #isSetBoilingPointAsString()
-	 * @see #unsetBoilingPointAsString()
-	 * @see #setBoilingPointAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcThermalMaterialProperties_BoilingPointAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getBoilingPointAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcThermalMaterialProperties#getBoilingPointAsString <em>Boiling Point As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Boiling Point As String</em>' attribute.
-	 * @see #isSetBoilingPointAsString()
-	 * @see #unsetBoilingPointAsString()
-	 * @see #getBoilingPointAsString()
-	 * @generated
-	 */
-	void setBoilingPointAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcThermalMaterialProperties#getBoilingPointAsString <em>Boiling Point As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetBoilingPointAsString()
-	 * @see #getBoilingPointAsString()
-	 * @see #setBoilingPointAsString(String)
-	 * @generated
-	 */
-	void unsetBoilingPointAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcThermalMaterialProperties#getBoilingPointAsString <em>Boiling Point As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Boiling Point As String</em>' attribute is set.
-	 * @see #unsetBoilingPointAsString()
-	 * @see #getBoilingPointAsString()
-	 * @see #setBoilingPointAsString(String)
-	 * @generated
-	 */
-	boolean isSetBoilingPointAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Freezing Point</b></em>' attribute.
+	 * Returns the value of the '<em><b>Freezing Point</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Freezing Point</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Freezing Point</em>' attribute.
+	 * @return the value of the '<em>Freezing Point</em>' reference.
 	 * @see #isSetFreezingPoint()
 	 * @see #unsetFreezingPoint()
-	 * @see #setFreezingPoint(float)
+	 * @see #setFreezingPoint(IfcThermodynamicTemperatureMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcThermalMaterialProperties_FreezingPoint()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getFreezingPoint();
+	IfcThermodynamicTemperatureMeasure getFreezingPoint();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcThermalMaterialProperties#getFreezingPoint <em>Freezing Point</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcThermalMaterialProperties#getFreezingPoint <em>Freezing Point</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Freezing Point</em>' attribute.
+	 * @param value the new value of the '<em>Freezing Point</em>' reference.
 	 * @see #isSetFreezingPoint()
 	 * @see #unsetFreezingPoint()
 	 * @see #getFreezingPoint()
 	 * @generated
 	 */
-	void setFreezingPoint(float value);
+	void setFreezingPoint(IfcThermodynamicTemperatureMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcThermalMaterialProperties#getFreezingPoint <em>Freezing Point</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcThermalMaterialProperties#getFreezingPoint <em>Freezing Point</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetFreezingPoint()
 	 * @see #getFreezingPoint()
-	 * @see #setFreezingPoint(float)
+	 * @see #setFreezingPoint(IfcThermodynamicTemperatureMeasure)
 	 * @generated
 	 */
 	void unsetFreezingPoint();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcThermalMaterialProperties#getFreezingPoint <em>Freezing Point</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcThermalMaterialProperties#getFreezingPoint <em>Freezing Point</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Freezing Point</em>' attribute is set.
+	 * @return whether the value of the '<em>Freezing Point</em>' reference is set.
 	 * @see #unsetFreezingPoint()
 	 * @see #getFreezingPoint()
-	 * @see #setFreezingPoint(float)
+	 * @see #setFreezingPoint(IfcThermodynamicTemperatureMeasure)
 	 * @generated
 	 */
 	boolean isSetFreezingPoint();
 
 	/**
-	 * Returns the value of the '<em><b>Freezing Point As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Freezing Point As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Freezing Point As String</em>' attribute.
-	 * @see #isSetFreezingPointAsString()
-	 * @see #unsetFreezingPointAsString()
-	 * @see #setFreezingPointAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcThermalMaterialProperties_FreezingPointAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getFreezingPointAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcThermalMaterialProperties#getFreezingPointAsString <em>Freezing Point As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Freezing Point As String</em>' attribute.
-	 * @see #isSetFreezingPointAsString()
-	 * @see #unsetFreezingPointAsString()
-	 * @see #getFreezingPointAsString()
-	 * @generated
-	 */
-	void setFreezingPointAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcThermalMaterialProperties#getFreezingPointAsString <em>Freezing Point As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetFreezingPointAsString()
-	 * @see #getFreezingPointAsString()
-	 * @see #setFreezingPointAsString(String)
-	 * @generated
-	 */
-	void unsetFreezingPointAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcThermalMaterialProperties#getFreezingPointAsString <em>Freezing Point As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Freezing Point As String</em>' attribute is set.
-	 * @see #unsetFreezingPointAsString()
-	 * @see #getFreezingPointAsString()
-	 * @see #setFreezingPointAsString(String)
-	 * @generated
-	 */
-	boolean isSetFreezingPointAsString();
-
-	/**
-	 * Returns the value of the '<em><b>Thermal Conductivity</b></em>' attribute.
+	 * Returns the value of the '<em><b>Thermal Conductivity</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Thermal Conductivity</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Thermal Conductivity</em>' attribute.
+	 * @return the value of the '<em>Thermal Conductivity</em>' reference.
 	 * @see #isSetThermalConductivity()
 	 * @see #unsetThermalConductivity()
-	 * @see #setThermalConductivity(float)
+	 * @see #setThermalConductivity(IfcThermalConductivityMeasure)
 	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcThermalMaterialProperties_ThermalConductivity()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	float getThermalConductivity();
+	IfcThermalConductivityMeasure getThermalConductivity();
 
 	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcThermalMaterialProperties#getThermalConductivity <em>Thermal Conductivity</em>}' attribute.
+	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcThermalMaterialProperties#getThermalConductivity <em>Thermal Conductivity</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Thermal Conductivity</em>' attribute.
+	 * @param value the new value of the '<em>Thermal Conductivity</em>' reference.
 	 * @see #isSetThermalConductivity()
 	 * @see #unsetThermalConductivity()
 	 * @see #getThermalConductivity()
 	 * @generated
 	 */
-	void setThermalConductivity(float value);
+	void setThermalConductivity(IfcThermalConductivityMeasure value);
 
 	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcThermalMaterialProperties#getThermalConductivity <em>Thermal Conductivity</em>}' attribute.
+	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcThermalMaterialProperties#getThermalConductivity <em>Thermal Conductivity</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetThermalConductivity()
 	 * @see #getThermalConductivity()
-	 * @see #setThermalConductivity(float)
+	 * @see #setThermalConductivity(IfcThermalConductivityMeasure)
 	 * @generated
 	 */
 	void unsetThermalConductivity();
 
 	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcThermalMaterialProperties#getThermalConductivity <em>Thermal Conductivity</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcThermalMaterialProperties#getThermalConductivity <em>Thermal Conductivity</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Thermal Conductivity</em>' attribute is set.
+	 * @return whether the value of the '<em>Thermal Conductivity</em>' reference is set.
 	 * @see #unsetThermalConductivity()
 	 * @see #getThermalConductivity()
-	 * @see #setThermalConductivity(float)
+	 * @see #setThermalConductivity(IfcThermalConductivityMeasure)
 	 * @generated
 	 */
 	boolean isSetThermalConductivity();
-
-	/**
-	 * Returns the value of the '<em><b>Thermal Conductivity As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Thermal Conductivity As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Thermal Conductivity As String</em>' attribute.
-	 * @see #isSetThermalConductivityAsString()
-	 * @see #unsetThermalConductivityAsString()
-	 * @see #setThermalConductivityAsString(String)
-	 * @see org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package#getIfcThermalMaterialProperties_ThermalConductivityAsString()
-	 * @model unsettable="true"
-	 * @generated
-	 */
-	String getThermalConductivityAsString();
-
-	/**
-	 * Sets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcThermalMaterialProperties#getThermalConductivityAsString <em>Thermal Conductivity As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Thermal Conductivity As String</em>' attribute.
-	 * @see #isSetThermalConductivityAsString()
-	 * @see #unsetThermalConductivityAsString()
-	 * @see #getThermalConductivityAsString()
-	 * @generated
-	 */
-	void setThermalConductivityAsString(String value);
-
-	/**
-	 * Unsets the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcThermalMaterialProperties#getThermalConductivityAsString <em>Thermal Conductivity As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetThermalConductivityAsString()
-	 * @see #getThermalConductivityAsString()
-	 * @see #setThermalConductivityAsString(String)
-	 * @generated
-	 */
-	void unsetThermalConductivityAsString();
-
-	/**
-	 * Returns whether the value of the '{@link org.bimserver.ifc.emf.Ifc2x3.IfcThermalMaterialProperties#getThermalConductivityAsString <em>Thermal Conductivity As String</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Thermal Conductivity As String</em>' attribute is set.
-	 * @see #unsetThermalConductivityAsString()
-	 * @see #getThermalConductivityAsString()
-	 * @see #setThermalConductivityAsString(String)
-	 * @generated
-	 */
-	boolean isSetThermalConductivityAsString();
 
 } // IfcThermalMaterialProperties
