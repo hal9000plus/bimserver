@@ -37,12 +37,12 @@ List<SProject> getAllProjects(Token token)
 The SProject class looks like this:
 
 {{{
-  private long oid; // This is the unique Object Identifier
+  private long oid; // This is the unique Object Identifier of this project
   private int id; // This field is not used anymore and should be removed
   private String name; // The project's name
-  private List<Long> hasAuthorizedUsers; // A list of all authorized users, corresponds with User.oid
-  private List<Long> concreteRevisions; // A list of all concrete revisions on this project
-  private List<Long> revisions; // A list of Object Identifiers of all revisions of this project
+  private List<Long> hasAuthorizedUsers; // A list of all Object Identifiers of the authorized users
+  private List<Long> concreteRevisions; // A list of all Object Identifiers of the ConcreteRevisions on this project
+  private List<Long> revisions; // A list of Object Identifiers of all Revisions of this project
   private long lastConcreteRevisionId; // The Object Identifier of the last ConcreteRevision
   private long lastRevisionId; // The Object Identifier of the last Revision
   private List<Long> checkouts; // A list of all Object Identifiers of the checkouts related to this project
@@ -51,7 +51,7 @@ The SProject class looks like this:
   private long createdById; // The Object Identifier of the user that created this project
   private long geoTagId; // A link to the SGeoTag
   private List<Long> subProjects; // A list of the Object Identifiers of all sub projects
-  private long parentId; // A link to the parent project
+  private long parentId; // The Object Identifier of the parent project, -1 if null
   private String description; // The description of this project
   private long clashDetectionSettingsId; // The Object Identifier of the SClashDetectionSettings object referenced by this project
   private SSIPrefix exportLengthMeasurePrefix; // An enum reference describing the default measurement prefix
