@@ -1,18 +1,23 @@
 #summary This page describes a few SOAP calls
+#labels Developerguide
 
 = Introduction =
 
 The code examples are in Java, but any other language that generates a SOAP interface based on the WSDL file should have a similar structure.
+
+Almost all methods can throw the UserException exception, which will be converted to a SOAP Fault when accessing the ServiceInterface via SOAP.
 
 = Authentication =
 
 To be able to do SOAP calls, a client should first acquire a token. A token is valid for a fixed time (1 hour currently).
 
 {{{
-Token login(String username, String password)
+Token login(String username, String password) throws UserException
 }}}
 
 This method should be called with a valid username/password combination, when successful, a Token object will be returned. This token object should be used in all subsequent calls to the BIMserver.
+
+When the username/password combination is not valid, a UserException will be thrown.
 
 The Token object contains two fields, the Token object itself should be handled as if it were immutable.
 
@@ -30,7 +35,7 @@ public class Token {
 To get a list of all projects on which the currently authenticated user has rights, use the following method:
 
 {{{
-List<SProject> getAllProjects(Token token)
+List<SProject> getAllProjects(Token token) throws UserException
 }}}
 
 The SProject class looks like this:
@@ -65,7 +70,7 @@ public class SProject {
 When you have selected the right project, you can select all revisions of this project with the following call:
 
 {{{
-List<SRevision> getAllRevisionsOfProject(Token token, long poid)
+List<SRevision> getAllRevisionsOfProject(Token token, long poid) throws UserException
 }}}
 
 The 'poid' parameter can be found in the SProject.oid field.
@@ -96,7 +101,7 @@ public class SRevision {
 After selecting the right revision, use the following call to download a certain revision:
 
 {{{
-CheckoutResult download(Token token, long roid, ResultType resultType)
+CheckoutResult download(Token token, long roid, ResultType resultType) throws UserException
 }}}
 
 The 'roid' parameter can be found in SRevision.oid. The ResultType is an enumeration with the following values:
