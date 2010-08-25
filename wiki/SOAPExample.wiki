@@ -42,15 +42,17 @@ CheckoutResult download(Token token, long roid, ResultType resultType)
 The 'roid' parameter can be found in SRevision.oid. The ResultType is an enumeration with the following values:
 
 {{{
-CITYGML,
-COLLADA,
-IFC,
-IFCXML,
-O3D_JSON,
-OBJECT_INFO,
-TEXT,
-KML,
-KMZ
+public enum ResultType
+  CITYGML,
+  COLLADA,
+  IFC,
+  IFCXML,
+  O3D_JSON,
+  OBJECT_INFO,
+  TEXT,
+  KML,
+  KMZ
+}
 }}}
 
 The resulting CheckoutResult has a reference to the file (the field "file"). Make sure to enable MTOM support in your SOAP stack.
