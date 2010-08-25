@@ -37,7 +37,8 @@ List<SProject> getAllProjects(Token token)
 The SProject class looks like this:
 
 {{{
-  private long oid; // This is the unique Object Identifier of this project
+public class SProject {
+  private long oid; // This is the unique Object Identifier of this Project
   private int id; // This field is not used anymore and should be removed
   private String name; // The project's name
   private List<Long> hasAuthorizedUsers; // A list of all Object Identifiers of the authorized users
@@ -57,6 +58,7 @@ The SProject class looks like this:
   private SSIPrefix exportLengthMeasurePrefix; // An enum reference describing the default measurement prefix
 
   // Public Getters and Setters
+}
 }}}
 
 = Get all revisions of a project =
@@ -68,6 +70,27 @@ List<SRevision> getAllRevisionsOfProject(Token token, long poid)
 }}}
 
 The 'poid' parameter can be found in the SProject.oid field.
+
+{{{
+public class SRevision {
+  private long oid; // This is the unique Object Identifier of this Revision
+  private int id; // This is a unique id within the Project this Revision belongs to, 1 would be the first revision on this project, 5 the 5th and so on  
+  private long userId; // The Object Identifier of the User that uploaded this Revision
+  private Date date; // The date on which this Revision was uploaded
+  private String comment; // The comment added by the uploader
+  private long size; // The amount of object in this model
+  private List<Long> concreteRevisions; // A list of the Object Identifiers of all ConcreteRevisions belonging to this Revision
+  private long lastConcreteRevisionId; // The Object Identifier of the last ConcreteRevision
+  private List<Long> checkouts; // A list of all Object Identifiers of all checkouts of this Revision
+  private long projectId; // The Object Identifier of the Project this Revision belongs to
+  private boolean finalized; // Weather this revision is finalized (complete processed in the database)
+  private List<Long> lastClashes; // A list of Object Identifiers of all Clashes found in the last clash detection
+  private boolean processingClashes; // Weather the server is busy finding clashes in this Revision
+  private String tag; // A possible tag
+
+  // Public Getters and Setters
+}
+}}}
 
 = Download a certain revision =
 
