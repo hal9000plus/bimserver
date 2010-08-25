@@ -34,6 +34,31 @@ To get a list of all projects on which the currently authenticated user has righ
 List<SProject> getAllProjects(Token token)
 }}}
 
+The SProject class looks like this:
+
+{{{
+  private long oid; // This is the unique Object Identifier
+  private int id; // This field is not used anymore and should be removed
+  private String name; // The project's name
+  private List<Long> hasAuthorizedUsers; // A list of all authorized users, corresponds with User.oid
+  private List<Long> concreteRevisions; // A list of all concrete revisions on this project
+  private List<Long> revisions; // A list of Object Identifiers of all revisions of this project
+  private long lastConcreteRevisionId; // The Object Identifier of the last ConcreteRevision
+  private long lastRevisionId; // The Object Identifier of the last Revision
+  private List<Long> checkouts; // A list of all Object Identifiers of the checkouts related to this project
+  private SObjectState state; // The current ObjectState
+  private Date createdDate; // The date on which this project was created
+  private long createdById; // The Object Identifier of the user that created this project
+  private long geoTagId; // A link to the SGeoTag
+  private List<Long> subProjects; // A list of the Object Identifiers of all sub projects
+  private long parentId; // A link to the parent project
+  private String description; // The description of this project
+  private long clashDetectionSettingsId; // The Object Identifier of the SClashDetectionSettings object referenced by this project
+  private SSIPrefix exportLengthMeasurePrefix; // An enum reference describing the default measurement prefix
+
+  // Public Getters and Setters
+}}}
+
 = Get all revisions of a project =
 
 When you have selected the right project, you can select all revisions of this project with the following call:
