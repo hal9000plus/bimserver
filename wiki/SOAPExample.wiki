@@ -1,5 +1,4 @@
 #summary This page describes a few SOAP calls
-#labels Developerguide
 
 = Introduction =
 
@@ -122,6 +121,16 @@ In Java you can use the following code to get the actual file data (as an InputS
 
 {{{
 InputStream inputStream = checkoutResult.getFile().getInputStream();
+}}}
+
+{{{
+public class CheckoutResult {
+  private DataHandler file; // A reference to the actual data
+  private String projectName; // The name of the project (Project.name)
+  private int revisionNr; // The revision id (Revision.id)
+
+  // Public Getters and Setters
+}
 }}}
 
 = Logout =
