@@ -2,16 +2,28 @@
 
 = Introduction =
 
+The code examples are in Java, but any other language that generates a SOAP interface based on the WSDL file should have a similar structure.
 
 = Authentication =
 
-To be able to do SOAP call's, a client should first acquire a token. A token is valid for a fixed time (1 hour currently).
+To be able to do SOAP calls, a client should first acquire a token. A token is valid for a fixed time (1 hour currently).
 
 {{{
 Token login(String username, String password)
 }}}
 
 This method should be called with a valid username/password combination, when successful, a Token object will be returned. This token object should be used in all subsequent calls to the BIMserver.
+
+The Token object contains two fields, the Token object itself should be handled as if it were immutable.
+
+{{{
+public class Token {
+  private String tokenString;
+  private long expires;
+
+  // Getters and Setters
+}
+}}}
 
 = Get all projects =
 
@@ -62,3 +74,13 @@ In Java you can use the following code to get the actual file data (as an InputS
 {{{
 InputStream inputStream = checkoutResult.getFile().getInputStream();
 }}}
+
+= Logout =
+
+When you are done calling BIMserver methods, you should logout, and free system resources right away (if you don't however, the BIMserver will still remove session data when the token expires).
+
+{{{
+void logout(Token token)
+}}}
+
+Just call this method with the token, and you're done.
