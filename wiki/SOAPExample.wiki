@@ -7,20 +7,56 @@
 
 To be able to do SOAP call's, a client should first acquire a token. A token is valid for a fixed time (1 hour currently).
 
-Method:
+{{{
 Token login(String username, String password)
+}}}
 
 This method should be called with a valid username/password combination, when successful, a Token object will be returned. This token object should be used in all subsequent calls to the BIMserver.
 
 = Get all projects =
 
-To get a list of all projects on which the currently logged in user has rights, use the following method:
+To get a list of all projects on which the currently authenticated user has rights, use the following method:
 
-_List<SProject> getAllProjects(Token token)_
+{{{
+List<SProject> getAllProjects(Token token)
+}}}
 
+= Get all revisions of a project =
 
+When you have selected the right project, you can select all revisions of this project with the following call:
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+{{{
+List<SRevision> getAllRevisionsOfProject(Token token, long poid)
+}}}
+
+The 'poid' parameter can be found in the SProject.oid field.
+
+= Download a certain revision =
+
+After selecting the right revision, use the following call to download a certain revision:
+
+{{{
+CheckoutResult download(Token token, long roid, ResultType resultType)
+}}}
+
+The 'roid' parameter can be found in SRevision.oid. The ResultType is an enumeration with the following values:
+
+{{{
+CITYGML,
+COLLADA,
+IFC,
+IFCXML,
+O3D_JSON,
+OBJECT_INFO,
+TEXT,
+KML,
+KMZ
+}}}
+
+The resulting CheckoutResult has a reference to the file (the field "file"). Make sure to enable MTOM support in your SOAP stack.
+
+In Java you can use the following code to get the actual file data (as an InputStream):
+
+{{{
+InputStream inputStream = checkoutResult.getFile().getInputStream();
+}}}
