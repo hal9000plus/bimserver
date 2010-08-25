@@ -1,0 +1,26 @@
+#summary This page describes a few SOAP calls
+
+= Introduction =
+
+
+= Authentication =
+
+To be able to do SOAP call's, a client should first acquire a token. A token is valid for a fixed time (1 hour currently).
+
+Method:
+Token login(String username, String password)
+
+This method should be called with a valid username/password combination, when successful, a Token object will be returned. This token object should be used in all subsequent calls to the BIMserver.
+
+= Get all projects =
+
+To get a list of all projects on which the currently logged in user has rights, use the following method:
+
+_List<SProject> getAllProjects(Token token)_
+
+
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
