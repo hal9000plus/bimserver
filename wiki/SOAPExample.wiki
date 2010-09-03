@@ -1,4 +1,4 @@
-#summary This page describes a few SOAP calls
+#summary This page describes a few SOAP calls to get a model from a BIMserver
 #labels Developerguide
 
 = Introduction =
