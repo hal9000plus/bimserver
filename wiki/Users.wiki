@@ -4,5 +4,3 @@
 = Introduction =
 
 A list of open source BIMserver software users. Feel free to add your own company in the comments (we will add it to this page). Please add your name, location, the web adress of your BIMserver installation and (if you want) some feedback on what you use the software for or what features you like most.
-
-= Users =
