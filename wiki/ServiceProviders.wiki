@@ -5,20 +5,19 @@
 
 A list of (commercial) companies that provide services for the open source BIMserver software. There companies can help you with installation, deploy, backup, updates, configuration, and (sometimes) even more....
 
-If you are a serviceprovider, feel free to add your company to this list. Please be short and provide information on what kind of services you can provide. Link to a specific BIMserver information page on your own website.
+If you are a serviceprovider, feel free to add your company in the comment of this page (so we can put you on the list). Please be short and provide information on what kind of services you can provide. Link to a specific BIMserver information page on your own website.
 
 
 = Service Providers =
 
 *VMV CAD* (The Netherlands)<br/>
 Helps you implement a BIMserver in your company. <br/>
-Contact: <a href="http://www.vmv-cad.nl/site/producten/bim_software.html">http://www.vmv-cad.nl/</a>
+Contact: http://www.vmv-cad.nl/site/producten/bim_software.html
 
 *deBIMspecialist* (The Netherlands)<br/>
 Helps you implement a BIMserver in (the process) your company. <br/>
-Contact: <a href="http://www.debimspecialist.nl/contact/inloggen_bim_model_server_/">http://www.debimspecialist.nl/</a>
+Contact: http://www.debimspecialist.nl/contact/inloggen_bim_model_server_/
 
 *Perfect Blue* (The Netherlands)<br/>
 Developed an plugin to link Document Management System (DMS) Alfresco to BIMserver data. <br/>
-Contact: <a href="http://www.perfectblue.nl/bimserver/">http://www.perfectblue.nl/</a>
-
+Contact: http://www.perfectblue.nl/bimserver/
