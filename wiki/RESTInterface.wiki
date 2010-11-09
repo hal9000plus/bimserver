@@ -8,12 +8,29 @@ All calls on the rest interface are executed with anonymous rights.
 
 = Base URL =
 
-The base url is: http://<urlofbimserver>/get. The base URL will give a list of all projects (on which the anonymous user has rights).
+The base url is:
+
+{{{
+http://[urlofbimserver]/get
+}}}
+
+The base URL will give a list of all projects (on which the anonymous user has rights).
 
 = Parameters =
 
-Extra parameters can be added as key/value pairs between slashes, for example:
+Extra parameters can be added as key/value pairs between slashes, the next example will show the latest revision of project with poid 8:
 
-[code]
+{{{
 http://demo.bimserver.org/get/poid=8
-[/code]
+}}}
+
+= Available parameters =
+
+|| *Parameter* || *Description* ||
+|| poid || Project OID ||
+|| roid || Revision OID ||
+|| oid || Object OID ||
+|| guid || GloballyUniqueID ||
+|| resultType || ResultType ||
+|| action || Action ||
+|| class || Class ||
