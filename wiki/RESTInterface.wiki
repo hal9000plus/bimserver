@@ -37,13 +37,13 @@ http://demo.bimserver.org/get/poid=8
 
 ResultType can be:
 
-* CITYGML
-* COLLADA
-* IFC
-* IFCXML
-* O3D_JSON
-* O3D_TGZ
-* OBJECT_INFO
-* TEXT
-* KML
-* KMZ
+  * CITYGML
+  * COLLADA
+  * IFC
+  * IFCXML
+  * O3D_JSON
+  * O3D_TGZ
+  * OBJECT_INFO
+  * TEXT
+  * KML
+  * KMZ
