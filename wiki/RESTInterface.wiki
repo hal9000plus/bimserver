@@ -27,13 +27,13 @@ http://demo.bimserver.org/get/poid=8
 = Available parameters =
 
 || *Parameter* || *Description* || Example ||
-|| poid || Project OID || 8
-|| roid || Revision OID || 15
-|| oid || Object OID || 100
-|| guid || GloballyUniqueID || 1ifRdbmI5AQeW0xTc0ERIj
-|| resultType || ResultType || IFC
-|| action || Action || REVISIONS
-|| class || Class || IfcWindow
+|| poid || Project OID || 8 ||
+|| roid || Revision OID || 15 ||
+|| oid || Object OID || 100 ||
+|| guid || GloballyUniqueID || 1ifRdbmI5AQeW0xTc0ERIj ||
+|| resultType || ResultType || IFC ||
+|| action || Action || REVISIONS ||
+|| class || Class || IfcWindow ||
 
 ResultType can be:
 
