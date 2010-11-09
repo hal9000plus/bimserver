@@ -26,11 +26,24 @@ http://demo.bimserver.org/get/poid=8
 
 = Available parameters =
 
-|| *Parameter* || *Description* ||
-|| poid || Project OID ||
-|| roid || Revision OID ||
-|| oid || Object OID ||
-|| guid || GloballyUniqueID ||
-|| resultType || ResultType ||
-|| action || Action ||
-|| class || Class ||
+|| *Parameter* || *Description* || Example ||
+|| poid || Project OID || 8
+|| roid || Revision OID || 15
+|| oid || Object OID || 100
+|| guid || GloballyUniqueID || 1ifRdbmI5AQeW0xTc0ERIj
+|| resultType || ResultType || IFC
+|| action || Action || REVISIONS
+|| class || Class || IfcWindow
+
+ResultType can be:
+
+* CITYGML
+* COLLADA
+* IFC
+* IFCXML
+* O3D_JSON
+* O3D_TGZ
+* OBJECT_INFO
+* TEXT
+* KML
+* KMZ
