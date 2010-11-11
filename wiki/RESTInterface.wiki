@@ -16,8 +16,10 @@ Adding `?_wadl` to the base URL will give you a WADL document describing the ava
 
 = Example calls =
 
+http://localhost:8082/rest/ping?in=test
+
 http://localhost:8082/rest/login?username=[username]&password=[password]
 
-http://localhost:8082/rest/getAllProjects?expires=1289481543562&tokenstring=99AD8B9B29DA8C36C47FAEEED4C70041
+http://localhost:8082/rest/getAllProjects?expires=[expires]&tokenstring=[tokenstring]
 
-http://localhost:8082/rest/ping?in=test
+http://localhost:8082/rest/getAllRevisionsOfProject?expires=[expires]&poid=20&tokenstring=[tokenstring]
