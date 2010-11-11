@@ -12,7 +12,7 @@ The base url is:
 http://[pathtobimserver]/rest
 }}}
 
-Adding ?_wadl to the base URL will give you a WADL document describing the available services.
+Adding `?_wadl` to the base URL will give you a WADL document describing the available services.
 
 = Example calls =
 
