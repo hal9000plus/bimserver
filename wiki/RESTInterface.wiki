@@ -14,7 +14,7 @@ http://[pathtobimserver]/rest
 
 Adding `?_wadl` to the base URL will give you a WADL document describing the available services.
 
-= Example calls =
+= Available calls (examples) =
 
 http://localhost:8082/rest/ping?in=test
 
@@ -23,3 +23,5 @@ http://localhost:8082/rest/login?username=[username]&password=[password]
 http://localhost:8082/rest/getAllProjects?expires=[expires]&tokenstring=[tokenstring]
 
 http://localhost:8082/rest/getAllRevisionsOfProject?expires=[expires]&poid=20&tokenstring=[tokenstring]
+
+http://localhost:8082/rest/download?roid=120&expires=1289483346315&resultType=IFC&tokenstring=990936BD989212D84E668E40437AEFEB
