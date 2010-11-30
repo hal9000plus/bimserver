@@ -12,16 +12,18 @@ The base url is:
 http://[pathtobimserver]/rest
 }}}
 
-Adding `?_wadl` to the base URL will give you a WADL document describing the available services.
+Adding `?_wadl` to the base URL will give you a WADL document describing the available services. Note: Even for getting the WADL document, authentication is required, you can use any valid BIMserver account.
 
 = Available calls (examples) =
 
 http://localhost:8082/rest/ping?in=test
 
+Login call (required prior to most other calls)
+
 http://localhost:8082/rest/login?username=[username]&password=[password]
 
-http://localhost:8082/rest/getAllProjects?expires=[expires]&tokenstring=[tokenstring]
+http://localhost:8082/rest/getAllProjects
 
-http://localhost:8082/rest/getAllRevisionsOfProject?expires=[expires]&poid=20&tokenstring=[tokenstring]
+http://localhost:8082/rest/getAllRevisionsOfProject?poid=20
 
-http://localhost:8082/rest/download?roid=120&expires=1289483346315&resultType=IFC&tokenstring=990936BD989212D84E668E40437AEFEB
+http://localhost:8082/rest/download?roid=120&resultType=IFC
