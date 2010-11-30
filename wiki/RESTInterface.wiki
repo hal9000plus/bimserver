@@ -5,7 +5,7 @@
 Apart from the SOAP interface, a simple REST interface is available, this page describes how to use it.
 
 = Authentication =
-Authentication is done with Basic HTTP-auth.
+Authentication is done with Basic HTTP-auth (http://en.wikipedia.org/wiki/Basic_access_authentication)
 
 = Base URL =
 
