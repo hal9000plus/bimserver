@@ -4,6 +4,9 @@
 
 Apart from the SOAP interface, a simple REST interface is available, this page describes how to use it.
 
+= Authentication =
+Authentication is done with Basic HTTP-auth.
+
 = Base URL =
 
 The base url is:
