@@ -15,6 +15,6 @@ A JAR file can directly be executed on most operating systems.
   # Download the latest JAR build from http://download.bimserver.org/
   # Some browsers rename the JAR file, make sure it ends with ".jar"
   # Start the program by double clicking, you should see the following window:
-http://code.google.com/p/bimserver/source/browse/images/jar.png
+http://bimserver.googlecode.com/svn/images/jar.png
 
 = WAR =
