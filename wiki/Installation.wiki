@@ -9,9 +9,13 @@ The BIMserver comes in two different versions, both are functionally the same:
 
 = JAR =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+A JAR file can directly be executed on most operating systems.
+
+1. Make sure you have a recent version of a Java Runtime Environment (JRE) or Java Development Kit (JDK), a JRE can be downloaded here http://java.com.
+2. Download the latest JAR build from http://download.bimserver.org/
+3. Some browsers rename the JAR file, make sure it ends with ".jar"
+4. Start the program by double clicking, you should see the following window:
+<insert image>
+5. 
 
 = WAR =
