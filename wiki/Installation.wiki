@@ -37,7 +37,7 @@ The settings page is the same for the JAR and WAR builds. You can get to the set
 ||Extra information when registering||A customized message, shown to users registering themselves||
 ||Send confirmation e-mail after registering||Whether to send an e-mail message to users after they registered themselves||
 ||Allow self registration||Whether people can register themselves||
-||Address of e-mail sender||The e-mail address used by the BIMserver when sending e-mail messages that are not sent by a BIMserver user with a valid e-mail address as username
+||Address of e-mail sender||The e-mail address used by the BIMserver when sending e-mail messages that are not sent by a BIMserver user with a valid e-mail address as username||
 ||SMTP server (for outgoing e-mail)||The SMTP server used for outgoing e-mail||
 ||Database location||Location of the database, can be absolute or relative||
 ||Automatic clash detection on main projects||Clashes are being detected after each checkin on all projects||
