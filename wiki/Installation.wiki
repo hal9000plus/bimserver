@@ -1,0 +1,17 @@
+#summary How to install or run your own BIMserver
+
+= Introduction =
+
+The BIMserver comes in two different versions, both are functionally the same:
+
+  * The JAR build: Easier to install, meant to be run on a desktop/laptop computer
+  * The WAR build: A bit harder to install, meant to be run on a server computer
+
+= JAR =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
+
+= WAR =
