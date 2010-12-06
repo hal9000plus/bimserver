@@ -11,11 +11,10 @@ The BIMserver comes in two different versions, both are functionally the same:
 
 A JAR file can directly be executed on most operating systems.
 
-# Make sure you have a recent version of a Java Runtime Environment (JRE) or Java Development Kit (JDK), a JRE can be downloaded here http://java.com.
-# Download the latest JAR build from http://download.bimserver.org/
-# Some browsers rename the JAR file, make sure it ends with ".jar"
-# Start the program by double clicking, you should see the following window:
-http://code.google.com/images/code_sm.png
-# 
+  # Make sure you have a recent version of a Java Runtime Environment (JRE) or Java Development Kit (JDK), a JRE can be downloaded here http://java.com.
+  # Download the latest JAR build from http://download.bimserver.org/
+  # Some browsers rename the JAR file, make sure it ends with ".jar"
+  # Start the program by double clicking, you should see the following window:
+http://code.google.com/p/bimserver/images/code_sm.png
 
 = WAR =
