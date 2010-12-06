@@ -32,7 +32,10 @@ http://bimserver.googlecode.com/svn/images/jar.png
 
 The settings page is the same for the JAR and WAR builds. You can get to the settings screen by logging on to the web interface as an Administrator and clicking "Settings" in the top right corner of the screen.
 
+Only the SMTP server setting is required for full functionality, in most cases where e-mail is not working, this has not been set.
+
 = Basic Settings =
+
 ||Settings||Description||
 ||Extra information when registering||A customized message, shown to users registering themselves||
 ||Send confirmation e-mail after registering||Whether to send an e-mail message to users after they registered themselves||
