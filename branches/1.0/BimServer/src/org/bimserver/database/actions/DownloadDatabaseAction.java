@@ -35,7 +35,7 @@ public class DownloadDatabaseAction extends BimDatabaseAction<IfcModel> {
 		}
 		LinkedHashSet<IfcModel> ifcModels = new LinkedHashSet<IfcModel>();
 		for (ConcreteRevision subRevision : revision.getConcreteRevisions()) {
-			IfcModel subModel = new IfcModel(bimDatabaseSession.getMap(subRevision.getProject().getId(), subRevision.getId()).getMap());
+			IfcModel subModel = bimDatabaseSession.getMap(subRevision.getProject().getId(), subRevision.getId());
 			subModel.setDate(subRevision.getDate());
 			ifcModels.add(subModel);
 		}

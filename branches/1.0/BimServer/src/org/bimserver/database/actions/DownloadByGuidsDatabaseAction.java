@@ -9,7 +9,6 @@ import org.bimserver.database.BimDatabaseException;
 import org.bimserver.database.BimDatabaseSession;
 import org.bimserver.database.BimDeadlockException;
 import org.bimserver.database.ObjectIdentifier;
-import org.bimserver.database.ReadSet;
 import org.bimserver.database.store.ConcreteRevision;
 import org.bimserver.database.store.Project;
 import org.bimserver.database.store.Revision;
@@ -52,8 +51,7 @@ public class DownloadByGuidsDatabaseAction extends BimDatabaseAction<IfcModel> {
 							long oidOfGuid = objectIdentifier.getOid();
 							if (oidOfGuid != -1) {
 								foundGuids.add(guid);
-								ReadSet mapWithOid = bimDatabaseSession.getMapWithOid(concreteRevision.getProject().getId(), concreteRevision.getId(), oidOfGuid);
-								IfcModel subModel = new IfcModel(mapWithOid.getMap());
+								IfcModel subModel = bimDatabaseSession.getMapWithOid(concreteRevision.getProject().getId(), concreteRevision.getId(), oidOfGuid);
 								subModel.setDate(concreteRevision.getDate());
 								ifcModels.add(subModel);
 								continue;

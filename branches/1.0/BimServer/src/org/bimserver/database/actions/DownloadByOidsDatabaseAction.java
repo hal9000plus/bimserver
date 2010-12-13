@@ -7,7 +7,6 @@ import java.util.Set;
 import org.bimserver.database.BimDatabaseException;
 import org.bimserver.database.BimDatabaseSession;
 import org.bimserver.database.BimDeadlockException;
-import org.bimserver.database.ReadSet;
 import org.bimserver.database.store.ConcreteRevision;
 import org.bimserver.database.store.Project;
 import org.bimserver.database.store.Revision;
@@ -43,8 +42,7 @@ public class DownloadByOidsDatabaseAction extends BimDatabaseAction<IfcModel> {
 			}
 			for (ConcreteRevision concreteRevision : virtualRevision.getConcreteRevisions()) {
 				for (Long oid : oids) {
-					ReadSet mapWithOid = bimDatabaseSession.getMapWithOid(concreteRevision.getProject().getId(), concreteRevision.getId(), oid);
-					IfcModel subModel = new IfcModel(mapWithOid.getMap());
+					IfcModel subModel = bimDatabaseSession.getMapWithOid(concreteRevision.getProject().getId(), concreteRevision.getId(), oid);
 					subModel.setDate(concreteRevision.getDate());
 					ifcModels.add(subModel);
 				}

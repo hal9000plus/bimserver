@@ -7,13 +7,13 @@ import org.bimserver.database.BimDatabaseException;
 import org.bimserver.database.BimDatabaseSession;
 import org.bimserver.database.BimDeadlockException;
 import org.bimserver.database.Database;
-import org.bimserver.database.ReadSet;
 import org.bimserver.database.RecordIdentifier;
 import org.bimserver.database.store.CheckinState;
 import org.bimserver.database.store.ConcreteRevision;
 import org.bimserver.database.store.Project;
 import org.bimserver.database.store.log.AccessMethod;
 import org.bimserver.emf.IdEObject;
+import org.bimserver.ifc.IfcModel;
 import org.bimserver.shared.AbstractAttributeValuePair;
 import org.bimserver.shared.Addition;
 import org.bimserver.shared.AttributeNewReferencePair;
@@ -55,7 +55,7 @@ public class ProcessChangeSetDatabaseAction extends BimDatabaseAction<ChangeSetR
 		ConcreteRevision oldRevision = project.getLastConcreteRevision();
 		ConcreteRevision newRevision = bimDatabaseSession.createNewConcreteRevision(0, poid, actingUoid, comment, CheckinState.STORING);
 		changeSetResult.setNewRevisionNr(newRevision.getId());
-		ReadSet map = bimDatabaseSession.getMap(project.getId(), oldRevision.getId());
+		IfcModel model = bimDatabaseSession.getMap(project.getId(), oldRevision.getId());
 		Map<Long, IdEObject> processedAdditions = new HashMap<Long, IdEObject>();
 		long newSize = 0;//oldRevision.getSize();
 		for (Addition addition : changeSet.getAdditions()) {
@@ -64,18 +64,18 @@ public class ProcessChangeSetDatabaseAction extends BimDatabaseAction<ChangeSetR
 			processedAdditions.put(addition.getOid(), object);
 		}
 		for (Addition addition : changeSet.getAdditions()) {
-			bimDatabaseSession.convertAdditionToEObject(processedAdditions.get(addition.getOid()), addition, processedAdditions, map.getMap());
+			bimDatabaseSession.convertAdditionToEObject(processedAdditions.get(addition.getOid()), addition, processedAdditions, model);
 			newSize++;
 		}
 		for (Long key : processedAdditions.keySet()) {
 			bimDatabaseSession.store(processedAdditions.get(key));
 		}
 		if (project.getLastConcreteRevision() != null) {
-			ReadSet readSet = new ReadSet(project.getId(), oldRevision.getId());
+			IfcModel subModel = new IfcModel();
 			for (Modification modification : changeSet.getModifications()) {
 				String className = modification.getClassName();
 				long oid = modification.getOid();
-				IdEObject originalObject = bimDatabaseSession.get(bimDatabaseSession.getCidForClassName(className), oid, readSet);
+				IdEObject originalObject = bimDatabaseSession.get(bimDatabaseSession.getCidForClassName(className), oid, project.getId(), oldRevision.getId(), subModel);
 				IdEObject object = (IdEObject) EcoreUtil.copy(originalObject);
 				// Put this copy in the cache, so saving it later on
 				// won't
@@ -106,8 +106,8 @@ public class ProcessChangeSetDatabaseAction extends BimDatabaseAction<ChangeSetR
 						}
 					} else if (aavp instanceof AttributeReferencePair) {
 						AttributeReferencePair attributeReferencePair = (AttributeReferencePair) aavp;
-						ReadSet mapWithOid = bimDatabaseSession.getMapWithOid(project.getId(), project.getLastConcreteRevision().getId(), attributeReferencePair.getOid());
-						object.eSet(feature, mapWithOid.get(attributeReferencePair.getOid()));
+						IfcModel submodel = bimDatabaseSession.getMapWithOid(project.getId(), project.getLastConcreteRevision().getId(), attributeReferencePair.getOid());
+						object.eSet(feature, submodel.get(attributeReferencePair.getOid()));
 					}
 				}
 				bimDatabaseSession.store(object);

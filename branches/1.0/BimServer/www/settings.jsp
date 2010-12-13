@@ -32,6 +32,7 @@
 	settings.setAutoTestClashes(request.getParameter("autoTestClashes") != null);
 	settings.setCustomLogoAddress(request.getParameter("customLogo"));
 	settings.setSiteAddress(request.getParameter("siteAddress"));
+	settings.setCheckinMergingEnabled(request.getParameter("checkinMergingEnabled") != null);
 	String enabledExportTypes = "";
 	Set<ResultType> enabledTypes = new HashSet<ResultType>();
 	for (ResultType resultType : ResultType.values()) {
@@ -148,6 +149,11 @@
 		<td><label for="intelligentMerging">Intelligent merging</label></td>
 		<td><input id="intelligentMerging" name="intelligentMerging" type="checkbox"
 			<%=settings.isIntelligentMerging() ? " checked=\"checked\"" : ""%>></input></td>
+	</tr>
+	<tr>
+		<td><label for="checkinMergingEnabled">Checkin merging</label></td>
+		<td><input id="checkinMergingEnabled" name="checkinMergingEnabled" type="checkbox"
+			<%=settings.isCheckinMergingEnabled() ? " checked=\"checked\"" : ""%>></input></td>
 	</tr>
 	<!-- 
 <tr><td>Use file-level caching</td><td><input name="usecaching" type="checkbox" <%=settings.isUseCaching() ? " checked=\"checked\"" : ""%>></input></td></tr>

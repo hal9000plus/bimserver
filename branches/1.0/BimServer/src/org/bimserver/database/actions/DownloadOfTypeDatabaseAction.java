@@ -5,7 +5,6 @@ import java.util.LinkedHashSet;
 import org.bimserver.database.BimDatabaseException;
 import org.bimserver.database.BimDatabaseSession;
 import org.bimserver.database.BimDeadlockException;
-import org.bimserver.database.ReadSet;
 import org.bimserver.database.store.ConcreteRevision;
 import org.bimserver.database.store.Project;
 import org.bimserver.database.store.Revision;
@@ -38,8 +37,7 @@ public class DownloadOfTypeDatabaseAction extends BimDatabaseAction<IfcModel> {
 		}
 		LinkedHashSet<IfcModel> ifcModels = new LinkedHashSet<IfcModel>();
 		for (ConcreteRevision concreteRevision : virtualRevision.getConcreteRevisions()) {
-			ReadSet allOfType = bimDatabaseSession.getAllOfType(className, concreteRevision.getProject().getId(), concreteRevision.getId());
-			IfcModel subModel = new IfcModel(allOfType.getMap());
+			IfcModel subModel = bimDatabaseSession.getAllOfType(className, concreteRevision.getProject().getId(), concreteRevision.getId());
 			subModel.setDate(concreteRevision.getDate());
 			ifcModels.add(subModel);
 		}

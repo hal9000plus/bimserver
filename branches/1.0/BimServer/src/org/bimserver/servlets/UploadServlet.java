@@ -77,6 +77,7 @@ public class UploadServlet extends HttpServlet {
 				InputStream in = null;
 				long size = 0;
 				String name = "";
+				boolean merge = false;
 				while (iter.hasNext()) {
 					FileItem item = iter.next();
 					if (item.isFormField()) {
@@ -88,6 +89,9 @@ public class UploadServlet extends HttpServlet {
 						}
 						if ("type".equals(item.getFieldName())) {
 							type = item.getString();
+						}
+						if ("merge".equals(item.getFieldName())) {
+							merge = true;
 						}
 					} else {
 						size = item.getSize();
@@ -105,7 +109,7 @@ public class UploadServlet extends HttpServlet {
 								InputStreamDataSource inputStreamDataSource = new InputStreamDataSource(realStream);
 								inputStreamDataSource.setName(name);
 								DataHandler ifcFile = new DataHandler(inputStreamDataSource);
-								loginManager.getService().checkinAsync(poid, comment, size, ifcFile);
+								loginManager.getService().checkinAsync(poid, comment, size, ifcFile, merge);
 								response.sendRedirect("project.jsp?poid=" + poid);
 							} catch (UserException e) {
 								if (e.getCause() instanceof OutOfMemoryError) {

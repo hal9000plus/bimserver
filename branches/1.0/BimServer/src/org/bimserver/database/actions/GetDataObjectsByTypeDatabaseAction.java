@@ -7,7 +7,6 @@ import java.util.List;
 import org.bimserver.database.BimDatabaseException;
 import org.bimserver.database.BimDatabaseSession;
 import org.bimserver.database.BimDeadlockException;
-import org.bimserver.database.ReadSet;
 import org.bimserver.database.store.ConcreteRevision;
 import org.bimserver.database.store.Revision;
 import org.bimserver.database.store.log.AccessMethod;
@@ -35,8 +34,7 @@ public class GetDataObjectsByTypeDatabaseAction extends BimDatabaseAction<List<D
 		Revision virtualRevision = bimDatabaseSession.getVirtualRevision(roid);
 		LinkedHashSet<IfcModel> ifcModels = new LinkedHashSet<IfcModel>();
 		for (ConcreteRevision concreteRevision : virtualRevision.getConcreteRevisions()) {
-			ReadSet readSet = bimDatabaseSession.getAllOfType(className, concreteRevision.getProject().getId(), concreteRevision.getId());
-			IfcModel subModel = new IfcModel(readSet.getMap());
+			IfcModel subModel = bimDatabaseSession.getAllOfType(className, concreteRevision.getProject().getId(), concreteRevision.getId());
 			subModel.setDate(concreteRevision.getDate());
 			ifcModels.add(subModel);
 		}

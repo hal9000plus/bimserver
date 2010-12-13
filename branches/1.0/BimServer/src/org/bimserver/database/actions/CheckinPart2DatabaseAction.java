@@ -1,10 +1,14 @@
 package org.bimserver.database.actions;
 
+import java.util.Date;
+import java.util.LinkedHashSet;
+
 import org.bimserver.database.BimDatabaseException;
 import org.bimserver.database.BimDatabaseSession;
 import org.bimserver.database.BimDeadlockException;
 import org.bimserver.database.store.CheckinState;
 import org.bimserver.database.store.ConcreteRevision;
+import org.bimserver.database.store.Project;
 import org.bimserver.database.store.Revision;
 import org.bimserver.database.store.log.AccessMethod;
 import org.bimserver.ifc.IfcModel;
@@ -15,23 +19,41 @@ public class CheckinPart2DatabaseAction extends BimDatabaseAction<Void> {
 	private final IfcModel ifcModel;
 	private final long actingUoid;
 	private final long croid;
+	private final boolean merge;
 
-	public CheckinPart2DatabaseAction(AccessMethod accessMethod, IfcModel ifcModel, long actingUoid, long croid) {
+	public CheckinPart2DatabaseAction(AccessMethod accessMethod, IfcModel ifcModel, long actingUoid, long croid, boolean merge) {
 		super(accessMethod);
 		this.ifcModel = ifcModel;
 		this.actingUoid = actingUoid;
 		this.croid = croid;
+		this.merge = merge;
 	}
 
 	@Override
 	public Void execute(BimDatabaseSession bimDatabaseSession) throws UserException, BimDeadlockException, BimDatabaseException {
 		ConcreteRevision concreteRevision = bimDatabaseSession.getConcreteRevision(croid);
 		try {
-			if (concreteRevision.getProject().getConcreteRevisions().size() != 0) {
-				// There already was a revision, lets delete it
-				bimDatabaseSession.clearProject(concreteRevision.getProject().getId(), concreteRevision.getId() - 1, concreteRevision.getId());
+			Project project = concreteRevision.getProject();
+			Revision lastRevision = project.getLastRevision();
+			IfcModel ifcModel = null;
+			if (merge) {
+				LinkedHashSet<IfcModel> ifcModels = new LinkedHashSet<IfcModel>();
+				getIfcModel().setDate(new Date());
+				for (ConcreteRevision subRevision : lastRevision.getConcreteRevisions()) {
+					IfcModel subModel = bimDatabaseSession.getMap(subRevision.getProject().getId(), subRevision.getId());
+					subModel.setDate(subRevision.getDate());
+					ifcModels.add(subModel);
+				}
+				ifcModels.add(getIfcModel());
+				ifcModel = merge(project, ifcModels);
+			} else {
+				ifcModel = getIfcModel();
 			}
-			bimDatabaseSession.store(getIfcModel().getValues(), concreteRevision.getProject().getId(), concreteRevision.getId());
+			if (project.getConcreteRevisions().size() != 0) {
+				// There already was a revision, lets delete it
+				bimDatabaseSession.clearProject(project.getId(), concreteRevision.getId() - 1, concreteRevision.getId());
+			}
+			bimDatabaseSession.store(ifcModel.getValues(), project.getId(), concreteRevision.getId());
 			for (Revision revision : concreteRevision.getRevisions()) {
 				revision.setState(CheckinState.DONE);
 				bimDatabaseSession.store(revision);

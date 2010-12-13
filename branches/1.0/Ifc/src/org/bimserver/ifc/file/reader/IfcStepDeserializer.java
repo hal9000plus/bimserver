@@ -84,8 +84,8 @@ public class IfcStepDeserializer {
 	private final SchemaDefinition schema;
 	private final EPackage ePackage;
 	private Mode mode = Mode.HEADER;
-	private IfcModel model = new IfcModel();
-
+	private IfcModel model;
+	
 	public IfcStepDeserializer(SchemaDefinition schema) {
 		this.ePackage = Ifc2x3Package.eINSTANCE;
 		this.schema = schema;
@@ -184,6 +184,7 @@ public class IfcStepDeserializer {
 		EClass classifier = (EClass) classes.get(name);
 		if (classifier != null) {
 			IdEObject object = (IdEObject) Ifc2x3Factory.eINSTANCE.create(classifier);
+			model.add(recordNumber, object);
 			String realData = line.substring(indexOfFirstParen + 1, lastIndexOfSemiColon - 1);
 			int lastIndex = 0;
 			EntityDefinition entityBN = schema.getEntityBN(name);
@@ -239,7 +240,6 @@ public class IfcStepDeserializer {
 			if (waitingObjects.containsKey(recordNumber)) {
 				updateNode(recordNumber, classifier, object);
 			}
-			model.add(recordNumber, object);
 		} else {
 			throw new IncorrectIfcFileException(name + " is not a known entity");
 		}
@@ -264,10 +264,15 @@ public class IfcStepDeserializer {
 					if (model.containsKey(referenceId)) {
 						EObject referencedObject = model.get(referenceId);
 						if (referencedObject != null) {
-							while (list.size() <= index) {
-								list.addUnique(ePackage.getEFactoryInstance().create(referencedObject.eClass()));
+							EClass referenceEClass = referencedObject.eClass();
+							if (((EClass)structuralFeature.getEType()).isSuperTypeOf(referenceEClass)) {
+								while (list.size() <= index) {
+									list.addUnique(ePackage.getEFactoryInstance().create(referenceEClass));
+								}
+								list.setUnique(index, referencedObject);
+							} else {
+								throw new IncorrectIfcFileException(referenceEClass.getName() + " cannot be stored in " + structuralFeature.getName());
 							}
-							list.setUnique(index, referencedObject);
 						}
 					} else {
 						List<WaitingObject> waitingList = null;
@@ -351,7 +356,7 @@ public class IfcStepDeserializer {
 			if (classifier instanceof EClassImpl) {
 				if (null != ((EClassImpl) classifier).getEStructuralFeature(WRAPPED_VALUE)) {
 					IdEObject create = (IdEObject) ePackage.getEFactoryInstance().create((EClass) classifier);
-					model.add(create);
+//					model.add(create);
 					Class<?> instanceClass = create.eClass().getEStructuralFeature(WRAPPED_VALUE).getEType().getInstanceClass();
 					if (value.equals("")) {
 
