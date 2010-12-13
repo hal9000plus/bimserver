@@ -210,18 +210,18 @@ public class Service implements ServiceInterface {
 	}
 
 	@Override
-	public SCheckinResult checkinSync(final long poid, final String comment, long fileSize, DataHandler ifcFile) throws UserException {
+	public SCheckinResult checkinSync(final long poid, final String comment, long fileSize, DataHandler ifcFile, boolean merge) throws UserException {
 		requireAuthentication();
-		return checkinInternal(poid, comment, fileSize, ifcFile, true);
+		return checkinInternal(poid, comment, fileSize, ifcFile, true, merge);
 	}
 
 	@Override
-	public SCheckinResult checkinAsync(final long poid, final String comment, long fileSize, DataHandler ifcFile) throws UserException {
+	public SCheckinResult checkinAsync(final long poid, final String comment, long fileSize, DataHandler ifcFile, boolean merge) throws UserException {
 		requireAuthentication();
-		return checkinInternal(poid, comment, fileSize, ifcFile, false);
+		return checkinInternal(poid, comment, fileSize, ifcFile, false, merge);
 	}
 
-	private SCheckinResult checkinInternal(final long poid, final String comment, long fileSize, DataHandler ifcFile, boolean sync) throws UserException {
+	private SCheckinResult checkinInternal(final long poid, final String comment, long fileSize, DataHandler ifcFile, boolean sync, boolean merge) throws UserException {
 		final BimDatabaseSession session = bimDatabase.createSession();
 		try {
 			InputStream inputStream = ifcFile.getInputStream();
@@ -248,10 +248,10 @@ public class Service implements ServiceInterface {
 					} else {
 						zipInputStream.close();
 						if (sync) {
-							SCheckinResult processCheckin = processCheckinSync(poid, comment, fileSize, session, model);
+							SCheckinResult processCheckin = processCheckinSync(poid, comment, fileSize, session, model, merge);
 							return processCheckin;
 						} else {
-							SCheckinResult processCheckin = processCheckinAsync(poid, comment, fileSize, session, model);
+							SCheckinResult processCheckin = processCheckinAsync(poid, comment, fileSize, session, model, merge);
 							return processCheckin;
 						}
 					}
@@ -270,9 +270,9 @@ public class Service implements ServiceInterface {
 				}
 				SCheckinResult checkinResult = null;
 				if (sync) {
-					checkinResult = processCheckinSync(poid, comment, fileSize, session, model);
+					checkinResult = processCheckinSync(poid, comment, fileSize, session, model, merge);
 				} else {
-					checkinResult = processCheckinAsync(poid, comment, fileSize, session, model);
+					checkinResult = processCheckinAsync(poid, comment, fileSize, session, model, merge);
 				}
 				inputStream.close();
 				return checkinResult;
@@ -333,7 +333,7 @@ public class Service implements ServiceInterface {
 		}
 	}
 
-	private SCheckinResult processCheckinSync(final long poid, final String comment, long fileSize, final BimDatabaseSession session, IfcModel model) throws UserException {
+	private SCheckinResult processCheckinSync(final long poid, final String comment, long fileSize, final BimDatabaseSession session, IfcModel model, boolean merge) throws UserException {
 		BimDatabaseAction<ConcreteRevision> action = new CheckinDatabaseAction(accessMethod, model, poid, currentUoid, comment);
 		try {
 			ConcreteRevision revision = session.executeAndCommitAction(action, DEADLOCK_RETRIES);
@@ -350,12 +350,12 @@ public class Service implements ServiceInterface {
 		return null;
 	}
 
-	private SCheckinResult processCheckinAsync(final long poid, final String comment, long fileSize, final BimDatabaseSession session, IfcModel model) throws UserException {
+	private SCheckinResult processCheckinAsync(final long poid, final String comment, long fileSize, final BimDatabaseSession session, IfcModel model, boolean merge) throws UserException {
 		try {
 			BimDatabaseAction<ConcreteRevision> action = new CheckinPart1DatabaseAction(accessMethod, poid, currentUoid, model, comment);
 			ConcreteRevision revision = session.executeAndCommitAction(action, DEADLOCK_RETRIES);
 			session.close();
-			CheckinPart2DatabaseAction createCheckinAction = new CheckinPart2DatabaseAction(accessMethod, model, currentUoid, revision.getOid());
+			CheckinPart2DatabaseAction createCheckinAction = new CheckinPart2DatabaseAction(accessMethod, model, currentUoid, revision.getOid(), merge);
 			SCheckinResult result = new SCheckinResult();
 			result.setRid(revision.getId());
 			result.setPoid(revision.getProject().getOid());
@@ -1307,7 +1307,7 @@ public class Service implements ServiceInterface {
 			}
 			LinkedHashSet<IfcModel> ifcModels = new LinkedHashSet<IfcModel>();
 			for (ConcreteRevision subRevision : oldRevision.getConcreteRevisions()) {
-				IfcModel subModel = new IfcModel(session.getMap(subRevision.getProject().getId(), subRevision.getId()).getMap());
+				IfcModel subModel = session.getMap(subRevision.getProject().getId(), subRevision.getId());
 				subModel.setDate(subRevision.getDate());
 				ifcModels.add(subModel);
 			}
@@ -1317,7 +1317,7 @@ public class Service implements ServiceInterface {
 			try {
 				ConcreteRevision revision = session.executeAndCommitAction(action, DEADLOCK_RETRIES);
 				session.close();
-				CheckinPart2DatabaseAction createCheckinAction = new CheckinPart2DatabaseAction(accessMethod, model, currentUoid, revision.getOid());
+				CheckinPart2DatabaseAction createCheckinAction = new CheckinPart2DatabaseAction(accessMethod, model, currentUoid, revision.getOid(), false);
 				SCheckinResult result = new SCheckinResult();
 				result.setRid(revision.getId());
 				result.setPoid(revision.getProject().getOid());
@@ -1352,7 +1352,7 @@ public class Service implements ServiceInterface {
 			}
 			LinkedHashSet<IfcModel> ifcModels = new LinkedHashSet<IfcModel>();
 			for (ConcreteRevision subRevision : oldRevision.getConcreteRevisions()) {
-				IfcModel subModel = new IfcModel(session.getMap(subRevision.getProject().getId(), subRevision.getId()).getMap());
+				IfcModel subModel = session.getMap(subRevision.getProject().getId(), subRevision.getId());
 				subModel.setDate(subRevision.getDate());
 				ifcModels.add(subModel);
 			}
@@ -1361,7 +1361,7 @@ public class Service implements ServiceInterface {
 			try {
 				ConcreteRevision revision = session.executeAndCommitAction(action, DEADLOCK_RETRIES);
 				session.close();
-				CheckinPart2DatabaseAction createCheckinAction = new CheckinPart2DatabaseAction(accessMethod, model, currentUoid, revision.getOid());
+				CheckinPart2DatabaseAction createCheckinAction = new CheckinPart2DatabaseAction(accessMethod, model, currentUoid, revision.getOid(), false);
 				SCheckinResult result = new SCheckinResult();
 				result.setRid(revision.getId());
 				result.setPoid(revision.getProject().getOid());

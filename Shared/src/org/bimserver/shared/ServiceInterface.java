@@ -79,11 +79,11 @@ public interface ServiceInterface {
 
 	@WebMethod(action = "checkinSync")
 	SCheckinResult checkinSync(@WebParam(name = "poid") long poid, @WebParam(name = "comment") String comment,
-			@WebParam(name = "fileSize") long fileSize, @WebParam(name = "ifcFile") @XmlMimeType("application/octet-stream") DataHandler ifcFile) throws UserException;
+			@WebParam(name = "fileSize") long fileSize, @WebParam(name = "ifcFile") @XmlMimeType("application/octet-stream") DataHandler ifcFile, boolean merge) throws UserException;
 
 	@WebMethod(action = "checkinAsync")
 	SCheckinResult checkinAsync(@WebParam(name = "poid") long poid, @WebParam(name = "comment") String comment,
-			@WebParam(name = "fileSize") long fileSize, @WebParam(name = "ifcFile") @XmlMimeType("application/octet-stream") DataHandler ifcFile) throws UserException;
+			@WebParam(name = "fileSize") long fileSize, @WebParam(name = "ifcFile") @XmlMimeType("application/octet-stream") DataHandler ifcFile, boolean merge) throws UserException;
 
 	@WebMethod(action = "checkout")
 	SCheckoutResult checkout(@WebParam(name = "roid") long roid, @WebParam(name = "resultType") ResultType resultType) throws UserException;

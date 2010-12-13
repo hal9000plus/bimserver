@@ -31,6 +31,7 @@ public class Settings {
 	private boolean autoTestClashes;
 	private boolean intelligentMerging;
 	private boolean allowUsersToCreateTopLevelProjects;
+	private boolean checkinMergingEnabled;
 	private String registrationAddition;
 	private String smtpServer;
 	private String emailSenderAddress;
@@ -231,5 +232,13 @@ public class Settings {
 
 	public String getSiteAddress() {
 		return siteAddress;
+	}
+
+	public void setCheckinMergingEnabled(boolean checkinMergingEnabled) {
+		this.checkinMergingEnabled = checkinMergingEnabled;
+	}
+
+	public boolean isCheckinMergingEnabled() {
+		return checkinMergingEnabled;
 	}
 }

@@ -34,7 +34,7 @@ import com.google.common.collect.HashBiMap;
 
 public class IfcModel {
 
-	private long counter = Integer.MAX_VALUE / 2;
+//	private long counter = 0;
 	private final BiMap<Long, IdEObject> objects;
 	private Map<String, IfcRoot> guidIndexed;
 	private byte[] checksum;
@@ -73,20 +73,21 @@ public class IfcModel {
 	
 	public void add(Long key, IdEObject eObject) {
 		if (objects.containsKey(key)) {
-			throw new RuntimeException("Object with id " + key + " already stored in this model");
+			throw new RuntimeException("Oid already stored: " + key);
+		} else {
+//			if (key > counter) {
+//				counter = key + 1;
+//			}
+			objects.put(key, eObject);
 		}
-		if (key > counter) {
-			counter = key + 1;
-		}
-		objects.put(key, eObject);
 	}
 	
 	public Map<Long, IdEObject> getObjects() {
 		return objects;
 	}
 
-	public BiMap<? extends Long, ? extends IdEObject> getMap() {
-		return (BiMap<? extends Long, ? extends IdEObject>) objects;
+	public BiMap<Long, ? extends IdEObject> getMap() {
+		return (BiMap<Long, ? extends IdEObject>) objects;
 	}
 
 	public byte[] getChecksum() {
@@ -175,12 +176,12 @@ public class IfcModel {
 		}
 	}
 
-	public void add(IdEObject newObject) {
-		long oid = counter;
-		newObject.setOid(oid);
-		objects.put(oid, newObject);
-		counter++;
-	}
+//	public void add(IdEObject newObject) {
+//		long oid = counter;
+//		counter++;
+//		newObject.setOid(oid);
+//		objects.put(oid, newObject);
+//	}
 
 	public void remove(IdEObject idEObject) {
 		objects.remove(idEObject.getOid());

@@ -5,7 +5,6 @@ import java.util.LinkedHashSet;
 import org.bimserver.database.BimDatabaseException;
 import org.bimserver.database.BimDatabaseSession;
 import org.bimserver.database.BimDeadlockException;
-import org.bimserver.database.ReadSet;
 import org.bimserver.database.store.ConcreteRevision;
 import org.bimserver.database.store.Revision;
 import org.bimserver.database.store.log.AccessMethod;
@@ -46,9 +45,8 @@ public class GetDataObjectByOidDatabaseAction extends BimDatabaseAction<DataObje
 		EObject eObject = null;
 		LinkedHashSet<IfcModel> ifcModels = new LinkedHashSet<IfcModel>();
 		for (ConcreteRevision concreteRevision : virtualRevision.getConcreteRevisions()) {
-			ReadSet readSet = new ReadSet(concreteRevision.getProject().getId(), concreteRevision.getId());
-			eObject = bimDatabaseSession.get(cid, oid, readSet);
-			IfcModel subModel = new IfcModel(readSet.getMap());
+			IfcModel subModel = new IfcModel();
+			eObject = bimDatabaseSession.get(cid, oid, concreteRevision.getProject().getId(), concreteRevision.getId(), subModel);
 			subModel.setDate(concreteRevision.getDate());
 			ifcModels.add(subModel);
 			if (eObject != null) {
