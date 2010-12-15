@@ -260,7 +260,7 @@ public class Service implements ServiceInterface {
 				}
 			} else if (ifcFile.getName() == null || ifcFile.getName().toUpperCase().endsWith(".IFC") || ifcFile.getName().toUpperCase().endsWith(".IFCXML")) {
 				IfcModel model = null;
-				if (ifcFile.getName().toUpperCase().endsWith(".IFCXML")) {
+				if (ifcFile.getName() != null && ifcFile.getName().toUpperCase().endsWith(".IFCXML")) {
 					model = readIfcXmlModel(ifcFile.getInputStream(), fileSize);
 				} else {
 					model = readIfcStepModel(ifcFile.getInputStream(), fileSize);

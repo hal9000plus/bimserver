@@ -140,7 +140,8 @@ public class Client extends JFrame {
 		String comment = JOptionPane.showInputDialog(Client.this, "Please give a short description of you changes", "Checkin", JOptionPane.OK_OPTION
 				| JOptionPane.INFORMATION_MESSAGE);
 		try {
-			SCheckinResult upload = serviceHolder.getService().checkinSync(project.getOid(), comment, fileSize, new DataHandler(dataSource), false);
+			DataHandler ifcFile = new DataHandler(dataSource);
+			SCheckinResult upload = serviceHolder.getService().checkinSync(project.getOid(), comment, fileSize, ifcFile, false);
 			JOptionPane.showMessageDialog(this, "New revision number: " + upload.getRid(), "Checkin successfull", JOptionPane.OK_OPTION | JOptionPane.INFORMATION_MESSAGE);
 			revisionPanel.showProject(project);
 		} catch (UserException e) {
