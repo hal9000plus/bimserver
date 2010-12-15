@@ -210,7 +210,7 @@ the latest revision<br />
 <p></p>
 <div class="tabber" id="downloadtabber">
 <div class="tabbertab" id="detailstab" title="Simple Download">
-<form action="<%=request.getContextPath() %>/download" method="gett">
+<form action="<%=request.getContextPath() %>/download" method="get">
 Download: <input type="hidden" name="roid"
 	value="<%=project.getLastRevisionId() %>" /> <select name="resultType" id="detailsdownloadcheckoutselect">
 	<%
@@ -223,8 +223,11 @@ Download: <input type="hidden" name="roid"
 %>
 </select> <label for="simplezip_<%=lastRevision.getId() %>">Zip </label><input
 	type="checkbox" name="zip" id="simplezip_<%=lastRevision.getId() %>" />
-<input name="download" type="submit" value="Download"> <input
-	name="checkout" type="submit" value="Checkout" id="detailscheckoutbutton"></form>
+<input name="download" type="submit" value="Download">
+<% if (userHasCheckinRights) { %>
+<input name="checkout" type="submit" value="Checkout" id="detailscheckoutbutton">
+<% } %>
+</form>
 </div>
 <div class="tabbertab" id="" title="Advanced Download">
 <script>
@@ -473,8 +476,11 @@ if (revisions.size() > 0) {
 %>
 		</select> <label for="revisionzip_<%=revision.getId() %>">Zip </label><input
 			type="checkbox" name="zip" id="revisionzip_<%=revision.getId() %>" />
-		<input name="download" type="submit" value="Download" /> <input
-			name="checkout" type="submit" value="Checkout" class="revisionscheckoutbutton" /></form>
+		<input name="download" type="submit" value="Download" />
+<% if (userHasCheckinRights) { %>
+		<input name="checkout" type="submit" value="Checkout" class="revisionscheckoutbutton" />
+<% } %>
+		</form>
 		</td>
 	</tr>
 	<%
@@ -540,7 +546,7 @@ open a specific revision to query other revisions<br />
 			<%	
 	}
 %>
-		</select> <label for="checkoutsdownloadzip_<%=checkout.getOid() %>">Zip </label><input type="checkbox" name="zip" id="checkoutsdownloadzip_<%=checkout.getOid() %>" /> <input	name="download" type="submit" value="Download" />
+		</select> <label for="checkoutsdownloadzip_<%=checkout.getOid() %>">Zip </label><input type="checkbox" name="zip" id="checkoutsdownloadzip_<%=checkout.getOid() %>" /> <input name="download" type="submit" value="Download" />
 			</form>
 		</td>
 	</tr>

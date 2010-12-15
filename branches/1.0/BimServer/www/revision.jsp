@@ -153,9 +153,14 @@
 				}
 			%>
 		</select> <label for="zip_<%=revision.getId()%>">Zip</label><input
-			type="checkbox" name="zip" id="zip_<%=revision.getId()%>" /> <input
-			name="download" type="submit" value="Download"> <input
-			name="checkout" type="submit" value="Checkout" class="checkoutbutton"></td>
+			type="checkbox" name="zip" id="zip_<%=revision.getId()%>" />
+			<input name="download" type="submit" value="Download">
+<%
+	boolean userHasCheckinRights = loginManager.getService().userHasCheckinRights(project.getOid());
+if (userHasCheckinRights) { %>
+			<input name="checkout" type="submit" value="Checkout" class="checkoutbutton">
+<% } %>
+			</td>
 </table>
 </form>
 <br />
