@@ -516,7 +516,17 @@ open a specific revision to query other revisions<br />
 %>
 <div class="tabbertab" id="checkoutstab"
 	title="Checkouts<%=checkouts.size() == 0 ? "" : " (" + activeCheckouts.size() + ")" %>">
+<%
+	boolean showCheckoutToggle = false;
+	for (SCheckout checkout : checkouts) {
+		if (!checkout.isActive()) {
+			showCheckoutToggle = true;
+		}
+	}
+	if (showCheckoutToggle) {
+%>
 <label for="showinactivecheckouts">Show inactive checkouts </label><input id="showinactivecheckouts" type="checkbox"/>
+<% } %>
 <table class="formatted">
 	<tr>
 		<th>Revision Id</th>
@@ -720,8 +730,8 @@ for (SRevision sRevision : revisions) {
 			    }});
 			}
 		};
-		window.setInterval(refreshFunction, 2000);
 		refreshFunction();
+		window.setInterval(refreshFunction, 2000);
 	});
 </script>
 <%
