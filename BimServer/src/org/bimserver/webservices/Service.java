@@ -1225,10 +1225,10 @@ public class Service implements ServiceInterface {
 	@Override
 	public List<DataObject> getDataObjectsByType(long roid, String className) throws UserException {
 		requireAuthentication();
-		BimDatabaseSession session = bimDatabase.createSession();
+		BimDatabaseSession session = bimDatabase.createReadOnlySession();
 		BimDatabaseAction<List<DataObject>> action = new GetDataObjectsByTypeDatabaseAction(accessMethod, roid, className);
 		try {
-			List<DataObject> dataObjects = session.executeAndCommitAction(action, DEADLOCK_RETRIES);
+			List<DataObject> dataObjects = session.executeAction(action, DEADLOCK_RETRIES);
 			return dataObjects;
 		} catch (BimDatabaseException e) {
 			throw new UserException("Database error", e);
