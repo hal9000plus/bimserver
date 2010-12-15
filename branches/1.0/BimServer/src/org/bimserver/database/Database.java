@@ -432,7 +432,7 @@ public class Database implements BimDatabase {
 	}
 
 	public BimDatabaseSession createReadOnlySession() {
-		DatabaseSession databaseSession = new DatabaseSession(this, columnDatabase.startTransaction(), true);
+		DatabaseSession databaseSession = new DatabaseSession(this, null, true);
 		sessions.add(databaseSession);
 		return databaseSession;
 	}
