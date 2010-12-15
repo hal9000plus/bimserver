@@ -233,14 +233,14 @@ public interface ServiceInterface {
 	boolean userHasRights(@WebParam(name = "poid") long poid) throws UserException;
 
 	@WebMethod(action = "getDataObjectByOid")
-	DataObject getDataObjectByOid(@WebParam(name = "roid") long roid, @WebParam(name = "oid") long oid,
+	SDataObject getDataObjectByOid(@WebParam(name = "roid") long roid, @WebParam(name = "oid") long oid,
 			@WebParam(name = "className") String className) throws UserException;
 
 	@WebMethod(action = "getDataObjectByGuid")
-	DataObject getDataObjectByGuid(@WebParam(name = "roid") long roid, @WebParam(name = "guid") String guid) throws UserException;
+	SDataObject getDataObjectByGuid(@WebParam(name = "roid") long roid, @WebParam(name = "guid") String guid) throws UserException;
 
 	@WebMethod(action = "getDataObjectsByType")
-	List<DataObject> getDataObjectsByType(@WebParam(name = "roid") long roid, @WebParam(name = "className") String className)
+	List<SDataObject> getDataObjectsByType(@WebParam(name = "roid") long roid, @WebParam(name = "className") String className)
 			throws UserException;
 
 	@WebMethod(action = "findClashesByGuid")

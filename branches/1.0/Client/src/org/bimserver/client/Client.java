@@ -127,7 +127,7 @@ public class Client extends JFrame {
 	}
 
 	public void checkin(SProject project) {
-		JFileChooser chooser = new JFileChooser(".");
+		JFileChooser chooser = new JFileChooser();
 		int showOpenDialog = chooser.showOpenDialog(this);
 		if (showOpenDialog == JFileChooser.APPROVE_OPTION) {
 			File file = chooser.getSelectedFile();
