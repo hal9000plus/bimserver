@@ -125,7 +125,9 @@ public class DatabaseSession implements BimDatabaseSession {
 
 	public void close() {
 		database.unregisterSession(this);
-		bimTransaction.close();
+		if (bimTransaction != null) {
+			bimTransaction.close();
+		}
 		if (!isReadOnly() && objectsToCommit.size() == 0) {
 			LOGGER.warn("No objects were changed, could have used a read-only session, printing stack trace");
 		}
