@@ -555,15 +555,6 @@ open a specific revision to query other revisions<br />
 </div>
 <%
 	}
-%> <%
-	if (false && lastRevision != null) {
-%>
-<div class="tabbertab" id="summarytab" title="Summary">
-<div id="summaryajaxloader">Retrieving summary... <img
-	src="images/ajax-loader.gif" /></div>
-<a href="#" id="summaryajaxlink">Retrieve</a></div>
-<%
-}
 %>
 <div class="tabbertab" id="authorizeduserstab"
 	title="Authorized users<%=users.size() == 0 ? "" : " (" + users.size() + ")" %>">
