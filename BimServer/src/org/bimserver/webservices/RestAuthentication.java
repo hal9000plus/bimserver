@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 import org.apache.cxf.binding.soap.interceptor.SoapHeaderInterceptor;
@@ -63,7 +64,7 @@ public class RestAuthentication extends SoapHeaderInterceptor {
 		Message outMessage = getOutMessage(message);
 		outMessage.put(Message.RESPONSE_CODE, responseCode);
 		// Set the response headers
-		Map responseHeaders = (Map) message.get(Message.PROTOCOL_HEADERS);
+		Map<String, List<String>> responseHeaders = (Map<String, List<String>>) message.get(Message.PROTOCOL_HEADERS);
 		if (responseHeaders != null) {
 			responseHeaders.put("WWW-Authenticate", Arrays.asList(new String[] { "Basic realm=realm" }));
 			responseHeaders.put("Content-Length", Arrays.asList(new String[] { "0" }));

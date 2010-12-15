@@ -12,6 +12,7 @@ import org.slf4j.LoggerFactory;
 import nl.tue.buildingsmart.express.dictionary.EntityDefinition;
 import nl.tue.buildingsmart.express.dictionary.SchemaDefinition;
 
+@SuppressWarnings("all")
 public class ModelPopulation {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(ModelPopulation.class);

@@ -2,9 +2,10 @@ package net.sourceforge.osexpress.parser;
 
 import java.util.Vector;
 
+@SuppressWarnings("all")
 class EnumerationType {
 
-    private Vector ids;
+	private Vector ids;
     public boolean extensible;
     public String typename;
     public String basedOnName;

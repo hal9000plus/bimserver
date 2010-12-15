@@ -251,7 +251,7 @@ public class IfcStepDeserializer {
 		if (structuralFeature.getUpperBound() == 1) {
 			throw new IncorrectIfcFileException("Field " + structuralFeature.getName() + " of " + structuralFeature.getEContainingClass().getName() + " is no aggregation");
 		}
-		BasicEList list = (BasicEList<EObject>) object.eGet(structuralFeature);
+		BasicEList<EObject> list = (BasicEList<EObject>) object.eGet(structuralFeature);
 		String realData = val.substring(1, val.length() - 1);
 		int lastIndex = 0;
 		while (lastIndex != realData.length() + 1) {
@@ -285,7 +285,7 @@ public class IfcStepDeserializer {
 						waitingList.add(new WaitingObject(object, structuralFeature, index));
 					}
 				} else {
-					Object convert = convert(structuralFeature.getEType(), a);
+					EObject convert = (EObject) convert(structuralFeature.getEType(), a);
 					while (list.size() <= index) {
 						list.addUnique(convert);
 					}

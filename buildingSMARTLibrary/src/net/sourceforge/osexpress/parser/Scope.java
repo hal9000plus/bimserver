@@ -24,6 +24,7 @@ import java.util.Vector;
    research through the inheritance tree.
 */
 
+@SuppressWarnings("all")
 public class Scope implements ExpressParserTokenTypes, Cloneable {
 
     /* scope id */
