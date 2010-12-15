@@ -111,7 +111,7 @@ public class IfcXmlDeserializer {
 		return object;
 	}
 
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	private void parseField(IdEObject object, XMLStreamReader reader) throws XMLStreamException, IfcXmlDeserializeException {
 		String fieldName = reader.getLocalName();
 		EStructuralFeature eStructuralFeature = object.eClass().getEStructuralFeature(fieldName);

@@ -15,6 +15,7 @@ import nl.tue.buildingsmart.express.parser.ExpressSchemaParser;
 
 //import owlGenerator;
 
+@SuppressWarnings("all")
 public class Part21Parser implements Part21ParserConstants {
 
         public Vector current_record = new Vector();

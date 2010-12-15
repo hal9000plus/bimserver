@@ -41,7 +41,7 @@ import antlr.NoViableAltException;
 import antlr.RecognitionException;
 import antlr.collections.AST;
 
-
+@SuppressWarnings("all")
 public class Express2DictWalker extends antlr.TreeParser       implements Express2DictWalkerTokenTypes
  {
 
@@ -54,7 +54,6 @@ public class Express2DictWalker extends antlr.TreeParser       implements Expres
 	static boolean unlimited_bound=false;
 	// stores the last INTEGER_LITERAL that was parsed. Is used in bounds
 	String nextInt;
-	private static final Logger LOGGER = LoggerFactory.getLogger(Express2DictWalker.class);
 	
 	public SchemaDefinition getSchema(){
 		return schema;

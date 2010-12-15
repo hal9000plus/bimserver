@@ -92,7 +92,6 @@ public class O3dJsonSerializer extends BimModelSerializer {
 		return -1;
 	}
 
-	@SuppressWarnings("unchecked")
 	public Scene createScene() throws JSONException {
 		JsonFactory jsonFactory = new JsonFactory();
 		Scene scene = new Scene();
@@ -120,6 +119,7 @@ public class O3dJsonSerializer extends BimModelSerializer {
 		scene.addMaterial(stairFlightMaterial);
 		scene.addMaterial(railingMaterial);
 		IfcDatabase database = new IfcDatabase(model, getFieldIgnoreMap());
+		@SuppressWarnings("rawtypes")
 		Class[] eClasses = new Class[] { IfcSlab.class, IfcRoof.class, IfcWall.class, IfcWallStandardCase.class, IfcWindow.class, IfcDoor.class, IfcColumn.class, IfcRamp.class,
 				IfcStair.class, IfcStairFlight.class, IfcRailing.class };
 		try {
