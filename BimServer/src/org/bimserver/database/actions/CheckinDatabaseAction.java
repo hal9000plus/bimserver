@@ -47,7 +47,7 @@ public class CheckinDatabaseAction extends GenericCheckinDatabaseAction {
 			throw new UserException("Another checkin on this project is currently running, please wait and try again");
 		}
 		checkCheckSum(project);
-		ConcreteRevision concreteRevision = bimDatabaseSession.createNewConcreteRevision(model.size(), poid, actingUoid, comment.trim(), CheckinState.STORING);
+		ConcreteRevision concreteRevision = bimDatabaseSession.createNewConcreteRevision(model.size(), poid, actingUoid, comment.trim(), CheckinState.DONE);
 		concreteRevision.setChecksum(model.getChecksum());
 		project.setLastConcreteRevision(concreteRevision);
 		concreteRevision.setState(CheckinState.STORING);
@@ -62,7 +62,8 @@ public class CheckinDatabaseAction extends GenericCheckinDatabaseAction {
 		newRevisionAdded.setAccessMethod(getAccessMethod());
 		bimDatabaseSession.store(newRevisionAdded);
 		bimDatabaseSession.store(model.getValues());
-		bimDatabaseSession.store(concreteRevision, project.getId(), concreteRevision.getId());
+		bimDatabaseSession.store(concreteRevision);
+		bimDatabaseSession.store(project);
 		bimDatabaseSession.saveOidCounter();
 		return concreteRevision;
 	}

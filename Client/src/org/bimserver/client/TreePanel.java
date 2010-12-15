@@ -130,7 +130,7 @@ public class TreePanel extends JPanel {
 						try {
 							serviceHolder.getService().deleteUser(((UserTreeNode) lastPathComponent).getUser().getOid());
 						} catch (UserException e2) {
-							LOGGER.error("", e2);
+							JOptionPane.showMessageDialog(testWindow, e2.getMessage());
 						}
 						updateUsers(serverTreeNode);
 					}

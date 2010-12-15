@@ -42,7 +42,7 @@ public class ServiceHolder {
 	private static final Logger LOGGER = LoggerFactory.getLogger(ServiceHolder.class);
 	private String username = "anonymous";
 	private String password = "anonymous";
-	private String address = "http://localhost:8082/services/soap";
+	private String address = "http://localhost:8082/soap";
 
 	public ServiceInterface getService() {
 		return service;
