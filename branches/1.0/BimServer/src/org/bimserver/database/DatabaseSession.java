@@ -760,7 +760,7 @@ public class DatabaseSession implements BimDatabaseSession {
 		return store(object, Database.STORE_PROJECT_ID, Database.STORE_PROJECT_REVISION_ID);
 	}
 
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings("rawtypes")
 	@Override
 	public long store(IdEObject object, int pid, int rid) throws BimDeadlockException {
 		if (!objectsToCommit.containsKey(object)) {

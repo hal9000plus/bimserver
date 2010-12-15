@@ -54,6 +54,7 @@ public class CheckoutDatabaseAction extends BimDatabaseAction<IfcModel> {
 					newCheckout.setRevision(revision);
 					bimDatabaseSession.store(checkout);
 					bimDatabaseSession.store(newCheckout);
+					bimDatabaseSession.store(project);
 					bimDatabaseSession.saveOidCounter();
 					return realCheckout(project, revision, bimDatabaseSession, user);
 				}
@@ -65,6 +66,7 @@ public class CheckoutDatabaseAction extends BimDatabaseAction<IfcModel> {
 			checkout.setProject(project);
 			checkout.setRevision(revision);
 			bimDatabaseSession.store(checkout);
+			bimDatabaseSession.store(project);
 			bimDatabaseSession.saveOidCounter();
 			return realCheckout(project, revision, bimDatabaseSession, user);
 		} else {
