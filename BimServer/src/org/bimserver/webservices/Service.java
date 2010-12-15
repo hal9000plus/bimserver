@@ -149,7 +149,7 @@ import org.bimserver.rights.RightsManager;
 import org.bimserver.serializers.EmfSerializerFactory;
 import org.bimserver.shared.ChangeSet;
 import org.bimserver.shared.ChangeSetResult;
-import org.bimserver.shared.DataObject;
+import org.bimserver.shared.SDataObject;
 import org.bimserver.shared.DatabaseInformation;
 import org.bimserver.shared.ResultType;
 import org.bimserver.shared.SCheckinResult;
@@ -1081,7 +1081,7 @@ public class Service implements ServiceInterface {
 		for (EClass key : items.keySet()) {
 			List<Item> list = items.get(key);
 			for (Item item : list) {
-				DataObject dataObject = new DataObject(item.eObject.eClass().getName(), item.eObject.getOid(), getGuid(item.eObject), getName(item.eObject));
+				SDataObject dataObject = new SDataObject(item.eObject.eClass().getName(), item.eObject.getOid(), getGuid(item.eObject), getName(item.eObject));
 				if (item instanceof ObjectAdded) {
 					sCompareResult.add(new SObjectAdded(dataObject));
 				} else if (item instanceof ObjectDeleted) {
@@ -1193,12 +1193,12 @@ public class Service implements ServiceInterface {
 	}
 
 	@Override
-	public DataObject getDataObjectByOid(long roid, long oid, String className) throws UserException {
+	public SDataObject getDataObjectByOid(long roid, long oid, String className) throws UserException {
 		requireAuthentication();
 		BimDatabaseSession session = bimDatabase.createSession();
 		try {
-			BimDatabaseAction<DataObject> action = new GetDataObjectByOidDatabaseAction(accessMethod, roid, oid, session.getCidForClassName(className));
-			DataObject dataObject = session.executeAndCommitAction(action, DEADLOCK_RETRIES);
+			BimDatabaseAction<SDataObject> action = new GetDataObjectByOidDatabaseAction(accessMethod, roid, oid, session.getCidForClassName(className));
+			SDataObject dataObject = session.executeAndCommitAction(action, DEADLOCK_RETRIES);
 			return dataObject;
 		} catch (BimDatabaseException e) {
 			throw new UserException("Database error", e);
@@ -1208,12 +1208,12 @@ public class Service implements ServiceInterface {
 	}
 
 	@Override
-	public DataObject getDataObjectByGuid(long roid, String guid) throws UserException {
+	public SDataObject getDataObjectByGuid(long roid, String guid) throws UserException {
 		requireAuthentication();
 		BimDatabaseSession session = bimDatabase.createSession();
 		try {
-			BimDatabaseAction<DataObject> action = new GetDataObjectByGuidDatabaseAction(accessMethod, roid, guid);
-			DataObject dataObject = session.executeAndCommitAction(action, DEADLOCK_RETRIES);
+			BimDatabaseAction<SDataObject> action = new GetDataObjectByGuidDatabaseAction(accessMethod, roid, guid);
+			SDataObject dataObject = session.executeAndCommitAction(action, DEADLOCK_RETRIES);
 			return dataObject;
 		} catch (BimDatabaseException e) {
 			throw new UserException("Database error", e);
@@ -1223,12 +1223,12 @@ public class Service implements ServiceInterface {
 	}
 
 	@Override
-	public List<DataObject> getDataObjectsByType(long roid, String className) throws UserException {
+	public List<SDataObject> getDataObjectsByType(long roid, String className) throws UserException {
 		requireAuthentication();
 		BimDatabaseSession session = bimDatabase.createReadOnlySession();
-		BimDatabaseAction<List<DataObject>> action = new GetDataObjectsByTypeDatabaseAction(accessMethod, roid, className);
+		BimDatabaseAction<List<SDataObject>> action = new GetDataObjectsByTypeDatabaseAction(accessMethod, roid, className);
 		try {
-			List<DataObject> dataObjects = session.executeAction(action, DEADLOCK_RETRIES);
+			List<SDataObject> dataObjects = session.executeAction(action, DEADLOCK_RETRIES);
 			return dataObjects;
 		} catch (BimDatabaseException e) {
 			throw new UserException("Database error", e);

@@ -7,10 +7,10 @@ import org.bimserver.database.ObjectIdentifier;
 import org.bimserver.database.store.ConcreteRevision;
 import org.bimserver.database.store.Revision;
 import org.bimserver.database.store.log.AccessMethod;
-import org.bimserver.shared.DataObject;
+import org.bimserver.shared.SDataObject;
 import org.bimserver.shared.UserException;
 
-public class GetDataObjectByGuidDatabaseAction extends BimDatabaseAction<DataObject>{
+public class GetDataObjectByGuidDatabaseAction extends BimDatabaseAction<SDataObject>{
 
 	private final String guid;
 	private final long roid;
@@ -22,7 +22,7 @@ public class GetDataObjectByGuidDatabaseAction extends BimDatabaseAction<DataObj
 	}
 	
 	@Override
-	public DataObject execute(BimDatabaseSession bimDatabaseSession) throws UserException, BimDeadlockException, BimDatabaseException {
+	public SDataObject execute(BimDatabaseSession bimDatabaseSession) throws UserException, BimDeadlockException, BimDatabaseException {
 		Revision virtualRevision = bimDatabaseSession.getVirtualRevision(roid);
 		ObjectIdentifier objectIdentifier = null;
 		for (ConcreteRevision concreteRevision : virtualRevision.getConcreteRevisions()) {
