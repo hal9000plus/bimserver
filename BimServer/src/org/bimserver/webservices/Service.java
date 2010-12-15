@@ -826,7 +826,7 @@ public class Service implements ServiceInterface {
 	@Override
 	public SCheckoutResult downloadOfType(long roid, String className, ResultType resultType) throws UserException {
 		requireAuthentication();
-		BimDatabaseSession session = bimDatabase.createSession();
+		BimDatabaseSession session = bimDatabase.createReadOnlySession();
 		try {
 			BimDatabaseAction<IfcModel> action = new DownloadOfTypeDatabaseAction(accessMethod, roid, className, currentUoid);
 			IfcModel ifcModel = session.executeAction(action, DEADLOCK_RETRIES);
