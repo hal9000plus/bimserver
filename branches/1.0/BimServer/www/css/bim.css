@@ -480,5 +480,5 @@ ul.projectTree li {
 }
 
 ul.projectTree li.last {
-	background: #fff url(/images/lastnode.png) no-repeat;
+	background: url(/images/lastnode.png) no-repeat;
 }
