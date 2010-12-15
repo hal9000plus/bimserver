@@ -245,13 +245,13 @@ public class IfcStepDeserializer {
 		}
 	}
 
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	private void readList(String val, EObject object, EStructuralFeature structuralFeature) throws IncorrectIfcFileException {
 		int index = 0;
 		if (structuralFeature.getUpperBound() == 1) {
 			throw new IncorrectIfcFileException("Field " + structuralFeature.getName() + " of " + structuralFeature.getEContainingClass().getName() + " is no aggregation");
 		}
-		BasicEList<EObject> list = (BasicEList<EObject>) object.eGet(structuralFeature);
+		BasicEList list = (BasicEList) object.eGet(structuralFeature);
 		String realData = val.substring(1, val.length() - 1);
 		int lastIndex = 0;
 		while (lastIndex != realData.length() + 1) {
@@ -285,7 +285,7 @@ public class IfcStepDeserializer {
 						waitingList.add(new WaitingObject(object, structuralFeature, index));
 					}
 				} else {
-					EObject convert = (EObject) convert(structuralFeature.getEType(), a);
+					Object convert = convert(structuralFeature.getEType(), a);
 					while (list.size() <= index) {
 						list.addUnique(convert);
 					}
