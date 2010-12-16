@@ -17,6 +17,7 @@ import org.bimserver.interfaces.objects.SRevision;
 import org.bimserver.interfaces.objects.SUserType;
 import org.bimserver.shared.SCompareResult;
 import org.bimserver.shared.SProjectNameComparator;
+import org.bimserver.shared.SRevisionIdComparator;
 import org.bimserver.shared.SRevisionSummary;
 import org.bimserver.shared.ServiceInterface;
 import org.bimserver.shared.UserException;
@@ -129,14 +130,8 @@ public class JspHelper {
 						: ("<a href=\"revision.jsp?roid=" + lastRevision.getOid() + "\">" + lastRevision.getId() + "</a> by <a href=\"user.jsp?uoid=" + lastRevision.getUserId()
 								+ "\">" + loginManager.getService().getUserByUoid(lastRevision.getUserId()).getUsername() + "</a>")) + "</td>");
 		result.append("<td><select class=\"treeselect\" name=\"" + baseName + "_" + project.getId() + "\" id=\"" + baseName + "_" + project.getId() + "\">");
-		result.append("<option value=\"[off]\">Off</option>");
 		List<SRevision> allRevisionsOfProject = loginManager.getService().getAllRevisionsOfProject(project.getOid());
-		Collections.sort(allRevisionsOfProject, new Comparator<SRevision>() {
-			@Override
-			public int compare(SRevision o1, SRevision o2) {
-				return o1.getId() - o2.getId();
-			}
-		});
+		Collections.sort(allRevisionsOfProject, new SRevisionIdComparator(false));
 		for (SRevision revision : allRevisionsOfProject) {
 			boolean selected = false;
 			if (revisions != null) {
@@ -144,10 +139,11 @@ public class JspHelper {
 					selected = true;
 				}
 			} else {
-				selected = ((project.getParentId() == -1 || level == 0) && allRevisionsOfProject.get(allRevisionsOfProject.size() - 1) == revision);
+				selected = ((project.getParentId() == -1 || level == 0) && allRevisionsOfProject.get(0) == revision);
 			}
 			result.append("<option value=\"" + revision.getOid() + "\"" + (selected ? " SELECTED=\"SELECTED\"" : "") + ">" + revision.getId() + "</option>");
 		}
+		result.append("<option value=\"[off]\">Off</option>");
 		result.append("</select></td>");
 		result.append("</tr>");
 		Set<SProject> subProjects = new TreeSet<SProject>(new SProjectNameComparator());
