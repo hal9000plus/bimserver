@@ -104,7 +104,7 @@ if (currentUser.getOid() == uoid || currentUser.getUserType() == SUserType.ADMIN
 <%
 	for (ResultType resultType : emfSerializerFactory.getMultipleResultTypes()) {
 %>
-	<option value="<%=resultType.name() %>"<%=resultType.isDefaultSelected() ? " SELECTED=\"SELECTED\"" : "" %>><%=resultType.name() %></option>
+	<option value="<%=resultType.name() %>"<%=resultType.isDefaultSelected() ? " SELECTED=\"SELECTED\"" : "" %>><%=resultType.getNiceName() %></option>
 <%	
 	}
 %>
@@ -157,7 +157,7 @@ if (userHasCheckinRights) { %>
 <%
 	for (ResultType resultType : emfSerializerFactory.getMultipleResultTypes()) {
 %>
-	<option value="<%=resultType.name() %>"<%=resultType.isDefaultSelected() ? " SELECTED=\"SELECTED\"" : "" %>><%=resultType.name() %></option>
+	<option value="<%=resultType.name() %>"<%=resultType.isDefaultSelected() ? " SELECTED=\"SELECTED\"" : "" %>><%=resultType.getNiceName() %></option>
 <%	
 	}
 %>

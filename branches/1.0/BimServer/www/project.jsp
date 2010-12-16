@@ -41,7 +41,7 @@
 	List<SRevision> revisions = loginManager.getService().getAllRevisionsOfProject(poid);
 	Collections.sort(revisions, new SRevisionIdComparator(false));
 	List<SRevision> revisionsInc = loginManager.getService().getAllRevisionsOfProject(poid);
-	Collections.sort(revisionsInc, new SRevisionIdComparator(true));
+	Collections.sort(revisionsInc, new SRevisionIdComparator(false));
 	List<SCheckout> checkouts = loginManager.getService().getAllCheckoutsOfProject(poid);
 	Collections.sort(checkouts, new SCheckoutDateComparator());
 	List<SCheckout> activeCheckouts = new ArrayList<SCheckout>();
@@ -341,7 +341,7 @@ Download: <select name="resultType">
 	<optgroup label="<%=sProject.getName() %>">
 		<%
 		List<SRevision> checkinRevisions = loginManager.getService().getAllRevisionsOfProject(sProject.getOid());
-		Collections.sort(checkinRevisions, new SRevisionIdComparator(true));
+		Collections.sort(checkinRevisions, new SRevisionIdComparator(false));
 	for (SRevision sRevision : checkinRevisions) {
 %>
 		<option value="<%=sRevision.getOid() %>"><%=sRevision.getId() %></option>
