@@ -1,7 +1,6 @@
 package org.bimserver.web;
 
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -132,6 +131,7 @@ public class JspHelper {
 		result.append("<td><select class=\"treeselect\" name=\"" + baseName + "_" + project.getId() + "\" id=\"" + baseName + "_" + project.getId() + "\">");
 		List<SRevision> allRevisionsOfProject = loginManager.getService().getAllRevisionsOfProject(project.getOid());
 		Collections.sort(allRevisionsOfProject, new SRevisionIdComparator(false));
+		boolean selectedSomething = false;
 		for (SRevision revision : allRevisionsOfProject) {
 			boolean selected = false;
 			if (revisions != null) {
@@ -141,9 +141,12 @@ public class JspHelper {
 			} else {
 				selected = ((project.getParentId() == -1 || level == 0) && allRevisionsOfProject.get(0) == revision);
 			}
+			if (selected) {
+				selectedSomething = true;
+			}
 			result.append("<option value=\"" + revision.getOid() + "\"" + (selected ? " SELECTED=\"SELECTED\"" : "") + ">" + revision.getId() + "</option>");
 		}
-		result.append("<option value=\"[off]\">Off</option>");
+		result.append("<option value=\"[off]\"" + (selectedSomething ? "" : " SELECTED=\"SELECTED\"") + ">Off</option>");
 		result.append("</select></td>");
 		result.append("</tr>");
 		Set<SProject> subProjects = new TreeSet<SProject>(new SProjectNameComparator());
