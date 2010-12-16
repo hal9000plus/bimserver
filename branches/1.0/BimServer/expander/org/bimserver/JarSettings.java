@@ -3,6 +3,7 @@ package org.bimserver;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -16,7 +17,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.NONE)
 public class JarSettings {
-	@XmlElement
 	private File lastFile;
 
 	@XmlElement
@@ -34,15 +34,23 @@ public class JarSettings {
 	@XmlElement
 	private String stacksize = "1024k";
 
+	public static JarSettings readFromFile() {
+		return readFromFile(new File("settings.xml"));
+	}
+	
 	public static JarSettings readFromFile(File file) {
-		try {
-			JAXBContext jaxbContext = JAXBContext.newInstance(JarSettings.class);
-			Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
-			JarSettings unmarshal = (JarSettings) unmarshaller.unmarshal(file);
-			unmarshal.setLastFile(file);
-			return unmarshal;
-		} catch (JAXBException e) {
-			e.printStackTrace();
+		if (file.exists()) {
+			try {
+				JAXBContext jaxbContext = JAXBContext.newInstance(JarSettings.class);
+				Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
+				JarSettings unmarshal = (JarSettings) unmarshaller.unmarshal(file);
+				unmarshal.setLastFile(file);
+				return unmarshal;
+			} catch (JAXBException e) {
+				e.printStackTrace();
+			}
+		} else {
+			return new JarSettings();
 		}
 		return null;
 	}
@@ -62,10 +70,14 @@ public class JarSettings {
 		try {
 			JAXBContext jaxbContext = JAXBContext.newInstance(JarSettings.class);
 			Marshaller marshaller = jaxbContext.createMarshaller();
-			marshaller.marshal(this, new FileOutputStream(file));
+			FileOutputStream fos = new FileOutputStream(file);
+			marshaller.marshal(this, fos);
+			fos.close();
 		} catch (JAXBException e) {
 			e.printStackTrace();
 		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}

@@ -62,7 +62,7 @@ import javax.swing.event.DocumentListener;
 public class Expander extends JFrame {
 	private static final long serialVersionUID = 5356018168589837130L;
 	private Process exec;
-	private JarSettings jarSettings = new JarSettings();
+	private JarSettings jarSettings = JarSettings.readFromFile();
 
 	public static void main(String[] args) {
 		new Expander().start();
@@ -105,7 +105,25 @@ public class Expander extends JFrame {
 		JLabel jvmLabel = new JLabel("JVM");
 		fields.add(jvmLabel);
 
+		DocumentListener documentChangeListener = new DocumentListener() {
+			@Override
+			public void removeUpdate(DocumentEvent e) {
+				jarSettings.save();
+			}
+			
+			@Override
+			public void insertUpdate(DocumentEvent e) {
+				jarSettings.save();
+			}
+			
+			@Override
+			public void changedUpdate(DocumentEvent e) {
+				jarSettings.save();
+			}
+		};
+		
 		final JTextField jvmField = new JTextField(jarSettings.getJvm());
+		jvmField.getDocument().addDocumentListener(documentChangeListener);
 		JButton browserJvm = new JButton("Browse...");
 		browserJvm.addActionListener(new ActionListener() {
 			@Override
@@ -130,20 +148,6 @@ public class Expander extends JFrame {
 
 		final JTextField addressField = new JTextField(jarSettings.getAddress());
 		fields.add(addressField);
-		DocumentListener documentChangeListener = new DocumentListener() {
-			@Override
-			public void removeUpdate(DocumentEvent e) {
-			}
-			
-			@Override
-			public void insertUpdate(DocumentEvent e) {
-			}
-			
-			@Override
-			public void changedUpdate(DocumentEvent e) {
-				jarSettings.save();
-			}
-		};
 		addressField.getDocument().addDocumentListener(documentChangeListener);
 
 		JLabel portLabel = new JLabel("Port");
@@ -151,18 +155,21 @@ public class Expander extends JFrame {
 
 		final JTextField portField = new JTextField(jarSettings.getPort() + "");
 		fields.add(portField);
+		portField.getDocument().addDocumentListener(documentChangeListener);
 
 		JLabel heapSizeLabel = new JLabel("Heap Size");
 		fields.add(heapSizeLabel);
 
 		final JTextField heapSizeField = new JTextField(jarSettings.getHeapsize());
 		fields.add(heapSizeField);
+		heapSizeField.getDocument().addDocumentListener(documentChangeListener);
 
 		JLabel stackSizeLabel = new JLabel("Stack Size");
 		fields.add(stackSizeLabel);
 
 		final JTextField stackSizeField = new JTextField(jarSettings.getStacksize());
 		fields.add(stackSizeField);
+		stackSizeField.getDocument().addDocumentListener(documentChangeListener);
 
 		SpringUtilities.makeCompactGrid(fields, 5, 2, // rows, cols
 				6, 6, // initX, initY

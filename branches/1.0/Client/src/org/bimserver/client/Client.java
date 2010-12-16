@@ -127,7 +127,7 @@ public class Client extends JFrame {
 	}
 
 	public void checkin(SProject project) {
-		JFileChooser chooser = new JFileChooser();
+		JFileChooser chooser = new JFileChooser(".");
 		int showOpenDialog = chooser.showOpenDialog(this);
 		if (showOpenDialog == JFileChooser.APPROVE_OPTION) {
 			File file = chooser.getSelectedFile();
@@ -137,7 +137,7 @@ public class Client extends JFrame {
 	}
 
 	public void checkin(SProject project, DataSource dataSource, long fileSize) {
-		String comment = JOptionPane.showInputDialog(Client.this, "Please give a short description of you changes", "Checkin", JOptionPane.OK_OPTION
+		String comment = JOptionPane.showInputDialog(Client.this, "Please give a short description of your changes", "Checkin", JOptionPane.OK_OPTION
 				| JOptionPane.INFORMATION_MESSAGE);
 		try {
 			DataHandler ifcFile = new DataHandler(dataSource);
