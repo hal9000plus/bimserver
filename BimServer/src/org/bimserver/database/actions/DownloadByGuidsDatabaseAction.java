@@ -1,8 +1,10 @@
 package org.bimserver.database.actions;
 
 import java.util.Date;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
+import java.util.Map;
 import java.util.Set;
 
 import org.bimserver.database.BimDatabaseException;
@@ -43,22 +45,33 @@ public class DownloadByGuidsDatabaseAction extends BimDatabaseAction<IfcModel> {
 			if (!RightsManager.hasRightsOnProjectOrSuperProjectsOrSubProjects(user, project)) {
 				throw new UserException("User has insufficient rights to download revisions from this project");
 			}
+			Map<ConcreteRevision, Set<Long>> map = new HashMap<ConcreteRevision, Set<Long>>();
 			for (String guid : guids) {
 				if (!foundGuids.contains(guid)) {
 					for (ConcreteRevision concreteRevision : virtualRevision.getConcreteRevisions()) {
 						ObjectIdentifier objectIdentifier = bimDatabaseSession.getOidOfGuid(guid, concreteRevision.getProject().getId(), concreteRevision.getId());
 						if (objectIdentifier != null) {
-							long oidOfGuid = objectIdentifier.getOid();
-							if (oidOfGuid != -1) {
-								foundGuids.add(guid);
-								IfcModel subModel = bimDatabaseSession.getMapWithOid(concreteRevision.getProject().getId(), concreteRevision.getId(), oidOfGuid);
-								subModel.setDate(concreteRevision.getDate());
-								ifcModels.add(subModel);
-								continue;
+							if (!map.containsKey(concreteRevision)) {
+								map.put(concreteRevision, new HashSet<Long>());
 							}
+							map.get(concreteRevision).add(objectIdentifier.getOid());
+//							long oidOfGuid = objectIdentifier.getOid();
+//							if (oidOfGuid != -1) {
+//								foundGuids.add(guid);
+//								IfcModel subModel = bimDatabaseSession.getMapWithOids(concreteRevision.getProject().getId(), concreteRevision.getId(), oidOfGuid);
+//								subModel.setDate(concreteRevision.getDate());
+//								ifcModels.add(subModel);
+//								continue;
+//							}
 						}
 					}
 				}
+			}
+			for (ConcreteRevision concreteRevision : map.keySet()) {
+				Set<Long> oids = map.get(concreteRevision);
+				IfcModel model = bimDatabaseSession.getMapWithOids(concreteRevision.getProject().getId(), concreteRevision.getId(), oids);
+				model.setDate(concreteRevision.getDate());
+				ifcModels.add(model);
 			}
 		}
 		IfcModel ifcModel = merge(project, ifcModels);
