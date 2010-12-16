@@ -42,11 +42,14 @@ public class DownloadByObjectIdentifiersDatabaseAction extends BimDatabaseAction
 				throw new UserException("User has insufficient rights to download revisions from this project");
 			}
 			for (ConcreteRevision concreteRevision : virtualRevision.getConcreteRevisions()) {
-				for (ObjectIdentifier objectIdentifier : oids) {
-					IfcModel subModel = bimDatabaseSession.getMapWithOid(concreteRevision.getProject().getId(), concreteRevision.getId(), objectIdentifier.getCid(), objectIdentifier.getOid());
-					subModel.setDate(concreteRevision.getDate());
-					ifcModels.add(subModel);
-				}
+				IfcModel model = bimDatabaseSession.getMapWithObjectIdentifiers(concreteRevision.getProject().getId(), concreteRevision.getId(), oids);
+				ifcModels.add(model);
+				model.setDate(concreteRevision.getDate());
+//				for (ObjectIdentifier objectIdentifier : oids) {
+//					IfcModel subModel = bimDatabaseSession.getMapWithOid(concreteRevision.getProject().getId(), concreteRevision.getId(), objectIdentifier.getCid(), objectIdentifier.getOid());
+//					subModel.setDate(concreteRevision.getDate());
+//					ifcModels.add(subModel);
+//				}
 			}
 		}
 		IfcModel ifcModel = merge(project, ifcModels);

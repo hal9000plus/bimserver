@@ -219,6 +219,9 @@ public class IfcStepSerializer extends IfcSerializer {
 	}
 
 	private void write(PrintWriter out, Long key, EObject object) {
+		if (key == 44) {
+			System.out.println();
+		}
 		EClass eClass = object.eClass();
 		out.print(DASH);
 		out.print(String.valueOf(key));

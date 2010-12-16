@@ -34,7 +34,6 @@ import com.google.common.collect.HashBiMap;
 
 public class IfcModel {
 
-//	private long counter = 0;
 	private final BiMap<Long, IdEObject> objects;
 	private Map<String, IfcRoot> guidIndexed;
 	private byte[] checksum;
@@ -70,14 +69,17 @@ public class IfcModel {
 	public Collection<IdEObject> getValues() {
 		return objects.values();
 	}
-	
+
 	public void add(Long key, IdEObject eObject) {
+		add(key, eObject, false);
+	}
+	
+	public void add(Long key, IdEObject eObject, boolean ignoreDuplicateOids) {
 		if (objects.containsKey(key)) {
-//			throw new RuntimeException("Oid already stored: " + key);
+			if (!ignoreDuplicateOids) {
+				throw new RuntimeException("Oid already stored: " + key);
+			}
 		} else {
-//			if (key > counter) {
-//				counter = key + 1;
-//			}
 			objects.put(key, eObject);
 		}
 	}
@@ -175,13 +177,6 @@ public class IfcModel {
 			System.out.println(key + ": " + objects.get(key).eClass().getName());
 		}
 	}
-
-//	public void add(IdEObject newObject) {
-//		long oid = counter;
-//		counter++;
-//		newObject.setOid(oid);
-//		objects.put(oid, newObject);
-//	}
 
 	public void remove(IdEObject idEObject) {
 		objects.remove(idEObject.getOid());

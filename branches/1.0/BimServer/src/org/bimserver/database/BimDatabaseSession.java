@@ -3,6 +3,7 @@ package org.bimserver.database;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.bimserver.database.actions.BimDatabaseAction;
 import org.bimserver.database.query.conditions.Condition;
@@ -75,9 +76,11 @@ public interface BimDatabaseSession {
 
 	void putInCache(RecordIdentifier recordIdentifier, IdEObject object);
 
-	IfcModel getMapWithOid(int pid, int id, short cid, long oid) throws BimDeadlockException, BimDatabaseException;
+	IfcModel getMapWithOid(int pid, int rid, short cid, long oid, IfcModel model) throws BimDeadlockException, BimDatabaseException;
 
-	IfcModel getMapWithOid(int pid, int id, long oid) throws BimDeadlockException, BimDatabaseException;
+	IfcModel getMapWithOids(int pid, int rid, Set<Long> oids) throws BimDeadlockException, BimDatabaseException;
+
+	IfcModel getMapWithObjectIdentifiers(int pid, int rid, Set<ObjectIdentifier> oids) throws BimDeadlockException, BimDatabaseException;
 
 	<T extends IdEObject> Map <Long, T> query(Condition condition, Class<T> clazz) throws BimDatabaseException, BimDeadlockException;
 

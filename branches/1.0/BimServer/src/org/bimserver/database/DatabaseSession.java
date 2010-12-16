@@ -636,8 +636,7 @@ public class DatabaseSession implements BimDatabaseSession {
 		}
 	}
 
-	public IfcModel getMapWithOid(int pid, int rid, short cid, long oid) throws BimDatabaseException, BimDeadlockException {
-		IfcModel model = new IfcModel();
+	public IfcModel getMapWithOid(int pid, int rid, short cid, long oid, IfcModel model) throws BimDatabaseException, BimDeadlockException {
 		EClass eClass = database.getEClassForCid(cid);
 		if (eClass == null) {
 			return model;
@@ -654,12 +653,13 @@ public class DatabaseSession implements BimDatabaseSession {
 	}
 
 	@Override
-	public IfcModel getMapWithOid(int pid, int rid, long oid) throws BimDatabaseException, BimDeadlockException {
-		EClass eClass = getClassOfObjectId(pid, rid, oid);
-		if (eClass == null) {
-			return new IfcModel();
+	public IfcModel getMapWithOids(int pid, int rid, Set<Long> oids) throws BimDatabaseException, BimDeadlockException {
+		IfcModel model = new IfcModel();
+		for (Long oid : oids) {
+			EClass eClass = getClassOfObjectId(pid, rid, oid);
+			getMapWithOid(pid, rid, database.getCidOfEClass(eClass), oid, model);
 		}
-		return getMapWithOid(pid, rid, database.getCidOfEClass(eClass), oid);
+		return model;
 	}
 
 	private EClass getClassOfObjectId(int pid, int rid, long oid) throws BimDatabaseException, BimDeadlockException {
@@ -1178,5 +1178,14 @@ public class DatabaseSession implements BimDatabaseSession {
 
 	public boolean isReadOnly() {
 		return readOnly;
+	}
+
+	@Override
+	public IfcModel getMapWithObjectIdentifiers(int pid, int rid, Set<ObjectIdentifier> oids) throws BimDeadlockException, BimDatabaseException {
+		IfcModel model = new IfcModel();
+		for (ObjectIdentifier objectIdentifier : oids) {
+			getMapWithOid(pid, rid, objectIdentifier.getCid(), objectIdentifier.getOid(), model);
+		}
+		return model;
 	}
 }

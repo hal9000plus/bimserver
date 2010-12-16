@@ -106,8 +106,9 @@ public class ProcessChangeSetDatabaseAction extends BimDatabaseAction<ChangeSetR
 						}
 					} else if (aavp instanceof AttributeReferencePair) {
 						AttributeReferencePair attributeReferencePair = (AttributeReferencePair) aavp;
-						IfcModel submodel = bimDatabaseSession.getMapWithOid(project.getId(), project.getLastConcreteRevision().getId(), attributeReferencePair.getOid());
-						object.eSet(feature, submodel.get(attributeReferencePair.getOid()));
+						// TODO Fix again
+//						IfcModel submodel = bimDatabaseSession.getMapWithOids(project.getId(), project.getLastConcreteRevision().getId(), attributeReferencePair.getOid());
+//						object.eSet(feature, submodel.get(attributeReferencePair.getOid()));
 					}
 				}
 				bimDatabaseSession.store(object);
