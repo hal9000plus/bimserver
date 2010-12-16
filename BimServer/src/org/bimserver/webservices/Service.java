@@ -584,7 +584,21 @@ public class Service implements ServiceInterface {
 		requireAuthentication();
 		BimDatabaseSession session = bimDatabase.createReadOnlySession();
 		try {
-			BimDatabaseAction<Set<Checkout>> action = new GetAllCheckoutsOfProjectDatabaseAction(accessMethod, poid);
+			BimDatabaseAction<Set<Checkout>> action = new GetAllCheckoutsOfProjectDatabaseAction(accessMethod, poid, false);
+			return convert(session.executeAction(action, DEADLOCK_RETRIES), SCheckout.class, session);
+		} catch (BimDatabaseException e) {
+			throw new UserException("Database error", e);
+		} finally {
+			session.close();
+		}
+	}
+
+	@Override
+	public List<SCheckout> getAllCheckoutsOfProjectAndSubProjects(long poid) throws UserException {
+		requireAuthentication();
+		BimDatabaseSession session = bimDatabase.createReadOnlySession();
+		try {
+			BimDatabaseAction<Set<Checkout>> action = new GetAllCheckoutsOfProjectDatabaseAction(accessMethod, poid, true);
 			return convert(session.executeAction(action, DEADLOCK_RETRIES), SCheckout.class, session);
 		} catch (BimDatabaseException e) {
 			throw new UserException("Database error", e);

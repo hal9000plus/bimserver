@@ -44,6 +44,7 @@ import org.bimserver.shared.SDownloadResult;
 import org.bimserver.shared.UserException;
 import org.bimserver.shared.SCompareResult.SCompareType;
 import org.bimserver.shared.SCompareResult.SItem;
+import org.bimserver.web.JspHelper;
 import org.bimserver.web.LoginManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -81,17 +82,7 @@ public class DownloadServlet extends HttpServlet {
 				}
 				checkoutResult = loginManager.getService().downloadProjects(roids, resultType);
 			} else if (request.getParameter("clashes") != null) {
-				SClashDetectionSettings sClashDetectionSettings = new SClashDetectionSettings();
-				sClashDetectionSettings.setMargin(Float.parseFloat(request.getParameter("margin")));
-				String[] ignoredSplit = request.getParameter("ignore").split(";");
-				for (String ignore : ignoredSplit) {
-					sClashDetectionSettings.getIgnoredClasses().add(ignore);
-				}
-				String[] revisions = request.getParameter("revisions").split(";");
-				sClashDetectionSettings.setRevisions(new ArrayList<Long>());
-				for (String revisionOidString : revisions) {
-					sClashDetectionSettings.getRevisions().add(Long.parseLong(revisionOidString));
-				}
+				SClashDetectionSettings sClashDetectionSettings = JspHelper.createSClashDetectionSettings(request);
 				List<SEidClash> findClashes = loginManager.getService().findClashesByEid(sClashDetectionSettings);
 				Set<Long> oids = new HashSet<Long>();
 				for (SEidClash clash : findClashes) {

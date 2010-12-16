@@ -42,7 +42,7 @@
 	Collections.sort(revisions, new SRevisionIdComparator(false));
 	List<SRevision> revisionsInc = loginManager.getService().getAllRevisionsOfProject(poid);
 	Collections.sort(revisionsInc, new SRevisionIdComparator(false));
-	List<SCheckout> checkouts = loginManager.getService().getAllCheckoutsOfProject(poid);
+	List<SCheckout> checkouts = loginManager.getService().getAllCheckoutsOfProjectAndSubProjects(poid);
 	Collections.sort(checkouts, new SCheckoutDateComparator());
 	List<SCheckout> activeCheckouts = new ArrayList<SCheckout>();
 	for (SCheckout checkout : checkouts) {

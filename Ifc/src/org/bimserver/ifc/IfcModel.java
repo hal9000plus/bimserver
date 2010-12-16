@@ -73,7 +73,7 @@ public class IfcModel {
 	
 	public void add(Long key, IdEObject eObject) {
 		if (objects.containsKey(key)) {
-			throw new RuntimeException("Oid already stored: " + key);
+//			throw new RuntimeException("Oid already stored: " + key);
 		} else {
 //			if (key > counter) {
 //				counter = key + 1;

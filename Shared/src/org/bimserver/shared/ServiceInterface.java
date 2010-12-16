@@ -330,4 +330,6 @@ public interface ServiceInterface {
 	Set<ResultType> getEnabledResultTypes();
 	
 	Set<ResultType> getAllResultTypes();
+
+	List<SCheckout> getAllCheckoutsOfProjectAndSubProjects(long poid) throws UserException;
 }
