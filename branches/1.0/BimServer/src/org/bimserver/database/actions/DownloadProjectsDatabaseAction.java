@@ -3,6 +3,7 @@ package org.bimserver.database.actions;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
+import org.bimserver.Merger;
 import org.bimserver.database.BimDatabaseException;
 import org.bimserver.database.BimDatabaseSession;
 import org.bimserver.database.BimDeadlockException;
@@ -46,7 +47,7 @@ public class DownloadProjectsDatabaseAction extends BimDatabaseAction<IfcModel> 
 				throw new UserException("User has no rights on project " + project.getOid());
 			}
 		}
-		IfcModel ifcModel = merge(project, ifcModels);
+		IfcModel ifcModel = Merger.merge(project, ifcModels);
 		if (projectName.endsWith("-")) {
 			projectName = projectName.substring(0, projectName.length()-1);
 		}

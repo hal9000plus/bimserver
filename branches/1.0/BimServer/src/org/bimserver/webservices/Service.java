@@ -42,6 +42,7 @@ import javax.xml.bind.Unmarshaller;
 
 import nl.tue.buildingsmart.express.dictionary.SchemaDefinition;
 
+import org.bimserver.Merger;
 import org.bimserver.ServerInfo;
 import org.bimserver.ServerSettings;
 import org.bimserver.SettingsSaveException;
@@ -149,12 +150,12 @@ import org.bimserver.rights.RightsManager;
 import org.bimserver.serializers.EmfSerializerFactory;
 import org.bimserver.shared.ChangeSet;
 import org.bimserver.shared.ChangeSetResult;
-import org.bimserver.shared.SDataObject;
 import org.bimserver.shared.DatabaseInformation;
 import org.bimserver.shared.ResultType;
 import org.bimserver.shared.SCheckinResult;
 import org.bimserver.shared.SCheckoutResult;
 import org.bimserver.shared.SCompareResult;
+import org.bimserver.shared.SDataObject;
 import org.bimserver.shared.SRevisionSummary;
 import org.bimserver.shared.SUserSession;
 import org.bimserver.shared.ServiceInterface;
@@ -1325,7 +1326,7 @@ public class Service implements ServiceInterface {
 				subModel.setDate(subRevision.getDate());
 				ifcModels.add(subModel);
 			}
-			IfcModel model = BimDatabaseAction.merge(oldRevision.getProject(), ifcModels);
+			IfcModel model = Merger.merge(oldRevision.getProject(), ifcModels);
 			Project newProject = new AddProjectDatabaseAction(accessMethod, projectName, currentUoid).execute(session);
 			BimDatabaseAction<ConcreteRevision> action = new CheckinPart1DatabaseAction(accessMethod, newProject.getOid(), currentUoid, model, comment);
 			try {
@@ -1370,7 +1371,7 @@ public class Service implements ServiceInterface {
 				subModel.setDate(subRevision.getDate());
 				ifcModels.add(subModel);
 			}
-			IfcModel model = BimDatabaseAction.merge(oldRevision.getProject(), ifcModels);
+			IfcModel model = Merger.merge(oldRevision.getProject(), ifcModels);
 			BimDatabaseAction<ConcreteRevision> action = new CheckinPart1DatabaseAction(accessMethod, destPoid, currentUoid, model, comment);
 			try {
 				ConcreteRevision revision = session.executeAndCommitAction(action, DEADLOCK_RETRIES);

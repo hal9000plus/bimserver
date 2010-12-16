@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.LinkedHashSet;
 import java.util.List;
 
+import org.bimserver.Merger;
 import org.bimserver.database.BimDatabaseException;
 import org.bimserver.database.BimDatabaseSession;
 import org.bimserver.database.BimDeadlockException;
@@ -38,7 +39,7 @@ public class GetDataObjectsByTypeDatabaseAction extends BimDatabaseAction<List<S
 			subModel.setDate(concreteRevision.getDate());
 			ifcModels.add(subModel);
 		}
-		IfcModel ifcModel = merge(virtualRevision.getProject(), ifcModels);
+		IfcModel ifcModel = Merger.merge(virtualRevision.getProject(), ifcModels);
 		List<SDataObject> dataObjects = new ArrayList<SDataObject>();
 		for (Long oid : ifcModel.keySet()) {
 			EObject eObject = ifcModel.get(oid);

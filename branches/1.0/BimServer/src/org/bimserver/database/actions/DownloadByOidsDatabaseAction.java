@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
+import org.bimserver.Merger;
 import org.bimserver.database.BimDatabaseException;
 import org.bimserver.database.BimDatabaseSession;
 import org.bimserver.database.BimDeadlockException;
@@ -51,7 +52,7 @@ public class DownloadByOidsDatabaseAction extends BimDatabaseAction<IfcModel> {
 //				}
 			}
 		}
-		IfcModel ifcModel = merge(project, ifcModels);
+		IfcModel ifcModel = Merger.merge(project, ifcModels);
 		ifcModel.setRevisionNr(1);
 		ifcModel.setAuthorizedUser(bimDatabaseSession.getUserByUoid(actingUoid).getName());
 		ifcModel.setDate(new Date());

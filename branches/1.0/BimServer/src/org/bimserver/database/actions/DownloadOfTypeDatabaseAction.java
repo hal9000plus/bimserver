@@ -2,6 +2,7 @@ package org.bimserver.database.actions;
 
 import java.util.LinkedHashSet;
 
+import org.bimserver.Merger;
 import org.bimserver.database.BimDatabaseException;
 import org.bimserver.database.BimDatabaseSession;
 import org.bimserver.database.BimDeadlockException;
@@ -41,7 +42,7 @@ public class DownloadOfTypeDatabaseAction extends BimDatabaseAction<IfcModel> {
 			subModel.setDate(concreteRevision.getDate());
 			ifcModels.add(subModel);
 		}
-		IfcModel IfcModel = merge(project, ifcModels);
+		IfcModel IfcModel = Merger.merge(project, ifcModels);
 		IfcModel.setRevisionNr(project.getRevisions().indexOf(virtualRevision) + 1);
 		IfcModel.setAuthorizedUser(bimDatabaseSession.getUserByUoid(actingUoid).getName());
 		IfcModel.setDate(virtualRevision.getDate());
