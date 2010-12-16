@@ -1,9 +1,6 @@
 package org.bimserver;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -70,14 +67,8 @@ public class JarSettings {
 		try {
 			JAXBContext jaxbContext = JAXBContext.newInstance(JarSettings.class);
 			Marshaller marshaller = jaxbContext.createMarshaller();
-			FileOutputStream fos = new FileOutputStream(file);
-			marshaller.marshal(this, fos);
-			fos.close();
+			marshaller.marshal(this, file);
 		} catch (JAXBException e) {
-			e.printStackTrace();
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
