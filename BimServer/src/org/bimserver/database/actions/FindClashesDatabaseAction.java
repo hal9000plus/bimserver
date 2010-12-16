@@ -8,6 +8,7 @@ import java.util.Set;
 
 import nl.tue.buildingsmart.express.dictionary.SchemaDefinition;
 
+import org.bimserver.Merger;
 import org.bimserver.cache.ClashDetectionCache;
 import org.bimserver.database.BimDatabaseException;
 import org.bimserver.database.BimDatabaseSession;
@@ -75,7 +76,7 @@ public class FindClashesDatabaseAction extends BimDatabaseAction<Set<? extends C
 				}
 			}
 		}
-		IfcModel ifcModel = BimDatabaseAction.merge(project, ifcModels);
+		IfcModel ifcModel = Merger.merge(project, ifcModels);
 		IfcModel newModel = new IfcModel();
 		Map<IdEObject, IdEObject> converted = new HashMap<IdEObject, IdEObject>();
 		for (IdEObject idEObject : ifcModel.getValues()) {

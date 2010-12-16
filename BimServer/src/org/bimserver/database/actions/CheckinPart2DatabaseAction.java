@@ -3,6 +3,7 @@ package org.bimserver.database.actions;
 import java.util.Date;
 import java.util.LinkedHashSet;
 
+import org.bimserver.Merger;
 import org.bimserver.database.BimDatabaseException;
 import org.bimserver.database.BimDatabaseSession;
 import org.bimserver.database.BimDeadlockException;
@@ -45,7 +46,7 @@ public class CheckinPart2DatabaseAction extends BimDatabaseAction<Void> {
 					ifcModels.add(subModel);
 				}
 				ifcModels.add(getIfcModel());
-				ifcModel = merge(project, ifcModels);
+				ifcModel = Merger.merge(project, ifcModels);
 			} else {
 				ifcModel = getIfcModel();
 			}

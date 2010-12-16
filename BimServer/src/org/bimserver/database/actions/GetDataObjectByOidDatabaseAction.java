@@ -2,6 +2,7 @@ package org.bimserver.database.actions;
 
 import java.util.LinkedHashSet;
 
+import org.bimserver.Merger;
 import org.bimserver.database.BimDatabaseException;
 import org.bimserver.database.BimDatabaseSession;
 import org.bimserver.database.BimDeadlockException;
@@ -14,11 +15,11 @@ import org.bimserver.ifc.emf.Ifc2x3.IfcGloballyUniqueId;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRoot;
 import org.bimserver.ifc.emf.Ifc2x3.WrappedValue;
 import org.bimserver.shared.SDataObject;
+import org.bimserver.shared.UserException;
 import org.bimserver.shared.SDataObject.SDataValue;
 import org.bimserver.shared.SDataObject.SListDataValue;
 import org.bimserver.shared.SDataObject.SReferenceDataValue;
 import org.bimserver.shared.SDataObject.SSimpleDataValue;
-import org.bimserver.shared.UserException;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EObject;
@@ -54,7 +55,7 @@ public class GetDataObjectByOidDatabaseAction extends BimDatabaseAction<SDataObj
 				break;
 			}
 		}
-		IfcModel ifcModel = merge(virtualRevision.getProject(), ifcModels);
+		IfcModel ifcModel = Merger.merge(virtualRevision.getProject(), ifcModels);
 		if (eObject == null) {
 			throw new UserException("Object not found");
 		}
