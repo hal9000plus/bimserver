@@ -105,25 +105,7 @@ public class Expander extends JFrame {
 		JLabel jvmLabel = new JLabel("JVM");
 		fields.add(jvmLabel);
 
-		DocumentListener documentChangeListener = new DocumentListener() {
-			@Override
-			public void removeUpdate(DocumentEvent e) {
-				jarSettings.save();
-			}
-			
-			@Override
-			public void insertUpdate(DocumentEvent e) {
-				jarSettings.save();
-			}
-			
-			@Override
-			public void changedUpdate(DocumentEvent e) {
-				jarSettings.save();
-			}
-		};
-		
 		final JTextField jvmField = new JTextField(jarSettings.getJvm());
-		jvmField.getDocument().addDocumentListener(documentChangeListener);
 		JButton browserJvm = new JButton("Browse...");
 		browserJvm.addActionListener(new ActionListener() {
 			@Override
@@ -148,28 +130,24 @@ public class Expander extends JFrame {
 
 		final JTextField addressField = new JTextField(jarSettings.getAddress());
 		fields.add(addressField);
-		addressField.getDocument().addDocumentListener(documentChangeListener);
 
 		JLabel portLabel = new JLabel("Port");
 		fields.add(portLabel);
 
 		final JTextField portField = new JTextField(jarSettings.getPort() + "");
 		fields.add(portField);
-		portField.getDocument().addDocumentListener(documentChangeListener);
 
 		JLabel heapSizeLabel = new JLabel("Heap Size");
 		fields.add(heapSizeLabel);
 
 		final JTextField heapSizeField = new JTextField(jarSettings.getHeapsize());
 		fields.add(heapSizeField);
-		heapSizeField.getDocument().addDocumentListener(documentChangeListener);
 
 		JLabel stackSizeLabel = new JLabel("Stack Size");
 		fields.add(stackSizeLabel);
 
 		final JTextField stackSizeField = new JTextField(jarSettings.getStacksize());
 		fields.add(stackSizeField);
-		stackSizeField.getDocument().addDocumentListener(documentChangeListener);
 
 		SpringUtilities.makeCompactGrid(fields, 5, 2, // rows, cols
 				6, 6, // initX, initY
@@ -204,7 +182,43 @@ public class Expander extends JFrame {
 				}
 			}
 		});
+		
+		DocumentListener documentChangeListener = new DocumentListener() {
+			@Override
+			public void removeUpdate(DocumentEvent e) {
+				save();
+			}
+			
+			@Override
+			public void insertUpdate(DocumentEvent e) {
+				save();
+			}
+			
+			@Override
+			public void changedUpdate(DocumentEvent e) {
+				save();
+			}
 
+			private void save() {
+				try {
+					jarSettings.setAddress(addressField.getText());
+					jarSettings.setPort(Integer.parseInt(portField.getText()));
+					jarSettings.setJvm(jvmField.getText());
+					jarSettings.setStacksize(stackSizeField.getText());
+					jarSettings.setHeapsize(heapSizeField.getText());
+					jarSettings.save();
+				} catch (Exception e) {
+					// ignore
+				}
+			}
+		};
+
+		jvmField.getDocument().addDocumentListener(documentChangeListener);
+		addressField.getDocument().addDocumentListener(documentChangeListener);
+		portField.getDocument().addDocumentListener(documentChangeListener);
+		heapSizeField.getDocument().addDocumentListener(documentChangeListener);
+		stackSizeField.getDocument().addDocumentListener(documentChangeListener);
+		
 		buttons.add(startStopButton);
 
 		JButton launchWebBrowser = new JButton("Launch Webbrowser");
