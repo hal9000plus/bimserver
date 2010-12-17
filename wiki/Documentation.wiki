@@ -1,0 +1,15 @@
+#summary Documentation of the open source BIMserver software.
+#labels UserSupport
+
+= Introduction =
+
+This content is a Google Docs document of the pdf documentation.
+
+
+= Document =
+
+<?xml version="1.0" encoding="UTF-8" ?> 
+<Module>
+  <ModulePrefs title="PDF documentation" />
+  <Content type="url" href="https://docs.google.com/document/pub?id=1AdSdu9yREqmuD86vTALnNnTQcyHnyhSjdYjCmmzexJU" />
+</Module>
