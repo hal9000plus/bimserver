@@ -15,6 +15,16 @@
 <%@page import="org.bimserver.Settings"%>
 <%@page import="org.apache.commons.io.IOUtils"%>
 <%@page import="org.bimserver.interfaces.objects.SUserType"%>
+<%@page import="org.bimserver.serializers.EmfSerializerFactory"%>
+<div class="sidebar">
+<ul>
+<li>
+<a href="<%=getServletContext().getContextPath()%>/settings?action=downloadsettings">Download settings</a></li>
+<li>
+<a href="<%=getServletContext().getContextPath()%>/settings?action=downloadignorefile">Download ignore.xml</a></li>
+</ul>
+</div>
+<div class="content">
 <%
 	if (loginManager.getService().isLoggedIn() && loginManager.getUserType() == SUserType.ADMIN) {
 		Settings settings = ServerSettings.getSettings();
@@ -59,19 +69,6 @@
 	}
 		}
 %>
-
-
-<%@page import="org.bimserver.serializers.EmfSerializerFactory"%><div class="sidebar">
-<ul>
-<li>
-<a href="<%=getServletContext().getContextPath()%>/settings?action=downloadsettings">Download settings</a></li>
-<li>
-<a href="<%=getServletContext().getContextPath()%>/settings?action=downloadignorefile">Download ignore.xml</a></li>
-</ul>
-</div>
-
-<div class="content">
-
 <div class="tabber" id="settingstabber">
 <div class="tabbertab" id="basicsettingstab" title="Basic settings">
 <form method="post">

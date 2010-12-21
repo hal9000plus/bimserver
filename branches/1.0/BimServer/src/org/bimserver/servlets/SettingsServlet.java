@@ -134,6 +134,7 @@ public class SettingsServlet extends HttpServlet {
 				}
 			}
 		} catch (Exception e) {
+			response.getWriter().println(e.getMessage());
 			LOGGER.error("", e);
 		}
 	}
