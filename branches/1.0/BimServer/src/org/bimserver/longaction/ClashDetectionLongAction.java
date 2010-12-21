@@ -10,6 +10,7 @@ import org.bimserver.database.BimDatabaseException;
 import org.bimserver.database.BimDatabaseSession;
 import org.bimserver.database.BimDeadlockException;
 import org.bimserver.database.actions.FindClashesDatabaseAction;
+import org.bimserver.database.actions.SendClashesEmailDatabaseAction;
 import org.bimserver.database.store.CheckinState;
 import org.bimserver.database.store.Clash;
 import org.bimserver.database.store.ClashDetectionSettings;
@@ -19,6 +20,7 @@ import org.bimserver.database.store.User;
 import org.bimserver.database.store.log.AccessMethod;
 import org.bimserver.ifcengine.IfcEngineFactory;
 import org.bimserver.mail.MailSystem;
+import org.bimserver.web.LoginManager;
 import org.bimserver.webservices.Service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -73,7 +75,6 @@ public class ClashDetectionLongAction extends LongAction {
 			}
 			revision.setState(CheckinState.DONE);
 			session.store(revision);
-			session.commit();
 
 			Set<String> emailAddresses = new HashSet<String>();
 			for (Clash clash : clashes) {
@@ -85,8 +86,11 @@ public class ClashDetectionLongAction extends LongAction {
 			if (!emailAddresses.isEmpty()) {
 				String[] emailAddressesArray = new String[emailAddresses.size()];
 				emailAddresses.toArray(emailAddressesArray);
-				MailSystem.getInstance().sendClashDetectionEmail(project.getOid(), actingUser.getName(), senderAddress, Service.convert(project.getClashDetectionSettings()), emailAddressesArray);
+				
+				SendClashesEmailDatabaseAction sendClashesEmailDatabaseAction = new SendClashesEmailDatabaseAction(AccessMethod.INTERNAL, actingUoid, poid, Service.convert(project.getClashDetectionSettings()), emailAddresses);
+				sendClashesEmailDatabaseAction.execute(session);
 			}
+			session.commit();
 		} catch (Throwable e) {
 			LOGGER.error("", e);
 			try {

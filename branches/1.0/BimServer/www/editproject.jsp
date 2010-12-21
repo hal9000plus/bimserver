@@ -24,6 +24,8 @@
 <script type="text/javascript" src="js/proj4js.js"></script>
 <script type="text/javascript" src="js/map.js"></script>
 <!-- end mapscripts -->
+<div class="sidebar"></div>
+<div class="content">
 <%
 	if (loginManager.getService().isLoggedIn()) {
 		DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm");
@@ -67,9 +69,6 @@
 		}
 	}
 %>
-<div class="sidebar"></div>
-
-<div class="content">
 <%
 	if (request.getParameter("message") != null) {
 				out.println("<div class=\"error\">" + request.getParameter("message") + "</div>");

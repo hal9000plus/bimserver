@@ -50,7 +50,7 @@
 		if (ServerSettings.getSettings().isShowVersionUpgradeAvailable() && checkVersion.updateNeeded()) {
 %>
 <div class="error">
-A newer version of the BIM Server is available online.<br/>
+A newer version of the BIMserver is available online.<br/>
 <a href="<%= checkVersion.getOnlineVersion().getSupportUrl() %>">Support</a> | <a href="<%= checkVersion.getOnlineVersion().getDownloadUrl() %>">Download</a><br/>
 E-mail <a href="mailto:<%= checkVersion.getOnlineVersion().getSupportEmail() %>"><%= checkVersion.getOnlineVersion().getSupportEmail() %></a> for more info<br/>
 </div>
@@ -71,7 +71,7 @@ E-mail <a href="mailto:<%= checkVersion.getOnlineVersion().getSupportEmail() %>"
 	  The latest versions are available for download from <a href=" http://ifcengine.com" target="_blank">ifcengine.com</a>. <br/>
       In case of none commercial use there is no license fee and redistribution is free as long as clearly mentioned that the IFC Engine DLL is used. <br/>
       This BIMserver software is non-commercial so users of the BIMserver software can use it free of charge.<br/>
-      Within the Open Source BIM Server there is one exception to the normal conditions:<br/>
+      Within the Open Source BIMserver there is one exception to the normal conditions:<br/>
       A special version of the IFC Engine DLL is used that includes Clashdetection functionality, this version is not commercially available. For more information, please contact TNO.<br/>
       <br/>
 	</div>
@@ -131,7 +131,7 @@ E-mail <a href="mailto:<%= checkVersion.getOnlineVersion().getSupportEmail() %>"
 			<tr><td class="firstcolumn">Line separator</td><td><%=System.getProperty("line.separator") %></td></tr>
 		</table>
 	</div>
-	<div class="tabbertab" id="bimservertab" title="BIM Server">
+	<div class="tabbertab" id="bimservertab" title="BIMserver">
 		<table class="formatted infotable">
 			<tr><td colspan="2" class="tabletitle">Version</td></tr>
 			<tr><td class="firstcolumn">Local Version</td><td><%=checkVersion.getLocalVersion().getVersion() %></td></tr>

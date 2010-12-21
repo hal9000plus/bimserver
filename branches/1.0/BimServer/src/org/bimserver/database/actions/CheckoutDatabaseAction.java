@@ -55,7 +55,6 @@ public class CheckoutDatabaseAction extends BimDatabaseAction<IfcModel> {
 					bimDatabaseSession.store(checkout);
 					bimDatabaseSession.store(newCheckout);
 					bimDatabaseSession.store(project);
-					bimDatabaseSession.saveOidCounter();
 					return realCheckout(project, revision, bimDatabaseSession, user);
 				}
 			}
@@ -67,7 +66,6 @@ public class CheckoutDatabaseAction extends BimDatabaseAction<IfcModel> {
 			checkout.setRevision(revision);
 			bimDatabaseSession.store(checkout);
 			bimDatabaseSession.store(project);
-			bimDatabaseSession.saveOidCounter();
 			return realCheckout(project, revision, bimDatabaseSession, user);
 		} else {
 			throw new UserException("Insufficient rights to checkout this project");

@@ -64,7 +64,6 @@ public class CheckinDatabaseAction extends GenericCheckinDatabaseAction {
 		bimDatabaseSession.store(model.getValues(), project.getId(), concreteRevision.getId());
 		bimDatabaseSession.store(concreteRevision);
 		bimDatabaseSession.store(project);
-		bimDatabaseSession.saveOidCounter();
 		return concreteRevision;
 	}
 }

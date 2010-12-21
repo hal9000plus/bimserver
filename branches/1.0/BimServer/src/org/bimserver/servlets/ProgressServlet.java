@@ -32,23 +32,25 @@ public class ProgressServlet extends HttpServlet {
 				String[] split = roidsString.split(";");
 				for (String roidString : split) {
 					long roid = Long.parseLong(roidString);
-					SRevision revision = loginManager.getService().getRevision(roid);
-					JSONObject object = new JSONObject();
-					object.put("roid", roid);
-					object.put("state", revision.getState());
-					object.put("totalsize", revision.getSize());
-					object.put("lastError", revision.getLastError());
-					object.put("clashes", revision.getLastClashes().size());
-					object.put("islast", (loginManager.getService().getProjectByPoid(revision.getProjectId()).getLastRevisionId() == revision.getOid()));
-					result.put(object);
+					try {
+						SRevision revision = loginManager.getService().getRevision(roid);
+						JSONObject object = new JSONObject();
+						object.put("roid", roid);
+						object.put("state", revision.getState());
+						object.put("totalsize", revision.getSize());
+						object.put("lastError", revision.getLastError());
+						object.put("clashes", revision.getLastClashes().size());
+						object.put("islast", (loginManager.getService().getProjectByPoid(revision.getProjectId()).getLastRevisionId() == revision.getOid()));
+						result.put(object);
+					} catch (UserException e) {
+						// This is probably a browser trying to load stuff that is not there anymore
+					}
 				}
 			} else {
 				result.put("error");
 			}
 			result.write(response.getWriter());
 		} catch (NumberFormatException e) {
-			LOGGER.error("", e);
-		} catch (UserException e) {
 			LOGGER.error("", e);
 		} catch (JSONException e) {
 			LOGGER.error("", e);

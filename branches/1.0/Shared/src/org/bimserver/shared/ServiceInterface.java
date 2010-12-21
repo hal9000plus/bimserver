@@ -116,8 +116,7 @@ public interface ServiceInterface {
 			throws UserException;
 
 	@WebMethod(action = "addUser")
-	long addUser(@WebParam(name = "username") String username, @WebParam(name = "password") String password,
-			@WebParam(name = "name") String name, @WebParam(name = "type") SUserType type) throws UserException;
+	long addUser(@WebParam(name = "username") String username, @WebParam(name = "name") String name, @WebParam(name = "type") SUserType type, boolean selfRegistration) throws UserException;
 
 	@WebMethod(action = "changeUserType")
 	void changeUserType(@WebParam(name = "uoid") long uoid, @WebParam(name = "userType") SUserType userType) throws UserException;
@@ -254,9 +253,6 @@ public interface ServiceInterface {
 	@WebMethod(action = "getLastClashes")
 	List<SClash> getLastClashes(@WebParam(name = "roid") long roid) throws UserException;
 
-	@WebMethod(action = "resetPassword")
-	void resetPassword(@WebParam(name = "emailAddress") String emailAddress) throws UserException;
-
 	@WebMethod(action = "branchToNewProject")
 	SCheckinResult branchToNewProject(@WebParam(name = "roid") long roid, @WebParam(name = "projectName") String projectName,
 			@WebParam(name = "comment") String comment) throws UserException;
@@ -313,23 +309,31 @@ public interface ServiceInterface {
 
 	SUser getCurrentUser() throws UserException;
 
-	boolean isLoggedIn();
+	boolean isLoggedIn() throws UserException;
 
 	void loginAnonymous() throws UserException;
 	
 	List<SUserSession> getActiveUserSessions() throws UserException;
 
-	Date getActiveSince();
+	Date getActiveSince() throws UserException;
 
-	Date getLastActive();
+	Date getLastActive() throws UserException;
 
-	Token getCurrentToken();
+	Token getCurrentToken() throws UserException;
 
-	SAccessMethod getAccessMethod();
+	SAccessMethod getAccessMethod() throws UserException;
 	
-	Set<ResultType> getEnabledResultTypes();
+	Set<ResultType> getEnabledResultTypes() throws UserException;
 	
-	Set<ResultType> getAllResultTypes();
+	Set<ResultType> getAllResultTypes() throws UserException;
 
 	List<SCheckout> getAllCheckoutsOfProjectAndSubProjects(long poid) throws UserException;
+	
+	void requestPasswordChange(long uoid) throws UserException;
+
+	void sendCompareEmail(SCompareType sCompareType, long poid, long roid1, long roid2, String address) throws UserException;
+	
+	void validateAccount(long uoid, String token, String password) throws UserException;
+
+	void sendClashesEmail(SClashDetectionSettings sClashDetectionSettings, long poid, Set<String> addressesTo) throws UserException;
 }

@@ -25,7 +25,7 @@
 		EmfSerializerFactory emfSerializerFactory = EmfSerializerFactory.getInstance();
 		try {
 	if (request.getParameter("mid") != null) {
-		out.println("<div class=\"succes\">" + Message.get(Integer.parseInt(request.getParameter("mid"))) + "</div>");
+		out.println("<div class=\"success\">" + Message.get(Integer.parseInt(request.getParameter("mid"))) + "</div>");
 	}
 	DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm");
 	long uoid = Long.parseLong(request.getParameter("uoid"));

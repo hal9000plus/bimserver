@@ -26,6 +26,7 @@ import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
@@ -33,6 +34,7 @@ import java.util.Scanner;
 import java.util.Set;
 
 import org.bimserver.database.actions.BimDatabaseAction;
+import org.bimserver.database.actions.PostCommitAction;
 import org.bimserver.database.query.conditions.AttributeCondition;
 import org.bimserver.database.query.conditions.Condition;
 import org.bimserver.database.query.conditions.IsOfTypeCondition;
@@ -86,6 +88,9 @@ public class DatabaseSession implements BimDatabaseSession {
 	private BimTransaction bimTransaction;
 	private final boolean readOnly;
 	private final Map<IdEObject, Long> objectsToCommit = new HashMap<IdEObject, Long>();
+	private final Set<PostCommitAction> postCommitActions = new LinkedHashSet<PostCommitAction>();
+	private boolean storeOid = false;
+	private boolean storePid = false;
 
 	public DatabaseSession(Database database, BimTransaction bimTransaction, boolean readOnly) {
 		this.database = database;
@@ -726,26 +731,16 @@ public class DatabaseSession implements BimDatabaseSession {
 
 	@Override
 	public int newPid() {
+		storePid = true;
 		return database.newPid();
 	}
 
-	@Override
-	public void saveOidCounter() throws BimDeadlockException {
+	private void saveOidCounter() throws BimDeadlockException {
 		database.getRegistry().save(Database.OID_COUNTER, database.getOidCounter(), this);
 	}
 
-	@Override
-	public void savePidCounter() throws BimDeadlockException {
+	private void savePidCounter() throws BimDeadlockException {
 		database.getRegistry().save(Database.PID_COUNTER, database.getPidCounter(), this);
-	}
-
-	@Override
-	public void saveUidCounter() throws BimDeadlockException {
-		database.getRegistry().save(Database.UID_COUNTER, database.getUidCounter(), this);
-	}
-
-	public void saveGidCounter() throws BimDeadlockException {
-		database.getRegistry().save(Database.GID_COUNTER, database.getGidCounter(), this);
 	}
 
 	private ByteBuffer createKeyBuffer(int pid, long oid, int rid) {
@@ -766,7 +761,7 @@ public class DatabaseSession implements BimDatabaseSession {
 	public long store(IdEObject object, int pid, int rid) throws BimDeadlockException {
 		if (!objectsToCommit.containsKey(object)) {
 			if (object.getOid() == -1) {
-				long newOid = database.newOid();
+				long newOid = newOid();
 				object.setOid(newOid);
 			}
 			// This code is meant to create oid's for wrapped values that are not referenced as so
@@ -777,7 +772,7 @@ public class DatabaseSession implements BimDatabaseSession {
 						IdEObject idEObject = (IdEObject)eGet;
 						if (idEObject != null) {
 							if (idEObject.getOid() == -1) {
-								idEObject.setOid(database.newOid());
+								idEObject.setOid(newOid());
 								idEObject.setPid(pid);
 								idEObject.setRid(rid);
 								objectsToCommit.put(idEObject, idEObject.getOid());
@@ -789,7 +784,7 @@ public class DatabaseSession implements BimDatabaseSession {
 							IdEObject idEObject = (IdEObject)o;
 							if (idEObject instanceof WrappedValue) {
 								if (idEObject.getOid() == -1) {
-									idEObject.setOid(database.newOid());
+									idEObject.setOid(newOid());
 									idEObject.setPid(pid);
 									idEObject.setRid(rid);
 									objectsToCommit.put(idEObject, idEObject.getOid());
@@ -804,6 +799,11 @@ public class DatabaseSession implements BimDatabaseSession {
 			objectsToCommit.put(object, object.getOid());
 		}
 		return object.getOid();
+	}
+
+	private long newOid() {
+		storeOid  = true;
+		return database.newOid();
 	}
 
 	public GrowingByteBuffer convertObjectToByteArray(IdEObject object) throws BimDeadlockException, BimDatabaseException {
@@ -913,7 +913,7 @@ public class DatabaseSession implements BimDatabaseSession {
 		}
 		WrappedValue wrappedValue = (WrappedValue) value;
 		if (wrappedValue.getOid() == -1) {
-			wrappedValue.setOid(database.newOid());
+			wrappedValue.setOid(newOid());
 		}
 		EStructuralFeature eStructuralFeature = wrappedValue.eClass().getEStructuralFeature("wrappedValue");
 		Short cid = database.getCidOfEClass(wrappedValue.eClass());
@@ -1085,10 +1085,21 @@ public class DatabaseSession implements BimDatabaseSession {
 					putInCache(new RecordIdentifier(object.getPid(), object.getOid(), object.getRid()), object);
 					database.getColumnDatabase().store(object.eClass().getName(), keyBuffer.array(), convertObjectToByteArray(object).array(), this);
 				}
+				if (storeOid) {
+					saveOidCounter();
+				}
+				if (storePid) {
+					savePidCounter();
+				}
+				for (PostCommitAction postCommitAction : postCommitActions) {
+					postCommitAction.execute();
+				}
+				bimTransaction.commit();
 			} catch (BimDatabaseException e) {
 				LOGGER.error("", e);
+			} catch (UserException e) {
+				LOGGER.error("", e);
 			}
-			bimTransaction.commit();
 		} else {
 			throw new BimDatabaseException("Cannot commit readonly session");
 		}
@@ -1187,5 +1198,10 @@ public class DatabaseSession implements BimDatabaseSession {
 			getMapWithOid(pid, rid, objectIdentifier.getCid(), objectIdentifier.getOid(), model);
 		}
 		return model;
+	}
+
+	@Override
+	public void addPostCommitAction(PostCommitAction postCommitAction) {
+		postCommitActions.add(postCommitAction);
 	}
 }

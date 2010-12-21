@@ -1,1 +1,22 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><settings><allowSelfRegistration>true</allowSelfRegistration><allowUsersToCreateTopLevelProjects>false</allowUsersToCreateTopLevelProjects><autoTestClashes>false</autoTestClashes><checkinMergingEnabled>true</checkinMergingEnabled><customLogoAddress>http://www.bimserver.org/version/defaultlogo.gif 	</customLogoAddress><databaseLocation>database</databaseLocation><emailSenderAddress>leon@berlotti.com</emailSenderAddress><enabledExportTypes>O3D_JSON,CITYGML,REPORT_TYPES,REPORT_SYSTEMS,REPORT_COMPONENTS,OBJECT_INFO,KMZ,IFCXML,COBIE2,REPORT_SPACES,COLLADA,REPORT_ZONES,IFC,TEXT</enabledExportTypes><intelligentMerging>true</intelligentMerging><registrationAddition></registrationAddition><sendConfirmationEmailAfterRegistration>true</sendConfirmationEmailAfterRegistration><showVersionUpgradeAvailable>true</showVersionUpgradeAvailable><siteAddress>http://localhost:8082</siteAddress><smtpServer>smtp.xs4all.nl</smtpServer><useCaching>false</useCaching></settings>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<settings>
+	<allowSelfRegistration>true</allowSelfRegistration>
+	<allowUsersToCreateTopLevelProjects>false
+	</allowUsersToCreateTopLevelProjects>
+	<autoTestClashes>false</autoTestClashes>
+	<checkinMergingEnabled>true</checkinMergingEnabled>
+	<customLogoAddress>http://www.bimserver.org/version/defaultlogo.gif
+	</customLogoAddress>
+	<databaseLocation>database</databaseLocation>
+	<emailSenderAddress>leon@berlotti.com</emailSenderAddress>
+	<enabledExportTypes>O3D_JSON,CITYGML,REPORT_TYPES,REPORT_SYSTEMS,REPORT_COMPONENTS,OBJECT_INFO,KMZ,IFCXML,COBIE2,REPORT_SPACES,COLLADA,REPORT_ZONES,IFC,TEXT
+	</enabledExportTypes>
+	<intelligentMerging>true</intelligentMerging>
+	<registrationAddition></registrationAddition>
+	<sendConfirmationEmailAfterRegistration>true
+	</sendConfirmationEmailAfterRegistration>
+	<showVersionUpgradeAvailable>true</showVersionUpgradeAvailable>
+	<siteAddress>http://localhost:8082</siteAddress>
+	<smtpServer>relay.glaslokaal.nl</smtpServer>
+	<useCaching>false</useCaching>
+</settings>
