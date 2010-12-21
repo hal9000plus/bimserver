@@ -6,9 +6,9 @@
 <%@page import="org.slf4j.LoggerFactory"%>
 <%@page import="org.bimserver.utils.WebUtils"%>
 <%@page import="org.bimserver.interfaces.objects.SClashDetectionSettings"%>
-
 <%@page import="java.util.Set"%>
-<%@page import="java.util.HashSet"%><jsp:useBean id="loginManager" scope="session" class="org.bimserver.web.LoginManager" />
+<%@page import="java.util.HashSet"%>
+<jsp:useBean id="loginManager" scope="session" class="org.bimserver.web.LoginManager" />
 <%
 	try {
 		String address = request.getParameter("address");

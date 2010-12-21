@@ -274,7 +274,13 @@ $(document).ready(function(){
 	});
 	$("#emailclashesform").submit(function(){
 		$("#emailclashesajaxloader").show();
-		$("#emailclashesform").load("sendclashesemail.jsp?poid=" + <%=poid%> + "&address=" + $("#address").val() + "&margin=" + $("#emailmargin").val() + "&revisions=" + $("#emailrevisions").val() + "&ignored=" + $("#emailignored").val());
+		var data = new Object();
+		data.poid = <%=poid%>;
+		data.address = $("#address").val();
+		data.margin = $("#emailmargin").val();
+		data.revisions = $("#emailrevisions").val();
+		data.ignored = $("#emailignored").val();
+		$("#emailclashesform").load("sendclashesemail.jsp", data);
 		return false;
 	});
 	instrumentBrowserLinks();

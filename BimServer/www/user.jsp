@@ -207,7 +207,7 @@ if (userHasCheckinRights) { %>
 %>
 <tr>
 	<td><a href="project.jsp?poid=<%=project.getOid() %>"><%=JspHelper.completeProjectName(loginManager.getService(), project) %></a></td>
-	<td><% if (user.getUserType() != SUserType.ADMIN) { %><a href="revokepermission.jsp?type=user&amp;poid=<%=project.getOid() %>&amp;uoid=<%=uoid %>">revoke</a><% } %></td>
+	<td><% if (loginManager.getUserType() == SUserType.ADMIN && user.getUserType() != SUserType.ADMIN) { %><a href="revokepermission.jsp?type=user&amp;poid=<%=project.getOid() %>&amp;uoid=<%=uoid %>">revoke</a><% } %></td>
 </tr>
 <%
 		}
