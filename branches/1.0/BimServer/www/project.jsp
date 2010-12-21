@@ -489,7 +489,7 @@ if (revisions.size() > 0) {
 will be done on the latest revision (<a
 	href="revision.jsp?roid=<%=lastRevision.getOid() %>"><%=lastRevision.getId() %></a>),
 open a specific revision to query other revisions<br />
-<br />
+<br/>
 <jsp:include page="query.jsp">
 	<jsp:param name="poid" value="<%=poid %>" />
 	<jsp:param name="roid" value="<%=lastRevision.getOid() %>" />

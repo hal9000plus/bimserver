@@ -12,7 +12,7 @@
 	if (request.getParameter("password") != null) {
 		try {
 			loginManager.getAdminService().validateAccount(uoid, request.getParameter("token"), request.getParameter("password"));
-			out.println("<div class=\"success\">Account successfully validated, you can now <a href=\"/\">login</a></div>");
+			out.println("<div class=\"success\">Account successfully validated, you can now <a href=\"/?username=" + sUser.getUsername() + "\">login</a></div>");
 			showForm = false;
 		} catch (UserException e) {
 			out.println("<div class=\"error\">" + e.getMessage() + "</div>");
