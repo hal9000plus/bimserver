@@ -43,7 +43,7 @@
 //		String html = JspHelper.writeSummaryTable(project, rid, revisionSummary);
 //		msg.setContent(html, "text/html");
 		Transport.send(msg);
-		out.append("Revision summary succesfully e-mailed to " + address);
+		out.append("Revision summary successfully e-mailed to " + address);
 	} catch (Exception e) {
 		logger.error("", e);
 		out.append("An error has occured while sending revision summary: " + e.getMessage());

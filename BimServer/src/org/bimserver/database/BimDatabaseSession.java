@@ -6,6 +6,7 @@ import java.util.Map;
 import java.util.Set;
 
 import org.bimserver.database.actions.BimDatabaseAction;
+import org.bimserver.database.actions.PostCommitAction;
 import org.bimserver.database.query.conditions.Condition;
 import org.bimserver.database.store.CheckinState;
 import org.bimserver.database.store.ConcreteRevision;
@@ -34,15 +35,9 @@ public interface BimDatabaseSession {
 
 	User getAdminUser() throws BimDeadlockException, BimDatabaseException;
 
-	void savePidCounter() throws BimDeadlockException;
-
-	void saveOidCounter() throws BimDeadlockException;
-
 	long store(IdEObject eObject, int pid, int rid) throws BimDeadlockException;
 
 	long store(IdEObject eObject) throws BimDeadlockException;
-
-	void saveUidCounter() throws BimDeadlockException;
 
 	User getUserByUserName(String name) throws BimDeadlockException, BimDatabaseException;
 
@@ -112,8 +107,6 @@ public interface BimDatabaseSession {
 
 	void clearCache();
 
-	void saveGidCounter() throws BimDeadlockException;
-
 	User getUserByUoid(long uoid);
 
 	Project getProjectByPoid(long poid);
@@ -125,4 +118,6 @@ public interface BimDatabaseSession {
 	IdEObject get(EClass eClass, long oid);
 
 	User getAnonymousUser() throws BimDatabaseException, BimDeadlockException;
+
+	void addPostCommitAction(PostCommitAction postCommitAction);
 }

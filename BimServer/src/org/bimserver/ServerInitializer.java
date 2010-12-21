@@ -148,7 +148,6 @@ public class ServerInitializer implements ServletContextListener {
 			BimDatabaseSession session = bimDatabase.createSession();
 			try {
 				session.store(serverStarted);
-				session.saveOidCounter();
 				session.commit();
 			} finally {
 				session.close();

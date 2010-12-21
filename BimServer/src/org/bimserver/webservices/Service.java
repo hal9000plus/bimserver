@@ -22,11 +22,13 @@ package org.bimserver.webservices;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
@@ -36,6 +38,14 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
 import javax.activation.DataHandler;
+import javax.mail.Address;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.AddressException;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
@@ -44,6 +54,7 @@ import nl.tue.buildingsmart.express.dictionary.SchemaDefinition;
 
 import org.bimserver.Merger;
 import org.bimserver.ServerInfo;
+import org.bimserver.ServerInitializer;
 import org.bimserver.ServerSettings;
 import org.bimserver.SettingsSaveException;
 import org.bimserver.database.BimDatabase;
@@ -94,7 +105,8 @@ import org.bimserver.database.actions.GetSubProjectsDatabaseAction;
 import org.bimserver.database.actions.GetUserByNameDatabaseAction;
 import org.bimserver.database.actions.ProcessChangeSetDatabaseAction;
 import org.bimserver.database.actions.RemoveUserFromProjectDatabaseAction;
-import org.bimserver.database.actions.ResetPasswordDatabaseAction;
+import org.bimserver.database.actions.RequestPasswordChangeDatabaseAction;
+import org.bimserver.database.actions.SendClashesEmailDatabaseAction;
 import org.bimserver.database.actions.SetRevisionTagDatabaseAction;
 import org.bimserver.database.actions.UndeleteProjectDatabaseAction;
 import org.bimserver.database.actions.UndeleteUserDatabaseAction;
@@ -104,7 +116,9 @@ import org.bimserver.database.actions.UpdateProjectDatabaseAction;
 import org.bimserver.database.actions.UpdateRevisionDatabaseAction;
 import org.bimserver.database.actions.UserHasCheckinRightsDatabaseAction;
 import org.bimserver.database.actions.UserHasRightsDatabaseAction;
+import org.bimserver.database.actions.ValidateUserDatabaseAction;
 import org.bimserver.database.store.Checkout;
+import org.bimserver.database.store.Clash;
 import org.bimserver.database.store.ClashDetectionSettings;
 import org.bimserver.database.store.ConcreteRevision;
 import org.bimserver.database.store.GeoTag;
@@ -146,6 +160,8 @@ import org.bimserver.interfaces.objects.SUser;
 import org.bimserver.interfaces.objects.SUserType;
 import org.bimserver.longaction.LongActionManager;
 import org.bimserver.longaction.LongCheckinAction;
+import org.bimserver.mail.MailSystem;
+import org.bimserver.mail.MailSystemException;
 import org.bimserver.rights.RightsManager;
 import org.bimserver.serializers.EmfSerializerFactory;
 import org.bimserver.shared.ChangeSet;
@@ -168,6 +184,7 @@ import org.bimserver.shared.SCompareResult.SObjectRemoved;
 import org.bimserver.tools.generators.GenerateUtils;
 import org.bimserver.utils.FakeClosingInputStream;
 import org.bimserver.utils.Hashers;
+import org.bimserver.web.JspHelper;
 import org.eclipse.emf.common.util.Enumerator;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -334,7 +351,8 @@ public class Service implements ServiceInterface {
 		}
 	}
 
-	private SCheckinResult processCheckinSync(final long poid, final String comment, long fileSize, final BimDatabaseSession session, IfcModel model, boolean merge) throws UserException {
+	private SCheckinResult processCheckinSync(final long poid, final String comment, long fileSize, final BimDatabaseSession session, IfcModel model, boolean merge)
+			throws UserException {
 		BimDatabaseAction<ConcreteRevision> action = new CheckinDatabaseAction(accessMethod, model, poid, currentUoid, comment);
 		try {
 			ConcreteRevision revision = session.executeAndCommitAction(action, DEADLOCK_RETRIES);
@@ -351,7 +369,8 @@ public class Service implements ServiceInterface {
 		return null;
 	}
 
-	private SCheckinResult processCheckinAsync(final long poid, final String comment, long fileSize, final BimDatabaseSession session, IfcModel model, boolean merge) throws UserException {
+	private SCheckinResult processCheckinAsync(final long poid, final String comment, long fileSize, final BimDatabaseSession session, IfcModel model, boolean merge)
+			throws UserException {
 		try {
 			BimDatabaseAction<ConcreteRevision> action = new CheckinPart1DatabaseAction(accessMethod, poid, currentUoid, model, comment);
 			ConcreteRevision revision = session.executeAndCommitAction(action, DEADLOCK_RETRIES);
@@ -403,11 +422,11 @@ public class Service implements ServiceInterface {
 	}
 
 	@Override
-	public long addUser(String username, String password, String name, SUserType type) throws UserException {
+	public long addUser(String username, String name, SUserType type, boolean selfRegistration) throws UserException {
 		requireAuthentication();
 		BimDatabaseSession session = bimDatabase.createSession();
 		try {
-			BimDatabaseAction<Long> action = new AddUserDatabaseAction(accessMethod, username, password, name, convert(type), currentUoid);
+			BimDatabaseAction<Long> action = new AddUserDatabaseAction(accessMethod, username, name, convert(type), currentUoid, selfRegistration);
 			return session.executeAndCommitAction(action, DEADLOCK_RETRIES);
 		} catch (BimDatabaseException e) {
 			throw new UserException("Database error", e);
@@ -629,7 +648,7 @@ public class Service implements ServiceInterface {
 		try {
 			BimDatabaseAction<User> action = new GetUserByNameDatabaseAction(accessMethod, username);
 			User user = session.executeAction(action, DEADLOCK_RETRIES);
-			if (user != null && user.getPassword().equals(Hashers.getSha256Hash(password))) {
+			if (user != null && Hashers.getSha256Hash(password).equals(user.getPassword())) {
 				if (user.getState() == ObjectState.DELETED) {
 					throw new UserException("User account has been deleted");
 				}
@@ -968,7 +987,11 @@ public class Service implements ServiceInterface {
 		BimDatabaseSession session = bimDatabase.createSession();
 		try {
 			BimDatabaseAction<User> action = new GetUserByNameDatabaseAction(accessMethod, username);
-			return convert(session.executeAction(action, DEADLOCK_RETRIES), SUser.class, session);
+			SUser convert = convert(session.executeAction(action, DEADLOCK_RETRIES), SUser.class, session);
+			if (convert == null) {
+				throw new UserException("User with username \"" + username + "\" not found");
+			}
+			return convert;
 		} catch (BimDatabaseException e) {
 			throw new UserException("Database error", e);
 		} finally {
@@ -1253,26 +1276,12 @@ public class Service implements ServiceInterface {
 	}
 
 	@Override
-	public void resetPassword(String emailAddress) throws UserException {
-		requireAuthentication();
-		BimDatabaseSession session = bimDatabase.createSession();
-		try {
-			BimDatabaseAction<Void> action = new ResetPasswordDatabaseAction(accessMethod, currentUoid, emailAddress);
-			session.executeAndCommitAction(action, DEADLOCK_RETRIES);
-		} catch (BimDatabaseException e) {
-			throw new UserException("Database error", e);
-		} finally {
-			session.close();
-		}
-	}
-
-	@Override
 	public List<SGuidClash> findClashesByGuid(SClashDetectionSettings sClashDetectionSettings) throws UserException {
 		requireAuthentication();
 		BimDatabaseSession session = bimDatabase.createSession();
 		try {
-			return convert(session.executeAction(new FindClashesDatabaseAction(accessMethod, convert(sClashDetectionSettings, session), schema, ifcEngineFactory, currentUoid), DEADLOCK_RETRIES),
-					SGuidClash.class, session);
+			return convert(session.executeAction(new FindClashesDatabaseAction(accessMethod, convert(sClashDetectionSettings, session), schema, ifcEngineFactory, currentUoid),
+					DEADLOCK_RETRIES), SGuidClash.class, session);
 		} catch (BimDatabaseException e) {
 			throw new UserException("Database error", e);
 		} finally {
@@ -1285,8 +1294,8 @@ public class Service implements ServiceInterface {
 		requireAuthentication();
 		BimDatabaseSession session = bimDatabase.createSession();
 		try {
-			return convert(session.executeAction(new FindClashesDatabaseAction(accessMethod, convert(sClashDetectionSettings, session), schema, ifcEngineFactory, currentUoid), DEADLOCK_RETRIES),
-					SEidClash.class, session);
+			return convert(session.executeAction(new FindClashesDatabaseAction(accessMethod, convert(sClashDetectionSettings, session), schema, ifcEngineFactory, currentUoid),
+					DEADLOCK_RETRIES), SEidClash.class, session);
 		} catch (BimDatabaseException e) {
 			throw new UserException("Database error", e);
 		} finally {
@@ -1773,5 +1782,80 @@ public class Service implements ServiceInterface {
 			}
 		}
 		return resultTypes;
+	}
+
+	@Override
+	public void sendCompareEmail(SCompareType sCompareType, long poid, long roid1, long roid2, String address) throws UserException {
+		SUser currentUser = getCurrentUser();
+		String senderName = currentUser.getName();
+		String senderAddress = currentUser.getUsername();
+		if (!senderAddress.contains("@") || !senderAddress.contains(".")) {
+			senderAddress = ServerSettings.getSettings().getEmailSenderAddress();
+		}
+
+		Session mailSession = MailSystem.getInstance().createMailSession();
+
+		Message msg = new MimeMessage(mailSession);
+
+		try {
+			InternetAddress addressFrom = new InternetAddress(senderAddress);
+			addressFrom.setPersonal(senderName);
+			msg.setFrom(addressFrom);
+
+			InternetAddress[] addressTo = new InternetAddress[1];
+			addressTo[0] = new InternetAddress(address);
+			msg.setRecipients(Message.RecipientType.TO, addressTo);
+
+			msg.setSubject("BIMserver Model Comparator");
+			SCompareResult compareResult = compare(roid1, roid2, sCompareType);
+			String html = JspHelper.writeCompareResult(compareResult, roid1, roid2, sCompareType, getProjectByPoid(poid));
+			msg.setContent(html, "text/html");
+			Transport.send(msg);
+		} catch (AddressException e) {
+			e.printStackTrace();
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		} catch (MessagingException e) {
+			e.printStackTrace();
+		}
+	}
+
+	@Override
+	public void requestPasswordChange(long uoid) throws UserException {
+		BimDatabaseSession session = bimDatabase.createSession();
+		try {
+			BimDatabaseAction<Void> action = new RequestPasswordChangeDatabaseAction(accessMethod, uoid);
+			session.executeAndCommitAction(action, DEADLOCK_RETRIES);
+		} catch (BimDatabaseException e) {
+			throw new UserException("Database error", e);
+		} finally {
+			session.close();
+		}
+	}
+
+	@Override
+	public void sendClashesEmail(SClashDetectionSettings sClashDetectionSettings, long poid, Set<String> addressesTo) throws UserException {
+		BimDatabaseSession session = bimDatabase.createSession();
+		try {
+			BimDatabaseAction<Void> action = new SendClashesEmailDatabaseAction(accessMethod, currentUoid, poid, sClashDetectionSettings, addressesTo);
+			session.executeAndCommitAction(action, DEADLOCK_RETRIES);
+		} catch (BimDatabaseException e) {
+			throw new UserException("Database error", e);
+		} finally {
+			session.close();
+		}
+	}
+
+	@Override
+	public void validateAccount(long uoid, String token, String password) throws UserException {
+		BimDatabaseSession session = bimDatabase.createSession();
+		try {
+			BimDatabaseAction<Void> action = new ValidateUserDatabaseAction(accessMethod, uoid, token, password);
+			session.executeAndCommitAction(action, DEADLOCK_RETRIES);
+		} catch (BimDatabaseException e) {
+			throw new UserException("Database error", e);
+		} finally {
+			session.close();
+		}
 	}
 }

@@ -146,10 +146,8 @@ public class TreePanel extends JPanel {
 			public void actionPerformed(ActionEvent e) {
 				String newUserName = JOptionPane.showInputDialog(testWindow, "What is the name of the new user?", "Add new user", JOptionPane.OK_OPTION
 						| JOptionPane.INFORMATION_MESSAGE);
-				String newPassword = JOptionPane.showInputDialog(testWindow, "What is the password new user?", "Add new user", JOptionPane.OK_OPTION
-						| JOptionPane.INFORMATION_MESSAGE);
 				try {
-					serviceHolder.getService().addUser(newUserName, newPassword, newUserName, SUserType.USER);
+					serviceHolder.getService().addUser(newUserName, newUserName, SUserType.USER, false);
 				} catch (UserException e1) {
 					JOptionPane.showMessageDialog(testWindow, e1.getUserMessage());
 				}
@@ -188,7 +186,7 @@ public class TreePanel extends JPanel {
 					// testWindow.getServiceHolder().getPassword())) {
 					// updateProjects(serverTreeNode);
 					// updateUsers(serverTreeNode);
-					// testWindow.setTitle("BIM Server Tester - " +
+					// testWindow.setTitle("BIMserver Tester - " +
 					// testWindow.getServiceHolder().getUsername());
 					// projectTree.expandRow(0);
 					// } else {
@@ -201,7 +199,7 @@ public class TreePanel extends JPanel {
 					serverTreeNode.clearProjects();
 					serverTreeNode.clearUsers();
 					tree.updateUI();
-					testWindow.setTitle("BIM Server Tester - Not connected");
+					testWindow.setTitle("BIMserver Tester - Not connected");
 					tree.collapseRow(0);
 				}
 			}

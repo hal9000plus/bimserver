@@ -39,8 +39,12 @@ public class RestAuthentication extends SoapHeaderInterceptor {
 				LOGGER.error("", e);
 			}
 		}
-		if (newService.isLoggedIn()) {
-			return;
+		try {
+			if (newService.isLoggedIn()) {
+				return;
+			}
+		} catch (UserException e1) {
+			LOGGER.error("", e1);
 		}
 		AuthorizationPolicy policy = message.get(AuthorizationPolicy.class);
 		if (policy == null) {

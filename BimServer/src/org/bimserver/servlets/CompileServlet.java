@@ -65,12 +65,12 @@ public class CompileServlet extends HttpServlet {
 		if (loginManager == null) {
 			loginManager = new LoginManager();
 		}
-		if (!loginManager.getService().isLoggedIn()) {
-			try {
+		try {
+			if (!loginManager.getService().isLoggedIn()) {
 				loginManager.getService().loginAnonymous();
-			} catch (UserException e) {
-				LOGGER.error("", e);
 			}
+		} catch (UserException e) {
+			LOGGER.error("", e);
 		}
 		BimDatabaseSession session = database.createSession();
 		try {

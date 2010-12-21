@@ -70,8 +70,6 @@ public class Database implements BimDatabase {
 	private static final Logger LOGGER = LoggerFactory.getLogger(Database.class);
 	public static final String OID_COUNTER = "OID_COUNTER";
 	public static final String PID_COUNTER = "PID_COUNTER";
-	public static final String UID_COUNTER = "UID_COUNTER";
-	public static final String GID_COUNTER = "GID_COUNTER";
 	private static final String CLASS_LOOKUP_TABLE = "INT-ClassLookup";
 	public static final String STORE_PROJECT_NAME = "INT-Store";
 	public static final int STORE_PROJECT_ID = 1;
@@ -85,8 +83,6 @@ public class Database implements BimDatabase {
 	private final List<String> realClasses = new ArrayList<String>();
 	private volatile long oidCounter;
 	private volatile int pidCounter = 1;
-	private volatile int gidCounter = 1;
-	private volatile int uidCounter;
 	private final FieldIgnoreMap fieldIgnoreMap;
 	private final Registry registry;
 	private Date created;
@@ -138,16 +134,14 @@ public class Database implements BimDatabase {
 			databaseCreated.setPath(getColumnDatabase().getLocation());
 			databaseCreated.setVersion(databaseSchemaVersion);
 			databaseSession.store(databaseCreated);
-			
+
 			if (getColumnDatabase().isNew()) {
 				new CreateBaseProject(AccessMethod.INTERNAL).execute(databaseSession);
-				new AddUserDatabaseAction(AccessMethod.INTERNAL, "admin", "admin", "Administrator", UserType.ADMIN, -1).execute(databaseSession);
-				new AddUserDatabaseAction(AccessMethod.INTERNAL, "anonymous", "anonymous", "Anonymous", UserType.ANONYMOUS, -1).execute(databaseSession);
+				new AddUserDatabaseAction(AccessMethod.INTERNAL, "admin", "admin", "Administrator", UserType.ADMIN, -1, false).execute(databaseSession);
+				new AddUserDatabaseAction(AccessMethod.INTERNAL, "anonymous", "anonymous", "Anonymous", UserType.ANONYMOUS, -1, false).execute(databaseSession);
 			} else {
 				initOidCounter(databaseSession);
 				initPidCounter(databaseSession);
-				initUidCounter(databaseSession);
-				initGidCounter(databaseSession);
 			}
 			for (EClass eClass : classifiers.keyBSet()) {
 				if (eClass.getEPackage() == Ifc2x3Package.eINSTANCE && eClass != Ifc2x3Package.eINSTANCE.getWrappedValue()) {
@@ -298,14 +292,6 @@ public class Database implements BimDatabase {
 
 	public void initPidCounter(DatabaseSession databaseSession) throws BimDeadlockException {
 		pidCounter = registry.readInt(PID_COUNTER, databaseSession);
-	}
-
-	public void initGidCounter(DatabaseSession databaseSession) throws BimDeadlockException {
-		gidCounter = registry.readInt(GID_COUNTER, databaseSession);
-	}
-	
-	public void initUidCounter(DatabaseSession databaseSession) throws BimDeadlockException {
-		uidCounter = registry.readInt(UID_COUNTER, databaseSession);
 	}
 
 	public synchronized int newPid() {
@@ -460,15 +446,7 @@ public class Database implements BimDatabase {
 	public int getPidCounter() {
 		return pidCounter;
 	}
-
-	public int getGidCounter() {
-		return gidCounter;
-	}
 	
-	public int getUidCounter() {
-		return uidCounter;
-	}
-
 	public Short getCidOfEClass(EClass eClass) {
 		return classifiers.getA(eClass);
 	}

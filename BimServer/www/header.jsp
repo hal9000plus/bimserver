@@ -18,7 +18,7 @@
  	Version version = VersionChecker.getInstance().getLocalVersion();
  		Settings settings = ServerSettings.getSettings();
  %> <img class="headerimage"
-	src="<%=settings.getCustomLogoAddress() != null ? settings.getCustomLogoAddress() : "images/logo.gif"%>" alt="BIM Server" title="BIM Server <%=version.getVersion()%>" /></a> <%
+	src="<%=settings.getCustomLogoAddress() != null ? settings.getCustomLogoAddress() : "images/logo.gif"%>" alt="BIMserver" title="BIMserver <%=version.getVersion()%>" /></a> <%
  	if (loginManager.getService().isLoggedIn()) {
  %>
 <div class="menubar">

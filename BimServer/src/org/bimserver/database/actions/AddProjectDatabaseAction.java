@@ -97,8 +97,6 @@ public class AddProjectDatabaseAction extends BimDatabaseAction<Project> {
 		}
 		bimDatabaseSession.store(project);
 		bimDatabaseSession.store(newProjectAdded);
-		bimDatabaseSession.savePidCounter();
-		bimDatabaseSession.saveOidCounter();
 		return project;
 	}
 }
