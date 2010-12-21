@@ -14,6 +14,7 @@ import org.bimserver.database.store.log.AccessMethod;
 import org.bimserver.database.store.log.LogFactory;
 import org.bimserver.database.store.log.NewRevisionAdded;
 import org.bimserver.ifc.IfcModel;
+import org.bimserver.mail.MailSystem;
 import org.bimserver.rights.RightsManager;
 import org.bimserver.shared.UserException;
 
@@ -45,6 +46,9 @@ public class CheckinDatabaseAction extends GenericCheckinDatabaseAction {
 		}
 		if (!project.getRevisions().isEmpty() && project.getRevisions().get(project.getRevisions().size()-1).getState() == CheckinState.STORING) {
 			throw new UserException("Another checkin on this project is currently running, please wait and try again");
+		}
+		if (!MailSystem.isValidEmailAddress(user.getUsername())) {
+			throw new UserException("Users must have a valid e-mail address to checkin");
 		}
 		checkCheckSum(project);
 		ConcreteRevision concreteRevision = bimDatabaseSession.createNewConcreteRevision(model.size(), poid, actingUoid, comment.trim(), CheckinState.DONE);
