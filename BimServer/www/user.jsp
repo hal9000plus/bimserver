@@ -21,6 +21,18 @@
 <%@page import="org.bimserver.shared.SRevisionDateComparator"%>
 <%@ include file="header.jsp" %>
 <%
+	long uoid = Long.parseLong(request.getParameter("uoid"));
+%>
+<div class="sidebar">
+ <ul>
+<% if (loginManager.getUserType() == SUserType.ADMIN) { %>
+ <li><a href="edituser.jsp?uoid=<%=uoid%>">Edit</a></li>
+<% } %>
+ <li><a href="changepassword.jsp?uoid=<%=uoid%>">Change password</a></li>
+ </ul>
+</div>
+<div class="content">
+<%
 	if (loginManager.getService().isLoggedIn()) {
 		EmfSerializerFactory emfSerializerFactory = EmfSerializerFactory.getInstance();
 		try {
@@ -28,7 +40,6 @@
 		out.println("<div class=\"success\">" + Message.get(Integer.parseInt(request.getParameter("mid"))) + "</div>");
 	}
 	DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm");
-	long uoid = Long.parseLong(request.getParameter("uoid"));
 	SUser user = loginManager.getService().getUserByUoid(uoid);
 	List<SRevision> revisions = loginManager.getService().getAllRevisionsByUser(user.getOid());
 	Collections.sort(revisions, new SRevisionDateComparator(false));
@@ -40,17 +51,6 @@
 	final ServiceInterface service = loginManager.getService();
 	Collections.sort(nonAuthorizedProjects, new SProjectComparator(loginManager.getService()));
 %>
-<div class="sidebar">
- <ul>
-<% if (loginManager.getUserType() == SUserType.ADMIN) { %>
- <li><a href="edituser.jsp?uoid=<%=uoid%>">Edit</a></li>
-<% } %>
- <li><a href="changepassword.jsp?uoid=<%=uoid%>">Change password</a></li>
- </ul>
-</div>
-
-<div class="content">
-
 <h1>User details (<%=user.getName() %>)</h1>
 <div class="tabber" id="usertabber">
   <div class="tabbertab" id="detailstab" title="Details">

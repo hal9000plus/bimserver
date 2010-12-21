@@ -6,6 +6,9 @@
 <%@page import="org.bimserver.Message"%>
 <%@page import="org.bimserver.interfaces.objects.SUserType"%>
 <%@ include file="header.jsp" %>
+<div class="sidebar">
+</div>
+<div class="content">
 <%
 	if (loginManager.getService().isLoggedIn()) {
 		long uoid = Long.parseLong(request.getParameter("uoid"));
@@ -26,10 +29,6 @@
 			}
 		}
 %>
-<div class="sidebar">
-</div>
-
-<div class="content">
 <h1>Change password</h1>
 <fieldset>
 <form name="form" method="post" action="changepassword.jsp">

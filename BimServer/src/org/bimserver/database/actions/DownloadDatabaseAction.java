@@ -29,6 +29,9 @@ public class DownloadDatabaseAction extends BimDatabaseAction<IfcModel> {
 	@Override
 	public IfcModel execute(BimDatabaseSession bimDatabaseSession) throws UserException, BimDeadlockException, BimDatabaseException {
 		Revision revision = bimDatabaseSession.getVirtualRevision(roid);
+		if (revision == null) {
+			throw new UserException("Revision with oid " + roid + " not found");
+		}
 		Project project = revision.getProject();
 		User user = bimDatabaseSession.getUserByUoid(actingUoid);
 		if (!RightsManager.hasRightsOnProjectOrSuperProjectsOrSubProjects(user, project)) {
