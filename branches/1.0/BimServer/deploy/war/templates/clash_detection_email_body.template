@@ -1,0 +1,14 @@
+## Available parameters:
+##   name: The users full name
+##   username: The users username (usually e-mail address)
+##   siteaddress: The address of the running BIMserver
+##   url: A link to the clash detection page
+Dear $name,
+
+Clashes have been found in one of your models.
+
+Please click on the link below to see the clashes:
+
+$url
+
+The BIMserver
