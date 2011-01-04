@@ -176,6 +176,9 @@ public class Merger {
 			List<IdEObject> list = guidMap.get(guid);
 			if (list.size() > 1) {
 				IdEObject newestObject = list.get(list.size() - 1);
+				if (newestObject instanceof IfcProject) {
+					System.out.println();
+				}
 				for (IdEObject idEObject : list) {
 					if (idEObject != newestObject) {
 						removeReplaceLinks(model, newestObject, idEObject);
@@ -250,7 +253,10 @@ public class Merger {
 				}
 			}
 		}
+		mainObject.setOid(objectToRemove.getOid());
+		Long id = model.get(objectToRemove);
 		model.remove(objectToRemove);
+		model.setOid(mainObject, id);
 	}
 
 	private static IfcModel mergeScales(Project project, Set<IfcModel> ifcModels) {

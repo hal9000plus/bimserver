@@ -103,7 +103,7 @@ public class AddUserDatabaseAction extends BimDatabaseAction<Long> {
 			public void execute() throws UserException {
 				try {
 					if (ServerSettings.getSettings().isSendConfirmationEmailAfterRegistration()) {
-						if (MailSystem.isValidEmailAddress(user.getUsername())) {
+						if (MailSystem.isValidEmailAddress(user.getUsername()) && createrUoid != -1) {
 							Session mailSession = MailSystem.getInstance().createMailSession();
 							
 							Message msg = new MimeMessage(mailSession);

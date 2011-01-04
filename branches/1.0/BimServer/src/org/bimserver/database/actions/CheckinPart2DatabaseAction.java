@@ -39,18 +39,18 @@ public class CheckinPart2DatabaseAction extends BimDatabaseAction<Void> {
 			IfcModel ifcModel = null;
 			if (merge) {
 				LinkedHashSet<IfcModel> ifcModels = new LinkedHashSet<IfcModel>();
-				getIfcModel().setDate(new Date());
 				for (ConcreteRevision subRevision : lastRevision.getConcreteRevisions()) {
 					IfcModel subModel = bimDatabaseSession.getMap(subRevision.getProject().getId(), subRevision.getId());
 					subModel.setDate(subRevision.getDate());
 					ifcModels.add(subModel);
 				}
+				getIfcModel().setDate(new Date());
 				ifcModels.add(getIfcModel());
 				ifcModel = Merger.merge(project, ifcModels);
 			} else {
 				ifcModel = getIfcModel();
 			}
-			if (project.getConcreteRevisions().size() != 0) {
+			if (project.getConcreteRevisions().size() != 0 && !merge) {
 				// There already was a revision, lets delete it
 				bimDatabaseSession.clearProject(project.getId(), concreteRevision.getId() - 1, concreteRevision.getId());
 			}
