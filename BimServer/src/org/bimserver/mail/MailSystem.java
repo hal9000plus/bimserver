@@ -5,11 +5,8 @@ import java.util.Properties;
 import javax.mail.Session;
 
 import org.bimserver.ServerSettings;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class MailSystem {
-	private static final Logger LOGGER = LoggerFactory.getLogger(MailSystem.class);
 	private static final MailSystem INSTANCE = new MailSystem();
 
 	private MailSystem() {

@@ -16,11 +16,8 @@ import org.bimserver.database.store.Clash;
 import org.bimserver.database.store.ClashDetectionSettings;
 import org.bimserver.database.store.Project;
 import org.bimserver.database.store.Revision;
-import org.bimserver.database.store.User;
 import org.bimserver.database.store.log.AccessMethod;
 import org.bimserver.ifcengine.IfcEngineFactory;
-import org.bimserver.mail.MailSystem;
-import org.bimserver.web.LoginManager;
 import org.bimserver.webservices.Service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -62,7 +59,6 @@ public class ClashDetectionLongAction extends LongAction {
 		}
 		session = bimDatabase.createSession();
 		try {
-			User actingUser = session.getUserByUoid(actingUoid);
 			Project project = session.getProjectByPoid(poid);
 			ClashDetectionSettings clashDetectionSettings = project.getClashDetectionSettings();
 			clashDetectionSettings.getRevisions().add(project.getLastRevision());
@@ -81,8 +77,6 @@ public class ClashDetectionLongAction extends LongAction {
 				emailAddresses.add(clash.getRevision1().getUser().getUsername());
 				emailAddresses.add(clash.getRevision2().getUser().getUsername());
 			}
-			String senderAddress = actingUser.getUsername();
-			
 			if (!emailAddresses.isEmpty()) {
 				String[] emailAddressesArray = new String[emailAddresses.size()];
 				emailAddresses.toArray(emailAddressesArray);
