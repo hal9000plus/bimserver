@@ -52,6 +52,7 @@ import org.bimserver.ifc.PackageDefinition;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifcengine.IfcEngineFactory;
 import org.bimserver.longaction.LongActionManager;
+import org.bimserver.querycompiler.QueryCompiler;
 import org.bimserver.resources.JarResourceFetcher;
 import org.bimserver.resources.WarResourceFetcher;
 import org.bimserver.serializers.EmfSerializerFactory;
@@ -105,7 +106,7 @@ public class ServerInitializer implements ServletContextListener {
 
 			longActionManager = new LongActionManager();
 			longActionManager.start();
-			
+
 			FieldIgnoreMap fieldIgnoreMap = new FileFieldIgnoreMap(packages, resourceFetcher);
 			TemplateEngine.getTemplateEngine().init(resourceFetcher.getResource("templates/"));
 			File databaseDir = new File(ServerSettings.getSettings().getDatabaseLocation());
@@ -117,30 +118,38 @@ public class ServerInitializer implements ServletContextListener {
 			LOGGER.info("Using " + schemaFile + " as engine schema");
 
 			File nativeFolder = resourceFetcher.getFile("lib/");
-			IfcEngineFactory ifcEngineFactory = new IfcEngineFactory(schemaFile, nativeFolder, servletContext.getRealPath("/") + "WEB-INF/lib");
+			String classPath = null;
+			if (serverType == ServerType.DEPLOYED_WAR) {
+				// Because servers like Tomcat use complex classloading
+				// constructions, the classpath system property gives not enough
+				// info about the used classpaths, so here we tell the
+				// IfcEngineFactory to use all jar files in the context
+				classPath = servletContext.getRealPath("/") + "WEB-INF" + File.separator + "lib";
+			}
+			IfcEngineFactory ifcEngineFactory = new IfcEngineFactory(schemaFile, nativeFolder, classPath);
 
 			CompileServlet.database = bimDatabase;
-			
+
 			URL colladSettingsFile = resourceFetcher.getResource("collada.xml");
 			PackageDefinition colladaSettings = PackageDefinition.readFromFile(colladSettingsFile);
-			
+
 			TempUtils.makeTempDir("bimserver");
 			EmfSerializerFactory emfSerializerFactory = EmfSerializerFactory.getInstance();
 			emfSerializerFactory.init(version, schema, fieldIgnoreMap, ifcEngineFactory, colladaSettings, resourceFetcher);
 			emfSerializerFactory.initSerializers();
 			ServiceFactory.init(bimDatabase, emfSerializerFactory, schema, longActionManager, ifcEngineFactory);
 			setAdminService(ServiceFactory.getINSTANCE().newService(AccessMethod.INTERNAL));
-			((Service)getAdminService()).loginAsAdmin();
+			((Service) getAdminService()).loginAsAdmin();
 			LoginManager.setAdminService(getAdminService());
 
 			RestApplication.serviceFactory = ServiceFactory.getINSTANCE();
-			
-//			if (serverType == ServerType.DEPLOYED_WAR) {
-//				File libDir = new File(servletContext.getRealPath("/") + "WEB-INF" + File.separator + "lib");
-//				LOGGER.info("adding lib dir: " + libDir.getAbsolutePath());
-//				QueryCompiler.addJarFolder(libDir);
-//			}
-			
+
+			if (serverType == ServerType.DEPLOYED_WAR) {
+				File libDir = new File(classPath);
+				LOGGER.info("adding lib dir: " + libDir.getAbsolutePath());
+				QueryCompiler.addJarFolder(libDir);
+			}
+
 			ServerStarted serverStarted = LogFactory.eINSTANCE.createServerStarted();
 			serverStarted.setDate(new Date());
 			serverStarted.setAccessMethod(AccessMethod.INTERNAL);
@@ -161,7 +170,7 @@ public class ServerInitializer implements ServletContextListener {
 	public static BimDatabase getDatabase() {
 		return bimDatabase;
 	}
-	
+
 	public static ResourceFetcher getResourceFetcher() {
 		return resourceFetcher;
 	}

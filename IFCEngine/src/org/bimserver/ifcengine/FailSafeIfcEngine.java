@@ -67,10 +67,12 @@ public class FailSafeIfcEngine {
 			command.append("\"");
 			command.append(System.getProperty("java.class.path"));
 			command.append(File.pathSeparator);
-			File file = new File(classPath);
-			for (File subFile : file.listFiles()) {
-				if (subFile.getName().endsWith(".jar")) {
-					command.append(subFile.getAbsolutePath() + File.pathSeparator);
+			if (classPath != null) {
+				File file = new File(classPath);
+				for (File subFile : file.listFiles()) {
+					if (subFile.getName().endsWith(".jar")) {
+						command.append(subFile.getAbsolutePath() + File.pathSeparator);
+					}
 				}
 			}
 			command.append("\"");
