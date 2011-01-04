@@ -105,7 +105,7 @@ public class ProcessChangeSetDatabaseAction extends BimDatabaseAction<ChangeSetR
 							object.eSet(feature, processedAdditions.get(((AttributeNewReferencePair) aavp).getOid()));
 						}
 					} else if (aavp instanceof AttributeReferencePair) {
-						AttributeReferencePair attributeReferencePair = (AttributeReferencePair) aavp;
+//						AttributeReferencePair attributeReferencePair = (AttributeReferencePair) aavp;
 						// TODO Fix again
 //						IfcModel submodel = bimDatabaseSession.getMapWithOids(project.getId(), project.getLastConcreteRevision().getId(), attributeReferencePair.getOid());
 //						object.eSet(feature, submodel.get(attributeReferencePair.getOid()));

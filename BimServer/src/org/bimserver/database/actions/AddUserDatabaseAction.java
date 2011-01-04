@@ -65,7 +65,7 @@ public class AddUserDatabaseAction extends BimDatabaseAction<Long> {
 		if (trimmedUserName.equals("")) {
 			throw new UserException("Invalid username");
 		}
-		if (!MailSystem.isValidEmailAddress(trimmedUserName) && !(trimmedUserName.equals("admin") || trimmedUserName.equals("anonymous"))) {
+		if (!MailSystem.isValidEmailAddress(trimmedUserName) && !(trimmedUserName.equals("test") || trimmedUserName.equals("admin") || trimmedUserName.equals("anonymous"))) {
 			throw new UserException("Username must be a valid e-mail address");
 		}
 		if (trimmedName.equals("")) {

@@ -612,15 +612,8 @@ open a specific revision to query other revisions<br />
 </div>
 </div>
 <script>
-var revisions = new Array(<%=revisions.size()%>);
-var i =0;
-<%
-for (SRevision sRevision : revisions) {
-	%>
-		revisions[i++] = <%=sRevision.getOid()%>;
-	<%
-}
-%>
+	var poid = <%=poid%>;
+	var lastRevisionOid = <%=lastRevision == null ? -1 : lastRevision.getOid()%>;
 	$(document).ready(function(){
 		$("#revisiontablink").click(function (){
 			document.getElementById("projecttabber").tabber.tabShow(2);	
@@ -657,14 +650,13 @@ for (SRevision sRevision : revisions) {
 		$("#showinactivecheckouts").change(updateInactiveCheckouts);
 		updateInactiveCheckouts();
 		var refreshFunction = function() {
-			if (revisions.length > 0) {
-				var roids = "";
-				for (var roid in revisions) {
-					roids += revisions[roid] + ";";
-				}
-				$.ajax({ url: "/progress", cache: false, context: document.body, data: {roids: roids}, success: function(data){
-					for (result in data) {
-						var item = data[result];
+			$.ajax({ url: "/progress", cache: false, context: document.body, data: {poid: poid}, success: function(data){
+				if (data.lastRevision != lastRevisionOid) {
+					location.reload();
+				} else {
+					revisions = data.revisions;
+					for (result in revisions) {
+						var item = revisions[result];
 						var state = item.state;
 						if (state == "DONE") {
 							$("#rev" + item.roid).children(".sizefield").text(item.totalsize);
@@ -706,8 +698,8 @@ for (SRevision sRevision : revisions) {
 							$("#rev" + item.roid).removeClass("lastrevision");
 						}
 					}
-			    }});
-			}
+			    }
+			}});
 		};
 		refreshFunction();
 		window.setInterval(refreshFunction, 2000);
