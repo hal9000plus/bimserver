@@ -35,9 +35,9 @@ public interface BimDatabaseSession {
 
 	User getAdminUser() throws BimDeadlockException, BimDatabaseException;
 
-	long store(IdEObject eObject, int pid, int rid) throws BimDeadlockException;
+	long store(IdEObject eObject, int pid, int rid) throws BimDeadlockException, BimDatabaseException;
 
-	long store(IdEObject eObject) throws BimDeadlockException;
+	long store(IdEObject eObject) throws BimDeadlockException, BimDatabaseException;
 
 	User getUserByUserName(String name) throws BimDeadlockException, BimDatabaseException;
 
@@ -47,9 +47,9 @@ public interface BimDatabaseSession {
 
 	void clearProject(int pid, int oldRid, int newRid) throws BimDeadlockException;
 
-	void store(Collection<? extends IdEObject> values, int pid, int rid) throws BimDeadlockException;
+	void store(Collection<? extends IdEObject> values, int pid, int rid) throws BimDeadlockException, BimDatabaseException;
 
-	void store(Collection<? extends IdEObject> values) throws BimDeadlockException;
+	void store(Collection<? extends IdEObject> values) throws BimDeadlockException, BimDatabaseException;
 
 	ConcreteRevision getConcreteRevision(long croid) throws BimDeadlockException, BimDatabaseException;
 
@@ -95,7 +95,7 @@ public interface BimDatabaseSession {
 
 	List<String> getClassList();
 
-	void updateLastActive(long uoid);
+	void updateLastActive(long uoid) throws BimDatabaseException;
 
 	void commit() throws BimDeadlockException, BimDatabaseException;
 

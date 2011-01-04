@@ -181,4 +181,8 @@ public class IfcModel {
 	public void remove(IdEObject idEObject) {
 		objects.remove(idEObject.getOid());
 	}
+
+	public void setOid(IdEObject mainObject, Long long1) {
+		objects.forcePut(long1, mainObject);
+	}
 }

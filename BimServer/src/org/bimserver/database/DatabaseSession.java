@@ -127,6 +127,13 @@ public class DatabaseSession implements BimDatabaseSession {
 	public void clear() {
 		cache.clear();
 	}
+	
+	public void addToObjectsToCommit(IdEObject idEObject) throws BimDatabaseException {
+		if (idEObject.getOid() == -1) {
+			throw new BimDatabaseException("Cannot store object with oid -1");
+		}
+		objectsToCommit.put(idEObject, idEObject.getOid());
+	}
 
 	public void close() {
 		database.unregisterSession(this);
@@ -300,7 +307,7 @@ public class DatabaseSession implements BimDatabaseSession {
 	}
 
 	private void createNewVirtualRevision(Project project, ConcreteRevision revision, String comment, Date date, User user, long size, CheckinState checkinState)
-			throws BimDeadlockException {
+			throws BimDeadlockException, BimDatabaseException {
 		Revision virtualRevision = StoreFactory.eINSTANCE.createRevision();
 		virtualRevision.setLastConcreteRevision(revision);
 		virtualRevision.setComment(comment);
@@ -752,57 +759,55 @@ public class DatabaseSession implements BimDatabaseSession {
 	}
 
 	@Override
-	public long store(IdEObject object) throws BimDeadlockException {
+	public long store(IdEObject object) throws BimDeadlockException, BimDatabaseException {
 		return store(object, Database.STORE_PROJECT_ID, Database.STORE_PROJECT_REVISION_ID);
 	}
 
 	@SuppressWarnings("rawtypes")
 	@Override
-	public long store(IdEObject object, int pid, int rid) throws BimDeadlockException {
+	public long store(IdEObject object, int pid, int rid) throws BimDeadlockException, BimDatabaseException {
 		if (!objectsToCommit.containsKey(object)) {
 			if (object.getOid() == -1) {
 				long newOid = newOid();
 				object.setOid(newOid);
 			}
-			// This code is meant to create oid's for wrapped values that are not referenced as so
+			// This code is meant to create oid's for wrapped values that are not referenced as such
 			for (EReference eReference : object.eClass().getEAllReferences()) {
 				if (!Ifc2x3Package.eINSTANCE.getWrappedValue().isSuperTypeOf((EClass) eReference.getEType())) {
 					Object eGet = object.eGet(eReference);
-					if (eGet instanceof WrappedValue) {
+					if (eGet instanceof IdEObject) {
 						IdEObject idEObject = (IdEObject)eGet;
-						if (idEObject != null) {
-							if (idEObject.getOid() == -1) {
-								idEObject.setOid(newOid());
-								idEObject.setPid(pid);
-								idEObject.setRid(rid);
-								objectsToCommit.put(idEObject, idEObject.getOid());
-							}
-						}					
+						if (idEObject.getOid() == -1) {
+							idEObject.setOid(newOid());
+							idEObject.setPid(pid);
+							idEObject.setRid(rid);
+							addToObjectsToCommit(idEObject);
+						}
 					} else if (eGet instanceof List) {
 						List list = (List)eGet;
 						for (Object o : list) {
 							IdEObject idEObject = (IdEObject)o;
-							if (idEObject instanceof WrappedValue) {
+//							if (idEObject instanceof WrappedValue) {
 								if (idEObject.getOid() == -1) {
 									idEObject.setOid(newOid());
 									idEObject.setPid(pid);
 									idEObject.setRid(rid);
-									objectsToCommit.put(idEObject, idEObject.getOid());
+									addToObjectsToCommit(idEObject);
 								}
-							}
+//							}
 						}
 					}
 				}
 			}
 			object.setPid(pid);
 			object.setRid(rid);
-			objectsToCommit.put(object, object.getOid());
+			addToObjectsToCommit(object);
 		}
 		return object.getOid();
 	}
 
 	private long newOid() {
-		storeOid  = true;
+		storeOid = true;
 		return database.newOid();
 	}
 
@@ -912,6 +917,7 @@ public class DatabaseSession implements BimDatabaseSession {
 			return;
 		}
 		WrappedValue wrappedValue = (WrappedValue) value;
+		// This makes no sense
 		if (wrappedValue.getOid() == -1) {
 			wrappedValue.setOid(newOid());
 		}
@@ -979,23 +985,33 @@ public class DatabaseSession implements BimDatabaseSession {
 		}
 	}
 
-	private void writeReference(int pid, int rid, Object value, GrowingByteBuffer buffer) throws BimDeadlockException {
+	private void writeReference(int pid, int rid, Object value, GrowingByteBuffer buffer) throws BimDeadlockException, BimDatabaseException {
 		if (value == null) {
 			buffer.putShort((byte) -1);
 		} else {
 			Short cid = database.getCidOfEClass(((EObject) value).eClass());
 			buffer.putShort(cid);
-			buffer.putLong(((IdEObject) value).getOid());
+			IdEObject idEObject = (IdEObject) value;
+			if (idEObject instanceof WrappedValue) {
+				if (idEObject.getOid() == -1) {
+					idEObject.setOid(newOid());
+				}
+			} else {
+				if (idEObject.getOid() == -1) {
+					throw new BimDatabaseException("Cannot store reference to object with oid -1");
+				}
+			}
+			buffer.putLong(idEObject.getOid());
 		}
 	}
 
 	@Override
-	public void store(Collection<? extends IdEObject> values) throws BimDeadlockException {
+	public void store(Collection<? extends IdEObject> values) throws BimDeadlockException, BimDatabaseException {
 		store(values, Database.STORE_PROJECT_ID, Database.STORE_PROJECT_REVISION_ID);
 	}
 
 	@Override
-	public void store(Collection<? extends IdEObject> values, int pid, int rid) throws BimDeadlockException {
+	public void store(Collection<? extends IdEObject> values, int pid, int rid) throws BimDeadlockException, BimDatabaseException {
 		for (IdEObject object : values) {
 			store(object, pid, rid);
 		}
@@ -1081,6 +1097,9 @@ public class DatabaseSession implements BimDatabaseSession {
 		if (!readOnly) {
 			try {
 				for (IdEObject object : objectsToCommit.keySet()) {
+					if (object.getOid() == -1) {
+						throw new BimDatabaseException("Cannot store object with oid -1");
+					}
 					ByteBuffer keyBuffer = createKeyBuffer(object.getPid(), object.getOid(), object.getRid());
 					putInCache(new RecordIdentifier(object.getPid(), object.getOid(), object.getRid()), object);
 					database.getColumnDatabase().store(object.eClass().getName(), keyBuffer.array(), convertObjectToByteArray(object).array(), this);
@@ -1111,7 +1130,7 @@ public class DatabaseSession implements BimDatabaseSession {
 	}
 
 	@Override
-	public void updateLastActive(long uoid) {
+	public void updateLastActive(long uoid) throws BimDatabaseException {
 		try {
 			User user = getUserByUoid(uoid);
 			user.setLastSeen(new Date());
