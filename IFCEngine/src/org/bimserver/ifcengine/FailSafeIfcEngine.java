@@ -24,10 +24,12 @@ public class FailSafeIfcEngine {
 	private final File schemaFile;
 	private final File nativeBaseDir;
 	private boolean useSecondJvm = true;
+	private final String classPath;
 
-	public FailSafeIfcEngine(File schemaFile, File nativeBaseDir) throws IfcEngineException {
+	public FailSafeIfcEngine(File schemaFile, File nativeBaseDir, String classPath) throws IfcEngineException {
 		this.schemaFile = schemaFile;
 		this.nativeBaseDir = nativeBaseDir;
+		this.classPath = classPath;
 		if (useSecondJvm) {
 			startJvm();
 		} else {
@@ -62,18 +64,16 @@ public class FailSafeIfcEngine {
 				command.append(" -Djava.io.tmpdir=" + tmp.getAbsolutePath().toString());
 			}
 			command.append(" -classpath ");
-			String[] classpath = System.getProperty("java.class.path").split(File.pathSeparator);
-			for (String s : classpath) {
-				if (s.contains(" ")) {
-					command.append("\"" + s + "\"");
-				} else {
-					command.append(s);
+			command.append("\"");
+			command.append(System.getProperty("java.class.path"));
+			command.append(File.pathSeparator);
+			File file = new File(classPath);
+			for (File subFile : file.listFiles()) {
+				if (subFile.getName().endsWith(".jar")) {
+					command.append(subFile.getAbsolutePath() + File.pathSeparator);
 				}
-				command.append(File.pathSeparator);
 			}
-			if (command.substring(command.length()-1).equals(File.pathSeparator)) {
-				command.delete(command.length()-1, command.length());
-			}
+			command.append("\"");
 			command.append(" -Xmx512m");
 			command.append(" org.bimserver.ifcengine.jvm.IfcEngineServer");
 			if (schemaFile.getAbsolutePath().contains(" ")) {
