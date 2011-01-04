@@ -139,6 +139,9 @@ public class Database implements BimDatabase {
 				new CreateBaseProject(AccessMethod.INTERNAL).execute(databaseSession);
 				new AddUserDatabaseAction(AccessMethod.INTERNAL, "admin", "admin", "Administrator", UserType.ADMIN, -1, false).execute(databaseSession);
 				new AddUserDatabaseAction(AccessMethod.INTERNAL, "anonymous", "anonymous", "Anonymous", UserType.ANONYMOUS, -1, false).execute(databaseSession);
+				if (true) {
+					new AddUserDatabaseAction(AccessMethod.INTERNAL, "test@bimserver.org", "test", "Test User", UserType.USER, -1, false).execute(databaseSession);
+				}
 			} else {
 				initOidCounter(databaseSession);
 				initPidCounter(databaseSession);

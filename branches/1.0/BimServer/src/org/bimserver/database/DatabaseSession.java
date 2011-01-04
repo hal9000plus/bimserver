@@ -308,7 +308,7 @@ public class DatabaseSession implements BimDatabaseSession {
 		virtualRevision.setUser(user);
 		virtualRevision.setSize(size);
 		virtualRevision.setState(checkinState);
-		project.setLastRevision(virtualRevision);
+//		project.setLastRevision(virtualRevision);
 		virtualRevision.setId(project.getRevisions().size() + 1);
 		// RUBEN: Commented out on 17-09-2010, looks like this should never
 		// occur
