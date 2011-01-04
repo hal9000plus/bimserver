@@ -20,6 +20,7 @@ public class FailSafeIfcEngine {
 	private Process process;
 	private DataInputStream in;
 	private DataOutputStream out;
+	private InputStream err;
 	private final File schemaFile;
 	private final File nativeBaseDir;
 	private boolean useSecondJvm = true;
@@ -83,11 +84,33 @@ public class FailSafeIfcEngine {
 			process = Runtime.getRuntime().exec(command.toString());
 			in = new DataInputStream(new BufferedInputStream(process.getInputStream()));
 			out = new DataOutputStream(new BufferedOutputStream(process.getOutputStream()));
+			err = process.getErrorStream();
+			startErrorHandler();
 		} catch (Exception e) {
 			LOGGER.error("", e);
 		}
 	}
 	
+	private void startErrorHandler() {
+		Runnable runnable = new Runnable(){
+			@Override
+			public void run() {
+				byte[] buffer = new byte[1024];
+				int red;
+				try {
+					red = err.read(buffer);
+					while (red != -1) {
+						LOGGER.error(new String(buffer, 0, red));
+						red = err.read(buffer);
+					}
+				} catch (IOException e) {
+					LOGGER.error("", e);
+				}
+			}};
+		Thread thread = new Thread(runnable);
+		thread.start();
+	}
+
 	public synchronized IfcEngineModel openModel(File ifcFile) throws IfcEngineException {
 		writeCommand(Command.OPEN_MODEL);
 		writeUTF(ifcFile.getAbsolutePath());
