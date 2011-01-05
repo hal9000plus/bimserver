@@ -247,14 +247,14 @@ public class TreePanel extends JPanel {
 			}
 		});
 
-		final JMenuItem processChangeSet = new JMenuItem("Process ChangeSet...");
-		processChangeSet.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				ProjectTreeNode ptn = (ProjectTreeNode) tree.getSelectionPath().getLastPathComponent();
-				testWindow.processChangeSet(ptn.getProject());
-			}
-		});
+//		final JMenuItem processChangeSet = new JMenuItem("Process ChangeSet...");
+//		processChangeSet.addActionListener(new ActionListener() {
+//			@Override
+//			public void actionPerformed(ActionEvent e) {
+//				ProjectTreeNode ptn = (ProjectTreeNode) tree.getSelectionPath().getLastPathComponent();
+//				testWindow.processChangeSet(ptn.getProject());
+//			}
+//		});
 
 		final JPopupMenu projectMenu = new JPopupMenu();
 		final JMenuItem checkin = new JMenuItem("Checkin new revision...");
@@ -343,7 +343,7 @@ public class TreePanel extends JPanel {
 				testWindow.checkin(ptn.getProject());
 			}
 		});
-		projectMenu.add(processChangeSet);
+//		projectMenu.add(processChangeSet);
 		projectMenu.add(checkin);
 		projectMenu.addSeparator();
 		projectMenu.add(checkout);

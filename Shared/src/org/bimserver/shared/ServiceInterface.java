@@ -179,9 +179,9 @@ public interface ServiceInterface {
 	@WebMethod(action = "getRevision")
 	SRevision getRevision(@WebParam(name = "roid") long roid) throws UserException;
 
-	@WebMethod(action = "processChangeSet")
-	ChangeSetResult processChangeSet(@WebParam(name = "changeSet") ChangeSet changeSet, @WebParam(name = "poid") long poid,
-			@WebParam(name = "comment") String comment) throws UserException;
+//	@WebMethod(action = "processChangeSet")
+//	ChangeSetResult processChangeSet(@WebParam(name = "changeSet") ChangeSet changeSet, @WebParam(name = "poid") long poid,
+//			@WebParam(name = "comment") String comment) throws UserException;
 
 	@WebMethod(action = "getAvailableClasses")
 	List<String> getAvailableClasses() throws UserException;
@@ -189,9 +189,9 @@ public interface ServiceInterface {
 	@WebMethod(action = "getDatabaseInformation")
 	DatabaseInformation getDatabaseInformation() throws UserException;
 
-	@WebMethod(action = "processChangeSetFile")
-	ChangeSetResult processChangeSetFile(@WebParam(name = "poid") long poid, @WebParam(name = "comment") String comment,
-			@WebParam(name = "changeSetFile") @XmlMimeType("application/octet-stream") DataHandler changeSetFile) throws UserException;
+//	@WebMethod(action = "processChangeSetFile")
+//	ChangeSetResult processChangeSetFile(@WebParam(name = "poid") long poid, @WebParam(name = "comment") String comment,
+//			@WebParam(name = "changeSetFile") @XmlMimeType("application/octet-stream") DataHandler changeSetFile) throws UserException;
 
 	@WebMethod(action = "getLoggedInUser")
 	SUser getLoggedInUser() throws UserException;

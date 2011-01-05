@@ -44,9 +44,6 @@ import javax.mail.Transport;
 import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Unmarshaller;
 
 import nl.tue.buildingsmart.express.dictionary.SchemaDefinition;
 
@@ -100,7 +97,6 @@ import org.bimserver.database.actions.GetRevisionSummaryDatabaseAction;
 import org.bimserver.database.actions.GetShowCheckoutWarningDatabaseAction;
 import org.bimserver.database.actions.GetSubProjectsDatabaseAction;
 import org.bimserver.database.actions.GetUserByNameDatabaseAction;
-import org.bimserver.database.actions.ProcessChangeSetDatabaseAction;
 import org.bimserver.database.actions.RemoveUserFromProjectDatabaseAction;
 import org.bimserver.database.actions.RequestPasswordChangeDatabaseAction;
 import org.bimserver.database.actions.SendClashesEmailDatabaseAction;
@@ -159,8 +155,6 @@ import org.bimserver.longaction.LongCheckinAction;
 import org.bimserver.mail.MailSystem;
 import org.bimserver.rights.RightsManager;
 import org.bimserver.serializers.EmfSerializerFactory;
-import org.bimserver.shared.ChangeSet;
-import org.bimserver.shared.ChangeSetResult;
 import org.bimserver.shared.DatabaseInformation;
 import org.bimserver.shared.ResultType;
 import org.bimserver.shared.SCheckinResult;
@@ -803,19 +797,19 @@ public class Service implements ServiceInterface {
 		}
 	}
 
-	@Override
-	public ChangeSetResult processChangeSet(ChangeSet changeSet, long poid, String comment) throws UserException {
-		requireAuthentication();
-		BimDatabaseSession session = bimDatabase.createSession();
-		try {
-			BimDatabaseAction<ChangeSetResult> action = new ProcessChangeSetDatabaseAction(accessMethod, changeSet, poid, currentUoid, comment);
-			return session.executeAndCommitAction(action, DEADLOCK_RETRIES);
-		} catch (BimDatabaseException e) {
-			throw new UserException("Database error", e);
-		} finally {
-			session.close();
-		}
-	}
+//	@Override
+//	public ChangeSetResult processChangeSet(ChangeSet changeSet, long poid, String comment) throws UserException {
+//		requireAuthentication();
+//		BimDatabaseSession session = bimDatabase.createSession();
+//		try {
+//			BimDatabaseAction<ChangeSetResult> action = new ProcessChangeSetDatabaseAction(accessMethod, changeSet, poid, currentUoid, comment);
+//			return session.executeAndCommitAction(action, DEADLOCK_RETRIES);
+//		} catch (BimDatabaseException e) {
+//			throw new UserException("Database error", e);
+//		} finally {
+//			session.close();
+//		}
+//	}
 
 	@Override
 	public SCheckoutResult downloadByOids(Set<Long> roids, Set<Long> oids, ResultType resultType) throws UserException {
@@ -914,27 +908,27 @@ public class Service implements ServiceInterface {
 		}
 	}
 
-	@Override
-	public ChangeSetResult processChangeSetFile(long poid, String comment, DataHandler changeSetFile) throws UserException {
-		requireAuthentication();
-		BimDatabaseSession session = bimDatabase.createSession();
-		try {
-			JAXBContext jaxbContext = JAXBContext.newInstance(ChangeSet.class);
-			Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
-			ChangeSet changeSet = (ChangeSet) unmarshaller.unmarshal(changeSetFile.getInputStream());
-			BimDatabaseAction<ChangeSetResult> action = new ProcessChangeSetDatabaseAction(accessMethod, changeSet, poid, currentUoid, comment);
-			return session.executeAndCommitAction(action, DEADLOCK_RETRIES);
-		} catch (JAXBException e1) {
-			throw new UserException("Error", e1);
-		} catch (IOException e) {
-			throw new UserException("Error", e);
-		} catch (BimDatabaseException e) {
-			LOGGER.error("", e);
-		} finally {
-			session.close();
-		}
-		return null;
-	}
+//	@Override
+//	public ChangeSetResult processChangeSetFile(long poid, String comment, DataHandler changeSetFile) throws UserException {
+//		requireAuthentication();
+//		BimDatabaseSession session = bimDatabase.createSession();
+//		try {
+//			JAXBContext jaxbContext = JAXBContext.newInstance(ChangeSet.class);
+//			Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
+//			ChangeSet changeSet = (ChangeSet) unmarshaller.unmarshal(changeSetFile.getInputStream());
+//			BimDatabaseAction<ChangeSetResult> action = new ProcessChangeSetDatabaseAction(accessMethod, changeSet, poid, currentUoid, comment);
+//			return session.executeAndCommitAction(action, DEADLOCK_RETRIES);
+//		} catch (JAXBException e1) {
+//			throw new UserException("Error", e1);
+//		} catch (IOException e) {
+//			throw new UserException("Error", e);
+//		} catch (BimDatabaseException e) {
+//			LOGGER.error("", e);
+//		} finally {
+//			session.close();
+//		}
+//		return null;
+//	}
 
 	@Override
 	public SUser getLoggedInUser() throws UserException {
