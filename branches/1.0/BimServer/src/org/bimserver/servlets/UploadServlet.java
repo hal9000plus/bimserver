@@ -30,16 +30,12 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Unmarshaller;
 
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import org.bimserver.ServerInfo;
-import org.bimserver.shared.ChangeSet;
 import org.bimserver.shared.UserException;
 import org.bimserver.utils.InputStreamDataSource;
 import org.bimserver.web.LoginManager;
@@ -123,18 +119,18 @@ public class UploadServlet extends HttpServlet {
 									response.sendRedirect("project.jsp?poid=" + poid + "&message=" + e.getUserMessage());
 								}
 							}
-						} else if (type.equals("changeset")) {
-							try {
-								JAXBContext context = JAXBContext.newInstance(ChangeSet.class);
-								Unmarshaller unmarshaller = context.createUnmarshaller();
-								ChangeSet changeSet = (ChangeSet) unmarshaller.unmarshal(realStream);
-								loginManager.getService().processChangeSet(changeSet, poid, comment);
-								response.sendRedirect("project.jsp?poid=" + poid);
-							} catch (JAXBException e) {
-								LOGGER.error("", e);
-							} catch (UserException e) {
-								LOGGER.error("", e);
-							}
+//						} else if (type.equals("changeset")) {
+//							try {
+//								JAXBContext context = JAXBContext.newInstance(ChangeSet.class);
+//								Unmarshaller unmarshaller = context.createUnmarshaller();
+//								ChangeSet changeSet = (ChangeSet) unmarshaller.unmarshal(realStream);
+//								loginManager.getService().processChangeSet(changeSet, poid, comment);
+//								response.sendRedirect("project.jsp?poid=" + poid);
+//							} catch (JAXBException e) {
+//								LOGGER.error("", e);
+//							} catch (UserException e) {
+//								LOGGER.error("", e);
+//							}
 						}
 					}
 				} else {

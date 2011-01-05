@@ -51,7 +51,7 @@ public class CheckinDatabaseAction extends GenericCheckinDatabaseAction {
 			throw new UserException("Users must have a valid e-mail address to checkin");
 		}
 		checkCheckSum(project);
-		ConcreteRevision concreteRevision = bimDatabaseSession.createNewConcreteRevision(model.size(), poid, actingUoid, comment.trim(), CheckinState.DONE);
+		ConcreteRevision concreteRevision = createNewConcreteRevision(bimDatabaseSession, model.size(), poid, actingUoid, comment.trim(), CheckinState.DONE);
 		concreteRevision.setChecksum(model.getChecksum());
 		project.setLastConcreteRevision(concreteRevision);
 		concreteRevision.setState(CheckinState.STORING);

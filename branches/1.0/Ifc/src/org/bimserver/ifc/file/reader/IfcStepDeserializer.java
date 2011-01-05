@@ -223,7 +223,7 @@ public class IfcStepDeserializer {
 							readList(val, object, structuralFeature);
 						} else if (firstChar == '*') {
 						} else {
-							if (structuralFeature.getUpperBound() == 1) {
+							if (!structuralFeature.isMany()) {
 								object.eSet(structuralFeature, convert(structuralFeature.getEType(), val));
 								if (structuralFeature.getEType() == EcorePackage.eINSTANCE.getEFloat() || structuralFeature.getEType() == EcorePackage.eINSTANCE.getEDouble()) {
 									EStructuralFeature floatStringFeature = classifier.getEStructuralFeature(attribute.getName() + "AsString");
@@ -248,7 +248,7 @@ public class IfcStepDeserializer {
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	private void readList(String val, EObject object, EStructuralFeature structuralFeature) throws IncorrectIfcFileException {
 		int index = 0;
-		if (structuralFeature.getUpperBound() == 1) {
+		if (!structuralFeature.isMany()) {
 			throw new IncorrectIfcFileException("Field " + structuralFeature.getName() + " of " + structuralFeature.getEContainingClass().getName() + " is no aggregation");
 		}
 		BasicEList list = (BasicEList) object.eGet(structuralFeature);
@@ -356,7 +356,6 @@ public class IfcStepDeserializer {
 			if (classifier instanceof EClassImpl) {
 				if (null != ((EClassImpl) classifier).getEStructuralFeature(WRAPPED_VALUE)) {
 					IdEObject create = (IdEObject) ePackage.getEFactoryInstance().create((EClass) classifier);
-//					model.add(create);
 					Class<?> instanceClass = create.eClass().getEStructuralFeature(WRAPPED_VALUE).getEType().getInstanceClass();
 					if (value.equals("")) {
 

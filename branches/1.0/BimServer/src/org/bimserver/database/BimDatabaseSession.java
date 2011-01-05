@@ -43,8 +43,6 @@ public interface BimDatabaseSession {
 
 	Project getProjectById(int pid) throws BimDeadlockException, BimDatabaseException;
 
-	ConcreteRevision createNewConcreteRevision(long size, long poid, long actingUoid, String comment, CheckinState checkinState) throws BimDeadlockException, BimDatabaseException;
-
 	void clearProject(int pid, int oldRid, int newRid) throws BimDeadlockException;
 
 	void store(Collection<? extends IdEObject> values, int pid, int rid) throws BimDeadlockException, BimDatabaseException;
