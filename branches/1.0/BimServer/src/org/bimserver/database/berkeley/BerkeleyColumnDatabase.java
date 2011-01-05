@@ -23,6 +23,7 @@ package org.bimserver.database.berkeley;
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.bimserver.database.BimDatabaseException;
@@ -362,5 +363,9 @@ public class BerkeleyColumnDatabase implements ColumnDatabase {
 			LOGGER.error("", e);
 		}
 		return size;
+	}
+	
+	public Set<String> getAllTableNames() {
+		return tables.keySet();
 	}
 }
