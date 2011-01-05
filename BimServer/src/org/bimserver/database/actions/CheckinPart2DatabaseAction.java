@@ -45,7 +45,9 @@ public class CheckinPart2DatabaseAction extends BimDatabaseAction<Void> {
 					ifcModels.add(subModel);
 				}
 				getIfcModel().setDate(new Date());
-				ifcModels.add(getIfcModel());
+				IfcModel newModel = getIfcModel();
+				newModel.fixOids(bimDatabaseSession);
+				ifcModels.add(newModel);
 				ifcModel = Merger.merge(project, ifcModels);
 			} else {
 				ifcModel = getIfcModel();

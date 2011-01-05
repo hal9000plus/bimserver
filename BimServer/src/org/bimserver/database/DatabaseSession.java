@@ -721,7 +721,7 @@ public class DatabaseSession implements BimDatabaseSession {
 		return object.getOid();
 	}
 
-	private long newOid() {
+	public long newOid() {
 		storeOid = true;
 		return database.newOid();
 	}
@@ -746,7 +746,7 @@ public class DatabaseSession implements BimDatabaseSession {
 								if (wrappedValue) {
 									writeWrappedValue(object.getPid(), object.getRid(), o, buffer);
 								} else {
-									writeReference(object.getPid(), object.getRid(), o, buffer);
+									writeReference(object.getPid(), object.getRid(), o, buffer, object, feature);
 								}
 							}
 						}
@@ -778,7 +778,7 @@ public class DatabaseSession implements BimDatabaseSession {
 							if (wrappedValue) {
 								writeWrappedValue(object.getPid(), object.getRid(), value, buffer);
 							} else {
-								writeReference(object.getPid(), object.getRid(), value, buffer);
+								writeReference(object.getPid(), object.getRid(), value, buffer, object, feature);
 							}
 						}
 					} else if (feature.getEType() instanceof EDataType) {
@@ -896,24 +896,14 @@ public class DatabaseSession implements BimDatabaseSession {
 		}
 	}
 
-	private void writeReference(int pid, int rid, Object value, GrowingByteBuffer buffer) throws BimDeadlockException, BimDatabaseException {
-		if (value == null) {
-			buffer.putShort((byte) -1);
-		} else {
-			Short cid = database.getCidOfEClass(((EObject) value).eClass());
-			buffer.putShort(cid);
-			IdEObject idEObject = (IdEObject) value;
-			if (idEObject instanceof WrappedValue) {
-				if (idEObject.getOid() == -1) {
-					idEObject.setOid(newOid());
-				}
-			} else {
-				if (idEObject.getOid() == -1) {
-					throw new BimDatabaseException("Cannot store reference to object with oid -1");
-				}
-			}
-			buffer.putLong(idEObject.getOid());
+	private void writeReference(int pid, int rid, Object value, GrowingByteBuffer buffer, IdEObject object, EStructuralFeature feature) throws BimDeadlockException, BimDatabaseException {
+		Short cid = database.getCidOfEClass(((EObject) value).eClass());
+		buffer.putShort(cid);
+		IdEObject idEObject = (IdEObject) value;
+		if (idEObject.getOid() == -1) {
+			throw new BimDatabaseException("Cannot store reference to object " + idEObject.eClass().getName() + " with oid=" + idEObject.getOid() + ", pid=" + idEObject.getPid() + ", rid=" + idEObject.getRid() + " referenced from " + object.eClass().getName() + " with oid=" + object.getOid() + ", feature " + feature.getName());
 		}
+		buffer.putLong(idEObject.getOid());
 	}
 
 	@Override

@@ -14,6 +14,7 @@ import org.bimserver.database.store.Project;
 import org.bimserver.database.store.SIPrefix;
 import org.bimserver.emf.IdEObject;
 import org.bimserver.ifc.IfcModel;
+import org.bimserver.ifc.ReferenceCountingIfcModel;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcAsymmetricIShapeProfileDef;
 import org.bimserver.ifc.emf.Ifc2x3.IfcBlock;
@@ -115,7 +116,8 @@ public class Merger {
 			// Leon :)
 			return ifcModels.iterator().next();
 		}
-		IfcModel model = mergeScales(project, ifcModels);
+		ReferenceCountingIfcModel model = mergeScales(project, ifcModels);
+		model.updateReferences();
 
 		// Seems like ifcModels are not always sorted, so we just do it (again)
 		// here
@@ -176,9 +178,6 @@ public class Merger {
 			List<IdEObject> list = guidMap.get(guid);
 			if (list.size() > 1) {
 				IdEObject newestObject = list.get(list.size() - 1);
-				if (newestObject instanceof IfcProject) {
-					System.out.println();
-				}
 				for (IdEObject idEObject : list) {
 					if (idEObject != newestObject) {
 						removeReplaceLinks(model, newestObject, idEObject);
@@ -255,22 +254,23 @@ public class Merger {
 		}
 		mainObject.setOid(objectToRemove.getOid());
 		Long id = model.get(objectToRemove);
+		LOGGER.info("Removing " + objectToRemove);
 		model.remove(objectToRemove);
 		model.setOid(mainObject, id);
 	}
 
-	private static IfcModel mergeScales(Project project, Set<IfcModel> ifcModels) {
+	private static ReferenceCountingIfcModel mergeScales(Project project, Set<IfcModel> ifcModels) {
 		long size = 0;
 		for (IfcModel ifcModel : ifcModels) {
 			size += ifcModel.size();
 		}
-		IfcModel endModel = new IfcModel((int) size);
+		ReferenceCountingIfcModel endModel = new ReferenceCountingIfcModel((int) size);
 		float foundPrefix = Float.MIN_VALUE;
 		boolean allModelsSameScale = allModelsSameScale(ifcModels, foundPrefix);
 		if (allModelsSameScale) {
 			for (IfcModel ifcModel : ifcModels) {
 				for (long key : ifcModel.keySet()) {
-					endModel.add(key, ifcModel.get(key), true);
+					endModel.add(key, ifcModel.get(key));
 				}
 			}
 		} else {
