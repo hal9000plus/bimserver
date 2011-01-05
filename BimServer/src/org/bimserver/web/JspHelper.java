@@ -301,7 +301,7 @@ public class JspHelper {
 	
 	public static String showProjectTree(SProject activeProject, ServiceInterface serviceInterface) throws UserException {
 		StringBuilder sb = new StringBuilder();
-		sb.append("<ul class=\"projectTree\">");
+		sb.append("<ul class=\"projectTreeFirst\">");
 		SProject mainProject = activeProject;
 		while (mainProject.getParentId() != -1) {
 			mainProject = serviceInterface.getProjectByPoid(mainProject.getParentId());

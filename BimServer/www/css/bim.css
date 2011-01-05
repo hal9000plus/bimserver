@@ -464,6 +464,10 @@ ul.projectTree, ul.projectTree ul {
 	padding: 0;
 }
 
+ul.projectTreeFirst ul.projectTree {
+	margin-left: 10px;
+}
+
 ul.projectTree ul {
 	margin-left: 10px;
 }
