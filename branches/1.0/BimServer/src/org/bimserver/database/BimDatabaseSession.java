@@ -8,20 +8,20 @@ import java.util.Set;
 import org.bimserver.database.actions.BimDatabaseAction;
 import org.bimserver.database.actions.PostCommitAction;
 import org.bimserver.database.query.conditions.Condition;
-import org.bimserver.database.store.CheckinState;
 import org.bimserver.database.store.ConcreteRevision;
 import org.bimserver.database.store.Project;
 import org.bimserver.database.store.Revision;
 import org.bimserver.database.store.User;
 import org.bimserver.emf.IdEObject;
 import org.bimserver.ifc.IfcModel;
+import org.bimserver.ifc.OidProvider;
 import org.bimserver.shared.Addition;
 import org.bimserver.shared.DatabaseInformation;
 import org.bimserver.shared.UserException;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EClassifier;
 
-public interface BimDatabaseSession {
+public interface BimDatabaseSession extends OidProvider {
 
 	<T> T executeAndCommitAction(BimDatabaseAction<T> action, int retries) throws BimDatabaseException, UserException;
 
@@ -118,4 +118,6 @@ public interface BimDatabaseSession {
 	User getAnonymousUser() throws BimDatabaseException, BimDeadlockException;
 
 	void addPostCommitAction(PostCommitAction postCommitAction);
+
+	long newOid();
 }
