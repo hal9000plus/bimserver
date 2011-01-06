@@ -14,7 +14,7 @@ import org.bimserver.database.store.Project;
 import org.bimserver.database.store.SIPrefix;
 import org.bimserver.emf.IdEObject;
 import org.bimserver.ifc.IfcModel;
-import org.bimserver.ifc.ReferenceCountingIfcModel;
+import org.bimserver.ifc.TracingGarbageCollector;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcAsymmetricIShapeProfileDef;
 import org.bimserver.ifc.emf.Ifc2x3.IfcBlock;
@@ -116,9 +116,8 @@ public class Merger {
 			// Leon :)
 			return ifcModels.iterator().next();
 		}
-		ReferenceCountingIfcModel model = mergeScales(project, ifcModels);
-		model.updateReferences();
-
+		IfcModel model = mergeScales(project, ifcModels);
+		
 		// Seems like ifcModels are not always sorted, so we just do it (again)
 		// here
 		ArrayList<IfcModel> tmpList = new ArrayList<IfcModel>(ifcModels);
@@ -132,6 +131,7 @@ public class Merger {
 		if (ServerSettings.getSettings().isIntelligentMerging()) {
 			// Top-down merging, based on decomposed-by tree, starting with
 			// IfcProject
+			LOGGER.info("Intelligent merging");
 			Set<EClass> todoList = new HashSet<EClass>();
 			todoList.add(Ifc2x3Package.eINSTANCE.getIfcProject());
 			while (!todoList.isEmpty()) {
@@ -142,6 +142,18 @@ public class Merger {
 			// Merge remaining objects not found in decomposed-by tree
 			mergeType(model, ifcModels, null, todoList);
 		}
+		
+		Set<IfcProject> ifcProjects = new HashSet<IfcProject>();
+		for (IdEObject idEObject : model.getValues()) {
+			System.out.println(idEObject);
+			if (idEObject instanceof IfcProject) {
+				ifcProjects.add((IfcProject) idEObject);
+			}
+		}
+		LOGGER.info(ifcProjects.size() + " IfcProjects found");
+		TracingGarbageCollector tracingGarbageCollector = new TracingGarbageCollector(model);
+		tracingGarbageCollector.mark(ifcProjects);
+		tracingGarbageCollector.sweep();
 		return model;
 	}
 
@@ -254,17 +266,19 @@ public class Merger {
 		}
 		mainObject.setOid(objectToRemove.getOid());
 		Long id = model.get(objectToRemove);
-		LOGGER.info("Removing " + objectToRemove);
+		if (objectToRemove instanceof IfcProject) {
+			System.out.println();
+		}
 		model.remove(objectToRemove);
 		model.setOid(mainObject, id);
 	}
 
-	private static ReferenceCountingIfcModel mergeScales(Project project, Set<IfcModel> ifcModels) {
+	private static IfcModel mergeScales(Project project, Set<IfcModel> ifcModels) {
 		long size = 0;
 		for (IfcModel ifcModel : ifcModels) {
 			size += ifcModel.size();
 		}
-		ReferenceCountingIfcModel endModel = new ReferenceCountingIfcModel((int) size);
+		IfcModel endModel = new IfcModel((int) size);
 		float foundPrefix = Float.MIN_VALUE;
 		boolean allModelsSameScale = allModelsSameScale(ifcModels, foundPrefix);
 		if (allModelsSameScale) {
@@ -274,6 +288,7 @@ public class Merger {
 				}
 			}
 		} else {
+			LOGGER.info("Merging scales");
 			SIPrefix prefix = project.getExportLengthMeasurePrefix();
 			for (IfcModel ifcModel : ifcModels) {
 				float scale = (float) (getLengthUnitPrefix(ifcModel) / Math.pow(10.0, prefix.getValue()));
