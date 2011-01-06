@@ -63,10 +63,16 @@ public class ReferenceCountingIfcModel extends IfcModel {
 			}
 		}
 	}
-	
+
 	@Override
 	public void remove(IdEObject idEObject) {
+		int totalRemoved = removeInternal(idEObject);
+		System.out.println("Removing " + idEObject + " (" + totalRemoved + ")");
+	}
+	
+	public int removeInternal(IdEObject idEObject) {
 		super.remove(idEObject);
+		int totalRemoved = 1;
 		for (EReference eReference : idEObject.eClass().getEAllReferences()) {
 			if (eReference.isMany()) {
 				List list = (List)idEObject.eGet(eReference);
@@ -74,16 +80,19 @@ public class ReferenceCountingIfcModel extends IfcModel {
 					IdEObject refObject = (IdEObject)o;
 					references.get(refObject).remove(idEObject);
 					if (references.get(refObject).size() == 0) {
-						remove(refObject);
+						totalRemoved += removeInternal(refObject);
 					}
 				}
 			} else {
 				IdEObject refObject = (IdEObject) idEObject.eGet(eReference);
-				references.get(refObject).remove(idEObject);
-				if (references.get(refObject).size() == 0) {
-					remove(refObject);
+				if (references.containsKey(refObject)) {
+					references.get(refObject).remove(idEObject);
+					if (references.get(refObject).size() == 0) {
+						totalRemoved += removeInternal(refObject);
+					}
 				}
 			}
 		}
+		return totalRemoved;
 	}
 }
