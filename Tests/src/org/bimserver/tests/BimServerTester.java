@@ -22,10 +22,14 @@ package org.bimserver.tests;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
+import java.util.Set;
+import java.util.TreeSet;
 import java.util.concurrent.Callable;
 import java.util.concurrent.CompletionService;
 import java.util.concurrent.ExecutionException;
@@ -99,15 +103,25 @@ public class BimServerTester {
 
 	private void start() {
 		htmlWriter.startTable("File", "Size", "Exec. Time", "Result Code", "Result Description");
-		for (final File file : ifcFilesSourceDir.listFiles()) {
-			if (file.getName().endsWith(".ifc")) {
-				completionService.submit(new Callable<TestResult>() {
-					@Override
-					public TestResult call() throws Exception {
-						return test(file);
-					}
-				});
+		File[] listFiles = ifcFilesSourceDir.listFiles();
+		Set<File> files = new TreeSet<File>(new Comparator<File>() {
+			@Override
+			public int compare(File o1, File o2) {
+				return o1.getName().compareTo(o2.getName());
 			}
+		});
+		for (final File file : listFiles) {
+			if (file.getName().endsWith(".ifc")) {
+				files.add(file);
+			}
+		}
+		for (final File file : files) {
+			completionService.submit(new Callable<TestResult>() {
+				@Override
+				public TestResult call() throws Exception {
+					return test(file);
+				}
+			});
 		}
 		try {
 			Future<TestResult> take = completionService.take();
