@@ -21,7 +21,6 @@ public class TracingGarbageCollector {
 	}
 
 	public void mark(Set<? extends IdEObject> rootObjects) {
-		LOGGER.info("Marking a " + ifcModel.size() + " sized model");
 		referencedObjects.addAll(rootObjects);
 		for (IdEObject rootObject : rootObjects) {
 			for (EReference eReference : rootObject.eClass().getEAllReferences()) {
@@ -35,13 +34,14 @@ public class TracingGarbageCollector {
 					}
 				} else {
 					IdEObject referredIdEObject = (IdEObject) referredObject;
-					if (!referencedObjects.contains(referredObject)) {
-						mark(makeSet(referredIdEObject));
+					if (referredIdEObject != null) {
+						if (!referencedObjects.contains(referredObject)) {
+							mark(makeSet(referredIdEObject));
+						}
 					}
 				}
 			}
 		}
-		LOGGER.info("Marked " + referencedObjects.size() + " objects to stay");
 	}
 
 	private Set<? extends IdEObject> makeSet(IdEObject idEObject) {

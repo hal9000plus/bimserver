@@ -8,6 +8,7 @@ import java.util.Map;
 import java.util.Set;
 
 import org.bimserver.Merger;
+import org.bimserver.ServerSettings;
 import org.bimserver.database.BimDatabaseException;
 import org.bimserver.database.BimDatabaseSession;
 import org.bimserver.database.BimDeadlockException;
@@ -18,6 +19,7 @@ import org.bimserver.database.store.Revision;
 import org.bimserver.database.store.User;
 import org.bimserver.database.store.log.AccessMethod;
 import org.bimserver.ifc.IfcModel;
+import org.bimserver.ifc.IfcModelSet;
 import org.bimserver.rights.RightsManager;
 import org.bimserver.shared.UserException;
 
@@ -38,7 +40,7 @@ public class DownloadByGuidsDatabaseAction extends BimDatabaseAction<IfcModel> {
 	public IfcModel execute(BimDatabaseSession bimDatabaseSession) throws UserException, BimDeadlockException, BimDatabaseException {
 		User user = bimDatabaseSession.getUserByUoid(actingUoid);
 		Set<String> foundGuids = new HashSet<String>();
-		LinkedHashSet<IfcModel> ifcModels = new LinkedHashSet<IfcModel>();
+		IfcModelSet ifcModelSet = new IfcModelSet();
 		Project project = null;
 		for (Long roid : roids) {
 			Revision virtualRevision = bimDatabaseSession.getVirtualRevision(roid);
@@ -72,10 +74,10 @@ public class DownloadByGuidsDatabaseAction extends BimDatabaseAction<IfcModel> {
 				Set<Long> oids = map.get(concreteRevision);
 				IfcModel model = bimDatabaseSession.getMapWithOids(concreteRevision.getProject().getId(), concreteRevision.getId(), oids);
 				model.setDate(concreteRevision.getDate());
-				ifcModels.add(model);
+				ifcModelSet.add(model);
 			}
 		}
-		IfcModel ifcModel = Merger.merge(project, ifcModels);
+		IfcModel ifcModel = new Merger().merge(project, ifcModelSet, ServerSettings.getSettings().isIntelligentMerging());
 		for (String guid : guids) {
 			if (!foundGuids.contains(guid)) {
 				throw new UserException("Guid " + guid + " not found");

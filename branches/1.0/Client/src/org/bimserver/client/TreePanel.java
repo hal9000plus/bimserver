@@ -49,7 +49,7 @@ import org.bimserver.interfaces.objects.SProject;
 import org.bimserver.interfaces.objects.SRevision;
 import org.bimserver.interfaces.objects.SUser;
 import org.bimserver.interfaces.objects.SUserType;
-import org.bimserver.shared.UserException;
+import org.bimserver.shared.ServiceException;
 import org.bimserver.utils.InputStreamDataSource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -129,7 +129,7 @@ public class TreePanel extends JPanel {
 					if (showConfirmDialog == JOptionPane.YES_OPTION) {
 						try {
 							serviceHolder.getService().deleteUser(((UserTreeNode) lastPathComponent).getUser().getOid());
-						} catch (UserException e2) {
+						} catch (ServiceException e2) {
 							JOptionPane.showMessageDialog(testWindow, e2.getMessage());
 						}
 						updateUsers(serverTreeNode);
@@ -148,7 +148,7 @@ public class TreePanel extends JPanel {
 						| JOptionPane.INFORMATION_MESSAGE);
 				try {
 					serviceHolder.getService().addUser(newUserName, newUserName, SUserType.USER, false);
-				} catch (UserException e1) {
+				} catch (ServiceException e1) {
 					JOptionPane.showMessageDialog(testWindow, e1.getUserMessage());
 				}
 				updateUsers(serverTreeNode);
@@ -166,7 +166,7 @@ public class TreePanel extends JPanel {
 				if (newProjectName != null) {
 					try {
 						serviceHolder.getService().addProject(newProjectName);
-					} catch (UserException e1) {
+					} catch (ServiceException e1) {
 						JOptionPane.showMessageDialog(testWindow, e1.getUserMessage());
 					}
 					updateProjects(serverTreeNode);
@@ -218,7 +218,7 @@ public class TreePanel extends JPanel {
 						try {
 							serviceHolder.getService().deleteProject(((ProjectTreeNode) lastPathComponent).getProject().getId());
 							updateProjects(serverTreeNode);
-						} catch (UserException e1) {
+						} catch (ServiceException e1) {
 							LOGGER.error("", e1);
 						}
 					}
@@ -266,7 +266,7 @@ public class TreePanel extends JPanel {
 				try {
 					SRevision revision = serviceHolder.getService().getRevision(ptn.getProject().getLastRevisionId());
 					testWindow.checkout(revision);
-				} catch (UserException e1) {
+				} catch (ServiceException e1) {
 					LOGGER.error("", e1);
 				}
 			}
@@ -279,7 +279,7 @@ public class TreePanel extends JPanel {
 				try {
 					SRevision revision = serviceHolder.getService().getRevision(ptn.getProject().getLastRevisionId());
 					testWindow.download(revision);
-				} catch (UserException e1) {
+				} catch (ServiceException e1) {
 					LOGGER.error("", e1);
 				}
 			}
@@ -331,7 +331,7 @@ public class TreePanel extends JPanel {
 						checkout.setEnabled(true);
 						checkin.setText("Checkin new revision...");
 					}
-				} catch (UserException e1) {
+				} catch (ServiceException e1) {
 					LOGGER.error("", e1);
 				}
 			}
@@ -363,7 +363,7 @@ public class TreePanel extends JPanel {
 				}
 			}
 			tree.updateUI();
-		} catch (UserException e) {
+		} catch (ServiceException e) {
 			JOptionPane.showMessageDialog(getRootPane(), e.getMessage());
 		}
 	}
@@ -379,7 +379,7 @@ public class TreePanel extends JPanel {
 				}
 			}
 			tree.updateUI();
-		} catch (UserException e) {
+		} catch (ServiceException e) {
 			JOptionPane.showMessageDialog(getRootPane(), e.getMessage());
 		}
 	}

@@ -8,6 +8,7 @@ import org.bimserver.database.BimDeadlockException;
 import org.bimserver.database.store.CheckinState;
 import org.bimserver.database.store.ConcreteRevision;
 import org.bimserver.database.store.Project;
+import org.bimserver.database.store.Revision;
 import org.bimserver.database.store.User;
 import org.bimserver.database.store.UserType;
 import org.bimserver.database.store.log.AccessMethod;
@@ -52,8 +53,10 @@ public class CheckinDatabaseAction extends GenericCheckinDatabaseAction {
 		}
 		checkCheckSum(project);
 		ConcreteRevision concreteRevision = createNewConcreteRevision(bimDatabaseSession, model.size(), poid, actingUoid, comment.trim(), CheckinState.DONE);
+		Revision virtualRevision = concreteRevision.getRevisions().get(0);
 		concreteRevision.setChecksum(model.getChecksum());
 		project.setLastConcreteRevision(concreteRevision);
+		project.setLastRevision(virtualRevision);
 		concreteRevision.setState(CheckinState.STORING);
 		if (concreteRevision.getId() != 1) {
 			// There already was a revision, lets go delete it
@@ -62,7 +65,7 @@ public class CheckinDatabaseAction extends GenericCheckinDatabaseAction {
 		NewRevisionAdded newRevisionAdded = LogFactory.eINSTANCE.createNewRevisionAdded();
 		newRevisionAdded.setDate(new Date());
 		newRevisionAdded.setExecutor(user);
-		newRevisionAdded.setRevision(concreteRevision.getRevisions().get(0));
+		newRevisionAdded.setRevision(virtualRevision);
 		newRevisionAdded.setAccessMethod(getAccessMethod());
 		bimDatabaseSession.store(newRevisionAdded);
 		bimDatabaseSession.store(model.getValues(), project.getId(), concreteRevision.getId());

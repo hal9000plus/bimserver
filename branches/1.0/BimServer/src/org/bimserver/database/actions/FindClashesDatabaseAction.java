@@ -9,6 +9,7 @@ import java.util.Set;
 import nl.tue.buildingsmart.express.dictionary.SchemaDefinition;
 
 import org.bimserver.Merger;
+import org.bimserver.ServerSettings;
 import org.bimserver.cache.ClashDetectionCache;
 import org.bimserver.database.BimDatabaseException;
 import org.bimserver.database.BimDatabaseSession;
@@ -22,6 +23,7 @@ import org.bimserver.database.store.Revision;
 import org.bimserver.database.store.log.AccessMethod;
 import org.bimserver.emf.IdEObject;
 import org.bimserver.ifc.IfcModel;
+import org.bimserver.ifc.IfcModelSet;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRoot;
 import org.bimserver.ifc.file.writer.IfcStepSerializer;
 import org.bimserver.ifcengine.FailSafeIfcEngine;
@@ -64,19 +66,19 @@ public class FindClashesDatabaseAction extends BimDatabaseAction<Set<? extends C
 		}
 
 		Project project = null;
-		LinkedHashSet<IfcModel> ifcModels = new LinkedHashSet<IfcModel>();
+		IfcModelSet ifcModelSet = new IfcModelSet();
 		for (Revision revision : clashDetectionSettings.getRevisions()) {
 			project = revision.getProject();
 			for (ConcreteRevision concreteRevision : revision.getConcreteRevisions()) {
 				IfcModel source = bimDatabaseSession.getMap(concreteRevision.getProject().getId(), concreteRevision.getId());
 				source.setDate(concreteRevision.getDate());
-				ifcModels.add(source);
+				ifcModelSet.add(source);
 				for (Long oid : source.keySet()) {
 					oidToRoidMap.put(oid, revision);
 				}
 			}
 		}
-		IfcModel ifcModel = Merger.merge(project, ifcModels);
+		IfcModel ifcModel = new Merger().merge(project, ifcModelSet, ServerSettings.getSettings().isIntelligentMerging());
 		IfcModel newModel = new IfcModel();
 		Map<IdEObject, IdEObject> converted = new HashMap<IdEObject, IdEObject>();
 		for (IdEObject idEObject : ifcModel.getValues()) {

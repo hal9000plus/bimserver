@@ -20,7 +20,7 @@ import org.bimserver.ifc.database.IfcDatabase;
 import org.bimserver.querycompiler.CompileException;
 import org.bimserver.querycompiler.QueryCompiler;
 import org.bimserver.querycompiler.QueryInterface;
-import org.bimserver.shared.UserException;
+import org.bimserver.shared.ServiceException;
 import org.bimserver.web.LoginManager;
 import org.codehaus.jettison.json.JSONException;
 import org.codehaus.jettison.json.JSONObject;
@@ -69,7 +69,7 @@ public class CompileServlet extends HttpServlet {
 			if (!loginManager.getService().isLoggedIn()) {
 				loginManager.getService().loginAnonymous();
 			}
-		} catch (UserException e) {
+		} catch (ServiceException e) {
 			LOGGER.error("", e);
 		}
 		BimDatabaseSession session = database.createSession();
@@ -84,7 +84,7 @@ public class CompileServlet extends HttpServlet {
 				LOGGER.error("", e);
 			}
 		} catch (BimDatabaseException e) {
-		} catch (UserException e) {
+		} catch (ServiceException e) {
 			LOGGER.error("", e);
 		} finally {
 			session.close();

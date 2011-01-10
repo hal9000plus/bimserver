@@ -5,6 +5,7 @@ import java.util.LinkedHashSet;
 import java.util.List;
 
 import org.bimserver.Merger;
+import org.bimserver.ServerSettings;
 import org.bimserver.database.BimDatabaseException;
 import org.bimserver.database.BimDatabaseSession;
 import org.bimserver.database.BimDeadlockException;
@@ -12,6 +13,7 @@ import org.bimserver.database.store.ConcreteRevision;
 import org.bimserver.database.store.Revision;
 import org.bimserver.database.store.log.AccessMethod;
 import org.bimserver.ifc.IfcModel;
+import org.bimserver.ifc.IfcModelSet;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRoot;
 import org.bimserver.shared.SDataObject;
 import org.bimserver.shared.UserException;
@@ -33,13 +35,13 @@ public class GetDataObjectsByTypeDatabaseAction extends BimDatabaseAction<List<S
 	public List<SDataObject> execute(BimDatabaseSession bimDatabaseSession) throws UserException, BimDeadlockException, BimDatabaseException {
 		EClass eClass = bimDatabaseSession.getEClassForName(className);
 		Revision virtualRevision = bimDatabaseSession.getVirtualRevision(roid);
-		LinkedHashSet<IfcModel> ifcModels = new LinkedHashSet<IfcModel>();
+		IfcModelSet ifcModelSet = new IfcModelSet();
 		for (ConcreteRevision concreteRevision : virtualRevision.getConcreteRevisions()) {
 			IfcModel subModel = bimDatabaseSession.getAllOfType(className, concreteRevision.getProject().getId(), concreteRevision.getId());
 			subModel.setDate(concreteRevision.getDate());
-			ifcModels.add(subModel);
+			ifcModelSet.add(subModel);
 		}
-		IfcModel ifcModel = Merger.merge(virtualRevision.getProject(), ifcModels);
+		IfcModel ifcModel = new Merger().merge(virtualRevision.getProject(), ifcModelSet, ServerSettings.getSettings().isIntelligentMerging());
 		List<SDataObject> dataObjects = new ArrayList<SDataObject>();
 		for (Long oid : ifcModel.keySet()) {
 			EObject eObject = ifcModel.get(oid);

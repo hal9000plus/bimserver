@@ -16,6 +16,7 @@ import org.apache.cxf.message.Message;
 import org.apache.cxf.transport.Conduit;
 import org.apache.cxf.ws.addressing.EndpointReferenceType;
 import org.bimserver.database.store.log.AccessMethod;
+import org.bimserver.shared.ServiceException;
 import org.bimserver.shared.ServiceInterface;
 import org.bimserver.shared.Token;
 import org.bimserver.shared.UserException;
@@ -43,7 +44,7 @@ public class RestAuthentication extends SoapHeaderInterceptor {
 			if (newService.isLoggedIn()) {
 				return;
 			}
-		} catch (UserException e1) {
+		} catch (ServiceException e1) {
 			LOGGER.error("", e1);
 		}
 		AuthorizationPolicy policy = message.get(AuthorizationPolicy.class);
@@ -58,7 +59,7 @@ public class RestAuthentication extends SoapHeaderInterceptor {
 				LOGGER.warn("Invalid username or password for user: " + policy.getUserName());
 				sendErrorResponse(message, HttpURLConnection.HTTP_FORBIDDEN);
 			}
-		} catch (UserException e) {
+		} catch (ServiceException e) {
 			LOGGER.error("", e);
 		}
 	}

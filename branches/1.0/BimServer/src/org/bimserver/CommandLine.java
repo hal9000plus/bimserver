@@ -9,7 +9,7 @@ import java.util.Set;
 import org.bimserver.database.ColumnDatabase;
 import org.bimserver.database.Database;
 import org.bimserver.shared.ResultType;
-import org.bimserver.shared.UserException;
+import org.bimserver.shared.ServiceException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -44,7 +44,7 @@ public class CommandLine extends Thread {
 					long startTime = System.nanoTime();
 					try {
 						ServerInitializer.getAdminService().download(1051442, ResultType.IFC);
-					} catch (UserException e) {
+					} catch (ServiceException e) {
 						LOGGER.error("", e);
 					}
 					long endTime = System.nanoTime();

@@ -1,11 +1,9 @@
 package org.bimserver;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.LinkedHashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -14,7 +12,11 @@ import org.bimserver.database.store.Project;
 import org.bimserver.database.store.SIPrefix;
 import org.bimserver.emf.IdEObject;
 import org.bimserver.ifc.IfcModel;
+import org.bimserver.ifc.IfcModelSet;
+import org.bimserver.ifc.ReferenceCounter;
 import org.bimserver.ifc.TracingGarbageCollector;
+import org.bimserver.ifc.ReferenceCounter.Reference;
+import org.bimserver.ifc.ReferenceCounter.SingleReference;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcAsymmetricIShapeProfileDef;
 import org.bimserver.ifc.emf.Ifc2x3.IfcBlock;
@@ -106,46 +108,48 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class Merger {
-	private static final Logger LOGGER = LoggerFactory.getLogger(Merger.class);
+	private final Logger LOGGER = LoggerFactory.getLogger(Merger.class);
+	private ReferenceCounter referenceCounter;
+	private IfcModelSet modelSet;
+	private IfcModel model;
+	private Set<EClass> todoList;
+	private Set<String> processedGuids = new HashSet<String>();
+
 	/*
 	 * ifcModels MUST be ordered by date already
 	 */
-	public static IfcModel merge(Project project, LinkedHashSet<IfcModel> ifcModels) {
-		if (ifcModels.size() == 1) {
+	public IfcModel merge(Project project, IfcModelSet modelSet, boolean intelligentMerging) {
+		this.modelSet = modelSet;
+		if (modelSet.size() == 1) {
 			// Do no merging on only 1 model, same in - same out principle of
 			// Leon :)
-			return ifcModels.iterator().next();
+			return modelSet.iterator().next();
 		}
-		IfcModel model = mergeScales(project, ifcModels);
-		
-		// Seems like ifcModels are not always sorted, so we just do it (again)
-		// here
-		ArrayList<IfcModel> tmpList = new ArrayList<IfcModel>(ifcModels);
-		Collections.sort(tmpList, new Comparator<IfcModel>() {
-			@Override
-			public int compare(IfcModel o1, IfcModel o2) {
-				return o1.getDate().compareTo(o2.getDate());
-			}
-		});
-		ifcModels = new LinkedHashSet<IfcModel>(tmpList);
-		if (ServerSettings.getSettings().isIntelligentMerging()) {
+		model = mergeScales(project, modelSet);
+		referenceCounter = new ReferenceCounter(model);
+		referenceCounter.updateReferences();
+		modelSet.sortByDate();
+
+		if (intelligentMerging) {
 			// Top-down merging, based on decomposed-by tree, starting with
 			// IfcProject
 			LOGGER.info("Intelligent merging");
-			Set<EClass> todoList = new HashSet<EClass>();
+			todoList = new HashSet<EClass>();
 			todoList.add(Ifc2x3Package.eINSTANCE.getIfcProject());
 			while (!todoList.isEmpty()) {
 				EClass eClass = todoList.iterator().next();
 				todoList.remove(eClass);
-				mergeType(model, ifcModels, eClass, todoList);
+				Map<String, List<IdEObject>> guidMap = buildGuidMap(eClass);
+				cleanGuidMap(guidMap);
 			}
 			// Merge remaining objects not found in decomposed-by tree
-			mergeType(model, ifcModels, null, todoList);
+			Map<String, List<IdEObject>> guidMap = buildGuidMap(null);
+			cleanGuidMap(guidMap);
 		}
-		
+
 		Set<IfcProject> ifcProjects = new HashSet<IfcProject>();
+		LOGGER.info("Model size: " + model.size());
 		for (IdEObject idEObject : model.getValues()) {
-			System.out.println(idEObject);
 			if (idEObject instanceof IfcProject) {
 				ifcProjects.add((IfcProject) idEObject);
 			}
@@ -157,44 +161,49 @@ public class Merger {
 		return model;
 	}
 
-	private static void mergeType(IfcModel model, LinkedHashSet<IfcModel> ifcModels, EClass eClass, Set<EClass> todoList) {
+	private Map<String, List<IdEObject>> buildGuidMap(EClass eClass) {
 		Map<String, List<IdEObject>> guidMap = new HashMap<String, List<IdEObject>>();
-		for (IfcModel ifcModel : ifcModels) {
-			for (IdEObject idEObject : ifcModel.getValues()) {
+		for (IfcModel model : modelSet) {
+			for (IdEObject idEObject : model.getValues()) {
 				if (idEObject instanceof IfcRoot) {
 					IfcRoot ifcRoot = (IfcRoot) idEObject;
 					if (eClass == null || eClass.isInstance(idEObject)) {
 						String guid = ifcRoot.getGlobalId().getWrappedValue();
-						if (guidMap.containsKey(guid)) {
-							if (guidMap.get(guid).get(0).eClass() != ifcRoot.eClass()) {
-								LOGGER.info("Not merging GUID " + guid + " because different types are found: " + guidMap.get(guid).get(0).eClass().getName() + " and "
-										+ ifcRoot.eClass().getName());
+						if (!processedGuids.contains(guid)) {
+							if (guidMap.containsKey(guid)) {
+								if (guidMap.get(guid).get(0).eClass() != ifcRoot.eClass()) {
+									LOGGER.info("Not merging GUID " + guid + " because different types are found: " + guidMap.get(guid).get(0).eClass().getName() + " and "
+											+ ifcRoot.eClass().getName());
+								} else {
+									guidMap.get(guid).add(ifcRoot);
+								}
 							} else {
-								guidMap.get(guid).add(ifcRoot);
+								List<IdEObject> list = new ArrayList<IdEObject>();
+								list.add(ifcRoot);
+								guidMap.put(guid, list);
 							}
-						} else {
-							List<IdEObject> list = new ArrayList<IdEObject>();
-							list.add(ifcRoot);
-							guidMap.put(guid, list);
 						}
 					}
 				}
 			}
 		}
-		cleanGuidMap(model, todoList, guidMap);
+		return guidMap;
 	}
 
 	@SuppressWarnings("unchecked")
-	private static void cleanGuidMap(IfcModel model, Set<EClass> todoList, Map<String, List<IdEObject>> guidMap) {
+	private void cleanGuidMap(Map<String, List<IdEObject>> guidMap) {
 		for (String guid : guidMap.keySet()) {
 			List<IdEObject> list = guidMap.get(guid);
 			if (list.size() > 1) {
 				IdEObject newestObject = list.get(list.size() - 1);
+				
+				// Change all references TO this object
 				for (IdEObject idEObject : list) {
 					if (idEObject != newestObject) {
-						removeReplaceLinks(model, newestObject, idEObject);
+						removeReplaceLinks(newestObject, idEObject);
 					}
 				}
+				// Change all attributes FROM this object
 				for (EAttribute eAttribute : newestObject.eClass().getEAllAttributes()) {
 					if (eAttribute.isMany()) {
 						// Do not merge lists
@@ -210,6 +219,7 @@ public class Merger {
 						}
 					}
 				}
+				// Change all references FROM this object
 				for (EReference eReference : newestObject.eClass().getEAllReferences()) {
 					if (eReference.isMany()) {
 						// Do not merge lists
@@ -222,7 +232,7 @@ public class Merger {
 									break;
 								}
 							}
-						}					
+						}
 					}
 				}
 			}
@@ -237,43 +247,34 @@ public class Merger {
 					}
 				}
 			}
+			processedGuids.add(guid);
 		}
 	}
 
-	@SuppressWarnings("unchecked")
-	private static void removeReplaceLinks(IfcModel model, IdEObject mainObject, IdEObject objectToRemove) {
+	private void removeReplaceLinks(IdEObject mainObject, IdEObject objectToRemove) {
 		if (mainObject.eClass() != objectToRemove.eClass()) {
 			throw new RuntimeException("Classes must be the same");
 		}
-		for (IdEObject idEObject : model.getValues()) {
-			for (EReference eReference : idEObject.eClass().getEAllReferences()) {
-				Object value = idEObject.eGet(eReference);
-				if (eReference.isMany()) {
-					List<IdEObject> list = (List<IdEObject>) value;
-					for (IdEObject val : list) {
-						if (val == objectToRemove) {
-							if (!list.contains(mainObject)) {
-								list.set(list.indexOf(val), mainObject);
-							}
-						}
-					}
-				} else {
-					if (value == objectToRemove) {
-						idEObject.eSet(eReference, mainObject);
-					}
-				}
+		Set<Reference> referencesTo = referenceCounter.getReferencesTo(objectToRemove);
+		if (referencesTo != null) {
+			Iterator<Reference> referenceIterator = referencesTo.iterator();
+			Set<Reference> newReferences = new HashSet<Reference>();
+			while (referenceIterator.hasNext()) {
+				Reference reference = referenceIterator.next();
+				newReferences.add(reference.reAttach(mainObject));
+				referenceIterator.remove();
+			}
+			for (Reference reference : newReferences) {
+				referenceCounter.addReference(reference);
 			}
 		}
 		mainObject.setOid(objectToRemove.getOid());
 		Long id = model.get(objectToRemove);
-		if (objectToRemove instanceof IfcProject) {
-			System.out.println();
-		}
 		model.remove(objectToRemove);
 		model.setOid(mainObject, id);
 	}
 
-	private static IfcModel mergeScales(Project project, Set<IfcModel> ifcModels) {
+	private IfcModel mergeScales(Project project, Set<IfcModel> ifcModels) {
 		long size = 0;
 		for (IfcModel ifcModel : ifcModels) {
 			size += ifcModel.size();
@@ -447,7 +448,7 @@ public class Merger {
 		return endModel;
 	}
 
-	private static boolean allModelsSameScale(Set<IfcModel> ifcModels, float foundPrefix) {
+	private boolean allModelsSameScale(Set<IfcModel> ifcModels, float foundPrefix) {
 		for (IfcModel ifcModel : ifcModels) {
 			float lengthUnitPrefix = getLengthUnitPrefix(ifcModel);
 			if (foundPrefix != Float.MIN_VALUE) {
@@ -461,7 +462,7 @@ public class Merger {
 		return true;
 	}
 
-	private static void setIfcAsymmetricIShapeProfileDef(IdEObject idEObject, float scale) {
+	private void setIfcAsymmetricIShapeProfileDef(IdEObject idEObject, float scale) {
 		setIfcIShapeProfileDef(idEObject, scale);
 		IfcAsymmetricIShapeProfileDef ifcAsymmetricIShapeProfileDef = (IfcAsymmetricIShapeProfileDef) idEObject;
 		if (ifcAsymmetricIShapeProfileDef.isSetCentreOfGravityInY()) {
@@ -476,21 +477,21 @@ public class Merger {
 		ifcAsymmetricIShapeProfileDef.setTopFlangeWidth(ifcAsymmetricIShapeProfileDef.getTopFlangeWidth() * scale);
 	}
 
-	private static void setIfcBlock(IdEObject idEObject, float scale) {
+	private void setIfcBlock(IdEObject idEObject, float scale) {
 		IfcBlock ifcBlock = (IfcBlock) idEObject;
 		ifcBlock.setXLength(ifcBlock.getXLength() * scale);
 		ifcBlock.setYLength(ifcBlock.getYLength() * scale);
 		ifcBlock.setZLength(ifcBlock.getZLength() * scale);
 	}
 
-	private static void setIfcBoundingBox(IdEObject idEObject, float scale) {
+	private void setIfcBoundingBox(IdEObject idEObject, float scale) {
 		IfcBoundingBox ifcBoundingBox = (IfcBoundingBox) idEObject;
 		ifcBoundingBox.setXDim(ifcBoundingBox.getXDim() * scale);
 		ifcBoundingBox.setYDim(ifcBoundingBox.getYDim() * scale);
 		ifcBoundingBox.setZDim(ifcBoundingBox.getZDim() * scale);
 	}
 
-	private static void setIfcBuilding(IdEObject idEObject, float scale) {
+	private void setIfcBuilding(IdEObject idEObject, float scale) {
 		IfcBuilding ifcBuilding = (IfcBuilding) idEObject;
 		if (ifcBuilding.isSetElevationOfRefHeight()) {
 			ifcBuilding.setElevationOfRefHeight(ifcBuilding.getElevationOfRefHeight() * scale);
@@ -500,14 +501,14 @@ public class Merger {
 		}
 	}
 
-	private static void setIfcBuildingStorey(IdEObject idEObject, float scale) {
+	private void setIfcBuildingStorey(IdEObject idEObject, float scale) {
 		IfcBuildingStorey ifcBuildingStorey = (IfcBuildingStorey) idEObject;
 		if (ifcBuildingStorey.isSetElevation()) {
 			ifcBuildingStorey.setElevation(ifcBuildingStorey.getElevation() * scale);
 		}
 	}
 
-	private static void setIfcCartesianPoint(IdEObject idEObject, float scale) {
+	private void setIfcCartesianPoint(IdEObject idEObject, float scale) {
 		IfcCartesianPoint ifcCartesianPoint = (IfcCartesianPoint) idEObject;
 		EList<Float> coordinates = ifcCartesianPoint.getCoordinates();
 		for (int index = 0; index < coordinates.size(); index++) {
@@ -515,12 +516,12 @@ public class Merger {
 		}
 	}
 
-	private static void setIfcCenterLineProfileDef(IdEObject idEObject, float scale) {
+	private void setIfcCenterLineProfileDef(IdEObject idEObject, float scale) {
 		IfcCenterLineProfileDef ifcCenterLineProfileDef = (IfcCenterLineProfileDef) idEObject;
 		ifcCenterLineProfileDef.setThickness(ifcCenterLineProfileDef.getThickness() * scale);
 	}
 
-	private static void setIfcChamferEdgeFeature(IdEObject idEObject, float scale) {
+	private void setIfcChamferEdgeFeature(IdEObject idEObject, float scale) {
 		setIfcEdgeFeature(idEObject, scale);
 		IfcChamferEdgeFeature ifcChamferEdgeFeature = (IfcChamferEdgeFeature) idEObject;
 		if (ifcChamferEdgeFeature.isSetHeight()) {
@@ -531,7 +532,7 @@ public class Merger {
 		}
 	}
 
-	private static void setIfcDoor(IdEObject idEObject, float scale) {
+	private void setIfcDoor(IdEObject idEObject, float scale) {
 		IfcDoor ifcDoor = (IfcDoor) idEObject;
 		if (ifcDoor.isSetOverallHeight()) {
 			ifcDoor.setOverallHeight(ifcDoor.getOverallHeight() * scale);
@@ -541,7 +542,7 @@ public class Merger {
 		}
 	}
 
-	private static void setIfcDoorLiningProperties(IdEObject idEObject, float scale) {
+	private void setIfcDoorLiningProperties(IdEObject idEObject, float scale) {
 		IfcDoorLiningProperties ifcDoorLiningProperties = (IfcDoorLiningProperties) idEObject;
 		if (ifcDoorLiningProperties.isSetCasingDepth()) {
 			ifcDoorLiningProperties.setCasingDepth(ifcDoorLiningProperties.getCasingDepth() * scale);
@@ -575,38 +576,38 @@ public class Merger {
 		}
 	}
 
-	private static void setIfcDoorPanelProperties(IdEObject idEObject, float scale) {
+	private void setIfcDoorPanelProperties(IdEObject idEObject, float scale) {
 		IfcDoorPanelProperties ifcDoorPanelProperties = (IfcDoorPanelProperties) idEObject;
 		if (ifcDoorPanelProperties.isSetPanelDepth()) {
 			ifcDoorPanelProperties.setPanelDepth(ifcDoorPanelProperties.getPanelDepth() * scale);
 		}
 	}
 
-	private static void setIfcEdgeFeature(IdEObject idEObject, float scale) {
+	private void setIfcEdgeFeature(IdEObject idEObject, float scale) {
 		IfcEdgeFeature ifcEdgeFeature = (IfcEdgeFeature) idEObject;
 		if (ifcEdgeFeature.isSetFeatureLength()) {
 			ifcEdgeFeature.setFeatureLength(ifcEdgeFeature.getFeatureLength() * scale);
 		}
 	}
 
-	private static void setIfcEllipse(IdEObject idEObject, float scale) {
+	private void setIfcEllipse(IdEObject idEObject, float scale) {
 		IfcEllipse ifcEllipse = (IfcEllipse) idEObject;
 		ifcEllipse.setSemiAxis1(ifcEllipse.getSemiAxis1() * scale);
 		ifcEllipse.setSemiAxis2(ifcEllipse.getSemiAxis2() * scale);
 	}
 
-	private static void setIfcEllipseProfileDef(IdEObject idEObject, float scale) {
+	private void setIfcEllipseProfileDef(IdEObject idEObject, float scale) {
 		IfcEllipseProfileDef ifcEllipseProfileDef = (IfcEllipseProfileDef) idEObject;
 		ifcEllipseProfileDef.setSemiAxis1(ifcEllipseProfileDef.getSemiAxis1() * scale);
 		ifcEllipseProfileDef.setSemiAxis2(ifcEllipseProfileDef.getSemiAxis2() * scale);
 	}
 
-	private static void setIfcExtrudedAreaSolid(IdEObject idEObject, float scale) {
+	private void setIfcExtrudedAreaSolid(IdEObject idEObject, float scale) {
 		IfcExtrudedAreaSolid ifcExtrudedAreaSolid = (IfcExtrudedAreaSolid) idEObject;
 		ifcExtrudedAreaSolid.setDepth(ifcExtrudedAreaSolid.getDepth() * scale);
 	}
 
-	private static void setIfcGeneralProfileProperties(IdEObject idEObject, float scale) {
+	private void setIfcGeneralProfileProperties(IdEObject idEObject, float scale) {
 		IfcGeneralProfileProperties ifcGeneralProfileProperties = (IfcGeneralProfileProperties) idEObject;
 		if (ifcGeneralProfileProperties.isSetMaximumPlateThickness()) {
 			ifcGeneralProfileProperties.setMaximumPlateThickness(ifcGeneralProfileProperties.getMaximumPlateThickness() * scale);
@@ -617,23 +618,23 @@ public class Merger {
 		ifcGeneralProfileProperties.setPerimeter(ifcGeneralProfileProperties.getPerimeter() * scale);
 	}
 
-	private static void setIfcCircle(IdEObject idEObject, float scale) {
+	private void setIfcCircle(IdEObject idEObject, float scale) {
 		IfcCircle ifcCircle = (IfcCircle) idEObject;
 		ifcCircle.setRadius(ifcCircle.getRadius() * scale);
 	}
 
-	private static void setIfcCircleHollowProfileDef(IdEObject idEObject, float scale) {
+	private void setIfcCircleHollowProfileDef(IdEObject idEObject, float scale) {
 		setIfcCircleProfileDef(idEObject, scale);
 		IfcCircleHollowProfileDef ifcCircleHollowProfileDef = (IfcCircleHollowProfileDef) idEObject;
 		ifcCircleHollowProfileDef.setWallThickness(ifcCircleHollowProfileDef.getWallThickness() * scale);
 	}
 
-	private static void setIfcCircleProfileDef(IdEObject idEObject, float scale) {
+	private void setIfcCircleProfileDef(IdEObject idEObject, float scale) {
 		IfcCircleProfileDef ifcCircleProfileDef = (IfcCircleProfileDef) idEObject;
 		ifcCircleProfileDef.setRadius(ifcCircleProfileDef.getRadius() * scale);
 	}
 
-	private static void setIfcCraneRailAShapeProfileDef(IdEObject idEObject, float scale) {
+	private void setIfcCraneRailAShapeProfileDef(IdEObject idEObject, float scale) {
 		IfcCraneRailAShapeProfileDef ifcCraneRailAShapeProfileDef = (IfcCraneRailAShapeProfileDef) idEObject;
 		ifcCraneRailAShapeProfileDef.setBaseDepth1(ifcCraneRailAShapeProfileDef.getBaseDepth1() * scale);
 		ifcCraneRailAShapeProfileDef.setBaseDepth2(ifcCraneRailAShapeProfileDef.getBaseDepth2() * scale);
@@ -653,7 +654,7 @@ public class Merger {
 		ifcCraneRailAShapeProfileDef.setWebThickness(ifcCraneRailAShapeProfileDef.getWebThickness() * scale);
 	}
 
-	private static void setIfcCraneRailFShapeProfileDef(IdEObject idEObject, float scale) {
+	private void setIfcCraneRailFShapeProfileDef(IdEObject idEObject, float scale) {
 		IfcCraneRailFShapeProfileDef ifcCraneRailFShapeProfileDef = (IfcCraneRailFShapeProfileDef) idEObject;
 		ifcCraneRailFShapeProfileDef.setBaseDepth1(ifcCraneRailFShapeProfileDef.getBaseDepth1() * scale);
 		ifcCraneRailFShapeProfileDef.setBaseDepth2(ifcCraneRailFShapeProfileDef.getBaseDepth2() * scale);
@@ -670,7 +671,7 @@ public class Merger {
 		ifcCraneRailFShapeProfileDef.setWebThickness(ifcCraneRailFShapeProfileDef.getWebThickness() * scale);
 	}
 
-	private static void setIfcConnectionPointEccentricity(IdEObject idEObject, float scale) {
+	private void setIfcConnectionPointEccentricity(IdEObject idEObject, float scale) {
 		IfcConnectionPointEccentricity ifcConnectionPointEccentricity = (IfcConnectionPointEccentricity) idEObject;
 		if (ifcConnectionPointEccentricity.isSetEccentricityInX()) {
 			ifcConnectionPointEccentricity.setEccentricityInX(ifcConnectionPointEccentricity.getEccentricityInX() * scale);
@@ -683,7 +684,7 @@ public class Merger {
 		}
 	}
 
-	private static void setIfcCShapeProfileDef(IdEObject idEObject, float scale) {
+	private void setIfcCShapeProfileDef(IdEObject idEObject, float scale) {
 		IfcCShapeProfileDef ifcCShapeProfileDef = (IfcCShapeProfileDef) idEObject;
 		if (ifcCShapeProfileDef.isSetCentreOfGravityInX()) {
 			ifcCShapeProfileDef.setCentreOfGravityInX(ifcCShapeProfileDef.getCentreOfGravityInX() * scale);
@@ -697,13 +698,13 @@ public class Merger {
 		ifcCShapeProfileDef.setWidth(ifcCShapeProfileDef.getWidth() * scale);
 	}
 
-	private static void setIfcCurveStyleFontPattern(IdEObject idEObject, float scale) {
+	private void setIfcCurveStyleFontPattern(IdEObject idEObject, float scale) {
 		IfcCurveStyleFontPattern ifcCurveStyleFontPattern = (IfcCurveStyleFontPattern) idEObject;
 		ifcCurveStyleFontPattern.setVisibleSegmentLength(ifcCurveStyleFontPattern.getVisibleSegmentLength() * scale);
 		ifcCurveStyleFontPattern.setInvisibleSegmentLength(ifcCurveStyleFontPattern.getInvisibleSegmentLength() * scale);
 	}
 
-	private static void setIfcIShapeProfileDef(IdEObject idEObject, float scale) {
+	private void setIfcIShapeProfileDef(IdEObject idEObject, float scale) {
 		IfcIShapeProfileDef ifcIShapeProfileDef = (IfcIShapeProfileDef) idEObject;
 		if (ifcIShapeProfileDef.isSetFilletRadius()) {
 			ifcIShapeProfileDef.setFilletRadius(ifcIShapeProfileDef.getFilletRadius() * scale);
@@ -714,12 +715,12 @@ public class Merger {
 		ifcIShapeProfileDef.setWebThickness(ifcIShapeProfileDef.getWebThickness() * scale);
 	}
 
-	private static void setIfcLightSourcePositional(IdEObject idEObject, float scale) {
+	private void setIfcLightSourcePositional(IdEObject idEObject, float scale) {
 		IfcLightSourcePositional ifcLightSourcePositional = (IfcLightSourcePositional) idEObject;
 		ifcLightSourcePositional.setRadius(ifcLightSourcePositional.getRadius() * scale);
 	}
 
-	private static void setIfcLShapeProfileDef(IdEObject idEObject, float scale) {
+	private void setIfcLShapeProfileDef(IdEObject idEObject, float scale) {
 		IfcLShapeProfileDef ifcLShapeProfileDef = (IfcLShapeProfileDef) idEObject;
 		if (ifcLShapeProfileDef.isSetCentreOfGravityInX()) {
 			ifcLShapeProfileDef.setCentreOfGravityInX(ifcLShapeProfileDef.getCentreOfGravityInX() * scale);
@@ -738,24 +739,24 @@ public class Merger {
 		}
 	}
 
-	private static void setIfcMaterialLayer(IdEObject idEObject, float scale) {
+	private void setIfcMaterialLayer(IdEObject idEObject, float scale) {
 		IfcMaterialLayer ifcMaterialLayer = (IfcMaterialLayer) idEObject;
 		ifcMaterialLayer.setLayerThickness(ifcMaterialLayer.getLayerThickness() * scale);
 	}
 
-	private static void setIfcMaterialLayerSetUsage(IdEObject idEObject, float scale) {
+	private void setIfcMaterialLayerSetUsage(IdEObject idEObject, float scale) {
 		IfcMaterialLayerSetUsage ifcMaterialLayerSetUsage = (IfcMaterialLayerSetUsage) idEObject;
 		ifcMaterialLayerSetUsage.setOffsetFromReferenceLine(ifcMaterialLayerSetUsage.getOffsetFromReferenceLine() * scale);
 	}
 
-	private static void setIfcMechanicalConcreteMaterialProperties(IdEObject idEObject, float scale) {
+	private void setIfcMechanicalConcreteMaterialProperties(IdEObject idEObject, float scale) {
 		IfcMechanicalConcreteMaterialProperties ifcMechanicalConcreteMaterialProperties = (IfcMechanicalConcreteMaterialProperties) idEObject;
 		if (ifcMechanicalConcreteMaterialProperties.isSetMaxAggregateSize()) {
 			ifcMechanicalConcreteMaterialProperties.setMaxAggregateSize(ifcMechanicalConcreteMaterialProperties.getMaxAggregateSize() * scale);
 		}
 	}
 
-	private static void setIfcMechanicalFastener(IdEObject idEObject, float scale) {
+	private void setIfcMechanicalFastener(IdEObject idEObject, float scale) {
 		IfcMechanicalFastener ifcMechanicalFastener = (IfcMechanicalFastener) idEObject;
 		if (ifcMechanicalFastener.isSetNominalDiameter()) {
 			ifcMechanicalFastener.setNominalDiameter(ifcMechanicalFastener.getNominalDiameter() * scale);
@@ -765,17 +766,17 @@ public class Merger {
 		}
 	}
 
-	private static void setIfcOffsetCurve2D(IdEObject idEObject, float scale) {
+	private void setIfcOffsetCurve2D(IdEObject idEObject, float scale) {
 		IfcOffsetCurve2D ifcOffsetCurve2D = (IfcOffsetCurve2D) idEObject;
 		ifcOffsetCurve2D.setDistance(ifcOffsetCurve2D.getDistance() * scale);
 	}
 
-	private static void setIfcOffsetCurve3D(IdEObject idEObject, float scale) {
+	private void setIfcOffsetCurve3D(IdEObject idEObject, float scale) {
 		IfcOffsetCurve3D ifcOffsetCurve3D = (IfcOffsetCurve3D) idEObject;
 		ifcOffsetCurve3D.setDistance(ifcOffsetCurve3D.getDistance() * scale);
 	}
 
-	private static void setIfcPermeableCoveringProperties(IdEObject idEObject, float scale) {
+	private void setIfcPermeableCoveringProperties(IdEObject idEObject, float scale) {
 		IfcPermeableCoveringProperties ifcPermeableCoveringProperties = (IfcPermeableCoveringProperties) idEObject;
 		if (ifcPermeableCoveringProperties.isSetFrameDepth()) {
 			ifcPermeableCoveringProperties.setFrameDepth(ifcPermeableCoveringProperties.getFrameDepth() * scale);
@@ -785,18 +786,18 @@ public class Merger {
 		}
 	}
 
-	private static void setIfcPlanarExtent(IdEObject idEObject, float scale) {
+	private void setIfcPlanarExtent(IdEObject idEObject, float scale) {
 		IfcPlanarExtent ifcPlanarExtent = (IfcPlanarExtent) idEObject;
 		ifcPlanarExtent.setSizeInX(ifcPlanarExtent.getSizeInX() * scale);
 		ifcPlanarExtent.setSizeInY(ifcPlanarExtent.getSizeInY() * scale);
 	}
 
-	private static void setIfcQuantityLength(IdEObject idEObject, float scale) {
+	private void setIfcQuantityLength(IdEObject idEObject, float scale) {
 		IfcQuantityLength ifcQuantityLength = (IfcQuantityLength) idEObject;
 		ifcQuantityLength.setLengthValue(ifcQuantityLength.getLengthValue() * scale);
 	}
 
-	private static void setIfcRectangleHollowProfileDef(IdEObject idEObject, float scale) {
+	private void setIfcRectangleHollowProfileDef(IdEObject idEObject, float scale) {
 		setIfcRectangleProfileDef(idEObject, scale);
 		IfcRectangleHollowProfileDef ifcRectangleHollowProfileDef = (IfcRectangleHollowProfileDef) idEObject;
 		if (ifcRectangleHollowProfileDef.isSetInnerFilletRadius()) {
@@ -808,20 +809,20 @@ public class Merger {
 		ifcRectangleHollowProfileDef.setWallThickness(ifcRectangleHollowProfileDef.getWallThickness() * scale);
 	}
 
-	private static void setIfcRectangleProfileDef(IdEObject idEObject, float scale) {
+	private void setIfcRectangleProfileDef(IdEObject idEObject, float scale) {
 		IfcRectangleProfileDef ifcRectangleProfileDef = (IfcRectangleProfileDef) idEObject;
 		ifcRectangleProfileDef.setXDim(ifcRectangleProfileDef.getXDim() * scale);
 		ifcRectangleProfileDef.setYDim(ifcRectangleProfileDef.getYDim() * scale);
 	}
 
-	private static void setIfcRectangularPyramid(IdEObject idEObject, float scale) {
+	private void setIfcRectangularPyramid(IdEObject idEObject, float scale) {
 		IfcRectangularPyramid ifcRectangularPyramid = (IfcRectangularPyramid) idEObject;
 		ifcRectangularPyramid.setHeight(ifcRectangularPyramid.getHeight() * scale);
 		ifcRectangularPyramid.setXLength(ifcRectangularPyramid.getXLength() * scale);
 		ifcRectangularPyramid.setYLength(ifcRectangularPyramid.getYLength() * scale);
 	}
 
-	private static void setIfcReinforcementBarProperties(IdEObject idEObject, float scale) {
+	private void setIfcReinforcementBarProperties(IdEObject idEObject, float scale) {
 		IfcReinforcementBarProperties ifcReinforcementBarProperties = (IfcReinforcementBarProperties) idEObject;
 		if (ifcReinforcementBarProperties.isSetEffectiveDepth()) {
 			ifcReinforcementBarProperties.setEffectiveDepth(ifcReinforcementBarProperties.getEffectiveDepth() * scale);
@@ -831,7 +832,7 @@ public class Merger {
 		}
 	}
 
-	private static void setIfcReinforcingBar(IdEObject idEObject, float scale) {
+	private void setIfcReinforcingBar(IdEObject idEObject, float scale) {
 		IfcReinforcingBar ifcReinforcingBar = (IfcReinforcingBar) idEObject;
 		if (ifcReinforcingBar.isSetBarLength()) {
 			ifcReinforcingBar.setBarLength(ifcReinforcingBar.getBarLength() * scale);
@@ -839,7 +840,7 @@ public class Merger {
 		ifcReinforcingBar.setNominalDiameter(ifcReinforcingBar.getNominalDiameter() * scale);
 	}
 
-	private static void setIfcReinforcingMesh(IdEObject idEObject, float scale) {
+	private void setIfcReinforcingMesh(IdEObject idEObject, float scale) {
 		IfcReinforcingMesh ifcReinforcingMesh = (IfcReinforcingMesh) idEObject;
 		if (ifcReinforcingMesh.isSetMeshLength()) {
 			ifcReinforcingMesh.setMeshLength(ifcReinforcingMesh.getMeshLength() * scale);
@@ -853,14 +854,14 @@ public class Merger {
 		ifcReinforcingMesh.setTransverseBarSpacing(ifcReinforcingMesh.getTransverseBarSpacing() * scale);
 	}
 
-	private static void setIfcRelConnectsStructuralMember(IdEObject idEObject, float scale) {
+	private void setIfcRelConnectsStructuralMember(IdEObject idEObject, float scale) {
 		IfcRelConnectsStructuralMember ifcRelConnectsStructuralMember = (IfcRelConnectsStructuralMember) idEObject;
 		if (ifcRelConnectsStructuralMember.isSetSupportedLength()) {
 			ifcRelConnectsStructuralMember.setSupportedLength(ifcRelConnectsStructuralMember.getSupportedLength() * scale);
 		}
 	}
 
-	private static void setIfcRibPlateProfileProperties(IdEObject idEObject, float scale) {
+	private void setIfcRibPlateProfileProperties(IdEObject idEObject, float scale) {
 		IfcRibPlateProfileProperties ifcRibPlateProfileProperties = (IfcRibPlateProfileProperties) idEObject;
 		if (ifcRibPlateProfileProperties.isSetRibHeight()) {
 			ifcRibPlateProfileProperties.setRibHeight(ifcRibPlateProfileProperties.getRibHeight() * scale);
@@ -876,19 +877,19 @@ public class Merger {
 		}
 	}
 
-	private static void setIfcRightCircularCone(IdEObject idEObject, float scale) {
+	private void setIfcRightCircularCone(IdEObject idEObject, float scale) {
 		IfcRightCircularCone ifcRightCircularCone = (IfcRightCircularCone) idEObject;
 		ifcRightCircularCone.setBottomRadius(ifcRightCircularCone.getBottomRadius() * scale);
 		ifcRightCircularCone.setHeight(ifcRightCircularCone.getHeight() * scale);
 	}
 
-	private static void setIfcRightCircularCylinder(IdEObject idEObject, float scale) {
+	private void setIfcRightCircularCylinder(IdEObject idEObject, float scale) {
 		IfcRightCircularCylinder ifcRightCircularCylinder = (IfcRightCircularCylinder) idEObject;
 		ifcRightCircularCylinder.setHeight(ifcRightCircularCylinder.getHeight() * scale);
 		ifcRightCircularCylinder.setRadius(ifcRightCircularCylinder.getRadius() * scale);
 	}
 
-	private static void setIfcRoundedEdgeFeature(IdEObject idEObject, float scale) {
+	private void setIfcRoundedEdgeFeature(IdEObject idEObject, float scale) {
 		setIfcEdgeFeature(idEObject, scale);
 		IfcRoundedEdgeFeature ifcRoundedEdgeFeature = (IfcRoundedEdgeFeature) idEObject;
 		if (ifcRoundedEdgeFeature.isSetRadius()) {
@@ -896,13 +897,13 @@ public class Merger {
 		}
 	}
 
-	private static void setIfcRoundedRectangleProfileDef(IdEObject idEObject, float scale) {
+	private void setIfcRoundedRectangleProfileDef(IdEObject idEObject, float scale) {
 		setIfcRectangleProfileDef(idEObject, scale);
 		IfcRoundedRectangleProfileDef ifcRoundedRectangleProfileDef = (IfcRoundedRectangleProfileDef) idEObject;
 		ifcRoundedRectangleProfileDef.setRoundingRadius(ifcRoundedRectangleProfileDef.getRoundingRadius() * scale);
 	}
 
-	private static void setIfcSectionReinforcementProperties(IdEObject idEObject, float scale) {
+	private void setIfcSectionReinforcementProperties(IdEObject idEObject, float scale) {
 		IfcSectionReinforcementProperties ifcSectionReinforcementProperties = (IfcSectionReinforcementProperties) idEObject;
 		ifcSectionReinforcementProperties.setLongitudinalEndPosition(ifcSectionReinforcementProperties.getLongitudinalEndPosition() * scale);
 		ifcSectionReinforcementProperties.setLongitudinalStartPosition(ifcSectionReinforcementProperties.getLongitudinalStartPosition() * scale);
@@ -911,14 +912,14 @@ public class Merger {
 		}
 	}
 
-	private static void setIfcSite(IdEObject idEObject, float scale) {
+	private void setIfcSite(IdEObject idEObject, float scale) {
 		IfcSite ifcSite = (IfcSite) idEObject;
 		if (ifcSite.isSetRefElevation()) {
 			ifcSite.setRefElevation(ifcSite.getRefElevation() * scale);
 		}
 	}
 
-	private static void setIfcSlippageConnectionCondition(IdEObject idEObject, float scale) {
+	private void setIfcSlippageConnectionCondition(IdEObject idEObject, float scale) {
 		IfcSlippageConnectionCondition ifcSlippageConnectionCondition = (IfcSlippageConnectionCondition) idEObject;
 		if (ifcSlippageConnectionCondition.isSetSlippageX()) {
 			ifcSlippageConnectionCondition.setSlippageX(ifcSlippageConnectionCondition.getSlippageX() * scale);
@@ -931,19 +932,19 @@ public class Merger {
 		}
 	}
 
-	private static void setIfcSpace(IdEObject idEObject, float scale) {
+	private void setIfcSpace(IdEObject idEObject, float scale) {
 		IfcSpace ifcSpace = (IfcSpace) idEObject;
 		if (ifcSpace.isSetElevationWithFlooring()) {
 			ifcSpace.setElevationWithFlooring(ifcSpace.getElevationWithFlooring() * scale);
 		}
 	}
 
-	private static void setIfcSphere(IdEObject idEObject, float scale) {
+	private void setIfcSphere(IdEObject idEObject, float scale) {
 		IfcSphere ifcSphere = (IfcSphere) idEObject;
 		ifcSphere.setRadius(ifcSphere.getRadius() * scale);
 	}
 
-	private static void setIfcStairFlight(IdEObject idEObject, float scale) {
+	private void setIfcStairFlight(IdEObject idEObject, float scale) {
 		IfcStairFlight ifcStairFlight = (IfcStairFlight) idEObject;
 		if (ifcStairFlight.isSetRiserHeight()) {
 			ifcStairFlight.setRiserHeight(ifcStairFlight.getRiserHeight() * scale);
@@ -953,7 +954,7 @@ public class Merger {
 		}
 	}
 
-	private static void setIfcStructuralLoadSingleDisplacement(IdEObject idEObject, float scale) {
+	private void setIfcStructuralLoadSingleDisplacement(IdEObject idEObject, float scale) {
 		IfcStructuralLoadSingleDisplacement ifcStructuralLoadSingleDisplacement = (IfcStructuralLoadSingleDisplacement) idEObject;
 		if (ifcStructuralLoadSingleDisplacement.isSetDisplacementX()) {
 			ifcStructuralLoadSingleDisplacement.setDisplacementX(ifcStructuralLoadSingleDisplacement.getDisplacementX() * scale);
@@ -966,7 +967,7 @@ public class Merger {
 		}
 	}
 
-	private static void setIfcStructuralProfileProperties(IdEObject idEObject, float scale) {
+	private void setIfcStructuralProfileProperties(IdEObject idEObject, float scale) {
 		setIfcGeneralProfileProperties(idEObject, scale);
 		IfcStructuralProfileProperties ifcStructuralProfileProperties = (IfcStructuralProfileProperties) idEObject;
 		if (ifcStructuralProfileProperties.isSetCentreOfGravityInX()) {
@@ -983,14 +984,14 @@ public class Merger {
 		}
 	}
 
-	private static void setIfcStructuralSurfaceMember(IdEObject idEObject, float scale) {
+	private void setIfcStructuralSurfaceMember(IdEObject idEObject, float scale) {
 		IfcStructuralSurfaceMember ifcStructuralSurfaceMember = (IfcStructuralSurfaceMember) idEObject;
 		if (ifcStructuralSurfaceMember.isSetThickness()) {
 			ifcStructuralSurfaceMember.setThickness(ifcStructuralSurfaceMember.getThickness() * scale);
 		}
 	}
 
-	private static void setIfcStructuralSurfaceMemberVarying(IdEObject idEObject, float scale) {
+	private void setIfcStructuralSurfaceMemberVarying(IdEObject idEObject, float scale) {
 		setIfcStructuralSurfaceMember(idEObject, scale);
 		IfcStructuralSurfaceMemberVarying ifcStructuralSurfaceMemberVarying = (IfcStructuralSurfaceMemberVarying) idEObject;
 		EList<Float> subsequentThickness = ifcStructuralSurfaceMemberVarying.getSubsequentThickness();
@@ -999,12 +1000,12 @@ public class Merger {
 		}
 	}
 
-	private static void setIfcSurfaceOfLinearExtrusion(IdEObject idEObject, float scale) {
+	private void setIfcSurfaceOfLinearExtrusion(IdEObject idEObject, float scale) {
 		IfcSurfaceOfLinearExtrusion ifcSurfaceOfLinearExtrusion = (IfcSurfaceOfLinearExtrusion) idEObject;
 		ifcSurfaceOfLinearExtrusion.setDepth(ifcSurfaceOfLinearExtrusion.getDepth() * scale);
 	}
 
-	private static void setIfcSweptDiskSolid(IdEObject idEObject, float scale) {
+	private void setIfcSweptDiskSolid(IdEObject idEObject, float scale) {
 		IfcSweptDiskSolid ifcSweptDiskSolid = (IfcSweptDiskSolid) idEObject;
 		if (ifcSweptDiskSolid.isSetInnerRadius()) {
 			ifcSweptDiskSolid.setInnerRadius(ifcSweptDiskSolid.getInnerRadius() * scale);
@@ -1012,7 +1013,7 @@ public class Merger {
 		ifcSweptDiskSolid.setRadius(ifcSweptDiskSolid.getRadius() * scale);
 	}
 
-	private static void setIfcTendon(IdEObject idEObject, float scale) {
+	private void setIfcTendon(IdEObject idEObject, float scale) {
 		IfcTendon ifcTendon = (IfcTendon) idEObject;
 		if (ifcTendon.isSetAnchorageSlip()) {
 			ifcTendon.setAnchorageSlip(ifcTendon.getAnchorageSlip() * scale);
@@ -1023,7 +1024,7 @@ public class Merger {
 		ifcTendon.setNominalDiameter(ifcTendon.getNominalDiameter() * scale);
 	}
 
-	private static void setIfcTextStyleWithBoxCharacteristics(IdEObject idEObject, float scale) {
+	private void setIfcTextStyleWithBoxCharacteristics(IdEObject idEObject, float scale) {
 		IfcTextStyleWithBoxCharacteristics ifcTextStyleWithBoxCharacteristics = (IfcTextStyleWithBoxCharacteristics) idEObject;
 		if (ifcTextStyleWithBoxCharacteristics.isSetBoxHeight()) {
 			ifcTextStyleWithBoxCharacteristics.setBoxHeight(ifcTextStyleWithBoxCharacteristics.getBoxHeight() * scale);
@@ -1033,7 +1034,7 @@ public class Merger {
 		}
 	}
 
-	private static void setIfcTrapeziumProfileDef(IdEObject idEObject, float scale) {
+	private void setIfcTrapeziumProfileDef(IdEObject idEObject, float scale) {
 		IfcTrapeziumProfileDef ifcTrapeziumProfileDef = (IfcTrapeziumProfileDef) idEObject;
 		ifcTrapeziumProfileDef.setBottomXDim(ifcTrapeziumProfileDef.getBottomXDim() * scale);
 		ifcTrapeziumProfileDef.setTopXDim(ifcTrapeziumProfileDef.getTopXDim() * scale);
@@ -1041,7 +1042,7 @@ public class Merger {
 		ifcTrapeziumProfileDef.setYDim(ifcTrapeziumProfileDef.getYDim() * scale);
 	}
 
-	private static void setIfcTShapeProfileDef(IdEObject idEObject, float scale) {
+	private void setIfcTShapeProfileDef(IdEObject idEObject, float scale) {
 		IfcTShapeProfileDef ifcTShapeProfileDef = (IfcTShapeProfileDef) idEObject;
 		if (ifcTShapeProfileDef.isSetCentreOfGravityInY()) {
 			ifcTShapeProfileDef.setCentreOfGravityInY(ifcTShapeProfileDef.getCentreOfGravityInY() * scale);
@@ -1059,7 +1060,7 @@ public class Merger {
 		ifcTShapeProfileDef.setWebThickness(ifcTShapeProfileDef.getWebThickness() * scale);
 	}
 
-	private static void setIfcUShapeProfileDef(IdEObject idEObject, float scale) {
+	private void setIfcUShapeProfileDef(IdEObject idEObject, float scale) {
 		IfcUShapeProfileDef ifcUShapeProfileDef = (IfcUShapeProfileDef) idEObject;
 		if (ifcUShapeProfileDef.isSetCentreOfGravityInX()) {
 			ifcUShapeProfileDef.setCentreOfGravityInX(ifcUShapeProfileDef.getCentreOfGravityInX() * scale);
@@ -1076,12 +1077,12 @@ public class Merger {
 		ifcUShapeProfileDef.setWebThickness(ifcUShapeProfileDef.getWebThickness() * scale);
 	}
 
-	private static void setIfcVector(IdEObject idEObject, float scale) {
+	private void setIfcVector(IdEObject idEObject, float scale) {
 		IfcVector ifcVector = (IfcVector) idEObject;
 		ifcVector.setMagnitude(ifcVector.getMagnitude() * scale);
 	}
 
-	private static void setIfcVirtualGridIntersection(IdEObject idEObject, float scale) {
+	private void setIfcVirtualGridIntersection(IdEObject idEObject, float scale) {
 		IfcVirtualGridIntersection ifcVirtualGridIntersection = (IfcVirtualGridIntersection) idEObject;
 		EList<Float> offsetDistances = ifcVirtualGridIntersection.getOffsetDistances();
 		for (Float offsetDistance : offsetDistances) {
@@ -1089,7 +1090,7 @@ public class Merger {
 		}
 	}
 
-	private static void setIfcWindow(IdEObject idEObject, float scale) {
+	private void setIfcWindow(IdEObject idEObject, float scale) {
 		IfcWindow ifcWindow = (IfcWindow) idEObject;
 		if (ifcWindow.isSetOverallHeight()) {
 			ifcWindow.setOverallHeight(ifcWindow.getOverallHeight() * scale);
@@ -1099,7 +1100,7 @@ public class Merger {
 		}
 	}
 
-	private static void setIfcWindowLiningProperties(IdEObject idEObject, float scale) {
+	private void setIfcWindowLiningProperties(IdEObject idEObject, float scale) {
 		IfcWindowLiningProperties ifcWindowLiningProperties = (IfcWindowLiningProperties) idEObject;
 		if (ifcWindowLiningProperties.isSetLiningDepth()) {
 			ifcWindowLiningProperties.setLiningDepth(ifcWindowLiningProperties.getLiningDepth() * scale);
@@ -1115,7 +1116,7 @@ public class Merger {
 		}
 	}
 
-	private static void setIfcWindowPanelProperties(IdEObject idEObject, float scale) {
+	private void setIfcWindowPanelProperties(IdEObject idEObject, float scale) {
 		IfcWindowPanelProperties ifcWindowPanelProperties = (IfcWindowPanelProperties) idEObject;
 		if (ifcWindowPanelProperties.isSetFrameDepth()) {
 			ifcWindowPanelProperties.setFrameDepth(ifcWindowPanelProperties.getFrameDepth() * scale);
@@ -1125,7 +1126,7 @@ public class Merger {
 		}
 	}
 
-	private static void setIfcZShapeProfileDef(IdEObject idEObject, float scale) {
+	private void setIfcZShapeProfileDef(IdEObject idEObject, float scale) {
 		IfcZShapeProfileDef ifcZShapeProfileDef = (IfcZShapeProfileDef) idEObject;
 		ifcZShapeProfileDef.setDepth(ifcZShapeProfileDef.getDepth() * scale);
 		if (ifcZShapeProfileDef.isSetEdgeRadius()) {
@@ -1139,7 +1140,7 @@ public class Merger {
 		ifcZShapeProfileDef.setWebThickness(ifcZShapeProfileDef.getWebThickness() * scale);
 	}
 
-	private static float getLengthUnitPrefix(IfcModel model) {
+	private float getLengthUnitPrefix(IfcModel model) {
 		float lengthUnitPrefix = 1.0f;
 		boolean prefixFound = false;
 		Map<Long, IdEObject> objects = model.getObjects();
@@ -1219,7 +1220,7 @@ public class Merger {
 		return lengthUnitPrefix;
 	}
 
-	private static void setLengthUnitMeasure(IfcModel model, SIPrefix prefix) {
+	private void setLengthUnitMeasure(IfcModel model, SIPrefix prefix) {
 		Map<Long, IdEObject> objects = model.getObjects();
 		boolean prefixFound = false;
 		for (IdEObject object : objects.values()) {

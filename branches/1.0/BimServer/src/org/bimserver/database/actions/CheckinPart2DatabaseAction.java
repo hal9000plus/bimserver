@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.LinkedHashSet;
 
 import org.bimserver.Merger;
+import org.bimserver.ServerSettings;
 import org.bimserver.database.BimDatabaseException;
 import org.bimserver.database.BimDatabaseSession;
 import org.bimserver.database.BimDeadlockException;
@@ -13,6 +14,7 @@ import org.bimserver.database.store.Project;
 import org.bimserver.database.store.Revision;
 import org.bimserver.database.store.log.AccessMethod;
 import org.bimserver.ifc.IfcModel;
+import org.bimserver.ifc.IfcModelSet;
 import org.bimserver.shared.UserException;
 
 public class CheckinPart2DatabaseAction extends BimDatabaseAction<Void> {
@@ -38,17 +40,17 @@ public class CheckinPart2DatabaseAction extends BimDatabaseAction<Void> {
 			Revision lastRevision = project.getLastRevision();
 			IfcModel ifcModel = null;
 			if (merge) {
-				LinkedHashSet<IfcModel> ifcModels = new LinkedHashSet<IfcModel>();
+				IfcModelSet ifcModelSet = new IfcModelSet();
 				for (ConcreteRevision subRevision : lastRevision.getConcreteRevisions()) {
 					IfcModel subModel = bimDatabaseSession.getMap(subRevision.getProject().getId(), subRevision.getId());
 					subModel.setDate(subRevision.getDate());
-					ifcModels.add(subModel);
+					ifcModelSet.add(subModel);
 				}
 				getIfcModel().setDate(new Date());
 				IfcModel newModel = getIfcModel();
 				newModel.fixOids(bimDatabaseSession);
-				ifcModels.add(newModel);
-				ifcModel = Merger.merge(project, ifcModels);
+				ifcModelSet.add(newModel);
+				ifcModel = new Merger().merge(project, ifcModelSet, ServerSettings.getSettings().isIntelligentMerging());
 			} else {
 				ifcModel = getIfcModel();
 			}

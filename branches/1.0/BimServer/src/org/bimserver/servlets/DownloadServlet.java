@@ -41,6 +41,7 @@ import org.bimserver.interfaces.objects.SProject;
 import org.bimserver.shared.ResultType;
 import org.bimserver.shared.SCompareResult;
 import org.bimserver.shared.SDownloadResult;
+import org.bimserver.shared.ServiceException;
 import org.bimserver.shared.UserException;
 import org.bimserver.shared.SCompareResult.SCompareType;
 import org.bimserver.shared.SCompareResult.SItem;
@@ -180,7 +181,7 @@ public class DownloadServlet extends HttpServlet {
 		} catch (NumberFormatException e) {
 			LOGGER.error("", e);
 			response.getWriter().println("Some number was incorrectly formatted");
-		} catch (UserException e) {
+		} catch (ServiceException e) {
 			response.getWriter().println(e.getUserMessage());
 		}
 	}

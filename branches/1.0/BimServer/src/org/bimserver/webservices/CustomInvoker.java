@@ -3,6 +3,7 @@ package org.bimserver.webservices;
 import org.apache.cxf.message.Exchange;
 import org.apache.cxf.service.invoker.AbstractInvoker;
 import org.bimserver.database.store.log.AccessMethod;
+import org.bimserver.shared.ServiceException;
 import org.bimserver.shared.ServiceInterface;
 import org.bimserver.shared.Token;
 import org.bimserver.shared.UserException;
@@ -31,7 +32,7 @@ public class CustomInvoker extends AbstractInvoker {
 			ServiceInterface newService = serviceFactory.newService(AccessMethod.WEB_INTERFACE);
 			try {
 				context.getSession().put("token", newService.getCurrentToken());
-			} catch (UserException e) {
+			} catch (ServiceException e) {
 				LOGGER.error("", e);
 			}
 			return newService;

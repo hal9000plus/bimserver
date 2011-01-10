@@ -36,7 +36,7 @@ import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import org.bimserver.ServerInfo;
-import org.bimserver.shared.UserException;
+import org.bimserver.shared.ServiceException;
 import org.bimserver.utils.InputStreamDataSource;
 import org.bimserver.web.LoginManager;
 import org.slf4j.Logger;
@@ -107,7 +107,7 @@ public class UploadServlet extends HttpServlet {
 								DataHandler ifcFile = new DataHandler(inputStreamDataSource);
 								loginManager.getService().checkinAsync(poid, comment, size, ifcFile, merge);
 								response.sendRedirect("project.jsp?poid=" + poid);
-							} catch (UserException e) {
+							} catch (ServiceException e) {
 								if (e.getCause() instanceof OutOfMemoryError) {
 									ServerInfo.setOutOfMemory();
 									response.sendRedirect(getServletContext().getContextPath());
