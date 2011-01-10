@@ -5,6 +5,7 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 
 import org.bimserver.Merger;
+import org.bimserver.ServerSettings;
 import org.bimserver.database.BimDatabaseException;
 import org.bimserver.database.BimDatabaseSession;
 import org.bimserver.database.BimDeadlockException;
@@ -14,6 +15,7 @@ import org.bimserver.database.store.Revision;
 import org.bimserver.database.store.User;
 import org.bimserver.database.store.log.AccessMethod;
 import org.bimserver.ifc.IfcModel;
+import org.bimserver.ifc.IfcModelSet;
 import org.bimserver.rights.RightsManager;
 import org.bimserver.shared.UserException;
 
@@ -33,7 +35,7 @@ public class DownloadByOidsDatabaseAction extends BimDatabaseAction<IfcModel> {
 	@Override
 	public IfcModel execute(BimDatabaseSession bimDatabaseSession) throws UserException, BimDeadlockException, BimDatabaseException {
 		User user = bimDatabaseSession.getUserByUoid(actingUoid);
-		LinkedHashSet<IfcModel> ifcModels = new LinkedHashSet<IfcModel>();
+		IfcModelSet ifcModelSet = new IfcModelSet();
 		Project project = null;
 		for (Long roid : roids) {
 			Revision virtualRevision = bimDatabaseSession.getVirtualRevision(roid);
@@ -44,7 +46,7 @@ public class DownloadByOidsDatabaseAction extends BimDatabaseAction<IfcModel> {
 			for (ConcreteRevision concreteRevision : virtualRevision.getConcreteRevisions()) {
 				IfcModel model = bimDatabaseSession.getMapWithOids(concreteRevision.getProject().getId(), concreteRevision.getId(), oids);
 				model.setDate(concreteRevision.getDate());
-				ifcModels.add(model);
+				ifcModelSet.add(model);
 //				for (Long oid : oids) {
 //					IfcModel subModel = bimDatabaseSession.getMapWithOids(concreteRevision.getProject().getId(), concreteRevision.getId(), oid);
 //					subModel.setDate(concreteRevision.getDate());
@@ -52,7 +54,7 @@ public class DownloadByOidsDatabaseAction extends BimDatabaseAction<IfcModel> {
 //				}
 			}
 		}
-		IfcModel ifcModel = Merger.merge(project, ifcModels);
+		IfcModel ifcModel = new Merger().merge(project, ifcModelSet, ServerSettings.getSettings().isIntelligentMerging());
 		ifcModel.setRevisionNr(1);
 		ifcModel.setAuthorizedUser(bimDatabaseSession.getUserByUoid(actingUoid).getName());
 		ifcModel.setDate(new Date());

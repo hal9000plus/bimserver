@@ -18,6 +18,7 @@ import org.bimserver.shared.SCompareResult;
 import org.bimserver.shared.SProjectNameComparator;
 import org.bimserver.shared.SRevisionIdComparator;
 import org.bimserver.shared.SRevisionSummary;
+import org.bimserver.shared.ServiceException;
 import org.bimserver.shared.ServiceInterface;
 import org.bimserver.shared.UserException;
 import org.bimserver.shared.SCompareResult.SCompareType;
@@ -28,12 +29,12 @@ import org.slf4j.LoggerFactory;
 public class JspHelper {
 	private static final Logger LOGGER = LoggerFactory.getLogger(JspHelper.class);
 	
-	public static String generateBreadCrumbPath(SRevision revision, ServiceInterface serviceWrapper) throws UserException {
+	public static String generateBreadCrumbPath(SRevision revision, ServiceInterface serviceWrapper) throws ServiceException {
 		String projectPath = generateBreadCrumbPath(serviceWrapper.getProjectByPoid(revision.getProjectId()), serviceWrapper);
 		return projectPath + " <a href=\"revision.jsp?roid=" + revision.getOid() + "\">" + revision.getId() + "</a>";
 	}
 
-	public static String generateBreadCrumbPath(SProject project, ServiceInterface serviceWrapper) throws UserException {
+	public static String generateBreadCrumbPath(SProject project, ServiceInterface serviceWrapper) throws ServiceException {
 		String path = "";
 		while (project != null) {
 			path = "<a id=\"usernav-home\" href=\"project.jsp?poid=" + project.getOid() + "\">" + project.getName() + "</a> " + path;
@@ -46,7 +47,7 @@ public class JspHelper {
 		return path;
 	}
 
-	public static String writeProjectTree(SProject project, LoginManager loginManager, int level) throws UserException {
+	public static String writeProjectTree(SProject project, LoginManager loginManager, int level) throws ServiceException {
 		StringBuilder result = new StringBuilder();
 		SRevision lastRevision = null;
 		if (project.getLastRevisionId() != -1) {
@@ -91,7 +92,7 @@ public class JspHelper {
 		return result.toString();
 	}
 
-	public static String writeDownloadProjectTreeJavaScript(SProject project, LoginManager loginManager) throws UserException {
+	public static String writeDownloadProjectTreeJavaScript(SProject project, LoginManager loginManager) throws ServiceException {
 		StringBuilder result = new StringBuilder();
 		result.append("projects.project" + project.getId() + " = new Object();\n");
 		result.append("projects.project" + project.getId() + ".id = " + project.getId() + ";\n");
@@ -107,7 +108,7 @@ public class JspHelper {
 		return result.toString();
 	}
 
-	public static String writeDownloadProjectTree(String baseName, SProject project, LoginManager loginManager, int level, Set<Long> revisions) throws UserException {
+	public static String writeDownloadProjectTree(String baseName, SProject project, LoginManager loginManager, int level, Set<Long> revisions) throws ServiceException {
 		StringBuilder result = new StringBuilder();
 		SRevision lastRevision = null;
 		if (project.getLastRevisionId() != -1) {
@@ -251,7 +252,7 @@ public class JspHelper {
 		if (sProject.getParentId() != -1) {
 			try {
 				return completeProjectName(service, service.getProjectByPoid(sProject.getParentId())) + "." + sProject.getName();
-			} catch (UserException e) {
+			} catch (ServiceException e) {
 				LOGGER.error("", e);
 			}
 		}
@@ -299,7 +300,7 @@ public class JspHelper {
 		return sClashDetectionSettings;
 	}
 	
-	public static String showProjectTree(SProject activeProject, ServiceInterface serviceInterface) throws UserException {
+	public static String showProjectTree(SProject activeProject, ServiceInterface serviceInterface) throws ServiceException {
 		StringBuilder sb = new StringBuilder();
 		sb.append("<ul class=\"projectTreeFirst\">");
 		SProject mainProject = activeProject;
@@ -311,7 +312,7 @@ public class JspHelper {
 		return sb.toString();
 	}
 
-	private static void showProjectTree(StringBuilder sb, SProject mainProject, SProject activeProject, ServiceInterface serviceInterface, boolean isLast) throws UserException {
+	private static void showProjectTree(StringBuilder sb, SProject mainProject, SProject activeProject, ServiceInterface serviceInterface, boolean isLast) throws ServiceException {
 		sb.append("<li" + (isLast ? " class=\"last\"" : "") + ">");
 		boolean hasRights = serviceInterface.userHasCheckinRights(mainProject.getOid());
 		sb.append("<a class=\"projectTreeItem" + (activeProject.getOid() == mainProject.getOid() ? " activeTreeItem" : "") + (hasRights ? "" : " norightsTreeItem") + "\" href=\"project.jsp?poid=" + mainProject.getOid() + "\"/>" + mainProject.getName() + "</a>");

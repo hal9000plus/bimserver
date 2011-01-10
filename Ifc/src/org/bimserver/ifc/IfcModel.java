@@ -23,6 +23,7 @@ package org.bimserver.ifc;
 import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
@@ -194,5 +195,20 @@ public class IfcModel {
 			temp.put(idEObject.getOid(), idEObject);
 		}
 		objects = temp;
+	}
+	
+	public long getHighestOid() {
+		long max = 0;
+		for (long key : objects.keySet()) {
+			if (key > max) {
+				max = key;
+			}
+		}
+		return max;
+	}
+	
+	@Override
+	public String toString() {
+		return "" + getSize();
 	}
 }

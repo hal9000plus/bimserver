@@ -53,6 +53,7 @@ import org.bimserver.shared.ResultType;
 import org.bimserver.shared.SCheckinResult;
 import org.bimserver.shared.SCheckoutResult;
 import org.bimserver.shared.SDownloadResult;
+import org.bimserver.shared.ServiceException;
 import org.bimserver.shared.UserException;
 import org.bimserver.utils.SwingUtil;
 import org.slf4j.Logger;
@@ -138,7 +139,7 @@ public class Client extends JFrame {
 			SCheckinResult upload = serviceHolder.getService().checkinSync(project.getOid(), comment, fileSize, ifcFile, false);
 			JOptionPane.showMessageDialog(this, "New revision number: " + upload.getRid(), "Checkin successfull", JOptionPane.OK_OPTION | JOptionPane.INFORMATION_MESSAGE);
 			revisionPanel.showProject(project);
-		} catch (UserException e) {
+		} catch (ServiceException e) {
 			JOptionPane.showMessageDialog(this, e.getUserMessage(), "Error", JOptionPane.ERROR_MESSAGE);
 		}
 	}
@@ -168,7 +169,7 @@ public class Client extends JFrame {
 			} catch (IOException e) {
 				LOGGER.error("", e);
 			}
-		} catch (UserException e) {
+		} catch (ServiceException e) {
 			LOGGER.error("", e);
 		}
 	}
@@ -261,7 +262,7 @@ public class Client extends JFrame {
 			} catch (IOException e) {
 				LOGGER.error("", e);
 			}
-		} catch (UserException e) {
+		} catch (ServiceException e) {
 			LOGGER.error("", e);
 		}
 	}

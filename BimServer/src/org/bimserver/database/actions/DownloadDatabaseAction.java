@@ -3,6 +3,7 @@ package org.bimserver.database.actions;
 import java.util.LinkedHashSet;
 
 import org.bimserver.Merger;
+import org.bimserver.ServerSettings;
 import org.bimserver.database.BimDatabaseException;
 import org.bimserver.database.BimDatabaseSession;
 import org.bimserver.database.BimDeadlockException;
@@ -12,6 +13,7 @@ import org.bimserver.database.store.Revision;
 import org.bimserver.database.store.User;
 import org.bimserver.database.store.log.AccessMethod;
 import org.bimserver.ifc.IfcModel;
+import org.bimserver.ifc.IfcModelSet;
 import org.bimserver.rights.RightsManager;
 import org.bimserver.shared.UserException;
 
@@ -37,13 +39,13 @@ public class DownloadDatabaseAction extends BimDatabaseAction<IfcModel> {
 		if (!RightsManager.hasRightsOnProjectOrSuperProjectsOrSubProjects(user, project)) {
 			throw new UserException("User has insufficient rights to download revisions from this project");
 		}
-		LinkedHashSet<IfcModel> ifcModels = new LinkedHashSet<IfcModel>();
+		IfcModelSet ifcModelSet = new IfcModelSet();
 		for (ConcreteRevision subRevision : revision.getConcreteRevisions()) {
 			IfcModel subModel = bimDatabaseSession.getMap(subRevision.getProject().getId(), subRevision.getId());
 			subModel.setDate(subRevision.getDate());
-			ifcModels.add(subModel);
+			ifcModelSet.add(subModel);
 		}
-		IfcModel ifcModel = Merger.merge(revision.getProject(), ifcModels);
+		IfcModel ifcModel = new Merger().merge(revision.getProject(), ifcModelSet, ServerSettings.getSettings().isIntelligentMerging());
 		ifcModel.setRevisionNr(project.getRevisions().indexOf(revision) + 1);
 		ifcModel.setAuthorizedUser(user.getName());
 		ifcModel.setDate(revision.getDate());

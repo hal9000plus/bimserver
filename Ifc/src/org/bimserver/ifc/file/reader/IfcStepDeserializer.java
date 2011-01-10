@@ -29,6 +29,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.security.MessageDigest;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -92,6 +93,7 @@ public class IfcStepDeserializer {
 	}
 
 	public void read(InputStream in, long fileSize) throws IncorrectIfcFileException, Exception {
+		mode = Mode.HEADER;
 		BufferedReader reader = new BufferedReader(new InputStreamReader(in, Charsets.UTF_8));
 		int initialCapacity = (int) (fileSize / AVERAGE_LINE_LENGTH);
 		model = new IfcModel(initialCapacity);
@@ -124,10 +126,12 @@ public class IfcStepDeserializer {
 		}
 	}
 
-	public void read(File sourceFile) throws IncorrectIfcFileException, Exception {
+	public IfcModel read(File sourceFile) throws IncorrectIfcFileException, Exception {
 		FileInputStream in = new FileInputStream(sourceFile);
 		read(in, sourceFile.length());
 		in.close();
+		model.setDate(new Date());
+		return model;
 	}
 
 	public IfcModel getModel() {

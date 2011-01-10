@@ -49,7 +49,7 @@ import javax.swing.TransferHandler;
 import org.bimserver.interfaces.objects.SProject;
 import org.bimserver.interfaces.objects.SRevision;
 import org.bimserver.interfaces.objects.SUser;
-import org.bimserver.shared.UserException;
+import org.bimserver.shared.ServiceException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -141,7 +141,7 @@ public class RevisionPanel extends JPanel {
 						} catch (IOException e) {
 							LOGGER.error("", e);
 						}
-					} catch (UserException e) {
+					} catch (ServiceException e) {
 						LOGGER.error("", e);
 					}
 				}
@@ -175,7 +175,7 @@ public class RevisionPanel extends JPanel {
 								} catch (FileNotFoundException e) {
 									LOGGER.error("", e);
 								}
-							} catch (UserException e) {
+							} catch (ServiceException e) {
 								LOGGER.error("", e);
 							}
 						}

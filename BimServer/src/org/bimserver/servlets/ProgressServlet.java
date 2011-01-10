@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.bimserver.interfaces.objects.SProject;
 import org.bimserver.interfaces.objects.SRevision;
+import org.bimserver.shared.ServiceException;
 import org.bimserver.shared.UserException;
 import org.bimserver.web.LoginManager;
 import org.codehaus.jettison.json.JSONArray;
@@ -32,22 +33,24 @@ public class ProgressServlet extends HttpServlet {
 			if (loginManager != null) {
 				long poid = Long.parseLong(request.getParameter("poid"));
 				SProject project = loginManager.getService().getProjectByPoid(poid);
-				for (long roid : project.getRevisions()) {
-					try {
-						SRevision revision = loginManager.getService().getRevision(roid);
-						JSONObject object = new JSONObject();
-						object.put("roid", roid);
-						object.put("state", revision.getState());
-						object.put("totalsize", revision.getSize());
-						object.put("lastError", revision.getLastError());
-						object.put("clashes", revision.getLastClashes().size());
-						object.put("islast", (loginManager.getService().getProjectByPoid(revision.getProjectId()).getLastRevisionId() == revision.getOid()));
-						revisions.put(object);
-					} catch (UserException e) {
-						// This is probably a browser trying to load stuff that is not there anymore
+				if (project != null) {
+					for (long roid : project.getRevisions()) {
+						try {
+							SRevision revision = loginManager.getService().getRevision(roid);
+							JSONObject object = new JSONObject();
+							object.put("roid", roid);
+							object.put("state", revision.getState());
+							object.put("totalsize", revision.getSize());
+							object.put("lastError", revision.getLastError());
+							object.put("clashes", revision.getLastClashes().size());
+							object.put("islast", (loginManager.getService().getProjectByPoid(revision.getProjectId()).getLastRevisionId() == revision.getOid()));
+							revisions.put(object);
+						} catch (UserException e) {
+							// This is probably a browser trying to load stuff that is not there anymore
+						}
 					}
+					result.put("lastRevision", project.getLastRevisionId());
 				}
-				result.put("lastRevision", project.getLastRevisionId());
 				result.put("revisions", revisions);
 			} else {
 				revisions.put("error");
@@ -57,7 +60,7 @@ public class ProgressServlet extends HttpServlet {
 			LOGGER.error("", e);
 		} catch (JSONException e) {
 			LOGGER.error("", e);
-		} catch (UserException e) {
+		} catch (ServiceException e) {
 			LOGGER.error("", e);
 		}
 	}
