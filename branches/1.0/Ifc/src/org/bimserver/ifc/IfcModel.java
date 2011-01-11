@@ -197,18 +197,9 @@ public class IfcModel {
 		objects = temp;
 	}
 	
-	public long getHighestOid() {
-		long max = 0;
-		for (long key : objects.keySet()) {
-			if (key > max) {
-				max = key;
-			}
+	public void setObjectOids() {
+		for (long oid : objects.keySet()) {
+			objects.get(oid).setOid(oid);
 		}
-		return max;
-	}
-	
-	@Override
-	public String toString() {
-		return "" + getSize();
 	}
 }
