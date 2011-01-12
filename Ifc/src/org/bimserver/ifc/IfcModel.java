@@ -202,4 +202,14 @@ public class IfcModel {
 			objects.get(oid).setOid(oid);
 		}
 	}
+
+	public long getHighestOid() {
+		long max = 0;
+		for (long oid : objects.keySet()) {
+			if (oid > max) {
+				max = oid;
+			}
+		}
+		return max;
+	}
 }
