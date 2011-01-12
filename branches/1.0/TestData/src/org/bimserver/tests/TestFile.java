@@ -23,6 +23,8 @@ package org.bimserver.tests;
 import java.io.File;
 
 public enum TestFile {
+	EXPORT1(new File(TestFileConstants.DATA_FOLDER, "export1.ifc")),
+	EXPORT3(new File(TestFileConstants.DATA_FOLDER, "export3.ifc")),
 	NIEDRI(new File(TestFileConstants.DATA_FOLDER, "Niedri_org.ifc")),
 	MERGE_TEST_SOURCE_FILE(new File(TestFileConstants.DATA_FOLDER, "MergeTest.ifc")), 
 	HITOS_SOURCE_FILE(new File(TestFileConstants.DATA_FOLDER, "HITOS_070308.ifc")), 

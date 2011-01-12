@@ -23,7 +23,6 @@ package org.bimserver.ifc;
 import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
@@ -78,10 +77,13 @@ public class IfcModel {
 	public void add(Long key, IdEObject eObject, boolean ignoreDuplicateOids) {
 		if (objects.containsKey(key)) {
 			if (!ignoreDuplicateOids) {
-				throw new RuntimeException("Oid already stored: " + key);
+				throw new RuntimeException("Oid already stored: " + key + " " + eObject + " (old: " + objects.get(key));
 			}
 		} else {
 			objects.put(key, eObject);
+			if (guidIndexed != null) {
+				indexGuid(eObject);
+			}
 		}
 	}
 	
@@ -128,20 +130,17 @@ public class IfcModel {
 	public void indexGuids() {
 		guidIndexed = new HashMap<String, IfcRoot>();
 		for (IdEObject idEObject : objects.values()) {
-			if (idEObject instanceof IfcRoot) {
-				IfcRoot ifcRoot = (IfcRoot)idEObject;
-				if (ifcRoot.getGlobalId() != null) {
-					guidIndexed.put(ifcRoot.getGlobalId().getWrappedValue(), ifcRoot);
-				}
-			}
+			indexGuid(idEObject);
 		}
 	}
-	
-	public IfcRoot getByGuid(String guid) {
-		if (guidIndexed == null) {
-			throw new RuntimeException("Not indexed on guids");
+
+	private void indexGuid(IdEObject idEObject) {
+		if (idEObject instanceof IfcRoot) {
+			IfcRoot ifcRoot = (IfcRoot)idEObject;
+			if (ifcRoot.getGlobalId() != null) {
+				guidIndexed.put(ifcRoot.getGlobalId().getWrappedValue(), ifcRoot);
+			}
 		}
-		return guidIndexed.get(guid);
 	}
 
 	public String getAuthorizedUser() {
@@ -211,5 +210,19 @@ public class IfcModel {
 			}
 		}
 		return max;
+	}
+
+	public IfcRoot get(String guid) {
+		if (guidIndexed == null) {
+			throw new RuntimeException("Not indexed on guids");
+		}
+		return guidIndexed.get(guid);
+	}
+
+	public boolean containsGuid(String guid) {
+		if (guidIndexed == null) {
+			throw new RuntimeException("Not indexed on guids");
+		}
+		return guidIndexed.containsKey(guid);
 	}
 }
