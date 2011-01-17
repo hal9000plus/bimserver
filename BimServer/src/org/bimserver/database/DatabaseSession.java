@@ -268,7 +268,7 @@ public class DatabaseSession implements BimDatabaseSession {
 	@SuppressWarnings("unchecked")
 	public IdEObject convertByteArrayToObject(EClass originalQueryClass, EClass eClass, long oid, ByteBuffer buffer, IfcModel model, int pid, int rid) throws BimDatabaseException,
 			BimDeadlockException {
-		if (model.containsKey(oid)) {
+		if (model.contains(oid)) {
 			return model.get(oid);
 		}
 		RecordIdentifier recordIdentifier = new RecordIdentifier(pid, oid, rid);
@@ -405,7 +405,7 @@ public class DatabaseSession implements BimDatabaseSession {
 		if (cacheContains(new RecordIdentifier(pid, oid, rid))) {
 			return getObject(new RecordIdentifier(pid, oid, rid));
 		} else {
-			if (model.containsKey(oid)) {
+			if (model.contains(oid)) {
 				return model.get(oid);
 			} else {
 				int descRid = rid;
@@ -520,13 +520,13 @@ public class DatabaseSession implements BimDatabaseSession {
 				RecordIdentifier recordIdentifier = new RecordIdentifier(pid, keyOid, keyRid);
 				if (cacheContains(recordIdentifier)) {
 					IdEObject object = getObject(recordIdentifier);
-					if (!model.containsKey(keyOid) && !(object instanceof WrappedValue) && !(object instanceof IfcGloballyUniqueId)) {
+					if (!model.contains(keyOid) && !(object instanceof WrappedValue) && !(object instanceof IfcGloballyUniqueId)) {
 						model.add(keyOid, object);
 					}
 					return 1;
 				} else {
 					IdEObject object = null;
-					if (model.containsKey(keyOid)) {
+					if (model.contains(keyOid)) {
 						object = model.get(keyOid);
 					} else {
 						if (buffer.capacity() == 1 && buffer.get(0) == -1) {

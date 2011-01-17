@@ -21,13 +21,21 @@ package org.bimserver.ifc;
  *****************************************************************************/
 
 import java.util.Collection;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.TreeMap;
 
 import org.bimserver.emf.IdEObject;
+import org.bimserver.ifc.emf.Ifc2x3.IfcProject;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRoot;
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EReference;
 
 import com.google.common.collect.BiMap;
 import com.google.common.collect.HashBiMap;
@@ -103,7 +111,7 @@ public class IfcModel {
 		this.checksum = checksum;
 	}
 
-	public boolean containsKey(Long key) {
+	public boolean contains(Long key) {
 		return objects.containsKey(key);
 	}
 
@@ -171,6 +179,72 @@ public class IfcModel {
 		this.revisionNr = revisionNr;
 	}
 
+	public void dumpObject(IdEObject idEObject) {
+		dumpObject(idEObject, 0, new HashSet<IdEObject>());
+	}
+	
+	private void dumpObject(IdEObject idEObject, int indention, Set<IdEObject> printed) {
+		if (printed.contains(idEObject)) {
+			printIndention(indention);
+			System.out.println("[REFERENCE: " + idEObject.getOid() + "]");
+			return;
+		}
+		printed.add(idEObject);
+		printIndention(indention);
+		System.out.println(idEObject.eClass().getName() + " (" + idEObject.getOid() + ")");
+		for (EAttribute eAttribute : idEObject.eClass().getEAllAttributes()) {
+			Object val = idEObject.eGet(eAttribute);
+			if (val != null) {
+				printIndention(indention + 1);
+				System.out.println(eAttribute.getName() + ": " + val);
+			}
+		}
+		for (EReference eReference : idEObject.eClass().getEAllReferences()) {
+			Object referencedObject = idEObject.eGet(eReference);
+			if (eReference.isMany()) {
+				List list = (List)referencedObject;
+				if (list.size() > 0) {
+					printIndention(indention + 1);
+					System.out.println(eReference.getName() + ": ");
+					for (Object o : list) {
+						dumpObject((IdEObject) o, indention + 2, printed);
+					}
+				}
+			} else {
+				if (referencedObject != null) {
+					printIndention(indention + 1);
+					System.out.println(eReference.getName() + ": ");
+					dumpObject((IdEObject) referencedObject, indention + 2, printed);
+				}
+			}
+		}
+	}
+
+	private void printIndention(int indention) {
+		for (int i=0; i<indention; i++) {
+			System.out.print("  ");
+		}
+	}
+	
+	public void dumpSummary() {
+		Map<EClass, Integer> counts = new TreeMap<EClass, Integer>(new Comparator<EClass>() {
+			@Override
+			public int compare(EClass o1, EClass o2) {
+				return o1.getName().compareTo(o2.getName());
+			}
+		});
+		for (IdEObject idEObject : objects.values()) {
+			if (!counts.containsKey(idEObject.eClass())) {
+				counts.put(idEObject.eClass(), 1);
+			} else {
+				counts.put(idEObject.eClass(), counts.get(idEObject.eClass()) + 1);
+			}
+		}
+		for (EClass eClass : counts.keySet()) {
+			System.out.println(eClass.getName() + ": " + counts.get(eClass));
+		}
+	}
+	
 	public void dump() {
 		System.out.println("Dumping IFC Model");
 		for (Long key : objects.keySet()) {
@@ -219,10 +293,19 @@ public class IfcModel {
 		return guidIndexed.get(guid);
 	}
 
-	public boolean containsGuid(String guid) {
+	public boolean contains(String guid) {
 		if (guidIndexed == null) {
 			throw new RuntimeException("Not indexed on guids");
 		}
 		return guidIndexed.containsKey(guid);
+	}
+
+	public IdEObject get(Class<IfcProject> class1) {
+		for (IdEObject idEObject : objects.values()) {
+			if (class1.isInstance(idEObject)) {
+				return idEObject;
+			}
+		}
+		return null;
 	}
 }

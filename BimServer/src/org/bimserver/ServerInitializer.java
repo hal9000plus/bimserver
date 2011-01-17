@@ -105,7 +105,6 @@ public class ServerInitializer implements ServletContextListener {
 			bimScheduler.start();
 
 			longActionManager = new LongActionManager();
-			longActionManager.start();
 
 			FieldIgnoreMap fieldIgnoreMap = new FileFieldIgnoreMap(packages, resourceFetcher);
 			TemplateEngine.getTemplateEngine().init(resourceFetcher.getResource("templates/"));

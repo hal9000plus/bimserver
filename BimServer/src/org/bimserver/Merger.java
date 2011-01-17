@@ -8,6 +8,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import nl.tue.buildingsmart.express.dictionary.SchemaDefinition;
+
 import org.bimserver.database.store.Project;
 import org.bimserver.database.store.SIPrefix;
 import org.bimserver.emf.IdEObject;
@@ -16,7 +18,6 @@ import org.bimserver.ifc.IfcModelSet;
 import org.bimserver.ifc.ReferenceCounter;
 import org.bimserver.ifc.TracingGarbageCollector;
 import org.bimserver.ifc.ReferenceCounter.Reference;
-import org.bimserver.ifc.ReferenceCounter.SingleReference;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcAsymmetricIShapeProfileDef;
 import org.bimserver.ifc.emf.Ifc2x3.IfcBlock;
@@ -155,7 +156,7 @@ public class Merger {
 			}
 		}
 		LOGGER.info(ifcProjects.size() + " IfcProjects found");
-		TracingGarbageCollector tracingGarbageCollector = new TracingGarbageCollector(model);
+		TracingGarbageCollector tracingGarbageCollector = new TracingGarbageCollector(model, null);
 		tracingGarbageCollector.mark(ifcProjects);
 		tracingGarbageCollector.sweep();
 		return model;

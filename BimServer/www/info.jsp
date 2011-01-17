@@ -213,14 +213,14 @@ E-mail <a href="mailto:<%= checkVersion.getOnlineVersion().getSupportEmail() %>"
 		SUser logUser = loginManager.getService().getUserByUoid(log.getExecutorId());
 %>
 	<tr>
-		<td><%=dateFormat.format(log.getDate()) %></td>
-		<td><%=log.getClass().getSimpleName().substring(1) %></td>
+		<td style="white-space:nowrap"><%=dateFormat.format(log.getDate()) %></td>
+		<td style="white-space:nowrap"><%=log.getClass().getSimpleName().substring(1) %></td>
 <% if (logUser != null) { %>
-		<td><a href="user.jsp?uoid=<%=log.getExecutorId()%>"><%=logUser.getUsername() %></a></td>
+		<td style="white-space:nowrap"><a href="user.jsp?uoid=<%=log.getExecutorId()%>"><%=logUser.getUsername() %></a></td>
 <% } else { %>
 		<td>System</td>
 <% } %>
-		<td><%=JspHelper.getNiceAccessMethodName(log.getAccessMethod()) %></td>
+		<td style="white-space:nowrap"><%=JspHelper.getNiceAccessMethodName(log.getAccessMethod()) %></td>
 		<td>
 		<%
 			if (log instanceof SUserAddedToProject) {
