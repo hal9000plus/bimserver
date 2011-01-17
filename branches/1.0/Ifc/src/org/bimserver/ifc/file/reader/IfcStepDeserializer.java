@@ -265,7 +265,7 @@ public class IfcStepDeserializer {
 			if (a.length() > 0) {
 				if (a.charAt(0) == '#') {
 					Long referenceId = Long.parseLong(a.substring(1));
-					if (model.containsKey(referenceId)) {
+					if (model.contains(referenceId)) {
 						EObject referencedObject = model.get(referenceId);
 						if (referencedObject != null) {
 							EClass referenceEClass = referencedObject.eClass();
@@ -500,7 +500,7 @@ public class IfcStepDeserializer {
 		} catch (NumberFormatException e) {
 			throw new IncorrectIfcFileException("'" + val + "' is not a valid reference");
 		}
-		if (model.containsKey(referenceId)) {
+		if (model.contains(referenceId)) {
 			object.eSet(structuralFeature, model.get(referenceId));
 		} else {
 			List<WaitingObject> waitingList = null;

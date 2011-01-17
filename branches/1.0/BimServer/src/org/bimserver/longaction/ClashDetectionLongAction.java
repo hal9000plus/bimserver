@@ -16,6 +16,7 @@ import org.bimserver.database.store.Clash;
 import org.bimserver.database.store.ClashDetectionSettings;
 import org.bimserver.database.store.Project;
 import org.bimserver.database.store.Revision;
+import org.bimserver.database.store.User;
 import org.bimserver.database.store.log.AccessMethod;
 import org.bimserver.ifcengine.IfcEngineFactory;
 import org.bimserver.webservices.Service;
@@ -30,8 +31,10 @@ public class ClashDetectionLongAction extends LongAction {
 	private final IfcEngineFactory ifcEngineFactory;
 	private final BimDatabase bimDatabase;
 	private final long poid;
+	private final User user;
 
-	public ClashDetectionLongAction(long actingUoid, SchemaDefinition schema, IfcEngineFactory ifcEngineFactory, BimDatabase bimDatabase, long poid) {
+	public ClashDetectionLongAction(User user, long actingUoid, SchemaDefinition schema, IfcEngineFactory ifcEngineFactory, BimDatabase bimDatabase, long poid) {
+		this.user = user;
 		this.actingUoid = actingUoid;
 		this.schema = schema;
 		this.ifcEngineFactory = ifcEngineFactory;
@@ -110,5 +113,10 @@ public class ClashDetectionLongAction extends LongAction {
 		} finally {
 			session.close();
 		}
+	}
+
+	@Override
+	public String getIdentification() {
+		return "ClashDetectionLongAction " + user.getName();
 	}
 }

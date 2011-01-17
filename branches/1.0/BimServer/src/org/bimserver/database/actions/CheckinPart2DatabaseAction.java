@@ -1,7 +1,6 @@
 package org.bimserver.database.actions;
 
 import java.util.Date;
-import java.util.LinkedHashSet;
 
 import org.bimserver.Merger;
 import org.bimserver.ServerSettings;

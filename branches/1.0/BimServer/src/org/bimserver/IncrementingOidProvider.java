@@ -1,4 +1,4 @@
-package org.bimserver.tests;
+package org.bimserver;
 
 import org.bimserver.ifc.OidProvider;
 

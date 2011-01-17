@@ -352,6 +352,7 @@ public class Service implements ServiceInterface {
 			throws UserException {
 		try {
 			BimDatabaseAction<ConcreteRevision> action = new CheckinPart1DatabaseAction(accessMethod, poid, currentUoid, model, comment);
+			User userByUoid = session.getUserByUoid(currentUoid);
 			ConcreteRevision revision = session.executeAndCommitAction(action, DEADLOCK_RETRIES);
 			session.close();
 			CheckinPart2DatabaseAction createCheckinAction = new CheckinPart2DatabaseAction(accessMethod, model, currentUoid, revision.getOid(), merge);
@@ -359,7 +360,7 @@ public class Service implements ServiceInterface {
 			result.setRid(revision.getId());
 			result.setPoid(revision.getProject().getOid());
 			result.setProjectName(revision.getProject().getName());
-			longActionManager.start(new LongCheckinAction(longActionManager, bimDatabase, schema, createCheckinAction, ifcEngineFactory));
+			longActionManager.start(new LongCheckinAction(userByUoid, longActionManager, bimDatabase, schema, createCheckinAction, ifcEngineFactory));
 			return result;
 		} catch (UserException e) {
 			throw e;
@@ -482,6 +483,7 @@ public class Service implements ServiceInterface {
 		if (currentUoid == -1) {
 			throw new UserException("Authentication required for this call");
 		}
+		lastActive = new Date();
 	}
 
 	private <T> List<T> convert(Collection<? extends IdEObject> list, Class<T> targetClass, BimDatabaseSession bimDatabaseSession) {
@@ -1373,7 +1375,7 @@ public class Service implements ServiceInterface {
 				result.setRid(revision.getId());
 				result.setPoid(revision.getProject().getOid());
 				result.setProjectName(revision.getProject().getName());
-				longActionManager.start(new LongCheckinAction(longActionManager, bimDatabase, schema, createCheckinAction, ifcEngineFactory));
+				longActionManager.start(new LongCheckinAction(user, longActionManager, bimDatabase, schema, createCheckinAction, ifcEngineFactory));
 				return result;
 			} catch (UserException e) {
 				throw e;
@@ -1417,7 +1419,7 @@ public class Service implements ServiceInterface {
 				result.setRid(revision.getId());
 				result.setPoid(revision.getProject().getOid());
 				result.setProjectName(revision.getProject().getName());
-				longActionManager.start(new LongCheckinAction(longActionManager, bimDatabase, schema, createCheckinAction, ifcEngineFactory));
+				longActionManager.start(new LongCheckinAction(user, longActionManager, bimDatabase, schema, createCheckinAction, ifcEngineFactory));
 				return result;
 			} catch (UserException e) {
 				throw e;
@@ -1722,7 +1724,6 @@ public class Service implements ServiceInterface {
 
 	@Override
 	public SUser getCurrentUser() throws UserException {
-		requireAuthentication();
 		if (currentUoid == -1) {
 			return null;
 		}
