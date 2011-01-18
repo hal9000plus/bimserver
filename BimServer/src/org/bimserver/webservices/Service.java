@@ -920,7 +920,7 @@ public class Service implements ServiceInterface {
 	@Override
 	public SCheckoutResult downloadByGuids(Set<Long> roids, Set<String> guids, ResultType resultType) throws UserException, ServerException {
 		requireAuthentication();
-		BimDatabaseSession session = bimDatabase.createSession();
+		BimDatabaseSession session = bimDatabase.createReadOnlySession();
 		try {
 			BimDatabaseAction<IfcModel> action = new DownloadByGuidsDatabaseAction(accessMethod, roids, guids, currentUoid);
 			IfcModel ifcModel = session.executeAction(action, DEADLOCK_RETRIES);

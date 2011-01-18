@@ -5,7 +5,6 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
-import java.io.PrintWriter;
 import java.util.HashMap;
 
 import nl.tue.buildingsmart.express.dictionary.SchemaDefinition;
@@ -46,6 +45,8 @@ import org.eclipse.emf.ecore.EObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.google.common.base.Charsets;
+
 public class O3dJsonSerializer extends BimModelSerializer {
 	private static final Logger LOGGER = LoggerFactory.getLogger(O3dJsonSerializer.class);
 	private final SchemaDefinition schemaDefinition;
@@ -73,9 +74,8 @@ public class O3dJsonSerializer extends BimModelSerializer {
 			try {
 				try {
 					Scene scene = createScene();
-					PrintWriter printWriter = new PrintWriter(out);
-					scene.write(printWriter);
-					printWriter.flush();
+					out.write(scene.toString(2).getBytes(Charsets.UTF_8)); // Doing this formatted because certain browsers don't like very long strings of JSON without new lines (Chrome)
+					out.flush();
 				} catch (JSONException e) {
 					LOGGER.error("", e);
 				}
@@ -98,6 +98,7 @@ public class O3dJsonSerializer extends BimModelSerializer {
 		Transformation rootTransformation = jsonFactory.createRootTransformation();
 		scene.addTransformation(rootTransformation);
 
+		Material unknownMaterial = jsonFactory.createMaterial("UnknownMaterial", new Color(0, 255, 0));
 		Material roofMaterial = jsonFactory.createMaterial("RoofMaterial", new Color(255, 0, 0));
 		Material wallMaterial = jsonFactory.createMaterial("WallMaterial", new Color(200, 200, 200));
 		Material slabMaterial = jsonFactory.createMaterial("SlabMaterial", new Color(150, 150, 150));
@@ -109,6 +110,7 @@ public class O3dJsonSerializer extends BimModelSerializer {
 		Material stairFlightMaterial = jsonFactory.createMaterial("StairFlightMaterial", Color.yellow);
 		Material railingMaterial = jsonFactory.createMaterial("RailingMaterial", Color.yellow);
 		scene.addMaterial(roofMaterial);
+		scene.addMaterial(unknownMaterial);
 		scene.addMaterial(wallMaterial);
 		scene.addMaterial(slabMaterial);
 		scene.addMaterial(windowMaterial);
@@ -174,6 +176,8 @@ public class O3dJsonSerializer extends BimModelSerializer {
 							primitive.setMaterial(rampMaterial);
 						} else if (object instanceof IfcRailing) {
 							primitive.setMaterial(railingMaterial);
+						} else {
+							primitive.setMaterial(unknownMaterial);
 						}
 						primitive.setNumberPrimitives(setGeometryResult.getAddedIndices() / 3);
 						primitive.setNumberVertices(setGeometryResult.getAddedVertices() / 6);

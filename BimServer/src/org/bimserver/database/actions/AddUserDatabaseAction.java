@@ -113,11 +113,8 @@ public class AddUserDatabaseAction extends BimDatabaseAction<Long> {
 							msg.setFrom(addressFrom);
 							
 							InternetAddress[] addressTo = new InternetAddress[1];
-							InternetAddress[] addressBcc = new InternetAddress[1];
 							addressTo[0] = new InternetAddress(user.getUsername());
-							addressBcc[0] = new InternetAddress("register@bimserver.org");
 							msg.setRecipients(Message.RecipientType.TO, addressTo);
-							msg.setRecipients(Message.RecipientType.BCC, addressBcc);
 							
 							Map<String, Object> context = new HashMap<String, Object>();
 							context.put("name", user.getName());
