@@ -60,6 +60,7 @@
 	boolean anonymousAccess = project.getHasAuthorizedUsers().contains(loginManager.getService().getAnonymousUser().getOid());
 	boolean hasUserManagementRights = project.getHasAuthorizedUsers().contains(loginManager.getUoid());
 	boolean userHasCheckinRights = loginManager.getService().userHasCheckinRights(project.getOid());
+	boolean hasEditRights = loginManager.getService().userHasRights(project.getOid());
 	boolean hasCreateProjectRights = (loginManager.getUserType() == SUserType.ADMIN || ServerSettings.getSettings().isAllowUsersToCreateTopLevelProjects());
 if (emfSerializerFactory.resultTypeEnabled(ResultType.O3D_JSON) && lastRevision != null) {
 %>
@@ -69,7 +70,7 @@ if (emfSerializerFactory.resultTypeEnabled(ResultType.O3D_JSON) && lastRevision 
 %>
 <div class="sidebar">
 <ul>
-<% if (userHasCheckinRights) { %> <li><a class="link"
+<% if (hasEditRights) { %> <li><a class="link"
 	href="editproject.jsp?poid=<%=poid %>">Edit</a></li>
 <% } %>
 <%

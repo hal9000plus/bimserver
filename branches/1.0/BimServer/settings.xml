@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<jarSettings>
-	<jvm>default</jvm>
-	<address>localhost</address>
-	<port>8082</port>
-	<heapsize>1024m</heapsize>
-	<stacksize>1024k</stacksize>
-</jarSettings>

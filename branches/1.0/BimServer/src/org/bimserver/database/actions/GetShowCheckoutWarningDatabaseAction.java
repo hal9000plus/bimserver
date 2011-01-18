@@ -28,21 +28,26 @@ public class GetShowCheckoutWarningDatabaseAction extends BimDatabaseAction<Stri
 	public String execute(BimDatabaseSession bimDatabaseSession) throws UserException, BimDeadlockException, BimDatabaseException {
 		Project project = bimDatabaseSession.getProjectByPoid(poid);
 		User user = bimDatabaseSession.getUserByUoid(uoid);
-		Checkout lastCheckout = null;
+		Checkout lastOwnActiveCheckout = null;
 		for (Checkout checkout : project.getCheckouts()) {
 			if (checkout.getUser() == user && checkout.isActive()) {
-				lastCheckout = checkout;
+				lastOwnActiveCheckout = checkout;
 			}
 		}
-		if (lastCheckout != null) {
+		if (lastOwnActiveCheckout != null) {
 			Project mainProject = project;
 			while (mainProject.getParent() != null) {
 				mainProject = mainProject.getParent();
 			}
 			for (Revision virtualRevision : mainProject.getRevisions()) {
-				if (lastCheckout.getRevision().getDate().before(virtualRevision.getDate()) && lastCheckout.getRevision() != virtualRevision) {
-					String warning = "Warning, after your last checkout of this project (revision " + lastCheckout.getRevision().getId() + "), at least one other user has checked-in a newer revision";
-					return warning;
+				if (lastOwnActiveCheckout.getDate().before(virtualRevision.getDate()) && lastOwnActiveCheckout.getRevision() != virtualRevision) {
+					if (lastOwnActiveCheckout.getUser() == user) {
+						String warning = "Warning, after your last checkout of this project (revision " + lastOwnActiveCheckout.getRevision().getId() + "), you have checked-in a newer revision";
+						return warning;
+					} else {
+						String warning = "Warning, after your last checkout of this project (revision " + lastOwnActiveCheckout.getRevision().getId() + "), at least one other user has checked-in a newer revision";
+						return warning;
+					}
 				}
 			}
 		}
