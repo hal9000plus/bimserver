@@ -39,7 +39,8 @@
 <%@page import="org.bimserver.interfaces.objects.SGeoTag"%>
 
 <%@page import="org.bimserver.interfaces.objects.SDatabaseCreated"%>
-<%@page import="org.bimserver.shared.SLongAction"%><div class="sidebar">
+<%@page import="org.bimserver.shared.SLongAction"%>
+<%@page import="java.util.Date"%><div class="sidebar">
 </div>
 <div class="content">
 <h1>Info</h1>
@@ -216,13 +217,14 @@ E-mail <a href="mailto:<%= checkVersion.getOnlineVersion().getSupportEmail() %>"
 <%
 	List<SLongAction> longActions = loginManager.getService().getActiveLongActions();
 	for (SLongAction longAction : longActions) {
+		long millis = System.currentTimeMillis() - longAction.getStart().getTime();		
 %>
 	<tr>
 		<td><a href="user.jsp?uoid=<%=longAction.getUserOid()%>"><%=longAction.getUsername() %></a></td>
 		<td><%=longAction.getName() %></td>
 		<td><%=longAction.getIdentification() %></td>
 		<td><%=dateFormat.format(longAction.getStart()) %></td>
-		<td></td>
+		<td><%=Formatters.millisecondsToString(millis) %></td>
 	</tr>
 <%
 	}

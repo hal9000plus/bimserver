@@ -148,9 +148,9 @@
 			<%=settings.isIntelligentMerging() ? " checked=\"checked\"" : ""%>></input></td>
 	</tr>
 	<tr>
-		<td><label for="checkinMergingEnabled">Checkin merging</label></td>
+		<td><label for="checkinMergingEnabled">Checkin merging <span style="color: red">(BETA)</span></label></td>
 		<td><input id="checkinMergingEnabled" name="checkinMergingEnabled" type="checkbox"
-			<%=settings.isCheckinMergingEnabled() ? " checked=\"checked\"" : ""%>></input></td>
+			<%=settings.isCheckinMergingEnabled() ? " checked=\"checked\"" : ""%>></input> <span style="color: red">IFC models are modified on checkin!</span></td>
 	</tr>
 	<!-- 
 <tr><td>Use file-level caching</td><td><input name="usecaching" type="checkbox" <%=settings.isUseCaching() ? " checked=\"checked\"" : ""%>></input></td></tr>
