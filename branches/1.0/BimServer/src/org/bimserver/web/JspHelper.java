@@ -280,6 +280,8 @@ public class JspHelper {
 			return "Soap";
 		case WEB_INTERFACE:
 			return "Web interface";
+		case SYNDICATION:
+			return "Syndication";
 		}
 		return "unknown";
 	}
