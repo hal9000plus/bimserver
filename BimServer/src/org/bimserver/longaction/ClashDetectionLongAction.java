@@ -119,4 +119,9 @@ public class ClashDetectionLongAction extends LongAction {
 	public String getIdentification() {
 		return "ClashDetectionLongAction " + user.getName();
 	}
+
+	@Override
+	public User getUser() {
+		return user;
+	}
 }

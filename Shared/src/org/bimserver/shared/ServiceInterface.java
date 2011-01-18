@@ -315,6 +315,8 @@ public interface ServiceInterface {
 	
 	List<SUserSession> getActiveUserSessions() throws ServerException, ServiceException;
 
+	List<SLongAction> getActiveLongActions() throws ServerException, ServiceException;
+
 	Date getActiveSince() throws UserException, ServerException;
 
 	Date getLastActive() throws UserException, ServerException;

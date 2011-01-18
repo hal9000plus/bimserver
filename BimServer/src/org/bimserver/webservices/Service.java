@@ -152,6 +152,7 @@ import org.bimserver.shared.SCheckinResult;
 import org.bimserver.shared.SCheckoutResult;
 import org.bimserver.shared.SCompareResult;
 import org.bimserver.shared.SDataObject;
+import org.bimserver.shared.SLongAction;
 import org.bimserver.shared.SRevisionSummary;
 import org.bimserver.shared.SUserSession;
 import org.bimserver.shared.ServerException;
@@ -1892,5 +1893,11 @@ public class Service implements ServiceInterface {
 		} finally {
 			session.close();
 		}
+	}
+
+	@Override
+	public List<SLongAction> getActiveLongActions() throws ServerException, ServiceException {
+		requireAuthentication();
+		return longActionManager.getActiveLongActions();
 	}
 }
