@@ -1,7 +1,5 @@
 package org.bimserver.database.actions;
 
-import java.util.LinkedHashSet;
-
 import org.bimserver.Merger;
 import org.bimserver.ServerSettings;
 import org.bimserver.database.BimDatabaseException;

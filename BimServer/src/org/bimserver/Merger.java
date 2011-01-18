@@ -8,8 +8,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import nl.tue.buildingsmart.express.dictionary.SchemaDefinition;
-
 import org.bimserver.database.store.Project;
 import org.bimserver.database.store.SIPrefix;
 import org.bimserver.emf.IdEObject;

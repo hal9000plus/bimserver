@@ -54,7 +54,6 @@ import org.bimserver.shared.SCheckinResult;
 import org.bimserver.shared.SCheckoutResult;
 import org.bimserver.shared.SDownloadResult;
 import org.bimserver.shared.ServiceException;
-import org.bimserver.shared.UserException;
 import org.bimserver.utils.SwingUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
