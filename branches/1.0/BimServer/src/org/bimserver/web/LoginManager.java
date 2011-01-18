@@ -24,7 +24,6 @@ import org.bimserver.database.store.log.AccessMethod;
 import org.bimserver.interfaces.objects.SUserType;
 import org.bimserver.shared.ServiceException;
 import org.bimserver.shared.ServiceInterface;
-import org.bimserver.shared.UserException;
 import org.bimserver.webservices.ServiceFactory;
 
 public class LoginManager {

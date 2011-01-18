@@ -206,6 +206,7 @@
       <eLiterals name="WEB_INTERFACE" value="1"/>
       <eLiterals name="INTERNAL" value="2"/>
       <eLiterals name="REST" value="3"/>
+      <eLiterals name="SYNDICATION" value="4"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="UserRemovedFromProject" eSuperTypes="#//log/LogAction">
       <eStructuralFeatures xsi:type="ecore:EReference" name="user" eType="#//User"/>
