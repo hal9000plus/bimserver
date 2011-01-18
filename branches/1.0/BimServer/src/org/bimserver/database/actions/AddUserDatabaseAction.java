@@ -108,8 +108,7 @@ public class AddUserDatabaseAction extends BimDatabaseAction<Long> {
 							
 							Message msg = new MimeMessage(mailSession);
 							
-							InternetAddress addressFrom;
-							addressFrom = new InternetAddress(ServerSettings.getSettings().getEmailSenderAddress());
+							InternetAddress addressFrom = new InternetAddress(ServerSettings.getSettings().getEmailSenderAddress());
 							msg.setFrom(addressFrom);
 							
 							InternetAddress[] addressTo = new InternetAddress[1];
