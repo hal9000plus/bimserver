@@ -1,9 +1,14 @@
 package org.bimserver.longaction;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 
+import org.bimserver.shared.SLongAction;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -37,6 +42,26 @@ public class LongActionManager {
 
 	public synchronized void shutdown() {
 		running = false;
+	}
+	
+	public synchronized List<SLongAction> getActiveLongActions() {
+		List<SLongAction> result = new ArrayList<SLongAction>();
+		for (LongAction longAction : threads.keySet()) {
+			SLongAction sLongAction = new SLongAction();
+			sLongAction.setIdentification(longAction.getIdentification());
+			sLongAction.setUserOid(longAction.getUser().getOid());
+			sLongAction.setStart(longAction.getStart());
+			sLongAction.setUsername(longAction.getUser().getUsername());
+			sLongAction.setName(longAction.getUser().getName());
+			result.add(sLongAction);
+		}
+		Collections.sort(result, new Comparator<SLongAction>(){
+			@Override
+			public int compare(SLongAction o1, SLongAction o2) {
+				return o1.getStart().compareTo(o2.getStart());
+			}
+		});
+		return result;
 	}
 	
 	/*

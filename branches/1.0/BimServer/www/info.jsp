@@ -38,7 +38,8 @@
 <%@page import="org.bimserver.interfaces.objects.SClashDetectionSettings"%>
 <%@page import="org.bimserver.interfaces.objects.SGeoTag"%>
 
-<%@page import="org.bimserver.interfaces.objects.SDatabaseCreated"%><div class="sidebar">
+<%@page import="org.bimserver.interfaces.objects.SDatabaseCreated"%>
+<%@page import="org.bimserver.shared.SLongAction"%><div class="sidebar">
 </div>
 <div class="content">
 <h1>Info</h1>
@@ -197,6 +198,31 @@ E-mail <a href="mailto:<%= checkVersion.getOnlineVersion().getSupportEmail() %>"
 		<td><%=JspHelper.getNiceAccessMethodName(userSession.getAccessMethod()) %></td>
 		<td><%=dateFormat.format(userSession.getActiveSince()) %></td>
 		<td><%=dateFormat.format(userSession.getLastActive()) %></td>
+	</tr>
+<%
+	}
+%>
+		</table>
+	</div>
+	<div class="tabbertab" id="activelongactions" title="Active long actions">
+		<table class="formatted infotable">
+			<tr>
+				<th>Username</th>
+				<th>Name</th>
+				<th>Description</th>
+				<th>Started</th>
+				<th>Running</th>
+			</tr>
+<%
+	List<SLongAction> longActions = loginManager.getService().getActiveLongActions();
+	for (SLongAction longAction : longActions) {
+%>
+	<tr>
+		<td><a href="user.jsp?uoid=<%=longAction.getUserOid()%>"><%=longAction.getUsername() %></a></td>
+		<td><%=longAction.getName() %></td>
+		<td><%=longAction.getIdentification() %></td>
+		<td><%=dateFormat.format(longAction.getStart()) %></td>
+		<td></td>
 	</tr>
 <%
 	}
