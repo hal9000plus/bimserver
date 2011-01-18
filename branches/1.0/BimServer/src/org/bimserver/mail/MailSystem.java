@@ -27,12 +27,23 @@ public class MailSystem {
 		return mailSession;
 	}
 
-	public static boolean isValidEmailAddress(String emailAddress) {
-		try {
-			new InternetAddress(emailAddress);
-			return true;
-		} catch (AddressException e) {
+	public static boolean isValidEmailAddress(String aEmailAddress) {
+		if (aEmailAddress == null) {
 			return false;
 		}
+		try {
+			new InternetAddress(aEmailAddress);
+			if (!hasNameAndDomain(aEmailAddress)) {
+				return false;
+			}
+		} catch (AddressException ex) {
+			return false;
+		}
+		return true;
+	}
+
+	private static boolean hasNameAndDomain(String aEmailAddress) {
+		String[] tokens = aEmailAddress.split("@");
+		return tokens.length == 2 && !tokens[0].isEmpty() && !tokens[1].isEmpty();
 	}
 }
