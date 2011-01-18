@@ -495,10 +495,10 @@ public class DatabaseSession implements BimDatabaseSession {
 				long oid = keyBuffer.getLong();
 				int keyRid = -keyBuffer.getInt();
 				int map = getCount(model, pid, rid, keyPid, keyRid);
-				if (!Arrays.equals(record.getValue(), nullReference)) {
-					count++;
-				}
 				if (map == 1) {
+					if (!Arrays.equals(record.getValue(), nullReference)) {
+						count++;
+					}
 					nextKeyStart.position(0);
 					nextKeyStart.putInt(pid);
 					nextKeyStart.putLong(oid + 1);

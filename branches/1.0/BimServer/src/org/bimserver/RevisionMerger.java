@@ -17,12 +17,6 @@ import org.eclipse.emf.ecore.EReference;
 public class RevisionMerger {
 
 	public IfcModel merge(IfcModel oldModel, IfcModel newModel) {
-//		oldModel.indexGuids();
-//		newModel.indexGuids();
-//		System.out.println("Old:");
-//		oldModel.dumpSummary();
-//		System.out.println();
-//		System.out.println("New:");
 		newModel.dumpSummary();
 		copyAttributesGuidObjectsAndAddNewObjects(oldModel, newModel);
 		updateReferences(oldModel, newModel);
@@ -30,7 +24,6 @@ public class RevisionMerger {
 		fixNonGuidObjects(oldModel, newModel);
 		TracingGarbageCollector tracingGarbageCollector = new TracingGarbageCollector(oldModel, null);
 		Set<IdEObject> rootObjects = new HashSet<IdEObject>();
-//		oldModel.dumpSummary();
 		for (IdEObject idEObject : oldModel.getValues()) {
 			if (idEObject instanceof IfcProject) {
 				rootObjects.add(idEObject);
@@ -38,11 +31,6 @@ public class RevisionMerger {
 		}
 		tracingGarbageCollector.mark(rootObjects);
 		tracingGarbageCollector.sweep();
-		
-//		oldModel.dumpObject(rootObjects.iterator().next());
-		
-//		System.out.println();
-//		System.out.println("Merged:");
 		return oldModel;
 	}
 

@@ -37,7 +37,7 @@ $(document).ready(function(){
 		});
 		$(".oidquerylink").click(function(event){
 			var oid = $(event.currentTarget).attr("oid");
-			$("#oid").val(oid);
+			$("#oids").val(oid);
 			activateTab("Query");
 			$("#simplequerylink").click();
 			return false;

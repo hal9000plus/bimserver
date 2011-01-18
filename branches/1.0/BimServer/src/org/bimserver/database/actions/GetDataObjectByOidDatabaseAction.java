@@ -57,7 +57,7 @@ public class GetDataObjectByOidDatabaseAction extends BimDatabaseAction<SDataObj
 		}
 		IfcModel ifcModel = new Merger().merge(virtualRevision.getProject(), ifcModelSet, ServerSettings.getSettings().isIntelligentMerging());
 		if (eObject == null) {
-			throw new UserException("Object not found");
+			throw new UserException("Object not found in this project/revision");
 		}
 		SDataObject dataObject = null;
 		if (eObject instanceof IfcRoot) {
