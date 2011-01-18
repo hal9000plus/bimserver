@@ -35,7 +35,7 @@ public class GetDataObjectByGuidDatabaseAction extends BimDatabaseAction<SDataOb
 			}
 		}
 		if (objectIdentifier == null) {
-			throw new UserException("Guid " + guid + " not found");
+			throw new UserException("Guid " + guid + " not found in this revision/project");
 		}
 		
 		return new GetDataObjectByOidDatabaseAction(getAccessMethod(), roid, objectIdentifier.getOid(), objectIdentifier.getCid()).execute(bimDatabaseSession);

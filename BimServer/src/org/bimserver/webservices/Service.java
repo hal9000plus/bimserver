@@ -1239,7 +1239,7 @@ public class Service implements ServiceInterface {
 	@Override
 	public SCheckoutResult downloadProjects(Set<Long> roids, ResultType resultType) throws UserException, ServerException {
 		requireAuthentication();
-		BimDatabaseSession session = bimDatabase.createSession();
+		BimDatabaseSession session = bimDatabase.createReadOnlySession();
 		try {
 			BimDatabaseAction<IfcModel> action = new DownloadProjectsDatabaseAction(accessMethod, roids, currentUoid);
 			Project project = session.getRevisionByRoid(roids.iterator().next()).getProject();
@@ -1258,10 +1258,10 @@ public class Service implements ServiceInterface {
 	@Override
 	public SDataObject getDataObjectByOid(long roid, long oid, String className) throws UserException, ServerException {
 		requireAuthentication();
-		BimDatabaseSession session = bimDatabase.createSession();
+		BimDatabaseSession session = bimDatabase.createReadOnlySession();
 		try {
 			BimDatabaseAction<SDataObject> action = new GetDataObjectByOidDatabaseAction(accessMethod, roid, oid, session.getCidForClassName(className));
-			SDataObject dataObject = session.executeAndCommitAction(action, DEADLOCK_RETRIES);
+			SDataObject dataObject = session.executeAction(action, DEADLOCK_RETRIES);
 			return dataObject;
 		} catch (Exception e) {
 			handleException(e);

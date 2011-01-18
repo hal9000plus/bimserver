@@ -14,6 +14,7 @@ import org.bimserver.database.store.ConcreteRevision;
 import org.bimserver.database.store.Project;
 import org.bimserver.database.store.Revision;
 import org.bimserver.database.store.log.AccessMethod;
+import org.bimserver.emf.IdEObject;
 import org.bimserver.ifc.IfcModel;
 import org.bimserver.ifc.IfcModelSet;
 import org.bimserver.shared.UserException;
@@ -57,13 +58,17 @@ public class CheckinPart2DatabaseAction extends BimDatabaseAction<Void> {
 				oldModel.indexGuids();
 				newModel.indexGuids();
 				newModel.fixOids(new IncrementingOidProvider(oldModel.getHighestOid() + 1));
-				
+
 				ifcModel = new RevisionMerger().merge(oldModel, newModel);
+				for (IdEObject idEObject : ifcModel.getValues()) {
+					idEObject.setRid(concreteRevision.getId());
+					idEObject.setPid(concreteRevision.getProject().getId());
+				}
 			} else {
 				ifcModel = getIfcModel();
 			}
 			if (project.getConcreteRevisions().size() != 0 && !merge) {
-				// There already was a revision, lets delete it
+				// There already was a revision, lets delete it (only when not merging)
 				bimDatabaseSession.clearProject(project.getId(), concreteRevision.getId() - 1, concreteRevision.getId());
 			}
 			bimDatabaseSession.store(ifcModel.getValues(), project.getId(), concreteRevision.getId());
