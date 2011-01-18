@@ -1,4 +1,4 @@
-package org.bimserver;
+package org.bimserver.tests;
 
 import java.awt.BorderLayout;
 import java.util.ArrayList;
@@ -15,13 +15,14 @@ import javax.swing.tree.TreeNode;
 
 import nl.tue.buildingsmart.express.dictionary.SchemaDefinition;
 
+import org.bimserver.IncrementingOidProvider;
+import org.bimserver.RevisionMerger;
 import org.bimserver.emf.IdEObject;
 import org.bimserver.ifc.IfcModel;
 import org.bimserver.ifc.SchemaLoader;
 import org.bimserver.ifc.emf.Ifc2x3.IfcProject;
 import org.bimserver.ifc.file.reader.IfcStepDeserializer;
 import org.bimserver.ifc.file.reader.IncorrectIfcFileException;
-import org.bimserver.tests.TestFile;
 import org.bimserver.utils.SwingUtil;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EReference;
