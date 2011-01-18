@@ -9,24 +9,20 @@ import java.util.List;
 import java.util.Map;
 
 import org.bimserver.shared.SLongAction;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class LongActionManager {
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(LongActionManager.class);
+//	private static final Logger LOGGER = LoggerFactory.getLogger(LongActionManager.class);
 	private final Map<LongAction, Thread> threads = new HashMap<LongAction, Thread>();
 	private volatile boolean running = true;
 
 	public synchronized void start(final LongAction longAction) throws CannotBeScheduledException {
 		if (running) {
-			LOGGER.info("Running long action");
 			Thread thread = new Thread(new Runnable(){
 				@Override
 				public void run() {
 					longAction.execute();
 					synchronized (LongActionManager.this) {
-						LOGGER.info("Removing long action");
 						threads.remove(longAction);
 					}
 				}
