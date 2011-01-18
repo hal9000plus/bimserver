@@ -182,6 +182,7 @@ public class DownloadServlet extends HttpServlet {
 			LOGGER.error("", e);
 			response.getWriter().println("Some number was incorrectly formatted");
 		} catch (ServiceException e) {
+			LOGGER.error("", e);
 			response.getWriter().println(e.getUserMessage());
 		}
 	}

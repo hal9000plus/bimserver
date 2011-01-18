@@ -2,7 +2,9 @@ package org.bimserver.database.actions;
 
 import java.util.Date;
 
+import org.bimserver.IncrementingOidProvider;
 import org.bimserver.Merger;
+import org.bimserver.RevisionMerger;
 import org.bimserver.ServerSettings;
 import org.bimserver.database.BimDatabaseException;
 import org.bimserver.database.BimDatabaseSession;
@@ -48,8 +50,15 @@ public class CheckinPart2DatabaseAction extends BimDatabaseAction<Void> {
 				getIfcModel().setDate(new Date());
 				IfcModel newModel = getIfcModel();
 				newModel.fixOids(bimDatabaseSession);
-				ifcModelSet.add(newModel);
-				ifcModel = new Merger().merge(project, ifcModelSet, ServerSettings.getSettings().isIntelligentMerging());
+				IfcModel oldModel = new Merger().merge(project, ifcModelSet, ServerSettings.getSettings().isIntelligentMerging());
+				
+				oldModel.setObjectOids();
+				newModel.setObjectOids();
+				oldModel.indexGuids();
+				newModel.indexGuids();
+				newModel.fixOids(new IncrementingOidProvider(oldModel.getHighestOid() + 1));
+				
+				ifcModel = new RevisionMerger().merge(oldModel, newModel);
 			} else {
 				ifcModel = getIfcModel();
 			}

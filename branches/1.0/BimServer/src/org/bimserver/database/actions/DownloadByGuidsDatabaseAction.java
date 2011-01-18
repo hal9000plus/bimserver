@@ -21,6 +21,7 @@ import org.bimserver.ifc.IfcModel;
 import org.bimserver.ifc.IfcModelSet;
 import org.bimserver.rights.RightsManager;
 import org.bimserver.shared.UserException;
+import org.bimserver.utils.CollectionUtils;
 
 public class DownloadByGuidsDatabaseAction extends BimDatabaseAction<IfcModel> {
 
@@ -53,18 +54,11 @@ public class DownloadByGuidsDatabaseAction extends BimDatabaseAction<IfcModel> {
 					for (ConcreteRevision concreteRevision : virtualRevision.getConcreteRevisions()) {
 						ObjectIdentifier objectIdentifier = bimDatabaseSession.getOidOfGuid(guid, concreteRevision.getProject().getId(), concreteRevision.getId());
 						if (objectIdentifier != null) {
+							foundGuids.add(guid);
 							if (!map.containsKey(concreteRevision)) {
 								map.put(concreteRevision, new HashSet<Long>());
 							}
 							map.get(concreteRevision).add(objectIdentifier.getOid());
-//							long oidOfGuid = objectIdentifier.getOid();
-//							if (oidOfGuid != -1) {
-//								foundGuids.add(guid);
-//								IfcModel subModel = bimDatabaseSession.getMapWithOids(concreteRevision.getProject().getId(), concreteRevision.getId(), oidOfGuid);
-//								subModel.setDate(concreteRevision.getDate());
-//								ifcModels.add(subModel);
-//								continue;
-//							}
 						}
 					}
 				}

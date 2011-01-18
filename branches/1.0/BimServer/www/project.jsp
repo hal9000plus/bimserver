@@ -420,7 +420,7 @@ if (revisions.size() > 0) {
 	<tr <%=isTagged?"class=\"tagged\"":""%> id="rev<%=revision.getOid() %>"
 		<%=lastRevision != null && revision.getId() == lastRevision.getId() ? "class=\"lastrevision\"" : "" %>>
 		<td><a href="revision.jsp?roid=<%=revision.getOid() %>"><%=revision.getId() %></a></td>
-		<td><%=dateFormat.format(revision.getDate()) %></td>
+		<td style="white-space: nowrap;"><%=dateFormat.format(revision.getDate()) %></td>
 		<td><a href="user.jsp?uoid=<%=revision.getUserId() %>"><%=revisionUser.getUsername() %></a></td>
 		<td><div class="commentbox">
 			<div><%=revision.getComment()%></div><a href="#" class="morelink">more</a>

@@ -14,7 +14,6 @@ import org.bimserver.emf.IdEObject;
 import org.bimserver.ifc.IfcModel;
 import org.bimserver.ifc.IfcModelSet;
 import org.bimserver.ifc.ReferenceCounter;
-import org.bimserver.ifc.TracingGarbageCollector;
 import org.bimserver.ifc.ReferenceCounter.Reference;
 import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcAsymmetricIShapeProfileDef;
@@ -146,17 +145,7 @@ public class Merger {
 			cleanGuidMap(guidMap);
 		}
 
-		Set<IfcProject> ifcProjects = new HashSet<IfcProject>();
 		LOGGER.info("Model size: " + model.size());
-		for (IdEObject idEObject : model.getValues()) {
-			if (idEObject instanceof IfcProject) {
-				ifcProjects.add((IfcProject) idEObject);
-			}
-		}
-		LOGGER.info(ifcProjects.size() + " IfcProjects found");
-		TracingGarbageCollector tracingGarbageCollector = new TracingGarbageCollector(model, null);
-		tracingGarbageCollector.mark(ifcProjects);
-		tracingGarbageCollector.sweep();
 		return model;
 	}
 
