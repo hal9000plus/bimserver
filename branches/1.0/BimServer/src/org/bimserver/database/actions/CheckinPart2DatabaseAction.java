@@ -59,7 +59,10 @@ public class CheckinPart2DatabaseAction extends BimDatabaseAction<Void> {
 				newModel.indexGuids();
 				newModel.fixOids(new IncrementingOidProvider(oldModel.getHighestOid() + 1));
 
-				ifcModel = new RevisionMerger().merge(oldModel, newModel);
+				RevisionMerger revisionMerger = new RevisionMerger(oldModel, newModel);
+				ifcModel = revisionMerger.merge();
+				revisionMerger.cleanupUnmodified();
+				
 				for (IdEObject idEObject : ifcModel.getValues()) {
 					idEObject.setRid(concreteRevision.getId());
 					idEObject.setPid(concreteRevision.getProject().getId());
