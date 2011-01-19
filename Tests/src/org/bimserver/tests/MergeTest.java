@@ -28,7 +28,7 @@ public class MergeTest {
 			model1.indexGuids();
 			model2.indexGuids();
 			model2.fixOids(new IncrementingOidProvider(model1.getHighestOid() + 1));
-			IfcModel merged = new RevisionMerger().merge(model1, model2);
+			IfcModel merged = new RevisionMerger(model1, model2).merge();
 			IfcStepSerializer serializer = new IfcStepSerializer(null, null, "merged", merged, schema);
 			serializer.writeToFile(new File("merged.ifc"));
 		} catch (IncorrectIfcFileException e) {

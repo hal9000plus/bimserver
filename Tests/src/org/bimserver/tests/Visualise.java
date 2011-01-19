@@ -1,6 +1,7 @@
 package org.bimserver.tests;
 
 import java.awt.BorderLayout;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -23,6 +24,7 @@ import org.bimserver.ifc.SchemaLoader;
 import org.bimserver.ifc.emf.Ifc2x3.IfcProject;
 import org.bimserver.ifc.file.reader.IfcStepDeserializer;
 import org.bimserver.ifc.file.reader.IncorrectIfcFileException;
+import org.bimserver.ifc.file.writer.IfcStepSerializer;
 import org.bimserver.utils.SwingUtil;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EReference;
@@ -46,10 +48,9 @@ public class Visualise extends JFrame {
 			model1.indexGuids();
 			model2.indexGuids();
 			model2.fixOids(new IncrementingOidProvider(model1.getHighestOid() + 1));
-			IfcModel merged = new RevisionMerger().merge(model1, model2);
-			// IfcStepSerializer serializer = new IfcStepSerializer(null, null,
-			// "merged", merged, schema);
-			// serializer.writeToFile(new File("merged.ifc"));
+			IfcModel merged = new RevisionMerger(model1, model2).merge();
+			IfcStepSerializer serializer = new IfcStepSerializer(null, null, "merged", merged, schema);
+			serializer.writeToFile(new File("merged.ifc"));
 			new Visualise().start(model1b, "Model 1");
 			new Visualise().start(model2b, "Model 2");
 			new Visualise().start(merged, "Merged");
