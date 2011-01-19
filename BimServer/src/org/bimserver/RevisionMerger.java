@@ -29,9 +29,10 @@ public class RevisionMerger {
 	
 	public IfcModel merge() {
 		for (IdEObject idEObject : oldModel.getValues()) {
-			smartCopy(resultModel, idEObject, false);
+			copy(resultModel, idEObject, false);
 		}
 		resultModel.indexGuids();
+		newModel.fixOids(new IncrementingOidProvider(resultModel.getHighestOid() + 1));
 		
 		copyAttributesGuidObjectsAndAddNewObjects();
 		updateReferences();
@@ -106,7 +107,6 @@ public class RevisionMerger {
 					}
 				}
 				if (!objectChanged) {
-					System.out.println("Removing " + idEObject);
 					iterator.remove();
 				}
 			}
@@ -134,7 +134,7 @@ public class RevisionMerger {
 								if (resultModel.contains(referencedIDEObject.getOid())) {
 									newList.add(resultModel.get(referencedIDEObject.getOid()));
 								} else {
-									IdEObject smartCopy = smartCopy(resultModel, referencedIDEObject, true);
+									IdEObject smartCopy = copy(resultModel, referencedIDEObject, true);
 									newList.add(smartCopy);
 								}
 							}
@@ -172,7 +172,7 @@ public class RevisionMerger {
 									}
 									resultModel.get(guid).eSet(eReference, resultModel.get(referencedIDEObject.getOid()));
 								} else {
-									IdEObject smartCopy = smartCopy(resultModel, referencedIDEObject, true);
+									IdEObject smartCopy = copy(resultModel, referencedIDEObject, true);
 									if (resultModel.get(guid).eGet(eReference) != null && eReference.getEOpposite() != null) {
 										IdEObject re = (IdEObject) resultModel.get(guid).eGet(eReference);
 										if (eReference.getEOpposite().isMany()) {
@@ -195,7 +195,7 @@ public class RevisionMerger {
 		}
 	}
 
-	private IdEObject smartCopy(IfcModel target, IdEObject idEObject, boolean limitToNonGuids) {
+	private IdEObject copy(IfcModel target, IdEObject idEObject, boolean limitToNonGuids) {
 		if (target.contains(idEObject.getOid())) {
 			return target.get(idEObject.getOid());
 		}
@@ -212,7 +212,7 @@ public class RevisionMerger {
 			if (referencedObject instanceof IdEObject) {
 				IdEObject refEObject = (IdEObject)referencedObject;
 				if (!limitToNonGuids || !(referencedObject instanceof IfcRoot) && !(referencedObject instanceof IfcGloballyUniqueId)) {
-					newObject.eSet(eReference, smartCopy(target, refEObject, limitToNonGuids));
+					newObject.eSet(eReference, copy(target, refEObject, limitToNonGuids));
 				}
 			} else if (referencedObject instanceof List) {
 				List list = (List)referencedObject;
@@ -220,7 +220,7 @@ public class RevisionMerger {
 				for (Object o : list) {
 					if (!limitToNonGuids || !(o instanceof IfcRoot) && !(o instanceof IfcGloballyUniqueId)) {
 						IdEObject listObject = (IdEObject)o;
-						IdEObject smartCopy = smartCopy(target, listObject, limitToNonGuids);
+						IdEObject smartCopy = copy(target, listObject, limitToNonGuids);
 						if (!newList.contains(smartCopy)) {
 							newList.add(smartCopy);
 						}
