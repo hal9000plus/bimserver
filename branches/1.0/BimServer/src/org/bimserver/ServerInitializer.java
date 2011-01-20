@@ -42,7 +42,9 @@ import nl.tue.buildingsmart.express.parser.ExpressSchemaParser;
 import org.bimserver.database.BimDatabase;
 import org.bimserver.database.BimDatabaseSession;
 import org.bimserver.database.Database;
+import org.bimserver.database.actions.AddUserDatabaseAction;
 import org.bimserver.database.berkeley.BerkeleyColumnDatabase;
+import org.bimserver.database.store.UserType;
 import org.bimserver.database.store.log.AccessMethod;
 import org.bimserver.database.store.log.LogFactory;
 import org.bimserver.database.store.log.ServerStarted;
@@ -111,6 +113,14 @@ public class ServerInitializer implements ServletContextListener {
 			File databaseDir = new File(ServerSettings.getSettings().getDatabaseLocation());
 			BerkeleyColumnDatabase columnDatabase = new BerkeleyColumnDatabase(databaseDir);
 			bimDatabase = new Database(packages, columnDatabase, fieldIgnoreMap);
+			if (serverType == ServerType.DEV_ENVIRONMENT) {
+				BimDatabaseSession session = bimDatabase.createSession();
+				try {
+					new AddUserDatabaseAction(AccessMethod.INTERNAL, "test@bimserver.org", "test", "Test User", UserType.USER, -1, false).execute(session);
+				} finally {
+					session.close();
+				}
+			}
 			Version version = VersionChecker.init(resourceFetcher).getLocalVersion();
 
 			File schemaFile = resourceFetcher.getFile("IFC2X3_FINAL.exp").getAbsoluteFile();
