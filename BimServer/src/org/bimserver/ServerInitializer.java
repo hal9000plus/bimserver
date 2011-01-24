@@ -113,7 +113,7 @@ public class ServerInitializer implements ServletContextListener {
 			File databaseDir = new File(ServerSettings.getSettings().getDatabaseLocation());
 			BerkeleyColumnDatabase columnDatabase = new BerkeleyColumnDatabase(databaseDir);
 			bimDatabase = new Database(packages, columnDatabase, fieldIgnoreMap);
-			if (serverType == ServerType.DEV_ENVIRONMENT) {
+			if (serverType == ServerType.DEV_ENVIRONMENT && columnDatabase.isNew()) {
 				BimDatabaseSession session = bimDatabase.createSession();
 				try {
 					new AddUserDatabaseAction(AccessMethod.INTERNAL, "test@bimserver.org", "test", "Test User", UserType.USER, -1, false).execute(session);

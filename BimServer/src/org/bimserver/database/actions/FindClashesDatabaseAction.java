@@ -23,7 +23,9 @@ import org.bimserver.database.store.log.AccessMethod;
 import org.bimserver.emf.IdEObject;
 import org.bimserver.ifc.IfcModel;
 import org.bimserver.ifc.IfcModelSet;
+import org.bimserver.ifc.emf.Ifc2x3.IfcGloballyUniqueId;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRoot;
+import org.bimserver.ifc.emf.Ifc2x3.WrappedValue;
 import org.bimserver.ifc.file.writer.IfcStepSerializer;
 import org.bimserver.ifcengine.FailSafeIfcEngine;
 import org.bimserver.ifcengine.IfcEngineException;
@@ -129,7 +131,9 @@ public class FindClashesDatabaseAction extends BimDatabaseAction<Set<? extends C
 			IdEObject newObject = (IdEObject) original.eClass().getEPackage().getEFactoryInstance().create(original.eClass());
 			newObject.setOid(original.getOid());
 			converted.put(original, newObject);
-			newModel.add(newObject.getOid(), newObject);
+			if (!(newObject instanceof WrappedValue) && !(newObject instanceof IfcGloballyUniqueId)) {
+				newModel.add(newObject.getOid(), newObject);
+			}
 			for (EStructuralFeature eStructuralFeature : original.eClass().getEAllStructuralFeatures()) {
 				Object get = original.eGet(eStructuralFeature);
 				if (eStructuralFeature instanceof EAttribute) {
