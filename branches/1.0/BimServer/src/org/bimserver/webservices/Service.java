@@ -1337,7 +1337,9 @@ public class Service implements ServiceInterface {
 		ClashDetectionSettings clashDetectionSettings = StoreFactory.eINSTANCE.createClashDetectionSettings();
 		clashDetectionSettings.setMargin(sClashDetectionSettings.getMargin());
 		for (String ignoredClass : sClashDetectionSettings.getIgnoredClasses()) {
-			clashDetectionSettings.getIgnoredClasses().add(ignoredClass);
+			if (!ignoredClass.equals("none")) {
+				clashDetectionSettings.getIgnoredClasses().add(ignoredClass);
+			}
 		}
 		for (Long poid : sClashDetectionSettings.getProjects()) {
 			clashDetectionSettings.getProjects().add(bimDatabaseSession.getProjectByPoid(poid));
