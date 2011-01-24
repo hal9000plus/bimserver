@@ -88,16 +88,16 @@
 <form method="post" action="editproject.jsp" name="form">
 <table class="formtable">
 	<tr>
-		<td class="first">Name</td>
-		<td><input type="text" name="name"
+		<td class="first"><label for="name">Name</label></td>
+		<td><input id="name" type="text" name="name"
 			value="<%=request.getParameter("name") != null ? request.getParameter("name") : sProject.getName()%>" /></td>
 	</tr>
 	<tr>
-		<td class="first">Description</td>
-		<td><textarea name="description" cols="80" rows="5"><%=request.getParameter("description") != null ? request.getParameter("description") : sProject.getDescription()%></textarea></td>
+		<td class="first"><label for="description">Description</label></td>
+		<td><textarea id="description" name="description" cols="70" rows="5"><%=request.getParameter("description") != null ? request.getParameter("description") : sProject.getDescription()%></textarea></td>
 	</tr>
 	<tr>
-		<td><label for="anonymous" class="checkbox">Anonymous
+		<td class="first"><label for="anonymous" class="checkbox">Anonymous
 		access</label></td>
 		<td><input id="anonymous" name="anonymous" type="checkbox"
 			class="checkbox" <%=anonymousAccess ? "checked=\"checked\"" : ""%> /></td>
@@ -106,46 +106,46 @@
 		if (sProject.getParentId() == -1) {
 	%>
 	<tr>
-		<td><label for="clashdetection" class="checkbox">Automatic
+		<td class="first"><label for="clashdetection" class="checkbox">Automatic
 		clashdetection</label></td>
 		<td><input id="clashdetection" name="clashdetection"
 			class="checkbox" type="checkbox"
 			<%=sClashDetectionSettings.isEnabled() ? "checked=\"checked\"" : ""%> /></td>
 	</tr>
 	<tr class="clashdetectionrow">
-		<td class="indent first">Margin</td>
-		<td class="indent"><input type="text" name="margin"
+		<td class="indent first"><label for="margin">Margin</label></td>
+		<td class="indent"><input id="margin" type="text" name="margin"
 			value="<%=sClashDetectionSettings.getMargin()%>" /></td>
 	</tr>
 	<tr>
-		<td><label for="coordcheck" class="checkbox">Geolocate</label></td>
+		<td><label for="coordcheck" class="checkbox">Geolocate</label></label></td>
 		<td><input id="coordcheck" name="coordcheck" class="checkbox"
 			type="checkbox" <%=sGeoTag.isEnabled() ? "checked=\"checked\"" : ""%> /></td>
 	</tr>
 	<tr class="coordcheckrow">
-		<td class="indent first">X</td>
-		<td class="indent"><input type="text" name="x"
+		<td class="indent first"><label for="x">X</label></td>
+		<td class="indent"><input id="x" type="text" name="x"
 			value="<%=sGeoTag.getX()%>" /></td>
 	</tr>
 	<tr class="coordcheckrow">
-		<td class="indent first">Y</td>
-		<td class="indent"><input type="text" name="y"
+		<td class="indent first"><label for="y">Y</label></td>
+		<td class="indent"><input id="y" type="text" name="y"
 			value="<%=sGeoTag.getY()%>" /></td>
 	</tr>
 	<tr class="coordcheckrow">
-		<td class="indent first">Z</td>
-		<td class="indent"><input type="text" name="z"
+		<td class="indent first"><label for="z">Z</label></td>
+		<td class="indent"><input id="z" type="text" name="z"
 			value="<%=sGeoTag.getZ()%>" /></td>
 	</tr>
 	<tr class="coordcheckrow">
-		<td class="indent first">Direction Angle</td>
-		<td class="indent"><input type="text" name="directionAngle"
+		<td class="indent first"><label for="directionAngle">Direction Angle</label></td>
+		<td class="indent"><input type="text" id="directionAngle" name="directionAngle"
 			value="<%=sGeoTag.getDirectionAngle()%>" /></td>
 	</tr>
 	<tr class="coordcheckrow">
-		<td class="indent first">EPSG</td>
+		<td class="indent first"><label id="epsg">EPSG</label></td>
 		<td class="indent">
-		<select name="epsg">
+		<select name="epsg" id="epsg">
 		<option value="<%=sGeoTag.getEpsg()%>"><%=sGeoTag.getEpsg()%></option>
 		<option value="<%=sGeoTag.getEpsg()%>">More options will follow later</option>
 		</select>
@@ -160,9 +160,8 @@
 		}
 	%>
 	<tr>
-		<td class="first">Uniform length measure unit for combined
-		revisions</td>
-		<td><select name=exportLengthMeasurePrefix>
+		<td class="first"><label for="exportLengthMeasurePrefix">Uniform length measure unit for combined revisions</label></td>
+		<td><select id="exportLengthMeasurePrefix" name="exportLengthMeasurePrefix">
 			<%
 				SSIPrefix pref = sProject.getExportLengthMeasurePrefix();
 						for (SSIPrefix p : SSIPrefix.values()) {

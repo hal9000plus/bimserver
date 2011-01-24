@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.EReference;
 
 public class ReferenceCounter {
 	
-	public abstract class Reference {
+	public static abstract class Reference {
 		private final IdEObject idEObject;
 		private final EReference eReference;
 		private final IdEObject referredObject;
@@ -35,9 +35,46 @@ public class ReferenceCounter {
 		public IdEObject getReferredObject() {
 			return referredObject;
 		}
+
+		@Override
+		public int hashCode() {
+			final int prime = 31;
+			int result = 1;
+			result = prime * result + ((eReference == null) ? 0 : eReference.hashCode());
+			result = prime * result + ((idEObject == null) ? 0 : idEObject.hashCode());
+			result = prime * result + ((referredObject == null) ? 0 : referredObject.hashCode());
+			return result;
+		}
+
+		@Override
+		public boolean equals(Object obj) {
+			if (this == obj)
+				return true;
+			if (obj == null)
+				return false;
+			if (getClass() != obj.getClass())
+				return false;
+			Reference other = (Reference) obj;
+			if (eReference == null) {
+				if (other.eReference != null)
+					return false;
+			} else if (!eReference.equals(other.eReference))
+				return false;
+			if (idEObject == null) {
+				if (other.idEObject != null)
+					return false;
+			} else if (!idEObject.equals(other.idEObject))
+				return false;
+			if (referredObject == null) {
+				if (other.referredObject != null)
+					return false;
+			} else if (!referredObject.equals(other.referredObject))
+				return false;
+			return true;
+		}
 	}
 	
-	public class SingleReference extends Reference {
+	public static class SingleReference extends Reference {
 		
 		public SingleReference(IdEObject idEObject, IdEObject referredObject, EReference eReference) {
 			super(idEObject, referredObject, eReference);
@@ -50,7 +87,7 @@ public class ReferenceCounter {
 		}
 	}
 	
-	public class MultiReference extends Reference {
+	public static class MultiReference extends Reference {
 
 		public MultiReference(IdEObject idEObject, IdEObject referredObject, EReference eReference) {
 			super(idEObject, referredObject, eReference);
@@ -58,7 +95,9 @@ public class ReferenceCounter {
 
 		@Override
 		public Reference reAttach(IdEObject mainObject) {
-			((List)getIdEObject().eGet(geteReference())).add(mainObject);
+			List list = (List)getIdEObject().eGet(geteReference());
+			list.remove(getReferredObject());
+			list.add(mainObject);
 			return new SingleReference(getIdEObject(), mainObject, geteReference());
 		}
 	}
@@ -72,22 +111,22 @@ public class ReferenceCounter {
 
 	public void updateReferences() {
 		references.clear();
-		for (IdEObject idEObject2 : ifcModel.getValues()) {
-			for (EReference eReference : idEObject2.eClass().getEAllReferences()) {
+		for (IdEObject idEObject : ifcModel.getValues()) {
+			for (EReference eReference : idEObject.eClass().getEAllReferences()) {
 				if (eReference.isMany()) {
-					List list = (List)idEObject2.eGet(eReference);
+					List list = (List)idEObject.eGet(eReference);
 					for (Object o : list) {
 						if (!references.containsKey(o)) {
 							references.put((IdEObject) o, new HashSet<Reference>());
 						}
-						references.get(o).add(new MultiReference(idEObject2, (IdEObject) o, eReference));
+						references.get(o).add(new MultiReference(idEObject, (IdEObject) o, eReference));
 					}
 				} else {
-					Object o = idEObject2.eGet(eReference);
+					Object o = idEObject.eGet(eReference);
 					if (!references.containsKey(o)) {
 						references.put((IdEObject) o, new HashSet<Reference>());
 					}
-					references.get(o).add(new SingleReference(idEObject2, (IdEObject) o, eReference));
+					references.get(o).add(new SingleReference(idEObject, (IdEObject) o, eReference));
 				}
 			}
 		}
@@ -129,5 +168,14 @@ public class ReferenceCounter {
 
 	public void addReference(Reference reference) {
 		references.get(reference.getReferredObject()).add(reference);
+		if (reference.geteReference().getEOpposite() != null) {
+			if (reference.geteReference().getEOpposite().isMany()) {
+				MultiReference backReference = new MultiReference(reference.getReferredObject(), reference.getIdEObject(), reference.geteReference().getEOpposite());
+				references.get(reference.getIdEObject()).add(backReference);
+			} else {
+				SingleReference backReference = new SingleReference(reference.getReferredObject(), reference.getIdEObject(), reference.geteReference().getEOpposite());
+				references.get(reference.getIdEObject()).add(backReference);
+			}
+		}
 	}
 }

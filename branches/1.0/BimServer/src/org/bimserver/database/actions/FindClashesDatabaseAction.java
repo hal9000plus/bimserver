@@ -80,6 +80,7 @@ public class FindClashesDatabaseAction extends BimDatabaseAction<Set<? extends C
 			}
 		}
 		IfcModel ifcModel = new Merger().merge(project, ifcModelSet, ServerSettings.getSettings().isIntelligentMerging());
+		ifcModel.checkDoubleOids();
 		IfcModel newModel = new IfcModel();
 		Map<IdEObject, IdEObject> converted = new HashMap<IdEObject, IdEObject>();
 		for (IdEObject idEObject : ifcModel.getValues()) {
