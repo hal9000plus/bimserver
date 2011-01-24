@@ -31,8 +31,13 @@ import java.util.Set;
 import java.util.TreeMap;
 
 import org.bimserver.emf.IdEObject;
+import org.bimserver.ifc.ReferenceCounter.MultiReference;
+import org.bimserver.ifc.ReferenceCounter.Reference;
+import org.bimserver.ifc.ReferenceCounter.SingleReference;
+import org.bimserver.ifc.emf.Ifc2x3.IfcGloballyUniqueId;
 import org.bimserver.ifc.emf.Ifc2x3.IfcProject;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRoot;
+import org.bimserver.ifc.emf.Ifc2x3.WrappedValue;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EReference;
@@ -183,6 +188,7 @@ public class IfcModel {
 		dumpObject(idEObject, 0, new HashSet<IdEObject>());
 	}
 	
+	@SuppressWarnings("unchecked")
 	private void dumpObject(IdEObject idEObject, int indention, Set<IdEObject> printed) {
 		if (printed.contains(idEObject)) {
 			printIndention(indention);
@@ -252,22 +258,75 @@ public class IfcModel {
 		}
 	}
 
-	public void remove(IdEObject idEObject) {
-		objects.remove(idEObject.getOid());
+	public void dumpPlusReferences() {
+		System.out.println("Dumping IFC Model + References");
+		Set<IdEObject> done = new HashSet<IdEObject>();
+		for (Long key : objects.keySet()) {
+			dumpPlusReferences(done, objects.get(key));
+		}
+	}
+	
+	private void dumpPlusReferences(Set<IdEObject> done, IdEObject idEObject) {
+		if (idEObject == null) {
+			return;
+		}
+		if (done.contains(idEObject)) {
+			return;
+		}
+		if (idEObject.getOid() < 22696) {
+			throw new RuntimeException();
+		}
+		done.add(idEObject);
+		System.out.println(idEObject.getOid() + ": " + idEObject.eClass().getName());
+		for (EReference eReference : idEObject.eClass().getEAllReferences()) {
+			Object val = idEObject.eGet(eReference);
+			if (eReference.isMany()) {
+				List list = (List)val;
+				for (Object o : list) {
+					dumpPlusReferences(done, (IdEObject) o);
+				}
+			} else {
+				dumpPlusReferences(done, (IdEObject) val);
+			}
+		}
 	}
 
-	public void setOid(IdEObject mainObject, Long long1) {
-		objects.forcePut(long1, mainObject);
+	public void remove(IdEObject idEObject) {
+		objects.inverse().remove(idEObject);
+	}
+
+	public void setOid(IdEObject object, Long oid) {
+		objects.forcePut(oid, object);
 	}
 
 	public void fixOids(OidProvider oidProvider) {
 		BiMap<Long, IdEObject> temp = HashBiMap.create();
 		for (long oid : objects.keySet()) {
-			IdEObject idEObject = objects.get(oid);
-			idEObject.setOid(oidProvider.newOid());
-			temp.put(idEObject.getOid(), idEObject);
+			fixOids(objects.get(oid), oidProvider, temp);
 		}
 		objects = temp;
+	}
+	
+	private void fixOids(IdEObject idEObject, OidProvider oidProvider, BiMap<Long, IdEObject> temp) {
+		if (idEObject == null) {
+			return;
+		}
+		if (temp.containsValue(idEObject)) {
+			return;
+		}
+		idEObject.setOid(oidProvider.newOid());
+		temp.put(idEObject.getOid(), idEObject);
+		for (EReference eReference : idEObject.eClass().getEAllReferences()) {
+			Object val = idEObject.eGet(eReference);
+			if (eReference.isMany()) {
+				List list = (List)val;
+				for (Object o : list) {
+					fixOids((IdEObject) o, oidProvider, temp);
+				}
+			} else {
+				fixOids((IdEObject) val, oidProvider, temp);
+			}
+		}
 	}
 	
 	public void setObjectOids() {
@@ -307,5 +366,75 @@ public class IfcModel {
 			}
 		}
 		return null;
+	}
+
+	public void checkDoubleOids() {
+		Set<Long> oids = new HashSet<Long>();
+		for (IdEObject idEObject : objects.values()) {
+			if (oids.contains(idEObject.getOid())) {
+				throw new RuntimeException("Double oid: " + idEObject.getOid());
+			}
+			oids.add(idEObject.getOid());
+		}
+	}
+	
+	private void checkDoubleOidsPlusReferences(BiMap<IdEObject, Long> done, IdEObject idEObject) {
+		if (idEObject == null) {
+			return;
+		}
+		if (idEObject instanceof WrappedValue || idEObject instanceof IfcGloballyUniqueId) {
+			return;
+		}
+		if (done.containsKey(idEObject)) {
+			return;
+		}
+		if (done.containsValue(idEObject.getOid())) {
+//			System.out.println();
+//			System.out.println(((IfcRoot)idEObject).getGlobalId().getWrappedValue());
+//			showBackReferences(idEObject);
+//			System.out.println(((IfcRoot)done.inverse().get(idEObject.getOid())).getGlobalId().getWrappedValue());
+//			showBackReferences(((IfcRoot)done.inverse().get(idEObject.getOid())));
+//			System.out.println();
+			
+			throw new RuntimeException("Double oid: " + idEObject.getOid() + " " + idEObject + ", " + done.inverse().get(idEObject.getOid()));
+		}
+		done.put(idEObject, idEObject.getOid());
+		for (EReference eReference : idEObject.eClass().getEAllReferences()) {
+			if (eReference.isMany()) {
+				List list = (List)idEObject.eGet(eReference);
+				for (Object o : list) {
+					checkDoubleOidsPlusReferences(done, (IdEObject) o);
+				}
+			} else {
+				checkDoubleOidsPlusReferences(done, (IdEObject) idEObject.eGet(eReference));
+			}
+		}
+	}
+	
+	private void showBackReferences(IdEObject idEObject) {
+		for (IdEObject object : getValues()) {
+			for (EReference eReference : object.eClass().getEAllReferences()) {
+				if (eReference.isMany()) {
+					List list = (List)object.eGet(eReference);
+					for (Object o : list) {
+						if (o == idEObject) {
+							System.out.println(o + " " + eReference.getName());
+						}
+					}
+				} else {
+					Object o = object.eGet(eReference);
+					if (o == idEObject) {
+						System.out.println(o + " " + eReference.getName());
+					}
+				}
+			}
+		}
+	}
+
+	public void checkDoubleOidsPlusReferences() {
+		BiMap<IdEObject, Long> done = HashBiMap.create();
+		for (IdEObject idEObject : objects.values()) {
+			checkDoubleOidsPlusReferences(done, idEObject);
+		}
 	}
 }

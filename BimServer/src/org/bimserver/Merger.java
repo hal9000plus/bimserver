@@ -156,19 +156,21 @@ public class Merger {
 				if (idEObject instanceof IfcRoot) {
 					IfcRoot ifcRoot = (IfcRoot) idEObject;
 					if (eClass == null || eClass.isInstance(idEObject)) {
-						String guid = ifcRoot.getGlobalId().getWrappedValue();
-						if (!processedGuids.contains(guid)) {
-							if (guidMap.containsKey(guid)) {
-								if (guidMap.get(guid).get(0).eClass() != ifcRoot.eClass()) {
-									LOGGER.info("Not merging GUID " + guid + " because different types are found: " + guidMap.get(guid).get(0).eClass().getName() + " and "
-											+ ifcRoot.eClass().getName());
+						if (ifcRoot.getGlobalId() != null) {
+							String guid = ifcRoot.getGlobalId().getWrappedValue();
+							if (!processedGuids.contains(guid)) {
+								if (guidMap.containsKey(guid)) {
+									if (guidMap.get(guid).get(0).eClass() != ifcRoot.eClass()) {
+										LOGGER.info("Not merging GUID " + guid + " because different types are found: " + guidMap.get(guid).get(0).eClass().getName() + " and "
+												+ ifcRoot.eClass().getName());
+									} else {
+										guidMap.get(guid).add(ifcRoot);
+									}
 								} else {
-									guidMap.get(guid).add(ifcRoot);
+									List<IdEObject> list = new ArrayList<IdEObject>();
+									list.add(ifcRoot);
+									guidMap.put(guid, list);
 								}
-							} else {
-								List<IdEObject> list = new ArrayList<IdEObject>();
-								list.add(ifcRoot);
-								guidMap.put(guid, list);
 							}
 						}
 					}
@@ -184,13 +186,6 @@ public class Merger {
 			List<IdEObject> list = guidMap.get(guid);
 			if (list.size() > 1) {
 				IdEObject newestObject = list.get(list.size() - 1);
-				
-				// Change all references TO this object
-				for (IdEObject idEObject : list) {
-					if (idEObject != newestObject) {
-						removeReplaceLinks(newestObject, idEObject);
-					}
-				}
 				// Change all attributes FROM this object
 				for (EAttribute eAttribute : newestObject.eClass().getEAllAttributes()) {
 					if (eAttribute.isMany()) {
@@ -217,9 +212,19 @@ public class Merger {
 								IdEObject olderObject = list.get(i);
 								if (olderObject.eIsSet(eReference)) {
 									newestObject.eSet(eReference, olderObject.eGet(eReference));
+									referenceCounter.addReference(new ReferenceCounter.SingleReference(newestObject, (IdEObject) olderObject.eGet(eReference), eReference));
 									break;
 								}
 							}
+						}
+					}
+				}
+				// Change all references TO this object
+				for (IdEObject idEObject : list) {
+					if (idEObject != newestObject) {
+						removeReplaceLinks(newestObject, idEObject);
+						for (EReference eReference : idEObject.eClass().getEAllReferences()) {
+							idEObject.eUnset(eReference);
 						}
 					}
 				}
