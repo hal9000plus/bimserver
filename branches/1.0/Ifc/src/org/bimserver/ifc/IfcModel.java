@@ -273,9 +273,6 @@ public class IfcModel {
 		if (done.contains(idEObject)) {
 			return;
 		}
-		if (idEObject.getOid() < 22696) {
-			throw new RuntimeException();
-		}
 		done.add(idEObject);
 		System.out.println(idEObject.getOid() + ": " + idEObject.eClass().getName());
 		for (EReference eReference : idEObject.eClass().getEAllReferences()) {
@@ -395,8 +392,13 @@ public class IfcModel {
 //			System.out.println(((IfcRoot)done.inverse().get(idEObject.getOid())).getGlobalId().getWrappedValue());
 //			showBackReferences(((IfcRoot)done.inverse().get(idEObject.getOid())));
 //			System.out.println();
-			
-			throw new RuntimeException("Double oid: " + idEObject.getOid() + " " + idEObject + ", " + done.inverse().get(idEObject.getOid()));
+			System.out.println();
+			showBackReferences(idEObject);
+			System.out.println();
+			IdEObject existing = done.inverse().get(idEObject.getOid());
+			showBackReferences(existing);
+			System.out.println();
+			throw new RuntimeException("Double oid: " + idEObject.getOid() + " " + idEObject + ", " + existing);
 		}
 		done.put(idEObject, idEObject.getOid());
 		for (EReference eReference : idEObject.eClass().getEAllReferences()) {
@@ -411,20 +413,21 @@ public class IfcModel {
 		}
 	}
 	
-	private void showBackReferences(IdEObject idEObject) {
+	public void showBackReferences(IdEObject idEObject) {
+		System.out.println("Showing back references to: " + idEObject);
 		for (IdEObject object : getValues()) {
 			for (EReference eReference : object.eClass().getEAllReferences()) {
 				if (eReference.isMany()) {
 					List list = (List)object.eGet(eReference);
 					for (Object o : list) {
 						if (o == idEObject) {
-							System.out.println(o + " " + eReference.getName());
+							System.out.println(object.eClass().getName() + "." + eReference.getName() + " " + object);
 						}
 					}
 				} else {
 					Object o = object.eGet(eReference);
 					if (o == idEObject) {
-						System.out.println(o + " " + eReference.getName());
+						System.out.println(object.eClass().getName() + "." + eReference.getName() + " " + object);
 					}
 				}
 			}

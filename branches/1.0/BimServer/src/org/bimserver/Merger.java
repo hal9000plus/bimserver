@@ -132,14 +132,15 @@ public class Merger {
 			// Top-down merging, based on decomposed-by tree, starting with
 			// IfcProject
 			LOGGER.info("Intelligent merging");
+			
 			todoList = new HashSet<EClass>();
-			todoList.add(Ifc2x3Package.eINSTANCE.getIfcProject());
-			while (!todoList.isEmpty()) {
-				EClass eClass = todoList.iterator().next();
-				todoList.remove(eClass);
-				Map<String, List<IdEObject>> guidMap = buildGuidMap(eClass);
-				cleanGuidMap(guidMap);
-			}
+//			todoList.add(Ifc2x3Package.eINSTANCE.getIfcProject());
+//			while (!todoList.isEmpty()) {
+//				EClass eClass = todoList.iterator().next();
+//				todoList.remove(eClass);
+//				Map<String, List<IdEObject>> guidMap = buildGuidMap(eClass);
+//				cleanGuidMap(guidMap);
+//			}
 			// Merge remaining objects not found in decomposed-by tree
 			Map<String, List<IdEObject>> guidMap = buildGuidMap(null);
 			cleanGuidMap(guidMap);
@@ -164,12 +165,16 @@ public class Merger {
 										LOGGER.info("Not merging GUID " + guid + " because different types are found: " + guidMap.get(guid).get(0).eClass().getName() + " and "
 												+ ifcRoot.eClass().getName());
 									} else {
-										guidMap.get(guid).add(ifcRoot);
+										if (model.contains(ifcRoot)) {
+											guidMap.get(guid).add(ifcRoot);
+										}
 									}
 								} else {
-									List<IdEObject> list = new ArrayList<IdEObject>();
-									list.add(ifcRoot);
-									guidMap.put(guid, list);
+									if (model.contains(ifcRoot)) {
+										List<IdEObject> list = new ArrayList<IdEObject>();
+										list.add(ifcRoot);
+										guidMap.put(guid, list);
+									}
 								}
 							}
 						}
@@ -186,6 +191,9 @@ public class Merger {
 			List<IdEObject> list = guidMap.get(guid);
 			if (list.size() > 1) {
 				IdEObject newestObject = list.get(list.size() - 1);
+				if (newestObject instanceof IfcProject) {
+					System.out.println();
+				}
 				// Change all attributes FROM this object
 				for (EAttribute eAttribute : newestObject.eClass().getEAllAttributes()) {
 					if (eAttribute.isMany()) {
@@ -223,23 +231,24 @@ public class Merger {
 				for (IdEObject idEObject : list) {
 					if (idEObject != newestObject) {
 						removeReplaceLinks(newestObject, idEObject);
-						for (EReference eReference : idEObject.eClass().getEAllReferences()) {
-							idEObject.eUnset(eReference);
-						}
+//						for (EReference eReference : idEObject.eClass().getEAllReferences()) {
+//							idEObject.eUnset(eReference);
+//						}
+						model.showBackReferences(idEObject);
 					}
 				}
 			}
-			EObject lastObject = list.get(list.size() - 1);
-			EStructuralFeature decomposesFeature = lastObject.eClass().getEStructuralFeature("IsDecomposedBy");
-			if (decomposesFeature != null) {
-				List<IfcRelAggregates> eGet = (List<IfcRelAggregates>) lastObject.eGet(decomposesFeature);
-				for (IfcRelAggregates e : eGet) {
-					EList<IfcObjectDefinition> relatedObjects = e.getRelatedObjects();
-					for (IfcObjectDefinition ifcObjectDefinition : relatedObjects) {
-						todoList.add(ifcObjectDefinition.eClass());
-					}
-				}
-			}
+//			EObject lastObject = list.get(list.size() - 1);
+//			EStructuralFeature decomposesFeature = lastObject.eClass().getEStructuralFeature("IsDecomposedBy");
+//			if (decomposesFeature != null) {
+//				List<IfcRelAggregates> eGet = (List<IfcRelAggregates>) lastObject.eGet(decomposesFeature);
+//				for (IfcRelAggregates e : eGet) {
+//					EList<IfcObjectDefinition> relatedObjects = e.getRelatedObjects();
+//					for (IfcObjectDefinition ifcObjectDefinition : relatedObjects) {
+//						todoList.add(ifcObjectDefinition.eClass());
+//					}
+//				}
+//			}
 			processedGuids.add(guid);
 		}
 	}
@@ -261,10 +270,10 @@ public class Merger {
 				referenceCounter.addReference(reference);
 			}
 		}
-		mainObject.setOid(objectToRemove.getOid());
-		Long id = model.get(objectToRemove);
+//		mainObject.setOid(objectToRemove.getOid());
+//		Long id = model.get(objectToRemove);
 		model.remove(objectToRemove);
-		model.setOid(mainObject, id);
+//		model.setOid(mainObject, id);
 	}
 
 	private IfcModel mergeScales(Project project, Set<IfcModel> ifcModels) {
