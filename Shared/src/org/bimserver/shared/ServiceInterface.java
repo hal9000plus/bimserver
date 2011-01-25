@@ -290,7 +290,7 @@ public interface ServiceInterface {
 	List<SUser> getAllAuthorizedUsersOfProject(@WebParam(name = "poid") long poid) throws UserException, ServerException;
 
 	@WebMethod(action = "getUsersProjects")
-	List<SProject> getUsersProjects(@WebParam(name = "uoid") long uoid) throws UserException, ServerException;
+	List<SProject> getUsersProjects(@WebParam(name = "userOid") long uoid) throws UserException, ServerException;
 
 	@WebMethod(action = "getProjectByName")
 	List<SProject> getProjectByName(@WebParam(name = "name") String name) throws UserException, ServerException;

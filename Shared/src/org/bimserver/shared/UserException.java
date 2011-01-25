@@ -22,7 +22,7 @@ import javax.xml.ws.WebFault;
  * long with Bimserver.org . If not, see <http://www.gnu.org/licenses/>.
  *****************************************************************************/
 
-@WebFault(faultBean="UserException", name="org.bimserver.shared.UserException")
+@WebFault(faultBean="UserException", name="UserException")
 public class UserException extends ServiceException {
 
 	private static final long serialVersionUID = 6261705274405995984L;
