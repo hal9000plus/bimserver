@@ -92,28 +92,28 @@
 	<classpathentry exported="true" kind="lib" path="lib/cxf/woodstox-core-asl-4.0.8.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/je-4.1.6.jar" sourcepath="libsrc"/>
 	<classpathentry exported="true" kind="lib" path="lib/guava-r07.jar" sourcepath="libsrc/guava-src-r07.zip"/>
-	<classpathentry kind="lib" path="lib/cxf/antlr-3.2.jar"/>
-	<classpathentry kind="lib" path="lib/cxf/antlr-runtime-3.2.jar"/>
-	<classpathentry kind="lib" path="lib/cxf/bcprov-jdk15-1.45.jar"/>
-	<classpathentry kind="lib" path="lib/cxf/commons-logging-1.1.1.jar"/>
-	<classpathentry kind="lib" path="lib/cxf/commons-pool-1.5.5.jar"/>
-	<classpathentry kind="lib" path="lib/cxf/cxf-2.3.2.jar"/>
-	<classpathentry kind="lib" path="lib/cxf/cxf-xjc-boolean-2.3.2.jar"/>
-	<classpathentry kind="lib" path="lib/cxf/cxf-xjc-bug671-2.3.2.jar"/>
-	<classpathentry kind="lib" path="lib/cxf/cxf-xjc-dv-2.3.2.jar"/>
-	<classpathentry kind="lib" path="lib/cxf/cxf-xjc-ts-2.3.2.jar"/>
-	<classpathentry kind="lib" path="lib/cxf/js-1.7R2.jar"/>
-	<classpathentry kind="lib" path="lib/cxf/spring-aop-3.0.5.RELEASE.jar"/>
-	<classpathentry kind="lib" path="lib/cxf/spring-asm-3.0.5.RELEASE.jar"/>
-	<classpathentry kind="lib" path="lib/cxf/spring-beans-3.0.5.RELEASE.jar"/>
-	<classpathentry kind="lib" path="lib/cxf/spring-context-3.0.5.RELEASE.jar"/>
-	<classpathentry kind="lib" path="lib/cxf/spring-core-3.0.5.RELEASE.jar"/>
-	<classpathentry kind="lib" path="lib/cxf/spring-expression-3.0.5.RELEASE.jar"/>
-	<classpathentry kind="lib" path="lib/cxf/spring-jms-3.0.5.RELEASE.jar"/>
-	<classpathentry kind="lib" path="lib/cxf/spring-tx-3.0.5.RELEASE.jar"/>
-	<classpathentry kind="lib" path="lib/cxf/spring-web-3.0.5.RELEASE.jar"/>
-	<classpathentry kind="lib" path="lib/cxf/stringtemplate-3.2.jar"/>
-	<classpathentry kind="lib" path="lib/cxf/wss4j-1.5.11.jar"/>
-	<classpathentry kind="lib" path="lib/cxf/xmlsec-1.4.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/cxf/antlr-3.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/cxf/antlr-runtime-3.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/cxf/bcprov-jdk15-1.45.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/cxf/commons-logging-1.1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/cxf/commons-pool-1.5.5.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/cxf/cxf-2.3.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/cxf/cxf-xjc-boolean-2.3.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/cxf/cxf-xjc-bug671-2.3.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/cxf/cxf-xjc-dv-2.3.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/cxf/cxf-xjc-ts-2.3.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/cxf/js-1.7R2.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/cxf/spring-aop-3.0.5.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/cxf/spring-asm-3.0.5.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/cxf/spring-beans-3.0.5.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/cxf/spring-context-3.0.5.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/cxf/spring-core-3.0.5.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/cxf/spring-expression-3.0.5.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/cxf/spring-jms-3.0.5.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/cxf/spring-tx-3.0.5.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/cxf/spring-web-3.0.5.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/cxf/stringtemplate-3.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/cxf/wss4j-1.5.11.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/cxf/xmlsec-1.4.4.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
