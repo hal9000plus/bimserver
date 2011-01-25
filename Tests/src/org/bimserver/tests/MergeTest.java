@@ -25,18 +25,16 @@ public class MergeTest {
 //			File baseFolder = new File("C:\\Users\\Ruben de Laat\\Documents\\My Dropbox\\Logic Labs\\Projecten\\BIMserver\\IFCFiles");
 //			IfcModel model1 = deserializer.read(new File(baseFolder, "Constructiedeel.ifc"));
 //			IfcModel model2 = deserializer.read(new File(baseFolder, "Installatiedeel.ifc"));
-
+			
 			IfcModel model1 = deserializer.read(TestFile.EXPORT1.getFile());
 			IfcModel model2 = deserializer.read(TestFile.EXPORT1.getFile());
 //			IfcModel model3 = deserializer.read(TestFile.EXPORT3.getFile());
-
+			
 			model1.setObjectOids();
 			model2.setObjectOids();
 			model1.indexGuids();
 			model2.indexGuids();
 			model2.fixOids(new IncrementingOidProvider(model1.getHighestOid() + 1));
-			model1.checkDoubleOidsPlusReferences();
-			model2.checkDoubleOidsPlusReferences();
 			IfcModelSet ifcModelSet = new IfcModelSet(model1, model2);
 			IfcModel merged = new Merger().merge(null, ifcModelSet, true);
 			merged.checkDoubleOidsPlusReferences();

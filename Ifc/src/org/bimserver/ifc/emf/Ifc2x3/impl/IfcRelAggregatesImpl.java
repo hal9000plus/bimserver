@@ -43,7 +43,6 @@ public class IfcRelAggregatesImpl extends IfcRelDecomposesImpl implements IfcRel
 	 */
 	protected IfcRelAggregatesImpl() {
 		super();
-		System.out.println(this);
 	}
 
 	/**
