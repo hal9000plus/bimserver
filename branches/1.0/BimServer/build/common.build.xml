@@ -223,7 +223,7 @@
 			<src path="../../Utils/src" />
 			<src path="../../Shared/src" />
 			<classpath>
-				<fileset file="../../BimServer/lib/cxf/cxf-2.3.0.jar" />
+				<fileset file="../../BimServer/lib/cxf/cxf-2.3.2.jar" />
 				<fileset file="../../BimServer/lib/cxf/jsr311-api-1.1.1.jar" />
 				<fileset file="../../BimServer/lib/cxf/XmlSchema-1.4.5.jar" />
 				<fileset file="../../BimServer/lib/cxf/jaxb-impl-2.2.1.1.jar" />
