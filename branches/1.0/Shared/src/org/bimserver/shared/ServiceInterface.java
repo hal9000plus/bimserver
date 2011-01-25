@@ -179,19 +179,11 @@ public interface ServiceInterface {
 	@WebMethod(action = "getRevision")
 	SRevision getRevision(@WebParam(name = "roid") long roid) throws UserException, ServerException;
 
-//	@WebMethod(action = "processChangeSet")
-//	ChangeSetResult processChangeSet(@WebParam(name = "changeSet") ChangeSet changeSet, @WebParam(name = "poid") long poid,
-//			@WebParam(name = "comment") String comment) throws UserException, ServerException;
-
 	@WebMethod(action = "getAvailableClasses")
 	List<String> getAvailableClasses() throws UserException, ServerException;
 
 	@WebMethod(action = "getDatabaseInformation")
 	DatabaseInformation getDatabaseInformation() throws UserException, ServerException;
-
-//	@WebMethod(action = "processChangeSetFile")
-//	ChangeSetResult processChangeSetFile(@WebParam(name = "poid") long poid, @WebParam(name = "comment") String comment,
-//			@WebParam(name = "changeSetFile") @XmlMimeType("application/octet-stream") DataHandler changeSetFile) throws UserException, ServerException;
 
 	@WebMethod(action = "getLoggedInUser")
 	SUser getLoggedInUser() throws UserException, ServerException;
@@ -333,8 +325,6 @@ public interface ServiceInterface {
 	
 	void requestPasswordChange(long uoid) throws UserException, ServerException;
 
-//	void sendCompareEmail(SCompareType sCompareType, long poid, long roid1, long roid2, String address) throws UserException, ServerException;
-	
 	void validateAccount(long uoid, String token, String password) throws UserException, ServerException;
 
 	void sendClashesEmail(SClashDetectionSettings sClashDetectionSettings, long poid, Set<String> addressesTo) throws UserException, ServerException;
