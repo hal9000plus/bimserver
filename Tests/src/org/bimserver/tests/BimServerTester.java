@@ -44,10 +44,10 @@ import javax.activation.FileDataSource;
 import javax.xml.ws.BindingProvider;
 import javax.xml.ws.soap.SOAPFaultException;
 
-import org.apache.cxf.endpoint.Client;
 import org.apache.cxf.frontend.ClientProxy;
 import org.apache.cxf.jaxws.JaxWsProxyFactoryBean;
 import org.apache.cxf.transport.http.HTTPConduit;
+import org.bimserver.client.Client;
 import org.bimserver.interfaces.objects.SProject;
 import org.bimserver.interfaces.objects.SUserType;
 import org.bimserver.shared.ServiceException;
@@ -89,7 +89,7 @@ public class BimServerTester {
 
 		service = (ServiceInterface) cpfb.create();
 
-		Client client = ClientProxy.getClient(service);
+		org.apache.cxf.endpoint.Client client = ClientProxy.getClient(service);
 //		client.getInInterceptors().add(new LoggingInInterceptor(ConsoleAppender.getPrintWriter()));
 //		client.getOutInterceptors().add(new LoggingOutInterceptor(ConsoleAppender.getPrintWriter()));
 		HTTPConduit http = (HTTPConduit) client.getConduit();
