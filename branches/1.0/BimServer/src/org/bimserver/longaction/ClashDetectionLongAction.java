@@ -70,10 +70,12 @@ public class ClashDetectionLongAction extends LongAction {
 			FindClashesDatabaseAction findClashesDatabaseAction = new FindClashesDatabaseAction(AccessMethod.INTERNAL, clashDetectionSettings, schema, ifcEngineFactory, roid);
 			Set<? extends Clash> clashes = findClashesDatabaseAction.execute(session);
 			Revision revision = project.getLastRevision();
-			for (Clash clash : clashes) {
-				revision.getLastClashes().add(clash);
-				session.store(clash);
-			}
+			// Temporarily disabled, should be enabled when lazy loading is working
+//			for (Clash clash : clashes) {
+//				revision.getLastClashes().add(clash);
+//				session.store(clash);
+//			}
+			revision.setNrClashes(clashes.size());
 			revision.setState(CheckinState.DONE);
 			session.store(revision);
 

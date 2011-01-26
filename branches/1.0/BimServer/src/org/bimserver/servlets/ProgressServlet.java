@@ -42,7 +42,7 @@ public class ProgressServlet extends HttpServlet {
 							object.put("state", revision.getState());
 							object.put("totalsize", revision.getSize());
 							object.put("lastError", revision.getLastError());
-							object.put("clashes", revision.getLastClashes().size());
+							object.put("clashes", revision.getNrClashes());
 							object.put("islast", (loginManager.getService().getProjectByPoid(revision.getProjectId()).getLastRevisionId() == revision.getOid()));
 							revisions.put(object);
 						} catch (UserException e) {

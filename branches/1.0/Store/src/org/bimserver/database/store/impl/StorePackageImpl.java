@@ -837,6 +837,15 @@ public class StorePackageImpl extends EPackageImpl implements StorePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getRevision_NrClashes() {
+		return (EAttribute)revisionEClass.getEStructuralFeatures().get(14);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getGuidClash() {
 		return guidClashEClass;
 	}
@@ -1142,6 +1151,7 @@ public class StorePackageImpl extends EPackageImpl implements StorePackage {
 		createEAttribute(revisionEClass, REVISION__TAG);
 		createEAttribute(revisionEClass, REVISION__LAST_ERROR);
 		createEAttribute(revisionEClass, REVISION__BMI);
+		createEAttribute(revisionEClass, REVISION__NR_CLASHES);
 
 		guidClashEClass = createEClass(GUID_CLASH);
 		createEAttribute(guidClashEClass, GUID_CLASH__GUID1);
@@ -1286,6 +1296,7 @@ public class StorePackageImpl extends EPackageImpl implements StorePackage {
 		initEAttribute(getRevision_Tag(), ecorePackage.getEString(), "tag", null, 0, 1, Revision.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRevision_LastError(), ecorePackage.getEString(), "lastError", null, 0, 1, Revision.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRevision_Bmi(), ecorePackage.getEInt(), "bmi", null, 0, 1, Revision.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRevision_NrClashes(), ecorePackage.getEInt(), "nrClashes", null, 0, 1, Revision.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(guidClashEClass, GuidClash.class, "GuidClash", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGuidClash_Guid1(), ecorePackage.getEString(), "guid1", null, 0, 1, GuidClash.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
