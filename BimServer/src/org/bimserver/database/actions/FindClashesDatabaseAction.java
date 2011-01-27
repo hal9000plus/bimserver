@@ -8,7 +8,6 @@ import java.util.Set;
 import nl.tue.buildingsmart.express.dictionary.SchemaDefinition;
 
 import org.bimserver.Merger;
-import org.bimserver.ServerSettings;
 import org.bimserver.cache.ClashDetectionCache;
 import org.bimserver.database.BimDatabaseException;
 import org.bimserver.database.BimDatabaseSession;
