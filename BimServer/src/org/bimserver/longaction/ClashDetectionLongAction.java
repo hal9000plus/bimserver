@@ -70,7 +70,7 @@ public class ClashDetectionLongAction extends LongAction {
 			FindClashesDatabaseAction findClashesDatabaseAction = new FindClashesDatabaseAction(AccessMethod.INTERNAL, clashDetectionSettings, schema, ifcEngineFactory, roid);
 			Set<? extends Clash> clashes = findClashesDatabaseAction.execute(session);
 			Revision revision = project.getLastRevision();
-			// Temporarily disabled, should be enabled when lazy loading is working
+// Temporarily disabled, should be enabled when lazy loading is working
 //			for (Clash clash : clashes) {
 //				revision.getLastClashes().add(clash);
 //				session.store(clash);
@@ -88,7 +88,7 @@ public class ClashDetectionLongAction extends LongAction {
 				String[] emailAddressesArray = new String[emailAddresses.size()];
 				emailAddresses.toArray(emailAddressesArray);
 				
-				SendClashesEmailDatabaseAction sendClashesEmailDatabaseAction = new SendClashesEmailDatabaseAction(AccessMethod.INTERNAL, actingUoid, poid, Service.convert(project.getClashDetectionSettings()), emailAddresses);
+				SendClashesEmailDatabaseAction sendClashesEmailDatabaseAction = new SendClashesEmailDatabaseAction(AccessMethod.INTERNAL, actingUoid, poid, Service.convert(clashDetectionSettings), emailAddresses);
 				sendClashesEmailDatabaseAction.execute(session);
 			}
 			session.commit();
