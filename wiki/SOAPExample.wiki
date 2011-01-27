@@ -5,7 +5,9 @@
 
 The code examples are in Java, but any other language that generates a SOAP interface based on the WSDL file should have a similar structure.
 
-Almost all methods can throw a UserException or ServerException exception, which will be converted to a SOAP Fault when accessing the ServiceInterface via SOAP.
+Almost all methods can throw UserException abd ServerException exceptions, which will be converted to a SOAP Fault when accessing the ServiceInterface via SOAP.
+
+The UserException means that the user seems to be doing something wrong (no rights, non-existing ids etc...), the ServerException means something is going wrong in the server, more info can be found in the server logs.
 
 = Authentication =
 
