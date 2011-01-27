@@ -116,7 +116,7 @@ public interface ServiceInterface {
 			throws UserException, ServerException;
 
 	@WebMethod(action = "addUser")
-	long addUser(@WebParam(name = "username", partName="addUser.username") String username, @WebParam(name = "name", partName="addUser.name") String name, @WebParam(name = "type", partName="addUser.type") SUserType type, boolean selfRegistration) throws UserException, ServerException;
+	long addUser(@WebParam(name = "username", partName="addUser.username") String username, @WebParam(name = "name", partName="addUser.name") String name, @WebParam(name = "type", partName="addUser.type") SUserType type, @WebParam(name="selfRegistration", partName="addUser.selfRegistration") boolean selfRegistration) throws UserException, ServerException;
 
 	@WebMethod(action = "changeUserType")
 	void changeUserType(@WebParam(name = "uoid", partName="changeUserType.uoid") long uoid, @WebParam(name = "userType", partName="changeUserType.userType") SUserType userType) throws UserException, ServerException;
