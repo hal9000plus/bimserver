@@ -89,6 +89,8 @@ public interface BimDatabaseSession extends OidProvider {
 
 	IfcModel getAllOfType(String className, int pid, int rid) throws BimDatabaseException, BimDeadlockException;
 
+	IfcModel getAllOfType(EClass eClass, int pid, int rid) throws BimDatabaseException, BimDeadlockException;
+
 	Collection<EClass> getClasses();
 
 	List<String> getClassList();

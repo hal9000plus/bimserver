@@ -72,6 +72,7 @@ import org.bimserver.database.actions.GetAllCheckoutsOfRevisionDatabaseAction;
 import org.bimserver.database.actions.GetAllNonAuthorizedProjectsOfUserDatabaseAction;
 import org.bimserver.database.actions.GetAllNonAuthorizedUsersOfProjectDatabaseAction;
 import org.bimserver.database.actions.GetAllProjectsDatabaseAction;
+import org.bimserver.database.actions.GetAllReadableProjectsDatabaseAction;
 import org.bimserver.database.actions.GetAllRevisionsByUserDatabaseAction;
 import org.bimserver.database.actions.GetAllRevisionsOfProjectDatabaseAction;
 import org.bimserver.database.actions.GetAllUsersDatabaseAction;
@@ -221,7 +222,8 @@ public class Service implements ServiceInterface {
 		return checkinInternal(poid, comment, fileSize, ifcFile, false, merge);
 	}
 
-	private SCheckinResult checkinInternal(final long poid, final String comment, long fileSize, DataHandler ifcFile, boolean sync, boolean merge) throws UserException, ServerException {
+	private SCheckinResult checkinInternal(final long poid, final String comment, long fileSize, DataHandler ifcFile, boolean sync, boolean merge) throws UserException,
+			ServerException {
 		final BimDatabaseSession session = bimDatabase.createSession();
 		try {
 			InputStream inputStream = ifcFile.getInputStream();
@@ -422,10 +424,10 @@ public class Service implements ServiceInterface {
 
 	private void handleException(Exception e) throws UserException, ServerException {
 		if (e instanceof UserException) {
-			throw (UserException)e;
+			throw (UserException) e;
 		} else if (e instanceof ServerException) {
 			LOGGER.error("", e);
-			throw (ServerException)e;
+			throw (ServerException) e;
 		} else if (e instanceof BimDatabaseException) {
 			LOGGER.error("", e);
 			throw new ServerException("Database error", e);
@@ -823,19 +825,22 @@ public class Service implements ServiceInterface {
 		}
 	}
 
-//	@Override
-//	public ChangeSetResult processChangeSet(ChangeSet changeSet, long poid, String comment) throws UserException {
-//		requireAuthentication();
-//		BimDatabaseSession session = bimDatabase.createSession();
-//		try {
-//			BimDatabaseAction<ChangeSetResult> action = new ProcessChangeSetDatabaseAction(accessMethod, changeSet, poid, currentUoid, comment);
-//			return session.executeAndCommitAction(action, DEADLOCK_RETRIES);
-//		} catch (BimDatabaseException e) {
-//			throw new UserException("Database error", e);
-//		} finally {
-//			session.close();
-//		}
-//	}
+	// @Override
+	// public ChangeSetResult processChangeSet(ChangeSet changeSet, long poid,
+	// String comment) throws UserException {
+	// requireAuthentication();
+	// BimDatabaseSession session = bimDatabase.createSession();
+	// try {
+	// BimDatabaseAction<ChangeSetResult> action = new
+	// ProcessChangeSetDatabaseAction(accessMethod, changeSet, poid,
+	// currentUoid, comment);
+	// return session.executeAndCommitAction(action, DEADLOCK_RETRIES);
+	// } catch (BimDatabaseException e) {
+	// throw new UserException("Database error", e);
+	// } finally {
+	// session.close();
+	// }
+	// }
 
 	@Override
 	public SCheckoutResult downloadByOids(Set<Long> roids, Set<Long> oids, ResultType resultType) throws UserException, ServerException {
@@ -933,27 +938,31 @@ public class Service implements ServiceInterface {
 		}
 	}
 
-//	@Override
-//	public ChangeSetResult processChangeSetFile(long poid, String comment, DataHandler changeSetFile) throws UserException {
-//		requireAuthentication();
-//		BimDatabaseSession session = bimDatabase.createSession();
-//		try {
-//			JAXBContext jaxbContext = JAXBContext.newInstance(ChangeSet.class);
-//			Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
-//			ChangeSet changeSet = (ChangeSet) unmarshaller.unmarshal(changeSetFile.getInputStream());
-//			BimDatabaseAction<ChangeSetResult> action = new ProcessChangeSetDatabaseAction(accessMethod, changeSet, poid, currentUoid, comment);
-//			return session.executeAndCommitAction(action, DEADLOCK_RETRIES);
-//		} catch (JAXBException e1) {
-//			throw new UserException("Error", e1);
-//		} catch (IOException e) {
-//			throw new UserException("Error", e);
-//		} catch (BimDatabaseException e) {
-//			LOGGER.error("", e);
-//		} finally {
-//			session.close();
-//		}
-//		return null;
-//	}
+	// @Override
+	// public ChangeSetResult processChangeSetFile(long poid, String comment,
+	// DataHandler changeSetFile) throws UserException {
+	// requireAuthentication();
+	// BimDatabaseSession session = bimDatabase.createSession();
+	// try {
+	// JAXBContext jaxbContext = JAXBContext.newInstance(ChangeSet.class);
+	// Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
+	// ChangeSet changeSet = (ChangeSet)
+	// unmarshaller.unmarshal(changeSetFile.getInputStream());
+	// BimDatabaseAction<ChangeSetResult> action = new
+	// ProcessChangeSetDatabaseAction(accessMethod, changeSet, poid,
+	// currentUoid, comment);
+	// return session.executeAndCommitAction(action, DEADLOCK_RETRIES);
+	// } catch (JAXBException e1) {
+	// throw new UserException("Error", e1);
+	// } catch (IOException e) {
+	// throw new UserException("Error", e);
+	// } catch (BimDatabaseException e) {
+	// LOGGER.error("", e);
+	// } finally {
+	// session.close();
+	// }
+	// return null;
+	// }
 
 	@Override
 	public SUser getLoggedInUser() throws UserException {
@@ -1825,41 +1834,43 @@ public class Service implements ServiceInterface {
 		return resultTypes;
 	}
 
-//	@Override
-//	public void sendCompareEmail(SCompareType sCompareType, long poid, long roid1, long roid2, String address) throws UserException {
-//		SUser currentUser = getCurrentUser();
-//		String senderName = currentUser.getName();
-//		String senderAddress = currentUser.getUsername();
-//		if (!senderAddress.contains("@") || !senderAddress.contains(".")) {
-//			senderAddress = ServerSettings.getSettings().getEmailSenderAddress();
-//		}
-//
-//		Session mailSession = MailSystem.getInstance().createMailSession();
-//
-//		Message msg = new MimeMessage(mailSession);
-//
-//		try {
-//			InternetAddress addressFrom = new InternetAddress(senderAddress);
-//			addressFrom.setPersonal(senderName);
-//			msg.setFrom(addressFrom);
-//
-//			InternetAddress[] addressTo = new InternetAddress[1];
-//			addressTo[0] = new InternetAddress(address);
-//			msg.setRecipients(Message.RecipientType.TO, addressTo);
-//
-//			msg.setSubject("BIMserver Model Comparator");
-//			SCompareResult compareResult = compare(roid1, roid2, sCompareType);
-//			String html = JspHelper.writeCompareResult(compareResult, roid1, roid2, sCompareType, getProjectByPoid(poid));
-//			msg.setContent(html, "text/html");
-//			Transport.send(msg);
-//		} catch (AddressException e) {
-//			e.printStackTrace();
-//		} catch (UnsupportedEncodingException e) {
-//			e.printStackTrace();
-//		} catch (MessagingException e) {
-//			e.printStackTrace();
-//		}
-//	}
+	// @Override
+	// public void sendCompareEmail(SCompareType sCompareType, long poid, long
+	// roid1, long roid2, String address) throws UserException {
+	// SUser currentUser = getCurrentUser();
+	// String senderName = currentUser.getName();
+	// String senderAddress = currentUser.getUsername();
+	// if (!senderAddress.contains("@") || !senderAddress.contains(".")) {
+	// senderAddress = ServerSettings.getSettings().getEmailSenderAddress();
+	// }
+	//
+	// Session mailSession = MailSystem.getInstance().createMailSession();
+	//
+	// Message msg = new MimeMessage(mailSession);
+	//
+	// try {
+	// InternetAddress addressFrom = new InternetAddress(senderAddress);
+	// addressFrom.setPersonal(senderName);
+	// msg.setFrom(addressFrom);
+	//
+	// InternetAddress[] addressTo = new InternetAddress[1];
+	// addressTo[0] = new InternetAddress(address);
+	// msg.setRecipients(Message.RecipientType.TO, addressTo);
+	//
+	// msg.setSubject("BIMserver Model Comparator");
+	// SCompareResult compareResult = compare(roid1, roid2, sCompareType);
+	// String html = JspHelper.writeCompareResult(compareResult, roid1, roid2,
+	// sCompareType, getProjectByPoid(poid));
+	// msg.setContent(html, "text/html");
+	// Transport.send(msg);
+	// } catch (AddressException e) {
+	// e.printStackTrace();
+	// } catch (UnsupportedEncodingException e) {
+	// e.printStackTrace();
+	// } catch (MessagingException e) {
+	// e.printStackTrace();
+	// }
+	// }
 
 	@Override
 	public void requestPasswordChange(long uoid) throws UserException, ServerException {
@@ -1904,5 +1915,20 @@ public class Service implements ServiceInterface {
 	public List<SLongAction> getActiveLongActions() throws ServerException, ServiceException {
 		requireAuthentication();
 		return longActionManager.getActiveLongActions();
+	}
+
+	@Override
+	public List<SProject> getAllReadableProjects() throws UserException, ServerException {
+		requireAuthentication();
+		BimDatabaseSession session = bimDatabase.createReadOnlySession();
+		try {
+			BimDatabaseAction<Set<Project>> action = new GetAllReadableProjectsDatabaseAction(accessMethod, currentUoid);
+			return convert(session.executeAction(action, DEADLOCK_RETRIES), SProject.class, session);
+		} catch (Exception e) {
+			handleException(e);
+			return null;
+		} finally {
+			session.close();
+		}
 	}
 }

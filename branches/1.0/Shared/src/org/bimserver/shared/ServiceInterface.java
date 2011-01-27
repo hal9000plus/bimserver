@@ -152,6 +152,12 @@ public interface ServiceInterface {
 	@WebMethod(action = "getAllProjects")
 	List<SProject> getAllProjects() throws UserException, ServerException;
 
+	@GET
+	@Path("/getAllReadableProjects")
+	@Produces("application/xml")
+	@WebMethod(action = "getAllReadableProjects")
+	List<SProject> getAllReadableProjects() throws UserException, ServerException;
+
 	@WebMethod(action = "getAllUsers")
 	List<SUser> getAllUsers() throws UserException, ServerException;
 
