@@ -1,8 +1,9 @@
 #summary This page describes the requirements of your system to run a BIMserver
+#labels Requirements,Deploy
 
 = Introduction =
 
-Requirements
+Some features of the BIMserver software make intens use of the computer memory. We recommend to configure a stack size of 1024kb and a heap size of 2048M minimum (the higher the better; we recommend 12Gb or 16Gb for professional use).
 
 = WAR =
 
