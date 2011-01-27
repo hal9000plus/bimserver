@@ -79,11 +79,11 @@ public interface ServiceInterface {
 
 	@WebMethod(action = "checkinSync")
 	SCheckinResult checkinSync(@WebParam(name = "poid", partName="checkinSync.poid") long poid, @WebParam(name = "comment", partName="checkinSync.comment") String comment,
-			@WebParam(name = "fileSize", partName="checkinSync.fileSize") long fileSize, @WebParam(name = "ifcFile", partName="checkinSync.ifcFile") @XmlMimeType("application/octet-stream") DataHandler ifcFile, boolean merge) throws UserException, ServerException;
+			@WebParam(name = "fileSize", partName="checkinSync.fileSize") long fileSize, @WebParam(name = "ifcFile", partName="checkinSync.ifcFile") @XmlMimeType("application/octet-stream") DataHandler ifcFile, @WebParam(name="merge", partName="checkinSync.merge") boolean merge) throws UserException, ServerException;
 
 	@WebMethod(action = "checkinAsync")
 	SCheckinResult checkinAsync(@WebParam(name = "poid", partName="checlinAsync.poid") long poid, @WebParam(name = "comment", partName="checkinAsync.comment") String comment,
-			@WebParam(name = "fileSize", partName="checkinSync.fileSize") long fileSize, @WebParam(name = "ifcFile", partName="checkinAsync.ifcFile") @XmlMimeType("application/octet-stream") DataHandler ifcFile, boolean merge) throws UserException, ServerException;
+			@WebParam(name = "fileSize", partName="checkinSync.fileSize") long fileSize, @WebParam(name = "ifcFile", partName="checkinAsync.ifcFile") @XmlMimeType("application/octet-stream") DataHandler ifcFile, @WebParam(name="merge", partName="checkinAsync.merge") boolean merge) throws UserException, ServerException;
 
 	@WebMethod(action = "checkout")
 	SCheckoutResult checkout(@WebParam(name = "roid", partName="checkout.roid") long roid, @WebParam(name = "resultType", partName="checkout.resultType") ResultType resultType) throws UserException, ServerException;
