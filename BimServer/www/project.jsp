@@ -319,16 +319,16 @@ Download: <select name="resultType">
 <div id="upload"><jsp:include page="upload.jsp">
 	<jsp:param name="poid" value="<%=poid %>" />
 </jsp:include> <%
-	List<SProject> projects = loginManager.getService().getAllProjects();
+	List<SProject> projects = loginManager.getService().getAllReadableProjects();
 	if (!projects.isEmpty() && (projects.size() > 1 || !projects.get(0).getRevisions().isEmpty())) {
-	boolean atLeastOne = false;
-	for (SProject sProject : projects) {
-		if (!sProject.getRevisions().isEmpty()) {
-			atLeastOne = true;
-			break;
+		boolean atLeastOne = false;
+		for (SProject sProject : projects) {
+			if (!sProject.getRevisions().isEmpty()) {
+				atLeastOne = true;
+				break;
+			}
 		}
-	}
-	if (atLeastOne) {
+		if (atLeastOne) {
 %>
 <form method="post" action="branch.jsp">
 <fieldset>
@@ -350,7 +350,7 @@ Download: <select name="resultType">
 %>
 	</optgroup>
 	<%
-}
+	}
 }
 %>
 </select> <label>Comment</label> <input type="text" name="comment" /> <input
