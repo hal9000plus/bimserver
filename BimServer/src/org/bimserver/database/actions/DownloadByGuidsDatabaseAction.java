@@ -21,7 +21,6 @@ import org.bimserver.ifc.IfcModel;
 import org.bimserver.ifc.IfcModelSet;
 import org.bimserver.rights.RightsManager;
 import org.bimserver.shared.UserException;
-import org.bimserver.utils.CollectionUtils;
 
 public class DownloadByGuidsDatabaseAction extends BimDatabaseAction<IfcModel> {
 

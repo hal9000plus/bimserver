@@ -32,10 +32,6 @@ import nl.tue.buildingsmart.express.dictionary.SimpleType;
 import nl.tue.buildingsmart.express.dictionary.StringType;
 import nl.tue.buildingsmart.express.dictionary.UnderlyingType;
 import nl.tue.buildingsmart.express.dictionary.VariableSizeAggregationType;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import antlr.ASTPair;
 import antlr.NoViableAltException;
 import antlr.RecognitionException;
