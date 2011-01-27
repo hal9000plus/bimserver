@@ -129,7 +129,7 @@ public class AddUserDatabaseAction extends BimDatabaseAction<Long> {
 								body = TemplateEngine.getTemplateEngine().process(context, TemplateIdentifier.ADMIN_REGISTRATION_EMAIL_BODY);
 								subject = TemplateEngine.getTemplateEngine().process(context, TemplateIdentifier.ADMIN_REGISTRATION_EMAIL_SUBJECT);
 							}
-							msg.setContent(body, "text/plain");
+							msg.setContent(body, "text/html");
 							msg.setSubject(subject.trim());
 							Transport.send(msg);
 						}
