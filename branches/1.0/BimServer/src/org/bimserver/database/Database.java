@@ -182,10 +182,12 @@ public class Database implements BimDatabase {
 					if (revision.getState() == CheckinState.UPLOADING || revision.getState() == CheckinState.PARSING || revision.getState() == CheckinState.STORING) {
 						LOGGER.info("Changing " + revision.getState().getName() + " to " + CheckinState.ERROR.getName() + " for revision " + revision.getOid());
 						revision.setState(CheckinState.ERROR);
+						revision.setLastError("Server crash while uploading");
 					}
 					if (revision.getState() == CheckinState.SEARCHING_CLASHES) {
 						LOGGER.info("Changing " + revision.getState().getName() + " to " + CheckinState.CLASHES_ERROR.getName() + " for revision " + revision.getOid());
 						revision.setState(CheckinState.CLASHES_ERROR);
+						revision.setLastError("Server crash while detecting clashes");
 					}
 					databaseSession.store(revision);
 				}
