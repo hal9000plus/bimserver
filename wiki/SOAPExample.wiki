@@ -13,7 +13,7 @@ The newest version of the BIMserver is using sessions to remember the user crede
 
 Make sure to enable session management in your client, otherwise the server won't be able to remember who you are and you will get this message:
 {{{
-Authentication required for this call
+"Authentication required for this call"
 }}}
 
 For Apache CXF, you can enable sessions this way:
