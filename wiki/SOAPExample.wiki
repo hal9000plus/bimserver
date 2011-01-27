@@ -5,29 +5,20 @@
 
 The code examples are in Java, but any other language that generates a SOAP interface based on the WSDL file should have a similar structure.
 
-Almost all methods can throw the UserException exception, which will be converted to a SOAP Fault when accessing the ServiceInterface via SOAP.
+Almost all methods can throw a UserException or ServerException exception, which will be converted to a SOAP Fault when accessing the ServiceInterface via SOAP.
 
 = Authentication =
 
-To be able to do SOAP calls, a client should first acquire a token. A token is valid for a fixed time (1 hour currently).
+The newest version of the BIMserver is using sessions to remember the user credentials, versions before 1.0 were using a token object as the first parameter of every call which was not optimal.
 
+Make sure to enable session management in your client, otherwise the server won't be able to remember who you are and you will get this message:
 {{{
-Token login(String username, String password) throws UserException
+Authentication required for this call
 }}}
 
-This method should be called with a valid username/password combination, when successful, a Token object will be returned. This token object should be used in all subsequent calls to the BIMserver.
-
-When the username/password combination is not valid, a UserException will be thrown.
-
-The Token object contains two fields, the Token object itself should be handled as if it were immutable.
-
+For Apache CXF, you can enable sessions this way:
 {{{
-public class Token {
-  private String tokenString;
-  private long expires;
-
-  // Getters and Setters
-}
+((javax.xml.ws.BindingProvider)port).getRequestContext().put(BindingProvider.SESSION_MAINTAIN_PROPERTY, true);
 }}}
 
 = Get all projects =
@@ -35,7 +26,7 @@ public class Token {
 To get a list of all projects on which the currently authenticated user has rights, use the following method:
 
 {{{
-List<SProject> getAllProjects(Token token) throws UserException
+List<SProject> getAllProjects() throws UserException
 }}}
 
 The SProject class looks like this:
@@ -70,7 +61,7 @@ public class SProject {
 When you have selected the right project, you can select all revisions of this project with the following call:
 
 {{{
-List<SRevision> getAllRevisionsOfProject(Token token, long poid) throws UserException
+List<SRevision> getAllRevisionsOfProject(long poid) throws UserException
 }}}
 
 The 'poid' parameter can be found in the SProject.oid field.
@@ -101,7 +92,7 @@ public class SRevision {
 After selecting the right revision, use the following call to download a certain revision:
 
 {{{
-CheckoutResult download(Token token, long roid, ResultType resultType) throws UserException
+CheckoutResult download(long roid, ResultType resultType) throws UserException
 }}}
 
 The 'roid' parameter can be found in SRevision.oid. The ResultType is an enumeration with the following values:
@@ -140,10 +131,8 @@ public class CheckoutResult {
 
 = Logout =
 
-When you are done calling BIMserver methods, you should logout which frees system resources right away (if you don't however, the BIMserver will still remove session data when the token expires).
+When you are done calling BIMserver methods, you should logout which frees system resources right away (if you don't however, the BIMserver will still remove session data when the session expires).
 
 {{{
-void logout(Token token)
+void logout()
 }}}
-
-Just call this method with the token, and you're done.
