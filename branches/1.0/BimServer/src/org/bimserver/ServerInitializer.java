@@ -152,7 +152,7 @@ public class ServerInitializer implements ServletContextListener {
 			((Service) getAdminService()).loginAsAdmin();
 			LoginManager.setAdminService(getAdminService());
 
-			RestApplication.serviceFactory = ServiceFactory.getINSTANCE();
+			RestApplication.setServiceFactory(ServiceFactory.getINSTANCE());
 
 			if (serverType == ServerType.DEPLOYED_WAR) {
 				File libDir = new File(classPath);

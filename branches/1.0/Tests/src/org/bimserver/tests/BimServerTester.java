@@ -47,7 +47,6 @@ import javax.xml.ws.soap.SOAPFaultException;
 import org.apache.cxf.frontend.ClientProxy;
 import org.apache.cxf.jaxws.JaxWsProxyFactoryBean;
 import org.apache.cxf.transport.http.HTTPConduit;
-import org.bimserver.client.Client;
 import org.bimserver.interfaces.objects.SProject;
 import org.bimserver.interfaces.objects.SUserType;
 import org.bimserver.shared.ServiceException;

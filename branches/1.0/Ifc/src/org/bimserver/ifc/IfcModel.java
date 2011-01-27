@@ -31,9 +31,6 @@ import java.util.Set;
 import java.util.TreeMap;
 
 import org.bimserver.emf.IdEObject;
-import org.bimserver.ifc.ReferenceCounter.MultiReference;
-import org.bimserver.ifc.ReferenceCounter.Reference;
-import org.bimserver.ifc.ReferenceCounter.SingleReference;
 import org.bimserver.ifc.emf.Ifc2x3.IfcGloballyUniqueId;
 import org.bimserver.ifc.emf.Ifc2x3.IfcProject;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRoot;
