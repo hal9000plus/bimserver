@@ -1353,7 +1353,7 @@ public class Service implements ServiceInterface {
 	@Override
 	public SCheckinResult branchToNewProject(long roid, String projectName, String comment) throws UserException {
 		requireAuthentication();
-		final BimDatabaseSession session = bimDatabase.createSession();
+		BimDatabaseSession session = bimDatabase.createSession();
 		try {
 			Revision oldRevision = session.getVirtualRevision(roid);
 			Project oldProject = oldRevision.getProject();
@@ -1369,6 +1369,9 @@ public class Service implements ServiceInterface {
 			}
 			IfcModel model = new Merger().merge(oldRevision.getProject(), ifcModelSet, ServerSettings.getSettings().isIntelligentMerging());
 			Project newProject = new AddProjectDatabaseAction(accessMethod, projectName, currentUoid).execute(session);
+			session.commit();
+			session.close();
+			session = bimDatabase.createSession();
 			BimDatabaseAction<ConcreteRevision> action = new CheckinPart1DatabaseAction(accessMethod, newProject.getOid(), currentUoid, model, comment);
 			try {
 				ConcreteRevision revision = session.executeAndCommitAction(action, DEADLOCK_RETRIES);
