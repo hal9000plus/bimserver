@@ -47,10 +47,7 @@ public class SendClashesEmailDatabaseAction extends BimDatabaseAction<Void> {
 	public Void execute(BimDatabaseSession bimDatabaseSession) throws UserException, BimDeadlockException, BimDatabaseException {
 		try {
 			User user = bimDatabaseSession.getUserByUoid(actingUoid);
-			String senderAddress = user.getUsername();
-			if (!MailSystem.isValidEmailAddress(senderAddress)) {
-				senderAddress = ServerSettings.getSettings().getEmailSenderAddress();
-			}
+			String senderAddress = ServerSettings.getSettings().getEmailSenderAddress();
 			Session mailSession = MailSystem.getInstance().createMailSession();
 
 			MimeMessage msg = new MimeMessage(mailSession);
