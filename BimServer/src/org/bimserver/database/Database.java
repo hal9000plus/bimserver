@@ -32,6 +32,8 @@ import java.util.Set;
 import org.bimserver.database.actions.AddUserDatabaseAction;
 import org.bimserver.database.actions.CreateBaseProject;
 import org.bimserver.database.berkeley.DatabaseInitException;
+import org.bimserver.database.store.CheckinState;
+import org.bimserver.database.store.Revision;
 import org.bimserver.database.store.StorePackage;
 import org.bimserver.database.store.UserType;
 import org.bimserver.database.store.log.AccessMethod;
@@ -127,15 +129,15 @@ public class Database implements BimDatabase {
 			getColumnDatabase().createTableIfNotExists(Database.STORE_PROJECT_NAME, databaseSession);
 			initInternalStructure(databaseSession);
 			
-			DatabaseCreated databaseCreated = LogFactory.eINSTANCE.createDatabaseCreated();
-			databaseCreated.setAccessMethod(AccessMethod.INTERNAL);
-			databaseCreated.setExecutor(null);
-			databaseCreated.setDate(new Date());
-			databaseCreated.setPath(getColumnDatabase().getLocation());
-			databaseCreated.setVersion(databaseSchemaVersion);
-			databaseSession.store(databaseCreated);
-
 			if (getColumnDatabase().isNew()) {
+				DatabaseCreated databaseCreated = LogFactory.eINSTANCE.createDatabaseCreated();
+				databaseCreated.setAccessMethod(AccessMethod.INTERNAL);
+				databaseCreated.setExecutor(null);
+				databaseCreated.setDate(new Date());
+				databaseCreated.setPath(getColumnDatabase().getLocation());
+				databaseCreated.setVersion(databaseSchemaVersion);
+				databaseSession.store(databaseCreated);
+
 				new CreateBaseProject(AccessMethod.INTERNAL).execute(databaseSession);
 				new AddUserDatabaseAction(AccessMethod.INTERNAL, "admin", "admin", "Administrator", UserType.ADMIN, -1, false).execute(databaseSession);
 				new AddUserDatabaseAction(AccessMethod.INTERNAL, "anonymous", "anonymous", "Anonymous", UserType.ANONYMOUS, -1, false).execute(databaseSession);
@@ -148,6 +150,7 @@ public class Database implements BimDatabase {
 					realClasses.add(eClass.getName());
 				}
 			}
+			fixCheckinStates(databaseSession);
 			databaseSession.commit();
 		} catch (BimDeadlockException e) {
 			LOGGER.error("", e);
@@ -155,16 +158,42 @@ public class Database implements BimDatabase {
 			throw new DatabaseInitException(e.getMessage());
 		} catch (UserException e) {
 			LOGGER.error("", e);
-
 			close();
 			throw new DatabaseInitException(e.getMessage());
 		} catch (BimDatabaseException e) {
 			LOGGER.error("", e);
-
 			close();
 			throw new DatabaseInitException(e.getMessage());
 		} finally {
 			databaseSession.close();
+		}
+	}
+
+	/*
+	 * This method makes sure no revision states remain in "Uploading", "Parsing", "Storing" or "Searching Clashes" 
+	 */
+	private void fixCheckinStates(DatabaseSession databaseSession) {
+		LOGGER.info("Fixing broken checkin states");
+		try {
+			IfcModel model = databaseSession.getAllOfType(StorePackage.eINSTANCE.getRevision(), Database.STORE_PROJECT_ID, Database.STORE_PROJECT_REVISION_ID);
+			for (IdEObject idEObject : model.getValues()) {
+				if (idEObject instanceof Revision) {
+					Revision revision = (Revision)idEObject;
+					if (revision.getState() == CheckinState.UPLOADING || revision.getState() == CheckinState.PARSING || revision.getState() == CheckinState.STORING) {
+						LOGGER.info("Changing " + revision.getState().getName() + " to " + CheckinState.ERROR.getName() + " for revision " + revision.getOid());
+						revision.setState(CheckinState.ERROR);
+					}
+					if (revision.getState() == CheckinState.SEARCHING_CLASHES) {
+						LOGGER.info("Changing " + revision.getState().getName() + " to " + CheckinState.CLASHES_ERROR.getName() + " for revision " + revision.getOid());
+						revision.setState(CheckinState.CLASHES_ERROR);
+					}
+					databaseSession.store(revision);
+				}
+			}
+		} catch (BimDatabaseException e) {
+			LOGGER.error("", e);
+		} catch (BimDeadlockException e) {
+			LOGGER.error("", e);
 		}
 	}
 

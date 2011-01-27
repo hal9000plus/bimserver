@@ -918,11 +918,15 @@ public class DatabaseSession implements BimDatabaseSession {
 		}
 	}
 
+	public IfcModel getAllOfType(EClass eClass, int pid, int rid) throws BimDatabaseException, BimDeadlockException {
+		IfcModel model = new IfcModel();
+		getMap(eClass, pid, rid, model);
+		return model;
+	}
+	
 	@Override
 	public IfcModel getAllOfType(String className, int pid, int rid) throws BimDatabaseException, BimDeadlockException {
-		IfcModel model = new IfcModel();
-		getMap(getEClassForName(className), pid, rid, model);
-		return model;
+		return getAllOfType(getEClassForName(className), pid, rid);
 	}
 
 	@Override
