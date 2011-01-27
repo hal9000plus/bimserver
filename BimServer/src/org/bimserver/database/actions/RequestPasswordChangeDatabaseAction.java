@@ -67,7 +67,7 @@ public class RequestPasswordChangeDatabaseAction extends BimDatabaseAction<Void>
 						String subject = null;
 						body = TemplateEngine.getTemplateEngine().process(context, TemplateIdentifier.PASSWORD_RESET_EMAIL_BODY);
 						subject = TemplateEngine.getTemplateEngine().process(context, TemplateIdentifier.PASSWORD_RESET_EMAIL_SUBJECT);
-						msg.setContent(body, "text/plain");
+						msg.setContent(body, "text/html");
 						msg.setSubject(subject.trim());
 						Transport.send(msg);
 					} catch (AddressException e) {

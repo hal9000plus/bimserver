@@ -92,7 +92,7 @@ public class SendClashesEmailDatabaseAction extends BimDatabaseAction<Void> {
 			String subject = TemplateEngine.getTemplateEngine().process(context, TemplateIdentifier.CLASH_DETECTION_EMAIL_SUBJECT);
 
 			msg.setSubject(subject);
-			msg.setContent(body, "text/plain");
+			msg.setContent(body, "text/html");
 
 			if (!addresses.isEmpty()) {
 				Transport.send(msg);
