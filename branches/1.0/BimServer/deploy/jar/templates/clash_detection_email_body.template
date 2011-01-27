@@ -3,12 +3,12 @@
 ##   username: The users username (usually e-mail address)
 ##   siteaddress: The address of the running BIMserver
 ##   url: A link to the clash detection page
-Dear $name,
+Dear $name,<br/>
 
-Clashes have been found in one of your models.
+Clashes have been found in one of your models.<br/>
 
-Please click on the link below to see the clashes:
+Please click on the link below to see the clashes:<br/>
 
-$url
+$url<br/>
 
-The BIMserver
+The BIMserver<br/>

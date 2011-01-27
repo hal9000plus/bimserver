@@ -1,6 +1,5 @@
 package org.bimserver.database.actions;
 
-import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -52,7 +51,6 @@ public class SendClashesEmailDatabaseAction extends BimDatabaseAction<Void> {
 
 			MimeMessage msg = new MimeMessage(mailSession);
 			InternetAddress addressFrom = new InternetAddress(senderAddress);
-			addressFrom.setPersonal(user.getName());
 			msg.setFrom(addressFrom);
 
 			Set<InternetAddress> addresses = new HashSet<InternetAddress>();
@@ -95,8 +93,6 @@ public class SendClashesEmailDatabaseAction extends BimDatabaseAction<Void> {
 				Transport.send(msg);
 			}
 		} catch (AddressException e) {
-			e.printStackTrace();
-		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
 		} catch (MessagingException e) {
 			e.printStackTrace();
