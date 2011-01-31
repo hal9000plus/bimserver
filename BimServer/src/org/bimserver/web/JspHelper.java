@@ -27,7 +27,7 @@ import org.slf4j.LoggerFactory;
 
 public class JspHelper {
 	private static final Logger LOGGER = LoggerFactory.getLogger(JspHelper.class);
-	
+
 	public static String generateBreadCrumbPath(SRevision revision, ServiceInterface serviceWrapper) throws ServiceException {
 		String projectPath = generateBreadCrumbPath(serviceWrapper.getProjectByPoid(revision.getProjectId()), serviceWrapper);
 		return projectPath + " <a href=\"revision.jsp?roid=" + revision.getOid() + "\">" + revision.getId() + "</a>";
@@ -83,8 +83,8 @@ public class JspHelper {
 			subProjects.add(subProject);
 		}
 		for (SProject subProject : subProjects) {
-			if (loginManager.getService().userHasRights(subProject.getOid()) && (loginManager.getService().getProjectByPoid(subProject.getOid()).getState() != SObjectState.DELETED)
-					|| loginManager.getUserType() == SUserType.ADMIN) {
+			if (loginManager.getService().userHasRights(subProject.getOid())
+					&& (loginManager.getService().getProjectByPoid(subProject.getOid()).getState() != SObjectState.DELETED) || loginManager.getUserType() == SUserType.ADMIN) {
 				result.append(writeProjectTree(subProject, loginManager, level + 1));
 			}
 		}
@@ -181,10 +181,10 @@ public class JspHelper {
 		return builder.toString();
 	}
 
-	public static String writeCompareResult(SCompareResult compareResult, long roid1, long roid2, SCompareType sCompareType, SProject project) {
+	public static String writeCompareResult(SCompareResult compareResult, int rid1, int rid2, SCompareType sCompareType, SProject project, boolean webPage) {
 		StringBuilder builder = new StringBuilder();
 		builder.append("<h1>Building Model Comparator</h1>");
-		builder.append("Compare results for revisions '" + roid1 + "' and '" + roid2 + "' of project '" + project.getName() + "'<br/>");
+		builder.append("Compare results for revisions '" + rid1 + "' and '" + rid2 + "' of project '" + project.getName() + "'<br/>");
 		builder.append("Total number of differences: " + compareResult.size() + "<br/>");
 		if (compareResult.getItems().size() == 0) {
 			return builder.toString();
@@ -196,21 +196,25 @@ public class JspHelper {
 		builder.append("<th>Name</th>");
 		builder.append("<th>Difference</th>");
 		builder.append("</tr>");
-		
-		builder.append("<tr>");
-		builder.append("<th style=\"padding: 5px\"></th>");
-		builder.append("<th style=\"padding: 5px\"></th>");
-		builder.append("<th style=\"padding: 5px\"></th>");
-		builder.append("<th style=\"padding: 5px\"><select id=\"typeselector\" name=\"type\">");
-		for (SCompareType cr : SCompareType.values()) {
-			if (cr == sCompareType) {
-				builder.append("<option selected=\"selected\" value=\"" + cr.name() + "\">" + cr.getNiceName() + "</option>");
-			} else {
-				builder.append("<option value=\"" + cr.name() + "\">" + cr.getNiceName() + "</option>");
+
+		if (webPage) {
+			builder.append("<tr>");
+			builder.append("<th style=\"padding: 5px\"></th>");
+			builder.append("<th style=\"padding: 5px\"></th>");
+			builder.append("<th style=\"padding: 5px\"></th>");
+			builder.append("<th style=\"padding: 5px\">");
+			builder.append("<select id=\"typeselector\" name=\"type\">");
+			for (SCompareType cr : SCompareType.values()) {
+				if (cr == sCompareType) {
+					builder.append("<option selected=\"selected\" value=\"" + cr.name() + "\">" + cr.getNiceName() + "</option>");
+				} else {
+					builder.append("<option value=\"" + cr.name() + "\">" + cr.getNiceName() + "</option>");
+				}
 			}
+			builder.append("</select>");
+			builder.append("</th>");
+			builder.append("</tr>");
 		}
-		builder.append("</select></th>");
-		builder.append("</tr>");
 
 		Map<String, List<SCompareResult.SItem>> items = compareResult.getItems();
 		for (String eClass : items.keySet()) {
@@ -234,7 +238,7 @@ public class JspHelper {
 					builder.append("<td>" + name + "</td>");
 					builder.append("<td>Deleted</td>");
 				} else if (item instanceof SCompareResult.SObjectModified) {
-					SObjectModified objectModified = (SObjectModified)item;
+					SObjectModified objectModified = (SObjectModified) item;
 					builder.append("<td>" + eClass + "</td>");
 					builder.append("<td>" + guid + "</td>");
 					builder.append("<td>" + name + "</td>");
@@ -285,7 +289,7 @@ public class JspHelper {
 		}
 		return "unknown";
 	}
-	
+
 	public static SClashDetectionSettings createSClashDetectionSettings(HttpServletRequest request) {
 		float margin = Float.parseFloat(request.getParameter("margin"));
 		SClashDetectionSettings sClashDetectionSettings = new SClashDetectionSettings();
@@ -300,7 +304,7 @@ public class JspHelper {
 		}
 		return sClashDetectionSettings;
 	}
-	
+
 	public static String showProjectTree(SProject activeProject, ServiceInterface serviceInterface) throws ServiceException {
 		StringBuilder sb = new StringBuilder();
 		sb.append("<ul class=\"projectTreeFirst\">");
@@ -316,12 +320,13 @@ public class JspHelper {
 	private static void showProjectTree(StringBuilder sb, SProject mainProject, SProject activeProject, ServiceInterface serviceInterface, boolean isLast) throws ServiceException {
 		sb.append("<li" + (isLast ? " class=\"last\"" : "") + ">");
 		boolean hasRights = serviceInterface.userHasCheckinRights(mainProject.getOid());
-		sb.append("<a class=\"projectTreeItem" + (activeProject.getOid() == mainProject.getOid() ? " activeTreeItem" : "") + (hasRights ? "" : " norightsTreeItem") + "\" href=\"project.jsp?poid=" + mainProject.getOid() + "\"/>" + mainProject.getName() + "</a>");
+		sb.append("<a class=\"projectTreeItem" + (activeProject.getOid() == mainProject.getOid() ? " activeTreeItem" : "") + (hasRights ? "" : " norightsTreeItem")
+				+ "\" href=\"project.jsp?poid=" + mainProject.getOid() + "\"/>" + mainProject.getName() + "</a>");
 		if (!mainProject.getSubProjects().isEmpty()) {
 			sb.append("<ul class=\"projectTree\">");
 			for (long poid : mainProject.getSubProjects()) {
 				SProject subProject = serviceInterface.getProjectByPoid(poid);
-				showProjectTree(sb, subProject, activeProject, serviceInterface, poid == mainProject.getSubProjects().get(mainProject.getSubProjects().size()-1));
+				showProjectTree(sb, subProject, activeProject, serviceInterface, poid == mainProject.getSubProjects().get(mainProject.getSubProjects().size() - 1));
 			}
 			sb.append("</ul>");
 		}
