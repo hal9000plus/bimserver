@@ -34,6 +34,11 @@
 		<appender-ref ref="Console" />
 		<appender-ref ref="File" />
 	</logger>
+	<logger name="org.eclipse.jetty">
+		<level value="error" />
+		<appender-ref ref="Console" />
+		<appender-ref ref="File" />
+	</logger>
 	<root>
 		<priority value="INFO" />
 		<appender-ref ref="Console" />
