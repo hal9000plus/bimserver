@@ -721,8 +721,8 @@ open a specific revision to query other revisions<br />
 			if (request.getParameter("revisions") != null) {
 				clashesUrl += "&revisions=" + request.getParameter("revisions");
 			}
-			if (request.getParameter("ignore") != null) {
-				clashesUrl += "&ignore=" + request.getParameter("ignore");
+			if (request.getParameter("ignored") != null) {
+				clashesUrl += "&ignored=" + request.getParameter("ignored");
 			}
 		%>
 		$("#clashdetectiondiv").load("<%=clashesUrl%>");
