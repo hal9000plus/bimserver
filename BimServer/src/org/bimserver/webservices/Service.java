@@ -419,7 +419,9 @@ public class Service implements ServiceInterface {
 
 	@Override
 	public long addUser(String username, String name, SUserType type, boolean selfRegistration) throws UserException, ServerException {
-		requireAuthentication();
+		if (!selfRegistration) {
+			requireAuthentication();
+		}
 		BimDatabaseSession session = bimDatabase.createSession();
 		try {
 			BimDatabaseAction<Long> action = new AddUserDatabaseAction(accessMethod, username, name, convert(type), currentUoid, selfRegistration);
