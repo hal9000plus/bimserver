@@ -1387,6 +1387,7 @@ public class Service implements ServiceInterface {
 				ifcModelSet.add(subModel);
 			}
 			IfcModel model = new Merger().merge(oldRevision.getProject(), ifcModelSet, ServerSettings.getSettings().isIntelligentMerging());
+			model.resetOids();
 			Project newProject = new AddProjectDatabaseAction(accessMethod, projectName, currentUoid).execute(session);
 			session.commit();
 			session.close();
@@ -1435,6 +1436,7 @@ public class Service implements ServiceInterface {
 				ifcModelSet.add(subModel);
 			}
 			IfcModel model = new Merger().merge(oldRevision.getProject(), ifcModelSet, ServerSettings.getSettings().isIntelligentMerging());
+			model.resetOids();
 			BimDatabaseAction<ConcreteRevision> action = new CheckinPart1DatabaseAction(accessMethod, destPoid, currentUoid, model, comment);
 			try {
 				ConcreteRevision revision = session.executeAndCommitAction(action, DEADLOCK_RETRIES);

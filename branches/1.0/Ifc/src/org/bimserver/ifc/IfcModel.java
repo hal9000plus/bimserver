@@ -263,6 +263,7 @@ public class IfcModel {
 		}
 	}
 	
+	@SuppressWarnings("unchecked")
 	private void dumpPlusReferences(Set<IdEObject> done, IdEObject idEObject) {
 		if (idEObject == null) {
 			return;
@@ -301,6 +302,7 @@ public class IfcModel {
 		objects = temp;
 	}
 	
+	@SuppressWarnings("unchecked")
 	private void fixOids(IdEObject idEObject, OidProvider oidProvider, BiMap<Long, IdEObject> temp) {
 		if (idEObject == null) {
 			return;
@@ -372,6 +374,7 @@ public class IfcModel {
 		}
 	}
 	
+	@SuppressWarnings("unchecked")
 	private void checkDoubleOidsPlusReferences(BiMap<IdEObject, Long> done, IdEObject idEObject) {
 		if (idEObject == null) {
 			return;
@@ -410,6 +413,7 @@ public class IfcModel {
 		}
 	}
 	
+	@SuppressWarnings("unchecked")
 	public void showBackReferences(IdEObject idEObject) {
 		System.out.println("Showing back references to: " + idEObject);
 		for (IdEObject object : getValues()) {
@@ -435,6 +439,12 @@ public class IfcModel {
 		BiMap<IdEObject, Long> done = HashBiMap.create();
 		for (IdEObject idEObject : objects.values()) {
 			checkDoubleOidsPlusReferences(done, idEObject);
+		}
+	}
+
+	public void resetOids() {
+		for (IdEObject idEObject : objects.values()) {
+			idEObject.setOid(-1);
 		}
 	}
 }
