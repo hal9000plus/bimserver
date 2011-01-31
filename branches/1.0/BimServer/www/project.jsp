@@ -74,7 +74,7 @@ if (emfSerializerFactory.resultTypeEnabled(ResultType.O3D_JSON) && lastRevision 
 	href="editproject.jsp?poid=<%=poid %>">Edit</a></li>
 <% } %>
 <%
-	if (emfSerializerFactory.resultTypeEnabled(ResultType.O3D_JSON) && lastRevision != null) {
+	if (loginManager.getService().isExportTypeEnabled(ResultType.O3D_JSON) && lastRevision != null) {
 %>
 <li>
  <a id="visualiselink" class="link">Visualise</a></li>
