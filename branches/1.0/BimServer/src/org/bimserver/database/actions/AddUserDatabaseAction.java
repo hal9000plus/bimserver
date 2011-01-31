@@ -62,6 +62,9 @@ public class AddUserDatabaseAction extends BimDatabaseAction<Long> {
 	public Long execute(BimDatabaseSession bimDatabaseSession) throws UserException, BimDatabaseException, BimDeadlockException {
 		String trimmedUserName = username.trim();
 		String trimmedName = name.trim();
+		if (selfRegistration && userType == UserType.ADMIN) {
+			throw new UserException("Cannot create admin user with self registration");
+		}
 		if (trimmedUserName.equals("")) {
 			throw new UserException("Invalid username");
 		}
