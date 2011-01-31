@@ -57,7 +57,7 @@ Download:
 	<%	
 	}
 %>
-</select> <label for="zip">Zip</label><input type="checkbox" name="zip" id="zip" />
+</select> <label for="zip">Zip</label> <input type="checkbox" name="zip" id="zip" />
 		<input name="download" type="submit" value="Download">
 </form>
 

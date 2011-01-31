@@ -322,11 +322,12 @@ public class JspHelper {
 		boolean hasRights = serviceInterface.userHasCheckinRights(mainProject.getOid());
 		sb.append("<a class=\"projectTreeItem" + (activeProject.getOid() == mainProject.getOid() ? " activeTreeItem" : "") + (hasRights ? "" : " norightsTreeItem")
 				+ "\" href=\"project.jsp?poid=" + mainProject.getOid() + "\"/>" + mainProject.getName() + "</a>");
-		if (!mainProject.getSubProjects().isEmpty()) {
+		List<SProject> subProjects = serviceInterface.getSubProjects(mainProject.getOid());
+		Collections.sort(subProjects, new SProjectNameComparator());
+		if (!subProjects.isEmpty()) {
 			sb.append("<ul class=\"projectTree\">");
-			for (long poid : mainProject.getSubProjects()) {
-				SProject subProject = serviceInterface.getProjectByPoid(poid);
-				showProjectTree(sb, subProject, activeProject, serviceInterface, poid == mainProject.getSubProjects().get(mainProject.getSubProjects().size() - 1));
+			for (SProject subProject : subProjects) {
+				showProjectTree(sb, subProject, activeProject, serviceInterface, subProject == subProjects.get(subProjects.size() - 1));
 			}
 			sb.append("</ul>");
 		}
