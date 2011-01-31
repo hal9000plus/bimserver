@@ -320,6 +320,7 @@ Download: <select name="resultType">
 	<jsp:param name="poid" value="<%=poid %>" />
 </jsp:include> <%
 	List<SProject> projects = loginManager.getService().getAllReadableProjects();
+	Collections.sort(projects, new SProjectNameComparator());
 	if (!projects.isEmpty() && (projects.size() > 1 || !projects.get(0).getRevisions().isEmpty())) {
 		boolean atLeastOne = false;
 		for (SProject sProject : projects) {
