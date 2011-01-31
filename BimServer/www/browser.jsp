@@ -9,7 +9,8 @@
 <%@page import="org.bimserver.interfaces.objects.SProject"%>
 <%@page import="org.bimserver.interfaces.objects.SRevision"%>
 
-<%@page import="org.bimserver.shared.UserException"%><div id="browser">
+<%@page import="org.bimserver.shared.UserException"%>
+<%@page import="org.bimserver.shared.ResultType"%><div id="browser">
 <jsp:useBean id="loginManager" scope="session" class="org.bimserver.web.LoginManager" />
 <%
 	long roid = Long.parseLong(request.getParameter("roid"));
@@ -60,6 +61,7 @@ for (long revisionOid : project.getRevisions()) {
 	  				}
 	  			}
 	  			out.println("</table>");
+	if (loginManager.getService().isExportTypeEnabled(ResultType.O3D_JSON)) {
 %>
 	<br/>
 	<div id="browservisualizeloader">
@@ -69,6 +71,7 @@ for (long revisionOid : project.getRevisions()) {
 	  	<a href="#" id="browservisualizelink">Load visualization</a>
   	</div>
 <%
+	}
 	  		} else if (request.getParameter("className") != null) { 
 				String className = request.getParameter("className");
 				List<SDataObject> dataObjects = loginManager.getService().getDataObjectsByType(roid, className);
