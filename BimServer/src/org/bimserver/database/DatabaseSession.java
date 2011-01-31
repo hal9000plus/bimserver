@@ -358,7 +358,6 @@ public class DatabaseSession implements BimDatabaseSession {
 								LOGGER.error(enumOrdinal + " not found");
 							}
 						} else if (feature.getEType() instanceof EClass) {
-							boolean wrappedValue = Ifc2x3Package.eINSTANCE.getWrappedValue().isSuperTypeOf((EClass) (feature.getEType()));
 							short cid = buffer.getShort();
 							if (cid == -1) {
 								// null, do nothing

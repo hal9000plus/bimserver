@@ -168,7 +168,6 @@ public class Merger {
 		return guidMap;
 	}
 
-	@SuppressWarnings("unchecked")
 	private void cleanGuidMap(Map<String, List<IdEObject>> guidMap) {
 		for (String guid : guidMap.keySet()) {
 			List<IdEObject> list = guidMap.get(guid);
