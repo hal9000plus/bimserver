@@ -10,18 +10,21 @@
 <%@page import="org.bimserver.interfaces.objects.SRevision"%>
 
 <%@page import="org.bimserver.shared.UserException"%>
-<%@page import="org.bimserver.shared.ResultType"%><div id="browser">
+<%@page import="org.bimserver.shared.ResultType"%>
+<%@page import="java.util.Collections"%>
+<%@page import="org.bimserver.shared.SRevisionIdComparator"%><div id="browser">
 <jsp:useBean id="loginManager" scope="session" class="org.bimserver.web.LoginManager" />
 <%
 	long roid = Long.parseLong(request.getParameter("roid"));
 	SRevision revision = loginManager.getService().getRevision(roid);
 	SProject project = loginManager.getService().getProjectByPoid(revision.getProjectId());
+	List<SRevision> revisionsInc = loginManager.getService().getAllRevisionsOfProject(revision.getProjectId());
+	Collections.sort(revisionsInc, new SRevisionIdComparator(false));
 %>
 <a href="#" class="browserlink" browserUrl="<%=request.getRequestURI()%>?roid=<%=roid%>">Home</a><br/>
 Revision <select name="roid" id="roidchanger">
 <%
-for (long revisionOid : project.getRevisions()) {
-	SRevision sRevision = loginManager.getService().getRevision(revisionOid);
+for (SRevision sRevision : revisionsInc) {
 %>
 	<option value="<%=sRevision.getOid() %>"<%=(sRevision.getOid() == roid ? " selected=\"selected\"" : "") %>><%=sRevision.getId() %></option>
 <%
