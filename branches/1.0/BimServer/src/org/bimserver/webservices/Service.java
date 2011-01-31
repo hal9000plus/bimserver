@@ -22,6 +22,7 @@ package org.bimserver.webservices;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -35,6 +36,13 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
 import javax.activation.DataHandler;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.AddressException;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 
 import nl.tue.buildingsmart.express.dictionary.SchemaDefinition;
 
@@ -145,6 +153,7 @@ import org.bimserver.interfaces.objects.SUser;
 import org.bimserver.interfaces.objects.SUserType;
 import org.bimserver.longaction.LongActionManager;
 import org.bimserver.longaction.LongCheckinAction;
+import org.bimserver.mail.MailSystem;
 import org.bimserver.rights.RightsManager;
 import org.bimserver.serializers.EmfSerializerFactory;
 import org.bimserver.shared.DatabaseInformation;
@@ -168,6 +177,7 @@ import org.bimserver.shared.SCompareResult.SObjectRemoved;
 import org.bimserver.tools.generators.GenerateUtils;
 import org.bimserver.utils.FakeClosingInputStream;
 import org.bimserver.utils.Hashers;
+import org.bimserver.web.JspHelper;
 import org.eclipse.emf.common.util.Enumerator;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -1834,43 +1844,48 @@ public class Service implements ServiceInterface {
 		return resultTypes;
 	}
 
-	// @Override
-	// public void sendCompareEmail(SCompareType sCompareType, long poid, long
-	// roid1, long roid2, String address) throws UserException {
-	// SUser currentUser = getCurrentUser();
-	// String senderName = currentUser.getName();
-	// String senderAddress = currentUser.getUsername();
-	// if (!senderAddress.contains("@") || !senderAddress.contains(".")) {
-	// senderAddress = ServerSettings.getSettings().getEmailSenderAddress();
-	// }
-	//
-	// Session mailSession = MailSystem.getInstance().createMailSession();
-	//
-	// Message msg = new MimeMessage(mailSession);
-	//
-	// try {
-	// InternetAddress addressFrom = new InternetAddress(senderAddress);
-	// addressFrom.setPersonal(senderName);
-	// msg.setFrom(addressFrom);
-	//
-	// InternetAddress[] addressTo = new InternetAddress[1];
-	// addressTo[0] = new InternetAddress(address);
-	// msg.setRecipients(Message.RecipientType.TO, addressTo);
-	//
-	// msg.setSubject("BIMserver Model Comparator");
-	// SCompareResult compareResult = compare(roid1, roid2, sCompareType);
-	// String html = JspHelper.writeCompareResult(compareResult, roid1, roid2,
-	// sCompareType, getProjectByPoid(poid));
-	// msg.setContent(html, "text/html");
-	// Transport.send(msg);
-	// } catch (AddressException e) {
-	// e.printStackTrace();
-	// } catch (UnsupportedEncodingException e) {
-	// e.printStackTrace();
-	// } catch (MessagingException e) {
-	// e.printStackTrace();
-	// }
-	// }
+	@Override
+	public void sendCompareEmail(SCompareType sCompareType, long poid, long roid1, long roid2, String address) throws UserException, ServerException {
+		SUser currentUser = getCurrentUser();
+		BimDatabaseSession session = bimDatabase.createSession();
+		try {
+			Revision revision1 = session.getRevisionByRoid(roid1);
+			Revision revision2 = session.getRevisionByRoid(roid2);
+			String senderName = currentUser.getName();
+			String senderAddress = currentUser.getUsername();
+			if (!senderAddress.contains("@") || !senderAddress.contains(".")) {
+				senderAddress = ServerSettings.getSettings().getEmailSenderAddress();
+			}
+			
+			Session mailSession = MailSystem.getInstance().createMailSession();
+			
+			Message msg = new MimeMessage(mailSession);
+			
+			try {
+				InternetAddress addressFrom = new InternetAddress(senderAddress);
+				addressFrom.setPersonal(senderName);
+				msg.setFrom(addressFrom);
+				
+				InternetAddress[] addressTo = new InternetAddress[1];
+				addressTo[0] = new InternetAddress(address);
+				msg.setRecipients(Message.RecipientType.TO, addressTo);
+				
+				msg.setSubject("BIMserver Model Comparator");
+				SCompareResult compareResult = compare(roid1, roid2, sCompareType);
+				String html = JspHelper.writeCompareResult(compareResult, revision1.getId(), revision2.getId(), sCompareType, getProjectByPoid(poid), false);
+				msg.setContent(html, "text/html");
+				Transport.send(msg);
+			} catch (AddressException e) {
+				e.printStackTrace();
+			} catch (UnsupportedEncodingException e) {
+				e.printStackTrace();
+			} catch (MessagingException e) {
+				e.printStackTrace();
+			}
+		} finally {
+			session.close();
+		}
+	}
 
 	@Override
 	public void requestPasswordChange(long uoid) throws UserException, ServerException {

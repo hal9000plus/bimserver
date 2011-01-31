@@ -349,4 +349,6 @@ public interface ServiceInterface {
 
 	@WebMethod(action = "sendClashesEmail")
 	void sendClashesEmail(@WebParam(name="sClashDetectionSettings", partName="sendClashesEmail.sClashDetectionSettings") SClashDetectionSettings sClashDetectionSettings, @WebParam(name="poid", partName="sendClashesEmail.poid" )long poid, @WebParam(name="addressesTo", partName="sendClashesEmail.addressesTo")Set<String> addressesTo) throws UserException, ServerException;
+
+	void sendCompareEmail(SCompareType sCompareType, long poid, long roid1, long roid2, String address) throws UserException, ServerException;
 }
