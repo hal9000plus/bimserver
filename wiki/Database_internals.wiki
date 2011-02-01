@@ -4,7 +4,7 @@ WORK IN PROGRESS
 
 = Introduction =
 
-The BIMserver is storing all data in a key-value store, this key-value can be changed in code, but the only implementation right now is in the open source BerkeleyDB Java Edition (http://www.oracle.com/technetwork/database/berkeleydb/overview/index-093405.html).
+The BIMserver is storing all data in a key-value store, this key-value can be changed in code, but the only implementation right now is in the open source [http://www.oracle.com/technetwork/database/berkeleydb/overview/index-093405.html BerkeleyDB Java Edition].
 
 A key value store is defined as:
   * A set of named tables
@@ -96,4 +96,4 @@ The person:
 The Company:
 
 ||Name||Employees||
-||(short)9 + 9 bytes||(short)1 + (short)2 + (long)100||
+||(short)9 + 9 bytes||(short)1 + (short)1 + (long)100||
