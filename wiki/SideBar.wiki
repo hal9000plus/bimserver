@@ -2,6 +2,7 @@
 
 === BIMserver Documentation ===
 
+ * [Home]
  * [Database_internals]
  * [Requirements]
  * [Known_issues]
