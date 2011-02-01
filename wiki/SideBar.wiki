@@ -6,7 +6,7 @@
  * [features Features]
  * [Technical Technical]
    * [Requirements Requirements]
-   * [Installation Installation]
+   * [Installation Installation / Settings]
    * [SOAPExample SOAP Example]
    * [RESTInterface REST Interface]
  * [Developers Developers]
