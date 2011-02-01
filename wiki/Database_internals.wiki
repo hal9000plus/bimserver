@@ -32,7 +32,9 @@ Each record in a table has the following layout:
   * Oid = Object Id
   * Rid = Revision Id
 
-Record are only added, never modified or deleted.
+One other term which is used is Cid (Class Id), this is a short (2 bytes), and used as a shorter way (than a complete class-name) to reference classes.
+
+Records are only added, never modified or deleted.
 
 = Versioning =
 
@@ -47,10 +49,10 @@ http://bimserver.googlecode.com/svn/wiki/images/db1.png
 Please read this first: [Link to description of EMF]
 For all structural features of the class of the object, some bytes are written to the value part of the record. All values are written in the order defined by the EMF model and include all structural features of all super classes.
 
-Single attributes:
+==Single attributes==
 
 || *Type* || *Size(bytes)* || *Serialisation* || *Null representation* ||
-||String||2 + size of bytes||UTF-8 encoded||-1 (as a short)||
+||String||2 + size of UTF-8 encoded bytes||UTF-8 encoded||-1 (as a short)||
 ||Integer||4||Default java serialisation||Cannot be null||
 ||Long||8||Default java serialisation||Cannot be null||
 ||Float||4||Default java serialisation||Cannot be null||
@@ -59,11 +61,19 @@ Single attributes:
 ||Date||8||Number of milliseconds since January 1, 1970, 00:00:00 GMT||-1 (as a long)||
 ||Tristate||1||0 for true, 1 for false, 2 for undefined||Cannot be null||
 ||ByteArray||4 + Length||4 bytes (int) for length + bytes||0 (as an int)||
-||Enum||4||Enum literal||Cannot be null||
-||Reference||8|| ||-1 (as long)||
+||Enum||4||Enum literal (int)||Cannot be null||
 
-Single references:
+==Single references==
+A null reference is stored as:
+||Short||
+||-1||
 
-Multiple attributes:
+A non-null reference is stored as:
+||Short||Long||
+||Cid||Oid||
 
-Multiple references:
+==Multiple attributes==
+Multiple attributes (such as a list of integers) are stored inline. The first two bytes indicate the length of the list, after that all values are serialized like normal single attributes.
+
+==Multiple references==
+Multiple references (lists of references to objects) are also stored inline. The first two bytes indicate the length of the list, after that all values are serialized like normal references.
