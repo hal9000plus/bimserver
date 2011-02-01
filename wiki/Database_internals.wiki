@@ -1,6 +1,6 @@
 #summary Internal workings of the database.
 
-WORK IN PROGRESS
+<wiki:toc max_depth="1" />
 
 = Introduction =
 
