@@ -1,4 +1,4 @@
-#summary This page describes the requirements of your system to run a BIMserver
+#summary System requirements for running a BIMserver
 #labels Requirements,Deploy
 
 = Introduction =
