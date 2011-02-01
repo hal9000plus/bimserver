@@ -11,7 +11,7 @@
    * [RESTInterface REST Interface]
  * [Developers Developers]
    * [EMF Eclipse Modeling Framework]
-   * [Database_internals Database]
+   * [Database_internals Database / Versioning]
    * [StoreModel Store Model]
    * [Merging Merging]
    * [Compare Compare]
