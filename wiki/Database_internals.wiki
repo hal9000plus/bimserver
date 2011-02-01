@@ -34,6 +34,10 @@ Each record in a table has the following layout:
 
 Record are only added, never modified or deleted.
 
+= Versioning =
+
+http://bimserver.googlecode.com/svn/wiki/images/jar.png
+
 = Value =
 
 Please read this first: [Link to description of EMF]
