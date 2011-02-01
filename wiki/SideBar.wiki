@@ -1,0 +1,10 @@
+#summary Sidebar for all pages.
+
+= Introduction =
+
+Menu
+
+
+= Details =
+
+Link...
