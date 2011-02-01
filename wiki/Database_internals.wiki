@@ -15,11 +15,11 @@ A key value store is defined as:
 
 = Principles =
 
-* Models are stored in projects
-* Each new version of the model is stored a new revision
-* Each revision of the project should always be accessible
-* Revisions, once stored, can never be changed
-* Objects in a project can only reference other objects in the same project.
+  * Models are stored in projects
+  * Each new version of the model is stored a new revision
+  * Each revision of the project should always be accessible
+  * Revisions, once stored, can never be changed
+  * Objects in a project can only reference other objects in the same project.
 
 = Details =
 
