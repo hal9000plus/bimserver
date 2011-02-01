@@ -48,7 +48,7 @@ Single attributes:
 ||Float||4||Default java serialisation||Cannot be null||
 ||Double||8||Default java serialisation||Cannot be null||
 ||Boolean||1||0 for false, 1 for true||Cannot be null||
-||Date||8||Time||Number of milliseconds since January 1, 1970, 00:00:00 GMT||-1 (as a long)||
+||Date||8||Number of milliseconds since January 1, 1970, 00:00:00 GMT||-1 (as a long)||
 ||Tristate||1||0 for true, 1 for false, 2 for undefined||Cannot be null||
 ||ByteArray||4 + Length||4 bytes (int) for length + bytes||0 (as int)||
 ||Enum||4||Enum literal||Cannot be null||
