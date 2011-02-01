@@ -52,7 +52,7 @@ Single attributes:
 ||Tristate||1||0 for true, 1 for false, 2 for undefined||Cannot be null||
 ||ByteArray||4 + Length||4 bytes (int) for length + bytes||0 (as int)||
 ||Enum||4||Enum literal||Cannot be null||
-||Reference||8||||-1 (as long)||
+||Reference||8|| ||-1 (as long)||
 
 Single references:
 
