@@ -3,7 +3,7 @@
 
 = Introduction =
 
-Some features of the BIMserver software make intens use of the computer memory. We recommend to configure a stack size of 1024kb and a heap size of 2048M minimum (the higher the better; we recommend 12Gb or 16Gb for professional use).
+Some features of the BIMserver software make intense use of the computer memory. We recommend to configure a stack size of 1024KB and a heap size of 2048MB minimum (the higher the better; we recommend 12GB or 16GB for professional use).
 
 = WAR =
 
@@ -13,6 +13,6 @@ Some features of the BIMserver software make intens use of the computer memory. 
 = JAR =
   * A JRE or JDK 6, update 4 or higher
 
-Explenation:
-  * A JRE or JDK version 6 update 4 or higher is required because the BIMserver makes extensive use of JAXB 2.1.3, which only JREs and JDKs after update 4 have a reference implementation
+Explanation:
+  * A JRE or JDK version 6 update 4 or higher is required because the BIMserver makes extensive use of JAXB 2.1.3, which only JREs and JDKs after update 4 have a reference implementation of
   * In the Servlet Specification 2.5, a methed called getContextPath was added to the ServletContext class, the BIMserver uses this method, so therefore your servlet container must at least support version 2.5 of the servlet specification
