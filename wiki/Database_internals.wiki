@@ -9,7 +9,7 @@ The BIMserver is storing all data in a key-value store, this key-value can be ch
 A key value store is defined as:
   * A set of named tables
   * Each table has 2 columns, key and value
-  * Both the key and value column can contain an arbitrarily sized byte array, this size may vary per record
+  * Both the key and value columns can contain an arbitrarily sized byte array, this size may vary per record
   * All keys in a table are always ordered
   * No duplicate keys can exist
 
