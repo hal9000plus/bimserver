@@ -41,18 +41,18 @@ For all structural features of the class of the object, some bytes are written t
 
 Single attributes:
 
-||Type||Size(bytes)||Serialisation||
-||String||||
-||Integer||4||
-||Long||8||
-||Float||4||
-||Double||8||
-||Boolean||1||
-||Date||8||
-||Tristate||1||
-||ByteArray||Length||
-||Enum||4||
-||Reference||8||
+||Type||Size(bytes)||Serialisation||Null representation||
+||String||2 + size of bytes||UTF-8 encoded||-1 (as a short)||
+||Integer||4||Default java serialisation||Cannot be null||
+||Long||8||Default java serialisation||Cannot be null||
+||Float||4||Default java serialisation||Cannot be null||
+||Double||8||Default java serialisation||Cannot be null||
+||Boolean||1||0 for false, 1 for true||Cannot be null||
+||Date||8||Time||Number of milliseconds since January 1, 1970, 00:00:00 GMT||-1 (as a long)||
+||Tristate||1||0 for true, 1 for false, 2 for undefined||Cannot be null||
+||ByteArray||4 + Length||4 bytes (int) for length + bytes||0 (as int)||
+||Enum||4||Enum literal||Cannot be null||
+||Reference||8||-1 (as long)||
 
 Single references:
 
