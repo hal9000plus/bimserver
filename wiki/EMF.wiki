@@ -10,4 +10,4 @@ Most BIM meta models are described in a file format. As IFC is based on [http://
 
 = Generating Code =
 
-The EMF framework generates Java classes with the given ECore file.
+The EMF framework generates Java classes with the given ECore file, these classes are used to store BIM models and passed to the [Database database layer].
