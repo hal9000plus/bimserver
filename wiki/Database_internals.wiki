@@ -77,3 +77,23 @@ Multiple attributes (such as a list of integers) are stored inline. The first tw
 
 ==Multiple references==
 Multiple references (lists of references to objects) are also stored inline. The first two bytes indicate the length of the list, after that all values are serialized like normal references.
+
+==Example==
+Let's say we have two classes, Person and Company:
+
+http://bimserver.googlecode.com/svn/wiki/images/PersonCompany.png
+
+The Person class has Cid 1, the Company class has Cid 2.
+Both classes have one instance, the person has Oid 100, the Company has Oid 101.
+
+When serialized, the values will be
+
+The person:
+
+||Name||Age||Company||
+||(short)4 + 4 bytes||(int)80||(short)2 + (long)101||
+
+The Company:
+
+||Name||Employees||
+||(short)9 + 9 bytes||(short)1 + (short)2 + (long)100||
