@@ -1,6 +1,6 @@
 #summary BIMserver Documentation
 
-== BIMserver Documentation ==
+=== BIMserver Documentation ===
 
  * [Database_internals]
  * [Requirements]
