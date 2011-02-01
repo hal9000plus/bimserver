@@ -1,6 +1,6 @@
-WORK IN PROGRESS
-
 #summary Internal workings of the database.
+
+WORK IN PROGRESS
 
 = Introduction =
 
@@ -35,6 +35,10 @@ Each record in a table has the following layout:
 Record are only added, never modified or deleted.
 
 = Versioning =
+
+The image below is showing four revisions of a project. There are 3 tables: A, B and C.
+The diagrams on top are showing the objects + relations for each revision. The number between the parenthesis is the Oid (Object Id).
+The tables on the bottom are showing the complete database contents at the end of each revision. The number before the "." is the Object Id, the number after the dot is the Rid (Revision Id).
 
 http://bimserver.googlecode.com/svn/wiki/images/db1.png
 
