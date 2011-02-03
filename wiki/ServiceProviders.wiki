@@ -10,9 +10,9 @@ If you are a serviceprovider, feel free to add your company in the comment of th
 
 = Service Providers =
 
-*VMV CAD* (The Netherlands)<br/>
-Helps you implement a BIMserver in your company. <br/>
-Contact: http://www.vmv-cad.nl/site/producten/bim_software.html
+*BIMasaService* (The Netherlands)<br/>
+Software as a Service (SaaS) using the open source BIMserver software. <br/>
+Contact: http://www.bimasaservice.nl
 
 *deBIMspecialist* (The Netherlands)<br/>
 Helps you implement a BIMserver in (the process) your company. <br/>
