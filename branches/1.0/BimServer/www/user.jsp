@@ -44,7 +44,7 @@
 	List<SRevision> revisions = loginManager.getService().getAllRevisionsByUser(user.getOid());
 	Collections.sort(revisions, new SRevisionDateComparator(false));
 	List<SCheckout> checkouts = loginManager.getService().getAllCheckoutsByUser(user.getOid());
-	Collections.sort(checkouts, new SCheckoutDateComparator());
+	Collections.sort(checkouts, new SCheckoutDateComparator(false));
 	List<SProject> projects = loginManager.getService().getUsersProjects(uoid);
 	Collections.sort(projects, new SProjectComparator(loginManager.getService()));
 	List<SProject> nonAuthorizedProjects = loginManager.getService().getAllNonAuthorizedProjectsOfUser(user.getOid());

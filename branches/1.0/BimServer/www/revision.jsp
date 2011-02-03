@@ -25,7 +25,7 @@
 	SProject project = loginManager.getService().getProjectByPoid(revision.getProjectId());
 	SUser user = loginManager.getService().getUserByUoid(revision.getUserId());
 	List<SCheckout> checkouts = loginManager.getService().getAllCheckoutsOfRevision(roid);
-	Collections.sort(checkouts, new SCheckoutDateComparator());
+	Collections.sort(checkouts, new SCheckoutDateComparator(false));
 	List<String> classes = loginManager.getService().getAvailableClasses();
 	Collections.sort(classes);
 	boolean isAdmin = loginManager.getService().getCurrentUser().getUserType() == SUserType.ADMIN;

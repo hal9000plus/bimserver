@@ -43,7 +43,7 @@
 	List<SRevision> revisionsInc = loginManager.getService().getAllRevisionsOfProject(poid);
 	Collections.sort(revisionsInc, new SRevisionIdComparator(false));
 	List<SCheckout> checkouts = loginManager.getService().getAllCheckoutsOfProjectAndSubProjects(poid);
-	Collections.sort(checkouts, new SCheckoutDateComparator());
+	Collections.sort(checkouts, new SCheckoutDateComparator(false));
 	List<SCheckout> activeCheckouts = new ArrayList<SCheckout>();
 	for (SCheckout checkout : checkouts) {
 		if (checkout.isActive()) {
@@ -53,6 +53,7 @@
 	List<SUser> users = loginManager.getService().getAllAuthorizedUsersOfProject(poid);
 	Collections.sort(users, new SUserNameComparator());
 	List<SUser> nonAuthorizedUsers = loginManager.getService().getAllNonAuthorizedUsersOfProject(poid);
+	Collections.sort(nonAuthorizedUsers, new SUserNameComparator());
 	SRevision lastRevision = null;
 	if (project.getLastRevisionId() != -1) {
 		lastRevision = loginManager.getService().getRevision(project.getLastRevisionId());
@@ -310,9 +311,9 @@ Download: <select name="resultType">
 <div class="tabbertab" id="revisionstab"
 	title="Revisions<%=revisions.size() == 0 ? "" : " (" + revisions.size() + ")"%>">
 <%
-	String checkoutWarning = loginManager.getService().getShowCheckoutWarning(project.getOid(), loginManager.getUoid());
-	if (checkoutWarning != null) {
-		out.write("<div class=\"warning\"><img src=\"images/warning.png\" alt=\"warning\" />" + checkoutWarning + "</div>");
+	Set<String> checkoutWarnings = loginManager.getService().getShowCheckoutWarning(project.getOid(), loginManager.getUoid());
+	for (String warning : checkoutWarnings) {
+		out.write("<div class=\"warning\"><img src=\"images/warning.png\" alt=\"warning\" />" + warning + "</div>");
 	}
 	if (userHasCheckinRights) {
 %> <a href="#" id="uploadlink">Upload (note: Subprojects present)</a>
@@ -422,7 +423,7 @@ if (revisions.size() > 0) {
 		<%=lastRevision != null && revision.getId() == lastRevision.getId() ? "class=\"lastrevision\"" : "" %>>
 		<td><a href="revision.jsp?roid=<%=revision.getOid() %>"><%=revision.getId() %></a></td>
 		<td style="white-space: nowrap;"><%=dateFormat.format(revision.getDate()) %></td>
-		<td><a href="user.jsp?uoid=<%=revision.getUserId() %>"><%=revisionUser.getUsername() %></a></td>
+		<td style="white-space: nowrap;"><a href="user.jsp?uoid=<%=revision.getUserId() %>"><%=revisionUser.getUsername() %></a></td>
 		<td><div class="commentbox">
 			<div><%=revision.getComment()%></div><a href="#" class="morelink">more</a>
 		</div></td>

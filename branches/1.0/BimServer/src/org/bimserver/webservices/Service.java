@@ -94,7 +94,7 @@ import org.bimserver.database.actions.GetGeoTagDatabaseAction;
 import org.bimserver.database.actions.GetLogsDatabaseAction;
 import org.bimserver.database.actions.GetRevisionDatabaseAction;
 import org.bimserver.database.actions.GetRevisionSummaryDatabaseAction;
-import org.bimserver.database.actions.GetShowCheckoutWarningDatabaseAction;
+import org.bimserver.database.actions.GetShowCheckoutWarningsDatabaseAction;
 import org.bimserver.database.actions.GetSubProjectsDatabaseAction;
 import org.bimserver.database.actions.GetUserByNameDatabaseAction;
 import org.bimserver.database.actions.RemoveUserFromProjectDatabaseAction;
@@ -161,6 +161,10 @@ import org.bimserver.shared.ResultType;
 import org.bimserver.shared.SCheckinResult;
 import org.bimserver.shared.SCheckoutResult;
 import org.bimserver.shared.SCompareResult;
+import org.bimserver.shared.SCompareResult.SCompareType;
+import org.bimserver.shared.SCompareResult.SObjectAdded;
+import org.bimserver.shared.SCompareResult.SObjectModified;
+import org.bimserver.shared.SCompareResult.SObjectRemoved;
 import org.bimserver.shared.SDataObject;
 import org.bimserver.shared.SLongAction;
 import org.bimserver.shared.SRevisionSummary;
@@ -170,10 +174,6 @@ import org.bimserver.shared.ServiceException;
 import org.bimserver.shared.ServiceInterface;
 import org.bimserver.shared.Token;
 import org.bimserver.shared.UserException;
-import org.bimserver.shared.SCompareResult.SCompareType;
-import org.bimserver.shared.SCompareResult.SObjectAdded;
-import org.bimserver.shared.SCompareResult.SObjectModified;
-import org.bimserver.shared.SCompareResult.SObjectRemoved;
 import org.bimserver.tools.generators.GenerateUtils;
 import org.bimserver.utils.FakeClosingInputStream;
 import org.bimserver.utils.Hashers;
@@ -1228,11 +1228,11 @@ public class Service implements ServiceInterface {
 	}
 
 	@Override
-	public String getShowCheckoutWarning(long poid, long uoid) throws UserException, ServerException {
+	public Set<String> getShowCheckoutWarning(long poid, long uoid) throws UserException, ServerException {
 		requireAuthentication();
 		BimDatabaseSession session = bimDatabase.createReadOnlySession();
 		try {
-			BimDatabaseAction<String> action = new GetShowCheckoutWarningDatabaseAction(accessMethod, poid, uoid);
+			BimDatabaseAction<Set<String>> action = new GetShowCheckoutWarningsDatabaseAction(accessMethod, poid, uoid);
 			return session.executeAction(action, DEADLOCK_RETRIES);
 		} catch (Exception e) {
 			handleException(e);
