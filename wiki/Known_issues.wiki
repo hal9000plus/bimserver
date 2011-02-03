@@ -14,7 +14,7 @@ For windows:
 For OSX:
   * Paths cannot contain any spaces at all
 For linux:
-  * To be checked...
+  * Paths cannot contain any spaces at all
 
 
 = More issues =
