@@ -215,7 +215,7 @@
 </table>
 <input type="hidden" name="action" value="uploadsettings" /></form>
 </div>
-<div class="tabbertab" id="importexport" title="Collada/KMZ">
+<div class="tabbertab" id="colladatab" title="Collada/KMZ">
 <form enctype="multipart/form-data" method="post" action="<%=getServletContext().getContextPath()%>/settings">
 <table class="formatted infotable">
 	<tr>
