@@ -1,10 +1,9 @@
-package org.bimserver;
+package org.bimserver.web;
 
 import java.util.Comparator;
 
 import org.bimserver.interfaces.objects.SProject;
 import org.bimserver.shared.ServiceInterface;
-import org.bimserver.web.JspHelper;
 
 public class SProjectComparator implements Comparator<SProject> {
 

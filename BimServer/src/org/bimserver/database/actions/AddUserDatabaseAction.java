@@ -11,7 +11,6 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
 import org.bimserver.ServerInitializer;
-import org.bimserver.ServerSettings;
 import org.bimserver.database.BimDatabaseException;
 import org.bimserver.database.BimDatabaseSession;
 import org.bimserver.database.BimDeadlockException;
@@ -22,6 +21,7 @@ import org.bimserver.database.store.log.AccessMethod;
 import org.bimserver.database.store.log.LogFactory;
 import org.bimserver.database.store.log.NewUserAdded;
 import org.bimserver.mail.MailSystem;
+import org.bimserver.settings.ServerSettings;
 import org.bimserver.shared.UserException;
 import org.bimserver.templating.TemplateEngine;
 import org.bimserver.templating.TemplateIdentifier;

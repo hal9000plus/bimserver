@@ -1,4 +1,4 @@
-package org.bimserver;
+package org.bimserver.settings;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -17,6 +17,7 @@ import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 import javax.xml.bind.annotation.XmlRootElement;
 
+import org.bimserver.ServerInitializer;
 import org.bimserver.shared.ResultType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

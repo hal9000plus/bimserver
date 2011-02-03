@@ -1,4 +1,4 @@
-package org.bimserver;
+package org.bimserver.merging;
 
 import java.util.HashSet;
 import java.util.Iterator;

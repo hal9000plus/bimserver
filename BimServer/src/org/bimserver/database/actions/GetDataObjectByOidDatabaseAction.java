@@ -1,7 +1,5 @@
 package org.bimserver.database.actions;
 
-import org.bimserver.Merger;
-import org.bimserver.ServerSettings;
 import org.bimserver.database.BimDatabaseException;
 import org.bimserver.database.BimDatabaseSession;
 import org.bimserver.database.BimDeadlockException;
@@ -14,6 +12,8 @@ import org.bimserver.ifc.emf.Ifc2x3.Ifc2x3Package;
 import org.bimserver.ifc.emf.Ifc2x3.IfcGloballyUniqueId;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRoot;
 import org.bimserver.ifc.emf.Ifc2x3.WrappedValue;
+import org.bimserver.merging.Merger;
+import org.bimserver.settings.ServerSettings;
 import org.bimserver.shared.SDataObject;
 import org.bimserver.shared.UserException;
 import org.bimserver.shared.SDataObject.SDataValue;

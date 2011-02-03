@@ -1,4 +1,4 @@
-package org.bimserver;
+package org.bimserver.settings;
 
 public class ServerSettings {
 	private static Settings settings;

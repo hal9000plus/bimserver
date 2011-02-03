@@ -1,4 +1,4 @@
-package org.bimserver;
+package org.bimserver.settings;
 
 import javax.xml.bind.JAXBException;
 

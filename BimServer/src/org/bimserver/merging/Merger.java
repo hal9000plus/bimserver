@@ -1,4 +1,4 @@
-package org.bimserver;
+package org.bimserver.merging;
 
 import java.util.ArrayList;
 import java.util.HashMap;

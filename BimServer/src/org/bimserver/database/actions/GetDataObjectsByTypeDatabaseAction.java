@@ -3,8 +3,6 @@ package org.bimserver.database.actions;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.bimserver.Merger;
-import org.bimserver.ServerSettings;
 import org.bimserver.database.BimDatabaseException;
 import org.bimserver.database.BimDatabaseSession;
 import org.bimserver.database.BimDeadlockException;
@@ -14,6 +12,8 @@ import org.bimserver.database.store.log.AccessMethod;
 import org.bimserver.ifc.IfcModel;
 import org.bimserver.ifc.IfcModelSet;
 import org.bimserver.ifc.emf.Ifc2x3.IfcRoot;
+import org.bimserver.merging.Merger;
+import org.bimserver.settings.ServerSettings;
 import org.bimserver.shared.SDataObject;
 import org.bimserver.shared.UserException;
 import org.eclipse.emf.ecore.EClass;
