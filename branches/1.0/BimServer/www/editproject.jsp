@@ -45,7 +45,7 @@
 				sGeoTag.setY(Float.parseFloat(request.getParameter("y")));
 				sGeoTag.setZ(Float.parseFloat(request.getParameter("z")));
 				sGeoTag.setDirectionAngle(Float.parseFloat(request.getParameter("directionAngle")));
-				sGeoTag.setEpsg(Integer.parseInt(request.getParameter("epsg")));
+				sGeoTag.setEpsg(Integer.parseInt(request.getParameter("epsg").substring(5)));
 				loginManager.getService().updateGeoTag(sGeoTag);
 				sClashDetectionSettings.setEnabled(request.getParameter("clashdetection") != null);
 				sClashDetectionSettings.setMargin(Float.parseFloat(request.getParameter("margin")));
@@ -146,8 +146,8 @@
 		<td class="indent first"><label id="epsg">EPSG</label></td>
 		<td class="indent">
 		<select name="epsg" id="epsg">
-		<option value="<%=sGeoTag.getEpsg()%>"><%=sGeoTag.getEpsg()%></option>
-		<option value="<%=sGeoTag.getEpsg()%>">More options will follow later</option>
+			<option value="EPSG:4326"<%=((4326 == sGeoTag.getEpsg() ? " SELECTED=\"SELECTED\"" : ""))%>>4326</option> 
+			<option value="EPSG:900913"<%=((900913 == sGeoTag.getEpsg() ? " SELECTED=\"SELECTED\"" : ""))%>>900913</option> 
 		</select>
 		</td>
 	</tr>
