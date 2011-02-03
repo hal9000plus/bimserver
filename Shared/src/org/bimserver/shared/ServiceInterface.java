@@ -224,7 +224,7 @@ public interface ServiceInterface {
 	boolean userHasCheckinRights(@WebParam(name = "poid", partName="userHasCheckinRights.poid") long poid) throws UserException, ServerException;
 
 	@WebMethod(action = "getShowCheckoutWarning")
-	String getShowCheckoutWarning(@WebParam(name = "poid", partName="getShowCheckoutWarning.poid") long poid, @WebParam(name = "uoid", partName="getShowCheckoutWarning.uoid") long uoid) throws UserException, ServerException;
+	Set<String> getShowCheckoutWarning(@WebParam(name = "poid", partName="getShowCheckoutWarning.poid") long poid, @WebParam(name = "uoid", partName="getShowCheckoutWarning.uoid") long uoid) throws UserException, ServerException;
 
 	@WebMethod(action = "userHasRights")
 	boolean userHasRights(@WebParam(name = "poid", partName="userHasRights.poid") long poid) throws UserException, ServerException;
