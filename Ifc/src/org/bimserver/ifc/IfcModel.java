@@ -386,18 +386,9 @@ public class IfcModel {
 			return;
 		}
 		if (done.containsValue(idEObject.getOid())) {
-//			System.out.println();
-//			System.out.println(((IfcRoot)idEObject).getGlobalId().getWrappedValue());
-//			showBackReferences(idEObject);
-//			System.out.println(((IfcRoot)done.inverse().get(idEObject.getOid())).getGlobalId().getWrappedValue());
-//			showBackReferences(((IfcRoot)done.inverse().get(idEObject.getOid())));
-//			System.out.println();
-			System.out.println();
 			showBackReferences(idEObject);
-			System.out.println();
 			IdEObject existing = done.inverse().get(idEObject.getOid());
 			showBackReferences(existing);
-			System.out.println();
 			throw new RuntimeException("Double oid: " + idEObject.getOid() + " " + idEObject + ", " + existing);
 		}
 		done.put(idEObject, idEObject.getOid());
@@ -443,8 +434,32 @@ public class IfcModel {
 	}
 
 	public void resetOids() {
+		Set<IdEObject> done = new HashSet<IdEObject>();
 		for (IdEObject idEObject : objects.values()) {
-			idEObject.setOid(-1);
+			resetOids(idEObject, done);
+		}
+	}
+	
+	@SuppressWarnings("unchecked")
+	public void resetOids(IdEObject idEObject, Set<IdEObject> done) {
+		if (idEObject == null) {
+			return;
+		}
+		if (done.contains(idEObject)) {
+			return;
+		}
+		idEObject.setOid(-1);
+		done.add(idEObject);
+		for (EReference eReference : idEObject.eClass().getEAllReferences()) {
+			Object val = idEObject.eGet(eReference);
+			if (eReference.isMany()) {
+				List list = (List)val;
+				for (Object o : list) {
+					resetOids((IdEObject) o, done);
+				}
+			} else {
+				resetOids((IdEObject) val, done);
+			}
 		}
 	}
 }
