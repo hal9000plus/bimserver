@@ -25,6 +25,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.Thread.UncaughtExceptionHandler;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Date;
@@ -92,6 +93,22 @@ public class ServerInitializer implements ServletContextListener {
 	public void contextInitialized(ServletContextEvent servletContextEvent) {
 		try {
 			LOGGER.info("Starting ServerInitializer");
+
+			UncaughtExceptionHandler uncaughtExceptionHandler = new UncaughtExceptionHandler() {
+				@Override
+				public void uncaughtException(Thread t, Throwable e) {
+					if (e instanceof OutOfMemoryError) {
+						ServerInfo.setOutOfMemory();
+						LOGGER.error("", e);
+					} else if (e instanceof Error) {
+						ServerInfo.setErrorMessage(e.getMessage());
+						LOGGER.error("", e);
+					}
+				}
+			};
+			
+			Thread.setDefaultUncaughtExceptionHandler(uncaughtExceptionHandler);
+			
 			ServerType serverType = detectServerType(servletContextEvent.getServletContext());
 			LOGGER.info("Detected server type: " + serverType + " (" + System.getProperty("os.name") + ", " + System.getProperty("sun.arch.data.model") + "bit)");
 			if (serverType == ServerType.UNKNOWN) {
