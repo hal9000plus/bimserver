@@ -2,6 +2,7 @@ package org.bimserver.longaction;
 
 import nl.tue.buildingsmart.express.dictionary.SchemaDefinition;
 
+import org.bimserver.ServerInfo;
 import org.bimserver.database.BimDatabase;
 import org.bimserver.database.BimDatabaseException;
 import org.bimserver.database.BimDatabaseSession;
@@ -66,6 +67,9 @@ public class LongCheckinAction extends LongAction {
 			
 			session = bimDatabase.createReadOnlySession();
 			startClashDetection(session);
+		} catch (OutOfMemoryError e) {
+			ServerInfo.setOutOfMemory();
+			return;
 		} catch (Exception e) {
 			LOGGER.error("", e);
 			long croid = createCheckinAction.getCroid();
