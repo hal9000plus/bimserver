@@ -41,7 +41,7 @@ public class GetShowCheckoutWarningDatabaseAction extends BimDatabaseAction<Stri
 			}
 			for (Revision virtualRevision : mainProject.getRevisions()) {
 				if (lastOwnActiveCheckout.getDate().before(virtualRevision.getDate()) && lastOwnActiveCheckout.getRevision() != virtualRevision) {
-					if (lastOwnActiveCheckout.getUser() == user) {
+					if (virtualRevision.getUser() == user) {
 						String warning = "Warning, after your last checkout of this project (revision " + lastOwnActiveCheckout.getRevision().getId() + "), you have checked-in a newer revision";
 						return warning;
 					} else {
