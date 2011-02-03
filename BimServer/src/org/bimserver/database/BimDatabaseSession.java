@@ -1,6 +1,7 @@
 package org.bimserver.database;
 
 import java.util.Collection;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -84,6 +85,8 @@ public interface BimDatabaseSession extends OidProvider {
 	<T extends IdEObject> T querySingle(int pid, int rid, Condition condition, Class<T> clazz) throws BimDatabaseException, BimDeadlockException;
 
 	DatabaseInformation getDatabaseInformation() throws BimDatabaseException, BimDeadlockException;
+
+	Date getCreatedDate() throws BimDatabaseException, BimDeadlockException;
 
 	ObjectIdentifier getOidOfGuid(String guid, int pid, int rid) throws BimDeadlockException;
 

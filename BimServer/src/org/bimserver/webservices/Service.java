@@ -1950,4 +1950,18 @@ public class Service implements ServiceInterface {
 			session.close();
 		}
 	}
+
+	@Override
+	public Date getLastDatabaseReset() throws UserException, ServerException {
+		requireAuthentication();
+		BimDatabaseSession session = bimDatabase.createReadOnlySession();
+		try {
+			return session.getCreatedDate();
+		} catch (Exception e) {
+			handleException(e);
+			return null;
+		} finally {
+			session.close();
+		}
+	}
 }
