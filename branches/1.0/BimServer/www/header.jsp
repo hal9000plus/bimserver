@@ -1,11 +1,11 @@
-<%@page import="org.bimserver.VersionChecker"%>
-<%@page import="org.bimserver.Version"%>
+<%@page import="org.bimserver.settings.ServerSettings"%>
+<%@page import="org.bimserver.version.VersionChecker"%>
+<%@page import="org.bimserver.version.Version"%>
 <%@page import="java.net.URLEncoder"%>
 <%@page import="java.util.HashMap"%>
 <%@page import="java.util.Map"%>
 <%@page import="org.bimserver.interfaces.objects.SUser"%>
-<%@page import="org.bimserver.ServerSettings"%>
-<%@page import="org.bimserver.Settings"%>
+<%@page import="org.bimserver.settings.Settings"%>
 <jsp:useBean id="serverInfo" scope="application" class="org.bimserver.ServerInfo" />
 <jsp:useBean id="loginManager" scope="session" class="org.bimserver.web.LoginManager" />
 <jsp:useBean id="errorMessages" scope="request" class="org.bimserver.ErrorMessages" />

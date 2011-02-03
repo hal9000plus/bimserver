@@ -1,6 +1,6 @@
 <%@page import="org.bimserver.shared.SRevisionSummary"%>
 <%@page import="org.bimserver.web.JspHelper"%>
-<%@page import="org.bimserver.ServerSettings"%>
+<%@page import="org.bimserver.settings.ServerSettings"%>
 <%@page import="org.bimserver.interfaces.objects.SProject"%>
 <%@page import="org.slf4j.Logger"%>
 <%@page import="org.slf4j.LoggerFactory"%>

@@ -1,4 +1,4 @@
-<%@page import="org.bimserver.VersionChecker"%>
+<%@page import="org.bimserver.version.VersionChecker"%>
 <%@page import="java.text.SimpleDateFormat"%>
 <jsp:useBean id="loginManager" scope="session" class="org.bimserver.web.LoginManager" />
 <%
