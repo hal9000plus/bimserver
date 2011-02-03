@@ -1,3 +1,4 @@
+<%@page import="org.bimserver.ServerInfo"%>
 <%@page import="org.bimserver.settings.ServerSettings"%>
 <%@page import="org.bimserver.version.VersionChecker"%>
 <%@page import="org.bimserver.version.Version"%>
@@ -6,12 +7,11 @@
 <%@page import="java.util.Map"%>
 <%@page import="org.bimserver.interfaces.objects.SUser"%>
 <%@page import="org.bimserver.settings.Settings"%>
-<jsp:useBean id="serverInfo" scope="application" class="org.bimserver.ServerInfo" />
 <jsp:useBean id="loginManager" scope="session" class="org.bimserver.web.LoginManager" />
 <jsp:useBean id="errorMessages" scope="request" class="org.bimserver.ErrorMessages" />
 <jsp:include page="htmlheader.jsp" />
 <%
-	if (serverInfo.isAvailable()) {
+	if (ServerInfo.isAvailable()) {
 %>
 <div class="sitewrapper">
 <div class="header"><a href="main.jsp"> <%
@@ -63,9 +63,7 @@ You are logged in as: <a href="user.jsp?uoid=<%=loginManager.getService().getLog
  			}
  		}
  	} else {
- %>
-<div class="error"><%=serverInfo.getErrorMessage()%></div>
-<%
+ 		response.sendRedirect("error.jsp");
 	}
 %>
 </div>
