@@ -933,6 +933,10 @@ public class DatabaseSession implements BimDatabaseSession {
 		return database.getClasses();
 	}
 
+	public Date getCreatedDate() {
+		return database.getCreated();
+	}
+	
 	@Override
 	public DatabaseInformation getDatabaseInformation() throws BimDatabaseException, BimDeadlockException {
 		DatabaseInformation databaseInformation = new DatabaseInformation();

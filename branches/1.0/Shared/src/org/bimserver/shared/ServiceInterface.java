@@ -191,6 +191,9 @@ public interface ServiceInterface {
 	@WebMethod(action = "getDatabaseInformation")
 	DatabaseInformation getDatabaseInformation() throws UserException, ServerException;
 
+	@WebMethod(action = "getDatabaseInformation")
+	Date getLastDatabaseReset() throws UserException, ServerException;
+	
 	@WebMethod(action = "getLoggedInUser")
 	SUser getLoggedInUser() throws UserException, ServerException;
 
