@@ -7,7 +7,6 @@ import java.util.Set;
 
 import nl.tue.buildingsmart.express.dictionary.SchemaDefinition;
 
-import org.bimserver.Merger;
 import org.bimserver.cache.ClashDetectionCache;
 import org.bimserver.database.BimDatabaseException;
 import org.bimserver.database.BimDatabaseSession;
@@ -30,6 +29,7 @@ import org.bimserver.ifcengine.FailSafeIfcEngine;
 import org.bimserver.ifcengine.IfcEngineException;
 import org.bimserver.ifcengine.IfcEngineFactory;
 import org.bimserver.ifcengine.IfcEngineModel;
+import org.bimserver.merging.Merger;
 import org.bimserver.shared.UserException;
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.ecore.EAttribute;

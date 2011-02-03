@@ -2,10 +2,6 @@ package org.bimserver.database.actions;
 
 import java.util.Date;
 
-import org.bimserver.IncrementingOidProvider;
-import org.bimserver.Merger;
-import org.bimserver.RevisionMerger;
-import org.bimserver.ServerSettings;
 import org.bimserver.database.BimDatabaseException;
 import org.bimserver.database.BimDatabaseSession;
 import org.bimserver.database.BimDeadlockException;
@@ -17,6 +13,10 @@ import org.bimserver.database.store.log.AccessMethod;
 import org.bimserver.emf.IdEObject;
 import org.bimserver.ifc.IfcModel;
 import org.bimserver.ifc.IfcModelSet;
+import org.bimserver.merging.IncrementingOidProvider;
+import org.bimserver.merging.Merger;
+import org.bimserver.merging.RevisionMerger;
+import org.bimserver.settings.ServerSettings;
 import org.bimserver.shared.UserException;
 
 public class CheckinPart2DatabaseAction extends BimDatabaseAction<Void> {

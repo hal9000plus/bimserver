@@ -1,4 +1,4 @@
-package org.bimserver;
+package org.bimserver.merging;
 
 import org.bimserver.ifc.OidProvider;
 

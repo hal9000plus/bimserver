@@ -6,7 +6,7 @@ import javax.mail.Session;
 import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
 
-import org.bimserver.ServerSettings;
+import org.bimserver.settings.ServerSettings;
 
 public class MailSystem {
 	private static final MailSystem INSTANCE = new MailSystem();

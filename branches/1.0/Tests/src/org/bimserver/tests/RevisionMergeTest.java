@@ -4,13 +4,13 @@ import java.io.File;
 
 import nl.tue.buildingsmart.express.dictionary.SchemaDefinition;
 
-import org.bimserver.IncrementingOidProvider;
-import org.bimserver.RevisionMerger;
 import org.bimserver.ifc.IfcModel;
 import org.bimserver.ifc.SchemaLoader;
 import org.bimserver.ifc.file.reader.IfcStepDeserializer;
 import org.bimserver.ifc.file.reader.IncorrectIfcFileException;
 import org.bimserver.ifc.file.writer.IfcStepSerializer;
+import org.bimserver.merging.IncrementingOidProvider;
+import org.bimserver.merging.RevisionMerger;
 
 public class RevisionMergeTest {
 	public static void main(String[] args) {

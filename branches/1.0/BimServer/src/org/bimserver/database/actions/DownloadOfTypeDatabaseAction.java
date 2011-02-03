@@ -1,7 +1,5 @@
 package org.bimserver.database.actions;
 
-import org.bimserver.Merger;
-import org.bimserver.ServerSettings;
 import org.bimserver.database.BimDatabaseException;
 import org.bimserver.database.BimDatabaseSession;
 import org.bimserver.database.BimDeadlockException;
@@ -12,7 +10,9 @@ import org.bimserver.database.store.User;
 import org.bimserver.database.store.log.AccessMethod;
 import org.bimserver.ifc.IfcModel;
 import org.bimserver.ifc.IfcModelSet;
+import org.bimserver.merging.Merger;
 import org.bimserver.rights.RightsManager;
+import org.bimserver.settings.ServerSettings;
 import org.bimserver.shared.UserException;
 
 public class DownloadOfTypeDatabaseAction extends BimDatabaseAction<IfcModel> {

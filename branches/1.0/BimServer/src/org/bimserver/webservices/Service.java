@@ -46,10 +46,7 @@ import javax.mail.internet.MimeMessage;
 
 import nl.tue.buildingsmart.express.dictionary.SchemaDefinition;
 
-import org.bimserver.Merger;
 import org.bimserver.ServerInfo;
-import org.bimserver.ServerSettings;
-import org.bimserver.SettingsSaveException;
 import org.bimserver.database.BimDatabase;
 import org.bimserver.database.BimDatabaseException;
 import org.bimserver.database.BimDatabaseSession;
@@ -154,8 +151,11 @@ import org.bimserver.interfaces.objects.SUserType;
 import org.bimserver.longaction.LongActionManager;
 import org.bimserver.longaction.LongCheckinAction;
 import org.bimserver.mail.MailSystem;
+import org.bimserver.merging.Merger;
 import org.bimserver.rights.RightsManager;
 import org.bimserver.serializers.EmfSerializerFactory;
+import org.bimserver.settings.ServerSettings;
+import org.bimserver.settings.SettingsSaveException;
 import org.bimserver.shared.DatabaseInformation;
 import org.bimserver.shared.ResultType;
 import org.bimserver.shared.SCheckinResult;
