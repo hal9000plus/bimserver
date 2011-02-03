@@ -12,7 +12,7 @@
 	</tstamp>
 	<target name="nightlybuild">
 		<ant antfile="release.build.xml" target="releaseall">
-			<property name="version" value="bimserver-nightly-${builddate}" description="Create a war file" />
+			<property name="version" value="nightly-${builddate}" description="Create a war file" />
 		</ant>
 	</target>
 </project>
