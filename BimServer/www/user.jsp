@@ -16,7 +16,7 @@
 <%@page import="org.bimserver.interfaces.objects.SUserType"%>
 <%@page import="org.bimserver.web.JspHelper"%>
 <%@page import="java.util.Comparator"%>
-<%@page import="org.bimserver.SProjectComparator"%>
+<%@page import="org.bimserver.web.SProjectComparator"%>
 <%@page import="org.bimserver.shared.ServiceInterface"%>
 <%@page import="org.bimserver.shared.SRevisionDateComparator"%>
 <%@ include file="header.jsp" %>

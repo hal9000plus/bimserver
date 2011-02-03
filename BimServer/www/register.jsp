@@ -2,9 +2,9 @@
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.List"%>
 <%@page import="java.util.Properties"%>
-<%@page import="org.bimserver.Version"%>
-<%@page import="org.bimserver.VersionChecker"%>
-<%@page import="org.bimserver.ServerSettings"%>
+<%@page import="org.bimserver.version.Version"%>
+<%@page import="org.bimserver.version.VersionChecker"%>
+<%@page import="org.bimserver.settings.ServerSettings"%>
 <%@page import="org.apache.velocity.app.VelocityEngine"%>
 <%@page import="org.apache.velocity.Template"%>
 <%@page import="org.apache.velocity.VelocityContext"%>
@@ -13,7 +13,7 @@
 <%@page import="java.util.HashMap"%>
 <%@page import="java.util.Map"%>
 <%@page import="org.bimserver.templating.TemplateIdentifier"%>
-<%@page import="org.bimserver.Settings"%>
+<%@page import="org.bimserver.settings.Settings"%>
 <%@page import="org.bimserver.mail.MailSystem"%>
 <%@page import="org.slf4j.Logger"%>
 <%@page import="org.slf4j.LoggerFactory"%>

@@ -1,3 +1,4 @@
+<%@page import="org.bimserver.settings.ServerSettings"%>
 <%@page import="java.util.List" %>
 <%@page import="java.text.DateFormat" %>
 <%@page import="java.text.SimpleDateFormat" %>

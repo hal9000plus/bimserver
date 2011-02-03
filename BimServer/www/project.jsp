@@ -1,3 +1,4 @@
+<%@page import="org.bimserver.settings.ServerSettings"%>
 <%@page import="java.util.List"%>
 <%@page import="org.bimserver.interfaces.objects.SProject"%>
 <%@page import="org.bimserver.interfaces.objects.SRevision"%>

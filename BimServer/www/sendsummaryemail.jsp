@@ -6,7 +6,7 @@
 <%@page import="javax.mail.Message"%>
 <%@page import="javax.mail.Session"%>
 <%@page import="java.util.Properties"%>
-<%@page import="org.bimserver.ServerSettings"%>
+<%@page import="org.bimserver.settings.ServerSettings"%>
 <%@page import="org.bimserver.interfaces.objects.SProject"%>
 <%@page import="org.bimserver.mail.MailSystem"%>
 <%@page import="org.slf4j.Logger"%>

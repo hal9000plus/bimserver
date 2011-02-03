@@ -1,4 +1,4 @@
-<%@page import="org.bimserver.ServerSettings"%>
+<%@page import="org.bimserver.settings.ServerSettings"%>
 <%@page import="org.bimserver.web.LoginManager"%>
 <%@page import="org.bimserver.interfaces.objects.SProject"%>
 <jsp:useBean id="loginManager" scope="session" class="org.bimserver.web.LoginManager" />
