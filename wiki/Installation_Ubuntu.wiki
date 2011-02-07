@@ -25,7 +25,9 @@ Paths can be changed to your liking of course.
 
 Eidt /etc/default/tomcat6 (with "nano" for example), change the line with "JAVA_OPTS" to: JAVA_OPTS="-Djava.awt.headless=true -Xmx12G -Xss4096k"
 
-||/etc/init.d/tomcat6 restart||||
+The 12G parameter indicates 12GB of heap memory, please adjust to your server (always keep a few hundred megabytes free for your OS).
+
+Restart Tomcat: /etc/init.d/tomcat6 restart
 
 = Using the Tomcat Manager =
 
