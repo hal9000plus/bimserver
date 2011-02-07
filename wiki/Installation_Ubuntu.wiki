@@ -9,7 +9,7 @@ Paths can be changed to your liking of course.
 = Commands =
 
 || *Command* || *Description* ||
-||passwd||Change your password to something unguessable||
+||passwd||Change your password||
 ||apt-get update||Update the package index||
 ||apt-get upgrade||Upgrade installed packages||
 ||apt-get install default-jre-headless tomcat6 tomcat6-admin||Install JRE 6 and Tomcat 6||
