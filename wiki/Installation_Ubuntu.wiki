@@ -8,7 +8,7 @@ Paths can be changed to your liking of course.
 
 = Commands =
 
-||* Command *||* Description *||
+|| *Command* || *Description* ||
 ||passwd||Change your password to something unguessable||
 ||apt-get update||Update the package index||
 ||apt-get upgrade||Upgrade installed packages||
