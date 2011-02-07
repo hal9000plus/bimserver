@@ -7,6 +7,7 @@
  * [Technical Technical]
    * [Requirements Requirements]
    * [Installation Installation / Settings]
+     * [Installation_Ubuntu Installation on Ubuntu]
    * [SOAPExample SOAP Example]
    * [RESTInterface REST Interface]
  * [Developers Developers]
