@@ -33,6 +33,7 @@ Eidt /etc/default/tomcat6 (with "nano" for example), change the line with "JAVA_
 
 (Copied from: [https://help.ubuntu.com/10.10/serverguide/C/tomcat.html])
 == Tomcat administration webapps ==
+
 The tomcat6-admin package contains two webapps that can be used to administer the Tomcat server using a web interface. You can install them by entering the following command in the terminal prompt:
 
 sudo apt-get install tomcat6-admin
