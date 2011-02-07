@@ -29,6 +29,17 @@ The 12G parameter indicates 12GB of heap memory, please adjust to your server (a
 
 Restart Tomcat: /etc/init.d/tomcat6 restart
 
+= Edit settings =
+
+Edit the file: /var/lib/tomcat6/webapps/ROOT/WEB-INF/settings.xml
+
+Change the <databaseLocation> tag to "/var/databases/bimserver"
+
+Edit the file: /var/lib/tomcat6/webapps/ROOT/WEB-INF/classes/log4j.xml
+
+Change <param name="File" value="bimserver.log" /> to
+<param name="File" value="/var/log/tomcat6/bimserver.log" />
+
 = Using the Tomcat Manager =
 
 (Copied from: [https://help.ubuntu.com/10.10/serverguide/C/tomcat.html])
