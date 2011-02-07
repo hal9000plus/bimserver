@@ -15,10 +15,10 @@ Paths can be changed to your liking of course.
 ||apt-get install default-jre-headless tomcat6 tomcat6-admin||Install JRE 6 and Tomcat 6||
 ||ntpdate ntp2.xs4all.nl||Update the local time||
 ||dpkg-reconfigure tzdata||Select timezone||
-||cp server.xml /etc/tomcat6||||
+||nano /etc/tomcat6/server.xml||Change the port attribute in the Connector tag to the desired port (80 for example). ||
 ||cp tomcat-users.xml /etc/tomcat6||||
 ||cp 04webapps.policy /etc/tomcat6/policy.d||Give more rights to Tomcat applications||
-||rm -R /usr/share/tomcat6/webapps/default_root||Remove the default ROOT application||
+||rm -R /var/lib/tomcat6/webapps/ROOT||Remove the default ROOT application||
 ||cp -r /usr/share/tomcat6-admin/manager /usr/share/tomcat6/webapps||Install the Tomcat manager application||
 ||wget http://tools.bimtoolset.org/BIMserver/1.0stable/bimserver-1.0.war -O /usr/share/tomcat6/webapps/ROOT.war||Download the latest version of the BIMserver, and install as ROOT application||
 ||mkdir /var/databases||Create a database directory||
@@ -28,3 +28,10 @@ Paths can be changed to your liking of course.
 Eidt /etc/default/tomcat6 (with "nano" for example), change the line with "JAVA_OPTS" to: JAVA_OPTS="-Djava.awt.headless=true -Xmx12G -Xss4096k"
 
 ||/etc/init.d/tomcat6 restart||||
+
+= Running op ports below 1024 =
+
+The tomcat user has no rights to bind to ports below 1024, to make the server available on port 80 (the default HTTP port), you can use iptables (you might have to install the package "iptables"):
+
+iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 8080
+iptables -t nat -A OUTPUT -p tcp --dport 80 -j REDIRECT --to-ports 8080
