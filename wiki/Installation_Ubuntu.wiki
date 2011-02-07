@@ -17,10 +17,9 @@ Paths can be changed to your liking of course.
 ||dpkg-reconfigure tzdata||Select timezone||
 ||nano /etc/tomcat6/server.xml||Change the port attribute in the Connector tag to the desired port (please see: "Running op ports below 1024" ||
 ||nano /var/lib/tomcat6/conf/policy.d/04webapps.policy||Change to:
-{{{
 grant {
     permission java.security.AllPermission;
-};}}}
+};
 ||
 ||rm -R /var/lib/tomcat6/webapps/ROOT||Remove the default ROOT application||
 ||cp -r /usr/share/tomcat6-admin/manager /usr/share/tomcat6/webapps||Install the Tomcat manager application||
