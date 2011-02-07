@@ -38,7 +38,7 @@ The tomcat6-admin package contains two webapps that can be used to administer th
 
 sudo apt-get install tomcat6-admin
 The first one is the manager webapp, which you can access by default at http://yourserver:8080/manager/html. It is primarily used to get server status and restart webapps.
-	
+
 Access to the manager application is protected by default: you need to define a user with the role "manager" in /etc/tomcat6/tomcat-users.xml before you can access it.
 
 = Running op ports below 1024 =
