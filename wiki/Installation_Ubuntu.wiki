@@ -12,7 +12,7 @@ Paths can be changed to your liking of course.
 ||passwd||Change your password||
 ||apt-get update||Update the package index||
 ||apt-get upgrade||Upgrade installed packages||
-||apt-get install default-jre-headless tomcat6 tomcat6-admin||Install JRE 6 and Tomcat 6||
+||apt-get install default-jre-headless tomcat6||Install JRE 6 and Tomcat 6||
 ||ntpdate ntp2.xs4all.nl||Update the local time||
 ||dpkg-reconfigure tzdata||Select timezone||
 ||nano /etc/tomcat6/server.xml||Change the port attribute in the Connector tag to the desired port (80 for example). ||
@@ -28,6 +28,17 @@ Paths can be changed to your liking of course.
 Eidt /etc/default/tomcat6 (with "nano" for example), change the line with "JAVA_OPTS" to: JAVA_OPTS="-Djava.awt.headless=true -Xmx12G -Xss4096k"
 
 ||/etc/init.d/tomcat6 restart||||
+
+= Using the Tomcat Manager =
+
+(Copied from: [https://help.ubuntu.com/10.10/serverguide/C/tomcat.html])
+== Tomcat administration webapps ==
+The tomcat6-admin package contains two webapps that can be used to administer the Tomcat server using a web interface. You can install them by entering the following command in the terminal prompt:
+
+sudo apt-get install tomcat6-admin
+The first one is the manager webapp, which you can access by default at http://yourserver:8080/manager/html. It is primarily used to get server status and restart webapps.
+	
+Access to the manager application is protected by default: you need to define a user with the role "manager" in /etc/tomcat6/tomcat-users.xml before you can access it.
 
 = Running op ports below 1024 =
 
