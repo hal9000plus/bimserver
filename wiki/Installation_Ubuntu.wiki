@@ -21,8 +21,7 @@ Paths can be changed to your liking of course.
 grant {
     permission java.security.AllPermission;
 };
-}}}
-||
+}}}||
 ||rm -R /var/lib/tomcat6/webapps/ROOT||Remove the default ROOT application||
 ||cp -r /usr/share/tomcat6-admin/manager /usr/share/tomcat6/webapps||Install the Tomcat manager application||
 ||wget http://tools.bimtoolset.org/BIMserver/1.0stable/bimserver-1.0.war -O /usr/share/tomcat6/webapps/ROOT.war||Download the latest version of the BIMserver, and install as ROOT application||
