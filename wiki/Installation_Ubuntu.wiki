@@ -18,8 +18,7 @@ Paths can be changed to your liking of course.
 ||nano /etc/tomcat6/server.xml||Change the port attribute in the Connector tag to the desired port (please see: "Running op ports below 1024" ||
 ||nano /var/lib/tomcat6/conf/policy.d/04webapps.policy||Change to:{{{grant { permission java.security.AllPermission;};}}}||
 ||rm -R /var/lib/tomcat6/webapps/ROOT||Remove the default ROOT application||
-||cp -r /usr/share/tomcat6-admin/manager /usr/share/tomcat6/webapps||Install the Tomcat manager application||
-||wget http://tools.bimtoolset.org/BIMserver/1.0stable/bimserver-1.0.war -O /usr/share/tomcat6/webapps/ROOT.war||Download the latest version of the BIMserver, and install as ROOT application||
+||wget http://tools.bimtoolset.org/BIMserver/1.0stable/bimserver-1.0.war -O /var/lib/tomcat6/webapps/ROOT.war||Download the latest version of the BIMserver, and install as ROOT application||
 ||mkdir /var/databases||Create a database directory||
 ||chown -R tomcat6 /var/databases||Give the tomcat user access to the database directory||
 ||chown -R tomcat6 /usr/share/tomcat6/webapps||Give Tomcat rights on the webapps directory (this should have already been done||
