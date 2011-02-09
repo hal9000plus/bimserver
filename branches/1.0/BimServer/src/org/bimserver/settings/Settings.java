@@ -24,6 +24,46 @@ import org.slf4j.LoggerFactory;
 
 @XmlRootElement
 public class Settings {
+
+	public enum SettingsParameter {
+		ShowVersionUpgradeAvailable, SendConfirmationEmailAfterRegistration, UseCaching, AllowSelfRegistration, AutoTestClashes, IntelligentMerging, AllowUsersToCreateTopLevelProjects, CheckinMergingEnabled, RegistrationAddition, SmtpServer, EmailSenderAddress, DatabaseLocation, EnabledExportTypes, CustomLogoAddress, SiteAddress;
+		public Class<?> getValueType() {
+			switch (this) {
+			case AllowSelfRegistration:
+				return Boolean.class;
+			case AllowUsersToCreateTopLevelProjects:
+				return Boolean.class;
+			case AutoTestClashes:
+				return Boolean.class;
+			case CheckinMergingEnabled:
+				return Boolean.class;
+			case CustomLogoAddress:
+				return String.class;
+			case DatabaseLocation:
+				return String.class;
+			case EmailSenderAddress:
+				return String.class;
+			case EnabledExportTypes:
+				return String.class;
+			case IntelligentMerging:
+				return Boolean.class;
+			case RegistrationAddition:
+				return String.class;
+			case SendConfirmationEmailAfterRegistration:
+				return Boolean.class;
+			case ShowVersionUpgradeAvailable:
+				return Boolean.class;
+			case SiteAddress:
+				return String.class;
+			case SmtpServer:
+				return String.class;
+			case UseCaching:
+				return Boolean.class;
+			}
+			return null;
+		}
+	};
+
 	private static final Logger LOGGER = LoggerFactory.getLogger(Settings.class);
 	private boolean showVersionUpgradeAvailable;
 	private boolean sendConfirmationEmailAfterRegistration;

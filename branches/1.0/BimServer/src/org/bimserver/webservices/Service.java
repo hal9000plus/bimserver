@@ -155,6 +155,8 @@ import org.bimserver.merging.Merger;
 import org.bimserver.rights.RightsManager;
 import org.bimserver.serializers.EmfSerializerFactory;
 import org.bimserver.settings.ServerSettings;
+import org.bimserver.settings.Settings;
+import org.bimserver.settings.Settings.SettingsParameter;
 import org.bimserver.settings.SettingsSaveException;
 import org.bimserver.shared.DatabaseInformation;
 import org.bimserver.shared.ResultType;
@@ -1972,5 +1974,46 @@ public class Service implements ServiceInterface {
 		} finally {
 			session.close();
 		}
+	}
+
+	@Override
+	public Object getSettingsParameter(String parameterName) throws UserException, ServerException {
+		// requireAuthentication();
+		SettingsParameter parameter = Settings.SettingsParameter.valueOf(parameterName);
+		Settings settings = ServerSettings.getSettings();
+		switch (parameter) {
+		case AllowSelfRegistration:
+			return settings.isAllowSelfRegistration();
+		case AllowUsersToCreateTopLevelProjects:
+			break;
+		case AutoTestClashes:
+			break;
+		case CheckinMergingEnabled:
+			break;
+		case CustomLogoAddress:
+			break;
+		case DatabaseLocation:
+			break;
+		case EmailSenderAddress:
+			break;
+		case EnabledExportTypes:
+			break;
+		case IntelligentMerging:
+			break;
+		case RegistrationAddition:
+			break;
+		case SendConfirmationEmailAfterRegistration:
+			break;
+		case ShowVersionUpgradeAvailable:
+			break;
+		case SiteAddress:
+			break;
+		case SmtpServer:
+			break;
+		case UseCaching:
+			break;
+		default:
+		}
+		return null;
 	}
 }
