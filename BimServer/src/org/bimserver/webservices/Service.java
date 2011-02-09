@@ -407,8 +407,8 @@ public class Service implements ServiceInterface {
 		BimDatabaseSession session = bimDatabase.createSession();
 		try {
 			BimDatabaseAction<IfcModel> action = new CheckoutDatabaseAction(accessMethod, currentUoid, roid);
-			return convertModelToCheckoutResult(session.getRevisionByRoid(roid).getProject(), session.getUserByUoid(currentUoid), session.executeAndCommitAction(action,
-					DEADLOCK_RETRIES), resultType);
+			return convertModelToCheckoutResult(session.getRevisionByRoid(roid).getProject(), session.getUserByUoid(currentUoid),
+					session.executeAndCommitAction(action, DEADLOCK_RETRIES), resultType);
 		} catch (Exception e) {
 			handleException(e);
 			return null;
@@ -421,6 +421,8 @@ public class Service implements ServiceInterface {
 	public long addUser(String username, String name, SUserType type, boolean selfRegistration) throws UserException, ServerException {
 		if (!selfRegistration) {
 			requireAuthentication();
+		} else if (!ServerSettings.getSettings().isAllowSelfRegistration()) {
+			requireSelfregistrationAllowed();
 		}
 		BimDatabaseSession session = bimDatabase.createSession();
 		try {
@@ -497,6 +499,13 @@ public class Service implements ServiceInterface {
 	private void requireAuthentication() throws UserException {
 		if (currentUoid == -1) {
 			throw new UserException("Authentication required for this call");
+		}
+		lastActive = new Date();
+	}
+
+	private void requireSelfregistrationAllowed() throws UserException {
+		if (currentUoid == -1) {
+			throw new UserException("No self registration allowed");
 		}
 		lastActive = new Date();
 	}
@@ -1860,20 +1869,20 @@ public class Service implements ServiceInterface {
 			if (!senderAddress.contains("@") || !senderAddress.contains(".")) {
 				senderAddress = ServerSettings.getSettings().getEmailSenderAddress();
 			}
-			
+
 			Session mailSession = MailSystem.getInstance().createMailSession();
-			
+
 			Message msg = new MimeMessage(mailSession);
-			
+
 			try {
 				InternetAddress addressFrom = new InternetAddress(senderAddress);
 				addressFrom.setPersonal(senderName);
 				msg.setFrom(addressFrom);
-				
+
 				InternetAddress[] addressTo = new InternetAddress[1];
 				addressTo[0] = new InternetAddress(address);
 				msg.setRecipients(Message.RecipientType.TO, addressTo);
-				
+
 				msg.setSubject("BIMserver Model Comparator");
 				SCompareResult compareResult = compare(roid1, roid2, sCompareType);
 				String html = JspHelper.writeCompareResult(compareResult, revision1.getId(), revision2.getId(), sCompareType, getProjectByPoid(poid), false);
