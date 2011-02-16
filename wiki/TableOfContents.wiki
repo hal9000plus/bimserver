@@ -1,4 +1,5 @@
 #summary BIMserver Documentation
+#labels TableOfContents
 
 === BIMserver Documentation ===
 
