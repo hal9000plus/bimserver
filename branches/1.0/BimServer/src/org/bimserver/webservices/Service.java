@@ -1985,35 +1985,35 @@ public class Service implements ServiceInterface {
 		case AllowSelfRegistration:
 			return settings.isAllowSelfRegistration();
 		case AllowUsersToCreateTopLevelProjects:
-			break;
+			return settings.isAllowUsersToCreateTopLevelProjects();
 		case AutoTestClashes:
-			break;
+			return settings.isAutoTestClashes();
 		case CheckinMergingEnabled:
-			break;
+			return settings.isCheckinMergingEnabled();
 		case CustomLogoAddress:
-			break;
+			return settings.getCustomLogoAddress();
 		case DatabaseLocation:
-			break;
+			return settings.getDatabaseLocation();
 		case EmailSenderAddress:
-			break;
+			return settings.getEmailSenderAddress();
 		case EnabledExportTypes:
-			break;
+			return settings.getEnabledExportTypes();
 		case IntelligentMerging:
-			break;
+			return settings.isIntelligentMerging();
 		case RegistrationAddition:
-			break;
+			return settings.getRegistrationAddition();
 		case SendConfirmationEmailAfterRegistration:
-			break;
+			return settings.isSendConfirmationEmailAfterRegistration();
 		case ShowVersionUpgradeAvailable:
-			break;
+			return settings.isShowVersionUpgradeAvailable();
 		case SiteAddress:
-			break;
+			return settings.getSiteAddress();
 		case SmtpServer:
-			break;
+			return settings.getSmtpServer();
 		case UseCaching:
-			break;
+			return settings.isUseCaching();
 		default:
+			throw new UserException("Unknown parameter name: \"" + parameterName + "\"");
 		}
-		return null;
 	}
 }
