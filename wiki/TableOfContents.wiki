@@ -12,6 +12,7 @@
    * [SOAPExample SOAP Example]
    * [RESTInterface REST Interface]
  * [Developers Developers]
+   * [Eclipse Eclipse]
    * [EMF Eclipse Modeling Framework]
    * [Database_internals Database / Versioning]
    * [StoreModel Store Model]
