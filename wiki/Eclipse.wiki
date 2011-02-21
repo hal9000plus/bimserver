@@ -1,0 +1,9 @@
+#summary How to use eclipse for BIMserver development
+
+= Introduction =
+
+The BIMserver has been developed with the Eclipse IDE, of course all code is standard Java code, so any IDE would work, but using Eclipse has the advantages of being able to check out complete projects with dependencies all set.
+
+= Checking out =
+
+All code is stored in google code's subversion. So after installing Eclipse (the latest version as of this writing is 3.6 or Helios), you will need to install a subversion client, the two most used are Subversive and Subclipse. After installing those you have to select a repository, the URL is: 
