@@ -14,10 +14,10 @@ You can choose to start with the latest version ("/trunk"), or use a branch of a
 
 Somehow a strange bug in Eclipse will give compile errors after checking out all projects. The only work around found to fix this is the following:
 
-* Go to Window | Preferences
-* Go to Java | Installed JREs
-* Add another JRE/JDK if you not already have more than 1
-* Switch to another JRE/JDK and click OK
-* Wait till Eclipse is done compiling
-* Now there should be no compile errors anymore
-* [Optional] switch back to your original JRE/JDK
+ * Go to Window | Preferences
+ * Go to Java | Installed JREs
+ * Add another JRE/JDK if you not already have more than 1
+ * Switch to another JRE/JDK and click OK
+ * Wait till Eclipse is done compiling
+ * Now there should be no compile errors anymore
+ * [Optional] switch back to your original JRE/JDK
