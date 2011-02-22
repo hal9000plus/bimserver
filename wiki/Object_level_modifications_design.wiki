@@ -80,3 +80,13 @@ Note: This method is probably not feasible because a complete object model would
 ||* Method *||* Return type *||* Parameters *||* Description *||
 ||createIfcWindow||void||String (GlobalID), long (OwnerHistory id), String (name), String (description) etc...||Creates an IfcWindow with all fields set||
 ||setIfcWindow_OverallHeight||void||long (object id of window), float (OverallHeight)||Updates one specific field||
+
+Examples:"
+
+{{{
+// Create a new window
+service.createIfcWindow("1dzyWEOh99jRUBVYP$exmF", 25, "Window 253", "This is a window", ...);
+
+// Set the window height
+service.setIfcWindow_OverallHeight(20, 2.00);
+}}}
