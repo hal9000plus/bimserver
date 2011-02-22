@@ -33,4 +33,9 @@ The following methods will be added for the actual generic modifications:
 ||* Method *||* Return type *||* Parameters *||* Description *||
 ||addObject||void||String (type), List<Object> (values)||Create a new object||
 ||removeObject||void||long (object id)||Remove an object||
-||setAttribute||void||long (object id), 
+||setAttribute||void||long (object id), String (attribute name), Object (value)||Set a simple attribute||
+||setReference||void||long (object id), String (reference name), long (oid of referenced object)||Set a single reference||
+||unsetAttribute||void||long (object id), String (attribute name)||Unset a simple attribute (null)||
+||unsetReference||void||long (object id), String (reference name)||Unset a single reference||
+||addAttribute||void||long (object id), String (attribute name), Object (value)||Add a simple value to a list of attributes||
+||addReference||void||long (object id), String (reference name), long (object id of referenced object||Add a reference to a list||
