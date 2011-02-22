@@ -40,6 +40,8 @@ The following methods will be added for the actual generic modifications:
 ||unsetReference||void||long (object id), String (reference name)||Unset a single reference||
 ||addAttribute||void||long (object id), String (attribute name), Object (value)||Add a simple value to a list of attributes||
 ||addReference||void||long (object id), String (reference name), long (object id of referenced object||Add a reference to a list||
+||removeAttribute||void||long (object id), String (attribute name), Object (value to remove)||Removes an item from a list, if multiple values match, all will be removed||
+||removeReference||void||long (object id), String (reference name), long (reference to remove)||Removes an item from a list, if multiple values match, all will be removed||
 
 Examples:
 
@@ -81,7 +83,7 @@ Note: This method is probably not feasible because a complete object model would
 ||createIfcWindow||void||String (GlobalID), long (OwnerHistory id), String (name), String (description) etc...||Creates an IfcWindow with all fields set||
 ||setIfcWindow_OverallHeight||void||long (object id of window), float (OverallHeight)||Updates one specific field||
 
-Examples:"
+Examples:
 
 {{{
 // Create a new window
