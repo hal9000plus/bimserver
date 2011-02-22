@@ -17,3 +17,20 @@ A while ago there has been an implementation of ChangeSets, which were xml files
 We have also thought about using the IFC STEP format to describe changes, but because the IFC STEP format is meant for describing complete models it is impossible to reference objects not described in the file without breaking it (not confirming to the rules).
 
 = Current idea =
+
+A second Service Interface will be created, containing the following methods for transaction management:
+
+||* Method *||* Return type *||* Parameters *||* Description *||
+||startTransaction||int (transaction id)||None||Start a transaction||
+||commitTransaction||void||int (transaction id)||Commit a transaction||
+||abortTransaction||void||int (transaction id)||Abort a transaction||
+
+Transaction management is needed because we don't want to create a new revision for each change; the user should be able to indicate which changes belong to the same atomic commit.
+
+The following methods will be added for the actual generic modifications:
+
+
+||* Method *||* Return type *||* Parameters *||* Description *||
+||addObject||void||String (type), List<Object> (values)||Create a new object||
+||removeObject||void||long (object id)||Remove an object||
+||setAttribute||void||long (object id), 
