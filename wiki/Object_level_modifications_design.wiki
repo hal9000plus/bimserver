@@ -27,8 +27,9 @@ A second Service Interface will be created, containing the following methods for
 
 Transaction management is needed because we don't want to create a new revision for each change; the user should be able to indicate which changes belong to the same atomic commit.
 
-The following methods will be added for the actual generic modifications:
+== Generic access ==
 
+The following methods will be added for the actual generic modifications:
 
 ||* Method *||* Return type *||* Parameters *||* Description *||
 ||addObject||void||String (type), List<Object> (values)||Create a new object||
@@ -39,3 +40,28 @@ The following methods will be added for the actual generic modifications:
 ||unsetReference||void||long (object id), String (reference name)||Unset a single reference||
 ||addAttribute||void||long (object id), String (attribute name), Object (value)||Add a simple value to a list of attributes||
 ||addReference||void||long (object id), String (reference name), long (object id of referenced object||Add a reference to a list||
+
+== Specific access ==
+
+Besides generic access the idea is to also implement a domain specific way to modify models. The domain in this case would be IFC, but this can later be extended to other models.
+
+Advantages:
+  * Less work for all implementers, the SOAP WSDL (or protocol buffers .proto file) would generate a complete interface for all objects/attributes/references for all kinds of languages.
+  * The generated interface would be type safe
+  * The generated interface could be augmented with documentation
+
+An example of a few methods:
+
+There are two possible ways to do this, the Object Oriented way and a more functional way, but could co-exist.
+
+=== Object Oriented ===
+
+||* Method *||* Return type *||* Parameters *||* Description *||
+||createIfcWindow||void||IfcWindow||Creates an IfcWindow with all fields set||
+||updateIfcWindow||void||IfcWindow||Updates all fields with the fiven values||
+
+=== Functional ===
+
+||* Method *||* Return type *||* Parameters *||* Description *||
+||createIfcWindow||void||String (GlobalID), long (OwnerHistory id), String (name), String (description) etc...||Creates an IfcWindow with all fields set||
+||setIfcWindow_OverallHeight||void||long (object id of window), float (OverallHeight)||Updates one specific field||
