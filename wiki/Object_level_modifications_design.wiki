@@ -32,7 +32,7 @@ Transaction management is needed because we don't want to create a new revision 
 The following methods will be added for the actual generic modifications:
 
 ||* Method *||* Return type *||* Parameters *||* Description *||
-||addObject||void||String (type), List<Object> (values)||Create a new object||
+||addObject||void||String (type), List<<Object>> (values)||Create a new object||
 ||removeObject||void||long (object id)||Remove an object||
 ||setAttribute||void||long (object id), String (attribute name), Object (value)||Set a simple attribute||
 ||setReference||void||long (object id), String (reference name), long (oid of referenced object)||Set a single reference||
