@@ -1,4 +1,5 @@
 #summary About the open source BIMserver.org software.
+#labels Featured
 
 = Introduction =
 
