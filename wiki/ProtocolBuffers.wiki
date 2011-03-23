@@ -2,10 +2,10 @@
 
 = Introduction =
 
-As the BIMserver's main function is to allow other software to store and retrieve information about building information models, it is very important to support a wide variety of programming language. From the beginning of the BIMserver project a SOAP interface has been available, but SOAP has a few disadvantages being:
+As the BIMserver's main function is to allow other software to store and retrieve information about building information models, it is very important to support a wide variety of programming languages. From the beginning of the BIMserver project a SOAP interface has been available, but SOAP has a few disadvantages:
   * SOAP is XML based, which makes it slower/larger
   * Almost every SOAP stack interprets the standards a little different
-  * A lot of diversions/extensions are available, making it almost not a standard
+  * A lot of diversions/extensions are available, excluding certain soap clients
 
 For these reasons another interface has been implemented: [http://code.google.com/p/protobuf/ Protocol Buffers].
 
@@ -26,6 +26,11 @@ All service calls in Protocol Buffers allow only 1 parameter and 1 return type, 
 All request messages contain the same amount of fields as there are parameters in the service call. So for the login method, the "LoginRequest" message contains 2 fields: "username" and "password", both of type "string".
 
 = Response Messages =
-All response messages contain 2 fields. The first field is the "errorMessage" field of type "string". This field always contains "OKE" if the call succeeded, are something else describing the error if the call did not succeed. The reason for this construction is the fact that Protocol Buffers does not support Exceptions, but the "Service Interface" does throw them. The BIMserver converts the exceptions thrown to errorMessage values.
+
+All response messages contain 2 fields. The first field is the "errorMessage" field of type "string". This field always contains "OKE" if the call succeeded, or something else describing the error if the call did not succeed. The reason for this construction is the fact that Protocol Buffers does not support Exceptions, but the "Service Interface" does throw them. The BIMserver converts the exceptions thrown to errorMessage values.
 
 The second field is the actual return value. This is always the same value as in the ServiceInterface, or unset if an error occured. The special "Void" type is used for return-type-less methods.
+
+= RPC =
+
+Protocol Buffers is only a message format, the actual transport method can be chosen by the developer. We have chosen to use [http://code.google.com/p/protobuf-socket-rpc/ Protobuf Socket RPC]. This implementation only provides a Java and Python version for now, but as the implementation is pretty straight-forward other languages could be used without too much hassle.
