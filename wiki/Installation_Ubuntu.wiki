@@ -28,7 +28,7 @@ Eidt /etc/default/tomcat6 (with "nano" for example), change the line with "JAVA_
 
 The 12G parameter indicates 12GB of heap memory, please adjust to your server (always keep a few hundred megabytes free for your OS).
 
-You should set the settings first ("Edit settings").
+You should set the settings first ("See: Edit settings").
 
 Restart Tomcat: /etc/init.d/tomcat6 restart
 
@@ -40,7 +40,7 @@ Change
 {{{
 <databaseLocation>database</databaseLocation>
 }}} 
-value to 
+to 
 {{{
 <databaseLocation>/var/databases/bimserver</databaseLocation>
 }}}
