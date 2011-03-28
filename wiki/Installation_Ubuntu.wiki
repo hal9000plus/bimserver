@@ -39,7 +39,8 @@ Edit the file: /var/lib/tomcat6/webapps/ROOT/WEB-INF/settings.xml
 Change the 
 {{{
 <databaseLocation>
-}}} value to 
+}}} 
+value to 
 {{{
 /var/databases/bimserver
 }}}
