@@ -1,6 +1,8 @@
 #summary How to install the BIMserver on a freshly installed Ubuntu 10.10 Server
 #labels Deploy,Developerguide,ubuntu,cloud
 
+Note: These instructions are for the 1.0 final release.
+
 = Introduction =
 
 This guide is used to install a BIMserver on a cloud based server. Root rights are assumed, when running as a normal user, prepend "sudo " to each command.
