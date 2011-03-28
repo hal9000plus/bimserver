@@ -40,8 +40,8 @@ Change the <databaseLocation> tag to "/var/databases/bimserver"
 
 Edit the file: /var/lib/tomcat6/webapps/ROOT/WEB-INF/classes/log4j.xml
 
-Change <param name="File" value="bimserver.log" /> to
-<param name="File" value="/var/log/tomcat6/bimserver.log" />
+Change {{{<param name="File" value="bimserver.log" />}}} to
+{{{<param name="File" value="/var/log/tomcat6/bimserver.log" />}}}
 
 = Using the Tomcat Manager =
 
