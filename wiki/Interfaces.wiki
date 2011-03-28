@@ -1,1 +1,358 @@
 #summary Ways to interact with the BIMserver
+
+= Introduction =
+
+All communication with the BIMserver is done through the "Service Interface". This is basically a Java interface with a large collections of methods that can be remotely executed. Because all kinds of languages should be able to communicate with the BIMserver from remote computers, a few different language independent network based protocols have been added:
+  * [SOAP]
+  * [REST]
+  * [Protocol Buffers]
+
+This page describes the actual calls in the "Service Interface", please 
+refer to the protocol-specific pages for the actual usage.
+
+Note: This page describes the yet unreleased 1.1 version of the BIMserver
+
+= Basic calls =
+{{{
+	String ping(String in);
+
+	boolean login(String username, String password) throws UserException, ServerException;
+
+	boolean autologin(@WebParam(name = "username", partName = "autologin.username") String username,
+			@WebParam(name = "hash", partName = "autologin.hash") String hash) throws UserException, ServerException;
+
+	SCheckinResult checkinSync(@WebParam(name = "poid", partName = "checkinSync.poid") long poid,
+			@WebParam(name = "comment", partName = "checkinSync.comment") String comment,
+			@WebParam(name = "fileSize", partName = "checkinSync.fileSize") long fileSize,
+			@WebParam(name = "ifcFile", partName = "checkinSync.ifcFile") @XmlMimeType("application/octet-stream") DataHandler ifcFile,
+			@WebParam(name = "merge", partName = "checkinSync.merge") boolean merge) throws UserException, ServerException;
+
+	SCheckinResult checkinAsync(@WebParam(name = "poid", partName = "checlinAsync.poid") long poid,
+			@WebParam(name = "comment", partName = "checkinAsync.comment") String comment,
+			@WebParam(name = "fileSize", partName = "checkinSync.fileSize") long fileSize,
+			@WebParam(name = "ifcFile", partName = "checkinAsync.ifcFile") @XmlMimeType("application/octet-stream") DataHandler ifcFile,
+			@WebParam(name = "merge", partName = "checkinAsync.merge") boolean merge) throws UserException, ServerException;
+
+	String checkout(@WebParam(name = "roid", partName = "checkout.roid") long roid,
+			@WebParam(name = "resultType", partName = "checkout.resultType") ResultType resultType,
+			@QueryParam("sync") @WebParam(name = "sync", partName = "download.sync") boolean sync) throws UserException, ServerException;
+
+	String checkoutLastRevision(@QueryParam("poid") @WebParam(name = "poid", partName = "checkoutLastRevision.poid") long poid,
+			@QueryParam("resultType") @WebParam(name = "resultType", partName = "checkoutLastRevision.resultType") ResultType resultType,
+			@QueryParam("sync") @WebParam(name = "sync", partName = "download.sync") boolean sync) throws UserException, ServerException;
+
+	String download(@QueryParam("roid") @WebParam(name = "roid", partName = "download.roid") long roid,
+			@QueryParam("resultType") @WebParam(name = "resultType", partName = "download.resultType") ResultType resultType,
+			@QueryParam("sync") @WebParam(name = "sync", partName = "download.sync") boolean sync) throws UserException, ServerException;
+
+	String downloadByOids(@WebParam(name = "roids", partName = "downloadByOids.roids") Set<Long> roids,
+			@WebParam(name = "oids", partName = "downloadByOids.oids") Set<Long> oids,
+			@WebParam(name = "resultType", partName = "downloadByOids.resultType") ResultType resultType,
+			@QueryParam("sync") @WebParam(name = "sync", partName = "download.sync") boolean sync) throws UserException,
+			ServerException;
+
+	String downloadOfType(@WebParam(name = "roid", partName = "downloadOfType.roid") long roid,
+			@WebParam(name = "className", partName = "downloadOfType.className") String className,
+			@WebParam(name = "resultType", partName = "downloadOfType.resultType") ResultType resultType,
+			@QueryParam("sync") @WebParam(name = "sync", partName = "download.sync") boolean sync) throws UserException,
+			ServerException;
+
+	String downloadByGuids(@WebParam(name = "roids", partName = "downloadByGuids.roids") Set<Long> roids,
+			@WebParam(name = "guids", partName = "downloadByGuids.guids") Set<String> guids,
+			@WebParam(name = "resultType", partName = "downloadByGuids.resultType") ResultType resultType,
+			@QueryParam("sync") @WebParam(name = "sync", partName = "download.sync") boolean sync) throws UserException,
+			ServerException;
+
+	String downloadProjects(@WebParam(name = "roids", partName = "downloadProjects.roids") Set<Long> roids,
+			@WebParam(name = "resultType", partName = "downloadProjects.resultType") ResultType resultType,
+			@QueryParam("sync") @WebParam(name = "sync", partName = "download.sync") boolean sync) throws UserException,
+			ServerException;
+
+	SDownloadResult getDownloadData(@WebParam(name = "actionID", partName = "downloadProjects.actionID") String actionID)
+			throws UserException, ServerException;
+
+	LongActionState getDownloadState(@WebParam(name = "actionID", partName = "downloadProjects.actionID") String actionID)
+			throws UserException, ServerException;
+
+	long addUser(@WebParam(name = "username", partName = "addUser.username") String username,
+			@WebParam(name = "name", partName = "addUser.name") String name,
+			@WebParam(name = "type", partName = "addUser.type") SUserType type,
+			@WebParam(name = "selfRegistration", partName = "addUser.selfRegistration") boolean selfRegistration) throws UserException,
+			ServerException;
+
+	void changeUserType(@WebParam(name = "uoid", partName = "changeUserType.uoid") long uoid,
+			@WebParam(name = "userType", partName = "changeUserType.userType") SUserType userType) throws UserException, ServerException;
+
+	SProject addProject(@WebParam(name = "projectName", partName = "addProject.projectName") String projectName) throws UserException,
+			ServerException;
+
+	SProject addProjectAsSubProject(@WebParam(name = "projectName", partName = "addProjectAsSubProject.projectName") String projectName,
+			@WebParam(name = "parentPoid", partName = "addProjectAsSubProject.parentPoid") long parentPoid) throws UserException,
+			ServerException;
+
+	void updateProject(@WebParam(name = "sProject", partName = "updateProject.sProject") SProject sProject) throws UserException,
+			ServerException;
+
+	void updateRevision(@WebParam(name = "sRevision", partName = "updateRevision.sRevision") SRevision sRevision) throws UserException,
+			ServerException;
+
+	boolean addUserToProject(@WebParam(name = "uoid", partName = "addUserToProject.uoid") long uoid,
+			@WebParam(name = "poid", partName = "addUserToProject.poid") long poid) throws UserException, ServerException;
+
+	boolean removeUserFromProject(@WebParam(name = "uoid", partName = "removeProjectFromUser.uoid") long uoid,
+			@WebParam(name = "poid", partName = "removeUserFromProject.poid") long poid) throws UserException, ServerException;
+
+	boolean deleteProject(@WebParam(name = "poid", partName = "deleteProject.poid") long poid) throws UserException, ServerException;
+
+	boolean deleteUser(@WebParam(name = "uoid", partName = "deleteUser.uoid") long uoid) throws UserException, ServerException;
+
+	List<SProject> getAllProjects() throws UserException, ServerException;
+
+	List<SProject> getAllReadableProjects() throws UserException, ServerException;
+
+	List<SUser> getAllUsers() throws UserException, ServerException;
+
+	List<SRevision> getAllRevisionsOfProject(
+			@QueryParam("poid") @WebParam(name = "poid", partName = "getAllRevisionsOfProject.poid") long poid) throws UserException,
+			ServerException;
+
+	List<SCheckout> getAllCheckoutsOfProject(@WebParam(name = "poid", partName = "getAllCheckoutsOfProject.poid") long poid)
+			throws UserException, ServerException;
+
+	List<SRevision> getAllRevisionsByUser(@WebParam(name = "uoid", partName = "getAllRevisionsOfUser.uoid") long uoid)
+			throws UserException, ServerException;
+
+	List<SCheckout> getAllCheckoutsByUser(@WebParam(name = "uoid", partName = "getAllCheckoutsByUser.uoid") long uoid)
+			throws UserException, ServerException;
+
+	List<SCheckout> getAllCheckoutsOfRevision(@WebParam(name = "roid", partName = "getAllCheckoutsOfRevision.roid") long roid)
+			throws UserException, ServerException;
+
+	SProject getProjectByPoid(@WebParam(name = "poid", partName = "getProjectByPoid.poid") long poid) throws UserException, ServerException;
+
+	SRevision getRevision(@WebParam(name = "roid", partName = "getRevision.roid") long roid) throws UserException, ServerException;
+
+	List<String> getAvailableClasses() throws UserException, ServerException;
+
+	DatabaseInformation getDatabaseInformation() throws UserException, ServerException;
+
+	Date getLastDatabaseReset() throws UserException, ServerException;
+
+	SUser getLoggedInUser() throws UserException, ServerException;
+
+	List<SProject> getAllNonAuthorizedProjectsOfUser(@WebParam(name = "uoid", partName = "getAllNonAuthorizedProjectsOfUser.uoid") long uoid)
+			throws UserException, ServerException;
+
+	void logout() throws UserException, ServerException;
+
+	boolean changePassword(@WebParam(name = "uoid", partName = "changePassword.uoid") long uoid,
+			@WebParam(name = "oldPassword", partName = "changePassword.oldPassword") String oldPassword,
+			@WebParam(name = "newPassword", partName = "changePassword.newPassword") String newPassword) throws UserException,
+			ServerException;
+
+	SUser getUserByUserName(@WebParam(name = "username", partName = "getUserByUserName.username") String username) throws UserException,
+			ServerException;
+
+	boolean undeleteProject(@WebParam(name = "poid", partName = "undeleteProject.poid") long poid) throws UserException, ServerException;
+
+	boolean undeleteUser(@WebParam(name = "uoid", partName = "undeleteUser.uoid") long uoid) throws UserException, ServerException;
+
+	SCompareResult compare(@WebParam(name = "roid1", partName = "compare.roid1") long roid1,
+			@WebParam(name = "roid2", partName = "compare.roid2") long roid2,
+			@WebParam(name = "sCompareType", partName = "compare.sCompareType") SCompareType sCompareType) throws UserException,
+			ServerException;
+
+	SRevisionSummary getRevisionSummary(@WebParam(name = "roid", partName = "getRevisionSummary.roid") long roid) throws UserException,
+			ServerException;
+
+	boolean userHasCheckinRights(@WebParam(name = "poid", partName = "userHasCheckinRights.poid") long poid) throws UserException,
+			ServerException;
+
+	Set<String> getShowCheckoutWarning(@WebParam(name = "poid", partName = "getShowCheckoutWarning.poid") long poid,
+			@WebParam(name = "uoid", partName = "getShowCheckoutWarning.uoid") long uoid) throws UserException, ServerException;
+
+	boolean userHasRights(@WebParam(name = "poid", partName = "userHasRights.poid") long poid) throws UserException, ServerException;
+
+	SDataObject getDataObjectByOid(@WebParam(name = "roid", partName = "getDataObjectByOid.roid") long roid,
+			@WebParam(name = "oid", partName = "getDataObjectByOid.oid") long oid,
+			@WebParam(name = "className", partName = "getDataObjectByOid.className") String className) throws UserException,
+			ServerException;
+
+	SDataObject getDataObjectByGuid(@WebParam(name = "roid", partName = "getDataObjectByGuid.roid") long roid,
+			@WebParam(name = "guid", partName = "getDataObjectByGuid.guid") String guid) throws UserException, ServerException;
+
+	List<SDataObject> getDataObjectsByType(@WebParam(name = "roid", partName = "getDataObjectsByType.roid") long roid,
+			@WebParam(name = "className", partName = "getDataObjectsByType.className") String className) throws UserException,
+			ServerException;
+
+	List<SGuidClash> findClashesByGuid(
+			@WebParam(name = "sClashDetectionSettings", partName = "findClashesByGuid.sClashDetectionSettings") SClashDetectionSettings sClashDetectionSettings)
+			throws UserException, ServerException;
+
+	List<SEidClash> findClashesByEid(
+			@WebParam(name = "sClashDetectionSettings", partName = "findClashesByEid.sClashDetectionSettings") SClashDetectionSettings sClashDetectionSettings)
+			throws UserException, ServerException;
+
+	List<SClash> getLastClashes(@WebParam(name = "roid", partName = "getLastClashes.roid") long roid) throws UserException, ServerException;
+
+	SCheckinResult branchToNewProject(@WebParam(name = "roid", partName = "branchToNewProject.roid") long roid,
+			@WebParam(name = "projectName", partName = "branchToNewProject.projectName") String projectName,
+			@WebParam(name = "comment", partName = "branchToNewProject.comment") String comment) throws UserException, ServerException;
+
+	SCheckinResult branchToExistingProject(@WebParam(name = "roid", partName = "branchToExistingProject.roid") long roid,
+			@WebParam(name = "destPoid", partName = "branchToExistingProject.destPoid") long destPoid,
+			@WebParam(name = "comment", partName = "branchToExistingProject.comment") String comment) throws UserException, ServerException;
+
+	SGeoTag getGeoTag(@WebParam(name = "goid", partName = "getGeoTag.goid") long goid) throws UserException, ServerException;
+
+	void updateGeoTag(@WebParam(name = "sGeoTag", partName = "updateGeoTag.sGeoTag") SGeoTag sGeoTag) throws UserException, ServerException;
+
+	SClashDetectionSettings getClashDetectionSettings(@WebParam(name = "cdsoid", partName = "getClashDetectionSettings.cdsoid") long cdsoid)
+			throws UserException, ServerException;
+
+	void updateClashDetectionSettings(
+			@WebParam(name = "sClashDetectionSettings", partName = "updateClashDetectionSettings.sClashDetectionSettings") SClashDetectionSettings sClashDetectionSettings)
+			throws UserException, ServerException;
+
+	SUser getUserByUoid(@WebParam(name = "uoid", partName = "getUserByUoid.uoid") long uoid) throws UserException, ServerException;
+
+	SUser getAnonymousUser() throws UserException, ServerException;
+
+	List<SUser> getAllNonAuthorizedUsersOfProject(@WebParam(name = "poid", partName = "getAllNonAuthorizedUsersOfProject.poid") long poid)
+			throws UserException, ServerException;
+
+	List<SUser> getAllAuthorizedUsersOfProject(@WebParam(name = "poid", partName = "getAllAuthorizedUsersOfProject.poid") long poid)
+			throws UserException, ServerException;
+
+	List<SProject> getUsersProjects(@WebParam(name = "uoid", partName = "getUsersProjects.uoid") long uoid) throws UserException,
+			ServerException;
+
+	List<SProject> getProjectByName(@WebParam(name = "name", partName = "getProjectByName.name") String name) throws UserException,
+			ServerException;
+
+	void setRevisionTag(@WebParam(name = "roid", partName = "setRevisionTag.roid") long roid,
+			@WebParam(name = "tag", partName = "setRevisionTag.tag") String tag) throws UserException, ServerException;
+
+	List<SProject> getSubProjects(@WebParam(name = "poid", partName = "getSubProjects.poid") long poid) throws UserException,
+			ServerException;
+
+	boolean isExportTypeEnabled(@WebParam(name = "resultType", partName = "isExportTypeEnabled.resultType") ResultType resultType)
+			throws UserException, ServerException;
+
+	void setExportTypeEnabled(@WebParam(name = "resultType", partName = "setExportTypeEnabled.resultType") ResultType resultType,
+			boolean enabled) throws UserException, ServerException;
+
+	SUser getCurrentUser() throws UserException, ServerException;
+
+	boolean isLoggedIn() throws UserException, ServerException;
+
+	void loginAnonymous() throws UserException, ServerException;
+
+	Date getActiveSince() throws UserException, ServerException;
+
+	Date getLastActive() throws UserException, ServerException;
+
+	Token getCurrentToken() throws UserException, ServerException;
+
+	SAccessMethod getAccessMethod() throws UserException, ServerException;
+
+	Set<ResultType> getEnabledResultTypes() throws UserException, ServerException;
+
+	Set<ResultType> getAllResultTypes() throws UserException, ServerException;
+
+	List<SCheckout> getAllCheckoutsOfProjectAndSubProjects(
+			@WebParam(name = "poid", partName = "getAllCheckoutsOfProjectAndSubProjects.poid") long poid) throws UserException,
+			ServerException;
+
+	void requestPasswordChange(@WebParam(name = "uoid", partName = "requestPasswordChange.uoid") long uoid) throws UserException,
+			ServerException;
+
+	void validateAccount(@WebParam(name = "uoid", partName = "validateAccount.uoid") long uoid,
+			@WebParam(name = "token", partName = "validateAccount.token") String token,
+			@WebParam(name = "password", partName = "validateAccount.password") String password) throws UserException, ServerException;
+
+	void sendClashesEmail(
+			@WebParam(name = "sClashDetectionSettings", partName = "sendClashesEmail.sClashDetectionSettings") SClashDetectionSettings sClashDetectionSettings,
+			@WebParam(name = "poid", partName = "sendClashesEmail.poid") long poid,
+			@WebParam(name = "addressesTo", partName = "sendClashesEmail.addressesTo") Set<String> addressesTo) throws UserException,
+			ServerException;
+
+	void sendCompareEmail(SCompareType sCompareType,
+			long poid,
+			long roid1,
+			long roid2,
+			String address) throws UserException, ServerException;
+	
+	void setup(String siteAddress,
+			String smtpServer,
+			String adminName,
+			String adminUsername,
+			String adminPassword,
+			boolean createAnonymousUser) throws UserException, ServerException;
+
+	String getSettingCustomLogoAddress() throws UserException, ServerException;
+
+	void setSettingCustomLogoAddress(String customLogoAddress) throws UserException, ServerException;
+
+	String getSettingEmailSenderAddress() throws UserException, ServerException;
+
+	void setSettingEmailSenderAddress(String emailSenderAddress) throws UserException, ServerException;
+
+	String getSettingEnabledExportTypes() throws UserException, ServerException;
+
+	void setSettingEnabledExportTypes(Set<ResultType> enabledExportTypes) throws UserException, ServerException;
+
+	String getSettingRegistrationAddition() throws UserException, ServerException;
+
+	void setSettingRegistrationAddition(String registrationAddition) throws UserException, ServerException;
+
+	String getSettingSiteAddress() throws UserException, ServerException;
+
+	void setSettingSiteAddress(String siteAddress) throws UserException, ServerException;
+
+	String getSettingSmtpServer() throws UserException, ServerException;
+
+	void setSettingSmtpServer(String smtpServer) throws UserException, ServerException;
+
+	boolean isSettingAllowSelfRegistration() throws UserException, ServerException;
+
+	void setSettingAllowSelfRegistration(boolean allowSelfRegistration) throws UserException, ServerException;
+
+	boolean isSettingAllowUsersToCreateTopLevelProjects() throws UserException, ServerException;
+
+	void setSettingAllowUsersToCreateTopLevelProjects(boolean allowUsersToCreateTopLevelProjects) throws UserException, ServerException;
+
+	boolean isSettingAutoTestClashes() throws UserException, ServerException;
+
+	void setSettingAutoTestClashes(boolean autoTestClashes) throws UserException, ServerException;
+
+	boolean isSettingCheckinMergingEnabled() throws UserException, ServerException;
+
+	void setSettingCheckinMergingEnabled(boolean checkinMergingEnabled) throws UserException, ServerException;
+
+	boolean isSettingIntelligentMerging() throws UserException, ServerException;
+
+	void setSettingIntelligentMerging(boolean intelligentMerging) throws UserException, ServerException;
+
+	boolean isSettingSendConfirmationEmailAfterRegistration() throws UserException, ServerException;
+
+	void setSettingSendConfirmationEmailAfterRegistration(boolean sendConfirmationEmailAfterRegistration) throws UserException, ServerException;
+
+	boolean isSettingShowVersionUpgradeAvailable() throws UserException, ServerException;
+
+	void setSettingShowVersionUpgradeAvailable(boolean showVersionUpgradeAvailable) throws UserException, ServerException;
+
+	boolean isSettingUseCaching() throws UserException, ServerException;
+
+	void setSettingUseCaching(boolean useCaching) throws UserException, ServerException;
+	
+	List<SLogAction> getLogs() throws UserException, ServerException;
+
+	List<SUserSession> getActiveUserSessions() throws ServerException, ServiceException;
+
+	List<SLongAction> getActiveLongActions() throws ServerException, ServiceException;
+
+	Set<SMigration> getMigrations();
+
+	void migrateDatabase() throws ServerException;
+}}}
