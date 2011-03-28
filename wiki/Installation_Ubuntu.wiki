@@ -51,7 +51,7 @@ Change
 {{{
 <param name="File" value="bimserver.log" />
 }}}
- to
+to
 {{{
 <param name="File" value="/var/log/tomcat6/bimserver.log" />
 }}}
