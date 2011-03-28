@@ -12,18 +12,32 @@ refer to the protocol-specific pages for the actual usage.
 
 Note: This page describes the yet unreleased 1.1 version of the BIMserver
 
+A few parameters are used a lot and always mean the same:
+||Name||Type||Meaning||
+||poid||Long||Project Object Id||
+||roid||Long||Revision Object Id||
+
 = Basic calls =
+
+Just a simple call to test the communication, simply returns the given text.
 {{{
 	String ping(String in);
-
+}}}
+Login with a username/password
+{{{
 	boolean login(String username, String password) throws UserException, ServerException;
-
+}}}
+Automatic login (used by the web interface). The hash is computed this way: sha256(username + sha256(password)). The idea is not to store the hash for too long. Hashes expire automatically when the user changes its password.
+{{{
 	boolean autologin(String username, String hash) throws UserException, ServerException;
-
+}}}
+Check-in a new IFC file. The DataHandler usually ends up as a byte[] in the implementations.
+{{{
 	SCheckinResult checkinSync(long poid, String comment, long fileSize, DataHandler ifcFile, boolean merge) throws UserException, ServerException;
 
 	SCheckinResult checkinAsync(long poid, String comment, long fileSize, DataHandler ifcFile, boolean merge) throws UserException, ServerException;
-
+}}}
+{{{
 	String checkout(long roid, ResultType resultType, boolean sync) throws UserException, ServerException;
 
 	String checkoutLastRevision(long poid, ResultType resultType, boolean sync) throws UserException, ServerException;
