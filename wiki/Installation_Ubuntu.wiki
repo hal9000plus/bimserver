@@ -36,13 +36,13 @@ Restart Tomcat: /etc/init.d/tomcat6 restart
 
 Edit the file: /var/lib/tomcat6/webapps/ROOT/WEB-INF/settings.xml
 
-Change the 
+Change
 {{{
-<databaseLocation>
+<databaseLocation>database</databaseLocation>
 }}} 
 value to 
 {{{
-/var/databases/bimserver
+<databaseLocation>/var/databases/bimserver</databaseLocation>
 }}}
 
 Edit the file: /var/lib/tomcat6/webapps/ROOT/WEB-INF/classes/log4j.xml
