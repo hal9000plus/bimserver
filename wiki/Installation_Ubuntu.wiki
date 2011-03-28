@@ -28,6 +28,8 @@ Eidt /etc/default/tomcat6 (with "nano" for example), change the line with "JAVA_
 
 The 12G parameter indicates 12GB of heap memory, please adjust to your server (always keep a few hundred megabytes free for your OS).
 
+You should set the settings first ("Edit settings").
+
 Restart Tomcat: /etc/init.d/tomcat6 restart
 
 = Edit settings =
@@ -54,6 +56,12 @@ The first one is the manager webapp, which you can access by default at http://y
 Access to the manager application is protected by default: you need to define a user with the role "manager" in /etc/tomcat6/tomcat-users.xml before you can access it.
 
 = Installing an STMP server =
+
+{{{
+apt-get install postfix
+}}}
+
+Select "Internet server", use a real domain name that is pointing to your server's IP address.
 
 = Running op ports below 1024 =
 
