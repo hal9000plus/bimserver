@@ -78,9 +78,9 @@ Note: This page describes the yet unreleased 1.1 version of the BIMserver
 
 	List<SCheckout> getAllCheckoutsOfRevision(long roid) throws UserException, ServerException;
 
-	SProject getProjectByPoid(@WebParam(name = "poid", partName = "getProjectByPoid.poid") long poid) throws UserException, ServerException;
+	SProject getProjectByPoid(long poid) throws UserException, ServerException;
 
-	SRevision getRevision(@WebParam(name = "roid", partName = "getRevision.roid") long roid) throws UserException, ServerException;
+	SRevision getRevision(long roid) throws UserException, ServerException;
 
 	List<String> getAvailableClasses() throws UserException, ServerException;
 
