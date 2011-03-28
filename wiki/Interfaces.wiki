@@ -175,25 +175,42 @@ Note: This page describes the yet unreleased 1.1 version of the BIMserver
 
 = Admin =
 
+Get information about the database, see the DatabaseInformation object for more details
 {{{
 	DatabaseInformation getDatabaseInformation() throws UserException, ServerException;
-
+}}}
+Returns when the database was last reset (created)
+{{{
 	Date getLastDatabaseReset() throws UserException, ServerException;
-
+}}}
+Setup the BIMserver (this call is mandatory for new databases)
+{{{
 	void setup(String siteAddress, String smtpServer, String adminName, String adminUsername, String adminPassword, boolean createAnonymousUser) throws UserException, ServerException;
-	
+}}}
+Get all log records, this can be a lot for long-running/active BIMservers
+{{{	
 	List<SLogAction> getLogs() throws UserException, ServerException;
-
+}}}
+Returns a list of active user sessions, user sessions are cleaned up after logout, or expire after a certain amount of time (30 minutes by default)
+{{{
 	List<SUserSession> getActiveUserSessions() throws ServerException, ServiceException;
-
+}}}
+Returns a list of active long running actions (such as checkins, downloads, clash detection etc...)
+{{{
 	List<SLongAction> getActiveLongActions() throws ServerException, ServiceException;
-
+}}}
+Returns a list of all migrations, every migration has a field "executed" indicating whether or not it has been executed
+{{{
 	Set<SMigration> getMigrations();
-
+}}}
+Migrates the database to the application version number
+{{{
 	void migrateDatabase() throws ServerException;
 }}}
 
 = Settings =
+
+These methods allow you to view and edit settings of the BIMserver, the authenticated user must be an administrator.
 
 {{{
 	Set<ResultType> getEnabledResultTypes() throws UserException, ServerException;
