@@ -98,9 +98,9 @@ Note: This page describes the yet unreleased 1.1 version of the BIMserver
 
 	SUser getUserByUserName(String username) throws UserException, ServerException;
 
-	boolean undeleteProject(@WebParam(name = "poid", partName = "undeleteProject.poid") long poid) throws UserException, ServerException;
+	boolean undeleteProject(long poid) throws UserException, ServerException;
 
-	boolean undeleteUser(@WebParam(name = "uoid", partName = "undeleteUser.uoid") long uoid) throws UserException, ServerException;
+	boolean undeleteUser(long uoid) throws UserException, ServerException;
 
 	SCompareResult compare(long roid1, long roid2, SCompareType sCompareType) throws UserException, ServerException;
 
