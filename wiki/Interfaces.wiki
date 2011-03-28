@@ -152,10 +152,6 @@ Note: This page describes the yet unreleased 1.1 version of the BIMserver
 
 	List<SProject> getSubProjects(long poid) throws UserException, ServerException;
 
-	boolean isExportTypeEnabled(ResultType resultType) throws UserException, ServerException;
-
-	void setExportTypeEnabled(ResultType resultType, boolean enabled) throws UserException, ServerException;
-
 	SUser getCurrentUser() throws UserException, ServerException;
 
 	boolean isLoggedIn() throws UserException, ServerException;
@@ -170,10 +166,6 @@ Note: This page describes the yet unreleased 1.1 version of the BIMserver
 
 	SAccessMethod getAccessMethod() throws UserException, ServerException;
 
-	Set<ResultType> getEnabledResultTypes() throws UserException, ServerException;
-
-	Set<ResultType> getAllResultTypes() throws UserException, ServerException;
-
 	List<SCheckout> getAllCheckoutsOfProjectAndSubProjects(long poid) throws UserException, ServerException;
 
 	void requestPasswordChange(long uoid) throws UserException, ServerException;
@@ -183,8 +175,34 @@ Note: This page describes the yet unreleased 1.1 version of the BIMserver
 	void sendClashesEmail(SClashDetectionSettings sClashDetectionSettings, long poid, Set<String> addressesTo) throws UserException, ServerException;
 
 	void sendCompareEmail(SCompareType sCompareType, long poid, long roid1,	long roid2, String address) throws UserException, ServerException;
-	
+}}}
+
+= Admin =
+
+{{{
 	void setup(String siteAddress, String smtpServer, String adminName, String adminUsername, String adminPassword, boolean createAnonymousUser) throws UserException, ServerException;
+	
+	List<SLogAction> getLogs() throws UserException, ServerException;
+
+	List<SUserSession> getActiveUserSessions() throws ServerException, ServiceException;
+
+	List<SLongAction> getActiveLongActions() throws ServerException, ServiceException;
+
+	Set<SMigration> getMigrations();
+
+	void migrateDatabase() throws ServerException;
+}}}
+
+= Settings =
+
+{{{
+	Set<ResultType> getEnabledResultTypes() throws UserException, ServerException;
+
+	Set<ResultType> getAllResultTypes() throws UserException, ServerException;
+
+	boolean isExportTypeEnabled(ResultType resultType) throws UserException, ServerException;
+
+	void setExportTypeEnabled(ResultType resultType, boolean enabled) throws UserException, ServerException;
 
 	String getSettingCustomLogoAddress() throws UserException, ServerException;
 
@@ -241,14 +259,4 @@ Note: This page describes the yet unreleased 1.1 version of the BIMserver
 	boolean isSettingUseCaching() throws UserException, ServerException;
 
 	void setSettingUseCaching(boolean useCaching) throws UserException, ServerException;
-	
-	List<SLogAction> getLogs() throws UserException, ServerException;
-
-	List<SUserSession> getActiveUserSessions() throws ServerException, ServiceException;
-
-	List<SLongAction> getActiveLongActions() throws ServerException, ServiceException;
-
-	Set<SMigration> getMigrations();
-
-	void migrateDatabase() throws ServerException;
 }}}
