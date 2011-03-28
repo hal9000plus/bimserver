@@ -84,10 +84,6 @@ Note: This page describes the yet unreleased 1.1 version of the BIMserver
 
 	List<String> getAvailableClasses() throws UserException, ServerException;
 
-	DatabaseInformation getDatabaseInformation() throws UserException, ServerException;
-
-	Date getLastDatabaseReset() throws UserException, ServerException;
-
 	SUser getLoggedInUser() throws UserException, ServerException;
 
 	List<SProject> getAllNonAuthorizedProjectsOfUser(long uoid) throws UserException, ServerException;
@@ -180,6 +176,10 @@ Note: This page describes the yet unreleased 1.1 version of the BIMserver
 = Admin =
 
 {{{
+	DatabaseInformation getDatabaseInformation() throws UserException, ServerException;
+
+	Date getLastDatabaseReset() throws UserException, ServerException;
+
 	void setup(String siteAddress, String smtpServer, String adminName, String adminUsername, String adminPassword, boolean createAnonymousUser) throws UserException, ServerException;
 	
 	List<SLogAction> getLogs() throws UserException, ServerException;
