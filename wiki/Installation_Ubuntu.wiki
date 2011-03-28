@@ -37,15 +37,23 @@ Restart Tomcat: /etc/init.d/tomcat6 restart
 Edit the file: /var/lib/tomcat6/webapps/ROOT/WEB-INF/settings.xml
 
 Change the 
-{{{<databaseLocation>}}} value to 
-{{{/var/databases/bimserver}}}
+{{{
+<databaseLocation>
+}}} value to 
+{{{
+/var/databases/bimserver
+}}}
 
 Edit the file: /var/lib/tomcat6/webapps/ROOT/WEB-INF/classes/log4j.xml
 
 Change 
-{{{<param name="File" value="bimserver.log" />}}}
+{{{
+<param name="File" value="bimserver.log" />
+}}}
  to
-{{{<param name="File" value="/var/log/tomcat6/bimserver.log" />}}}
+{{{
+<param name="File" value="/var/log/tomcat6/bimserver.log" />
+}}}
 
 = Using the Tomcat Manager =
 
