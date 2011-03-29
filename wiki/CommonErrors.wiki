@@ -16,6 +16,12 @@ The SMTP server is used to send e-mail, when an invalid SMTP server is set, this
 java.lang.OutOfMemoryError: GC overhead limit exceeded
 }}}
 
+or
+
+{{{
+java.lang.OutOfMemoryError: Java heap space
+}}}
+
 The server has run out of memory. Install more physical memory and/or assign more memory to your application server.
 
 {{{
