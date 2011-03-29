@@ -90,3 +90,12 @@ to store these settings:
 {{{
 iptables-save
 }}}
+
+= Tmp folder =
+
+Sometimes the BIMserver cannot create the tmp folder used by JNA, this folder is usually created in /var/lib/tomcat6/tmp, if you see errors about this in the log, try the following:
+
+{{{
+mkdir /var/lib/tomcat6/tmp
+chown -R tomcat6 /var/lib/tomcat6/tmp
+}}}
