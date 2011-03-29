@@ -19,3 +19,10 @@ When your server has no internet connectivity, the version information cannot be
 = java.lang.NoClassDefFoundError: Files\Apache =
 
 This (and other errors containing incomplete paths) usually have to do with spaces (" ") in paths. All of these should be fixed from 1.0.1 on, so please let us know if you come across errors like this.
+
+= org.bimserver.ifcengine.IfcEngineException: Unknown IFC Engine error =
+
+Unknown error in the IFC Engine, this can be all kinds of things:
+  * IFC Engine has crashed
+  * Incorrect paths
+  * Memory problems in the second JVM
