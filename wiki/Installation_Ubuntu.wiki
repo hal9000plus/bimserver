@@ -82,4 +82,11 @@ Select "Internet server", use a real domain name that is pointing to your server
 
 The tomcat user has no rights to bind to ports below 1024, to make the server available on port 80 (the default HTTP port), you can use iptables (you might have to install the package "iptables"):
 
+{{{
 iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 8080
+}}}
+
+to store these settings:
+{{{
+iptables-save
+}}}
