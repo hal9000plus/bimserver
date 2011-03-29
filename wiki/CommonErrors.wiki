@@ -40,6 +40,12 @@ When your server has no internet connectivity, the version information cannot be
 java.lang.NoClassDefFoundError: Files\Apache
 }}}
 
+or
+
+{{{
+Caused by: java.lang.ClassNotFoundException: Files
+}}}
+
 This (and other errors containing incomplete paths) usually have to do with spaces (" ") in paths. All of these should be fixed from 1.0.1 on, so please let us know if you come across errors like this.
 
 {{{
