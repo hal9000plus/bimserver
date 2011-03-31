@@ -5,6 +5,7 @@
 
  * [Home Home]
  * [features Features]
+   * [http://bimserver.googlecode.com/svn/html/o3d.html WebGL/O3D Demo]
  * [Technical Technical]
    * [Requirements Requirements]
    * [Installation Installation / Settings]
