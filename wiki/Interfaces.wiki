@@ -35,6 +35,10 @@ Automatic login (used by the web interface). The hash is computed this way: sha2
 {{{
 	boolean autologin(String username, String hash) throws UserException, ServerException;
 }}}
+Logout
+{{{
+	void logout() throws UserException, ServerException;
+}}}
 Check-in a new IFC file. The DataHandler usually ends up as a byte[] in the implementations. The sync version blocks until the file is actually checked-in, the async version returns faster, but won't always be done after the call.
 {{{
 	SCheckinResult checkinSync(long poid, String comment, long fileSize, DataHandler ifcFile, boolean merge) throws UserException, ServerException;
@@ -79,285 +83,229 @@ Returns the state of the given download action
 }}}
 Add a new user, the selfRegistration parameter indicates whether the user is registering itself, which has effect on the e-mail send to the user.
 {{{
-
 	long addUser(String username, String name, SUserType type, boolean selfRegistration) throws UserException, ServerException;
 }}}
 Change the user type of an existing user
 {{{
-
 	void changeUserType(long uoid, SUserType userType) throws UserException, ServerException;
 }}}
 Add a new project, project name must be unique within the server
 {{{
-
 	SProject addProject(String projectName) throws UserException, ServerException;
 }}}
 Add a new project as a subproject of another project, project name must be unique within the list of subprojects of the parent project
 {{{
-
 	SProject addProjectAsSubProject(String projectName, long parentPoid) throws UserException, ServerException;
 }}}
 Update a project
 {{{
-
 	void updateProject(SProject sProject) throws UserException, ServerException;
 }}}
 Update a revision
 {{{
-
 	void updateRevision(SRevision sRevision) throws UserException, ServerException;
 }}}
 Add an existing user to an existing project
 {{{
-
 	boolean addUserToProject(long uoid, long poid) throws UserException, ServerException;
 }}}
 Remove a user from a project
 {{{
-
 	boolean removeUserFromProject(long uoid, long poid) throws UserException, ServerException;
 }}}
 Delete a project
 {{{
-
 	boolean deleteProject(long poid) throws UserException, ServerException;
 }}}
 Delete a user
 {{{
-
 	boolean deleteUser(long uoid) throws UserException, ServerException;
 }}}
 Retrieves all projects the authenticated user has rights on
 {{{
-
 	List<SProject> getAllProjects() throws UserException, ServerException;
 }}}
 Retrieves all projects the authenticated user has read rights on
 {{{
-
 	List<SProject> getAllReadableProjects() throws UserException, ServerException;
 }}}
 Returns a list of all users
 {{{
-
 	List<SUser> getAllUsers() throws UserException, ServerException;
 }}}
 Returns a list of all revisions of a project
 {{{
-
 	List<SRevision> getAllRevisionsOfProject(long poid) throws UserException, ServerException;
 }}}
 Retrieves a list of all checkouts on a project
 {{{
-
 	List<SCheckout> getAllCheckoutsOfProject(long poid) throws UserException, ServerException;
 }}}
 Returns a list of all revisions the given user has created
 {{{
-
 	List<SRevision> getAllRevisionsByUser(long uoid) throws UserException, ServerException;
 }}}
 Returns a list of all checkouts of the given user
 {{{
-
 	List<SCheckout> getAllCheckoutsByUser(long uoid) throws UserException, ServerException;
 }}}
 Returns a list of all checkouts on the given revision
 {{{
-
 	List<SCheckout> getAllCheckoutsOfRevision(long roid) throws UserException, ServerException;
 }}}
 Returns a project object
 {{{
-
 	SProject getProjectByPoid(long poid) throws UserException, ServerException;
 }}}
 Returns a revision object
 {{{
-
 	SRevision getRevision(long roid) throws UserException, ServerException;
 }}}
 Returns a list of available classes, these classes can be used in className parameter in the "downloadOfType" call
 {{{
-
 	List<String> getAvailableClasses() throws UserException, ServerException;
 }}}
 Returns the currently authenticated user
 {{{
-
 	SUser getLoggedInUser() throws UserException, ServerException;
 }}}
 Returns a list of all users that are not authorized to write on this project
 {{{
-
 	List<SProject> getAllNonAuthorizedProjectsOfUser(long uoid) throws UserException, ServerException;
 }}}
+Change the password of a given user
 {{{
-
-	void logout() throws UserException, ServerException;
-}}}
-{{{
-
 	boolean changePassword(long uoid, String oldPassword, String newPassword) throws UserException, ServerException;
 }}}
+Returns the user object with the given username
 {{{
-
 	SUser getUserByUserName(String username) throws UserException, ServerException;
 }}}
+Undelete a project (admin only)
 {{{
-
 	boolean undeleteProject(long poid) throws UserException, ServerException;
 }}}
+Undelete a user (admin only)
 {{{
-
 	boolean undeleteUser(long uoid) throws UserException, ServerException;
 }}}
+Compare two revisions, the sCompareType indicates the type of compare (add, modify, delete, all)
 {{{
-
 	SCompareResult compare(long roid1, long roid2, SCompareType sCompareType) throws UserException, ServerException;
 }}}
+Get a summary of a revision
 {{{
-
 	SRevisionSummary getRevisionSummary(long roid) throws UserException, ServerException;
 }}}
+Returns whether the authenticated user has rights to checkin on the given project
 {{{
-
 	boolean userHasCheckinRights(long poid) throws UserException, ServerException;
 }}}
+Gets a list of possible checkout warnings for the authenticated user on the given project
 {{{
-
-	Set<String> getShowCheckoutWarning(long poid, long uoid) throws UserException, ServerException;
+	Set<String> getCheckoutWarnings(long poid) throws UserException, ServerException;
 }}}
+Checks whether the authenticated user has read rights on the given project
 {{{
-
 	boolean userHasRights(long poid) throws UserException, ServerException;
 }}}
+Returns the SDataObject representation of an object (by oid) in in the database, the className is there so the server can lookup the object a lot faster
 {{{
-
 	SDataObject getDataObjectByOid(long roid, long oid, String className) throws UserException, ServerException;
 }}}
+Returns the SDataObject representation of an object (by guid) in in the database, the className is there so the server can lookup the object a lot faster
 {{{
-
 	SDataObject getDataObjectByGuid(long roid, String guid) throws UserException, ServerException;
 }}}
+Returns a list of SDataObject representations of objects (by className) in in the database
 {{{
-
 	List<SDataObject> getDataObjectsByType(long roid, String className) throws UserException, ServerException;
 }}}
 {{{
-
 	List<SGuidClash> findClashesByGuid(SClashDetectionSettings sClashDetectionSettings) throws UserException, ServerException;
 }}}
 {{{
-
 	List<SEidClash> findClashesByEid(SClashDetectionSettings sClashDetectionSettings) throws UserException, ServerException;
 }}}
 {{{
-
 	List<SClash> getLastClashes(long roid) throws UserException, ServerException;
 }}}
 {{{
-
 	SCheckinResult branchToNewProject(long roid, String projectName, String comment) throws UserException, ServerException;
 }}}
 {{{
-
 	SCheckinResult branchToExistingProject(long roid, long destPoid, String comment) throws UserException, ServerException;
 }}}
 {{{
-
 	SGeoTag getGeoTag(long goid) throws UserException, ServerException;
 }}}
 {{{
-
 	void updateGeoTag(SGeoTag sGeoTag) throws UserException, ServerException;
 }}}
 {{{
-
 	SClashDetectionSettings getClashDetectionSettings(long cdsoid) throws UserException, ServerException;
 }}}
 {{{
-
 	void updateClashDetectionSettings(SClashDetectionSettings sClashDetectionSettings) throws UserException, ServerException;
 }}}
 {{{
-
 	SUser getUserByUoid(long uoid) throws UserException, ServerException;
 }}}
 {{{
-
 	SUser getAnonymousUser() throws UserException, ServerException;
 }}}
 {{{
-
 	List<SUser> getAllNonAuthorizedUsersOfProject(long poid) throws UserException, ServerException;
 }}}
 {{{
-
 	List<SUser> getAllAuthorizedUsersOfProject(long poid) throws UserException, ServerException;
 }}}
 {{{
-
 	List<SProject> getUsersProjects(long uoid) throws UserException, ServerException;
 }}}
 {{{
-
 	List<SProject> getProjectByName(String name) throws UserException, ServerException;
 }}}
 {{{
-
 	void setRevisionTag(long roid, String tag) throws UserException, ServerException;
 }}}
 {{{
-
 	List<SProject> getSubProjects(long poid) throws UserException, ServerException;
 }}}
 {{{
-
 	SUser getCurrentUser() throws UserException, ServerException;
 }}}
 {{{
-
 	boolean isLoggedIn() throws UserException, ServerException;
 }}}
 {{{
-
 	void loginAnonymous() throws UserException, ServerException;
 }}}
 {{{
-
 	Date getActiveSince() throws UserException, ServerException;
 }}}
 {{{
-
 	Date getLastActive() throws UserException, ServerException;
 }}}
 {{{
-
 	Token getCurrentToken() throws UserException, ServerException;
 }}}
 {{{
-
 	SAccessMethod getAccessMethod() throws UserException, ServerException;
 }}}
 {{{
-
 	List<SCheckout> getAllCheckoutsOfProjectAndSubProjects(long poid) throws UserException, ServerException;
 }}}
 {{{
-
 	void requestPasswordChange(long uoid) throws UserException, ServerException;
 }}}
 {{{
-
 	void validateAccount(long uoid, String token, String password) throws UserException, ServerException;
 }}}
 {{{
-
 	void sendClashesEmail(SClashDetectionSettings sClashDetectionSettings, long poid, Set<String> addressesTo) throws UserException, ServerException;
 }}}
 {{{
-
 	void sendCompareEmail(SCompareType sCompareType, long poid, long roid1,	long roid2, String address) throws UserException, ServerException;
 }}}
 
