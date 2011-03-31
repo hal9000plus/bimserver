@@ -13,16 +13,15 @@ The BIMserver comes in two different versions, both are functionally the same:
 A JAR file can directly be executed on most operating systems.
 
   # Make sure you have a recent version of a Java Runtime Environment (JRE) or Java Development Kit (JDK), a JRE can be downloaded here http://java.com.
-
-== Note for OSX users ==
-You can change the default JVM under Applications | Utilities | Java Preferences, on some OSX installations this somehow defaults to Java 5 where the BIMserver needs version 6.
-
-
   # Download the latest JAR build from http://download.bimserver.org/
   # Some browsers rename the JAR file, make sure it ends with ".jar"
   # Start the program by double clicking, you should see the following window:
 http://bimserver.googlecode.com/svn/images/jar.png
   # Normally you wont have to change any settings and you can simply start the BIMserver by clicking "Start"
+
+=== Note for OSX users ===
+You can change the default JVM under Applications | Utilities | Java Preferences, on some OSX installations this somehow defaults to Java 5 where the BIMserver needs version 6.
+
 
 ||Settings||Meaning||
 ||JVM||Allows for a JVM other than the default JVM to be selected||
