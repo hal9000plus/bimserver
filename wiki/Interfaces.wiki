@@ -225,54 +225,71 @@ Returns a list of SDataObject representations of objects (by className) in in th
 {{{
 	List<SDataObject> getDataObjectsByType(long roid, String className) throws UserException, ServerException;
 }}}
+Search for clashes, the result in GUIDs
 {{{
 	List<SGuidClash> findClashesByGuid(SClashDetectionSettings sClashDetectionSettings) throws UserException, ServerException;
 }}}
+Search for clashes, the result in OIDs
 {{{
 	List<SEidClash> findClashesByEid(SClashDetectionSettings sClashDetectionSettings) throws UserException, ServerException;
 }}}
+Return a list of clashes for the given revision
 {{{
 	List<SClash> getLastClashes(long roid) throws UserException, ServerException;
 }}}
+Branch a revision to a new project
 {{{
 	SCheckinResult branchToNewProject(long roid, String projectName, String comment) throws UserException, ServerException;
 }}}
+Branch a revision to an existing project
 {{{
 	SCheckinResult branchToExistingProject(long roid, long destPoid, String comment) throws UserException, ServerException;
 }}}
+Returns a GeoTag
 {{{
 	SGeoTag getGeoTag(long goid) throws UserException, ServerException;
 }}}
+Update a GeoTag
 {{{
 	void updateGeoTag(SGeoTag sGeoTag) throws UserException, ServerException;
 }}}
+Returns clash detection settings
 {{{
 	SClashDetectionSettings getClashDetectionSettings(long cdsoid) throws UserException, ServerException;
 }}}
+Update clash detection settings
 {{{
 	void updateClashDetectionSettings(SClashDetectionSettings sClashDetectionSettings) throws UserException, ServerException;
 }}}
+Returns a User
 {{{
 	SUser getUserByUoid(long uoid) throws UserException, ServerException;
 }}}
+Returns the anonymous user (if it exists)
 {{{
 	SUser getAnonymousUser() throws UserException, ServerException;
 }}}
+Returns a list of all users that are not authorized to write on the given project
 {{{
 	List<SUser> getAllNonAuthorizedUsersOfProject(long poid) throws UserException, ServerException;
 }}}
+Returns a list of all users that are authorized to write on the given project
 {{{
 	List<SUser> getAllAuthorizedUsersOfProject(long poid) throws UserException, ServerException;
 }}}
+Returns a list of all projects the given user has write rights on
 {{{
 	List<SProject> getUsersProjects(long uoid) throws UserException, ServerException;
 }}}
+Returns a list of all projects with the given name (altough project names must be unique within their parent project, and top-level projects must all have unique names, non-unique names are possible)
 {{{
 	List<SProject> getProjectByName(String name) throws UserException, ServerException;
 }}}
+Sets a revision's tag
 {{{
 	void setRevisionTag(long roid, String tag) throws UserException, ServerException;
 }}}
+Returns all subprojects of the given project
 {{{
 	List<SProject> getSubProjects(long poid) throws UserException, ServerException;
 }}}
