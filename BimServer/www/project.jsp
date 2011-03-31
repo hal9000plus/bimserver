@@ -165,7 +165,7 @@ revisions tab</a> to add a first revision, or <a id="subprojecttablink"
 	</tr>
 <% if (emfSerializerFactory.resultTypeEnabled(ResultType.KMZ)) {
 	String url = WebUtils.getWebServer(request.getRequestURL().toString());
-	String link = "http://" + url + getServletContext().getContextPath() + "download?poid=" + project.getOid() + "&resultType=KMZ";
+	String link = "http://" + url + getServletContext().getContextPath() + "/download?poid=" + project.getOid() + "&resultType=KMZ";
 %>
 	<tr>
 		<td class="first">Google Earth Link</td>
