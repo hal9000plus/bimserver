@@ -17,6 +17,8 @@ A few parameters are used a lot and always mean the same:
 ||poid||Long||Project Object Id||
 ||roid||Long||Revision Object Id||
 
+Some calls can be both synchronous as asynchronous, this can be useful for long running actions such as check-in/download.
+
 = Basic calls =
 
 Just a simple call to test the communication, simply returns the given text.
@@ -31,158 +33,306 @@ Automatic login (used by the web interface). The hash is computed this way: sha2
 {{{
 	boolean autologin(String username, String hash) throws UserException, ServerException;
 }}}
-Check-in a new IFC file. The DataHandler usually ends up as a byte[] in the implementations.
+Check-in a new IFC file. The DataHandler usually ends up as a byte[] in the implementations. The sync version blocks until the file is actually checked-in, the async version returns faster, but won't always be done after the call.
 {{{
 	SCheckinResult checkinSync(long poid, String comment, long fileSize, DataHandler ifcFile, boolean merge) throws UserException, ServerException;
 
 	SCheckinResult checkinAsync(long poid, String comment, long fileSize, DataHandler ifcFile, boolean merge) throws UserException, ServerException;
 }}}
+Checks out a certain revision
 {{{
 	String checkout(long roid, ResultType resultType, boolean sync) throws UserException, ServerException;
-
+}}}
+Checks out the last revision
+{{{
 	String checkoutLastRevision(long poid, ResultType resultType, boolean sync) throws UserException, ServerException;
-
+}}}
+Download a certain revision
+{{{
 	String download(long roid, ResultType resultType, boolean sync) throws UserException, ServerException;
-
+}}}
+Download a given set of objects (by oid) within a set of revisions
+{{{
 	String downloadByOids(Set<Long> roids, Set<Long> oids, ResultType resultType, boolean sync) throws UserException, ServerException;
-
+}}}
+Download all objects of a certain type, className can for example be "IfcWindow".
+{{{
 	String downloadOfType(long roid, String className, ResultType resultType, boolean sync) throws UserException, ServerException;
-
+}}}
+Download all objects within the given revisions that have the given GUIDs.
+{{{
 	String downloadByGuids(Set<Long> roids, Set<String> guids, ResultType resultType, boolean sync) throws UserException, ServerException;
-
+}}}
+Download multiple revisions combined in one file
+{{{
 	String downloadProjects(Set<Long> roids, ResultType resultType, boolean sync) throws UserException, ServerException;
-
+}}}
+Get the actual data
+{{{
 	SDownloadResult getDownloadData(String actionID) throws UserException, ServerException;
-
+}}}
+{{{
 	LongActionState getDownloadState(String actionID) throws UserException, ServerException;
+}}}
+{{{
 
 	long addUser(String username, String name, SUserType type, boolean selfRegistration) throws UserException, ServerException;
+}}}
+{{{
 
 	void changeUserType(long uoid, SUserType userType) throws UserException, ServerException;
+}}}
+{{{
 
 	SProject addProject(String projectName) throws UserException, ServerException;
+}}}
+{{{
 
 	SProject addProjectAsSubProject(String projectName, long parentPoid) throws UserException, ServerException;
+}}}
+{{{
 
 	void updateProject(SProject sProject) throws UserException, ServerException;
+}}}
+{{{
 
 	void updateRevision(SRevision sRevision) throws UserException, ServerException;
+}}}
+{{{
 
 	boolean addUserToProject(long uoid, long poid) throws UserException, ServerException;
+}}}
+{{{
 
 	boolean removeUserFromProject(long uoid, long poid) throws UserException, ServerException;
+}}}
+{{{
 
 	boolean deleteProject(long poid) throws UserException, ServerException;
+}}}
+{{{
 
 	boolean deleteUser(long uoid) throws UserException, ServerException;
+}}}
+{{{
 
 	List<SProject> getAllProjects() throws UserException, ServerException;
+}}}
+{{{
 
 	List<SProject> getAllReadableProjects() throws UserException, ServerException;
+}}}
+{{{
 
 	List<SUser> getAllUsers() throws UserException, ServerException;
+}}}
+{{{
 
 	List<SRevision> getAllRevisionsOfProject(long poid) throws UserException, ServerException;
+}}}
+{{{
 
 	List<SCheckout> getAllCheckoutsOfProject(long poid) throws UserException, ServerException;
+}}}
+{{{
 
 	List<SRevision> getAllRevisionsByUser(long uoid) throws UserException, ServerException;
+}}}
+{{{
 
 	List<SCheckout> getAllCheckoutsByUser(long uoid) throws UserException, ServerException;
+}}}
+{{{
 
 	List<SCheckout> getAllCheckoutsOfRevision(long roid) throws UserException, ServerException;
+}}}
+{{{
 
 	SProject getProjectByPoid(long poid) throws UserException, ServerException;
+}}}
+{{{
 
 	SRevision getRevision(long roid) throws UserException, ServerException;
+}}}
+{{{
 
 	List<String> getAvailableClasses() throws UserException, ServerException;
+}}}
+{{{
 
 	SUser getLoggedInUser() throws UserException, ServerException;
+}}}
+{{{
 
 	List<SProject> getAllNonAuthorizedProjectsOfUser(long uoid) throws UserException, ServerException;
+}}}
+{{{
 
 	void logout() throws UserException, ServerException;
+}}}
+{{{
 
 	boolean changePassword(long uoid, String oldPassword, String newPassword) throws UserException, ServerException;
+}}}
+{{{
 
 	SUser getUserByUserName(String username) throws UserException, ServerException;
+}}}
+{{{
 
 	boolean undeleteProject(long poid) throws UserException, ServerException;
+}}}
+{{{
 
 	boolean undeleteUser(long uoid) throws UserException, ServerException;
+}}}
+{{{
 
 	SCompareResult compare(long roid1, long roid2, SCompareType sCompareType) throws UserException, ServerException;
+}}}
+{{{
 
 	SRevisionSummary getRevisionSummary(long roid) throws UserException, ServerException;
+}}}
+{{{
 
 	boolean userHasCheckinRights(long poid) throws UserException, ServerException;
+}}}
+{{{
 
 	Set<String> getShowCheckoutWarning(long poid, long uoid) throws UserException, ServerException;
+}}}
+{{{
 
 	boolean userHasRights(long poid) throws UserException, ServerException;
+}}}
+{{{
 
 	SDataObject getDataObjectByOid(long roid, long oid, String className) throws UserException, ServerException;
+}}}
+{{{
 
 	SDataObject getDataObjectByGuid(long roid, String guid) throws UserException, ServerException;
+}}}
+{{{
 
 	List<SDataObject> getDataObjectsByType(long roid, String className) throws UserException, ServerException;
+}}}
+{{{
 
 	List<SGuidClash> findClashesByGuid(SClashDetectionSettings sClashDetectionSettings) throws UserException, ServerException;
+}}}
+{{{
 
 	List<SEidClash> findClashesByEid(SClashDetectionSettings sClashDetectionSettings) throws UserException, ServerException;
+}}}
+{{{
 
 	List<SClash> getLastClashes(long roid) throws UserException, ServerException;
+}}}
+{{{
 
 	SCheckinResult branchToNewProject(long roid, String projectName, String comment) throws UserException, ServerException;
+}}}
+{{{
 
+}}}
+{{{
 	SCheckinResult branchToExistingProject(long roid, long destPoid, String comment) throws UserException, ServerException;
+}}}
+{{{
 
 	SGeoTag getGeoTag(long goid) throws UserException, ServerException;
+}}}
+{{{
 
 	void updateGeoTag(SGeoTag sGeoTag) throws UserException, ServerException;
+}}}
+{{{
 
 	SClashDetectionSettings getClashDetectionSettings(long cdsoid) throws UserException, ServerException;
+}}}
+{{{
 
 	void updateClashDetectionSettings(SClashDetectionSettings sClashDetectionSettings) throws UserException, ServerException;
+}}}
+{{{
 
 	SUser getUserByUoid(long uoid) throws UserException, ServerException;
+}}}
+{{{
 
 	SUser getAnonymousUser() throws UserException, ServerException;
+}}}
+{{{
 
 	List<SUser> getAllNonAuthorizedUsersOfProject(long poid) throws UserException, ServerException;
+}}}
+{{{
 
 	List<SUser> getAllAuthorizedUsersOfProject(long poid) throws UserException, ServerException;
+}}}
+{{{
 
 	List<SProject> getUsersProjects(long uoid) throws UserException, ServerException;
+}}}
+{{{
 
 	List<SProject> getProjectByName(String name) throws UserException, ServerException;
+}}}
+{{{
 
 	void setRevisionTag(long roid, String tag) throws UserException, ServerException;
+}}}
+{{{
 
 	List<SProject> getSubProjects(long poid) throws UserException, ServerException;
+}}}
+{{{
 
 	SUser getCurrentUser() throws UserException, ServerException;
+}}}
+{{{
 
 	boolean isLoggedIn() throws UserException, ServerException;
+}}}
+{{{
 
 	void loginAnonymous() throws UserException, ServerException;
+}}}
+{{{
 
 	Date getActiveSince() throws UserException, ServerException;
+}}}
+{{{
 
 	Date getLastActive() throws UserException, ServerException;
+}}}
+{{{
 
 	Token getCurrentToken() throws UserException, ServerException;
+}}}
+{{{
 
 	SAccessMethod getAccessMethod() throws UserException, ServerException;
+}}}
+{{{
 
 	List<SCheckout> getAllCheckoutsOfProjectAndSubProjects(long poid) throws UserException, ServerException;
+}}}
+{{{
 
 	void requestPasswordChange(long uoid) throws UserException, ServerException;
+}}}
+{{{
 
 	void validateAccount(long uoid, String token, String password) throws UserException, ServerException;
+}}}
+{{{
 
 	void sendClashesEmail(SClashDetectionSettings sClashDetectionSettings, long poid, Set<String> addressesTo) throws UserException, ServerException;
+}}}
+{{{
 
 	void sendCompareEmail(SCompareType sCompareType, long poid, long roid1,	long roid2, String address) throws UserException, ServerException;
 }}}
