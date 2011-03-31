@@ -317,7 +317,7 @@ function initStep2(clientElements) {
   g_camera.eye = [0, 0, 5];
   updateCamera();
 
-  doload()
+//  doload()
 
   o3djs.event.addEventListener(g_o3dElement, 'mousedown', startDragging);
   o3djs.event.addEventListener(g_o3dElement, 'mousemove', drag);
@@ -336,7 +336,7 @@ function uninit() {
   }
 }
 
-function doload() {
+function doload(url) {
   if (g_root) {
     g_root.parent = null;
     g_root = null;
@@ -345,7 +345,7 @@ function doload() {
     g_pack.destroy();
     g_pack = null;
   }
-  var url = document.getElementById('url').value;
+//  var url = document.getElementById('url').value;
   g_root = loadFile(g_viewInfo.drawContext, url);
 }
 </script>
@@ -362,7 +362,9 @@ Simple Scene Viewer
 </p>
 
 <input type="text" id="url" size="100">
-<input type="button" id="load" onclick="doload();" value="load"><BR>
+<input type="button" value="AC11-FZK-Haus-IFC.o3djson" onclick="doload('AC11-FZK-Haus-IFC.o3djson');"/>
+<input type="button" value="AC11-Institute-Var-2-IFC.o3djson" onclick="doload('AC11-Institute-Var-2-IFC.o3djson');"/>
+<input type="button" value="AC11-FZK-Haus-IFC.o3djson" onclick="doload('AC11-FZK-Haus-IFC.o3djson');"/>
 
 Drag The Mouse To Rotate<br/>
 Scrollwheel To Zoom<br/>
