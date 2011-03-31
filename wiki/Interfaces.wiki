@@ -35,6 +35,10 @@ Automatic login (used by the web interface). The hash is computed this way: sha2
 {{{
 	boolean autologin(String username, String hash) throws UserException, ServerException;
 }}}
+Login as an anonymous user, there has to be an active anonymous user with the name "Anonymous" in the server.
+{{{
+	void loginAnonymous() throws UserException, ServerException;
+}}}
 Logout
 {{{
 	void logout() throws UserException, ServerException;
@@ -272,39 +276,47 @@ Returns a list of SDataObject representations of objects (by className) in in th
 {{{
 	List<SProject> getSubProjects(long poid) throws UserException, ServerException;
 }}}
+Returns the current user
 {{{
 	SUser getCurrentUser() throws UserException, ServerException;
 }}}
+Returns whether the current session is in the logged-in state
 {{{
 	boolean isLoggedIn() throws UserException, ServerException;
 }}}
-{{{
-	void loginAnonymous() throws UserException, ServerException;
-}}}
+Returns since when this user has been active
 {{{
 	Date getActiveSince() throws UserException, ServerException;
 }}}
+Returns when the user was last active
 {{{
 	Date getLastActive() throws UserException, ServerException;
 }}}
+Returns the current token
 {{{
 	Token getCurrentToken() throws UserException, ServerException;
 }}}
+Returns the current access method (SOAP, REST etc...)
 {{{
 	SAccessMethod getAccessMethod() throws UserException, ServerException;
 }}}
+Returns a list of all checkouts of the given project + sub projects
 {{{
 	List<SCheckout> getAllCheckoutsOfProjectAndSubProjects(long poid) throws UserException, ServerException;
 }}}
+Request a password change, this will send an e-mail with a validation-token to the user's e-mail address, also see "validateAccount"
 {{{
 	void requestPasswordChange(long uoid) throws UserException, ServerException;
 }}}
+Validates an account, the token can be found in the e-mail sent by "requestPasswordChange or "addUser"
 {{{
 	void validateAccount(long uoid, String token, String password) throws UserException, ServerException;
 }}}
+Sends an email message to the given addresses with a link to a BIMserver page showing the results of a clashdetection
 {{{
 	void sendClashesEmail(SClashDetectionSettings sClashDetectionSettings, long poid, Set<String> addressesTo) throws UserException, ServerException;
 }}}
+Sends an email message to the given address with the results of a compare between two revisions
 {{{
 	void sendCompareEmail(SCompareType sCompareType, long poid, long roid1,	long roid2, String address) throws UserException, ServerException;
 }}}
