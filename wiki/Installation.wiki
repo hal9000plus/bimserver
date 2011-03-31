@@ -19,9 +19,8 @@ A JAR file can directly be executed on most operating systems.
 http://bimserver.googlecode.com/svn/images/jar.png
   # Normally you wont have to change any settings and you can simply start the BIMserver by clicking "Start"
 
-=== Note for OSX users ===
-You can change the default JVM under Applications | Utilities | Java Preferences, on some OSX installations this somehow defaults to Java 5 where the BIMserver needs version 6.
-
+_Note for OSX users
+You can change the default JVM under Applications | Utilities | Java Preferences, on some OSX installations this somehow defaults to Java 5 where the BIMserver needs version 6._
 
 ||Settings||Meaning||
 ||JVM||Allows for a JVM other than the default JVM to be selected||
