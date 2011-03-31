@@ -19,6 +19,8 @@ A few parameters are used a lot and always mean the same:
 
 Some calls can be both synchronous as asynchronous, this can be useful for long running actions such as check-in/download.
 
+A calls deleting objects do not really delete them, admin users can 'undelete' objects.
+
 = Basic calls =
 
 Just a simple call to test the communication, simply returns the given text.
@@ -71,97 +73,121 @@ Get the actual data
 {{{
 	SDownloadResult getDownloadData(String actionID) throws UserException, ServerException;
 }}}
+Returns the state of the given download action
 {{{
 	LongActionState getDownloadState(String actionID) throws UserException, ServerException;
 }}}
+Add a new user, the selfRegistration parameter indicates whether the user is registering itself, which has effect on the e-mail send to the user.
 {{{
 
 	long addUser(String username, String name, SUserType type, boolean selfRegistration) throws UserException, ServerException;
 }}}
+Change the user type of an existing user
 {{{
 
 	void changeUserType(long uoid, SUserType userType) throws UserException, ServerException;
 }}}
+Add a new project, project name must be unique within the server
 {{{
 
 	SProject addProject(String projectName) throws UserException, ServerException;
 }}}
+Add a new project as a subproject of another project, project name must be unique within the list of subprojects of the parent project
 {{{
 
 	SProject addProjectAsSubProject(String projectName, long parentPoid) throws UserException, ServerException;
 }}}
+Update a project
 {{{
 
 	void updateProject(SProject sProject) throws UserException, ServerException;
 }}}
+Update a revision
 {{{
 
 	void updateRevision(SRevision sRevision) throws UserException, ServerException;
 }}}
+Add an existing user to an existing project
 {{{
 
 	boolean addUserToProject(long uoid, long poid) throws UserException, ServerException;
 }}}
+Remove a user from a project
 {{{
 
 	boolean removeUserFromProject(long uoid, long poid) throws UserException, ServerException;
 }}}
+Delete a project
 {{{
 
 	boolean deleteProject(long poid) throws UserException, ServerException;
 }}}
+Delete a user
 {{{
 
 	boolean deleteUser(long uoid) throws UserException, ServerException;
 }}}
+Retrieves all projects the authenticated user has rights on
 {{{
 
 	List<SProject> getAllProjects() throws UserException, ServerException;
 }}}
+Retrieves all projects the authenticated user has read rights on
 {{{
 
 	List<SProject> getAllReadableProjects() throws UserException, ServerException;
 }}}
+Returns a list of all users
 {{{
 
 	List<SUser> getAllUsers() throws UserException, ServerException;
 }}}
+Returns a list of all revisions of a project
 {{{
 
 	List<SRevision> getAllRevisionsOfProject(long poid) throws UserException, ServerException;
 }}}
+Retrieves a list of all checkouts on a project
 {{{
 
 	List<SCheckout> getAllCheckoutsOfProject(long poid) throws UserException, ServerException;
 }}}
+Returns a list of all revisions the given user has created
 {{{
 
 	List<SRevision> getAllRevisionsByUser(long uoid) throws UserException, ServerException;
 }}}
+Returns a list of all checkouts of the given user
 {{{
 
 	List<SCheckout> getAllCheckoutsByUser(long uoid) throws UserException, ServerException;
 }}}
+Returns a list of all checkouts on the given revision
 {{{
 
 	List<SCheckout> getAllCheckoutsOfRevision(long roid) throws UserException, ServerException;
 }}}
+Returns a project object
 {{{
 
 	SProject getProjectByPoid(long poid) throws UserException, ServerException;
 }}}
+Returns a revision object
 {{{
 
 	SRevision getRevision(long roid) throws UserException, ServerException;
 }}}
+Returns a list of available classes, these classes can be used in className parameter in the "downloadOfType" call
 {{{
 
 	List<String> getAvailableClasses() throws UserException, ServerException;
 }}}
+Returns the currently authenticated user
 {{{
 
 	SUser getLoggedInUser() throws UserException, ServerException;
 }}}
+Returns a list of all users that are not authorized to write on this project
 {{{
 
 	List<SProject> getAllNonAuthorizedProjectsOfUser(long uoid) throws UserException, ServerException;
