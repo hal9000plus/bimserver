@@ -236,8 +236,6 @@ Get the actual data
 }}}
 {{{
 
-}}}
-{{{
 	SCheckinResult branchToExistingProject(long roid, long destPoid, String comment) throws UserException, ServerException;
 }}}
 {{{
