@@ -1,0 +1,8 @@
+#summary Get support on the open source BIMserver software.
+#labels UserSupport
+
+= Dedicated support page =
+
+Our dedicated support page can be found on http://support.bimserver.org/
+
+It is a link to the getsatisfaction page of BIMserver.org
