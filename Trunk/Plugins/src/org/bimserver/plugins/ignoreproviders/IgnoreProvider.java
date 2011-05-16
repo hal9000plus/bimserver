@@ -1,4 +1,4 @@
-package org.bimserver.plugins.serializers;
+package org.bimserver.plugins.ignoreproviders;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EStructuralFeature;

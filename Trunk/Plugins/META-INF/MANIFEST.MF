@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Plugins
+Bundle-SymbolicName: Plugins
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: Plugins.jar,
+ lib/logging/slf4j-api-1.6.0.jar
+Export-Package: org.bimserver.plugins,
+ org.bimserver.plugins.ifcengine,
+ org.bimserver.plugins.ignoreproviders,
+ org.bimserver.plugins.serializers
