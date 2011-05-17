@@ -28,6 +28,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
+import org.bimserver.plugins.ifcengine.IfcEngineFactory;
+import org.bimserver.plugins.ignoreproviders.IgnoreProvider;
+import org.bimserver.plugins.schema.Schema;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -35,9 +38,11 @@ public abstract class EmfSerializer {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(EmfSerializer.class);
 	protected IfcModelInterface model;
-	private String fileName;
 	private Mode mode;
-
+	private Schema schema;
+	private IgnoreProvider ignoreProvider;
+	private IfcEngineFactory ifcEngineFactory;
+	
 	protected static enum Mode {
 		HEADER,
 		BODY,
@@ -45,9 +50,11 @@ public abstract class EmfSerializer {
 		FINISHED
 	}
 
-	public void init(String fileName, IfcModelInterface model) {
-		this.fileName = fileName;
+	public void init(IfcModelInterface model, Schema schema, IgnoreProvider ignoreProvider, IfcEngineFactory ifcEngineFactory) throws SerializerException {
 		this.model = model;
+		this.setIfcEngineFactory(ifcEngineFactory);
+		this.setIgnoreProvider(ignoreProvider);
+		this.setSchema(schema);
 		reset();
 	}
 
@@ -146,10 +153,6 @@ public abstract class EmfSerializer {
 
 	protected abstract void reset();
 
-	public String getName() {
-		return fileName;
-	}
-
 	protected abstract boolean write(OutputStream outputStream) throws SerializerException;
 
 	public void writeToOutputStream(OutputStream outputStream) throws SerializerException {
@@ -169,5 +172,33 @@ public abstract class EmfSerializer {
 		} catch (IOException e) {
 			LOGGER.error("", e);
 		}
+	}
+
+	public void setSchema(Schema schema) {
+		this.schema = schema;
+	}
+
+	public Schema getSchema() {
+		return schema;
+	}
+
+	public IfcModelInterface getModel() {
+		return model;
+	}
+
+	public void setIgnoreProvider(IgnoreProvider ignoreProvider) {
+		this.ignoreProvider = ignoreProvider;
+	}
+
+	public IgnoreProvider getIgnoreProvider() {
+		return ignoreProvider;
+	}
+
+	public void setIfcEngineFactory(IfcEngineFactory ifcEngineFactory) {
+		this.ifcEngineFactory = ifcEngineFactory;
+	}
+
+	public IfcEngineFactory getIfcEngineFactory() {
+		return ifcEngineFactory;
 	}
 }

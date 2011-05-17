@@ -17,4 +17,7 @@ public interface IfcModelInterface {
 	EObject get(long key);
 	boolean contains(IdEObject referencedObject);
 	long get(IdEObject referencedObject);
+	String getAuthorizedUser();
+	String getName();
+	long size();
 }

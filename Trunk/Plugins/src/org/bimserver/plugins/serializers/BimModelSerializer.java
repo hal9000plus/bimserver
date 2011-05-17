@@ -6,7 +6,9 @@ import org.bimserver.emf.IdEObject;
 import org.bimserver.models.ifc2x3.Ifc2x3Factory;
 import org.bimserver.models.ifc2x3.IfcGloballyUniqueId;
 import org.bimserver.models.ifc2x3.WrappedValue;
+import org.bimserver.plugins.ifcengine.IfcEngineFactory;
 import org.bimserver.plugins.ignoreproviders.IgnoreProvider;
+import org.bimserver.plugins.schema.Schema;
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -15,11 +17,9 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
 
 public abstract class BimModelSerializer extends EmfSerializer {
-	private IgnoreProvider fieldIgnoreMap;
 
-	public void init(String fileName, IfcModelInterface model, IgnoreProvider fieldIgnoreMap) {
-		super.init(fileName, model);
-		this.fieldIgnoreMap = fieldIgnoreMap;
+	public void init(IfcModelInterface model, Schema schema, IgnoreProvider ignoreProvider, IfcEngineFactory ifcEngineFactory) throws SerializerException {
+		super.init(model, schema, ignoreProvider, ifcEngineFactory);
 	}
 
 	@SuppressWarnings("unchecked")
@@ -31,7 +31,7 @@ public abstract class BimModelSerializer extends EmfSerializer {
 			newModel.add(newObject.getOid(), newObject);
 		}
 		for (EStructuralFeature eStructuralFeature : ifcRootObject.eClass().getEAllStructuralFeatures()) {
-			if (!fieldIgnoreMap.shouldIgnoreField(originalClass, ifcRootObject.eClass(), eStructuralFeature)) {
+			if (!getIgnoreProvider().shouldIgnoreField(originalClass, ifcRootObject.eClass(), eStructuralFeature)) {
 				Object get = ifcRootObject.eGet(eStructuralFeature);
 				if (eStructuralFeature instanceof EAttribute) {
 					if (get instanceof Float || get instanceof Double) {
@@ -70,9 +70,5 @@ public abstract class BimModelSerializer extends EmfSerializer {
 			}
 		}
 		return newObject;
-	}
-
-	public IgnoreProvider getFieldIgnoreMap() {
-		return fieldIgnoreMap;
 	}
 }
