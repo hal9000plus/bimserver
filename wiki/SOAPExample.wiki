@@ -1,6 +1,8 @@
 #summary This page describes a few SOAP calls to get a model from a BIMserver
 #labels Developerguide
 
+Note: This documentation is based on the 1.0 release.
+
 = Introduction =
 
 The code examples are in Java, but any other language that generates a SOAP interface based on the WSDL file should have a similar structure.
