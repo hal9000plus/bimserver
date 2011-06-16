@@ -6,8 +6,17 @@ External applications can interact with the BIMserver via SOAP (and [Interfaces 
 
 http://bimserver.googlecode.com/svn/wiki/images/wsdl.png
 
-With a WSDL file/url almost any programming language can generate code to make working with the SOAP service easier. For java developers we have created a project called "GeneratedClient" which can directly be used.
+= SOAP Stack =
+
+To use SOAP you will need to have a "SOAP Stack" for your programming language. A SOAP Stack is just a library containing all the logic for the SOAP protocol. For most programming languages there are multiple, so it's up to you to choose one.
+
+Your SOAP Stack is probably able to generate a bunch of code for your programming language based on a WSDL file/url, this is not required but makes your life a lot easier.
+
+= BIMserver SOAP =
 
 The BIMserver SOAP server is running on the same address/port as your web user interface, in most cases this will be 8082 (for a runnable JAR), 8080 for tomcat.
 
 The WSDL file will give you the exact URL for the SOAP service, but it is always in the following format: http://[address of server]:[port of server]/soap. To get the WSDL file, append "?wsdl" to the URL.
+
+= GeneratedClient =
+From version 1.1, there is a "GeneratedClient" project in SVN. This project contains generated source code based on Apache CXF and the latest BIMserver "ServiceInterface". It's just a convenience project.
