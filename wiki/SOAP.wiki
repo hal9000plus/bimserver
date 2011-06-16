@@ -1,0 +1,5 @@
+#summary Basic explanation of using the BIMserver SOAP interface
+
+= Introduction =
+
+External applications can interact with the BIMserver via SOAP (and others, see: link). For SOAP you need a WSDL file, which can be found by running the BIMserver, logging in as an administrator via the webbased user interface, and going to 
