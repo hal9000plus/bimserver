@@ -21,3 +21,7 @@ Somehow a strange bug in Eclipse will give compile errors after checking out all
  * Wait till Eclipse is done compiling
  * Now there should be no compile errors anymore
  * [Optional] switch back to your original JRE/JDK
+
+= Running =
+
+To run the BIMserver from eclipse, right click the BimServer project, select "Run As" and then "Java Application", eclipse will look for classes with main methods, you have to select "Server", which is in the package "org.bimserver".
