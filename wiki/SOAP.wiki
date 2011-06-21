@@ -18,5 +18,19 @@ The BIMserver SOAP server is running on the same address/port as your web user i
 
 The WSDL file will give you the exact URL for the SOAP service, but it is always in the following format: http://[address of server]:[port of server]/soap. To get the WSDL file, append "?wsdl" to the URL.
 
+= Authentication =
+
+The newest version of the BIMserver is using sessions to remember the user credentials, versions before 1.0 were using a token object as the first parameter of every call which was not optimal.
+
+Make sure to enable session management in your client, otherwise the server won't be able to remember who you are and you will get this message:
+{{{
+"Authentication required for this call"
+}}}
+
+For Apache CXF, you can enable sessions this way:
+{{{
+((javax.xml.ws.BindingProvider)port).getRequestContext().put(BindingProvider.SESSION_MAINTAIN_PROPERTY, true);
+}}}
+
 = GeneratedClient =
 From version 1.1, there is a "GeneratedClient" project in SVN. This project contains generated source code based on Apache CXF and the latest BIMserver "ServiceInterface". It's just a convenience project.
