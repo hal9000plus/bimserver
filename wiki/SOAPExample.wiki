@@ -11,20 +11,6 @@ Almost all methods can throw UserException abd ServerException exceptions, which
 
 The UserException means that the user seems to be doing something wrong (no rights, non-existing ids etc...), the ServerException means something is going wrong in the server, more info can be found in the server logs.
 
-= Authentication =
-
-The newest version of the BIMserver is using sessions to remember the user credentials, versions before 1.0 were using a token object as the first parameter of every call which was not optimal.
-
-Make sure to enable session management in your client, otherwise the server won't be able to remember who you are and you will get this message:
-{{{
-"Authentication required for this call"
-}}}
-
-For Apache CXF, you can enable sessions this way:
-{{{
-((javax.xml.ws.BindingProvider)port).getRequestContext().put(BindingProvider.SESSION_MAINTAIN_PROPERTY, true);
-}}}
-
 = Get all projects =
 
 To get a list of all projects on which the currently authenticated user has rights, use the following method:
