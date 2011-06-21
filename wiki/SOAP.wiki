@@ -32,5 +32,11 @@ For Apache CXF, you can enable sessions this way:
 ((javax.xml.ws.BindingProvider)port).getRequestContext().put(BindingProvider.SESSION_MAINTAIN_PROPERTY, true);
 }}}
 
+For .Net based clients, this can be done this way:
+{{{
+client = new BiMserver.ServiceInterfaceService();
+client.CookieContainer = new System.Net.CookieContainer();
+}}}
+
 = GeneratedClient =
 From version 1.1, there is a "GeneratedClient" project in SVN. This project contains generated source code based on Apache CXF and the latest BIMserver "ServiceInterface". It's just a convenience project.
