@@ -32,7 +32,16 @@ bimServer.start();
 
 4. Use the BIMserver. All useful objects are available with getters on the BimServer object.
 {{{
-bimServer.getDatabase(); // Returns the BimDatabase
-bimServer.getSettingsManager(); // Returns the SettingsManager
-// Etcetera...
+BimDatabase bimDatabase = bimServer.getDatabase();
+SettingsManager settingsManager = bimServer.getSettingsManager();
+ServiceInterface systemService = bimServer.getSystemService();
+EmfSerializerFactory emfSerializerFactory = bimServer.getEmfSerializerFactory();
+DiskCacheManager diskCacheManager = bimServer.getDiskCacheManager();
+VersionChecker versionChecker = bimServer.getVersionChecker();
+ServiceFactory serviceFactory = bimServer.getServiceFactory();
+ServerInfo serverInfo = bimServer.getServerInfo();
+MailSystem mailSystem = bimServer.getMailSystem();
+PluginManager pluginManager = bimServer.getPluginManager();
+MergerFactory mergerFactory = bimServer.getMergerFactory();
+LongActionManager longActionManager = bimServer.getLongActionManager();
 }}}
