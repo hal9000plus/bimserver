@@ -1,0 +1,9 @@
+#summary Description of several unit tests
+
+= Introduction =
+
+Unit tests are used to test certain units of work, they can be found in the "Tests" project. Also the unit tests serve as an example of how to use certain functionalities of the BIMserver.
+
+= TestEmbeddedBimServer =
+
+This code starts an embedded BIMserver, creates a user, changes it's password, creates a project, uploads a new revision, lists all projects, selects the first project with at least one revision, downloads that revision and prints the names of all walls.
