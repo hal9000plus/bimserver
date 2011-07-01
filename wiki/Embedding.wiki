@@ -15,6 +15,7 @@ BimServer bimServer = new BimServer(new File("home"), new LocalDevelopmentResour
 
 2. Load plugins
 {{{
+
 bimServer.getPluginManager().loadPluginsFromEclipseProject(new File("../CityGML"));
 			bimServer.getPluginManager().loadPluginsFromEclipseProject(new File("../Collada"));
 			bimServer.getPluginManager().loadPluginsFromEclipseProject(new File("../IfcPlugins"));
