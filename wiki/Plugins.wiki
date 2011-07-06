@@ -1,0 +1,46 @@
+#summary How to create a plugin
+
+= Introduction =
+
+The BIMserver project aims to provide many possibilities for external developers by providing the Service Interface (implemented in SOAP and Protocol Buffers) but some logic will only work when running within the BIMserver, that's where plugins come into play.
+
+= Types of plugins =
+
+== Serializers ==
+
+A serializer serializes a model to a stream of data. Among the default serializers are: IFC2x3, IfcXml, CityGML and others. Most serializers will output a textbased format but that is not required.
+
+Serializer plugins must implement org.bimserver.plugins.serializers.SerializerPlugin interface
+{{{
+public interface SerializerPlugin extends Plugin {
+	EmfSerializer createSerializer();
+	String getDefaultSerializerName();
+	String getDefaultExtension();
+	String getDefaultContentType();
+}
+}}}
+
+== Deserializers ==
+== Guidance Providers ==
+== Schema Providers ==
+== IFC Engines ==
+
+= So how to develop a plugin =
+
+Note: This tutorial assumes you use eclipse, but other IDEs should also work.
+
+1. Create a new java project for your plugin
+2. Create your plugin class, this class must implement the plugin interface you want to write a plugin for, make sure you implement all methods correctly.
+3. Create a plugin folder under your project
+4. Create a plugin.xml file under the plugin folder, the content should like like this:
+{{{
+<?xml version="1.0" encoding="utf-8"?>
+<PluginDescriptor>
+	<PluginImplementation>
+		
+	<PluginImplementation>
+		<interfaceClass>org.bimserver.plugins.serializers.SerializerPlugin</interfaceClass>
+		<implementationClass>org.bimserver.collada.KmzSerializerPlugin</implementationClass>
+	</PluginImplementation>
+</PluginDescriptor>
+}}}
