@@ -27,10 +27,10 @@ A serializer serializes an object model to a stream of data. Among the default s
 Serializer plugins must implement org.bimserver.plugins.serializers.SerializerPlugin interface
 {{{
 public interface SerializerPlugin extends Plugin {
-	EmfSerializer createSerializer();
-	String getDefaultSerializerName();
-	String getDefaultExtension();
-	String getDefaultContentType();
+	EmfSerializer createSerializer(); // The actual method that will create a serializer. Have a look at subclasses of EmfSerializer to see how to build one
+	String getDefaultSerializerName(); // A default name, this user can change this
+	String getDefaultExtension(); // A default extension, the user can change this
+	String getDefaultContentType(); // A default contentType, the user can change this
 }
 }}}
 
@@ -78,6 +78,7 @@ public interface IfcEnginePlugin extends Plugin {
 = So how to develop a plugin =
 
 Note: This tutorial assumes you use eclipse, but other IDEs should also work.
+Note: The easiest way to learn is to look how other people have done things, there are quite a few plugins already, so have a look at them.
 
 1. Create a new java project for your plugin, for example "PluginTest"
 2. Create your plugin class, this class must implement the plugin interface you want to write a plugin for, make sure you implement all methods correctly. For this example we will create a serializer and we will name the plugin "TestSerializerPlugin" in the package "test".
@@ -101,3 +102,5 @@ bimServer.getPluginManager().loadPluginsFromEclipseProject(new File("../PluginTe
 }}}
 
 Now you can start the BIMserver and your plugin should be available as yet another way to serialize models.
+
+To make your plugin available on deployed BIMservers (either WAR or JAR), you have to create a JAR file of your plugin. It should contain the compiled code, your plugin folder (+plugin.xml), and any required JAR files. The place of jar files doesn't matter, as long as they have the extension ".jar".
