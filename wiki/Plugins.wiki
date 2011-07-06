@@ -9,12 +9,12 @@ The BIMserver project aims to provide many possibilities for external developers
 All plugins implement the Plugin interface:
 {{{
 public interface Plugin {
-	void init(PluginManager pluginManager) throws PluginException;
-	String getName();
-	String getDescription();
-	String getVersion();
-	boolean isInitialized();
-	Set<Class<? extends Plugin>> getRequiredPlugins();
+	void init(PluginManager pluginManager) throws PluginException; // Initialization code, if your plugin requires other plugins, this is the time to check for them, be sure to throw a PluginException when something is wrong
+	String getName(); // A short name of this plugin
+	String getDescription(); // A short description of this plugin
+	String getVersion(); // A version, not used for dependencies (yet)
+	boolean isInitialized(); // Should return whether this plugin is successfully initialized
+	Set<Class<? extends Plugin>> getRequiredPlugins(); // Already depricated
 }
 }}}
 
