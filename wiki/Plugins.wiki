@@ -86,8 +86,7 @@ Note: The easiest way to learn is to look how other people have done things, the
 4. Create a plugin.xml file under the plugin folder, the content should like like this:
 {{{
 <?xml version="1.0" encoding="utf-8"?>
-<PluginDescriptor>
-		
+<PluginDescriptor>		
 	<PluginImplementation>
 		<interfaceClass>org.bimserver.plugins.serializers.SerializerPlugin</interfaceClass>
 		<implementationClass>test.TestSerializerPlugin</implementationClass>
