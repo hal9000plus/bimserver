@@ -6,9 +6,23 @@ The BIMserver project aims to provide many possibilities for external developers
 
 = Types of plugins =
 
+All plugins implement the Plugin interface:
+{{{
+public interface Plugin {
+	void init(PluginManager pluginManager) throws PluginException;
+	String getName();
+	String getDescription();
+	String getVersion();
+	boolean isInitialized();
+	Set<Class<? extends Plugin>> getRequiredPlugins();
+}
+}}}
+
+Do not implement the Plugin class directly, there are sub-interfaces for the different purposes plugins can have.
+
 == Serializers ==
 
-A serializer serializes a model to a stream of data. Among the default serializers are: IFC2x3, IfcXml, CityGML and others. Most serializers will output a textbased format but that is not required.
+A serializer serializes an object model to a stream of data. Among the default serializers are: IFC2x3, IfcXml, CityGML and others. Most serializers will output a textbased format but that is not required.
 
 Serializer plugins must implement org.bimserver.plugins.serializers.SerializerPlugin interface
 {{{
@@ -21,9 +35,45 @@ public interface SerializerPlugin extends Plugin {
 }}}
 
 == Deserializers ==
+
+To deserialize a stream of data to an object model.
+
+{{{
+public interface DeserializerPlugin extends Plugin {
+	EmfDeserializer createDeserializer();
+	boolean canHandleExtension(String extension);
+}
+}}}
+
 == Guidance Providers ==
-== Schema Providers ==
+
+A guidance provider helps other code to decide whether to follow a reference or not. This can be used to define subsets of models, based on a given starting point.
+
+{{{
+public interface GuidanceProviderPlugin extends Plugin {
+	GuidanceProvider getGuidanceProvider();
+	String getDefaultGuidanceProviderName();
+}
+}}}
+
+== Schema Plugins ==
+
+A schema plugin provides the calling code with information about a schema. There is only one implementation which can read an express schema file.
+
+public interface SchemaPlugin extends Plugin {
+	SchemaDefinition getSchemaDefinition();
+	File getExpressSchemaFile();
+}
+
 == IFC Engines ==
+
+An IFC Engine makes it possible to convert an IFC file to triangulated geometry.
+
+{{{
+public interface IfcEnginePlugin extends Plugin {
+	IfcEngine createIfcEngine() throws IfcEngineException;
+}
+}}}
 
 = So how to develop a plugin =
 
