@@ -29,18 +29,25 @@ public interface SerializerPlugin extends Plugin {
 
 Note: This tutorial assumes you use eclipse, but other IDEs should also work.
 
-1. Create a new java project for your plugin
-2. Create your plugin class, this class must implement the plugin interface you want to write a plugin for, make sure you implement all methods correctly.
+1. Create a new java project for your plugin, for example "PluginTest"
+2. Create your plugin class, this class must implement the plugin interface you want to write a plugin for, make sure you implement all methods correctly. For this example we will create a serializer and we will name the plugin "TestSerializerPlugin" in the package "test".
 3. Create a plugin folder under your project
 4. Create a plugin.xml file under the plugin folder, the content should like like this:
 {{{
 <?xml version="1.0" encoding="utf-8"?>
 <PluginDescriptor>
-	<PluginImplementation>
 		
 	<PluginImplementation>
 		<interfaceClass>org.bimserver.plugins.serializers.SerializerPlugin</interfaceClass>
-		<implementationClass>org.bimserver.collada.KmzSerializerPlugin</implementationClass>
+		<implementationClass>test.TestSerializerPlugin</implementationClass>
 	</PluginImplementation>
 </PluginDescriptor>
 }}}
+
+Now to test your plugin locally you will have to tell the BIMserver where your plugin can be found. Edit "LocalDevBimServerStarter.java" and  look for the lines with loadPluginFromEclipseProject. Add
+
+{{{
+bimServer.getPluginManager().loadPluginsFromEclipseProject(new File("../PluginTest"));
+}}}
+
+Now you can start the BIMserver and your plugin should be available as yet another way to serialize models.
