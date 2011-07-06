@@ -27,6 +27,7 @@
      * [Object_level_modifications_design Object level modifications design]
    * [UnitTests Unit Tests]
    * [Embedding Embedding]
+   * [Plugins Plugins]
  * [ServiceProviders Service Providers]
  * [Known_issues Known issues]
  * [Users Users]
