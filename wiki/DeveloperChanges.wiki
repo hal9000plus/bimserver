@@ -1,0 +1,8 @@
+#summary On this page, short summaries of changes relevant to BIMserver (plugin) developers will be posted
+
+= 11-07-2011 =
+
+Three new Eclipse projects in SVN:
+- XsltSerializer (generic XsltSerializer code)
+- Cobie2Serializer (Xslt based serializer plugin for Cobie2)
+- Report1Serializer (Xslt based serializer plugin for Report1)
