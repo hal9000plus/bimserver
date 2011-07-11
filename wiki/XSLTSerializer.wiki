@@ -8,7 +8,7 @@ To make it easier to create serializer plugins for the BIMserver, you can also d
 
 Note: Is is usually a lot easier to start from existing code, have a look at the "Cobie2Serializer" project for example.
 
-1. Follow the [Plugins create a plugin tutorial]
+1. Follow the [Plugins#So_how_to_develop_a_plugin create a plugin tutorial]
 2. Create an xslt file in the plugin-project's root
 3. Change the "TestPlugin" file:
 
