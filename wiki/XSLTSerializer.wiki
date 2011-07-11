@@ -75,6 +75,6 @@ Note: Is is usually a lot easier to start from existing code, have a look at the
 You can pass parameters to the XSLT engine the following way, this is also used in the "Report1Plugin" project. You have to add this code to the init method.
 
 {{{
-		xsltSerializer.addParameter(new XsltParameter("topic", "component"));
+	xsltSerializer.addParameter(new XsltParameter("topic", "component"));
 
 }}}
