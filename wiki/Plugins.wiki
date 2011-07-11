@@ -78,6 +78,7 @@ public interface IfcEnginePlugin extends Plugin {
 = So how to develop a plugin =
 
 _Note: This tutorial assumes you use eclipse, but other IDEs should also work._
+
 _Note: The easiest way to learn is to look how other people have done things, there are quite a few plugins already, so have a look at them._
 
   # Create a new java project for your plugin, for example "PluginTest"
