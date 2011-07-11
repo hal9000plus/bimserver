@@ -29,6 +29,7 @@
    * [Embedding Embedding]
    * [Plugins Plugins]
    * [DeveloperChanges Developer changes]
+   * [XSLTSerializer XSLT Serializer]
  * [ServiceProviders Service Providers]
  * [Known_issues Known issues]
  * [Users Users]
