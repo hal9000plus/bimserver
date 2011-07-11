@@ -28,6 +28,7 @@
    * [UnitTests Unit Tests]
    * [Embedding Embedding]
    * [Plugins Plugins]
+   * [DeveloperChanges Developer changes]
  * [ServiceProviders Service Providers]
  * [Known_issues Known issues]
  * [Users Users]
