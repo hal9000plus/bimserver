@@ -10,6 +10,8 @@ All code is stored in google code's subversion. So after installing Eclipse (the
 
 You can choose to start with the latest version ("/trunk"), or use a branch of a stable version ("/branches/1.0" at the time of writing). Select all projects and rights-click and select "Check Out".
 
+http://bimserver.googlecode.com/svn/wiki/images/checkoutall.png
+
 = Note =
 
 Somehow a strange bug in Eclipse will give compile errors after checking out all projects. The only work around found to fix this is the following:
