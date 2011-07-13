@@ -72,6 +72,8 @@ http://bimserver.googlecode.com/svn/wiki/images/adddependency.png
 	}
 }}}
 
+http://bimserver.googlecode.com/svn/wiki/images/cobieproject.png
+
 = Adding XSLT parameters =
 
 You can pass parameters to the XSLT engine the following way, this is also used in the "Report1Plugin" project. You have to add this code to the init method.
