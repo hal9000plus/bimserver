@@ -1,5 +1,8 @@
 #summary On this page, short summaries of changes relevant to BIMserver (plugin) developers will be posted
 
+= 12-07-2011 =
+One new Eclipse project: "Builds"
+
 = 11-07-2011 =
 
 Three new Eclipse projects in SVN:
