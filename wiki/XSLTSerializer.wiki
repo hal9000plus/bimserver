@@ -10,6 +10,7 @@ Note: Is is usually a lot easier to start from existing code, have a look at the
 
   # Follow the [Plugins#So_how_to_develop_a_plugin create a plugin tutorial]
   # Add a dependancy to the "XsltSerializer" project
+http://bimserver.googlecode.com/svn/wiki/images/adddependancy.png
   # Create an xslt file in the plugin-project's root
   # Change the "TestPlugin" file:
 
