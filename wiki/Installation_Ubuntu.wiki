@@ -26,7 +26,7 @@ Paths can be changed to your liking of course.
 ||chown -R tomcat6 /var/databases||Give the tomcat user access to the database directory||
 ||chown -R tomcat6 /usr/share/tomcat6/webapps||Give Tomcat rights on the webapps directory (this should have already been done||
 
-Eidt /etc/default/tomcat6 (with "nano" for example), change the line with "JAVA_OPTS" to: JAVA_OPTS="-Djava.awt.headless=true -Xmx12G -Xss4096k"
+Edit /etc/default/tomcat6 (with "nano" for example), change the line with "JAVA_OPTS" to: JAVA_OPTS="-Djava.awt.headless=true -Xmx12G -Xss4096k"
 
 The 12G parameter indicates 12GB of heap memory, please adjust to your server (always keep a few hundred megabytes free for your OS).
 
