@@ -1,4 +1,5 @@
 #summary How to create a plugin
+#labels plugins,plugin,serializer,Developerguide
 
 = Introduction =
 
@@ -47,7 +48,7 @@ public interface DeserializerPlugin extends Plugin {
 
 == Guidance Providers ==
 
-A guidance provider helps other code to decide whether to follow a reference or not. This can be used to define subsets of models, based on a given starting point.
+A guidance provider helps other code to decide whether to follow a relation/reference or not. This can be used to define subsets of models, based on a given starting point.
 
 {{{
 public interface GuidanceProviderPlugin extends Plugin {
