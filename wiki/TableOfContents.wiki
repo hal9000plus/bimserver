@@ -25,6 +25,7 @@
    * [IgnoreFiles Ignore Files]
    * [Designs]
      * [Object_level_modifications_design Object level modifications design]
+     * [NotificationsDesign Notifications design]
    * [UnitTests Unit Tests]
    * [Embedding Embedding]
    * [Plugins Plugins]
