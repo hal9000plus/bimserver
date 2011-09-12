@@ -106,3 +106,10 @@ bimServer.getPluginManager().loadPluginsFromEclipseProject(new File("../PluginTe
 Now you can start the BIMserver and your plugin should be available as yet another way to serialize models.
 
 To make your plugin available on deployed BIMservers (either WAR or JAR), you have to create a JAR file of your plugin. It should contain the compiled code, your plugin folder (+plugin.xml), and any required JAR files. The place of jar files doesn't matter, as long as they have the extension ".jar".
+
+= License =
+
+
+The license under which the BIMserver.org software is released is the GPLv3 (or later) from the <a href="http://www.fsf.org/">Free Software Foundation</a>. A copy of the license is included with every copy of BIMserver, but you can also read <a href="http://opensource.org/licenses/GPL-3.0" target="_blank">the text of the license</a> here. Part of this license outlines requirements for derivative works, such as plugins and extensions. Derivatives of BIMserver.org code inherit the GPL license.
+
+There is some legal grey area regarding what is considered a derivative work, but we feel strongly that extensions, plugins, serializers, templates and guidanceproviders are derivative work and thus inherit the GPL license.
