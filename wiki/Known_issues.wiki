@@ -25,5 +25,7 @@ The problem with inverses in IFC is that one can be defined on class "A", refere
 Real IFC Example:
 http://bimserver.googlecode.com/svn/wiki/images/inverseproblem.png
 
+Discussion: http://support.bimserver.org/bimserver/topics/initialization_of_inverse_slots_in_ifcobject_hasassociations
+
 = More issues =
 For more know issues have a look at the issue list: http://code.google.com/p/bimserver/issues/list
