@@ -16,6 +16,13 @@ For OSX:
 For linux:
   * Paths cannot contain any spaces at all
 
+= Inverses =
+
+IFC has the notion of "inverse" relations. EMF has the notion of "opposites", where possible those have been mapped, but it's not always possible so sometimes "inverses" won't work the way you would think.
+
+The problem with inverses in IFC is that one can be defined on class "A", referencing a certain field of type "B" which in turn does not point to the field of type "A", but to a field on a supertype of "A". EMF does not support these kind of opposites.
+
+Example:
 
 = More issues =
 For more know issues have a look at the issue list: http://code.google.com/p/bimserver/issues/list
