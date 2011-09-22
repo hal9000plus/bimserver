@@ -23,7 +23,7 @@ IFC has the notion of "inverse" relations. EMF has the notion of "opposites", wh
 The problem with inverses in IFC is that one can be defined on class "A", referencing a certain field of type "B" which in turn does not point to the field of type "A", but to a field on a supertype of "A". EMF does not support these kind of opposites.
 
 Real Example:
-http://bimserver.googlecode.com/svn/wiki/images/inversesproblem.png
+http://bimserver.googlecode.com/svn/wiki/images/inverseproblem.png
 
 = More issues =
 For more know issues have a look at the issue list: http://code.google.com/p/bimserver/issues/list
