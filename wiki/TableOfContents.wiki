@@ -1,11 +1,13 @@
 #summary BIMserver Documentation
 #labels TableOfContents
 
-=== BIMserver Documentation ===
+=== Index ===
 
  * [Home Home]
  * [features Features]
-   * [http://bimserver.googlecode.com/svn/html/o3d.html WebGL/O3D Demo]
+ * [Use_cases Use Cases]
+   * [Collaborative_engineering Collaborative engineering]
+   * [Modelchecking]
  * [Technical Technical]
    * [Requirements Requirements]
    * [Installation Installation / Settings]
