@@ -1,5 +1,11 @@
 #summary On this page, short summaries of changes relevant to BIMserver (plugin) developers will be posted
 
+= 23-09-2011 =
+
+- O3d project removed
+- Store project removed (content to Emf project)
+- BimCombined project added (for running a BIMserver + BIMWebserver)
+
 = 12-07-2011 =
 One new Eclipse project: "Builds"
 
