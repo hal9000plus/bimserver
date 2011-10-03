@@ -1,6 +1,51 @@
 #summary Info about the license of BIMserver.org.
 #labels License
 
-= Introduction =
+= FAQ =
 
-More information about the license of BIMserver.org can be found on http://bimserver.org/license/
+Information about usage and interpretation of the licenses of BIMserver.org projects can be found on http://bimserver.org/license/
+
+
+= Licenses of projects =
+
+The code repository of BIMserver.org consists of several different projects. Every project has its own license. 
+Some projects are depending on each others code. 
+A list of projects and their license:
+
+BimCombined - AGPL<br/>
+BimServer - AGPL<br/>
+BimServerClientLib - AGPL<br/>
+BimWebServer - GPL<br/>
+buildingSMARTLibrary - AGPL<br/>
+Builds - GPL, AGPL and LGPL (see svn for details)<br/>
+CityGML - AGPL<br/>
+Client - GPL<br/>
+Collada - AGPL<br/>
+Emf - AGPL<br/>
+FileBasedGuidanceProvider - GPL<br/>
+GeneratedPBClient - GPL<br/>
+GeneratedSOAP - GPL<br/>
+Ifc - AGPL<br/>
+IFCEngine - special license (see svn for details)<br/>
+IfcPlugins - AGPL<br/>
+MiscSerializers - GPL<br/>
+Plugins - AGPL<br/>
+Report1Serializer - GPL<br/>
+SceneJS - AGPL<br/>
+Shared - AGPL<br/>
+Store - AGPL<br/>
+TestData - GPL<br/>
+Tests - AGPL<br/>
+TestViewer - GPL <br/>
+Utils - AGPL<br/>
+XsltSerializer - AGPL<br/>
+ExampleSerializer - GPL<br/>
+ExampleDeserializer - GPL<br/>
+
+= Links = 
+
+Information about the different licenses:<br/>
+[http://www.gnu.org/licenses/gpl.html GPL]<br/>
+[http://www.gnu.org/licenses/lgpl.html LGPL]<br/>
+[http://www.gnu.org/licenses/agpl.html AGPL]<br/>
+[http://ifcbrowser.com/ IFCEngine DLL]<br/>
