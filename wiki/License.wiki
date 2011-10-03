@@ -12,40 +12,40 @@ The code repository of BIMserver.org consists of several different projects. Eve
 Some projects are depending on each others code. 
 A list of projects and their license:
 
-BimCombined - AGPL<br/>
-BimServer - AGPL<br/>
-BimServerClientLib - AGPL<br/>
-BimWebServer - GPL<br/>
-buildingSMARTLibrary - AGPL<br/>
-Builds - GPL, AGPL and LGPL (see svn for details)<br/>
-CityGML - AGPL<br/>
-Client - GPL<br/>
-Collada - AGPL<br/>
-Emf - AGPL<br/>
-FileBasedGuidanceProvider - GPL<br/>
-GeneratedPBClient - GPL<br/>
-GeneratedSOAP - GPL<br/>
-Ifc - AGPL<br/>
-IFCEngine - special license (see svn for details)<br/>
-IfcPlugins - AGPL<br/>
-MiscSerializers - GPL<br/>
-Plugins - AGPL<br/>
-Report1Serializer - GPL<br/>
-SceneJS - AGPL<br/>
-Shared - AGPL<br/>
-Store - AGPL<br/>
-TestData - GPL<br/>
-Tests - AGPL<br/>
-TestViewer - GPL <br/>
-Utils - AGPL<br/>
-XsltSerializer - AGPL<br/>
-ExampleSerializer - GPL<br/>
-ExampleDeserializer - GPL<br/>
+|| BimCombined || Affero ||
+|| BimServer || Affero ||
+|| BimServerClientLib || Affero ||
+|| BimWebServer || GPL ||
+|| BuildingSMARTLibrary || Affero ||
+|| Builds || GPL, Affero and LGPL (see svn for details) || 
+|| CityGML || Affero || 
+|| Client || GPL ||
+|| Collada || Affero ||
+|| Emf || Affero ||
+|| FileBasedGuidanceProvider || GPL ||
+|| GeneratedPBClient || GPL ||
+|| GeneratedSOAP ||  GPL ||
+|| Ifc || Affero ||
+|| IFCEngine || special license (see svn for details) ||
+|| IfcPlugins || Affero  ||
+|| MiscSerializers || GPL ||
+|| Plugins || Affero ||
+|| Report1Serializer || GPL ||
+|| SceneJS || Affero ||
+|| Shared || Affero ||
+|| Store || Affero ||
+|| TestData || GPL ||
+|| Tests || Affero ||
+|| TestViewer || GPL  ||
+|| Utils || Affero ||
+|| XsltSerializer || Affero ||
+|| ExampleSerializer || GPL ||
+|| ExampleDeserializer || GPL ||
 
 = Links = 
 
 Information about the different licenses:<br/>
 [http://www.gnu.org/licenses/gpl.html GPL]<br/>
 [http://www.gnu.org/licenses/lgpl.html LGPL]<br/>
-[http://www.gnu.org/licenses/agpl.html AGPL]<br/>
+[http://www.gnu.org/licenses/agpl.html Affero]<br/>
 [http://ifcbrowser.com/ IFCEngine DLL]<br/>
