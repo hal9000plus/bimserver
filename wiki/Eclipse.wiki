@@ -18,11 +18,10 @@ Somehow a strange bug in Eclipse will give compile errors after checking out all
 
  * Go to Window | Preferences
  * Go to Java | Installed JREs
- * Add another JRE/JDK if you not already have more than 1
- * Switch to another JRE/JDK and click OK
+ * Uncheck the selected JRE
+ * Check it again
  * Wait till Eclipse is done compiling
  * Now there should be no compile errors anymore
- * [Optional] switch back to your original JRE/JDK
 
 Note2: Sometimes restarting eclipse apparently fixes thing too.
 
