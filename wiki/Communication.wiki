@@ -5,3 +5,5 @@
 There are several ways, the following image should explain a bit.
 
 = Details =
+
+http://bimserver.googlecode.com/svn/wiki/images/communication.png
