@@ -1,0 +1,7 @@
+#summary How to communicate with the BIMserver
+
+= Introduction =
+
+There are several ways, the following image should explain a bit.
+
+= Details =
