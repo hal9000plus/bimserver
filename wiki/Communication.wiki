@@ -4,6 +4,6 @@
 
 There are several ways, the following image should explain a bit.
 
-= Details =
+The "ServiceInterface" is a java interface that contains all kinds of methods an external application can call (link).
 
 http://bimserver.googlecode.com/svn/wiki/images/communication.png
