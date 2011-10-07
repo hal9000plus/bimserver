@@ -110,6 +110,6 @@ To make your plugin available on deployed BIMservers (either WAR or JAR), you ha
 = License =
 
 
-The license under which the BIMserver.org software is released is the GPLv3 (or later) from the <a href="http://www.fsf.org/">Free Software Foundation</a>. A copy of the license is included with every copy of BIMserver, but you can also read <a href="http://opensource.org/licenses/GPL-3.0" target="_blank">the text of the license</a> here. Part of this license outlines requirements for derivative works, such as plugins and extensions. Derivatives of BIMserver.org code inherit the GPL license.
+The license under which the BIMserver.org software is released is a combination of Affero GPL, GPLv3 and/or LGPL (for binaries) from the GNU project. The different projects in our SVN repository are diffently licensed. More info on that can be found on our wiki.
 
-There is some legal grey area regarding what is considered a derivative work, but we feel strongly that extensions, plugins, serializers, templates and guidanceproviders are derivative work and thus inherit the GPL license.
+Part of this license outlines requirements for derivative works, such as Plugins, GUI (themes), GuidanceProviders and (de)Serializers. Derivatives of BIMserver.org code inherit the Affero and/or GPL license.  There is some legal grey area regarding what is considered a derivative work, but we feel strongly that Plugins, Themes, GuidanceProviders and (de)Serializers are derivative work and thus inherit the Affero or GPL license. If you disagree, you might want to consider a different (open or closed source) project. We suggest some at http://osbim.org/projects/
