@@ -12,10 +12,10 @@ For this reason, the BIMserver comes with a BimServerClientLib, which is a Java 
 
 Below is a short description of how to use the BimServerClientLib.
 
-  1. Make sure you have a running BIMserver (see how to run a bimserver)
-  2. Download the BimServerClientLib and extract it somewhere
-  3. The lib folder contains all BimServerClientLib libraries, the dep directory contains all required dependencies. Copy all JAR files to your development environment and link the JAR files as dependencies.
-  4. The following code is a small example of how to create a project, add a revision and then download the results as IFC-Step, via Protocol Buffers.
+  #. Make sure you have a running BIMserver (see how to run a bimserver)
+  #. Download the BimServerClientLib and extract it somewhere
+  #. The lib folder contains all BimServerClientLib libraries, the dep directory contains all required dependencies. Copy all JAR files to your development environment and link the JAR files as dependencies.
+  #. The following code is a small example of how to create a project, add a revision and then download the results as IFC-Step, via Protocol Buffers.
 {{{
 
 ProtocolBuffersBimServerClientFactory factory = new ProtocolBuffersBimServerClientFactory("localhost", 8020, "admin@bimserver.org", "admin");
