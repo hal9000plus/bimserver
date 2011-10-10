@@ -18,17 +18,18 @@ Below is a short description of how to use the BimServerClientLib.
   4. The following code is a small example of how to create a project, add a revision and then download the results as IFC-Step, via Protocol Buffers.
 {{{
 
-			ProtocolBuffersBimServerClientFactory factory = new ProtocolBuffersBimServerClientFactory("localhost", 8020, "admin@bimserver.org", "admin");
-			BimServerClient bimServerClient = factory.create();
-			SProject addProject = bimServerClient.getServiceInterface().addProject("p" + new Random().nextInt());
-			Session session = bimServerClient.createSession();
+ProtocolBuffersBimServerClientFactory factory = new ProtocolBuffersBimServerClientFactory("localhost", 8020, "admin@bimserver.org", "admin");
+BimServerClient bimServerClient = factory.create();
+SProject addProject = bimServerClient.getServiceInterface().addProject("p" + new Random().nextInt());
+Session session = bimServerClient.createSession();
 
-			session.startTransaction(addProject.getId());
-			IfcProject ifcProject = session.create(IfcProject.class);
-			ifcProject.setName("This is a test");
-			long roid = session.commitTransaction();
-			
-			Integer downloadId = bimServerClient.getServiceInterface().download(roid, "Ifc2x3", true);
-			SDownloadResult downloadData = bimServerClient.getServiceInterface().getDownloadData(downloadId);
-			IOUtils.copy(downloadData.getFile().getInputStream(), new FileOutputStream(new File("model.ifc")));
+session.startTransaction(addProject.getId());
+IfcProject ifcProject = session.create(IfcProject.class);
+ifcProject.setName("This is a test");
+long roid = session.commitTransaction();
+
+Integer downloadId = bimServerClient.getServiceInterface().download(roid, "Ifc2x3", true);
+SDownloadResult downloadData = bimServerClient.getServiceInterface().getDownloadData(downloadId);
+IOUtils.copy(downloadData.getFile().getInputStream(), new FileOutputStream(new File("model.ifc")));
+
 }}}
