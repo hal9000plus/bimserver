@@ -23,7 +23,7 @@ Somehow a strange bug in Eclipse will give compile errors after checking out all
  * Wait till Eclipse is done compiling
  * Now there should be no compile errors anymore
 
-Note2: Sometimes restarting eclipse apparently fixes thing too.
+Note2: Sometimes restarting eclipse apparently fixes things too.
 
 = Running the BIMserver without Web Interface =
 
