@@ -1,0 +1,35 @@
+#summary How to use the BimServerClientLib
+
+= Introduction =
+
+All functions of the BIMserver are externally available through various transport layers (SOAP, ProtocolBuffers, REST), so a developer can create application communicating with the BIMserver in any language.
+
+However, some functionalities of the BIMserver are also very userfull client-side. For example the internal early-binding EMF model.
+
+For this reason, the BIMserver comes with a BimServerClientLib, which is a Java library you can use to connect to a BIMserver.
+
+= Details =
+
+Below is a short description of how to use the BimServerClientLib.
+
+  1. Make sure you have a running BIMserver (see how to run a bimserver)
+  2. Download the BimServerClientLib and extract it somewhere
+  3. The lib folder contains all BimServerClientLib libraries, the dep directory contains all required dependencies. Copy all JAR files to your development environment and link the JAR files as dependencies.
+  4. The following code is a small example of how to create a project, add a revision and then download the results as IFC-Step.
+
+{{{
+
+			ProtocolBuffersBimServerClientFactory factory = new ProtocolBuffersBimServerClientFactory("localhost", 8020, "admin@bimserver.org", "admin");
+			BimServerClient bimServerClient = factory.create();
+			SProject addProject = bimServerClient.getServiceInterface().addProject("p" + new Random().nextInt());
+			Session session = bimServerClient.createSession();
+
+			session.startTransaction(addProject.getId());
+			IfcProject ifcProject = session.create(IfcProject.class);
+			ifcProject.setName("This is a test");
+			long roid = session.commitTransaction();
+			
+			Integer downloadId = bimServerClient.getServiceInterface().download(roid, "Ifc2x3", true);
+			SDownloadResult downloadData = bimServerClient.getServiceInterface().getDownloadData(downloadId);
+			IOUtils.copy(downloadData.getFile().getInputStream(), new FileOutputStream(new File("model.ifc")));
+}}}
