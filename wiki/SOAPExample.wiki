@@ -93,7 +93,6 @@ public enum ResultType
   COLLADA,
   IFC,
   IFCXML,
-  O3D_JSON,
   OBJECT_INFO,
   TEXT,
   KML,

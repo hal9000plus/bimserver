@@ -20,8 +20,7 @@ bimServer.getPluginManager().loadPluginsFromEclipseProject(new File("../CityGML"
 bimServer.getPluginManager().loadPluginsFromEclipseProject(new File("../Collada"));
 bimServer.getPluginManager().loadPluginsFromEclipseProject(new File("../IfcPlugins"));
 bimServer.getPluginManager().loadPluginsFromEclipseProject(new File("../MiscSerializers"));
-bimServer.getPluginManager().loadPluginsFromEclipseProject(new File("../O3d"));
-bimServer.getPluginManager().loadPluginsFromEclipseProject(new File("../IFCEngine"));
+bimServer.getPluginManager().loadPluginsFromEclipseProject(new File("../IfcEngine"));
 bimServer.getPluginManager().loadPluginsFromEclipseProject(new File("../buildingSMARTLibrary"));
 }}}
 
