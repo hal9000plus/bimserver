@@ -20,7 +20,9 @@ The WSDL file will give you the exact URL for the SOAP service, but it is always
 
 = Authentication =
 
-The newest version of the BIMserver is using sessions to remember the user credentials, versions before 1.0 were using a token object as the first parameter of every call which was not optimal.
+The newest version of the BIMserver can use two kinds of session management to remember the user credentials, versions before 1.0 were using a token object as the first parameter of every call which was not optimal.
+
+== HTTP Session Based ==
 
 Make sure to enable session management in your client, otherwise the server won't be able to remember who you are and you will get this message:
 {{{
@@ -38,5 +40,34 @@ client = new BiMserver.ServiceInterfaceService();
 client.CookieContainer = new System.Net.CookieContainer();
 }}}
 
+== SOAP Header Based ==
+
+Some clients won't be able to alter the HTTP Headers, so an alternative is to use the SOAP Header. The BIMserver supports both ways without any server side configuration.
+
+First make a call to the BIMserver "getCurrentToken", this will return a "Token" object which you will have to include in subsequent calls. The SOAP message will have to look like this:
+
+{{{
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+	<soap:Header>
+		<ns2:token xmlns:ns2="uri:org.bimserver">
+			<expires>1318847448012</expires>
+			<tokenString>70230BC83C052A3D1312FC516F9E3F5E</tokenString>
+		</ns2:token>
+	</soap:Header>
+	<soap:Body>
+		<ns2:getAllUsers xmlns:ns2="http://shared.bimserver.org/"
+			xmlns:ns3="uri:org.bimserver" />
+	</soap:Body>
+</soap:Envelope>
+}}}
+
+To enable this kind of functionality in Apache CXF
+{{{
+	Token token = serviceInterface.getCurrentToken();
+	List<Header> headers = new ArrayList<Header>();
+	Header sessionHeader = new Header(new QName("uri:org.bimserver", "token"), token, new JAXBDataBinding(Token.class));
+	headers.add(sessionHeader);
+	((BindingProvider) serviceInterface).getRequestContext().put(Header.HEADER_LIST, headers);
+}}}
 = GeneratedClient =
-From version 1.1, there is a "GeneratedClient" project in SVN. This project contains generated source code based on Apache CXF and the latest BIMserver "ServiceInterface". It's just a convenience project.
+From version 1.1, there is a "GeneratedSoapClient" project in SVN. This project contains generated source code based on Apache CXF and the latest BIMserver "ServiceInterface". It's just a convenience project.
