@@ -11,3 +11,7 @@ Most BIM meta models are described in a file format. As IFC is based on [http://
 = Generating Code =
 
 The EMF framework generates Java classes with the given ECore file, these classes are used to store BIM models and passed to the [Database_internals database layer].
+
+= Caveats =
+
+If you load a model from an IFC-Step file, the String values of floating point numbers are being stored as a String as well. If you change the float values programatically, you should update (or clear) the string value.
