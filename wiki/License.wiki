@@ -22,7 +22,7 @@ A list of projects and their license:
 || Client || GPL ||
 || Collada || Affero ||
 || Emf || Affero ||
-|| FileBasedGuidanceProvider || GPL ||
+|| FileBasedObjectIDM || GPL ||
 || GeneratedPBClient || GPL ||
 || GeneratedSOAP ||  GPL ||
 || Ifc || Affero ||
