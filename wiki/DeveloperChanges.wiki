@@ -1,5 +1,8 @@
 #summary On this page, short summaries of changes relevant to BIMserver (plugin) developers will be posted
 
+= 31-10-2011 =
+Renamed FileBasedGuidanceProvider project to FileBasedObjectIDM
+
 = 23-09-2011 =
 
   * O3d project removed
