@@ -22,10 +22,10 @@ A list of projects and their license:
 || CityGML || AfferoGPLv3 || 
 || Client || GPLv3 ||
 || Collada || AfferoGPLv3 ||
-|| Emf || AfferoGPLv3 ||
+|| [EMF Emf] || AfferoGPLv3 ||
 || FileBasedObjectIDM || GPLv3 ||
-|| GeneratedPBClient || GPLv3 ||
-|| GeneratedSOAP ||  GPLv3 ||
+|| GeneratedProtocolBuffersClient || GPLv3 ||
+|| GeneratedSOAPclient ||  GPLv3 ||
 || Ifc || AfferoGPLv3 ||
 || IFCEngine || special non open source license (see svn for details) ||
 || IfcPlugins || AfferoGPLv3  ||
@@ -42,6 +42,8 @@ A list of projects and their license:
 || XsltSerializer || AfferoGPLv3 ||
 || ExampleSerializer || GPLv3 ||
 || ExampleDeserializer || GPLv3 ||
+
+When license indications on this page or in SVN differ, the SVN (text in code) will prevail. 
 
 = Links = 
 
