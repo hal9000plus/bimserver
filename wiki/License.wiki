@@ -15,7 +15,7 @@ A list of projects and their license:
 
 || BimCombined || AfferoGPLv3 ||
 || BimServer || AfferoGPLv3 ||
-|| BimServerClientLib || AfferoGPLv3 ||
+|| [BimServerClientLib BimServerClientLib] || AfferoGPLv3 ||
 || BimWebServer || GPLv3 ||
 || BuildingSMARTLibrary || AfferoGPLv3 ||
 || Builds || GPL, Affero and LGPL (all 3v) see svn for details! || 
@@ -30,13 +30,13 @@ A list of projects and their license:
 || IFCEngine || special non open source license (see svn for details) ||
 || IfcPlugins || AfferoGPLv3  ||
 || MiscSerializers || GPLv3 ||
-|| Plugins || AfferoGPLv3 ||
+|| [Plugins Plugins] || AfferoGPLv3 ||
 || Report1Serializer || GPLv3 ||
 || SceneJS || AfferoGPLv3 ||
 || Shared || AfferoGPLv3 ||
-|| Store || AfferoGPLv3 ||
+|| [StoreModel Store] || AfferoGPLv3 ||
 || TestData || GPLv3 ||
-|| Tests || AfferoGPLv3 ||
+|| [UnitTests Tests] || AfferoGPLv3 ||
 || TestViewer || GPLv3  ||
 || Utils || AfferoGPLv3 ||
 || XsltSerializer || AfferoGPLv3 ||
