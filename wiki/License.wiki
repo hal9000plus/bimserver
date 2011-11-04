@@ -4,6 +4,7 @@
 = FAQ =
 
 Information about usage and interpretation of the licenses of BIMserver.org projects can be found on http://bimserver.org/license/
+If you have any questions or remarks on the use of BIMserver in your project, please contact [mailto:license@bimserver.org license@bimserver.org]
 
 
 = Licenses of projects =
@@ -12,35 +13,35 @@ The code repository of BIMserver.org consists of several different projects. Eve
 Some projects are depending on each others code. 
 A list of projects and their license:
 
-|| BimCombined || Affero ||
-|| BimServer || Affero ||
-|| BimServerClientLib || Affero ||
-|| BimWebServer || GPL ||
-|| BuildingSMARTLibrary || Affero ||
-|| Builds || GPL, Affero and LGPL (see svn for details) || 
-|| CityGML || Affero || 
-|| Client || GPL ||
-|| Collada || Affero ||
-|| Emf || Affero ||
-|| FileBasedObjectIDM || GPL ||
-|| GeneratedPBClient || GPL ||
-|| GeneratedSOAP ||  GPL ||
-|| Ifc || Affero ||
-|| IFCEngine || special license (see svn for details) ||
-|| IfcPlugins || Affero  ||
-|| MiscSerializers || GPL ||
-|| Plugins || Affero ||
-|| Report1Serializer || GPL ||
-|| SceneJS || Affero ||
-|| Shared || Affero ||
-|| Store || Affero ||
-|| TestData || GPL ||
-|| Tests || Affero ||
-|| TestViewer || GPL  ||
-|| Utils || Affero ||
-|| XsltSerializer || Affero ||
-|| ExampleSerializer || GPL ||
-|| ExampleDeserializer || GPL ||
+|| BimCombined || AfferoGPLv3 ||
+|| BimServer || AfferoGPLv3 ||
+|| BimServerClientLib || AfferoGPLv3 ||
+|| BimWebServer || GPLv3 ||
+|| BuildingSMARTLibrary || AfferoGPLv3 ||
+|| Builds || GPL, Affero and LGPL (all 3v) see svn for details! || 
+|| CityGML || AfferoGPLv3 || 
+|| Client || GPLv3 ||
+|| Collada || AfferoGPLv3 ||
+|| Emf || AfferoGPLv3 ||
+|| FileBasedObjectIDM || GPLv3 ||
+|| GeneratedPBClient || GPLv3 ||
+|| GeneratedSOAP ||  GPLv3 ||
+|| Ifc || AfferoGPLv3 ||
+|| IFCEngine || special non open source license (see svn for details) ||
+|| IfcPlugins || AfferoGPLv3  ||
+|| MiscSerializers || GPLv3 ||
+|| Plugins || AfferoGPLv3 ||
+|| Report1Serializer || GPLv3 ||
+|| SceneJS || AfferoGPLv3 ||
+|| Shared || AfferoGPLv3 ||
+|| Store || AfferoGPLv3 ||
+|| TestData || GPLv3 ||
+|| Tests || AfferoGPLv3 ||
+|| TestViewer || GPLv3  ||
+|| Utils || AfferoGPLv3 ||
+|| XsltSerializer || AfferoGPLv3 ||
+|| ExampleSerializer || GPLv3 ||
+|| ExampleDeserializer || GPLv3 ||
 
 = Links = 
 
