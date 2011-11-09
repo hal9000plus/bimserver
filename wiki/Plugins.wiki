@@ -15,7 +15,6 @@ public interface Plugin {
 	String getDescription(); // A short description of this plugin
 	String getVersion(); // A version, not used for dependencies (yet)
 	boolean isInitialized(); // Should return whether this plugin is successfully initialized
-	Set<Class<? extends Plugin>> getRequiredPlugins(); // Already depricated
 }
 }}}
 
@@ -59,7 +58,7 @@ public interface ObjectIDMPlugin extends Plugin {
 
 == Schema Plugins ==
 
-A schema plugin provides the calling code with information about a schema. There is only one implementation which can read an express schema file.
+A schema plugin provides the calling code with information about a schema. There is currently only one implementation, and that one can read an express schema file.
 
 public interface SchemaPlugin extends Plugin {
 	SchemaDefinition getSchemaDefinition();
@@ -97,10 +96,10 @@ http://bimserver.googlecode.com/svn/wiki/images/newproject.png
 </PluginDescriptor>
 }}}
 
-Now to test your plugin locally you will have to tell the BIMserver where your plugin can be found. Edit "LocalDevBimServerStarter.java" and  look for the lines with loadPluginFromEclipseProject. Add
+Now to test your plugin locally you will have to tell the BIMserver where your plugin can be found. Edit "LocalDevPluginLoader.java" and  look for the lines with loadPluginFromEclipseProject. Add
 
 {{{
-bimServer.getPluginManager().loadPluginsFromEclipseProject(new File("../PluginTest"));
+pluginManager.loadPluginsFromEclipseProject(new File("../PluginTest"));
 }}}
 
 Now you can start the BIMserver and your plugin should be available as yet another way to serialize models.
