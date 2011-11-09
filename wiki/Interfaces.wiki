@@ -23,6 +23,8 @@ A calls deleting objects do not really delete them, admin users can 'undelete' o
 
 = Basic calls =
 
+_Note: More up-to-date documentation of the ServiceInterface can be found as [http://bimserver.googlecode.com/svn/trunk/Shared/doc/org/bimserver/shared/ServiceInterface.html JavaDoc]_
+
 Just a simple call to test the communication, simply returns the given text.
 {{{
 	String ping(String in);
