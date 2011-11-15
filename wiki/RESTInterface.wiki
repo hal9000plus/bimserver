@@ -19,7 +19,7 @@ Adding `?_wadl` to the base URL will give you a WADL document describing the ava
 
 = Available calls (examples) =
 
-== Ping ==
+== ping ==
 URL: http://[pathtobimserver:port]/rest/ping?in=test<br/>
 Content-Type: plain/text<br/>
 Result: The incoming string<br/>
