@@ -13,6 +13,7 @@
    * [GoogleEarthLink Google Earth client link]
  * [Technical Technical]
    * [Requirements Requirements]
+   * [Download Download]
    * [Installation Installation / Settings]
      * [Installation_Ubuntu Installation on Ubuntu]
    * [Interfaces Interfaces]
