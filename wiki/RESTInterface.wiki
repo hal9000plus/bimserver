@@ -36,7 +36,7 @@ URL: http://[pathtobimserver:port]/rest/getAllRevisionsOfProject?poid=20
 Content-Type: application/xml or application/json
 Result: An XML or JSON file describing the revisions of the given project
 
-URL: http://[pathtobimserver:port]/rest/download?roid=120&serializerName=Ifc2x3&sync=true ==
+URL: http://[pathtobimserver:port]/rest/download?roid=120&serializerName=Ifc2x3&sync=true
 Content-Type: plain/text
 Result: A number, which you can use in the next call
 
