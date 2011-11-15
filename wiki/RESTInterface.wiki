@@ -19,9 +19,9 @@ Adding `?_wadl` to the base URL will give you a WADL document describing the ava
 
 = Available calls (examples) =
 
-URL: http://[pathtobimserver:port]/rest/ping?in=test
-Content-Type: plain/text
-Result: The incoming string
+URL: http://[pathtobimserver:port]/rest/ping?in=test<br/>
+Content-Type: plain/text<br/>
+Result: The incoming string<br/>
 
 URL: http://localhost/rest/login?username=[username]&password=[password] 
 Login call, this call is not required when using HTTP AUTH
