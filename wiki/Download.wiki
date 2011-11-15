@@ -8,14 +8,14 @@ A lot of different builds have been added in the past, this page should explain 
 
 Substitute "[version]" with the version, for nightly builds this is something like "nightlybuild-2011-11-15".
 
-|File|Description|
-|bimserver-client-lib-[version].zip|Client library, usable for Java projects that want to connect to a BIMserver|
-|bimserver-client-[version].jar|Client application, very limited, but shows the SOAP messages which can be useful for debugging purposes|
-|bimserver-combined-[version].jar|A runnable JAR file that starts a BIMserver + a BIMWebServer|
-|bimserver-combined-[version].war|A WAR file that has to be deployed in a WebApplicationContainer like Tomcat that starts a BIMserver + a BIMWebServer|
-|bimserver-lib-[version].zip|Server library, useable for Java developers that want to embed a BIMserver in their own application|
-|bimserver-[version].jar|A runnable JAR file that starts a BIMserver, no BIMWebServer included so no GUI|
-|bimserver-[version].war|
-|bimserver-satellite-[version].jar|A runnable JAR file that starts a Satellite server|
-|bimserver-satellite-[version].war|A WAR file that has to be deployed in a WebApplicationContainer like Tomcat that starts a Satellite server|
-|bimserver-source-[version].zip|A zip file containing all source code|
+||File||Description||
+||bimserver-client-lib-[version].zip||Client library, usable for Java projects that want to connect to a BIMserver||
+||bimserver-client-[version].jar||Client application, very limited, but shows the SOAP messages which can be useful for debugging purposes||
+||bimserver-combined-[version].jar||A runnable JAR file that starts a BIMserver + a BIMWebServer||
+||bimserver-combined-[version].war||A WAR file that has to be deployed in a WebApplicationContainer like Tomcat that starts a BIMserver + a BIMWebServer||
+||bimserver-lib-[version].zip||Server library, useable for Java developers that want to embed a BIMserver in their own application||
+||bimserver-[version].jar||A runnable JAR file that starts a BIMserver, no BIMWebServer included so no GUI||
+||bimserver-[version].war||A WAR file that has to be deployed in a WebApplicationContainer like Tomcat that starts a BIMserver, no BIMWebServer included so no GUI||
+||bimserver-satellite-[version].jar||A runnable JAR file that starts a Satellite server||
+||bimserver-satellite-[version].war||A WAR file that has to be deployed in a WebApplicationContainer like Tomcat that starts a Satellite server||
+||bimserver-source-[version].zip||A zip file containing all source code||
