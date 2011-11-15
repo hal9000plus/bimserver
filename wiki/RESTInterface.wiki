@@ -19,27 +19,38 @@ Adding `?_wadl` to the base URL will give you a WADL document describing the ava
 
 = Available calls (examples) =
 
+== Ping ==
 URL: http://[pathtobimserver:port]/rest/ping?in=test<br/>
 Content-Type: plain/text<br/>
 Result: The incoming string<br/>
 
-URL: http://localhost/rest/login?username=[username]&password=[password] 
-Login call, this call is not required when using HTTP AUTH
-Content-Type: plain/text
-Result: "true" or "false"
+== Login ==
 
-URL: http://[pathtobimserver:port]/rest/getAllProjects
-Content-Type: application/xml or application/json
-Result: An XML or JSON file describing all projects the user has rights on
+URL: http://localhost/rest/login?username=[username]&password=[password]<br/>
+Login call, this call is not required when using HTTP AUTH<br/>
+Content-Type: plain/text<br/>
+Result: "true" or "false"<br/>
 
-URL: http://[pathtobimserver:port]/rest/getAllRevisionsOfProject?poid=20 
-Content-Type: application/xml or application/json
-Result: An XML or JSON file describing the revisions of the given project
+== getAllProjects ==
 
-URL: http://[pathtobimserver:port]/rest/download?roid=120&serializerName=Ifc2x3&sync=true
-Content-Type: plain/text
-Result: A number, which you can use in the next call
+URL: http://[pathtobimserver:port]/rest/getAllProjects<br/>
+Content-Type: application/xml or application/json<br/>
+Result: An XML or JSON file describing all projects the user has rights on<br/>
 
-URL: http://[pathtobimserver:port]/rest/getDownloadData?actionId=0
-Content-Type: application/xml or application/json
-Result: An XML or JSON file with a serialized SCheckoutResult object, this contains the serialized data
+== getAllRevisionsOfProject ==
+
+URL: http://[pathtobimserver:port]/rest/getAllRevisionsOfProject?poid=20<br/>
+Content-Type: application/xml or application/json<br/>
+Result: An XML or JSON file describing the revisions of the given project<br/>
+
+== download ==
+
+URL: http://[pathtobimserver:port]/rest/download?roid=120&serializerName=Ifc2x3&sync=true<br/>
+Content-Type: plain/text<br/>
+Result: A number, which you can use in the next call<br/>
+
+== getDownloadData ==
+
+URL: http://[pathtobimserver:port]/rest/getDownloadData?actionId=0<br/>
+Content-Type: application/xml or application/json<br/>
+Result: An XML or JSON file with a serialized SCheckoutResult object, this contains the serialized data<br/>
