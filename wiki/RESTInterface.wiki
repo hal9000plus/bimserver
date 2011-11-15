@@ -24,13 +24,6 @@ URL: http://[pathtobimserver:port]/rest/ping?in=test<br/>
 Content-Type: plain/text<br/>
 Result: The incoming string<br/>
 
-== Login ==
-
-URL: http://localhost/rest/login?username=[username]&password=[password]<br/>
-Login call, this call is not required when using HTTP AUTH<br/>
-Content-Type: plain/text<br/>
-Result: "true" or "false"<br/>
-
 == getAllProjects ==
 
 URL: http://[pathtobimserver:port]/rest/getAllProjects<br/>
