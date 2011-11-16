@@ -46,4 +46,4 @@ Result: A number, which you can use in the next call<br/>
 
 URL: http://[pathtobimserver:port]/rest/getDownloadData?actionId=0<br/>
 Content-Type: application/xml or application/json<br/>
-Result: An XML or JSON file with a serialized SCheckoutResult object, this contains the serialized data<br/>
+Result: An XML or JSON file with a serialized SCheckoutResult object, this contains the serialized data. The actual file is stored in the "file" field and encoded as Base64<br/>
