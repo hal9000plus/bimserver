@@ -6,7 +6,7 @@ The BIMserver has been developed with the Eclipse IDE, of course all code is sta
 
 = Checking out =
 
-All code is stored in google code's subversion. So after installing Eclipse (the latest version as of this writing is 3.7 or Indigo), you will need to install a subversion client, the two most used are Subversive and Subclipse. After installing those you have to select a repository, the URL is: https://bimserver.googlecode.com/svn. You can login anonymously or use a google code username/password, use that if you want to commit code.
+All code is stored in google code's subversion. So after installing Eclipse (the latest version as of this writing is 3.7 or Indigo), you will need to install a subversion client, the two most used are Subversive and Subclipse. After installing those you have to select a repository, the URL is: http://bimserver.googlecode.com/svn. You can login anonymously or use a google code username/password, use that if you want to commit code (beware to use httpS and a generated password if you want to commit; see http://code.google.com/p/bimserver/source/checkout for more info).
 
 You can choose to start with the latest version ("/trunk"), or use a branch of a stable version ("/branches/1.0" at the time of writing). Select all projects and rights-click and select "Check Out".
 
