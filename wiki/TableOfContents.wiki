@@ -21,6 +21,7 @@
      * [SOAP SOAP]
        * [SOAPExample SOAP Example]
      * [RESTInterface REST]
+   * [Faq FAQ]
  * [Developers Developers]
    * [Eclipse Eclipse]
    * [EMF Eclipse Modeling Framework]
