@@ -1,0 +1,5 @@
+#summary Frequently Asked Questions
+
+= Can I copy a BIMserver home directory/database from system X to sytem Y? =
+
+Yes, the BIMserver is platform agnostic, you can migratie from windows to linux, from 32 to 64 bit etc...
