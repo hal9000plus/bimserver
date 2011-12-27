@@ -35,5 +35,12 @@ Discussion: http://support.bimserver.org/bimserver/topics/initialization_of_inve
 And:
 http://support.bimserver.org/bimserver/topics/ifcelement_containedinspatialstructure_inverse_attribute_not_set
 
+= Eclipse/Java 7 =
+Compiling the BIMserver in Eclipse 3.7.1 and then running in Java 7 (update 2) currently generates the following error, which is probably a bug in the eclipse compiler:
+
+{{{
+java.lang.VerifyError: Inconsistent stackmap frames at branch target 196 in method nl.tue.buildingsmart.express.parser.Express2DictWalker.select_list(Lantlr/collections/AST;)Ljava/util/List; at offset 156
+}}}
+
 = More issues =
 For more know issues have a look at the issue list: http://code.google.com/p/bimserver/issues/list
