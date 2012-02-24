@@ -1,0 +1,22 @@
+#summary IFC Encoding
+
+= Introduction =
+
+It's pretty complicated because as I see it, IFC strings are double encoded. I'll try to explain what you probably have concluded yourself, but I'll be posting this on the wiki as well. 
+
+The paragrapth numbers are referring to the documentation of ISO-10303-21, which I can't qoute. 
+
+6.3.3 Basic string stuff 
+Implemented 
+
+6.3.3.1 ISO-8859 
+Not implemented 
+The last part of page 11 desribes the use of 'reverse solidus capital letter P UPPER reverse solidus', followed by 'reverse solidus capital letter S reverse solidus' to indicate the ISO encoding standard to be used (ISO 8859-X) for the rest of the String, of which http://en.wikipedia.org/wiki/ISO/IEC_... seems to support Nordic countries letters. 
+
+6.3.3.2 ISO 10646 
+Not implemented 
+
+6.3.3.3 
+Implemented 
+
+If you can provide a set of IFC files using one of the unimplemented techniques I'll be happy to have a look at it, but without them I can't test it.
