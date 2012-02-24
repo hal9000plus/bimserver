@@ -2,6 +2,8 @@
 
 = Introduction =
 
+Also see [http://support.bimserver.org/bimserver/topics/make_bimserver_harmonize_string_encodings_in_a_bim_project?utm_content=reply_link&utm_medium=email&utm_source=reply_notification#reply_8132322]
+
 It's pretty complicated because as I see it, IFC strings are double encoded. I'll try to explain what you probably have concluded yourself, but I'll be posting this on the wiki as well. 
 
 The paragrapth numbers are referring to the documentation of ISO-10303-21, which I can't qoute. 
