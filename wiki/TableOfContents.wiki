@@ -28,7 +28,7 @@
    * [EMF Eclipse Modeling Framework]
    * [Database_internals Database / Versioning]
    * [StoreModel Store Model]
-   * [Merging Merging]
+   * [Merging Merging and fusion]
    * [Compare Compare]
    * [objectIDM Objectlevel IDM]
    * [Designs]
