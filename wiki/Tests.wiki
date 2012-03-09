@@ -1,0 +1,25 @@
+#summary Summary of tests and examples in the source code repository.
+#labels Developerguide,UserSupport
+
+= Introduction =
+
+Goal of this page is to explain the different tests and examples in the source code repository.
+
+
+= Details =
+
+In the BIMserver code repository you can find a [http://code.google.com/p/bimserver/source/browse/#svn%2Ftrunk%2FTests%2Fsrc%2Forg%2Fbimserver%2Ftests tests directory] in trunk.
+In that code you will find some test scrips and examples. Some of these can be interesting for developers and users.
+This wiki page will explain some of those examples.
+
+= 1 GuidHighlighter Details =
+
+[http://code.google.com/p/bimserver/source/browse/trunk/Tests/src/org/bimserver/tests/GuidHighlighterTester.java GuidHighlighterTester.java] and [http://code.google.com/p/bimserver/source/browse/trunk/Tests/src/org/bimserver/tests/GuidHighlighter.java GuidHighlighter.java] are both part of an example we created for [http://catenda.no Catenda]. It reads a list of IFC Guids from a csv file. During a download of a model, all objects in that model are turned transparant, except the objects with a guid from the csv file.
+
+= 2 Diff Details = 
+
+[http://code.google.com/p/bimserver/source/browse/trunk/Tests/src/org/bimserver/tests/Diff.java Diff.java] compares two IFC models with each other. When the models are the same, this script gives 100% guarantee. When a difference is found, the script stopts and return the error (and does not continue further).
+
+= 3 will follow =
+
+Other explanations of examples from the Tests trunk will follow later... 
