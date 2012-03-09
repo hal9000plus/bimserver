@@ -41,6 +41,7 @@
    * [XSLTSerializer XSLT Serializer]
    * [BimServerClientLib BimServerClientLib]
    * [Communication Communication]
+   * [Tests Example scripts]
    * [Terms Terms]
  * [ServiceProviders Service Providers]
  * [Known_issues Known issues]
