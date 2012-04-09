@@ -42,5 +42,9 @@ Compiling the BIMserver in Eclipse 3.7.1 and then running in Java 7 (update 2) c
 java.lang.VerifyError: Inconsistent stackmap frames at branch target 196 in method nl.tue.buildingsmart.express.parser.Express2DictWalker.select_list(Lantlr/collections/AST;)Ljava/util/List; at offset 156
 }}}
 
+Update on 2012-04-09: According to the Eclipse bugtracking system this bug should be fixed in Eclipse 3.7.2 but I am still getting the error, a workaround has been posted on https://bugs.eclipse.org/bugs/show_bug.cgi?id=362591.
+
+The workaround: Add "-XX:-UseSplitVerifier" when running.
+
 = More issues =
 For more know issues have a look at the issue list: http://code.google.com/p/bimserver/issues/list
