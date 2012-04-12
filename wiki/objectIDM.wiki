@@ -50,6 +50,7 @@ Should be the root element<br/>
 ||Name||Description||Required||Default value||
 ||name||Name of the package||true||none||
 ||default||"include" or "exclude" (Include all classes by default, Exclude all classes by default)||false||"include"||
+||includeinverses||Whether to include inverse relations by default||false||false||
 
 === ClassDefinition ===
 Child of PackageDefinition<br/>
@@ -64,11 +65,13 @@ Child of ClassDefinition<br/>
 ||name||Name of the field||true||none||
 ||follow||"true" or "false" (Follow this reference, Ignore this reference)||false||"true"||
 
+Examples (note: All redundant and optional attributes have been omitted)
+
 Example 1 (include all types, do not follow the "LayerAssignments" and "StyledByItem" references from "Ifc2DCompositeCurve")
 {{{
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?> 
-<PackageDefinition name="Ifc2x3" default="include">
-    <ClassDefinition name="Ifc2DCompositeCurve" include="true" default="follow">
+<PackageDefinition name="Ifc2x3">
+    <ClassDefinition name="Ifc2DCompositeCurve">
         <FieldDefinition name="LayerAssignments" follow="false"/>
         <FieldDefinition name="StyledByItem" follow="false"/>
     </ClassDefinition>
@@ -79,21 +82,21 @@ Example 2 (include no types except IfcProject and IfcOwnerHistory, follow all re
 {{{
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?> 
 <PackageDefinition name="Ifc2x3" default="exclude">
-    <ClassDefinition name="IfcProject" include="true" default="follow"/>
-    <ClassDefinition name="IfcOwnerHistory" include="true" default="follow"/>
+    <ClassDefinition name="IfcProject"/>
+    <ClassDefinition name="IfcOwnerHistory"/>
 </PackageDefinition>
 }}}
 
-Example 3 ()
+Example 3 (This is the default in de BIMserver)
 {{{
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?> 
-<PackageDefinition name="Ifc2x3" default="include">
-    <ClassDefinition name="IfcElement" include="true" default="follow">
+<PackageDefinition name="Ifc2x3">
+    <ClassDefinition name="IfcElement">
         <FieldDefinition name="HasOpenings" follow="true"/>
     </ClassDefinition>
-    <ClassDefinition name="IfcBuildingStorey" include="true" default="follow">
-        <FieldDefinition name="IsDecomposedBy" follow="false"/>
-        <FieldDefinition name="ContainsElements" follow="false"/>
+    <ClassDefinition name="*" origin="IfcBuildingStorey">
+        <FieldDefinition name="IsDecomposedBy" follow="true"/>
+        <FieldDefinition name="ContainsElements" follow="true"/>
     </ClassDefinition>
 </PackageDefinition>
 }}}
