@@ -49,15 +49,15 @@ The objectidm.xml file should be structured the following way:
 Should be the root element<br/>
 ||Name||Description||Required||Default value||
 ||name||Name of the package||true||none||
-||defaultinclude||"include" or "exclude" (Include all classes by default, Exclude all classes by default)||false||"include"||
-||followinverses||Whether to include inverse relations by default||false||"false"||
+||defaultInclude||"include" or "exclude" (Include all classes by default, Exclude all classes by default)||false||"include"||
+||followInverses||Whether to include inverse relations by default||false||"false"||
 
 === ClassDefinition ===
 Child of PackageDefinition<br/>
 ||Name||Description||Required||Default value||
 ||name||Name of the class, can be "*" to indicate all classes in this package||true||none||
 ||include||"true" or "false" (Include this class or not)||false||"true"||
-||defaultfollow||"follow" or "ignore" (Follow all references by default, Ignore all references by default)||false||"follow"||
+||defaultFollow||"follow" or "ignore" (Follow all references by default, Ignore all references by default)||false||"follow"||
 ||origin||This ClassDefinition element is only taken into account when the origin class is the same||false||none||
 
 === FieldDefinition ===
@@ -67,6 +67,9 @@ Child of ClassDefinition<br/>
 ||follow||"true" or "false" (Follow this reference, Ignore this reference)||false||"true"||
 
 When defining fields on a class, the settings for the fields apply to all subclasses of the given class, except when overridden in an explicitly defined subclass.
+
+Precedence rules:
+  * Explicitly defined ClassDefinitions will overrule the defaultInclude settings of PackageDefinition, so if PackageDefinition.defaultInclude = "exclude" and a ClassDefinition is created with no "include" attribute, it wil still be included because the default value of the include attribute within ClassDefinition is "true"
 
 Examples (note: All redundant and optional attributes have been omitted)
 
