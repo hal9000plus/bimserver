@@ -37,3 +37,59 @@ Example (include all furniture + geometry):
 }}}
 
 Beware, in the previous example you cannot just return "eClass == Ifc2x3Package.eINSTANCE.getIfcFurnishingElement()" because only objects of type IfcFurnishingElement will be included but none of the other classes, so for example no geometry will be included.
+
+= For non-developers =
+
+For non-Java developers we have also created an XML based implementation of the ObjectIDM functionality. Checkout the FileBasedObjectIDM project in SVN.
+
+== objectidm.xml ==
+The objectidm.xml file should be structured the following way:
+
+=== PackageDefinition ===
+Should be the root element
+attribute name: Name of the package
+attribute default: "include" or "exclude" (Include all classes by default, Exclude all classes by default)
+
+=== ClassDefinition ===
+Child of PackageDefinition
+attribute name: Name of the class
+attribute default: "follow" or "ignore" (Follow all references by default, Ignore all references by default)
+
+=== FieldDefinition ===
+Child of ClassDefinition
+attribute name: Name of the field
+attribute follow: "true" or "false" (Follow this reference, Ignore this reference)
+
+Example 1 (include all types, do not follow the "LayerAssignments" and "StyledByItem" references from "Ifc2DCompositeCurve")
+{{{
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?> 
+<PackageDefinition name="Ifc2x3" default="include">
+    <ClassDefinition name="Ifc2DCompositeCurve" default="follow">
+        <FieldDefinition name="LayerAssignments" follow="false"/>
+        <FieldDefinition name="StyledByItem" follow="false"/>
+    </ClassDefinition>
+</PackageDefinition>
+}}}
+
+Example 2 (include no types except IfcProject and IfcOwnerHistory, follow all references from both types)
+{{{
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?> 
+<PackageDefinition name="Ifc2x3" default="exclude">
+    <ClassDefinition name="IfcProject" default="follow"/>
+    <ClassDefinition name="IfcOwnerHistory" default="follow"/>
+</PackageDefinition>
+}}}
+
+Example 3 ()
+{{{
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?> 
+<PackageDefinition name="Ifc2x3" default="include">
+    <ClassDefinition name="IfcElement" default="follow">
+        <FieldDefinition name="HasOpenings" follow="true"/>
+    </ClassDefinition>
+    <ClassDefinition name="IfcBuildingStorey" default="follow">
+        <FieldDefinition name="IsDecomposedBy" follow="false"/>
+        <FieldDefinition name="ContainsElements" follow="false"/>
+    </ClassDefinition>
+</PackageDefinition>
+}}}
