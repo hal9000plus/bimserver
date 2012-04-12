@@ -49,15 +49,14 @@ The objectidm.xml file should be structured the following way:
 Should be the root element<br/>
 ||Name||Description||Required||Default value||
 ||name||Name of the package||true||none||
-||defaultInclude||"include" or "exclude" (Include all classes by default, Exclude all classes by default)||false||"include"||
-||followInverses||Whether to include inverse relations by default||false||"false"||
 
 === ClassDefinition ===
 Child of PackageDefinition<br/>
 ||Name||Description||Required||Default value||
 ||name||Name of the class||true||none||
-||include||"true" or "false" (Include this class or not)||false||"true"||
+||include||"true" or "false" (Include this class and all its subclasses or not)||false||"true"||
 ||defaultFollow||"follow" or "ignore" (Follow all references by default, Ignore all references by default)||false||"follow"||
+||followInverses||Whether to include inverse relations by default||false||"false"||
 ||origin||This ClassDefinition element is only taken into account when the origin class is the same||false||none||
 
 === FieldDefinition ===
