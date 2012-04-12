@@ -102,8 +102,10 @@ Also the (inverse) references "IsDecomposedBy" and "ContainsElements" will be fo
     <ClassDefinition name="IfcElement">
         <FieldDefinition name="HasOpenings" follow="true"/>
     </ClassDefinition>
-    <ClassDefinition name="*" origin="IfcBuildingStorey">
+    <ClassDefinition name="IfcObjectDefinition" origin="IfcBuildingStorey">
         <FieldDefinition name="IsDecomposedBy" follow="true"/>
+    </ClassDefinition>
+    <ClassDefinition name="IfcSpatialStructureElement" origin="IfcBuildingStorey">
         <FieldDefinition name="ContainsElements" follow="true"/>
     </ClassDefinition>
 </PackageDefinition>
