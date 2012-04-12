@@ -19,10 +19,10 @@ public interface ObjectIDM {
 
 = shouldFollowReference =
 
-This can be quit tricky, in essense you just have to return whether a certain reference should be followed. The eClass variable contains a reference to the EClass of the object that is currently being evaluated, the originalClass contains a reference to the EClass of the object that is originally queried:
-  * For lazily loaded objects this is always the same as eClass
-  * When getting an object by oid this is the EClass of that object (not necessarily the currently being evaluated object!)
+This can be quite tricky though in essense you just have to return whether a certain reference should be followed or not. The eClass variable contains a reference to the EClass of the object that is currently being evaluated, the originalClass contains a reference to the EClass of the object that is originally queried:
+  * When getting an object by oid/guid this is the EClass of that object (not necessarily the currently being evaluated object!)
   * For getAllOfType queries this will be the EClass of the queried type (actually the type of every found object which could technically be a subtype of the queried type)
+  * For all other cases including lazily loaded objects this is always the same as eClass
 
 = shouldIncludeClass =
 
