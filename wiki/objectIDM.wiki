@@ -55,7 +55,7 @@ Should be the root element<br/>
 === ClassDefinition ===
 Child of PackageDefinition<br/>
 ||Name||Description||Required||Default value||
-||name||Name of the class, can be "*" to indicate all classes in this package||true||none||
+||name||Name of the class||true||none||
 ||include||"true" or "false" (Include this class or not)||false||"true"||
 ||defaultFollow||"follow" or "ignore" (Follow all references by default, Ignore all references by default)||false||"follow"||
 ||origin||This ClassDefinition element is only taken into account when the origin class is the same||false||none||
@@ -87,7 +87,7 @@ Example 1 (include all types, do not follow the "LayerAssignments" and "StyledBy
 Example 2 (include no types except IfcProject and IfcOwnerHistory, follow all references from both types, most won't be followed by the way because the types are not included)
 {{{
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?> 
-<PackageDefinition name="Ifc2x3" default="exclude">
+<PackageDefinition name="Ifc2x3" defaultInclude="exclude">
     <ClassDefinition name="IfcProject"/>
     <ClassDefinition name="IfcOwnerHistory"/>
 </PackageDefinition>
