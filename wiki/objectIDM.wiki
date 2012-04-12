@@ -46,19 +46,19 @@ For non-Java developers we have also created an XML based implementation of the 
 The objectidm.xml file should be structured the following way:
 
 === PackageDefinition ===
-Should be the root element
-attribute name: Name of the package
-attribute default: "include" or "exclude" (Include all classes by default, Exclude all classes by default)
+Should be the root element<br/>
+attribute name: Name of the package<br/>
+attribute default: "include" or "exclude" (Include all classes by default, Exclude all classes by default)<br/>
 
 === ClassDefinition ===
-Child of PackageDefinition
-attribute name: Name of the class
-attribute default: "follow" or "ignore" (Follow all references by default, Ignore all references by default)
+Child of PackageDefinition<br/>
+attribute name: Name of the class<br/>
+attribute default: "follow" or "ignore" (Follow all references by default, Ignore all references by default)<br/>
 
 === FieldDefinition ===
-Child of ClassDefinition
-attribute name: Name of the field
-attribute follow: "true" or "false" (Follow this reference, Ignore this reference)
+Child of ClassDefinition<br/>
+attribute name: Name of the field<br/>
+attribute follow: "true" or "false" (Follow this reference, Ignore this reference)<br/>
 
 Example 1 (include all types, do not follow the "LayerAssignments" and "StyledByItem" references from "Ifc2DCompositeCurve")
 {{{
