@@ -55,7 +55,7 @@ Should be the root element<br/>
 Child of PackageDefinition<br/>
 ||Name||Description||Required||Default value||
 ||name||Name of the class||true||none||
-||include||"true" or "false" (Include this class or not)||false||true||
+||include||"true" or "false" (Include this class or not)||false||"true"||
 ||default||"follow" or "ignore" (Follow all references by default, Ignore all references by default)||false||"follow"||
 
 === FieldDefinition ===
