@@ -1,7 +1,39 @@
-#summary One-sentence summary of this page.
+#summary Description of the ObjectIDM concept
 #labels objectIDM
 
 = Introduction =
 
-Explain objectIDM concept
+To give users and developers the possibility to tweak the objects included in serialized versions of models, the ObjectIDM concept has been introduced in version 1.1. In previous versions of the BIMserver a similar concept called IgnoreFile has been present but those have been superseded by the ObjectIDMs.
 
+= Plugin =
+
+An ObjectIDM is a plugin for the BIMserver. This is the interface:
+
+{{{
+public interface ObjectIDM {
+
+	boolean shouldFollowReference(EClass originalClass, EClass eClass, EStructuralFeature eStructuralFeature);
+	boolean shouldIncludeClass(EClass eClass);
+}
+}}}
+
+= shouldFollowReference =
+
+This can be quit tricky, in essense you just have to return whether a certain reference should be followed. The eClass variable contains a reference to the EClass of the object that is currently being evaluated, the originalClass contains a reference to the EClass of the object that is originally queried:
+  * For lazily loaded objects this is always the same as eClass
+  * When getting an object by oid this is the EClass of that object (not necessarily the currently being evaluated object!)
+  * For getAllOfType queries this will be the EClass of the queried type (actually the type of every found object which could technically be a subtype of the queried type)
+
+= shouldIncludeClass =
+
+You simply decide whether the given eClass should be included or not.
+
+Example (include all furniture + geometry):
+{{{
+	@Override
+	public boolean shouldIncludeClass(EClass eClass) {
+		return !Ifc2x3Package.eINSTANCE.getIfcRoot().isSuperTypeOf(eClass) || eClass == Ifc2x3Package.eINSTANCE.getIfcFurnishingElement(); 
+	}
+}}}
+
+Beware, in the previous example you cannot just return "eClass == Ifc2x3Package.eINSTANCE.getIfcFurnishingElement()" because only objects of type IfcFurnishingElement will be included but none of the other classes, so for example no geometry will be included.
