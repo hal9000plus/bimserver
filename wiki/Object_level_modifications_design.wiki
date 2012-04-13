@@ -6,19 +6,19 @@
 
 Until now the only way to change models in the BIMserver database would be to use the Service Interface (via SOAP for example) and upload new IFC files. Each file would become a new revision in the selected project.
 
-Because IFC files tend to get very large, and usually only a fraction of the model has changed, it would be better to only send the actual changes instead of the complete new situation.
+Because IFC files tend to get very large, and usually only a fraction of the model has changed (and many other reasons), it would be better to only send the actual changes (deltas) instead of the complete new situation.
 
-This page describes the planned implementation of a set of features making this possible.
+This page describes the implementation of a set of features making this possible. We call them 'low level service calls' or 'Object level modifications'.
 
 = Previous ideas / implementations =
 
-A while ago there has been an implementation of ChangeSets, which were xml files describing the changes made with tags like "Addition", "Modification", "Removal". One disadvantage of this would be that a client has to keep track of all changes made, and at the end create a changeset and send it to the server. With this approach concurrent modification of the same object would be detected very late.
+A while ago (in the 0.1 version) there has been an implementation of ChangeSets, which were xml files describing the changes made with tags like "Addition", "Modification", "Removal". One disadvantage of this would be that a client has to keep track of all changes made, and at the end create a changeset and send it to the server. With this approach concurrent modification of the same object would be detected very late.
 
 We have also thought about using the IFC STEP format to describe changes, but because the IFC STEP format is meant for describing complete models it is impossible to reference objects not described in the file without breaking it (not confirming to the rules).
 
-= Current idea =
+= Current implementation =
 
-A second Service Interface will be created, containing the following methods for transaction management:
+A second Service Interface is created, containing the following methods for transaction management:
 
 ||* Method *||* Return type *||* Parameters *||* Description *||
 ||startTransaction||int (transaction id)||None||Start a transaction||
