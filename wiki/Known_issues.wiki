@@ -46,5 +46,11 @@ Update on 2012-04-09: According to the Eclipse bugtracking system this bug shoul
 
 The workaround: Add "-XX:-UseSplitVerifier" when running.
 
+= Select subtype of type enum =
+
+The following is an example, there could be more.
+
+[http://www.steptools.com/support/stdev_docs/express/ifc2x3/html/t_ifcpr-30.html IfcPresentationStyleSelect] has [http://www.steptools.com/support/stdev_docs/express/ifc2x3/html/t_ifcnu-02.html IfcNullStyle] as a 'subtype', but IfcNullStyle is en enum. This is not supported in Java or EMF, files containing this construction will fail to deserialize at the moment.
+
 = More issues =
 For more know issues have a look at the issue list: http://code.google.com/p/bimserver/issues/list
