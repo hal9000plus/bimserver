@@ -21,6 +21,7 @@
      * [SOAP SOAP]
        * [SOAPExample SOAP Example]
      * [RESTInterface REST]
+   * [MemoryUsage Memory Usage]
    * [IFCEncoding IFC Encoding]
    * [FAQ FAQ]
  * [Developers Developers]
