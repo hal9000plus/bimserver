@@ -5,6 +5,10 @@
 
 Some features of the BIMserver software make intense use of the computer memory. We recommend to configure a stack size of 1024KB and a heap size of 2048MB minimum (the higher the better; we recommend 12GB or 16GB for professional use).
 
+You can download a JRE or JDK [http://www.oracle.com/technetwork/java/javase/downloads/index.html here].
+
+For advanced queries you will need to use a JDK, for all other features a JRE will suffice.
+
 = WAR =
 
   * A JRE or JDK 6, update 4 or higher
