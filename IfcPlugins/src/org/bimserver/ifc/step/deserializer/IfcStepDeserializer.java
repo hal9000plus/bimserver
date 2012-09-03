@@ -444,6 +444,16 @@ public class IfcStepDeserializer extends EmfDeserializer {
 			} else if (instanceClass == String.class) {
 				if (value.startsWith("'") && value.endsWith("'")) {
 					String result = value.substring(1, value.length() - 1);
+					// Replace all \\ with \
+					while (result.contains("\\\\")) {
+						int index = result.indexOf("\\\\");
+						result = result.substring(0, index) + "\\" + result.substring(index + 2);
+					}
+					// Replace all '' with '
+					while (result.contains("''")) {
+						int index = result.indexOf("''");
+						result = result.substring(0, index)  + "'" + result.substring(index + 2);
+					}
 					while (result.contains("\\S\\")) {
 						int index = result.indexOf("\\S\\");
 						char x = result.charAt(index + 3);

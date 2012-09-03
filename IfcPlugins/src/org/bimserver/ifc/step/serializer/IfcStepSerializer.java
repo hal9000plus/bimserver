@@ -229,7 +229,11 @@ public class IfcStepSerializer extends IfcSerializer {
 			String stringVal = (String)val;
 			for (int i=0; i<stringVal.length(); i++) {
 				char c = stringVal.charAt(i);
-				if (c <= 126) {
+				if (c == '\'') {
+					out.print("\'\'");
+				} else if (c == '\\') {
+					out.print("\\\\");
+				} else if (c >= 32 && c <= 126) {
 					// ISO 8859-1
 					out.print(c);
 				} else if (c < 255) {
