@@ -2,9 +2,9 @@
 
 = Introduction =
 
-An OID (Object Identifier) is of type long, 64 bits, 8 bytes. OID's are unique within 1 BIMserver instance and incremented for each new objects.
+An OID (Object Identifier) is of type long, 64 bits, 8 bytes. OID's are unique within 1 BIMserver instance and incremented for each new object.
 
-When for example updating an attribute of an object, there is a call which requires the OID of the object, the className (type of the object), the attribute's name and the new value. Giving the className of the object seems quite redundant because you already gave the OID. This is not the case because the BIMserver will need the className to find the right table. The objective for this small project was to try and eleminate the className variable from this and many other calls.
+When, for example, updating an attribute of an object, there is a call which requires the OID of the object, the className (type of the object), the attribute's name and the new value. Giving the className of the object seems quite redundant because you already gave the OID. This is not the case because the BIMserver will need the className to find the right table. The objective for this small project was to try and eleminate the className variable from this and many other calls.
 
 = Encoding =
 
