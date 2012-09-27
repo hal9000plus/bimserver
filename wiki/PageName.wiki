@@ -8,7 +8,7 @@ When, for example, updating an attribute of an object, there is a call which req
 
 = Encoding =
 
-Of the 64 bits in the OID, we can use for example 16 bits to encode the type. This will limit the amount of OID's a server can have from "2^64" to "2^48", but that would still be enough (281474976710656), with this we could support 2^16 (65536) different classes.
+Of the 64 bits in the OID, we can use for example 16 bits to encode the type. This will limit the amount of OID's a server can have from 2^64 to 2^48, but that would still be enough (281474976710656), with this we could support 2^16 (65536) different classes.
 
 When implementing this, we came to the following limitation of the IFC STEP Physical file format: unsiged int, 32bit (max: 4294967296).
 
