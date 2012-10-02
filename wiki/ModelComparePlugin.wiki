@@ -2,12 +2,23 @@
 
 = Introduction =
 
-Add your content here.
-
+A compare plugin basically provides the functionality to the BIMserver to compare 2 models. Comparing has been made pluggable because comparing models is a hard problem in programming and requirements vary a lot.
 
 = Details =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+The plugin just has one method, which returns the actual ModelCompare instance.
+
+{{{
+public interface ModelComparePlugin extends Plugin {
+	ModelCompare createModelCompare() throws ModelCompareException;
+}
+}}}
+
+The model compare instance looks like this:
+
+{{{
+public interface ModelCompare {
+
+	CompareResult compare(IfcModelInterface model1, IfcModelInterface model2, CompareType compareType) throws ModelCompareException;
+}
+}}}
