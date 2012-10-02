@@ -1,12 +1,5 @@
 #summary How to write Serializer plugins
 
-= Introduction =
-
-Add your content here.
-
-
-= Details =
-
 A serializer serializes an object model to a stream of data. Among the default serializers are: IFC2x3, IfcXml, CityGML and others. Most serializers will output a textbased format but that is not required.
 
 Serializer plugins must implement org.bimserver.plugins.serializers.SerializerPlugin interface
