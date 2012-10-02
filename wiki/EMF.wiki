@@ -3,7 +3,7 @@
 
 = Introduction =
 
-Building Information Models (BIM) are typically Object Oriented and tend to be large. For example the Industry Foundations Classes (IFC) have more than one thousand different classes. Because the BIMserver has been written in Java (an Object Oriented Language), it is very usefull to have actual Java classes in the used BIM model (for now, the BIMserver uses IFC internally), this is where the [http://www.eclipse.org/modeling/emf/ Eclipse Modeling Framework (EMF)] comes into play.
+Building Information Models (BIM) are typically Object Oriented and tend to be large. For example the Industry Foundations Classes (IFC) have more than one thousand different classes. Because the BIMserver has been written in Java (an Object Oriented Language), it is very useful to have typed Java classes in the used BIM model. This is where the [http://www.eclipse.org/modeling/emf/ Eclipse Modeling Framework (EMF)] comes into play. For now, the BIMserver uses IFC2x3tc1 internally.
 
 = IFC Schema =
 
