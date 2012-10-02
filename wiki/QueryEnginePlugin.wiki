@@ -1,4 +1,4 @@
-#summary How to write ObjectIDM plugins
+#summary How to write Query engine plugins
 
 = Introduction =
 
