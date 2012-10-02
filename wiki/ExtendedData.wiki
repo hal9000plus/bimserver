@@ -1,0 +1,1 @@
+#summary Extended data can be used to store unstructured data
