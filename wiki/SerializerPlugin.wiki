@@ -7,7 +7,14 @@ Add your content here.
 
 = Details =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+A serializer serializes an object model to a stream of data. Among the default serializers are: IFC2x3, IfcXml, CityGML and others. Most serializers will output a textbased format but that is not required.
+
+Serializer plugins must implement org.bimserver.plugins.serializers.SerializerPlugin interface
+{{{
+public interface SerializerPlugin extends Plugin {
+	EmfSerializer createSerializer(); // The actual method that will create a serializer. Have a look at subclasses of EmfSerializer to see how to build one
+	String getDefaultSerializerName(); // A default name, this user can change this
+	String getDefaultExtension(); // A default extension, the user can change this
+	String getDefaultContentType(); // A default contentType, the user can change this
+}
+}}}
