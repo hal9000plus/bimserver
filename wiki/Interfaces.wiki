@@ -1,5 +1,7 @@
 #summary Ways to interact with the BIMserver
 
+Note: This page describes the version 1.1 and higher of the BIMserver
+
 = Introduction =
 
 All communication with the BIMserver is done through the "Service Interface". This is basically a Java interface with a large collections of methods that can be remotely executed. Because all kinds of languages should be able to communicate with the BIMserver from remote computers, a few different language independent network based protocols have been added:
@@ -9,8 +11,6 @@ All communication with the BIMserver is done through the "Service Interface". Th
 
 This page describes the actual calls in the "Service Interface", please 
 refer to the protocol-specific pages for the actual usage.
-
-Note: This page describes the yet unreleased 1.1 version of the BIMserver
 
 A few parameters are used a lot and always mean the same:
 ||Name||Type||Meaning||
