@@ -1,12 +1,5 @@
 #summary How to write Render engine plugins
 
-= Introduction =
-
-Add your content here.
-
-
-= Details =
-
 An IFC Engine makes it possible to convert an IFC file to triangulated geometry.
 
 {{{
