@@ -1,12 +1,5 @@
 #summary How to write Deserializer plugins
 
-= Introduction =
-
-Add your content here.
-
-
-= Details =
-
 To deserialize a stream of data to an object model.
 
 {{{
@@ -23,3 +16,5 @@ public interface Deserializer {
 	IfcModelInterface read(InputStream inputStream, String fileName, boolean setOids, long fileSize) throws DeserializeException;
 }
 }}}
+
+You can subclass EmfDeserializer so you don't have to implement all methods.
