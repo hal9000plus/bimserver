@@ -21,3 +21,5 @@ public interface ModelMerger {
 	IfcModelInterface merge(Project project, IfcModelSet modelSet, ModelHelper modelHelper) throws MergeException;
 }
 }}}
+
+The returned IfcModelInterface must be a new instance. You cannot move/link objects in the given models in the new model. You have to copy them. The ModelHelper can help you with that. The given Project can be used for more information about the model (units for example). The IfcModelSet contains all the models that should be merged.
