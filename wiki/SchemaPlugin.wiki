@@ -7,7 +7,9 @@ Add your content here.
 
 = Details =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+A schema plugin provides the calling code with information about a schema. There is currently only one implementation, and that one can read an express schema file.
+
+public interface SchemaPlugin extends Plugin {
+	SchemaDefinition getSchemaDefinition();
+	File getExpressSchemaFile();
+}
