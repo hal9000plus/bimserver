@@ -14,3 +14,13 @@ public interface IfcEnginePlugin extends Plugin {
 	IfcEngine createIfcEngine() throws IfcEngineException;
 }
 }}}
+
+{{{
+public interface IfcEngine {
+	IfcEngineModel openModel(File ifcFile) throws IfcEngineException;
+	IfcEngineModel openModel(InputStream inputStream, int size) throws IfcEngineException;
+	IfcEngineModel openModel(byte[] bytes) throws IfcEngineException;
+	void close();
+	void init() throws IfcEngineException;
+}
+}}}
