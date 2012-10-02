@@ -28,3 +28,5 @@ public interface Serializer {
 	void writeToOutputStream(OutputStream outputStream) throws SerializerException;
 }
 }}}
+
+You can subclass EmfSerializer so you don't have to implement all methods.
