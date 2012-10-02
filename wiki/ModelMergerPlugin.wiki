@@ -2,12 +2,22 @@
 
 = Introduction =
 
-Add your content here.
-
+A model merge plugin basically provides the functionality to the BIMserver to merge 2 or more models. Merging has been made pluggable because merging  models is a hard problem in programming and requirements vary a lot.
 
 = Details =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+The plugin just has one method, which returns the actual ModelMerger instance.
+
+{{{
+public interface ModelMergerPlugin extends Plugin {
+	ModelMerger createModelMerger();
+}
+}}}
+
+The model merger instance looks like this:
+
+{{{
+public interface ModelMerger {
+	IfcModelInterface merge(Project project, IfcModelSet modelSet, ModelHelper modelHelper) throws MergeException;
+}
+}}}
