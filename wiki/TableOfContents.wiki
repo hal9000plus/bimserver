@@ -50,6 +50,7 @@
    * [XSLTSerializer XSLT Serializer]
    * [BimServerClientLib BimServerClientLib]
    * [Communication Communication]
+   * [ExtendedData Extended data]
    * [Tests Example scripts]
    * [Terms Terms]
  * [ServiceProviders Service Providers]
