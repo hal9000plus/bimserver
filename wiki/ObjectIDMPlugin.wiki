@@ -1,12 +1,5 @@
 #summary How to write ObjectIDM plugins
 
-= Introduction =
-
-Add your content here.
-
-
-= Details =
-
 An ObjectIDM helps other code to decide whether to follow a relation/reference or not. This can be used to define subsets of models, based on a given starting point.
 
 {{{
