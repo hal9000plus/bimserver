@@ -1,12 +1,5 @@
 #summary How to write Query engine plugins
 
-= Introduction =
-
-Add your content here.
-
-
-= Details =
-
 A Query Engine makes it possible for users to query the BIMserver.
 
 {{{
