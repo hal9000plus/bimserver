@@ -18,7 +18,6 @@ The model compare instance looks like this:
 
 {{{
 public interface ModelCompare {
-
 	CompareResult compare(IfcModelInterface model1, IfcModelInterface model2, CompareType compareType) throws ModelCompareException;
 }
 }}}
