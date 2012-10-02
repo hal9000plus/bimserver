@@ -16,16 +16,16 @@ public void register(ServerDescriptor serverDescriptor, ServiceDescriptor servic
 It's best to register your services in the init method. You have to provide a [ServerDescriptor] and [ServiceDescriptor], here are examples for those:
 
 {{{
-	ServerDescriptor serverDescriptor = StoreFactory.eINSTANCE.createServerDescriptor();
-	serverDescriptor.setTitle("Clashdetection");
+ServerDescriptor serverDescriptor = StoreFactory.eINSTANCE.createServerDescriptor();
+serverDescriptor.setTitle("Clashdetection");
 		
-	ServiceDescriptor clashDetection = StoreFactory.eINSTANCE.createServiceDescriptor();
-	clashDetection.setName("Clashdetection");
-	clashDetection.setDescription("Clashdetection");
+ServiceDescriptor clashDetection = StoreFactory.eINSTANCE.createServiceDescriptor();
+clashDetection.setName("Clashdetection");
+clashDetection.setDescription("Clashdetection");
 		clashDetection.setNotificationProtocol(AccessMethod.INTERNAL);
-	clashDetection.setReadRevision(true);
-	clashDetection.setWriteExtendedData(true);
-	clashDetection.setTrigger(Trigger.NEW_REVISION);
+clashDetection.setReadRevision(true);
+clashDetection.setWriteExtendedData(true);
+clashDetection.setTrigger(Trigger.NEW_REVISION);
 }}}
 
 Example implementation code:
