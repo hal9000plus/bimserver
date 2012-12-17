@@ -43,7 +43,7 @@ When an exception occurs the message looks like this:
 {
   response: {
     exception: {
-      __type: "org.bimserver.shared.exceptions.UserException",
+      __type: "UserException",
       message: "User account has been deleted"
     }
   }
@@ -78,7 +78,7 @@ Notice that the same token is used for all calls. The response looks like this:
     result: "ABCDEF012345567890"
   }, {
     exception: {
-      __type: "org.bimserver.shared.exceptions.UserException",
+      __type: "UserException",
       message: "User account has been deleted"
     }
   }]
