@@ -1,6 +1,6 @@
 #summary Description of the JSON interface.
 
-Note: This documentation is for BIMserver > 1.2
+_Note: This documentation is for BIMserver > 1.2_
 
 The JSON interface is mainly there to facilitate connecting to the BIMserver from web applications/web sites. It is however also very useful when connecting from other applications like for example web servers or BIM/CAD software.
 
@@ -16,13 +16,13 @@ For this purpose we have created a small javascript library, this library is bei
 For every call you should send an HTTP POST request to http://[address+port]/jsonapi. The body of this request should be an UTF-8 encoded JSON message. The structure of this message is the following:
 {{{
 {
+  token: "ABCDEF1234567890",
   request: {
     interface: "ServiceInterface",
     method: "getAllProjects",
     parameters: {
       onlyTopLevel: true
     }
-    token: "ABCDEF1234567890"
   }
 }
 }}}
@@ -51,3 +51,38 @@ When an exception occurs the message looks like this:
 }}}
 
 The "__type" parameters here helps client-side libraries to construct and throw appropriate exception.
+
+= Multiple calls in one request =
+
+Sometimes it's useful to call multiple remote methods in one request. For example in asynchronous languages like javascript you sometimes want to combine the results of multiple calls, which would result in a sequence of chronologically executed calls, resulting in acummulated latency and unreadable code.
+
+{{{
+{
+  token: "ABCDEF1234567890"
+  requests: [{
+    interface: "ServiceInterface",
+    method: "getAllProjects",
+    parameters: {
+      onlyTopLevel: true
+    }
+  }, {
+    ...another call...
+  }]
+}
+}}}
+
+Notice that the same token is used for all calls. The response looks like this:
+{{{
+{
+  responses: [{
+    result: "ABCDEF012345567890"
+  }, {
+    exception: {
+      __type: "org.bimserver.shared.exceptions.UserException",
+      message: "User account has been deleted"
+    }
+  }]
+}
+}}}
+
+In this response the first call executed successfully, and the second call failed. Note that all responses have the same array index as their corresponding request objects.
