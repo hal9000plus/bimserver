@@ -1,5 +1,7 @@
 #summary Description of the REST-like interface
 
+_Note: REST access has been removed in BIMserver 1.2, use JSON instead_ 
+
 = Introduction =
 
 Apart from the SOAP interface, a simple REST interface is available, this page describes how to use it.
