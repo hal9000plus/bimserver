@@ -1,6 +1,6 @@
 #summary How to use eclipse for BIMserver development
 
-_Updated for v1.2 on 07-01-2013_
+_Note: Updated for version 1.2_
 
 = Introduction =
 
@@ -27,6 +27,6 @@ Somehow a strange bug in Eclipse will give compile errors after checking out all
 
 Note2: Sometimes restarting eclipse apparently fixes things too.
 
-= Running the BIMserver without Web Interface =
+= Running the BIMserver from Eclipse =
 
 To run the BIMserver from eclipse, right click the BimServer project, select "Run As" and then "Java Application", eclipse will look for classes with main methods, you have to select "LocalDevBimServerStarter", which is in the package "org.bimserver".
