@@ -1,23 +1,11 @@
 #summary IFC Encoding
 
+_Note: Updated for version 1.2_
+
 = Introduction =
 
+As of version 1.2, all types of String encoding are supported by the IfcStepSerializer and IfcStepDeserializer.
+
 Also see [http://support.bimserver.org/bimserver/topics/make_bimserver_harmonize_string_encodings_in_a_bim_project?utm_content=reply_link&utm_medium=email&utm_source=reply_notification#reply_8132322]
-
-IFC strings are double encoded, for the file encoding/decoding UTF-8 is being used (which is also used in the BIMserver database)
-
-The paragrapth numbers are referring to the documentation of ISO-10303-21, which I can't qoute here. 
-
-6.3.3 Basic string stuff (Implemented)
-
-6.3.3.1 ISO-8859  (Half implemented)
-
-The first two paragraphs have been implemented, the third has not. ISO-8859-1 will be assumed when \S\ or \X\ is used.
-
-The last part of page 11 desribes the use of 'reverse solidus capital letter P UPPER reverse solidus', followed by 'reverse solidus capital letter S reverse solidus' to indicate the ISO encoding standard to be used (ISO 8859-X) for the rest of the String, this has not been implemented.
-
-6.3.3.2 ISO 10646 (Not implemented)
-
-6.3.3.3 (Implemented)
 
 Further development of the serializers/deserializers encoding/decoding depends on the availability of test files, so if you have problems with certain files, please contact us.
