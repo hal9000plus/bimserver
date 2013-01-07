@@ -6,4 +6,20 @@ _Note: Updated for version 1.2_
 
 To connect to a BIMserver you can use one of the 3 protocols: SOAP, JSON or Protocol Buffers. To make connecting to a BIMserver even easier, there also is a Java library you can use.
 
-= Details =
+= Example connecting via SOAP with authentication, and listing all projects =
+
+{{{
+		BimServerClient bimServerClient = new BimServerClient("http://localhost:8080");
+		bimServerClient.setAuthentication(new UsernamePasswordAuthenticationInfo("admin@bimserver.org", "admin")); 
+		try {
+			bimServerClient.connectSoap();
+			List<SProject> allProjects = bimServerClient.getServiceInterface().getAllProjects(true);
+			System.out.println(allProjects);
+		} catch (ChannelConnectionException e) {
+			e.printStackTrace();
+		} catch (ServerException e) {
+			e.printStackTrace();
+		} catch (UserException e) {
+			e.printStackTrace();
+		}
+}}}
