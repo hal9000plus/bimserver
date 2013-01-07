@@ -1,9 +1,11 @@
 #summary System requirements for running a BIMserver
 #labels Requirements,Deploy
 
+_Note: Updated for version 1.2_
+
 = Introduction =
 
-Some features of the BIMserver software make intense use of the computer memory. We recommend to configure a stack size of 1024KB and a heap size of 2048MB minimum (the higher the better; we recommend 12GB or 16GB for professional use).
+The amount of required heap memory depends on the size of your models. A rule of thumb is that you need about 15 times the size of the largest (unzipped) IFC file you want to be able to upload.
 
 You can download a JRE or JDK [http://www.oracle.com/technetwork/java/javase/downloads/index.html here].
 
