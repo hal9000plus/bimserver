@@ -52,6 +52,7 @@
    * [BimServerClientLib BimServerClientLib]
    * [Communication Communication]
    * [ExtendedData Extended data]
+   * [BimServerClient BimServerClient]
    * [Tests Example scripts]
    * [Terms Terms]
  * [ServiceProviders Service Providers]
