@@ -12,4 +12,4 @@ See [http://docs.oracle.com/cd/E17277_02/html/java/com/sleepycat/je/EnvironmentM
 
 = Compressed Oops =
 
-Running a 64bit system with less than 32GB of memory, you can use [http://docs.oracle.com/javase/7/docs/technotes/guides/vm/performance-enhancements-7.html#compressedOop Compressed Ooops]
+Running a 64bit system with less than 32GB of memory, you can use [http://docs.oracle.com/javase/7/docs/technotes/guides/vm/performance-enhancements-7.html#compressedOop Compressed Ooops]. Addition: This is by default enabled on recent OpenJDK 6 and 7 implementations.
