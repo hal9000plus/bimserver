@@ -49,7 +49,6 @@
      * [ServicePlugin Service plugins]
    * [DeveloperChanges Developer changes]
    * [XSLTSerializer XSLT Serializer]
-   * [BimServerClientLib BimServerClientLib]
    * [Communication Communication]
    * [ExtendedData Extended data]
    * [BimServerClient BimServerClient]
