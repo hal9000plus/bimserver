@@ -1,6 +1,8 @@
 #summary How to install or run your own BIMserver
 #labels Deploy,UserSupport
 
+_Note: Updated for version 1.2_
+
 = Introduction =
 
 The BIMserver comes in two different versions, both are functionally the same:
@@ -25,32 +27,13 @@ _Note for OSX users: You can change the default JVM under Applications | Utiliti
 
 ||Settings||Meaning||
 ||JVM||Allows for a JVM other than the default JVM to be selected||
+||Home directory||Location of the home directory, this is where the database, log files etc... are stored||
 ||Address||The address the server will be binding on, if you want the BIMserver to be available on other machines than your own, you will have to change this to a real IP address||
 ||Port||The port must be free, and the firewall must be configured to allow listening on this port||
-||Heap size||The amount of heap memory appointed to the instance JVM of the BIMserver, more heap means larger models can be stored/retrieved. The amount of heap is limited by the amount of memory available on your machine, but be sure to always save a few hundred of MB's to your OS and other applications. On 32-bit Windows computers, the limit is around 1500MB||
+||Max heap size||The amount of heap memory appointed to the instance JVM of the BIMserver, more heap means larger models can be stored/retrieved. The amount of heap is limited by the amount of memory available on your machine, but be sure to always save a few hundred of MB's to your OS and other applications. On 32-bit Windows computers, the limit is around 1500MB||
+||Max Perm Size||256MB should be enough, if you are deploying a lot of plugins you might need more||
 ||Stack size||The amount of stack size available for every thread, you are probably not ever going to need more than 2MB. With a stack size that is too low, you will probably be getting StackOverflowError messages||
 
 = WAR =
 
-
-= Settings =
-
-The settings page is the same for the JAR and WAR builds. You can get to the settings screen by logging on to the web interface as an Administrator and clicking "Settings" in the top right corner of the screen.
-
-Only the SMTP server setting is required for full functionality, in most cases where e-mail is not working, this has not been set.
-
-= Basic Settings =
-
-||Settings||Description||
-||Extra information when registering||A customized message, shown to users registering themselves||
-||Send confirmation e-mail after registering||Whether to send an e-mail message to users after they registered themselves||
-||Allow self registration||Whether people can register themselves||
-||Address of e-mail sender||The e-mail address used by the BIMserver when sending e-mail messages that are not sent by a BIMserver user with a valid e-mail address as username||
-||SMTP server (for outgoing e-mail)||The SMTP server used for outgoing e-mail||
-||Database location||Location of the database, can be absolute or relative||
-||Automatic clash detection on main projects||Clashes are being detected after each checkin on all projects||
-||Allow non-admin users to create projects||This setting overrules the rights management system||
-||Show whether a new version is available||Check a central server for newer versions and notify Administrator users with a message on screen||
-||Intelligent merging||Merges objects with the same GUID on multi-revisions downloads||
-||Custom logo address||Address of the logo image||
-||Enabled export types||Which types are enabled for download||
+Copy the .war file to the appropriate place in you application server.
