@@ -1,7 +1,7 @@
 #summary Information for BIMserver developers.
 
-Note: This page describes the current state of things in SVN HEAD (04-04-2011).
+Note: Updated for version 1.2
 
 = Default user =
 
-To speed up development, the BIMserver will create a default admin user with the username "admin@bimserver.org" and password "admin", also the SMTP server will be initialized with "localhost". On non-development machines the server will start in "SETUP" mode, meaning the user will see a page where he/she can setup the server including an admin user.
+To speed up development, the BIMserver will (when running in your IDE by executing LocalDevBimServerStarter) create a default admin user with the username "admin@bimserver.org" and password "admin", also the SMTP server will be initialized with "localhost". On non-development machines the server will start in "SETUP" mode, meaning the user will see a page where he/she can setup the server including an admin user.
