@@ -17,11 +17,11 @@ Of course you can also use the client from source code, in that case download a 
 = Example connecting via SOAP with authentication, and listing all projects =
 
 {{{
-					// Create a BimServerClientFactory, change Json to ProtocolBuffers or Soap if you like
-			BimServerClientFactory factory = new JsonBimServerClientFactory("http://localhost:8080");
+	// Create a BimServerClientFactory, change Json to ProtocolBuffers or Soap if you like
+	BimServerClientFactory factory = new JsonBimServerClientFactory("http://localhost:8080");
 			
-			// Create a new BimServerClient with authentication
-			BimServerClient bimServerClient = factory.create(new UsernamePasswordAuthenticationInfo("admin@bimserver.org", "admin"));
+	// Create a new BimServerClient with authentication
+	BimServerClient bimServerClient = factory.create(new UsernamePasswordAuthenticationInfo("admin@bimserver.org", "admin"));
 
 }}}
 
