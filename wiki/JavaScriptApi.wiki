@@ -1,0 +1,36 @@
+#summary How to use the BIMserver JavaScript API
+
+= Introduction =
+
+To make communication with the BIMserver easier we have made a simple API library you can use. Of course you can also implement your own API in JavaScript.
+
+= Requirements =
+
+The API is just one file: bimserverapi.js. You can find it on http://[addressofyourserver]:[port]/js/bimserverapi.js. You can copy it to your own project, but make sure you update the file when you update your BIMserver. There are a few dependencies, which are also on the BIMserver: "sha256.js" for encryption, "String.js" for some additional String manipulation functions, "jquery.cookie.js" for cookie functionality and   "jquery-1.8.2.min.js" as well. For some browsers not supporting "forEach" on arrays you might also need "array.js".
+
+= Communication =
+
+The JavaScript API will communicate via JSON for most of the functions. Only downloading and uploading will sometimes be done without using JSON for performance reasons.
+
+= Bootstrapping =
+
+Here is a little code snippet to bootstrap loading a BimServerApi. The notifier object should have the "error" method. The callback will be called on success.
+{{{
+function loadBimServerApi(address, notifier, callback) {
+	var timeoutId = window.setTimeout(function() {
+		notifier.error("Could not connect");
+	}, 3000);
+	$.getScript(address + "/js/bimserverapi.js").done(function(){
+		window.clearTimeout(timeoutId);
+		Global.bimServerApi = new BimServerApi(address, notifier);
+		Global.bimServerApi.init(function(){
+			Global.bimServerApi.call("ServiceInterface", "getServerInfo", {}, function(serverInfo){
+				callback(serverInfo);
+			});
+		});
+	}).fail(function(jqxhr, settings, exception){
+		window.clearTimeout(timeoutId);
+		notifier.error("Could not connect");
+	});
+}
+}}}
