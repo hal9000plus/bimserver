@@ -61,9 +61,7 @@ All methods in the [http://tools.bimtoolset.org/BIMserver/nightly%20build%20java
 
 {{{
 	bimServerApi.login(username, password, rememberme, function(data){
-		if (data.oke) {
-			// Success
-		}
+		// Success
 	});
 }}}
 
