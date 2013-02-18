@@ -57,7 +57,7 @@ When you use the above snippet, you will get a "serverInfo" object back in the c
 
 = Using the API =
 
-All methods in the [ServiceInterface] can be called. You must always use all parameters that are defined. Also when sending complex objects, you should define all the properties of the objects. The first call you will usually do is to login.
+All methods in the [ServiceInterface http://tools.bimtoolset.org/BIMserver/nightly%20build%20javadoc/org/bimserver/shared/interfaces/ServiceInterface.html] can be called. You must always use all parameters that are defined. Also when sending complex objects, you should define all the properties of the objects. The first call you will usually do is to login.
 
 {{{
 	bimServerApi.login(username, password, rememberme, function(data){
