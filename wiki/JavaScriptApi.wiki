@@ -34,3 +34,23 @@ function loadBimServerApi(address, notifier, callback) {
 	});
 }
 }}}
+
+When you use the above snippet, you will get a "serverInfo" object back in the callback, this will indicate the state of the running BIMserver:
+{{{
+			if (serverInfo.serverState == "NOT_SETUP") {
+				// The server has not yet been setup, maybe your GUI can provide a way of doing this
+			} else if (serverInfo.serverState == "UNDEFINED") {
+				// This should never happen...
+			} else if (serverInfo.serverState == "MIGRATION_REQUIRED") {
+				// Migration is required before the BIMserver can function again, maybe you GUI can provide a way of doing this
+			} else if (serverInfo.serverState == "MIGRATION_IMPOSSIBLE") {
+				// There is no migration possible from the current database to the BIMserver version you are using, remove your database, or rollback to a previous version of BIMserver
+			} else if (serverInfo.serverState == "FATAL_ERROR") {
+				// Something fatal has occured, usually this has to do with limited resources such as memory or harddisk space
+			} else if (serverInfo.serverState == "RUNNING") {
+				var username = $("#inputEmail").val()
+				Global.bimServerApi.login(username, $("#inputPassword").val(), $("#rememberMe").is(":checked"), function(data){
+					// Success, we can nog login if we want
+				});
+			}
+}}}
