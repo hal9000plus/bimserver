@@ -52,6 +52,7 @@
    * [Communication Communication]
    * [ExtendedData Extended data]
    * [BimServerClient BimServerClient]
+   * [JavaScriptApi JavaScript API]
    * [Tests Example scripts]
    * [Terms Terms]
  * [ServiceProviders Service Providers]
