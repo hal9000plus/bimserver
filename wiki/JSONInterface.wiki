@@ -11,6 +11,8 @@ For this purpose we have created a small javascript library, this library is bei
   var bimServerApi = new BimServerApi("http://examplebimserver:port");
 }}}
 
+Have a look at [http://code.google.com/p/bimserver/wiki/JavaScriptApi JavaScriptApi] page for more details on the JavaScriptApi.
+
 = Connecting from non-javascript applications =
 
 For every call you should send an HTTP POST request to http://[address+port]/jsonapi. The body of this request should be an UTF-8 encoded JSON message. The structure of this message is the following:
