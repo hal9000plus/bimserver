@@ -1,19 +1,19 @@
-#summary How to write Render engine plugins
+#summary How to write Render Engine plugins
 
-An IFC Engine makes it possible to convert an IFC file to triangulated geometry.
+A Render Engine makes it possible to convert an IFC file to triangulated geometry.
 
 {{{
-public interface IfcEnginePlugin extends Plugin {
-	IfcEngine createIfcEngine() throws IfcEngineException;
+public interface RenderEnginePlugin extends Plugin {
+	RenderEngine createIfcEngine(PluginConfiguration pluginConfiguration) throws RenderEngineException;
 }
 }}}
 
 {{{
-public interface IfcEngine {
-	IfcEngineModel openModel(File ifcFile) throws IfcEngineException;
-	IfcEngineModel openModel(InputStream inputStream, int size) throws IfcEngineException;
-	IfcEngineModel openModel(byte[] bytes) throws IfcEngineException;
+public interface RenderEngine {
+	RenderEngineModel openModel(File ifcFile) throws RenderEngineException;
+	RenderEngineModel openModel(InputStream inputStream, int size) throws RenderEngineException;
+	RenderEngineModel openModel(byte[] bytes) throws RenderEngineException;
 	void close();
-	void init() throws IfcEngineException;
+	void init() throws RenderEngineException;
 }
 }}}
