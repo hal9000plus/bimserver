@@ -15,7 +15,7 @@ Have a look at the [http://code.google.com/p/bimserver/wiki/JavaScriptApi JavaSc
 
 = Connecting from non-javascript applications =
 
-For every call you should send an HTTP POST request to http://[address+port]/jsonapi. The body of this request should be an UTF-8 encoded JSON message. The structure of this message is the following:
+For every call you should send an HTTP POST request to http://[address+port]/json. The body of this request should be an UTF-8 encoded JSON message. The structure of this message is the following:
 {{{
 {
   token: "ABCDEF1234567890",
