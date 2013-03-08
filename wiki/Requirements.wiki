@@ -14,7 +14,7 @@ For advanced queries you will need to use a JDK, for all other features a JRE wi
 = WAR =
 
   * A JRE or JDK 6, update 4 or higher
-  * A Servlet Specification 2.5 or higher based Container (Tomcat 6 or higher, Jetty 6 or higher)
+  * A Servlet Specification 3.0 or higher based Container (Tomcat 7 or higher, Jetty 8 or higher)
 
 = JAR =
   * A JRE or JDK 6, update 4 or higher
