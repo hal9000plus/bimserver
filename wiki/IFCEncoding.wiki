@@ -4,8 +4,16 @@ _Note: Updated for version 1.2_
 
 = Introduction =
 
-As of version 1.2, all types of String encoding are supported by the IfcStepSerializer and IfcStepDeserializer.
+As of version 1.2, all types of STEP's String encoding are supported by the IfcStepSerializer and IfcStepDeserializer.
 
 Also see [http://support.bimserver.org/bimserver/topics/make_bimserver_harmonize_string_encodings_in_a_bim_project?utm_content=reply_link&utm_medium=email&utm_source=reply_notification#reply_8132322]
 
 Further development of the serializers/deserializers encoding/decoding depends on the availability of test files, so if you have problems with certain files, please contact us.
+
+= Differences =
+For certain characters, multiple different ways of encoding are possible in the STEP standard. BIMserver internally stores all string as UTF-8. BIMserver uses:
+* For 32-126: ISO 8859-1
+* For <255: ISO 10646 / ISO 8859-1 (the same for <255)
+* The rest: UCS-2 or UCS-4, depending on the character
+
+So in certain cases IFC files won't come out of the BIMserver the same as they went in.
