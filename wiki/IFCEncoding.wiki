@@ -17,4 +17,4 @@ For certain characters, multiple different ways of encoding are possible in the 
   * For <255: ISO 10646 / ISO 8859-1 (the same for <255)
   * The rest: UCS-2 or UCS-4, depending on the character
 
-So in certain cases IFC objects from files that are checkedout from BIMserver will be in a different encoding that in the files that were used during checkin. Semantically they hold the same information and after encoding the same characters should show up.
+So in certain cases IFC strings from data that comes out of BIMserver will be in different encoding than the strings during checkin. Semantically they hold the same information and the same characters should show up in the viewing application.
