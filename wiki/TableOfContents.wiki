@@ -20,6 +20,7 @@
      * [ProtocolBuffers Protocol Buffers]
      * [SOAP SOAP]
        * [SOAPExample SOAP Example]
+     * [SOAPV2 SOAPV2]
      * [JSONInterface JSON]
      * [RESTInterface REST (removed)]
    * [MemoryUsage Memory Usage]
