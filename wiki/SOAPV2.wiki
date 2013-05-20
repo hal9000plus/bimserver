@@ -19,6 +19,8 @@ _port_ can be omitted (80) or an integer
 ||_protocol_://_address_:_port_/_soapversion_/LowLevelInterface||
 ||_protocol_://_address_:_port_/_soapversion_/RegistryInterface||
 
+Example WSDL URL: http://localhost:8080/soap12/ServiceInterface?wsdl
+
 = SOAP Stack =
 
 To use SOAP you will need to have a "SOAP Stack" for your programming language. A SOAP Stack is just a library containing all the logic for the SOAP protocol. For most programming languages there are multiple, so it's up to you to choose one.
