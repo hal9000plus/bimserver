@@ -5,9 +5,9 @@
 External applications can interact with the BIMserver via SOAP (and [Interfaces other protocols]). For SOAP you'll need a WSDL file which describes all the methods/objects that are available. The BIMserver provides several interfaces and two versions of SOAP.
 
 _soapversion_ can be either "soap11" or "soap12".<br/>
-_protocol_ can be either "http" or "https"
-_address_ can be an IP address or (sub)domain name
-_port_ can be omitted (80) or an integer
+_protocol_ can be either "http" or "https".<br/>
+_address_ can be an IP address or (sub)domain name.<br/>
+_port_ can be omitted (80) or an integer.<br/>
 
 ||URL||
 ||_protocol_://_address_:_port_/_soapversion_/ServiceInterface||
