@@ -4,20 +4,20 @@
 
 External applications can interact with the BIMserver via SOAP (and [Interfaces other protocols]). For SOAP you'll need a WSDL file which describes all the methods/objects that are available. The BIMserver provides several interfaces and two versions of SOAP.
 
-[soapversion] can be either "soap11" or "soap12".
-[protocol] can be either "http" or "https"
-[address] can be an IP address or (sub)domain name
-[port] can be omitted (80) or an integer
+_soapversion_ can be either "soap11" or "soap12".
+_protocol_ can be either "http" or "https"
+_address_ can be an IP address or (sub)domain name
+_port_ can be omitted (80) or an integer
 
 ||URL||
-||[protocol]://[address][port]/[soapversion]/ServiceInterface||
-||[protocol]://[address][port]/[soapversion]/AuthInterface||
-||[protocol]://[address][port]/[soapversion]/SettingsInterface||
-||[protocol]://[address][port]/[soapversion]/AdminInterface||
-||[protocol]://[address][port]/[soapversion]/MetaInterface||
-||[protocol]://[address][port]/[soapversion]/PluginInterface||
-||[protocol]://[address][port]/[soapversion]/LowLevelInterface||
-||[protocol]://[address][port]/[soapversion]/RegistryInterface||
+||_protocol_://_address__port_/_soapversion_/ServiceInterface||
+||_protocol_://_address][port]/[soapversion]/AuthInterface||
+||_protocol_://_address][port]/[soapversion]/SettingsInterface||
+||_protocol_://_address][port]/[soapversion]/AdminInterface||
+||_protocol_://_address][port]/[soapversion]/MetaInterface||
+||_protocol_://_address][port]/[soapversion]/PluginInterface||
+||_protocol_://_address_[port]/[soapversion]/LowLevelInterface||
+||_protocol_://_address_[port]/[soapversion]/RegistryInterface||
 
 = SOAP Stack =
 
