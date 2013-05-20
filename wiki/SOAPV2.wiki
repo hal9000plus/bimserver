@@ -10,14 +10,14 @@ _address_ can be an IP address or (sub)domain name
 _port_ can be omitted (80) or an integer
 
 ||URL||
-||_protocol_://_address__port_/_soapversion_/ServiceInterface||
-||_protocol_://_address][port]/[soapversion]/AuthInterface||
-||_protocol_://_address][port]/[soapversion]/SettingsInterface||
-||_protocol_://_address][port]/[soapversion]/AdminInterface||
-||_protocol_://_address][port]/[soapversion]/MetaInterface||
-||_protocol_://_address][port]/[soapversion]/PluginInterface||
-||_protocol_://_address_[port]/[soapversion]/LowLevelInterface||
-||_protocol_://_address_[port]/[soapversion]/RegistryInterface||
+||_protocol_://_address_:_port_/_soapversion_/ServiceInterface||
+||_protocol_://_address_:_port_/_soapversion_/AuthInterface||
+||_protocol_://_address_:_port_/_soapversion_/SettingsInterface||
+||_protocol_://_address_:_port_/_soapversion_/AdminInterface||
+||_protocol_://_address_:_port_/_soapversion_/MetaInterface||
+||_protocol_://_address_:_port_/_soapversion_/PluginInterface||
+||_protocol_://_address_:_port_/_soapversion_/LowLevelInterface||
+||_protocol_://_address_:_port_/_soapversion_/RegistryInterface||
 
 = SOAP Stack =
 
