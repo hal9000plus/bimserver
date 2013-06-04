@@ -14,6 +14,7 @@
  * [Technical Technical]
    * [Requirements Requirements]
    * [Download Download]
+   * [Security Security]
    * [Installation Installation / Settings]
      * [Installation_Ubuntu Installation on Ubuntu]
    * [Interfaces Interfaces]
