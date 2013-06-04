@@ -1,8 +1,8 @@
 #summary How to secure your BIMserver
 
-Note: For BIMserver 1.2
+_Note: For BIMserver 1.2_
 
-= JVM security manager =
+= JVM Security Manager =
 
 Most application containers (like Tomcat) actually say they haven't tested a lot with security managers, so expect weird errors.
 
@@ -10,11 +10,11 @@ Below is a list of permissions you have to add to make BIMserver work, this list
 
 {{{
 grant {
-	// Read only file permissions on eclipse workspace
+	// Read only file permissions on eclipse workspace, you won't need this on an application server
 	permission java.io.FilePermission "..", "read";
 	permission java.io.FilePermission "../-", "read";
 
-	// Read only file permissions on local git repository
+	// Read only file permissions on local git repository, you won't need this on an application server
 	permission java.io.FilePermission "C:/Users/Ruben/git/-", "read";
 
 	// Read/Write/Delete file permissions on home directory
