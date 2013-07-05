@@ -27,37 +27,11 @@ Paths can be changed to your liking of course.
 ||chown -R tomcat6 /var/databases||Give the tomcat user access to the database directory||
 ||chown -R tomcat6 /usr/share/tomcat6/webapps||Give Tomcat rights on the webapps directory (this should have already been done||
 
-Edit /etc/default/tomcat6 (with "nano" for example), change the line with "JAVA_OPTS" to: JAVA_OPTS="-Djava.awt.headless=true -Xmx12G -Xss4096k"
+Edit /etc/default/tomcat7 (with "nano" for example), change the line with "JAVA_OPTS" to: JAVA_OPTS="-Djava.awt.headless=true -Xmx12G -Xss4096k"
 
-The 12G parameter indicates 12GB of heap memory, please adjust to your server (always keep a few hundred megabytes free for your OS).
+The 12G parameter indicates 12GB of heap memory, please adjust to your server (always keep a few hundred megabytes free for your OS and other apps).
 
-You should set the settings first ("See: Edit settings").
-
-Restart Tomcat: /etc/init.d/tomcat6 restart
-
-= Edit settings =
-
-Edit the file: /var/lib/tomcat6/webapps/ROOT/WEB-INF/settings.xml
-
-Change
-{{{
-<databaseLocation>database</databaseLocation>
-}}} 
-to 
-{{{
-<databaseLocation>/var/databases/bimserver</databaseLocation>
-}}}
-
-Edit the file: /var/lib/tomcat6/webapps/ROOT/WEB-INF/classes/log4j.xml
-
-Change 
-{{{
-<param name="File" value="bimserver.log" />
-}}}
-to
-{{{
-<param name="File" value="/var/log/tomcat6/bimserver.log" />
-}}}
+Restart Tomcat: service tomcat7 restart
 
 = Using the Tomcat Manager =
 
