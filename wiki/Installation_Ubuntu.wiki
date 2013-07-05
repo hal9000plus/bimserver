@@ -27,6 +27,17 @@ Paths can be changed to your liking of course.
 ||chown -R tomcat6 /var/databases||Give the tomcat user access to the database directory||
 ||chown -R tomcat6 /usr/share/tomcat6/webapps||Give Tomcat rights on the webapps directory (this should have already been done||
 
+      <Host name="bimserver.logic-labs.nl" appBase="/var/www/bimserver.logic-labs.nl" unpackWARs$
+            <Alias>sandbox.bimserver.org</Alias>
+            <Context path="" docBase="/var/www/bimserver.logic-labs.nl/ROOT.war">
+                <Parameter name="homedir" value="/opt/bimserver/home"/>
+            </Context>
+            <Valve className="org.apache.catalina.valves.AccessLogValve" directory="/opt/tomcat7$
+               prefix="access_log." suffix=".txt"
+               pattern="%h %l %u %t &quot;%r&quot; %s %b" />
+      </Host>
+
+
 Edit /etc/default/tomcat7 (with "nano" for example), change the line with "JAVA_OPTS" to: JAVA_OPTS="-Djava.awt.headless=true -Xmx12G -Xss4096k"
 
 The 12G parameter indicates 12GB of heap memory, please adjust to your server (always keep a few hundred megabytes free for your OS and other apps).
