@@ -9,7 +9,7 @@ The machine this was tested on was a Ubuntu Server 12.04.2 LTS Amazon EC2 server
 
 This guide is used to install a BIMserver on a cloud based server. Root rights are assumed. When running as a normal user, prepend "sudo " to each command (or start your session with sudo -i).
 
-Paths can be changed to your liking of course.
+Paths can be changed to your liking of course. This is just one way of doing thing, yes you can use a different NTP server, yes you can use another JRE implementation etc...
 
 = Commands =
 
@@ -20,7 +20,8 @@ Paths can be changed to your liking of course.
 ||ntpdate ntp2.xs4all.nl||Update the local time||
 ||dpkg-reconfigure tzdata||Select timezone||
 ||nano /opt/tomcat7/conf/server.xml||Change the port attribute in the Connector tag to the desired port (please see: "Running op ports below 1024" ||
-||      <Host name="bimserver.logic-labs.nl" appBase="/var/www/bimserver.logic-labs.nl" unpackWARs$
+
+<Host name="(YOUR DOMAIN)" appBase="/var/www/(YOUR DOMAIN)" unpackWARs$
             <Alias>sandbox.bimserver.org</Alias>
             <Context path="" docBase="/var/www/bimserver.logic-labs.nl/ROOT.war">
                 <Parameter name="homedir" value="/opt/bimserver/home"/>
@@ -29,7 +30,7 @@ Paths can be changed to your liking of course.
                prefix="access_log." suffix=".txt"
                pattern="%h %l %u %t &quot;%r&quot; %s %b" />
       </Host>
-||||
+
 ||mkdir /var/www||Create a /var/www directory if it's not already there||
 ||mkdir /var/www/(YOUR DOMAIN)||Create a directory for you domain||
 ||chown -R tomcat7 /var/www/(YOUR DOMAIN)||Give rights to tomcat7 user to write||
