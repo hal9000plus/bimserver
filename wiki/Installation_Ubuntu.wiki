@@ -16,19 +16,15 @@ Paths can be changed to your liking of course.
 || *Command* || *Description* ||
 ||apt-get update||Update the package index||
 ||apt-get upgrade||Upgrade installed packages||
-||apt-get install openjdk-7-jre-headless tomcat7||Install JRE 7 and Tomcat 7||
+||apt-get install openjdk-7-jre-headless wget unzip nano||Install JRE 7 and some tools||
 ||ntpdate ntp2.xs4all.nl||Update the local time||
 ||dpkg-reconfigure tzdata||Select timezone||
-||nano /etc/tomcat6/server.xml||Change the port attribute in the Connector tag to the desired port (please see: "Running op ports below 1024" ||
-||nano /var/lib/tomcat6/conf/policy.d/04webapps.policy||Change to:{{{grant { permission java.security.AllPermission;};}}}||
-||rm -R /var/lib/tomcat6/webapps/ROOT||Remove the default ROOT application||
-||wget http://bimserver.googlecode.com/files/bimserver-1.0.war -O /var/lib/tomcat6/webapps/ROOT.war||Download the latest version of the BIMserver, and install as ROOT application||
-||mkdir /var/databases||Create a database directory||
-||chown -R tomcat6 /var/databases||Give the tomcat user access to the database directory||
-||chown -R tomcat6 /usr/share/tomcat6/webapps||Give Tomcat rights on the webapps directory (this should have already been done||
-
-mkdir /var/bimserver
-chown -R tomcat7 /var/bimserver
+||nano /opt/tomcat7/conf/server.xml||Change the port attribute in the Connector tag to the desired port (please see: "Running op ports below 1024" ||
+||mkdir /var/www||Create a /var/www directory if it's not already there||
+||mkdir /var/www/[YOUR DOMAIN]||Create a directory for you domain||
+||chown -R tomcat7 /var/www/[YOUR DOMAIN]||Give rights to tomcat7 user to write||
+||mkdir /var/bimserver||Create a directory for you BIMserver home directory (this has nothing to do with /home on unix systems||
+||chown -R tomcat7 /var/bimserver||Give the appropriate rights to the tomcat7 user||
 
       <Host name="bimserver.logic-labs.nl" appBase="/var/www/bimserver.logic-labs.nl" unpackWARs$
             <Alias>sandbox.bimserver.org</Alias>
