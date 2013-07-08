@@ -1,13 +1,2 @@
-#summary About the open source BIMserver.org software.
 #labels Featured
-
-= Introduction =
-
-The Building Information Modelserver (short: BIMserver) enables you to centralize the information of a construction (or other building related) project. The core is based on the open standard IFC and therefore handles IFC data very stable. The BIMserver is nót a fileserver, but uses the Model-driven architecture approach. This means that IFC data are interpreted by a core-object ([EMF EMF/ecore]) and stored in an underlying database ([Database_internals BerkeleyDB]). The main advantage of this approach is the possibility to query, merge and filter the BIM-model and generate IFC files on the fly.
-
-Due to the multi-user support multiple people can work on their own part of the model, while the complete model is [Merging merged] on the fly. Other people can get update notifications when the model (or a part of it) is updated. Of course BIMserver has revisioning, advances queries, change alerts, [Compare change finder], and lots of other features. The source has a [Plugins plugin infrastructure] so extending and linking the software is very easy and agile. Basic plugins like exporting to KML/GoogleEarth, COBie, Collada, CityGML and several WebGL viewers are included in the build.
-
-Technical guys can interact with BIMserver via [Communication several interfaces] like [SOAP], [RESTInterface REST], [ProtocolBuffers] or direct via the ServiceInterface.
-This project has the intention to be a [Embedding stable (boring) core for IFC applications] on the web.
-
-The core of the BIMserver is published under the [License Affero GPL licence]. Other parts of BIMserver have different licenses. For more info have a look at the [License] page.
+This wiki is migrating to https://github.com/opensourceBIM/BIMserver/wiki
