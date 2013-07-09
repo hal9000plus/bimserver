@@ -1,5 +1,7 @@
 #summary Design for object level modifications
 
+Note: This documentation was a proposal for low level calls, the actual implementation is very different, see [https://github.com/opensourceBIM/BIMserver/blob/master/Shared/src/org/bimserver/shared/interfaces/bimsie1/Bimsie1LowLevelInterface.java]
+
 [http://code.google.com/p/bimserver/issues/detail?id=78 Issue]
 
 = Introduction =
