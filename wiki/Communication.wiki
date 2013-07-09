@@ -1,9 +1,1 @@
-#summary How to communicate with the BIMserver
-
-= Introduction =
-
-There are several ways, the following image should explain a bit.
-
-The "ServiceInterface" is a java interface that contains all kinds of methods an external application can call (link).
-
-http://bimserver.googlecode.com/svn/wiki/images/communication.png
+Moved to [https://github.com/opensourceBIM/BIMserver/wiki/Communication]
