@@ -1,6 +1,8 @@
 #summary Summary of tests and examples in the source code repository.
 #labels Developerguide,UserSupport
 
+Note: This page is outdated
+
 = Introduction =
 
 Goal of this page is to explain the different tests and examples in the source code repository.
