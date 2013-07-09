@@ -1,5 +1,7 @@
 #summary Design for the notifications system
 
+Note: This is outdated
+
 = Introduction =
 
 Certain software can benefit from notifications send by the BIMserver indicating for example new revisions added to projects.
