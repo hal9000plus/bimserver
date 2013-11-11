@@ -1,7 +1,0 @@
-#summary Featurelist of the BIMserver.org software.
-#labels features
-
-= Introduction =
-
-This featurelist is 'work in progress'.
-Have a look at www.bimserver.org for more info.
