@@ -1,22 +1,3 @@
-#summary Design for the notifications system
+Moved to:
 
-Note: This is outdated
-
-= Introduction =
-
-Certain software can benefit from notifications send by the BIMserver indicating for example new revisions added to projects.
-
-= Possible triggers =
-
-  * New project/user/revisions/checkout
-  * Updated project/user/revision
-  * Deleted project/user
-  * Settings changed
-
-= Implementation = 
-
-  * External software opens connection to the BIMserver
-  * Requests for notifications will be sent through the service interface
-  * BIMserver will send the actual notifications through Protocol Buffers
-  * External servers can use the service interface to get more information
-  * External servers will use a normal BIMserver user account
+https://github.com/opensourceBIM/BIMserver/blob/master/Shared/src/org/bimserver/shared/interfaces/bimsie1/Bimsie1NotificationInterface.java
