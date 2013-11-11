@@ -1,7 +1,0 @@
-#summary The Store Model stores meta data of BIMserver data
-
-_Store Model as of version 1.0_
-
-http://bimserver.googlecode.com/svn/wiki/images/store.png
-
-http://bimserver.googlecode.com/svn/wiki/images/store_list.png
